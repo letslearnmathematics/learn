@@ -1,0 +1,192 @@
+:root {
+    --body-colour: #3E2F5D;
+    --headings-color:#3E2F5D;
+    --text-color: #3E2F5D;
+    --alt-text: #ffffff;
+    --links: #E7E1E1;
+    --alternate-links: #951b58;
+}
+
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* margin: 0 auto;*/
+    /*height: 100vh;*/
+    /*overflow: hidden;*/
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background: var(--body-colour);
+    line-height: 1.6;
+}
+
+
+/*----------------header---------------*/
+header {
+    background-color: var(--alt-text);
+    justify-content: space-between;
+    padding: 4px 40px;
+    color: var(--text-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a professional shadow */
+}
+
+header, header nav ul, header .logowithname {
+    display: flex;
+    align-items: center;
+}
+
+header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 1px solid var(--links);
+}
+
+header nav {
+    margin-left: 18rem;
+}
+
+header h1 {
+    font-size: 4rem;
+    color: orange;
+}
+
+.logowithname {
+    gap: 8px;
+}
+
+.name {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    line-height: 14px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 3.8rem;
+    font-size: 1.6rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+/*-------------main content-------------*/
+main {
+    margin-top: 80px;
+    font-size: 1.8rem;
+}
+
+.container {
+    width: 100%;
+    padding: 0 32px;
+    display: flex;
+    gap: 40px;
+    color: var(--alt-text);
+    height: 100vh; /* Full viewport height */
+}
+
+.main-left-side, .main-content, .main-right-side {
+    padding: 0 16px;
+}
+
+.main-left-side {
+    width: 20%;
+    /*border: 1px solid lightgreen;*/
+}
+
+.main-content {
+    width: 55%;
+    /*border: 1px solid red;*/
+}
+
+.main-right-side {
+    width: 20%;
+    /*border: 1px solid yellow;*/
+}
+
+.education {
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+}
+
+.schools {
+    padding: 8px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a professional shadow */
+}
+
+.schools .edu-detail {
+    display: block;
+}
+
+.groups {
+    margin-bottom: 24px;
+}
+
+.main-content .groups .education .schools {
+    width: 30%;
+    background-color: white;
+    color: var(--text-color);
+}
+
+
+
+/*----------FOOTER GOES HERE-------------------*/
+
+footer {
+    background-color: #E7E1E1;
+    text-align: center;
+}
+
+
+/*----------------------------------------------*/
+
+
+/*--------Media Query ---------*/
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
