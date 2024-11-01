@@ -20,11 +20,10 @@ html {
 
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    height: 100dvh;
     line-height: 1.6;
     margin-bottom: 0;
     padding-bottom: 0;
-    min-height: 200vh;
-    background: var(--alt-text);
 }
 
 .llmname {
@@ -34,15 +33,7 @@ body {
 
 /*----------------header---------------*/
 header{
-    background-color: var(--body-colour);
-    color: var(--alt-text);
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adds a professional shadow */
-
+    background-color: var(--alt-text);
 }
 
 .logo {
@@ -52,13 +43,13 @@ header{
     border: 1px solid var(--links);
 }
 
-nav li {
+li {
     list-style: none;
 }
 
-nav ul li a {
+a {
+    color: var(--text-color);
     text-decoration: none;
-    color: var(--alt-text);
 }
 
 .navbar{
@@ -84,7 +75,6 @@ nav ul li a {
 
 .tagline {
     font-size: 3.2rem;
-    color: orange;
 }
 
 .nav-menu {
@@ -123,19 +113,32 @@ nav ul li a {
 
 /*-------------main content-------------*/
 .first-section {
-    width: 100%;
-    margin-top: 70px;
     display: flex;
     gap: 2rem;
+    height: calc(100dvh - 84px);
+    width: 100%;
+    margin-bottom: 0;
 }
 
 .main-section-container {
-    width: 80%;
     display: flex;
-    padding: 0 32px;
+    padding: 24px;
     gap: 40px;
-    background-color: var(--alt-text);
-    border-top-right-radius: 32px;
+    width: 80%;
+    background-color: var(--body-colour);
+    border-top-right-radius: 24px;
+}
+
+.main-section-container p {
+    font-size: 1.8rem;
+}
+
+.page-narative {
+    width: 76%;
+}
+
+.main-section-container .left-aside {
+    width: 24%;
 }
 
 .aside-container{
@@ -144,81 +147,69 @@ nav ul li a {
     padding-top: 8rem;
 }
 
-.left-aside {
-    width: 22%;
-    padding-top: 3rem;
-}
-
-.strand-button {
-    margin-bottom: 1rem;
-    margin-top: 1rem;
-    border-radius: 1px;
-}
-
-.page-narative {
-    width: 78%;
-    padding: 10px 30px;
-}
-
-.main-section-container p, .main-section-container li {
-    color: var(--body-color);
-    font-size: 1.8rem;
-}
-
-.groups .sub-strand {
-    color: #be0863;
-    font-size: 2rem;
-    text-transform: uppercase;
-}
-
-h4 a {
-    color: orange;
-    font-size: 1.8rem;
-}
-
-.topic {
-    font-size: 1.4rem;
-    font-style: italic;
-    text-decoration: none;
-    color: var(--alternate-links);
-}
-
-.left-aside button {
-    background-color: #f69c00;
-    color: var(--alt-text);
-}
-
-/*----------------------------*/
-
-
 .page-narative a {
     color: orangered;
     text-decoration: none;
 }
 
+.select-basic-div {
+    margin-bottom: 1.5ch;
+}
 
+.basic-selection, .basic-options {
+    font-size: 1.6rem;
+}
 
-.indicator {
+.select-basic-div label, .strands {
+    color: var(--alt-text);
+}
+
+.sub-strands {
+    padding: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.sub-strands div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    /*flex: 1;
+    aspect-ratio: 1 / 1;*/
+
+    background-color: var(--alt-text);
+    padding: 8px;
+    box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
+    border-radius: 8px;
+}
+
+.sub-strands p, .sub-strands span {
+    color: var(--text-color);
+}
+
+.sub-strands h3 {
     color: orange;
-    font-size: 1.8rem;
+    
 }
 
-.lesson p {
-   color: var(--body-colour); 
-   font-size: 1.6rem;
+.sub-strands p {
+    font-size: 1.2rem;
 }
 
-hr {
-    margin: 8px 0;
+.sub-strands span {
+    font-weight: bold;
+    font-size: 1.4rem;
 }
 
 
 
 
-
-
-
-
+.left-aside {
+    width: 20%;
+    
+}
 
 
 .aside-container .levels {
@@ -248,16 +239,12 @@ hr {
     display: none;
 }
 
-
-
-.place {
+.page-narative img {
     display: block;
-    margin: auto;
-    width: 100%;
+    float: inline-start;
+    margin-right: 1rem;
+    justify-content: space-around;
 }
-
-
-
 
 
 
@@ -299,14 +286,44 @@ hr {
 /*--------Media Query ---------*/
 @media  (max-width: 1384px) {
     .aside-container {
-        width: 25%;
+        width: 23%;
     }
 
     .main-section-container{
-        width: 75%;
+        width: 77%;
+        padding: 16px;
+        gap: 30px;
+    }
+
+    .strands {
+        margin-bottom: 3px;
+    }
+
+    .sub-strands {
+        padding: 1.5px;
+        height: 100px;
+        gap: 5px;
+    }
+    
+    .sub-strands div {
+        padding: 4px;
+        box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
+        border-radius: 8px;
+    }
+    
+    .sub-strands p {
+        font-size: 1rem;
+        line-height: 1;
+    }
+    
+    .sub-strands span {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1;
     }
    
 }
+
 
 @media  (max-width: 1024px) {
     .nav-menu {
@@ -329,7 +346,6 @@ hr {
     .page-narative {
         width: 100%;
     }
-    
 
 }
 
@@ -337,12 +353,13 @@ hr {
 @media(max-width: 768px){
 
 /*------Hamburger menu----------*/
-    .hamburger{
-        display: block;
+    body{
+        background-color: var(--body-colour);
+        padding: 0 1px;
     }
 
-    .hamburger .bar {
-        background-color: var(--alt-text);
+    .hamburger{
+        display: block;
     }
 
     .hamburger.active .bar:nth-child(2){
@@ -376,10 +393,6 @@ hr {
         margin: 16px 0;
     }
 
-    .nav-link {
-        color: var(--text-color);
-    }
-
     .nav-menu.active{
         left: 0;
     }
@@ -388,13 +401,15 @@ hr {
     .first-section {
         display: flex;
         flex-direction: column;
+        /*gap: 24px;*/
+        height: calc(100dvh - 100px);
     }
 
     .aside-container{
         width: 100%;
-        padding: 10px;
+        padding: 5px;
         position: fixed;
-        top: 75px;
+        top: 73px;
         z-index: 10;
     }
 
@@ -430,37 +445,66 @@ hr {
     .main-section-container {
         width: 100%;
         justify-content: center;
+        border-top-right-radius: 0;
     }
 
     .page-narative {
         width: 100%;
-        padding-top: 55px;
+        padding-top: 40px;
     }
 
     .page-narative p {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
         margin-bottom: 1ch;
     }
 
-    .main-section-container li {
-        font-size: 1.8rem;
+    
+
+    .strands {
+        margin-bottom: 1px;
     }
 
-    .main-section-container {
-        border-top-right-radius: 0;
+    .sub-strands {
+        padding: 1.5px;
+        height: 90px;
+        gap: 5px;
     }
+    
+    .sub-strands div {
+
+        padding: 4px;
+        box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
+        border-radius: 8px;
+    }
+    
+    .sub-strands p {
+        font-size: 1rem;
+        line-height: 1;
+    }
+    
+    .sub-strands span {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .select-basic-div {
+        margin-bottom: 0.5ch;
+    }
+    
+    .strands {
+        margin-bottom: 5px;
+    }
+
+    
     
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 553px) {
     .page-narative p {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
         margin-bottom: 1ch;
-    }
-
-    .main-section-container li {
-        font-size: 1.6rem;
     }
 
     .levels span {
@@ -478,22 +522,56 @@ hr {
         font-size: 2rem;
         line-height: 1.2;
     }
+
+    .sub-strands {
+        padding: 1.5px;
+        gap: 5px;
+        margin-bottom: 50px;
+    }
+    
+    .sub-strands div {
+        
+
+        text-align: center;
+        padding: 4px;
+        box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
+        border-radius: 8px;
+    }
+    
+    .sub-strands p {
+        display: none;
+    }
+    
+    .sub-strands span {
+        font-weight: bold;
+        font-size: 1rem;
+        line-height: 1;
+    }
+
+    .select-basic-div {
+        margin-bottom: 0.5ch;
+    }
+    
+    .strands {
+        margin-bottom: 5px;
+    }
+
+    body{
+        background-color: var(--body-colour);
+    }
+
+
+
+
+
+
+
 }
 
 @media only screen and (max-width: 464px) {
     body{
-        padding: 0;
+        background-color: var(--body-colour);
     }
-
-    .page-narative p {
-        font-size: 1.6rem;
-        margin-bottom: 1ch;
-    }
-
-    .main-section-container li {
-        font-size: 1.6rem;
-    }
-
 
     .aside-container span {
         max-width: 8rem;
@@ -503,17 +581,20 @@ hr {
     }
 
     .main-section-container{
-        padding: 0;
+        padding: 1px;
         margin: 0;
     }
 
     .page-narative {
-        padding-top: 65px;
+        padding-top: 58px;
     }
 
 }
 
 @media only screen and (max-width: 341px) {
+    body{
+        background-color: var(--body-colour);
+    }
 
    .aside-container {
     padding: 2px 2px;
@@ -535,17 +616,39 @@ hr {
     }
 
     .main-section-container{
-        padding: 0;
+        padding: 2px;
         margin: 0;
     }
 
     .page-narative p {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         margin-bottom: 1ch;
     }
 
-    .main-section-container li {
-        font-size: 1.6rem;
+    .select-basic-div {
+        justify-content: center;
+    }
+
+    .sub-strands {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .sub-strands div {
+        flex-grow: 1;
+        flex-shrink: 1;
+        text-align: center;
+        min-width: 60px;
+        height: 80px;
+    }
+
+    .strands h2 {
+        line-height: 1;
+        font-size: 14px;
+    }
+
+    .sub-strands h3 {
+        line-height: 0.8;
     }
 
 
