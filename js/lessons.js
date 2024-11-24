@@ -11,3 +11,18 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }))
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach((accordion) => {
+        accordion.addEventListener("click", () => {
+            const panel = accordion.nextElementSibling;
+            const isOpen = panel.style.display === "block";
+            
+            panel.style.display = isOpen ? "none" : "block";
+            accordion.textContent = isOpen ? "Show Solution" : "Hide Solution";
+        });
+    });
+});
