@@ -164,9 +164,14 @@ a {
     margin-bottom: 2.5rem;
 }
 
+h4 a {
+    color: orange;
+    font-size: 24px;
+}
+
 .strands .subject-name{
     color: #f69c00;
-    font-size: 2.4rem;
+    font-size: 2rem;
 }
 
 .basic-selection, .basic-options {
@@ -225,7 +230,6 @@ a {
 
 .left-aside {
     width: 20%;
-    
 }
 
 
@@ -347,11 +351,8 @@ a {
         gap: 9px;
     }
 
-    .left-aside {
-        display: none;
-    }
-
     .main-section-container {
+        flex-direction: column;
         width: 71.5%;
         justify-content: center;
     }
@@ -362,6 +363,16 @@ a {
 
     .page-narative {
         width: 100%;
+    }
+
+    .left-aside {
+        display: block;
+        width: 100%;
+    }
+
+    .lesson p { 
+        font-size: 1.2rem;
+        line-height: 1.1;
     }
 
 }
@@ -455,27 +466,29 @@ a {
         font-weight: bold;
     }
 
-    .left-aside {
-        display: none;
-    }
-
     .main-section-container {
         width: 100%;
         justify-content: center;
         border-top-right-radius: 0;
     }
 
+    .left-aside {
+        display: block;
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-top: 3.2rem;
+    }
+
     .page-narative {
         width: 100%;
-        padding-top: 40px;
+        padding-top: 4px;
     }
 
     .page-narative p {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         margin-bottom: 1ch;
     }
-
-    
 
     .strands {
         margin-bottom: 2rem;
