@@ -181,24 +181,27 @@ a {
     width: 100%;
     padding: 4px;
     display: flex;
+    justify-content: space-evenly;
     height: 120px;
     gap: 8px;
 }
 
 .sub-strands div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex: 1;
-    aspect-ratio: 1 / 1;
-
     background-color: var(--alt-text);
     padding: 8px;
     box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
     border-radius: 8px;
 }
 
-.sub-strands p, .sub-strands span {
+.lesson .topic-div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.sub-strands span {
     color: var(--text-color);
 }
 
@@ -209,6 +212,7 @@ a {
 
 .sub-strands p {
     font-size: 1.2rem;
+    color: tomato;
 }
 
 .sub-strands span {
@@ -368,7 +372,7 @@ a {
 /*------Hamburger menu----------*/
     body{
         background-color: var(--body-colour);
-        padding: 0 1px;
+        padding: 0;
     }
 
     .hamburger{
@@ -586,6 +590,7 @@ a {
 @media only screen and (max-width: 464px) {
     body{
         background-color: var(--body-colour);
+        
     }
 
     .aside-container span {
@@ -596,12 +601,16 @@ a {
     }
 
     .main-section-container{
-        padding: 1px;
+        padding: 12px;
         margin: 0;
     }
 
     .page-narative {
         padding-top: 58px;
+    }
+
+    .strands h2{
+        font-size: 1.2rem;
     }
 
 }
@@ -647,19 +656,6 @@ a {
     .sub-strands {
         flex-wrap: wrap;
         justify-content: space-around;
-    }
-
-    .sub-strands div {
-        flex-grow: 1;
-        flex-shrink: 1;
-        text-align: center;
-        min-width: 60px;
-        height: 80px;
-    }
-
-    .strands h2 {
-        line-height: 1;
-        font-size: 14px;
     }
 
     .sub-strands h3 {
