@@ -26,3 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+
+// JavaScript to handle selection changes
+const selectElement = document.getElementById('basics');
+
+selectElement.addEventListener('change', function () {
+    const selectedValue = this.value;
+    if (selectedValue) {
+        // Redirect to the selected page
+        window.location.href = selectedValue;
+    }
+});
