@@ -20,7 +20,6 @@ html {
 
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    height: 100dvh;
     line-height: 1.6;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -34,6 +33,11 @@ body {
 /*----------------header---------------*/
 header{
     background-color: var(--alt-text);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 
 .logo {
@@ -75,6 +79,7 @@ a {
 
 .tagline {
     font-size: 3.2rem;
+    color: #f69c00;
 }
 
 .nav-menu {
@@ -113,32 +118,19 @@ a {
 
 /*-------------main content-------------*/
 .first-section {
+    width: 100%;
+    margin-top: 70px;
     display: flex;
     gap: 2rem;
-    height: calc(100dvh - 84px);
-    width: 100%;
-    margin-bottom: 0;
 }
 
 .main-section-container {
+    width: 80%;
     display: flex;
     padding: 24px;
     gap: 40px;
-    width: 80%;
     background-color: var(--body-colour);
-    border-top-right-radius: 24px;
-}
-
-.main-section-container p {
-    font-size: 1.8rem;
-}
-
-.page-narative {
-    width: 76%;
-}
-
-.main-section-container .left-aside {
-    width: 24%;
+    border-top-right-radius: 32px;
 }
 
 .aside-container{
@@ -147,70 +139,92 @@ a {
     padding-top: 8rem;
 }
 
-.page-narative a {
-    color: orangered;
-    text-decoration: none;
+.page-narative {
+    width: 78%;
+    border-top-right-radius: 1em;
 }
 
-.select-basic-div {
-    margin-bottom: 1.5ch;
+.left-aside {
+    width: 22%;
+    
 }
 
-.basic-selection, .basic-options {
-    font-size: 1.6rem;
+.left-aside label{
+    color: #f69c00;
+    font-size: 1.4rem;
 }
 
-.select-basic-div label, .strands {
+.main-section-container p {
+    color: var(--alt-text);
+    font-size: 1.8rem;
+}
+
+h4 a {
+    color: orange;
+    font-size: 24px;
+}
+
+.topic {
+    color: bisque;
+}
+
+.left-aside button {
+    background-color: #f69c00;
     color: var(--alt-text);
 }
 
-.sub-strands {
-    padding: 4px;
+/*----------------------------*/
+
+
+.page-narative a {
+    color: orangered;
+    text-decoration: none;
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+.groups .sub-strand {
+    color: bisque;
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+
+.indicator {
+    color: orange;
+    font-size: 1.8rem;
+}
+
+.lessons-div {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-evenly;
     gap: 8px;
 }
 
-.sub-strands div {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    
-    /*flex: 1;
-    aspect-ratio: 1 / 1;*/
-
+.lessons-div div {
     background-color: var(--alt-text);
     padding: 8px;
     box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
     border-radius: 8px;
 }
 
-.sub-strands p, .sub-strands span {
-    color: var(--text-color);
+.lesson .topic-div {
+    width: 124px;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
 }
 
-.sub-strands h3 {
-    color: orange;
-    
-}
-
-.sub-strands p {
+.lesson p {
+    color: var(--body-colour); 
     font-size: 1.2rem;
+ }
+
+ hr {
+    margin: 8px 0;
 }
-
-.sub-strands span {
-    font-weight: bold;
-    font-size: 1.4rem;
-}
-
-
-
-
-.left-aside {
-    width: 20%;
-    
-}
-
 
 .aside-container .levels {
     display: flex;
@@ -239,18 +253,6 @@ a {
     display: none;
 }
 
-.page-narative img {
-    display: block;
-    float: inline-start;
-    margin-right: 1rem;
-    justify-content: space-around;
-}
-
-
-
-
-
-
 /*----------FOOTER GOES HERE-------------------*/
 .footer-div {
     background-color: var(--body-colour);
@@ -261,7 +263,6 @@ a {
     width: 100%;
 }
 .footer-div p{
-
     margin: 0 auto;
     text-align: center;
     color: #f69c00;
@@ -290,38 +291,13 @@ a {
     }
 
     .main-section-container{
-        width: 77%;
-        padding: 16px;
-        gap: 30px;
+        width: 75%;
     }
 
-    .strands {
-        margin-bottom: 3px;
+    .lesson p { 
+        font-size: 1.4rem;
+        line-height: 1.2;
     }
-
-    .sub-strands {
-        padding: 1.5px;
-        height: 100px;
-        gap: 5px;
-    }
-    
-    .sub-strands div {
-        padding: 4px;
-        box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
-        border-radius: 8px;
-    }
-    
-    .sub-strands p {
-        font-size: 1rem;
-        line-height: 1;
-    }
-    
-    .sub-strands span {
-        font-weight: bold;
-        font-size: 1rem;
-        line-height: 1;
-    }
-   
 }
 
 
@@ -330,11 +306,8 @@ a {
         gap: 9px;
     }
 
-    .left-aside {
-        display: none;
-    }
-
     .main-section-container {
+        flex-direction: column;
         width: 71.5%;
         justify-content: center;
     }
@@ -347,17 +320,21 @@ a {
         width: 100%;
     }
 
+    .left-aside {
+        display: block;
+        width: 100%;
+    }
+
+    .lesson p { 
+        font-size: 1.2rem;
+        line-height: 1.1;
+    }
 }
 
 /*--------------------------------*/
 @media(max-width: 768px){
 
 /*------Hamburger menu----------*/
-    body{
-        background-color: var(--body-colour);
-        padding: 0 1px;
-    }
-
     .hamburger{
         display: block;
     }
@@ -365,9 +342,11 @@ a {
     .hamburger.active .bar:nth-child(2){
         opacity: 0;
     }
+
     .hamburger.active .bar:nth-child(1){
         transform: translateY(8px) rotate(45deg);
     }
+
     .hamburger.active .bar:nth-child(3){
         transform: translateY(-8px) rotate(-45deg);
     }
@@ -438,66 +417,34 @@ a {
         font-weight: bold;
     }
 
-    .left-aside {
-        display: none;
-    }
-
     .main-section-container {
+        flex-direction: column;
         width: 100%;
         justify-content: center;
-        border-top-right-radius: 0;
+    }
+
+    .left-aside {
+        display: block;
+        width: 100%;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-top: 3.2rem;
     }
 
     .page-narative {
         width: 100%;
-        padding-top: 40px;
+        padding-top: 0;
     }
 
     .page-narative p {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         margin-bottom: 1ch;
     }
 
-    
-
-    .strands {
-        margin-bottom: 1px;
+    .lesson p { 
+        font-size: 1.2rem;
+        line-height: 1.1;
     }
-
-    .sub-strands {
-        padding: 1.5px;
-        height: 90px;
-        gap: 5px;
-    }
-    
-    .sub-strands div {
-
-        padding: 4px;
-        box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
-        border-radius: 8px;
-    }
-    
-    .sub-strands p {
-        font-size: 1rem;
-        line-height: 1;
-    }
-    
-    .sub-strands span {
-        font-weight: bold;
-        font-size: 1rem;
-        line-height: 1;
-    }
-
-    .select-basic-div {
-        margin-bottom: 0.5ch;
-    }
-    
-    .strands {
-        margin-bottom: 5px;
-    }
-
-    
-    
 }
 
 /* Extra small devices (phones, 600px and down) */
@@ -523,54 +470,15 @@ a {
         line-height: 1.2;
     }
 
-    .sub-strands {
-        padding: 1.5px;
-        gap: 5px;
-        margin-bottom: 50px;
-    }
-    
-    .sub-strands div {
-        
-
-        text-align: center;
-        padding: 4px;
-        box-shadow: 0 2px 5px rgba(250, 250, 250, 0.5);
-        border-radius: 8px;
-    }
-    
-    .sub-strands p {
-        display: none;
-    }
-    
-    .sub-strands span {
-        font-weight: bold;
+    .lesson p { 
         font-size: 1rem;
         line-height: 1;
     }
-
-    .select-basic-div {
-        margin-bottom: 0.5ch;
-    }
-    
-    .strands {
-        margin-bottom: 5px;
-    }
-
-    body{
-        background-color: var(--body-colour);
-    }
-
-
-
-
-
-
-
 }
 
 @media only screen and (max-width: 464px) {
     body{
-        background-color: var(--body-colour);
+        padding: 0;
     }
 
     .aside-container span {
@@ -581,7 +489,7 @@ a {
     }
 
     .main-section-container{
-        padding: 1px;
+        padding: 0 12px;
         margin: 0;
     }
 
@@ -589,13 +497,12 @@ a {
         padding-top: 58px;
     }
 
+    .left-aside{
+        padding-top: 2.5rem;
+    }
 }
 
 @media only screen and (max-width: 341px) {
-    body{
-        background-color: var(--body-colour);
-    }
-
    .aside-container {
     padding: 2px 2px;
    }
@@ -616,7 +523,7 @@ a {
     }
 
     .main-section-container{
-        padding: 2px;
+        padding: 0;
         margin: 0;
     }
 
@@ -625,34 +532,10 @@ a {
         margin-bottom: 1ch;
     }
 
-    .select-basic-div {
-        justify-content: center;
+    .page-narative {
+        padding-right: 8px; 
+        padding-left: 8px;
     }
-
-    .sub-strands {
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .sub-strands div {
-        flex-grow: 1;
-        flex-shrink: 1;
-        text-align: center;
-        min-width: 60px;
-        height: 80px;
-    }
-
-    .strands h2 {
-        line-height: 1;
-        font-size: 14px;
-    }
-
-    .sub-strands h3 {
-        line-height: 0.8;
-    }
-
-
-
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
