@@ -1,231 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/llmlogo.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./css/jhslessons.css">
-    <title>Significant & Decimal Places</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo-with-name">
-                <a href="index.html"><img class="logo" src="./images/llmlogo.jpg" alt="Logo image"></a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Main Favicon -->
+        <link rel="icon" href="./images/android-chrome-192x192.png" type="image/png"> <!-- Consider using .png or .ico format -->
+
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        
+        <!-- Other Sizes -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        
+        <!-- Manifest -->
+        <link rel="manifest" href="/site.webmanifest">
+
+        <!-- Open Graph Meta Tags for Social Sharing -->
+        <meta property="og:title" content="Significant & Decimal Places">
+        <meta property="og:description" content="Let's Learn Mathematics">
+        <meta property="og:image" content="https://letslearnmathematics.github.io/learn/images/android-chrome-192x192.png"> <!-- Link to a larger image -->
+        <meta property="og:url" content="https://letslearnmathematics.github.io/learn">
+        <meta property="og:type" content="website">
+
+
+        <!-- CSS Links -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="./css/jhslessons.css">
+        <title>Significant & Decimal Places</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo-with-name">
+                    <a href="index.html"><img class="logo" src="./images/android-chrome-192x192.png" alt="Logo image"></a>
+                    <p>
+                        <span class="name">Let's</span> 
+                        <span class="name">Learn</span> 
+                        <span class="name">Mathematics</span>
+                    </p>
+                </div>
+                <div>
+                    <h1 class="tagline">
+                        Significant Figures
+                    </h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="q-and-a.html" class="nav-link">Q & A</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>        
+            </nav>
+        </header>
+        <main>
+            <section class="first-section">
+                <div class="main-section-container">
+                    <div class="left-aside">
+                        <h4>
+                            <a href="jhs.html">Basic <span class="level">9</span></a>
+                        </h4>
+                        <p>Lesson 1: <br><span><a href="b9-1-1-1-1lesson1.html" class="topic">Significant Figures</a></span></p>
+                        <p>Lesson 2: <br><span><a href="b9-1-1-1-1lesson2.html" class="topic">Decimal Places</a></span></p>
+        
+                        <div>
+                            <a href="jhs3s1ss1.html"><button type="button" class="strand-button">Strand 1</button></a>
+                            <a href="jhs3s2ss1.html"><button type="button" class="strand-button">Strand 2</button></a>
+                            <a href="jhs3s3ss1.html"><button type="button" class="strand-button">Strand 3</button></a>
+                            <a href="jhs3s4ss1.html"><button type="button" class="strand-button">Strand 4</button></a>
+                        </div>
+                    </div>
+
+                    <!--Main content in here-->
+                    <div class="page-narative">
+                        <div class="groups">
+                            <h2 class="sub-strand">Significant Figures</h2>
+                            <p>
+                                Significant figures (or significant digits) refer to the digits 
+                                in a number that carry meaning or contributes to the number's precision. This 
+                                includes all non-zero digits, any zeros between significant digits, and trailing zeros 
+                                in the decimal part.
+                            </p>
+                            <p>
+                                It implies that:
+                                <li>Non-zero digits are always significant.</li>
+                                <li>Any zeros between non-zero digits are also significant.</li>
+                                <li>Trailing zeros in a decimal number are significant</li>
+                                <li>Zeros to the left of the first non-zero digit are not important.</li>
+                            </p>
+                            <p>
+                                Consider the examples below:
+                            </p>
+
+                            <hr>
+
+                            <h3>Example 1</h3>
+                            <p>
+                                1. The number 523 has 3 significant figures, 5, 2 and 3. with 5 being the first significant figure as it holds the highest 
+                                value (500), 2 is the next significant figure after 5, and 3 is 
+                                the last significant figure as it holds the least value, (3). 
+                            </p>
+                            <p>
+                                2. The number 0.00523 has 3 significant figures (the leading zeros 
+                                are not significant). 
+                            </p>
+                            <p>
+                                3. The number 1000 has 1 significant figure (unless specified otherwise 
+                                with a decimal point, e.g., 1000.0 would have 5 significant figures).
+                            </p>
+                            <hr>
+                            
+                            <h3>Rounding Numbers to Significant Figures</h3>    
+                            <p>    
+                                To express a number to a specific number of significant figures:
+                            </p>
+                            <p>
+                                1. Identify the number of significant figures required. <br>
+                                2. Round the number according to the specified significant figures. <br>
+                                If necessary, adjust the trailing digits.
+                            </p>
+                            <hr>
+                            <h3>Examples 2</h3>   
+                            <p>
+                                1. 3456 to 2 significant figures becomes 3500. <br>
+                            </p>
+                            <p>
+                                2. 0.03456 to 2 significant figures becomes 0.035. <br>
+                            </p>
+                            <p>
+                                3. 987.654 to 4 significant figures becomes 987.7.  
+                            </p>
+
+                            <hr>
+
+                            <h3>Example 3</h3>
+
+                            <p>
+                                Round the following to 5 significant figures: <br>
+                                1. 637407 <br>
+                                2. 470114924 <br>
+                                3. 0.0005897 <br>
+                                4. 1.99876 <br>
+                                5. 2.77893 
+                            </p>
+
+                            <h3>Solution</h3>
+
+                            <p>
+                                1. \(637407 \implies 637410 \ to \ 5 \ significant \ figures\) <br>
+                                2. \(470114924 \implies 470110000 \ to \ 5 \ significant \ figures\) <br>
+                                3. \(0.0005897 \implies 0.00058970 \ to \ 5 \ significant \ figures\) <br>
+                                4. \(1.99876 \implies 1.99880 \ to \ 5 \ significant \ figures\) <br>
+                                5. \(2.77893 \implies 2.77890 \ to \ 5 \ significant \ figures\) 
+                            </p>
+
+                            <hr>
+
+                            <h3>Example 4</h3>
+
+                            <p>
+                                Round the following to 4 significant figures: <br>
+                                1. 637407 <br>
+                                2. 470114924 <br>
+                                3. 0.0005897 <br>
+                                4. 1.99876 <br>
+                                5. 2.77893 
+                            </p>
+
+                            <h3>Solution</h3>
+
+                            <p>
+                                1. \(637407 \implies 637400 \ to \ 4 \ significant \ figures\) <br>
+                                2. \(470114924 \implies 470100000 \ to \ 4 \ significant \ figures\) <br>
+                                3. \(0.0005897 \implies 0.0005897 \ to \ 4 \ significant \ figures\) <br>
+                                4. \(1.99876 \implies 1.999 \ to \ 4 \ significant \ figures\) <br>
+                                5. \(2.77893 \implies 2.779 \ to \ 4 \ significant \ figures\) 
+                            </p>
+
+                            <hr>
+
+                            <h3>Example 5</h3>
+
+                            <p>
+                                Round the following to 3 significant figures: <br>
+                                1. 637407 <br>
+                                2. 470114924 <br>
+                                3. 0.0005897 <br>
+                                4. 1.99876 <br>
+                                5. 2.77893 
+                            </p>
+
+                            <h3>Solution</h3>
+
+                            <p>
+                                1. \(637407 \implies 637000 \ to \ 3 \ significant \ figures\) <br>
+                                2. \(470114924 \implies 470000000 \ to \ 3 \ significant \ figures\) <br>
+                                3. \(0.0005897 \implies 0.000590 \ to \ 3 \ significant \ figures\) <br>
+                                4. \(1.99876 \implies 2.00 \ to \ 3 \ significant \ figures\) <br>
+                                5. \(2.77893 \implies 2.78 \ to \ 3 \ significant \ figures\) 
+                            </p>
+
+                            <hr>
+                                
+
+                            
+                        
+                            <br><br>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="aside-container">
+                    <div class="levels">
+                        <a href="shs.html"><span>SHS</span></a>
+                        <a href="jhs.html"><span>JHS</span></a>
+                        <a href="pri4-6.html"><span>PRI 4 - 6</span></a>
+                        <a href="pri1-3.html"><span>PRI 1 - 3</span></a>
+                    </div>
+                    <div class="select-level" id="select-level">
+                        <label for="level">Select your level:</label>
+                        <select name="level" id="level">
+                            <option value="shs">SHS</option>
+                            <option value="jhs">JHS</option>
+                            <option value="pri4-6">PRI 4 - 6</option>
+                            <option value="pri1-3">PRI 1 - 3</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="footer-div">
                 <p>
-                    <span class="name">Let's</span> 
-                    <span class="name">Learn</span> 
-                    <span class="name">Mathematics</span>
+                    Created with love by Anoff Akonnor
                 </p>
             </div>
-            <div>
-                <h1 class="tagline">
-                    Significant Figures
-                </h1>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="q-and-a.html" class="nav-link">Q & A</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>        
-        </nav>
-    </header>
-    <main>
-        <section class="first-section">
-            <div class="main-section-container">
-                <div class="left-aside">
-                    <h4>
-                        <a href="jhs.html">Basic <span class="level">9</span></a>
-                    </h4>
-                    <p>Lesson 1: <br><span><a href="b9-1-1-1-1lesson1.html" class="topic">Significant Figures</a></span></p>
-                    <p>Lesson 2: <br><span><a href="b9-1-1-1-1lesson2.html" class="topic">Decimal Places</a></span></p>
-    
-                    <div>
-                        <a href="jhs3s1ss1.html"><button type="button" class="strand-button">Strand 1</button></a>
-                        <a href="jhs3s2ss1.html"><button type="button" class="strand-button">Strand 2</button></a>
-                        <a href="jhs3s3ss1.html"><button type="button" class="strand-button">Strand 3</button></a>
-                        <a href="jhs3s4ss1.html"><button type="button" class="strand-button">Strand 4</button></a>
-                    </div>
-                </div>
-
-                <!--Main content in here-->
-                <div class="page-narative">
-                    <div class="groups">
-                        <h2 class="sub-strand">Significant Figures</h2>
-                        <p>
-                            Significant figures (or significant digits) refer to the digits 
-                            in a number that carry meaning or contributes to the number's precision. This 
-                            includes all non-zero digits, any zeros between significant digits, and trailing zeros 
-                            in the decimal part.
-                        </p>
-                        <p>
-                            It implies that:
-                            <li>Non-zero digits are always significant.</li>
-                            <li>Any zeros between non-zero digits are also significant.</li>
-                            <li>Trailing zeros in a decimal number are significant</li>
-                            <li>Zeros to the left of the first non-zero digit are not important.</li>
-                        </p>
-                        <p>
-                            Consider the examples below:
-                        </p>
-
-                        <hr>
-
-                        <h3>Example 1</h3>
-                        <p>
-                            1. The number 523 has 3 significant figures, 5, 2 and 3. with 5 being the first significant figure as it holds the highest 
-                            value (500), 2 is the next significant figure after 5, and 3 is 
-                            the last significant figure as it holds the least value, (3). 
-                        </p>
-                        <p>
-                            2. The number 0.00523 has 3 significant figures (the leading zeros 
-                            are not significant). 
-                        </p>
-                        <p>
-                            3. The number 1000 has 1 significant figure (unless specified otherwise 
-                            with a decimal point, e.g., 1000.0 would have 5 significant figures).
-                        </p>
-                        <hr>
-                        
-                        <h3>Rounding Numbers to Significant Figures</h3>    
-                        <p>    
-                            To express a number to a specific number of significant figures:
-                        </p>
-                        <p>
-                            1. Identify the number of significant figures required. <br>
-                            2. Round the number according to the specified significant figures. <br>
-                            If necessary, adjust the trailing digits.
-                        </p>
-                        <hr>
-                        <h3>Examples 2</h3>   
-                        <p>
-                            1. 3456 to 2 significant figures becomes 3500. <br>
-                        </p>
-                        <p>
-                            2. 0.03456 to 2 significant figures becomes 0.035. <br>
-                        </p>
-                        <p>
-                            3. 987.654 to 4 significant figures becomes 987.7.  
-                        </p>
-
-                        <hr>
-
-                        <h3>Example 3</h3>
-
-                        <p>
-                            Round the following to 5 significant figures: <br>
-                            1. 637407 <br>
-                            2. 470114924 <br>
-                            3. 0.0005897 <br>
-                            4. 1.99876 <br>
-                            5. 2.77893 
-                        </p>
-
-                        <h3>Solution</h3>
-
-                        <p>
-                            1. \(637407 \implies 637410 \ to \ 5 \ significant \ figures\) <br>
-                            2. \(470114924 \implies 470110000 \ to \ 5 \ significant \ figures\) <br>
-                            3. \(0.0005897 \implies 0.00058970 \ to \ 5 \ significant \ figures\) <br>
-                            4. \(1.99876 \implies 1.99880 \ to \ 5 \ significant \ figures\) <br>
-                            5. \(2.77893 \implies 2.77890 \ to \ 5 \ significant \ figures\) 
-                        </p>
-
-                        <hr>
-
-                        <h3>Example 4</h3>
-
-                        <p>
-                            Round the following to 4 significant figures: <br>
-                            1. 637407 <br>
-                            2. 470114924 <br>
-                            3. 0.0005897 <br>
-                            4. 1.99876 <br>
-                            5. 2.77893 
-                        </p>
-
-                        <h3>Solution</h3>
-
-                        <p>
-                            1. \(637407 \implies 637400 \ to \ 4 \ significant \ figures\) <br>
-                            2. \(470114924 \implies 470100000 \ to \ 4 \ significant \ figures\) <br>
-                            3. \(0.0005897 \implies 0.0005897 \ to \ 4 \ significant \ figures\) <br>
-                            4. \(1.99876 \implies 1.999 \ to \ 4 \ significant \ figures\) <br>
-                            5. \(2.77893 \implies 2.779 \ to \ 4 \ significant \ figures\) 
-                        </p>
-
-                        <hr>
-
-                        <h3>Example 5</h3>
-
-                        <p>
-                            Round the following to 3 significant figures: <br>
-                            1. 637407 <br>
-                            2. 470114924 <br>
-                            3. 0.0005897 <br>
-                            4. 1.99876 <br>
-                            5. 2.77893 
-                        </p>
-
-                        <h3>Solution</h3>
-
-                        <p>
-                            1. \(637407 \implies 637000 \ to \ 3 \ significant \ figures\) <br>
-                            2. \(470114924 \implies 470000000 \ to \ 3 \ significant \ figures\) <br>
-                            3. \(0.0005897 \implies 0.000590 \ to \ 3 \ significant \ figures\) <br>
-                            4. \(1.99876 \implies 2.00 \ to \ 3 \ significant \ figures\) <br>
-                            5. \(2.77893 \implies 2.78 \ to \ 3 \ significant \ figures\) 
-                        </p>
-
-                        <hr>
-                            
-
-                        
-                      
-                         <br><br>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="aside-container">
-                <div class="levels">
-                    <a href="shs.html"><span>SHS</span></a>
-                    <a href="jhs.html"><span>JHS</span></a>
-                    <a href="pri4-6.html"><span>PRI 4 - 6</span></a>
-                    <a href="pri1-3.html"><span>PRI 1 - 3</span></a>
-                </div>
-                <div class="select-level" id="select-level">
-                    <label for="level">Select your level:</label>
-                    <select name="level" id="level">
-                        <option value="shs">SHS</option>
-                        <option value="jhs">JHS</option>
-                        <option value="pri4-6">PRI 4 - 6</option>
-                        <option value="pri1-3">PRI 1 - 3</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="footer-div">
-            <p>
-                Created with love by Anoff Akonnor
-            </p>
-        </div>
-    </footer>
+        </footer>
 
 
-    
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="./js/lessons.js"></script>
-</body>
+        
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="./js/lessons.js"></script>
+    </body>
 </html>
