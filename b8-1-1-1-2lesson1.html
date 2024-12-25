@@ -1,233 +1,547 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Main Favicon -->
-    <link rel="icon" href="./images/android-chrome-192x192.png" type="image/png"> <!-- Consider using .png or .ico format -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Main Favicon -->
+        <link rel="icon" href="./images/android-chrome-192x192.png" type="image/png"> <!-- Consider using .png or .ico format -->
 
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-    
-    <!-- Other Sizes -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-    
-    <!-- Manifest -->
-    <link rel="manifest" href="/site.webmanifest">
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        
+        <!-- Other Sizes -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        
+        <!-- Manifest -->
+        <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:title" content="Skip Counting">
-    <meta property="og:description" content="Let's Learn Mathematics">
-    <meta property="og:image" content="https://letslearnmathematics.github.io/learn/images/android-chrome-192x192.png"> <!-- Link to a larger image -->
-    <meta property="og:url" content="https://letslearnmathematics.github.io/learn">
-    <meta property="og:type" content="website">
+        <!-- Open Graph Meta Tags for Social Sharing -->
+        <meta property="og:title" content="Skip Counting">
+        <meta property="og:description" content="Let's Learn Mathematics">
+        <meta property="og:image" content="https://letslearnmathematics.github.io/learn/images/android-chrome-192x192.png"> <!-- Link to a larger image -->
+        <meta property="og:url" content="https://letslearnmathematics.github.io/learn">
+        <meta property="og:type" content="website">
 
 
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./css/jhslessons.css">
-    <title>BS8: Skip Counting</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div class="logo-with-name">
-                <a href="index.html"><img class="logo" src="./images/android-chrome-192x192.png" alt="Logo image"></a>
+        <!-- CSS Links -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="./css/jhslessons.css">
+        <title>BS8: Skip Counting</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <div class="logo-with-name">
+                    <a href="index.html"><img class="logo" src="./images/android-chrome-192x192.png" alt="Logo image"></a>
+                    <p>
+                        <span class="name">Let's</span> 
+                        <span class="name">Learn</span> 
+                        <span class="name">Mathematics</span>
+                    </p>
+                </div>
+                <div>
+                    <h1 class="tagline">
+                        Place value
+                    </h1>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="q-and-a.html" class="nav-link">Q & A</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>        
+            </nav>
+        </header>
+        <main>
+            <section class="first-section">
+                <div class="main-section-container">
+                    <div class="left-aside">
+                        <h4>
+                            <a href="jhs.html">Basic <span class="level">8</span></a>
+                        </h4>
+                        <p>Lesson 1: <br><span><a href="b8-1-1-1-2lesson1.html" class="topic">Skip Counting</a></span></p>
+        
+                        <div>
+                            <a href="jhs2s1ss1.html"><button type="button" class="strand-button">Strand 1</button></a>
+                            <a href="jhs2s2ss1.html"><button type="button" class="strand-button">Strand 2</button></a>
+                            <a href="jhs2s3ss1.html"><button type="button" class="strand-button">Strand 3</button></a>
+                            <a href="jhs2s4ss1.html"><button type="button" class="strand-button">Strand 4</button></a>
+                        </div>
+                    </div>
+
+                    <!--Main content in here-->
+                    <div class="page-narative">
+                        <div class="groups">
+                            <div class="maintopic">Skip Counting</div>
+                            <p>
+                                In the <a href="b7-1-1-1-2lesson2.html">lesson on skip counting in basic 7</a>, we learnt that 
+                                skip counting is a way to perform addition and/or subtraction on the real number line.
+                            </p>
+                            <p>
+                                We also leanrt that movement to the right on the number line implies <strong>addition</strong> while
+                                movement to the left on the real number line implies <strong>subtraction</strong>.
+                            </p>
+                            <p>
+                                In this lesson, we will learn how to skip count forwards and backwards in intervals of 10,000s, 
+                                100,000s, 500,000s etc.
+                            </p>
+                            <p>
+                                <strong>The interval</strong> is the distance between any two numbers on the number line. For instance,
+                                the interval between the numbers 2 and 5 on the number line is 3, which is obtained by
+                                subtracting 2 from 5.
+                            </p>
+                            <p>
+                                It can also be said that 3 is the number of steps you will count when moving forward from 
+                                2 to 5 (addition), or when moving backwards from 5 to 2 (subtraction).
+                            </p>
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <p><strong>Remember</strong></p>
+
+                            <p>
+                                In skip counting, your starting point (position or number) is said to be your 
+                                <strong>first term</strong>.
+                            </p>
+                        
+                        
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+
+                        <div class="groups">
+                            <div class="main-sub-topic">Skip Counting Forwards</div><br>
+                            <p>
+                                To skip count forward in a particular interval simply means to add 
+                                the interval value onto each term to get the next term.
+                            </p>
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 1</h3><br>
+
+                            <p>
+                                Skip count forwards up to the 5th term in intervals of \(10,000\)
+                            </p>
+                            <p>
+                                200,000, 700,000, ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 2</h3><br>
+
+                            <p>
+                                Skip count forwards in 500000s up to the 5th number.
+                            </p>
+                            <p>
+                                200,000, 700,000, ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+                        
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 3</h3><br>
+
+                            <p>
+                                Skip count forwards up to the 6th term in intervals of \(100,000\)
+                            </p>
+                            <p>
+                                200,000, 700,000, ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 4</h3><br>
+
+                            <p>
+                                Skip count forwards up to the 4th term in intervals of \(10,500\)
+                            </p>
+                            <p>
+                                200,000, 700,000, ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+                        
+                            <br>
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 5</h3><br>
+
+                            <p>
+                                Skip count forwards up to the 5th term in intervals of \(100,500\)
+                            </p>
+                            <p>
+                                200,000, 700,000, ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+
+                        <div class="groups">
+                            <div class="main-sub-topic">Exercise</div><br>
+                            <p>
+                        
+                            </p>
+                        
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+
+                        <div class="groups">
+                            <div class="main-sub-topic">Skip Counting Backwards</div><br>
+                            <p>
+                                To skip count backward in a particular interval simply means to subtract 
+                                the interval value from each term to get the next term.
+                            </p>
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 1</h3><br>
+
+                            <p>
+                                Skip count backwards up to the 6th term in intervals of \(100,000\)
+                            </p>
+                            <p>
+                                1,800,000, 1,700,000, 1,600,000, ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 2</h3><br>
+
+                            <p>
+                                Skip count backwards up to the 7th term in intervals of \(100,500\)
+                            </p>
+                            <p>
+                                1,800,000, 1,699,500, 1,599,000, ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 3</h3><br>
+
+                            <p>
+                                Skip count backwards up to the 5th term in intervals of \(10,000\)
+                            </p>
+                            <p>
+                                1,800,000, 1,790,000, ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 4</h3><br>
+
+                            <p>
+                                Skip count backwards up to the 4th term in intervals of \(500,000\)
+                            </p>
+                            <p>
+                                1,800,000,  ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+
+                            <h3>Example 5</h3><br>
+
+                            <p>
+                                Skip count backwards up to the 7th term in intervals of \(100,000\)
+                            </p>
+                            <p>
+                                2,000,000, 1,900,000, ...
+                            </p>
+
+                            <br>
+
+                            <!------------------------------------------------------------------->
+                        
+                            <button class="accordion">Show Solution</button>
+                            <div class="solution-panel">
+                                <p><u>Solution</u></p>
+                                <p>
+                                    
+                                </p>
+                        
+                                <br><br>
+                                <hr>
+                                <br><br>
+                            </div>
+                        
+                            <!------------------------------------------------------------------->
+                        
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+                        
+                        <div class="groups">
+                            <div class="main-sub-topic">Exercise</div><br>
+                            <p>
+                        
+                            </p>
+                        
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+
+                        <div class="groups">
+                            <div class="main-sub-topic">Quick Test</div><br>
+                            <p>
+                                Test yourself on what you have learnt so far. Click on the link below when you are ready.
+                            </p>
+                            <br>
+                        
+                            <p>
+                                <strong><em>Kindly contact the administrator on 0208711375 for the link to the test.</em></strong>
+                            </p>
+                        
+                        <!--
+                            <a 
+                                href="https://docs.google.com/forms/d/e/1FAIpQLSdXU1qXeqyNNG8mc8LWv6EHLFgi7Z3Tp56S9AKxj-mJLLntwQ/viewform?usp=sf_link" 
+                                class="section-a-link" target="_blank">
+                                <button type="button" class="section-a-button">Take the test</button>
+                            </a>
+                        -->
+                            <!------------------------------------------------------------------->
+
+
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+                        <div class="groups">
+                            <p>
+                                To advertise on our website kindly call on 0208711375 or 0249969740.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="aside-container">
+                    <div class="levels">
+                        <a href="shs.html"><span>SHS</span></a>
+                        <a href="jhs.html"><span>JHS</span></a>
+                        <a href="pri4-6.html"><span>PRI 4 - 6</span></a>
+                        <a href="pri1-3.html"><span>PRI 1 - 3</span></a>
+                    </div>
+                    <div class="select-level" id="select-level">
+                        <label for="level">Select your level:</label>
+                        <select name="level" id="level">
+                            <option value="shs">SHS</option>
+                            <option value="jhs">JHS</option>
+                            <option value="pri4-6">PRI 4 - 6</option>
+                            <option value="pri1-3">PRI 1 - 3</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <div class="footer-div">
                 <p>
-                    <span class="name">Let's</span> 
-                    <span class="name">Learn</span> 
-                    <span class="name">Mathematics</span>
+                    Created with love by Anoff Akonnor. &COPY; LLM, 2024.
                 </p>
             </div>
-            <div>
-                <h1 class="tagline">
-                    Place value
-                </h1>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="q-and-a.html" class="nav-link">Q & A</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>        
-        </nav>
-    </header>
-    <main>
-        <section class="first-section">
-            <div class="main-section-container">
-                <div class="left-aside">
-                    <h4>
-                        <a href="jhs.html">Basic <span class="level">8</span></a>
-                    </h4>
-                    <p>Lesson 1: <br><span><a href="b8-1-1-1-2lesson1.html" class="topic">Skip Counting</a></span></p>
-    
-                    <div>
-                        <a href="jhs2s1ss1.html"><button type="button" class="strand-button">Strand 1</button></a>
-                        <a href="jhs2s2ss1.html"><button type="button" class="strand-button">Strand 2</button></a>
-                        <a href="jhs2s3ss1.html"><button type="button" class="strand-button">Strand 3</button></a>
-                        <a href="jhs2s4ss1.html"><button type="button" class="strand-button">Strand 4</button></a>
-                    </div>
-                </div>
-
-                <!--Main content in here-->
-                <div class="page-narative">
-                    <div class="groups">
-                        <div class="maintopic">Skip Counting</div>
-                        <p>
-                            In the <a href="b7-1-1-1-2lesson2.html">lesson on skip counting in basic 7</a>, we learnt that 
-                            skip counting is a way to perform addition and/or subtraction on the real number line.
-                        </p>
-                        <p>
-                            We also leanrt that movement to the right on the number line implies <strong>addition</strong> while
-                            movement to the left on the real number line implies <strong>subtraction</strong>.
-                        </p>
-                        <p>
-                            In this lesson, we will learn how to skip count forwards and backwards in intervals of 10,000s, 
-                            100,000s, 500,000s etc.
-                        </p>
-                        <p>
-                            <strong>The interval</strong> is the distance between any two numbers on the number line. For instance,
-                            the interval between the numbers 2 and 5 on the number line is 3, which is obtained by
-                            subtracting 2 from 5.
-                        </p>
-                        <p>
-                            It can also be said that 3 is the number of steps you will count when moving forward from 
-                            2 to 5 (addition), or when moving backwards from 5 to 2 (subtraction).
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <p><strong>Remember</strong></p>
-
-                        <p>
-                            In skip counting, your starting point (position or number) is said to be your 
-                            <strong>first term</strong>.
-                        </p>
-                    
-                    
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-
-                    <div class="groups">
-                        <div class="main-sub-topic">Skip Counting Forwards</div><br>
-                        <p>
-                    
-                        </p>
-                    
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-
-                    <div class="groups">
-                        <div class="main-sub-topic">Exercise</div><br>
-                        <p>
-                    
-                        </p>
-                    
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-
-                    <div class="groups">
-                        <div class="main-sub-topic">Skip Counting Backwards</div><br>
-                        <p>
-                    
-                        </p>
-                    
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-                    
-                    <div class="groups">
-                        <div class="main-sub-topic">Exercise</div><br>
-                        <p>
-                    
-                        </p>
-                    
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-
-                    <div class="groups">
-                        <div class="main-sub-topic">Quick Test</div><br>
-                        <p>
-                            Test yourself on what you have learnt so far. Click on the link below when you are ready.
-                        </p>
-                        <br>
-                      
-                        <p>
-                            <strong><em>Kindly contact the administrator on 0208711375 for the link to the test.</em></strong>
-                        </p>
-                      
-                     <!--
-                        <a 
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSdXU1qXeqyNNG8mc8LWv6EHLFgi7Z3Tp56S9AKxj-mJLLntwQ/viewform?usp=sf_link" 
-                            class="section-a-link" target="_blank">
-                            <button type="button" class="section-a-button">Take the test</button>
-                        </a>
-                     -->
-                        <!------------------------------------------------------------------->
+        </footer>
 
 
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-                    <div class="groups">
-                        <p>
-                            To advertise on our website kindly call on 0208711375 or 0249969740.
-                        </p>
-                    </div>
-
-                </div>
-            </div>
-
-            <div class="aside-container">
-                <div class="levels">
-                    <a href="shs.html"><span>SHS</span></a>
-                    <a href="jhs.html"><span>JHS</span></a>
-                    <a href="pri4-6.html"><span>PRI 4 - 6</span></a>
-                    <a href="pri1-3.html"><span>PRI 1 - 3</span></a>
-                </div>
-                <div class="select-level" id="select-level">
-                    <label for="level">Select your level:</label>
-                    <select name="level" id="level">
-                        <option value="shs">SHS</option>
-                        <option value="jhs">JHS</option>
-                        <option value="pri4-6">PRI 4 - 6</option>
-                        <option value="pri1-3">PRI 1 - 3</option>
-                    </select>
-                </div>
-            </div>
-        </section>
-    </main>
-    
-    <footer>
-        <div class="footer-div">
-            <p>
-                Created with love by Anoff Akonnor. &COPY; LLM, 2024.
-            </p>
-        </div>
-    </footer>
-
-
-    
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="./js/lessons.js"></script>
-</body>
+        
+        <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="./js/lessons.js"></script>
+    </body>
 </html>
