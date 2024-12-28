@@ -3,16 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./images/llmlogo.jpg" type="image/x-icon">
+    
+    <!-- Main Favicon -->
+    <link rel="icon" href="./images/android-chrome-192x192.png" type="image/png"> <!-- Consider using .png or .ico format -->
+
+    <!-- Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    
+    <!-- Other Sizes -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph Meta Tags for Social Sharing -->
+    <meta property="og:title" content="BS7: Diameter & Circumference of a Circle">
+    <meta property="og:description" content="Let's Learn Mathematics">
+    <meta property="og:image" content="https://letslearnmathematics.github.io/learn/images/android-chrome-192x192.png"> <!-- Link to a larger image -->
+    <meta property="og:url" content="https://letslearnmathematics.github.io/learn">
+    <meta property="og:type" content="website">
+
+
+    <!-- CSS Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/jhslessons.css">
-    <title>Diameter & Circumference of a Circle</title>
+    <title>BS7: Diameter & Circumference of a Circle</title>
 </head>
 <body>
     <header>
         <nav class="navbar">
             <div class="logo-with-name">
-                <a href="index.html"><img class="logo" src="./images/llmlogo.jpg" alt="Logo image"></a>
+                <a href="index.html"><img class="logo" src="./images/android-chrome-192x192.png" alt="Logo image"></a>
                 <p>
                     <span class="name">Let's</span> 
                     <span class="name">Learn</span> 
@@ -56,15 +78,602 @@
 
                 <!--Main content in here-->
                 <div class="page-narative">
+
                     <div class="groups">
-                        <h2 class="sub-strand">Diameter & Circumference</h2>
+                        <div class="maintopic">Diameter & Circumference</div>
                         <p>
-                            Kindly check back later as our website is in the process of building. Thank you.
+                            In this lesson, we will use the relationships between the diameter 
+                            and the circumference of a circle to deduce the formula for finding the 
+                            circumference of a circle and use it to solve problems.
+                        </p>
+                    
+                    
+                        <br><br>
+                        <hr>
+                        <br><br>
+                    </div>
+                    
+                    <div class="groups">
+                        <div class="maintopic">Parts of the Circle</div><br>
+                        <p>
+                            <strong>A circle</strong> is a path (or shape) formed (or drawn) such that each 
+                            point on the shape (or path) is equidistant (or of equal distance) to a fixed 
+                            point in the middle of the shape called the center.
                         </p>
 
-                        <!--I can create a video explaining this concept.-->
-    
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>The Center, \(O\)</h3><br>
+
+                        <p>
+                            Below is a diagram of a circle with a fixed point, \(\mathbf{O}\), as the center.
+                        </p><br>
+
+                        <img src="./images/circle.png" alt="The circle" class="place"> 
+                        <br>
+
+                        <p>
+                            Every line drawn from  the center to any point on the path of the circle will have
+                            the same length (or distance).
+                        </p>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>The Circumference, \((\mathbf{C})\)</h3><br>
+
+                        <p>
+                            The path created when drawing the circle is called <strong>the circumference</strong> 
+                            of the circle. It is described in the diagram below.
+                        </p>
+                        <p>
+                            Since the circumference is a path (or distance) around the circle, we sometimes refer 
+                            to the circumference as the perimeter of the circle. 
+                        </p>
                         
+                        <br>
+
+                        <img src="./images/circle1.png" alt="The circumference" class="place">
+                        
+                        <br>
+                        
+                        <p>
+                            In calculations, we usually represent the circumference with the letter, \(\mathbf{C}\).
+                        </p>
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>The Arc</h3><br>
+
+                        <p>
+                            An arc is a part of the circumference. It describes a distance from one point to 
+                            another on the circumference of a circle. In the diagram below, the distance from 
+                            point \(P\) to point \(Q\) on the circumference is an example of an arc.
+                        </p>
+
+                        <br>
+
+                        <img src="./images/circle2.png" alt="The Arc" class="place">
+                        
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>The Radius, \((r)\)</h3> <br>
+
+                        <p>
+                            In our definition of the circle, we mentioned that it is the path which has its 
+                            points equidistant from the center of the circle.
+                        </p>
+                        <p>
+                            This distance from the center of the circle to any point on the circumference 
+                            of the circle is called the <strong>radius</strong> of the circle. It is described 
+                            in the diagram below.
+                        </p>
+
+                        <br>
+
+                        <img src="./images/circle3.png" alt="The Arc" class="place">
+
+                        <br>
+
+                        <p>
+                            In our calculations, we will usually represent the radius with the letter
+                            \(\mathbf{r}\).
+                        </p>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>The Chord</h3><br>
+
+                        <p>
+                            When you draw a line from one point of the circumference to another point, you 
+                            will realize that the circle has been divided into two parts, called segments.
+                        </p>
+
+                        <p>
+                            A line that divides the circle into two parts is called <strong>a chord</strong>. Find 
+                            below an example of a chord in the diagram.
+                        </p>
+                        
+                        <br>
+
+                        <img src="./images/circle4.png" alt="Chord" class="place">
+
+                        <br>
+
+                        <p>
+                            A chord can also be described as a line drawn from one point on the circumference
+                            to another point on the same circumference. The line \(PQ\) above is therefore said to
+                            be a chord.
+                        </p>
+
+                        <p>
+                            Remember, that the chord divides the circle into two parts called <strong>segments</strong>.
+                        </p>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>The Diameter</h3><br>
+
+                        <p>
+                            The diameter is the longest chord that can be drawn in the circle. It divides the circle
+                            into two equal parts called semi-circles.
+                        </p>
+
+                        <p>
+                            It can also be described as any straight line that passes through the center of the circle
+                            and touches the circumference at each end of the line.
+                        </p>
+
+                        <p>
+                            Consider the diagram below:
+                        </p>
+
+                        <br>
+
+                        <img src="./images/circle5.png" alt="Diameter." class="place">
+
+                        <br>
+
+                        <p>
+                            In calculations, we usually represent the length of the diameter with the letter \(d\).
+                        </p>
+
+                        <p>
+                            Since the diameter passes through the center of the circle, we can therefore say that 
+                            the diameter is twice of the radius.
+                        </p>
+
+                        <p>
+                            Mathematically, we write \[d = 2r\] where;
+                        </p>
+                        <p>
+                             \(d \Rightarrow\) diameter 
+                        </p>
+                        <p>
+                            \(r \Rightarrow\) radius
+                        </p>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>Segments</h3><br>
+
+                        <p>
+                            When a chord is drawn from one point of the circumference to another, it divides the 
+                            circle into two parts. These parts are called segments.
+                        </p>
+
+                        <p>
+                            If the segment is less than a semi-circle, it is called a <strong>minor segment</strong>.
+                            This part of the circle is indicated by the shaded portion of the circle below.
+                        </p>
+
+                        <p>
+                            If the segment is greater than a semi-circle, it is called a <strong>major segment</strong>.
+                            This is indicated by the unshaded portion of the circle below.
+                        </p>
+
+                        <br>
+
+                        <img src="./images/circle6.png" alt="Segments" class="place">
+
+                        <br>
+
+                        <p>
+                            Remember that in Mathematics, segment simply means part.
+                        </p>
+                    
+                        <br><br>
+                        <hr>
+                        <br><br>
+                        
+                        <h3>The Sector & Angle of Sector</h3><br>
+
+                        <p>
+                            The sector is the part of the circle formed between two radii. The two radii that form 
+                            the sector meet at an angle at the center usually indicated by \(\theta\), 
+                            pronounced as <strong>"theta"</strong>.
+                        </p>
+
+                        <br>
+
+                        <img src="./images/circle7.png" alt="sector" class="place">
+
+                        <br>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+                        
+                        <h3>The Circle</h3><br>
+
+                        <p>
+                            Below is a summary of all the parts of the circle you have learnt so far.
+                        </p>
+
+                        <br>
+
+                        <img src="./images/circle8.png" alt="the circle" class="place">
+
+                        <br>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>Research</h3><br>
+
+                        <p>
+                            Research on the following as well with regards to the circle and share your 
+                            findings with your friends.
+                        </p>
+                        <p>
+                            1. Semi-circle
+                        </p>
+                        <p>
+                            2. Quadrant of a circle
+                        </p>
+                        <p>
+                            3. Tangent to a circle
+                        </p>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        
+                    </div>
+
+                    <div class="groups">
+                        <div class="main-sub-topic">Exercise 1</div><br>
+                        <p>
+                    
+                        </p>
+                    
+                        <br><br>
+                        <hr>
+                        <br><br>
+                    </div>
+
+                    <div class="groups">
+                        <div class="maintopic">Deducing pi \((\pi)\)</div><br>
+                        <p>
+                            Given any circular shape, when the circumference is divided by its diameter, a constant
+                            is obtained. That is, when you divide the circumference of any circle at all by 
+                            its diameter, you get a constant.
+                        </p>
+                        <p>
+                            For all circles, \[\frac{Circumference, \ C}{diameter, \ d} = constant\]
+                        </p>
+                        <p>
+                            This constant is denoted by the Greek letter \(\pi\) (pronounced as '<strong>pie</strong>'), where \(\pi = 3.14159\) 
+                            correct to 5 decimal places. It implies that, for every given circle, \[\frac{C}{d} = \pi\]
+                        </p>
+                        <p>
+                            In our calculations, for simplicity and because \(\pi\) is an irrational number,
+                            we will be using an approximated value for \(pi\), which is the fraction, \(\frac{22}{7}\).
+                        </p>
+                        <p>
+                            Hence, our approximated values for \(\pi\) implies
+                        </p>
+                        <p>
+                            \(\pi = \frac{22}{7}\) as an improper fraction,
+                        </p>
+                        <p>
+                            \(\pi = 3\frac{1}{7}\) as a mixed fraction.
+                        </p>
+                        
+                    
+                        <br><br>
+                        <hr>
+                        <br><br>
+                    </div>
+
+                    <div class="groups">
+                        <div class="main-sub-topic">Exercise 2</div><br>
+                        <p>
+                    
+                        </p>
+                    
+                        <br><br>
+                        <hr>
+                        <br><br>
+                    </div>
+
+                    <div class="groups">
+                        <div class="maintopic">Circumference (Formulae)</div><br>
+                        <p>
+                            We can use the ratio of the constant obtained when the circumference of 
+                            a circle is divided by its diameter to obtain a formular for calculating
+                            the circumference of a circle when the diameter is given.
+                        </p>
+                        <p>
+                            We know that, for all circles \[\frac{Circumference, \ C}{diameter, \ d} = \pi\]
+                        </p>
+                        <p>
+                            That is, \[\frac{C}{d} = \pi\]
+                        </p>
+                        <p>
+                            Multiplying both sides by \(d\), \[d \times \frac{C}{d} = \pi \times d \]
+                        </p>
+                        <p>
+                            It implies that, \[C = \pi d\]
+                        </p>
+                        <p>
+                            That is, 
+                        </p>
+                        <p>
+                            <strong>Circumference, \(\mathbf{C = \pi d}\)</strong>
+                        </p>
+                        <p>
+                            We will use the relation above to solve for the circumference of a circle when the 
+                            diameter is given.
+                        </p>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <p>
+                            We know also that, the diameter is twice the radius of a circle. That is, \[d = 2r\]
+                        </p>
+                        <p>
+                            We can therefore substitute \(d\) for \(2r\) in the equation above. That is;
+                            \[C = \pi(2r)\]
+                        </p>
+                        <p>
+                            Re-arranging it, we have \[C = 2\pi r\]
+                        </p>
+                        <p>
+                            That is, 
+                        </p>
+                        <p>
+                            <strong>Circumference, \(\mathbf{C = 2 \pi r}\)</strong>
+                        </p>
+                        <p>
+                            We will use this formula to calculate the circumference of a circle when the radius 
+                            of the circle is given.
+                        </p>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>Example 1</h3><br>
+
+                        <p>
+                            The radius of a circle is 140 cm. What is the
+                        </p>
+                        <p>
+                            \(a.\) diameter;
+                        </p>
+                        <p>
+                            \(b.\) circumference?
+                        </p>
+                        <p>
+                            [Take \(\pi = \frac{22}{7}\)]
+                        </p><br>
+
+                        <!------------------------------------------------------------------->
+                    
+                        <button class="accordion">Show Solution</button>
+                        <div class="solution-panel">
+                            <p><u>Solution</u></p>
+                            <p>
+                                
+                            </p>
+                    
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+                    
+                    
+                        <!------------------------------------------------------------------->
+                    
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>Example 2</h3><br>
+                        <p>
+                            Find the circumference of a circle who radius is 40 cm, rounding 
+                            your answer to the nearest tenth. [Take \(\pi = 3.142\)]
+                        </p>
+
+                        <br><br>
+
+                        <!------------------------------------------------------------------->
+                    
+                        <button class="accordion">Show Solution</button>
+                        <div class="solution-panel">
+                            <p><u>Solution</u></p>
+                            <p>
+                                
+                            </p>
+                    
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+                    
+                    
+                        <!------------------------------------------------------------------->
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>Example 3</h3><br>
+                        <p>
+                            Find the circumference of a circle who radius is 2.5 m, rounding 
+                            your answer to the nearest tenth. [Take \(\pi = 3.142\)]
+                        </p>
+
+                        <br><br>
+
+                        <!------------------------------------------------------------------->
+                    
+                        <button class="accordion">Show Solution</button>
+                        <div class="solution-panel">
+                            <p><u>Solution</u></p>
+                            <p>
+                                
+                            </p>
+                    
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+                    
+                    
+                        <!------------------------------------------------------------------->
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>Example 4</h3><br>
+                        <p>
+                            The diameter of a circular tray is 28 cm. Find the circumference of 
+                            the tray. [Take \(\pi = \frac{22}{7}\)]
+                        </p>
+
+                        <br><br>
+
+                        <!------------------------------------------------------------------->
+                    
+                        <button class="accordion">Show Solution</button>
+                        <div class="solution-panel">
+                            <p><u>Solution</u></p>
+                            <p>
+                                
+                            </p>
+                    
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+                    
+                    
+                        <!------------------------------------------------------------------->
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <h3>Example 5</h3><br>
+                        <p>
+                            The circumference of a circular track is 154 m. Find the diameter
+                            of the track. (Take \(\pi = \frac{22}{7}\))
+                        </p>
+
+                        <br><br>
+
+                        <!------------------------------------------------------------------->
+                    
+                        <button class="accordion">Show Solution</button>
+                        <div class="solution-panel">
+                            <p><u>Solution</u></p>
+                            <p>
+                                
+                            </p>
+                    
+                            <br><br>
+                            <hr>
+                            <br><br>
+                        </div>
+                    
+                    
+                        <!------------------------------------------------------------------->
+                    
+                        <br><br>
+                        <hr>
+                        <br><br>
+                    </div>
+
+                    <div class="groups">
+                        <div class="main-sub-topic">Exercise 3</div><br>
+                        <p>
+                    
+                        </p>
+                    
+                        <br><br>
+                        <hr>
+                        <br><br>
+                    </div>
+
+                    <div class="groups">
+                        <div class="main-sub-topic">Exercise 4</div><br>
+                        <p>
+                    
+                        </p>
+                    
+                        <br><br>
+                        <hr>
+                        <br><br>
+                    </div>
+
+                    <div class="groups">
+                        <div class="main-sub-topic">Quick Test</div><br>
+                        <p>
+                            Test yourself on what you have learnt so far. Click on the link below when you are ready.
+                        </p>
+                        <br>
+                      
+                        <p>
+                            <strong><em>Kindly contact the administrator on 0208711375 for the link to the test.</em></strong>
+                        </p>
+                      
+                     <!--
+                        <a 
+                            href="https://docs.google.com/forms/d/e/1FAIpQLSdXU1qXeqyNNG8mc8LWv6EHLFgi7Z3Tp56S9AKxj-mJLLntwQ/viewform?usp=sf_link" 
+                            class="section-a-link" target="_blank">
+                            <button type="button" class="section-a-button">Take the test</button>
+                        </a>
+                     -->
+                        <!------------------------------------------------------------------->
+
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+                    </div>
+                    <div class="groups">
+                        <p>
+                            To advertise on our website kindly call on 0208711375 or 0249969740.
+                        </p>
                     </div>
 
                 </div>
@@ -93,7 +702,7 @@
     <footer>
         <div class="footer-div">
             <p>
-                Created with love by Anoff Akonnor
+                Created with love by Anoff Akonnor. &COPY; LLM, 2024.
             </p>
         </div>
     </footer>
