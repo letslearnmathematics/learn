@@ -68,3 +68,41 @@ document.addEventListener('DOMContentLoaded', () => {
         article.querySelector('.whatsapp').setAttribute('href', whatsappLink);
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const blogContainer = document.querySelector('.page-narative');
+    const toggleButtons = blogContainer.querySelectorAll('.toggle-btn');
+
+    toggleButtons.forEach((button) => {
+        button.addEventListener('click', () => {
+            const content = button.previousElementSibling; // Selects the '.blog-content' div
+            const isExpanded = content.style.display === 'block';
+
+            // Toggle display
+            if (isExpanded) {
+                content.style.display = 'none';
+                button.textContent = 'Read More';
+            } else {
+                content.style.display = 'block';
+                button.textContent = 'Show Less';
+            }
+
+            // Now update the Open Graph meta tags dynamically for the current blog post
+            const blogPost = button.closest('.blog-article'); // The entire blog post container
+            const title = blogPost.querySelector('.maintopic').textContent; // Blog title
+            const description = blogPost.querySelector('.blog-summary').textContent; // Blog summary
+            const imageUrl = blogPost.querySelector('.blog-content img') ? blogPost.querySelector('.blog-content img').src : 'https://letslearnmathematics.github.io/learn/images/default-image.png'; // Default image if none
+
+            // Update Open Graph meta tags
+            document.getElementById('og-title').setAttribute('content', title);
+            document.getElementById('og-description').setAttribute('content', description);
+            document.getElementById('og-image').setAttribute('content', imageUrl);
+            document.getElementById('og-url').setAttribute('content', window.location.href); // Current page URL
+
+            // You can also update the browser history if needed (for SPA-like behavior)
+            window.history.pushState({}, "", window.location.pathname + '#/' + title.toLowerCase().replace(/\s+/g, '-'));
+        });
+    });
+});
+
