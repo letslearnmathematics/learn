@@ -1,35 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Main Favicon -->
-    <link rel="icon" href="./images/android-chrome-192x192.png" type="image/png"> <!-- Consider using .png or .ico format -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Main Favicon -->
+        <link rel="icon" href="./images/android-chrome-192x192.png" type="image/png">
 
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-    
-    <!-- Other Sizes -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-    
-    <!-- Manifest -->
-    <link rel="manifest" href="/site.webmanifest">
+        <!-- Apple Touch Icon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        
+        <!-- Other Sizes -->
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        
+        <!-- Manifest -->
+        <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:title" content="Modelling: Multiples">
-    <meta property="og:description" content="Let's Learn Mathematics">
-    <meta property="og:image" content="https://letslearnmathematics.github.io/learn/images/android-chrome-192x192.png"> <!-- Link to a larger image -->
-    <meta property="og:url" content="https://letslearnmathematics.github.io/learn">
-    <meta property="og:type" content="website">
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Modelling: Using Multiples">
+        <meta property="og:description" content="Let's Learn Mathematics">
+        <meta property="og:image" content="https://letslearnmathematics.github.io/learn/images/android-chrome-192x192.png">
+        <meta property="og:url" content="https://letslearnmathematics.github.io/learn">
+        <meta property="og:type" content="website">
 
+        <!-- CSS Links -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="./css/jhslessons.css">
+        <title>Modelling: Using Multiples</title>
 
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./css/jhslessons.css">
-    <title>Modelling: Multiples</title>
-</head>
+        <!-- MathJax Configuration -->
+        <script>
+          MathJax = {
+            tex: {
+              inlineMath: [['\\(', '\\)']],
+              displayMath: [['\\[', '\\]']],
+              processEscapes: true
+            }
+          };
+        </script>
+        <!-- MathJax Library -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </head>
 <body>
     <header>
         <nav class="navbar">
@@ -50,7 +63,7 @@
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
                 <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="q-and-a.html" class="nav-link">Q & A</a></li>
+                <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
             </ul>
             <div class="hamburger">
                 <span class="bar"></span>
@@ -209,6 +222,12 @@
                             Test yourself on what you have learnt so far. Improve on your speed in solving questions.
                         </p>
                         <br>
+
+                        <div class="topic-game">
+                            <div id="game-container">
+                             <!--  Game screens will be inserted here by JavaScript -->
+                            </div>
+                        </div>
                      <!--
                         <p>
                             <strong><em>Kindly contact the administrator on 0208711375 for the link to the test.</em></strong>
@@ -268,7 +287,7 @@
 
 
     
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script src="./js/b7-1-1-1-1lesson3.js"></script>
     <script src="./js/lessons.js"></script>
 </body>
 </html>

@@ -11,43 +11,33 @@ const config = {
   const allQuestions = {
     1: [
       {
-        text: "Which combination represents 360 using at least one 200, 100, 50, and 10?",
-        answers: [
-          "1 × 200 + 1 × 100 + 1 × 50 + 1 × 10",
-          "1 × 200 + 2 × 50 + 6 × 10",
-          "3 × 100 + 6 × 10",
-          "2 × 200 - 40"
-        ],
-        correctIndex: 0,
+        text: "If 1 rod = 10 \\(cm^2\\), what is the value of 3 rods?",
+        answers: ["3 \\(cm^2\\)", "30 \\(cm^2\\)", "300 \\(cm^2\\)", "3,000 \\(cm^2\\)"],
+        correctIndex: 1,
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {
-        text: "If 2 × 200 + 1 × 50 + \\(x\\) × 10 = 290, what is the value of \\(x\\)?",
-        answers: ["4", "3", "2", "1"],
-        correctIndex: 0,
+        text: "How many rods make 1 flat?",
+        answers: ["1", "10", "100", "1,000"],
+        correctIndex: 1,
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {
-        text: "Which of these is NOT equal to 470?",
-        answers: [
-          "4 × 100 + 1 × 50 + 2 × 10",
-          "2 × 200 + 1 × 50 + 2 × 10",
-          "1 × 200 + 5 × 50 + 2 × 10",
-          "4 × 100 + 7 × 10"
-        ],
-        correctIndex: 3,
+        text: "What is the value of 2 flats + 5 rods + 7 cubes?",
+        answers: ["275", "2,057", "257", "2570"],
+        correctIndex: 2,
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {
-        text: "Lisa has 3 × 200, 2 × 50, and 4 × 10. How much money does she have?",
-        answers: ["740", "640", "840", "540"],
-        correctIndex: 0,
+        text: "How many cubes are in 1 block?",
+        answers: ["10", "100", "1,000", "10,000"],
+        correctIndex: 2,
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {
-        text: "How many 50s are needed if 1 × 200 + \\(m\\) × 50 + 3 × 10 = 330?",
-        answers: ["2", "1", "3", "0"],
-        correctIndex: 0,
+        text: "If you have 6 blocks, how many flats is that?",
+        answers: ["6", "60", "600", "6,000"],
+        correctIndex: 1,
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {

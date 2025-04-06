@@ -22,7 +22,7 @@ const config = {
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {
-        text: "If 2 × 200 + 1 × 50 + \\(x\\) × 10 = 290, what is the value of \\(x\\)?",
+        text: "If 2 × 200 + 1 × 50 + \\(x\\) × 10 = 490, what is the value of \\(x\\)?",
         answers: ["4", "3", "2", "1"],
         correctIndex: 0,
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
@@ -45,34 +45,44 @@ const config = {
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {
-        text: "How many 50s are needed if 1 × 200 + \\(m\\) × 50 + 3 × 10 = 330?",
-        answers: ["2", "1", "3", "0"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Convert 8 rods + 9 cubes to total cubes.",
-        answers: ["17", "69", "89", "98"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods are in 2 flats?",
-        answers: ["2", "20", "200", "2,000"],
+        text: "Which two combinations correctly represent 180?",
+        answers: [
+          "1 × 100 + 1 × 50 + 3 × 10",
+          "0 × 200 + 3 × 50 + 3 × 10",
+          "1 × 200 - 20",
+          "9 × 20"
+        ],
         correctIndex: 1,
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {
-        text: "What is 1 block - 3 flats in cubes?",
-        answers: ["7", "70", "700", "7,000"],
-        correctIndex: 2,
+        text: "What is the largest number you can make using two 200s, three 50s, and four 10s?",
+        answers: ["690", "590", "790", "490"],
+        correctIndex: 0,
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {
-        text: "If you have 60 cubes, how many rods can you make?",
-        answers: ["6", "60", "600", "6,000"],
+        text: "What is the smallest number you can make using at least one 200, 100, 50, and 10?",
+        answers: ["360", "260", "460", "160"],
         correctIndex: 0,
         videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+      },
+      {
+        text: "A shop sells items for 10, 50, 100, and 200 coins. If John buys one of each, what does he pay?",
+        answers: ["360", "260", "460", "160"],
+        correctIndex: 0,
+        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+      },
+      {
+        "text": "Which expression equals 520?",
+        "answers": [
+          "2 × 200 + 2 × 50 + 2 × 10",
+          "1 × 200 + 6 × 50 + 2 × 10",
+          "5 × 100 + 4 × 10",
+          "3 × 200 - 80"
+        ],
+        "correctIndex": 1,
+        "videoSolution": "https://www.youtube.com/embed/6YzeRmEr3IU"
       },
       {
         text: "How many cubes are in 1 flat + 2 rods?",
