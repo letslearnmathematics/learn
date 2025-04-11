@@ -11,18 +11,3 @@ document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", 
     hamburger.classList.remove("active");
     navMenu.classList.remove("active");
 }))
-
-
-
-// Fix local .html links when opening files directly
-if (window.location.protocol === 'file:') {
-    document.addEventListener('DOMContentLoaded', function() {
-        const links = document.querySelectorAll('a[href]:not([href^="http"])');
-        links.forEach(link => {
-            const href = link.getAttribute('href');
-            if (!href.includes('.') && !href.endsWith('/')) {
-                link.href = href + '.html';  // Add .html locally
-            }
-        });
-    });
-}
