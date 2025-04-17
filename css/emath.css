@@ -7,6 +7,16 @@
     --emath-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+/*BREAD CRUMB*/
+.breadcrumb {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.breadcrumb span {
+    color: bisque;
+}
+
 /* ========== MAIN CONTENT STYLES ========== */
 .subject-title {
     color: var(--emath-accent);
@@ -69,6 +79,10 @@
     width: 100%;
     height: 3px;
     background: var(--emath-accent);
+}
+
+.tab-content h2, .exam-prep h2 {
+    color: tomato;
 }
 
 /* ========== TOPICS GRID ========== */
@@ -175,61 +189,301 @@
     font-size: 2rem;
 }
 
-/* Exam Prep & Resources Grid */
-.resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
 
-.resource-card {
-    background: rgba(255,255,255,0.05);
-    padding: 2rem;
-    border-radius: 1rem;
-    transition: all 0.3s ease;
+/* ========== EXAM PREPARATION SECTION ========== */
+.exam-prep {
+    background: rgba(255,255,255,0.03);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    margin: 4rem 0;
     border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
 }
 
-.resource-card:hover {
-    background: rgba(255,255,255,0.1);
-    transform: translateY(-5px);
+.exam-prep::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--emath-accent);
+}
+
+.exam-prep h2 {
+    color: var(--emath-accent) !important;
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.exam-prep h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin-left: 1.5rem;
+}
+
+.exam-prep h2 i {
+    font-size: 2.2rem;
+}
+
+.exam-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.exam-card {
+    background: var(--emath-card-bg);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.exam-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(246,156,0,0.1) 0%, rgba(62,47,93,0.2) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.exam-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
     border-color: var(--emath-accent);
 }
 
+.exam-card:hover::before {
+    opacity: 1;
+}
+
+.exam-card i {
+    font-size: 3.5rem;
+    color: var(--emath-accent);
+    margin-bottom: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.exam-card:hover i {
+    transform: scale(1.1);
+}
+
+.exam-card h3 {
+    font-size: 1.8rem;
+    color: var(--emath-light);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.exam-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--emath-accent);
+    transition: width 0.3s ease;
+}
+
+.exam-card:hover h3::after {
+    width: 80px;
+}
+
+.exam-card p {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.exam-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: rgba(246,156,0,0.2);
+    color: var(--emath-accent);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--emath-accent);
+    gap: 0.8rem;
+}
+
+.exam-link:hover {
+    background: var(--emath-accent);
+    color: var(--emath-dark);
+    transform: translateX(5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .exam-prep {
+        padding: 2.5rem;
+    }
+    
+    .exam-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .exam-prep {
+        padding: 2rem 1.5rem;
+    }
+    
+    .exam-prep h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ========== RESOURCES SECTION ========== */
+.resources-section {
+    background: rgba(255,255,255,0.03);
+    padding: 3rem 2.5rem;
+    border-radius: 1.5rem;
+    margin: 4rem 0;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+}
+
+.resources-section h2 {
+    color: var(--emath-accent);
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.resources-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--emath-accent);
+}
+
+.resource-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background: var(--emath-card-bg);
+    border-radius: 1rem;
+    padding: 2.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
 .resource-card i {
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: var(--emath-accent);
     margin-bottom: 1.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
 
 .resource-card h3 {
     font-size: 1.8rem;
     color: var(--emath-light);
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 .resource-card p {
     font-size: 1.4rem;
-    color: rgba(255,255,255,0.7);
+    color: rgba(255,255,255,0.8);
     margin-bottom: 2rem;
+    line-height: 1.6;
+    min-height: 4.2rem;
 }
 
 .resource-link {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    border: 1px solid var(--emath-accent);
+    display: inline-flex;
+    align-items: center;
+    padding: 0.9rem 1.8rem;
+    background: rgba(246,156,0,0.1);
     color: var(--emath-accent);
-    text-decoration: none;
     border-radius: 0.5rem;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.4rem;
     transition: all 0.3s ease;
+    border: 1px solid rgba(246,156,0,0.3);
+    gap: 0.8rem;
+}
+
+.resource-link i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+    margin-bottom: -0.4em;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-color: var(--emath-accent);
+}
+
+.resource-card:hover i {
+    transform: scale(1.1);
 }
 
 .resource-link:hover {
     background: var(--emath-accent);
     color: var(--emath-dark);
+}
+
+.resource-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .resource-cards {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+    }
+    
+    .resources-section {
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resources-section h2 {
+        font-size: 2.1rem;
+    }
+    
+    .resource-card {
+        padding: 2rem;
+    }
 }
 
 /* ========== SIDEBAR STYLES ========== */
