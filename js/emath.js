@@ -214,14 +214,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ========== PRINTABLE MATERIALS ==========
-  /*  const printButtons = document.createElement('div');
+    const printButtons = document.createElement('div');
     printButtons.className = 'print-actions';
     printButtons.innerHTML = `
         <button class="print-button"><i class="fas fa-print"></i> Print This Page</button>
         <button class="print-topic-button"><i class="fas fa-file-pdf"></i> PDF Version</button>
     `;
     
-    // Insert print buttons before the footer
+    /*// Insert print buttons before the footer
     const mainContent = document.querySelector('.page-narative');
     if (mainContent) {
         mainContent.insertAdjacentElement('beforeend', printButtons);
