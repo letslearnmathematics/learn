@@ -4,725 +4,382 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- Main Favicon -->
-    <link rel="icon" href="../../images/android-chrome-192x192.png" type="image/png"> <!-- Consider using .png or .ico format -->
-
-    <!-- Apple Touch Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+    <!-- SEO and Social Meta Tags -->
+    <title>Sets Theory | Elective Mathematics | The Let's Learn Project</title>
+    <meta name="description" content="Comprehensive lesson on Sets Theory for SHS1 Elective Mathematics. Learn definitions, operations, Venn diagrams and practical applications.">
     
-    <!-- Other Sizes -->
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest">
     
-    <!-- Manifest -->
-    <link rel="manifest" href="/site.webmanifest">
-
-    <!-- Open Graph Meta Tags for Social Sharing -->
-    <meta property="og:title" content="Sets: Elective Maths">
-    <meta property="og:description" content="Let's Learn Mathematics">
-    <meta property="og:image" content="https://letslearnmathematics.github.io/learn/images/android-chrome-192x192.png"> <!-- Link to a larger image -->
-    <meta property="og:url" content="https://letslearnmathematics.github.io/learn">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Sets Theory | Elective Mathematics">
+    <meta property="og:description" content="Master Sets Theory with interactive lessons and practice problems for SHS students">
+    <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+    <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/sets">
     <meta property="og:type" content="website">
 
-
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../../css/jhslessons.css">
-    <title>Sets: Elective Maths</title>
-
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
-     crossorigin="anonymous"></script>
+    <!-- Fonts and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../css/emath-lesson.css">
+    
+    <!-- MathJax -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo-with-name">
-                <a href="../../"><img class="logo" src="../../images/android-chrome-192x192.png" alt="Logo image"></a>
-                <p>
-                    <span class="name">Let's</span> 
-                    <span class="name">Learn</span> 
-                    <span class="name">Mathematics</span>
-                </p>
+    <!-- Header Navigation -->
+    <header class="lesson-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="branding">
+                    <a href="../../" class="logo-link">
+                        <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                        <div class="brand-name">
+                            <span class="main-name">Let's Learn</span>
+                            <span class="sub-name">Mathematics</span>
+                        </div>
+                    </a>
+                </div>
+                
+                <h1 class="lesson-title">Sets Theory</h1>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="../../" class="nav-link">Home</a></li>
+                        <li><a href="../../about" class="nav-link">About</a></li>
+                        <li><a href="../../blog" class="nav-link">Blog</a></li>
+                        <li><a href="../../contact" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </nav>
             </div>
-            <div>
-                <h1 class="tagline">
-                    Sets
-                </h1>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="../../" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="../../about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="../../blog" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="../../contactus" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>        
-        </nav>
+        </div>
     </header>
-    <main>
-        <section class="first-section">
-            <div class="main-section-container">
-                <div class="left-aside">
-                    <h4>
-                        <a href="../../shs1">SHS <span class="level">1:</span> E-Maths</a>
-                    </h4>
-                    <p>
-                        Topic: Sets <br>
-                        <span><a href="" class="topic">\(*\) Definition</a></span><br>
-                        <span><a href="" class="topic">\(*\) Operations on Sets</a></span><br>
-                        <span><a href="" class="topic">\(*\) Three set Problems</a></span><br>
-                    </p>
-                    <!--Should just be the topics on the page, perhaps links to the topics on the page.-->
 
-                    <div>
-                        <a href="../../shs1"><button type="button" class="strand-button">SHS 1</button></a>
-                        <a href="../../shs2"><button type="button" class="strand-button">SHS 2</button></a>
-                        <a href="../../shs3"><button type="button" class="strand-button">SHS 3</button></a>
-                    </div>
-                </div>
-
-                <!--Main content in here-->
-                <div class="page-narative">
-                    <div class="groups">
-                        <div class="maintopic">Sets: Definition</div>
-                        <p>
-                            <strong>A set</strong> is a collection of well-defined objects (called elements or members). Sets are usually denoted or named with capital letters with the elements belonging to the set in curly brackets, hence given a set A containing odd numbers less than 10, we write, \[A = \{1, 3, 5, 7, 9\}\]
-                        </p>
-                        <p>
-                            From this, we can say that, given any number or object, \(x\), found in the set A
-                        </p>
-                        <p>
-                            <li>
-                                If \(x\) is <strong>a member of</strong> \(A\), we write, \(x \in A\)
-                            </li>
-                        </p>
-                        <p>
-                            <li>
-                                If \(x\) is  <strong>not a member of</strong> \(A\), we write, \(x \notin A\)
-                            </li>
-                        </p>
-                        <p>
-                            <strong>Well-defined</strong> means there should be no ambiguity with regards to the description of the set. For instance, when we describe a set B as being a set that contains books, then we should not find a pencil or any other object besides books in the set B.
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <h3>THE COMPLEMENT OF A SET</h3><br>
-
-                        <p>
-                            When we gather every other element that is not found in a given set, we have a collection of elements outside of that set. This new set or collection of elements is termed as the complement of the set.
-                        </p>
-                        <p>
-                            For instance, in our set <em>A</em> above, the complement of the set A, denoted as \((A^\prime)\), is a collection of all the numbers that are not odd numbers less than 10.
-                        </p>
-                        <p>
-                            \(A^\prime \Rightarrow \) read as <strong>A complement</strong>
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <h3>THE UNIVERSAL SET, (\(\mathbb{U}\))</h3><br>
-
-                        <p>
-                            When we put the elements of any given set and its complement together, then we have what we call a <strong>universal set</strong>, denoted by the symbol, \(\mathbb{U}\).
-                        </p>
-                        <p>
-                            <strong>The universal set is the set that contains all the elements under consideration.</strong>
-                        </p>
-                        <p>
-                            From our example above, we can therefore say that, \[A + A^\prime = \mathbb{U}\]
-                        </p>
-                        <p>
-                            That is, the elements under consideration are the set of odd numbers less than 10 (found in the set A) and the set of numbers which are not odd numbers less than 10 (found in the complement of A, that is, \(A^\prime\)).
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <h3>THE CARDINALITY OF A SET</h3><br>
+    <!-- Lesson Content -->
+    <main class="lesson-container">
+        <div class="container">
+            <div class="lesson-grid">
+                <!-- Sidebar Navigation -->
+                <aside class="lesson-sidebar">
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                        <div class="current-topic">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Sets Theory</span>
+                        </div>
+                        <ul class="topic-menu">
+                            <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Definition</a></li>
+                            <li><a href="#describing-sets"><i class="fas fa-chevron-right"></i> Describing Sets</a></li>
+                            <li><a href="#types-of-sets"><i class="fas fa-chevron-right"></i> Types of Sets</a></li>
+                            <li><a href="#number-systems"><i class="fas fa-chevron-right"></i> Number Systems</a></li>
+                            <li><a href="#operations"><i class="fas fa-chevron-right"></i> Operations</a></li>
+                            <li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>
+                        </ul>
                         
-                        <p>
-                            The number of elements within any given set, say set A, is given as below:
-                        </p> 
-                        <p>
-                            \[\mathbf{n(A) = n}\]
-                        </p>
-                        <p>
-                            We call \(n(A)\) the cardinality of the set. In our set A above, the cardinality of set A is 5, that is;
-                        </p>
-                        <p>
-                            \[n(A) = 5\]
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <p>
-                            If a set has a finite cardinality, we say that the set is a <strong>finite set</strong>. For instance, set <em>A</em> above is a finite set as it has 5 elements.
-                        </p>
-                        <p>
-                            <strong>A finite set</strong> is a set in which all its members are known, or a set whose last element is known.
-                        </p>
-                        <p>
-                            When a set has an infinite cardinality, we say that the set is an <strong>infinite set</strong>.
-                        </p>
-                        <p>
-                            <strong>An infinite set</strong> is a set whose last element is not known. Example, the set of natural numbers, \((\mathbb{N})\). For infinite sets, we use the <strong>infinity</strong> \((\infty)\) symbol to represent their cardinality. So, for the set of natural numbers, we have: \[n(N) = \infty\]
-                        </p>
-                        <p>
-                            That is, the set of natural numbers has an infinite number of elements.
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
+                        <div class="level-buttons">
+                            <a href="../../shs1" class="level-btn">SHS 1</a>
+                            <a href="../../shs2" class="level-btn">SHS 2</a>
+                            <a href="../../shs3" class="level-btn">SHS 3</a>
+                        </div>
                     </div>
-                    <div class="groups">
-                        <div class="main-sub-topic">Describing Sets</div>
-                        
-                        <p>
-                            There are 3 basic ways that we can describe a set. They are:
-                        </p> 
-                        <p>
-                            <strong>1. Word description:</strong><br> 
-                            Where we use sentences and statements or phrases to describe given sets. <br>
-                            Eg. 1. \(B =\) \(\{\)whole numbers from 20 to 30\(\}\) <br>
-                            \(\hspace{0.8cm}\)  2. \(M =\) \(\{\)factors of 63\(\}\) <br>
-                            \(\hspace{0.8cm}\)  3. \(K =\) \(\{\)odd numbers less than 13\(\}\) <br>
-                        </p>
-                        <p>
-                            <strong>2. Listing:</strong><br> 
-                            With listing, the elements are listed with a comma (,) separating each of the elements in the 
-                            set. <br> 
-                            Let's list the elements in the sets described above: <br>
-                            Eg. 1. \(B =\) \(\{\)20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30\(\}\) <br>
-                            \(\hspace{0.8cm}\)  2. \(M =\) \(\{\)1, 3, 7, 9, 21, 63\(\}\) <br>
-                            \(\hspace{0.8cm}\)  3. \(K =\) \(\{\)1, 3, 5, 7, 9, 11\(\}\) <br>
-                        </p>
-
-                        <!--A video on how to list the factors of any number faster.-->
-
-                        <p>
-                            <strong>3. Set builder notation.</strong><br>
-                            Set builder notation is when we use mathemtical and logical notations to build sets. <br>
-                            Let's use set builder notation to build the sets listed above: <br>
-                            Eg. 1. \(B =\) \(\{x: 20 \le x \le 30, x\) is a whole number\(\}\) <br>
-                                \(\hspace{0.8cm}\)  2. \(M =\) \(\{x:x\) \(\in\) factors of 63\(\}\) <br>
-                                \(\hspace{0.8cm}\)  3. \(K =\) \(\{x:x < 13, x \in\) odd numbers\(\}\) 
-                        </p><br>
-                        <p>
-                            <strong>Note</strong> <br>
-                            \(\mathbf{x:x < 13}\): You say "x such that x is less than 13."
-                        </p>
-
-                        <!--You can put an exercise here!-->
-
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <h3>THE EMPTY SET, \((\emptyset)\)</h3><br>
-
-                        <p>
-                            The <strong>empty set</strong>, sometimes called null set, is a set that 
-                            contains no elements. It is denoted by the symbol \(\emptyset\), or \(\{ \ \}\). 
-                            This implies that the cardinality of the empty set is 0. \[n(\emptyset) = 0\]
-                        </p>
-                        <br>
-                        <p>
-                            A set which is not empty is called a <strong>non-empty set</strong>.
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <h3>THE UNIT SET</h3><br>
-
-                        <p>
-                            A unit set is a set that contains only one (1) element, or member.
-                        </p>
-                        <p>
-                            Examples are the sets below:
-                        </p>
-                        <p>
-                            1. \( \ T = \{1\}\)
-                        </p>
-                        <p>
-                            2. \( \ R = \{0\}\)
-                        </p>
-                        <p>
-                            3. \( \ A = \{2\}\)
-                        </p>
-                        <p>
-                            4. \( \ C = \{cup\}\)
-                        </p>
-                        <p>
-                            5. \( \ Y = \{\emptyset\}\)
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <h3>EQUAL SETS</h3><br>
-
-                        <p>Two sets that have the same elements are called <strong>equal sets</strong>.</p>
-
-                        <p>
-                            Example, given set \(A = \{1, 2, 3, 4, 5\}\) and set \(B = \{5, 3, 4, 2, 1\}\), we can say that, <strong>set A is equal to set B</strong> as the elements that make up set \(A\) are the same elements that make up set \(B\).
-                        </p>
-                        <p>
-                            Mathematically, we write: \[A = B\]
-                        </p>
-                        <p>
-                            It therefore implies that, if two sets do not have the same elements, then they are not equal sets. For instance, given another set, say \(C = \{a, b, c, d, e\}\), we can say that <strong>set A is not equal to set C</strong>.
-                        </p>
-                        <p>
-                            Mathematically, we write: \[A \neq C\]
-                        </p>
-                        <p>
-                            Why?
-                        </p>
-                        <p>
-                            Though the cardinality of the sets are the same, that is five (5), the sets do not contain similar elements.
-                        </p>
-                        <p>
-                            \(A = \{1, 2, 3, 4, 5\}\) and 
-                        </p>
-                        <p>
-                            \(C = \{a, b, c, d, e\}\)
-                        </p>
-                        <p>
-                            This leads us to <strong>equivalent sets</strong>.
-                        </p>
-
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <h3>EQUIVALENT SETS</h3><br>
-
-                        <p>When two non-equal sets have the same cardinality, like set \(A\) and set \(C\) above, they are called equivalent sets.</p>
-
-                        <p>
-                            \(A = \{1, 2, 3, 4, 5\}\)
-                        </p>
-                        <p>
-                            \(\Rightarrow n(A) = 5\)
-                        </p>
-                        <p>
-                            \(C = \{a, b, c, d, e\}\)
-                        </p>
-                        <p>
-                            \(\Rightarrow n(C) = 5\)
-                        </p>
-                        <p>
-                            Set \(A\) and set \(C\) are <strong>not equal</strong> sets, but they have the <strong>same number of elements (5)</strong> in their sets, hence set \(A\) and set \(C\) are called <strong>equivalent sets</strong>.
-                        </p>
-
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-
-                    <div class="groups">
-                        <div class="main-sub-topic">Subsets</div>
-                            
-                        <p>
-                            A subset can simply be defined as a set that belongs to a bigger set. Subsets are formed by taking or 
-                            listing a part of the elements inside of a parent-set in another curly bracket.
-                        </p>
-                        <p>
-                            A subset can contain as many elements as there are in the bigger set (or parent-set) under consideration.
-                        </p>
-                        <p>
-                            Every element or combination (group) of elements within any given set can be described as a 
-                            <u>subset</u> of the set.
-                        </p>
-                        <p>
-                            For example, given the set \(A = \{1, 3, 5, 7, 9\}\), some of the subsets or smaller sets that can be
-                            formed from this set are \(\{1, 3\}\), \(\{1, 3, 5\}\), \(\{5, 7, 9\}\), \(\{9\}\), etc.
-                        </p>
-                        <p>
-                            Think and come up with other subsets that can be formed from this set A and show it to your friends.
-                        </p> <br> <br>
-
-
-                        <hr>
-
-                        <br><br>
-                        <h3>Example 1</h3>
-                        <p class="questions-paragraph">
-                            Kofi listed the prime numbers between 1 and 20 in a set A. Then he listed the prime numbers between 
-                            1 and 10 in another set B. Describe the set B in terms of the set A.
-                        </p>
-
-                        <h3>Solution</h3>
-                        <p class="solutions-paragraph">
-                            Set \(A = \{\)prime numbers between 1 and 20\(\}\)
-                        </p>
-                        <p>
-                            \(\Rightarrow A = \{2, 3, 5, 7, 11, 13, 17, 19\}\)
-                        </p>
-                        <p>
-                            Set \(B = \{\)prime numbers between 1 and 10\(\}\)
-                        </p>
-                        <p>
-                            \(\Rightarrow B = \{2, 3, 5, 7\}\)
-                        </p>
-                        <p>
-                            Since all the elements in \(B\) can be found in \(A\), we can therefore say that, <strong>"Set B is a subset 
-                            of set A."</strong>
-                        </p>
-                        <p>
-                            And mathematically,
-                        </p>
-                        <p>
-                            \(\Rightarrow \mathbf{B \subseteq A}\)
-                        </p>
-                        <p>
-                            We can also write:
-                        </p>
-                        <p>
-                            \(\Rightarrow \mathbf{B \subset A}\) \(\Rightarrow\) which is read as \(B\) is a <strong>proper subset</strong> of \(A\).
-                        </p>
-                        <p>
-                            A set is said to be a proper subset of its parent set if all the elements in the set can be found in the parent set, and also the set is not equal to its parent set. That is:
-                        </p>
-                        <br>
-                        <p>
-                            If \( B \subset A \), it implies that:
-                        </p>
-                        <p>
-                            1. \( B \subseteq A \)
-                        </p>
-                        <p>
-                            2. \( B \neq A \)
-                        </p> <br>
-                        <p>
-                            The above statements read, if B is a <strong>proper subset</strong> of A, \((B \subset A)\), it implies that B is a subset of A, \((B \subseteq A)\), and B is not equal to A, \((B \neq A)\).
-                        </p>
-                        
-                        <hr>
-
-                        <br> <br>
-
-                        <!--Give some examples of subsets, possibly using the set of real numbers, nope, 
-                        use ordinary numbers, you can even use the set A described above to give examples
-                        of subsets within that set, as you will later be using the set of real numbers and 
-                        its subsets in a venn diagram format to express the relationships-->
-
-
-
-                        <h3>Number of Subsets \((2^n)\)</h3><br>
-
-                        <p>
-                            Given any set, say A, the total number of subsets that can be formed using the elements within the set can be calculated using the formular below:
-                        </p>
-                        <p>
-                            \[\mathbf{Number\  of \ subsets = 2^n}\]
-                        </p>
-                        <p>
-                            Where \(\mathbf{n}\) represents the cardinality or the number of elements in the given set.
-                        </p>
-                        <p>
-                            A set of all the subsets that can be formed within any set is termed as the <strong>power set</strong>.
-                        </p>
-                        <p>
-                            <strong><u>Note:</u></strong>
-                            <li> The empty set \(\left(\emptyset\right)\) is a subet of every set, and</li>
-                            <li> Every set is a subset of itself.</li>
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-
-                    <div class="groups">
-                        <div class="maintopic">Types of Numbers</div>
-                        <p>
-                            There are two types of numbers. We have:
-                        </p>
-                        <p>
-                            1. Complex numbers and <br>
-                            2. Real numbers
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-                        
-                        <div class="main-sub-topic">Complex Numbers</div>
-                        <p>
-                            Complex numbers are usually made up of a real part and an imaginary part. They are
-                            numbers written in the form \[a + bi\]
-                        </p>
-                        <p>
-                            where <br>
-                            \(a \Rightarrow\) the real part of the complex number and <br>
-                            \(b \Rightarrow\) the imaginary part of the complex number <br>
-                            \(i \Rightarrow \sqrt{-1}\) 
-                        </p>
-                        <p>
-                            We will talk more about complex numbers in a later lesson.
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <div class="main-sub-topic">Real Numbers</div>
-                        <p>
-                            The set of Real numbers is the set that contains all <strong>rational (Q)</strong>
-                            and <strong>irrational (I)</strong> numbers. It is represented by the symbol
-                            \(\mathbb{R}\).
-                        </p>
-                        <p>
-                            It is the set that contains fractions, surds, integers etc.
-                        </p>
-                        <p>
-                            Most of the lessons that you have taken to this point in Mathematics have been 
-                            under the set of realnumbers.
-                        </p>
-                        <p>
-                            The diagram below describes a <strong>Venn diagram</strong> showing the set of Real numbers and its 
-                            main or major subsets. The rectangle represents the set of real numbers, 
-                            while the circle represents the set of Rational numbers. The numbers outside of the 
-                            circle represents the set of Irrational numbers, that is, the complement of the 
-                            set of rational numbers.
-                        </p>
-                        <img 
-                            src="../../images/realnumbersvenn1.png" 
-                            alt="Venn diagram showing the main subsets of the set of real numbers."
-                            class="place"
-                        >
-                        <br><br>
-                        <p>
-                            <strong>NOTE:</strong>
-                        </p>
-                        <p>
-                            The number line is sometimes called the real number line as it used to model 
-                            the set of real numbers.
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-
-                    <div class="groups">
-                        <div class="maintopic">Basic Definitions Under Real Numbers</div>
-
-                        <p>
-                            Given the set of real numbers, the following numbers can be discussed or described
-                            as subsets of the set of real numbers.
-                        </p>
-                        <p>
-                            These subsets include but not limited to the following:
-                        </p>
-                        <p>
-                            \((a)\) Irrational Numbers <br>
-                            \((b)\) Rational Numbers <br>
-                            \((c)\) Integers <br>
-                            \((d)\) Whole Numbers <br>
-                            \((e)\) Counting or Natural numbers. <br>
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <div class="main-sub-topic">Irrational numbers (I): </div>
-
-                        <p>
-                            Irrational numbers are non-repeating or non-terminating decimals. They can also be 
-                            thought of as numbers that cannot be expressed as fractions with a rational denominator.
-                            This set usually includes surds and other decimals that do not recur nor terminate.
-                        </p>
-                        <p>
-                            The symbol for the set of irrational numbers is (\(\mathbf{I}\)) and can sometimes
-                            be represented by (\(\mathbf{Q^\prime}\)) as the set of irrational numbers is the 
-                            complement of the set of rational numbers.
-                        </p>
-                        <p>
-                            Examples of irrational numbers are \(\pi\), \(\sqrt{2}\), 
-                            \(\sqrt{3}\), \(\frac{1}{\sqrt{5}}\) etc.
-                        </p>
-                        <br><br>
-                        <p>
-                            <strong>NOTE:</strong> <br>
-                        </p>
-                        <p>
-                            The set of irrational numbers is a subset of the set of real numbers, as shown in the 
-                            expression below:
-                        </p>
-                        <p>
-                            \[ I \subset \mathbb{R} \]
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-                            
-                        <div class="main-sub-topic">Rational numbers (Q): </div>
-
-                        <p>
-                            Rational numbers are numbers that can be expressed as fractions or in the form \(\frac{a}{b}\). 
-                            They can also be thought of as fractions or decimals that terminate or repeat (or recur). <br>
-                            Examples are 0.5, \(\frac{1}{8}\), 68%, 3.75, 69, etc.
-                        </p>
-                        <p>
-                            A decimal is said to be recurring when one or more digits to the right of the 
-                            decimal point keeps repeating. Examples are 0.333\(\dots\), 0.555\(\dots\) etc.
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <div class="main-sub-topic">Integers (Z): </div>
-
-                        <p>
-                            Integers are defined as the set of negative and positive whole numbers. Remember, that this set also 
-                            includes the number zero (0). <br>
-                            E.g. \(Z=\){\(\dots\), -3, -2, -1, 0, 1, 2, 3, \(\dots\)}
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <div class="main-sub-topic">Whole numbers (W): </div>
-
-                        <p>
-                            Whole numbers are non-negative integers. Whole numbers include the number zero (0). <br>
-                            Eg. \(W =\) {0, 1, 2, 3, 4, \(\dots\)}
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <div class="main-sub-topic">Natural numbers (N): </div>
-
-                        <p>
-                            Natural numbers are positive integer values. They do not include the number zero (0). 
-                            Natural numbers are the numbers that we normally use to count, hence they are sometimes 
-                            termed as counting numbers. <br>
-                            E.g. \(N =\){1, 2, 3, 4, \(\dots\)}
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-
-                        <p>
-                            Mathematically, the above definitions imply that;
-                        </p>
-                        <p>
-                            \[N \subset W \subset Z \subset Q \subset \mathbb{R}\]
-                        </p>
-                        <p>
-                            \(\ \subset \ \Rightarrow\) is read as "is a subset of"
-                        </p>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-                    <div class="groups">
-                        <div class="maintopic">Operations on Sets</div>
-                        
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-                    <div class="groups">
-                        <div class="maintopic">Three Set Problems</div>
-
-                        <br><br>
-                        <hr>
-                        <br><br>
-                    </div>
-                    <div class="groups">
-                        <div class="main-sub-topic">Quick Test</div><br>
-                        <p>
-                            Test yourself on what you have learnt so far. Click on the link below when you are ready.
-                        </p>
-                        <br>
-                      
-                        <p>
-                            <strong><em>Kindly contact the administrator on 0208711375 for the link to the test.</em></strong>
-                        </p>
-                      
-                     <!--
-                        <a 
-                            href="https://docs.google.com/forms/d/e/1FAIpQLSdXU1qXeqyNNG8mc8LWv6EHLFgi7Z3Tp56S9AKxj-mJLLntwQ/viewform?usp=sf_link" 
-                            class="section-a-link" target="_blank">
-                            <button type="button" class="section-a-button">Take the test</button>
+                    
+                    <div class="quick-links">
+                        <h4>Quick Links</h4>
+                        <a href="../../practice" class="quick-link">
+                            <i class="fas fa-pen-fancy"></i> Practice Problems
                         </a>
-                     -->
-                        <!------------------------------------------------------------------->
-
-
-                        <br><br>
-                        <hr>
-                        <br><br>
+                        <a href="../../downloads" class="quick-link">
+                            <i class="fas fa-file-pdf"></i> Download Notes
+                        </a>
                     </div>
-                    <div class="groups">
-                        <p>
-                            To advertise on our website kindly call on 0208711375 or 0249969740.
-                        </p>
-                    </div>
+                </aside>
+                
+                <!-- Main Content -->
+                <article class="lesson-content">
+                    <!-- Breadcrumb -->
+                    <nav class="breadcrumb">
+                        <a href="../../">Home</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <a href="../../emath">E-Maths</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <a href="../../emath/shs1">SHS1</a>
+                        <i class="fas fa-chevron-right"></i>
+                        <span>Sets</span>
+                    </nav>
 
-                </div>
+                    <!-- Video embed -->
+                    <section class="video-embed">
+                        <h2 class="section-title">
+                            <i class="fas fa-video"></i> Video Lesson
+                        </h2>
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen></iframe>
+                        </div>
+                        <div class="video-description">
+                            <p>Watch this comprehensive explanation of Sets theory with worked examples.</p>
+                            <a href="#" class="video-download">
+                                <i class="fas fa-download"></i> Download Video
+                            </a>
+                        </div>
+                    </section>
+                    
+                    <!-- Definition Section -->
+                    <section id="definition" class="lesson-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-book-open"></i> Definition of Sets
+                        </h2>
+                        
+                        <div class="concept-box">
+                            <p>A <strong>set</strong> is a collection of well-defined, distinct objects called <em>elements</em> or <em>members</em>. Sets are typically denoted by capital letters with elements enclosed in curly braces.</p>
+                            
+                            <div class="math-example">
+                                <p>Given set <em>A</em> containing odd numbers less than 10:</p>
+                                \[ A = \{1, 3, 5, 7, 9\} \]
+                            </div>
+                            
+                            <div class="key-points">
+                                <div class="point">
+                                    <h4>Membership Notation:</h4>
+                                    <p>For any element <em>x</em>:</p>
+                                    <ul>
+                                        <li>If \( x \) is in set \( A \): \( x \in A \)</li>
+                                        <li>If \( x \) is not in set \( A \): \( x \notin A \)</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="point">
+                                    <h4>Well-Defined:</h4>
+                                    <p>A set must have unambiguous membership criteria. For example, "books in this room" is well-defined, while "interesting books" is not.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Complement -->
+                        <div class="concept-box">
+                            <h3 class="subsection-title">
+                                <i class="fas fa-asterisk"></i> Complement of a Set (\( A' \))
+                            </h3>
+                            <p>The <strong>complement</strong> of set \( A \) contains all elements <em>not</em> in \( A \) within a given universal set.</p>
+                            
+                            <div class="math-example">
+                                <p>If \( \mathbb{U} = \{1, 2, 3, \ldots, 10\} \) and \( A = \{1, 3, 5, 7, 9\} \), then:</p>
+                                \[ A' = \{2, 4, 6, 8, 10\} \]
+                            </div>
+                        </div>
+                        
+                        <!-- Universal Set -->
+                        <div class="concept-box highlight-box">
+                            <h3 class="subsection-title">
+                                <i class="fas fa-globe"></i> Universal Set (\( \mathbb{U} \))
+                            </h3>
+                            <p>The set containing <em>all</em> elements under consideration. It satisfies:</p>
+                            \[ A \cup A' = \mathbb{U} \]
+                        </div>
+                        
+                        <!-- Cardinality -->
+                        <div class="concept-box">
+                            <h3 class="subsection-title">
+                                <i class="fas fa-hashtag"></i> Cardinality (\( n(A) \))
+                            </h3>
+                            <p>The number of elements in a set:</p>
+                            \[ n(A) = 5 \quad \text{(for our example set)} \]
+                            
+                            <div class="key-points">
+                                <div class="point">
+                                    <h4>Finite Set:</h4>
+                                    <p>Has countable elements (e.g., \( \{1, 2, 3\} \))</p>
+                                </div>
+                                <div class="point">
+                                    <h4>Infinite Set:</h4>
+                                    <p>Has uncountable elements (e.g., \( \mathbb{N} = \{1, 2, 3, \ldots\} \))</p>
+                                    \[ n(\mathbb{N}) = \infty \]
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Describing Sets Section -->
+                    <section id="describing-sets" class="lesson-section">
+                        <h2 class="section-title">
+                            <i class="fas fa-edit"></i> Describing Sets
+                        </h2>
+                        
+                        <div class="method-cards">
+                            <!-- Word Description -->
+                            <div class="method-card">
+                                <div class="method-header">
+                                    <i class="fas fa-font"></i>
+                                    <h3>1. Word Description</h3>
+                                </div>
+                                <div class="method-body">
+                                    <p>Using natural language to define the set:</p>
+                                    <div class="math-example">
+                                        \[ B = \{\text{whole numbers from 20 to 30}\} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Listing -->
+                            <div class="method-card">
+                                <div class="method-header">
+                                    <i class="fas fa-list-ol"></i>
+                                    <h3>2. Listing (Roster)</h3>
+                                </div>
+                                <div class="method-body">
+                                    <p>Explicitly listing all elements:</p>
+                                    <div class="math-example">
+                                        \[ B = \{20, 21, 22, \ldots, 30\} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Set Builder -->
+                            <div class="method-card">
+                                <div class="method-header">
+                                    <i class="fas fa-code"></i>
+                                    <h3>3. Set-Builder Notation</h3>
+                                </div>
+                                <div class="method-body">
+                                    <p>Mathematical rule definition:</p>
+                                    <div class="math-example">
+                                        \[ B = \{x \mid 20 \leq x \leq 30, x \in \mathbb{W}\} \]
+                                        <p class="notation-note">Read as: "x such that x is between 20 and 30 inclusive, where x is a whole number"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Special Sets -->
+                        <div class="concept-box">
+                            <h3 class="subsection-title">
+                                <i class="fas fa-star"></i> Special Sets
+                            </h3>
+                            
+                            <div class="special-set-cards">
+                                <div class="set-card">
+                                    <h4>Empty Set (\( \emptyset \))</h4>
+                                    <p>Contains no elements:</p>
+                                    \[ \emptyset = \{\} \]
+                                    \[ n(\emptyset) = 0 \]
+                                </div>
+                                
+                                <div class="set-card">
+                                    <h4>Unit Set</h4>
+                                    <p>Contains exactly one element:</p>
+                                    \[ S = \{a\} \]
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <!-- Continue with other sections... -->
+                    
+                    <!-- Practice Section -->
+                    <section class="practice-section">
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Practice Exercise</h2>
+                        </div>
+                        
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>Given \( \mathbb{U} = \{1, 2, \ldots, 10\} \) and \( A = \{2, 4, 6, 8, 10\} \), find \( A' \).</p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    \[ A' = \{1, 3, 5, 7, 9\} \]
+                                </div>
+                            </div>
+                            <!-- More problems... -->
+                        </div>
+                        
+                        <div class="cta-box">
+                            <p>Ready for more challenges?</p>
+                            <a href="../../practice/sets" class="cta-button">
+                                <i class="fas fa-arrow-right"></i> Full Practice Set
+                            </a>
+                        </div>
+                    </section>
+                </article>
             </div>
-
-            <div class="aside-container">
-                <div class="levels">
-                    <a href="../../shs"><span>SHS</span></a>
-                    <a href="../../jhs"><span>JHS</span></a>
-                    <a href="../../pri4-6"><span>PRI 4 - 6</span></a>
-                    <a href="../../q-and-a"><span>PASSCO</span></a>
-                </div>
-                <div class="select-level" id="select-level">
-                    <label for="level">Select your level:</label>
-                    <select name="level" id="level">
-                        <a href="../../shs"><span>SHS</span></a>
-                        <a href="../../jhs"><span>JHS</span></a>
-                        <a href="../../pri4-6"><span>PRI 4 - 6</span></a>
-                        <a href="../../q-and-a"><span>PASSCO</span></a>
-                    </select>
-                </div>
-            </div>
-        </section>
+        </div>
     </main>
-    
-    <footer>
-        <div class="footer-div">
-            <p>
-                Created with love by Anoff Akonnor
-            </p>
+
+    <!-- Footer -->
+    <footer class="lesson-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./maths"><i class="fas fa-calculator"></i> Mathematics</a></li>
+                                <li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="#passco"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="./tutorials"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; 2025. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
-
-    
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="../../js/lessons.js"></script>
+    <!-- Scripts -->
+    <script src="../../js/emath-lesson.js"></script>
+    <script>
+        // Current year for footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
