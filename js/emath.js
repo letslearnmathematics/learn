@@ -214,7 +214,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     // ========== PRINTABLE MATERIALS ==========
-    const printButtons = document.createElement('div');
+  /*  const printButtons = document.createElement('div');
     printButtons.className = 'print-actions';
     printButtons.innerHTML = `
         <button class="print-button"><i class="fas fa-print"></i> Print This Page</button>
@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function() {
             alert('PDF generation would be implemented with a proper library or backend service');
             // In a real implementation, this would generate a PDF version
         });
-    }
+    }*/
 });
 
 // ========== ANIMATIONS ==========
