@@ -1,0 +1,327 @@
+/* emath.css - Elective Mathematics Page Styles */
+:root {
+    --emath-accent: #f69c00; /* Using your existing accent color */
+    --emath-dark: #3E2F5D;   /* Your main dark color */
+    --emath-light: #ffffff;  /* White text */
+    --emath-card-bg: linear-gradient(135deg, rgba(74,44,130,0.9) 0%, rgba(62,47,93,0.9) 100%);
+    --emath-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* ========== MAIN CONTENT STYLES ========== */
+.subject-title {
+    color: var(--emath-accent);
+    font-size: 2.8rem;
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subject-title i {
+    font-size: 2.2rem;
+}
+
+.subject-intro {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    border-left: 4px solid var(--emath-accent);
+}
+
+/* ========== TAB SYSTEM ========== */
+.class-tabs {
+    display: flex;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--emath-light);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover {
+    opacity: 1;
+    color: var(--emath-accent);
+}
+
+.tab-button.active {
+    opacity: 1;
+    color: var(--emath-accent);
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--emath-accent);
+}
+
+/* ========== TOPICS GRID ========== */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.topic-card {
+    background: var(--emath-card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--emath-shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border-color: var(--emath-accent);
+}
+
+.topic-header {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.topic-header i {
+    font-size: 2rem;
+    color: var(--emath-accent);
+}
+
+.topic-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--emath-light);
+}
+
+.topic-body {
+    padding: 1.5rem;
+}
+
+.topic-body p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.8);
+    min-height: 6rem;
+}
+
+.topic-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.topic-stats i {
+    margin-right: 0.5rem;
+    color: var(--emath-accent);
+}
+
+.topic-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--emath-accent);
+    color: var(--emath-dark);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.topic-link:hover {
+    background: #ffb733;
+    transform: translateX(5px);
+}
+
+.topic-link i {
+    margin-left: 0.5rem;
+}
+
+/* ========== SPECIAL SECTIONS ========== */
+.section-title {
+    color: var(--emath-accent);
+    font-size: 2.4rem;
+    margin: 3rem 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title i {
+    font-size: 2rem;
+}
+
+/* Exam Prep & Resources Grid */
+.resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.resource-card {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.resource-card:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-5px);
+    border-color: var(--emath-accent);
+}
+
+.resource-card i {
+    font-size: 3rem;
+    color: var(--emath-accent);
+    margin-bottom: 1.5rem;
+}
+
+.resource-card h3 {
+    font-size: 1.8rem;
+    color: var(--emath-light);
+    margin-bottom: 1rem;
+}
+
+.resource-card p {
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 2rem;
+}
+
+.resource-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--emath-accent);
+    color: var(--emath-accent);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+    background: var(--emath-accent);
+    color: var(--emath-dark);
+}
+
+/* ========== SIDEBAR STYLES ========== */
+.quick-links {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.quick-links h3 {
+    color: var(--emath-accent);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.quick-links ul {
+    list-style: none;
+}
+
+.quick-links li {
+    margin-bottom: 1rem;
+}
+
+.quick-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+}
+
+.quick-links a:hover {
+    color: var(--emath-accent);
+    transform: translateX(5px);
+    background: rgba(255,255,255,0.1);
+}
+
+/* Progress Tracker */
+.progress-tracker {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--emath-accent);
+    border-radius: 0.5rem;
+    transition: width 0.5s ease;
+}
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 768px) {
+    .topics-grid, .resource-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .class-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-button {
+        padding: 1rem 1.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .subject-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
