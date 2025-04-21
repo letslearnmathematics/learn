@@ -1,0 +1,1379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Comparing Numbers | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Comparing Numbers for JHS1 Mathematics. 
+        Learn definitions, operations, Venn diagrams and practical applications.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Comparing Numbers | JHS1 Mathematics">
+        <meta property="og:description" content="Learn to Compare Numbers More than 1,000,000,000 and represent the comparison using >, <, =.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-and-numeration-system/comparing-numbers">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/comparing-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-comparing.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Comparing Numbers</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS1: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Comparing Numbers</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction </a></li>
+                                <li><a href="#number-theory"><i class="fas fa-chevron-right"></i> Number Theory</a></li>
+                                <li><a href="#skip-counting"><i class="fas fa-chevron-right"></i> Skip Counting </a></li>
+                                <li><a href="#place-value"><i class="fas fa-chevron-right"></i> Place Value </a></li>
+                                <li><a href="#comparison-operators"><i class="fas fa-chevron-right"></i> Comparison Operators </a></li>
+                                <!--<li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>-->
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../coremath" class="level-btn">SHS</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                                <a href="../../../../math-primary" class="level-btn">PRIM.</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Comparing-Numbers</span>
+                        </nav>
+
+                      <!-- Video embed 
+                        <section class="video-embed">
+                            <h2 class="section-title">
+                                <i class="fas fa-video"></i> Video Lesson
+                            </h2>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="video-description">
+                                <p>Watch this comprehensive explanation of Sets theory with worked examples.</p>
+                                <a href="#" class="video-download">
+                                    <i class="fas fa-download"></i> Download Video
+                                </a>
+                            </div>
+                        </section>
+                      -->
+
+                        <!-- Definition Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    In this lesson, we will learn how to compare and order whole numbers more than 1,000,000,000
+                                    and represent the comparison using \((>, <, \text{or}=)\)
+                                </p>
+                              <!--
+                                <div class="math-example">
+                                    <p>Given set <em>A</em> containing odd numbers less than 10:</p>
+                                    \[ A = \{1, 3, 5, 7, 9\} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Membership Notation:</h4>
+                                        <p>For any element <em>x</em>:</p>
+                                        <ul>
+                                            <li>If \( x \) is in set \( A \): \( x \in A \)</li>
+                                            <li>If \( x \) is not in set \( A \): \( x \notin A \)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Well-Defined:</h4>
+                                        <p>A set must have unambiguous membership criteria. For example, "books in this room" is well-defined, while "interesting books" is not.</p>
+                                    </div>
+                                </div>
+                              -->
+                            </div>
+                            
+                           <!-- Complement 
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Complement of a Set (\( A' \))
+                                </h3>
+                                <p>The <strong>complement</strong> of set \( A \) contains all elements <em>not</em> in \( A \) within a given universal set.</p>
+                                
+                                <div class="math-example">
+                                    <p>If \( \mathbb{U} = \{1, 2, 3, \ldots, 10\} \) and \( A = \{1, 3, 5, 7, 9\} \), then:</p>
+                                    \[ A' = \{2, 4, 6, 8, 10\} \]
+                                </div>
+                            </div>
+                           -->
+
+                            <!-- Universal Set 
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Universal Set (\( \mathbb{U} \))
+                                </h3>
+                                <p>The set containing <em>all</em> elements under consideration. It satisfies:</p>
+                                \[ A \cup A' = \mathbb{U} \]
+                            </div>
+                            -->
+                            
+                            <!-- Cardinality 
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Cardinality (\( n(A) \))
+                                </h3>
+                                <p>The number of elements in a set:</p>
+                                \[ n(A) = 5 \quad \text{(for our example set)} \]
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Finite Set:</h4>
+                                        <p>Has countable elements (e.g., \( \{1, 2, 3\} \))</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Infinite Set:</h4>
+                                        <p>Has uncountable elements (e.g., \( \mathbb{N} = \{1, 2, 3, \ldots\} \))</p>
+                                        \[ n(\mathbb{N}) = \infty \]
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                        </section>
+                        
+                        <!-- Multi-base Blocks Section -->
+                        <section id="number-theory" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Number Theory
+                            </h2>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of the lesson with worked examples.</p>
+                                    <!--
+                                    <a href="#" class="video-download">
+                                        <i class="fas fa-download"></i> Download Video
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+
+                            <!-- Components -->
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Real numbers \((\mathbb{R})\):
+                                </h3>
+                                <p>
+                                    The set of real numbers is the set that contains all <strong>rational</strong> and 
+                                    <strong>irrational numbers</strong>. It is the largest of all the number sets we will consider, 
+                                    as it contains all the other types of numbers, integers,  fractions, decimals, etc.
+                                </p>       
+                            </div>
+                            
+                            
+                            <!-- Relations -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Rational or Irrational?
+                                </h3>
+                                <p>
+                                    Within the set of real numbers are two main subsets: the set of 
+                                    <strong>Irrational</strong> numbers and the set of <strong>Rational</strong> 
+                                    numbers.
+                                </p>
+                                
+                                <div class="key-points">
+
+                                    <div class="point">
+                                        <h4>Set of Rational Numbers \((\mathbb{Q})\)</h4>
+                                        <p>
+                                            Rational numbers are numbers that can be expressed as fractions or in the form \(\frac{a}{b}\). 
+                                            They can also be thought of as fractions or decimals that terminate or repeat. <br>
+                                            Eg. 0.5, \(\frac{1}{8}\), 68%, 3.75, 69, etc.
+                                        </p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Set of Irrational Numbers \((\mathbb{I})\)</h4>
+                                        <p>
+                                            Irrational numbers are non-repeating or non-terminating decimals. <br>
+                                            E.g. \(\sqrt{2}\), \(\sqrt{3}\), etc.
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                            <!-- Special Sets -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Subsets of Rational Numbers
+                                </h3>
+
+                                <p>
+                                    Within the set of Rational Numbers are other smaller sets. These subsets are mentioned
+                                    below:
+                                </p>
+                                
+                                <div class="special-set-cards">
+                                    <div class="set-card">
+                                        <h4>Integers (\( Z \))</h4>
+                                        <p>
+                                            <strong>Integers</strong> are defined as the set of negative and positive whole numbers. Remember, that this set also 
+                                            includes the number zero (0). <br>
+                                            E.g. \(Z=\){\(\dots\), -3, -2, -1, 0, 1, 2, 3, \(\dots\)}
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="set-card">
+                                        <h4>Whole numbers (\( W \))</h4>
+                                        <p>
+                                            <strong>Whole numbers</strong> are non-negative integers. Whole numbers include the number zero (0). <br>
+                                            Eg. \(W =\) {0, 1, 2, 3, 4, \(\dots\)}
+                                        </p>
+                                    </div>
+
+                                    <div class="set-card">
+                                        <h4>Natural numbers (\( N \))</h4>
+                                        <p>
+                                            Natural numbers are positive integer values. They do not include the number zero (0). 
+                                            Natural numbers are the numbers that we normally use to count, hence they are sometimes 
+                                            termed as counting numbers. <br>
+                                            E.g. \(N =\){1, 2, 3, 4, \(\dots\)}
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A set B contains whole numbers less than 20. List the elements in the set B</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>If P = {2, 4, 6, 8} and Q = {even counting numbers less than 12}. What is the
+                                        relationship between P and Q?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Using multi-base blocks \((1 \ cube = 100,000)\) model the number 1,500,000.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/9yH5j1qC_-U" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Using multi-base blocks \((1 \ cube = 100,000)\) model the number 21,500,000.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Using multi-base blocks \((1 \ cube = 100,000)\) model the number 100,700,000.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>-->
+                                <!-- More problems... -->
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Graph Sheet Section -->
+                        <section id="skip-counting" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Skip Counting
+                            </h2>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of the lesson with worked examples.</p>
+                                    <!--
+                                    <a href="#" class="video-download">
+                                        <i class="fas fa-download"></i> Download Video
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Main Idea
+                                </h3>
+                                <p>
+                                    <strong>Skip counting</strong> is a way that we can perform addition or subtraction of whole numbers.
+                                </p>
+                                <p>
+                                    Consider the numbers fifty (50) and one hundred (100).   
+                                    On the real number line, skipping from 
+                                    50 to 100 can be thought of as <strong>adding 50 to 50</strong> in order to obtain 100.
+                                </p>
+                                <p>
+                                    Similarly, moving from 100 to 50, can be thought of as <strong>subtracting 50 from 100</strong> to obtain
+                                    50.
+                                </p>
+                            </div>
+
+                            <!-- Special Sets -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Intervals
+                                </h3>
+                                <div class="set-card">
+                                    <p>
+                                        The distance between 2 numbers on the number line is termed as the <strong>interval</strong>
+                                        between the two numbers. In our example above, we can therefore say that we are skipping in
+                                        an interval of 50 to the right, or to the left.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <!-- Relations --> 
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Movement to the left</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Movement to the left on the real number line means <strong>subtraction</strong></p>
+                                        <div class="math-example">
+                                            <p>
+                                                \[
+                                                    100 - 50 = 50
+                                                \]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Movement to the right</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Movement to the right on the real number line means <strong>addition</strong></p>
+                                        <div class="math-example">
+                                            <p>
+                                                \[
+                                                    50 + 50 = 100
+                                                \]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <!-- Special Sets 
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Special Sets
+                                </h3>
+                                
+                                <div class="special-set-cards">
+                                    <div class="set-card">
+                                        <h4>Empty Set (\( \emptyset \))</h4>
+                                        <p>Contains no elements:</p>
+                                        \[ \emptyset = \{\} \]
+                                        \[ n(\emptyset) = 0 \]
+                                    </div>
+                                    
+                                    <div class="set-card">
+                                        <h4>Unit Set</h4>
+                                        <p>Contains exactly one element:</p>
+                                        \[ S = \{a\} \]
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>How many jumps or skips will it take to jump from the starting point to the 7th
+                                        term?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <!--<img src="../../../../images/model42.png" alt="Modelling the number 4,200,000." class="place">
+                                        -->
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Skip count in intervals of 25 up to the 8th term from 1,000</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <!--<img src="../../../../images/model133.png" alt="Modelling the number 13,300,000." class="place">
+                                        -->
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Starting at 1000, skip count forward in intervals of 50 to the fourth term</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <!--<img src="../../../../images/model133.png" alt="Modelling the number 13,300,000." class="place">
+                                        -->
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Starting at 1000, skip count backwards in intervals of 50 to the fifth term</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <!--<img src="../../../../images/model133.png" alt="Modelling the number 13,300,000." class="place">
+                                        -->
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Starting at 1000, skip count backwards in intervals of 250 to the fourth term</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <!--<img src="../../../../images/model133.png" alt="Modelling the number 13,300,000." class="place">
+                                        -->
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Multiples Section -->
+                        <section id="place-value" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Place Value of Numbers
+                            </h2>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on the lesson with worked examples.</p>
+                                    <!--
+                                    <a href="#" class="video-download">
+                                        <i class="fas fa-download"></i> Download Video
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Main Idea
+                                </h3>
+                                <p>
+                                    <strong>Place value</strong> refers to the value of a digit based on its position within a given number. 
+                                    Each digit in a number has a different place value, depending on its position (or place) from right 
+                                    to left. 
+                                </p>
+                                <!--
+                                <img src="../../../../images/graphmodel1.png" alt="Modelling with the graph." class="place">
+                                -->
+                            </div>
+                            
+                            <!-- Special Sets -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Comparing two numbers
+                                </h3>
+                                
+                                <div class="special-set-cards">
+                                    <div class="set-card">
+                                        <p>
+                                            To compare two large numbers, sometimes it is better to compare the place value of the individual 
+                                            digits of the numbers.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="../../../../images/table-of-values-1.jpg" alt="Comparing numbers with a table of value" class="place">
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <!-- Relations --> 
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3> Step 1  </h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>
+                                            <strong>Number of Digits</strong>
+                                        </p>
+                                        <div class="math-example">
+                                            <p>
+                                                When comparing 2 numbers using their place values, we first look at the number of digits within 
+                                                the numbers. The higher the number of digits, the bigger the number.
+                                            </p>
+                                            <p>
+                                                For example, 2,000 is bigger than 300 because 2,000 has 4 digits while the number 300 has only 3 digits.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3> Step 2  </h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>
+                                            <strong>The place value chart</strong>
+                                        </p>
+                                        <div class="math-example">
+                                            <p>
+                                                Each digit in a number has a different place value, depending on its 
+                                                position from right to left.
+                                            </p>
+                                            <p>
+                                                The values increase as you move from from right to left on the place value chart
+                                                as shown above.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Movement to the right</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Movement to the right on the real number line means <strong>addition</strong></p>
+                                        <div class="math-example">
+                                            <p>
+                                                \[
+                                                    50 + 50 = 100
+                                                \]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+                            </div>
+
+                            
+                            
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>What is the value of the underlined digit in the number 4<strong><u>8</u></strong>9,000?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <!--<img src="../../../../images/modelmultiple1.png" alt="Modelling Table 1" class="place">
+                                        <p>
+                                            \(\therefore\) 5,560=(200 \(\times\) 20)+(100 \(\times\) 10)+(50 \(\times\) 11)+(10 \(\times\) 1)
+                                        </p>
+                                        -->
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Write 1,025,495,325 in words.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <!--<img src="../../../../images/modelmultiple1.png" alt="Modelling Table 1" class="place">
+                                        <p>
+                                            \(\therefore\) 5,560=(200 \(\times\) 20)+(100 \(\times\) 10)+(50 \(\times\) 11)+(10 \(\times\) 1)
+                                        </p>
+                                        -->
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Study the table below carefully and answer the question that follow.</p>
+                                    <table class="place-value-q3--table">
+                                        <tr>
+                                            <td> 187,500 </td>
+                                            <td> 687,500 </td>
+                                            <td> 1,187,500 </td>
+                                            <td> 1,687,500 </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 2,187,500 </td>
+                                            <td> 2,687,500 </td>
+                                            <td> 3,187,500 </td>
+                                            <td> 3,687,500 </td>
+                                        </tr>
+                                        <tr>
+                                            <td> 4,187,500 </td>
+                                            <td> 4,687,500 </td>
+                                            <td> 5,187,500</td>
+                                            <td> 5,687,500</td>
+                                        </tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <!--<img src="../../../../images/modelmultiple1.png" alt="Modelling Table 1" class="place">
+                                        <p>
+                                            \(\therefore\) 5,560=(200 \(\times\) 20)+(100 \(\times\) 10)+(50 \(\times\) 11)+(10 \(\times\) 1)
+                                        </p>
+                                        -->
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/video-ID" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br> 
+
+                        <!-- Token Currency Section -->
+                        <section id="comparison-operators" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Comparison Operators
+                            </h2>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of the lesson with worked examples.</p>
+                                    <!--
+                                    <a href="#" class="video-download">
+                                        <i class="fas fa-download"></i> Download Video
+                                    </a>
+                                    -->
+                                </div>
+                            </div>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Main Idea
+                                </h3>
+                                <p>
+                                    The symbols discussed below are called comparison symbols or comparison operator, as 
+                                    they are symbols we use to compare two or more numbers or values.
+                                </p>
+                            </div>
+
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <!-- The Operators --> 
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3> Greater than \((>)\) </h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>
+                                            Given any number on the number line, all the numbers to the right of that number 
+                                            are bigger than the given number. 
+                                        </p>
+                                        <p>
+                                            It also implies that all the numbers to the left 
+                                            of the number are smaller than the given number.
+                                        </p>
+                                        <div class="math-example">
+                                            \[5 > 4\]
+                                        </div>
+                                        <p>
+                                            Read as, "5 is greater than 4."
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3> Less than \((<)\)  </h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>
+                                            Similarly, the value of the numbers decrease as we move to the left of any number 
+                                            on the number line. 
+                                        </p>
+                                        <p>
+                                            We can therefore say, that the numbers to the left of any given number on the 
+                                            real number line are smaller than the number in question.
+                                        </p>
+                                        <div class="math-example">
+                                            <p>
+                                                \[2 < 3\]
+                                            </p>
+                                        </div>
+                                        <p>
+                                            Read as, "2 is less than 3."
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3> Equal to \((=)\)  </h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>
+                                            When two quantities have the same value, we say that one is equal to the other.
+                                        </p>
+                                        <p>
+                                            We use the equal to symbol to indicate this comparison.
+                                        </p>
+                                        <div class="math-example">
+                                            <p>
+                                                \[4 + 1 = 5\]
+                                            </p>
+                                        </div>
+                                        <p>
+                                            Read as, "the sum of 4 and 1 is equal to 5."
+                                        </p>
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Movement to the right</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Movement to the right on the real number line means <strong>addition</strong></p>
+                                        <div class="math-example">
+                                            <p>
+                                                \[
+                                                    50 + 50 = 100
+                                                \]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+                            </div>
+                        </section>
+                        
+                        <!-- Continue with other sections... -->
+                        
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <!--
+                                    <p>
+                                        Represent Gh₵5,560 using token notes of Gh₵10.00, Gh₵50.00, Gh₵100.00 and Gh₵200.00. <br>
+                                        Make sure each note is used.
+                                    </p>
+                                    -->
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                       <!-- 
+                                        <img src="../../../../images/token-notes1.jpg" alt="token notes of 5600" class="place">
+                                        
+                                        
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <!--
+                                    <p>
+                                        Represent Gh₵5,560 using token notes of Gh₵10.00, Gh₵50.00, Gh₵100.00 and Gh₵200.00. <br>
+                                        Make sure each note is used.
+                                    </p>
+                                    -->
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                       <!-- 
+                                        <img src="../../../../images/token-notes1.jpg" alt="token notes of 5600" class="place">
+                                        
+                                        
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <!--
+                                    <p>
+                                        Represent Gh₵5,560 using token notes of Gh₵10.00, Gh₵50.00, Gh₵100.00 and Gh₵200.00. <br>
+                                        Make sure each note is used.
+                                    </p>
+                                    -->
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                       <!-- 
+                                        <img src="../../../../images/token-notes1.jpg" alt="token notes of 5600" class="place">
+                                        
+                                        
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <!--
+                                    <p>
+                                        Represent Gh₵5,560 using token notes of Gh₵10.00, Gh₵50.00, Gh₵100.00 and Gh₵200.00. <br>
+                                        Make sure each note is used.
+                                    </p>
+                                    -->
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                       <!-- 
+                                        <img src="../../../../images/token-notes1.jpg" alt="token notes of 5600" class="place">
+                                        
+                                        
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <!--
+                                    <p>
+                                        Represent Gh₵5,560 using token notes of Gh₵10.00, Gh₵50.00, Gh₵100.00 and Gh₵200.00. <br>
+                                        Make sure each note is used.
+                                    </p>
+                                    -->
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                       <!-- 
+                                        <img src="../../../../images/token-notes1.jpg" alt="token notes of 5600" class="place">
+                                        
+                                        
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                        -->
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Special Sets: Can use for definitions and formulas
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Special Sets
+                                </h3>
+                                
+                                <div class="special-set-cards">
+                                    <div class="set-card">
+                                        <h4>Empty Set (\( \emptyset \))</h4>
+                                        <p>Contains no elements:</p>
+                                        \[ \emptyset = \{\} \]
+                                        \[ n(\emptyset) = 0 \]
+                                    </div>
+                                    
+                                    <div class="set-card">
+                                        <h4>Unit Set</h4>
+                                        <p>Contains exactly one element:</p>
+                                        \[ S = \{a\} \]
+                                    </div>
+                                </div>
+                            </div>
+                        --> 
+                        
+                        <br><br>
+
+                        <!-- HTML Section (same as before) -->
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./maths"><i class="fas fa-calculator"></i> Mathematics</a></li>
+                                <li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="#passco"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="./tutorials"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                                <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; 2025. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-comparing-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/comparing-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </body>
+</html>
