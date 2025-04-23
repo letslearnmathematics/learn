@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }));
 
     // YouTube Video Slider with API Integration
-    const youtubeSlider = document.querySelector('.youtube-slider');
-    if (youtubeSlider) {
+    const videoSlider = document.querySelector('.video-slider');
+    if (videoSlider) {
         // Configuration - REPLACE THESE WITH YOUR ACTUAL VALUES
         const YOUTUBE_CHANNEL_ID = 'UCO5IGU0g6WQONZF5Wq2VpvQ'; // Your YouTube channel ID
         const YOUTUBE_API_KEY = 'AIzaSyChoa4VNDkG1yHt-0yOrRfiOB7_3rJvFeU'; // Your YouTube API key
@@ -26,6 +26,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Handle window resize
         window.addEventListener('resize', debounce(updateSliderDots, 200));
+
+        // Slider navigation buttons
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
+        
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => navigateSlider(-1));
+            nextBtn.addEventListener('click', () => navigateSlider(1));
+        }
 
         async function fetchLatestVideos() {
             try {
@@ -56,14 +65,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         function renderVideos(videos, stats) {
-            youtubeSlider.innerHTML = '';
-            const sliderNav = document.querySelector('.slider-nav');
-            sliderNav.innerHTML = '';
+            videoSlider.innerHTML = '';
+            const sliderDots = document.querySelector('.slider-dots');
+            sliderDots.innerHTML = '';
             
             videos.forEach((video, index) => {
                 const videoId = video.id.videoId;
                 const thumbnail = video.snippet.thumbnails.medium || video.snippet.thumbnails.default;
-                const videoStats = stats.items.find(stat => stat.id === videoId);
+                const videoStats = stats.find(stat => stat.id === videoId);
                 const viewCount = videoStats ? formatNumber(videoStats.statistics.viewCount) : 'N/A';
                 const publishedAt = formatDate(video.snippet.publishedAt);
                 
@@ -86,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         </div>
                     </a>
                 `;
-                youtubeSlider.appendChild(videoCard);
+                videoSlider.appendChild(videoCard);
             });
             
             // Initialize slider functionality
@@ -95,7 +104,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function renderManualFallback() {
             // Fallback content (your original hardcoded videos)
-            youtubeSlider.innerHTML = `
+            videoSlider.innerHTML = `
                 <!-- Video Card 1 -->
                 <div class="video-card">
                     <a href="https://youtu.be/6YzeRmEr3IU?si=v2e8Rnt8Y46nctrh" target="_blank" rel="noopener noreferrer">
@@ -216,16 +225,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
         function initSlider() {
             const cards = document.querySelectorAll('.video-card');
-            const sliderNav = document.querySelector('.slider-nav');
+            const sliderDots = document.querySelector('.slider-dots');
             
             if (cards.length === 0) return;
             
             // Remove existing dots
-            sliderNav.innerHTML = '';
+            sliderDots.innerHTML = '';
             
             // Calculate number of dots needed based on visible cards
             const cardWidth = cards[0].offsetWidth + 20; // card width + gap
-            const visibleCards = Math.floor(youtubeSlider.offsetWidth / cardWidth);
+            const visibleCards = Math.floor(videoSlider.offsetWidth / cardWidth);
             const dotCount = Math.ceil(cards.length / visibleCards);
             
             // Create dots
@@ -235,11 +244,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 dot.addEventListener('click', () => {
                     scrollToCard(i * visibleCards);
                 });
-                sliderNav.appendChild(dot);
+                sliderDots.appendChild(dot);
             }
             
             // Initialize scroll tracking
-            youtubeSlider.addEventListener('scroll', debounce(handleScroll, 100));
+            videoSlider.addEventListener('scroll', debounce(handleScroll, 100));
         }
 
         function scrollToCard(index) {
@@ -247,9 +256,9 @@ document.addEventListener("DOMContentLoaded", () => {
             if (index >= cards.length) return;
             
             const card = cards[index];
-            const scrollPosition = card.offsetLeft - youtubeSlider.offsetLeft;
+            const scrollPosition = card.offsetLeft - videoSlider.offsetLeft;
             
-            youtubeSlider.scrollTo({
+            videoSlider.scrollTo({
                 left: scrollPosition,
                 behavior: 'smooth'
             });
@@ -260,13 +269,36 @@ document.addEventListener("DOMContentLoaded", () => {
             if (cards.length === 0) return;
             
             const cardWidth = cards[0].offsetWidth + 20;
-            const scrollPosition = youtubeSlider.scrollLeft;
+            const scrollPosition = videoSlider.scrollLeft;
             const activeIndex = Math.round(scrollPosition / cardWidth);
             
             // Update active dot
             const dots = document.querySelectorAll('.slider-dot');
             dots.forEach((dot, index) => {
                 dot.classList.toggle('active', index === activeIndex);
+            });
+        }
+
+        function navigateSlider(direction) {
+            const cards = document.querySelectorAll('.video-card');
+            if (cards.length === 0) return;
+            
+            const cardWidth = cards[0].offsetWidth + 20;
+            const visibleCards = Math.floor(videoSlider.offsetWidth / cardWidth);
+            const currentScroll = videoSlider.scrollLeft;
+            const maxScroll = videoSlider.scrollWidth - videoSlider.clientWidth;
+            
+            let newScroll;
+            
+            if (direction === -1) { // Previous
+                newScroll = Math.max(0, currentScroll - (visibleCards * cardWidth));
+            } else { // Next
+                newScroll = Math.min(maxScroll, currentScroll + (visibleCards * cardWidth));
+            }
+            
+            videoSlider.scrollTo({
+                left: newScroll,
+                behavior: 'smooth'
             });
         }
 

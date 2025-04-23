@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ========== SUBTOPIC SYSTEM ==========
     /*New for the subtopics*/
-    /**/ 
+    /*
     const subtopicsData = {
         "jhs1": {
             "Number & Numeration System": [
@@ -352,16 +352,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Probability as Fractions, Percentages &/or Ratios", url: "./math-jhs/jhs3/handling-data/chance-or-probability/probability-as-fractions-percentages.html" }
             ]
         }
-    };
+    };*/ 
 
-    /*In case I want to test a functionality 
+    /*In case I want to test a functionality */
     const subtopicsData = {
         "jhs1": {
             "Number & Numeration System": [
-                { name: "Modelling Numbers", url: "./b7-1-1-1-1lesson1" },
-                { name: "Comparing Numbers", url: "./b7-1-1-1-2lesson1" },
-                { name: "Rounding Whole Numbers", url: "./b7-1-1-1-3lesson1" },
-                { name: "Rounding Decimals", url: "./b7-1-1-1-5lesson1" }
+                { name: "Modelling Numbers", url: "./math-jhs/jhs1/number/number-and-numeration-system/modelling-numbers" },
+                { name: "Comparing Numbers", url: "./math-jhs/jhs1/number/number-and-numeration-system/comparing-numbers" },
+                { name: "Rounding Whole Numbers", url: "./math-jhs/jhs1/number/number-and-numeration-system/rounding-whole-numbers" },
+                { name: "Rounding Decimals", url: "./math-jhs/jhs1/number/number-and-numeration-system/rounding-decimals" }
             ],
             "Number Operations": [
                 { name: "Multiplying By Powers of 10", url: "./b7-1-2-1-1lesson1" },
@@ -617,7 +617,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Probability as Fractions, Percentages &/or Ratios", url: "b9-4-2-1-2lesson1" }
             ]
         }
-    };*/
+    };
 
     // Get modal elements
     const subtopicModal = document.getElementById('subtopicModal');
