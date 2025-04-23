@@ -10,11 +10,11 @@
 /*BREAD CRUMB*/
 .breadcrumb {
     font-size: 1.2rem;
-    color: red;
+    color: rgb(21, 3, 44);
 }
 
 .breadcrumb span {
-    color: bisque;
+    color: rgb(226, 54, 11);
 }
 
 /* ========== MAIN CONTENT STYLES ========== */
@@ -41,6 +41,10 @@
     border-left: 4px solid var(--emath-accent);
 }
 
+.indicators {
+    color: var(--emath-accent);
+}
+
 /* ========== TAB SYSTEM ========== */
 .class-tabs {
     display: flex;
@@ -55,7 +59,7 @@
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: bold;
-    color: var(--emath-light);
+    color: var(--emath-dark);
     opacity: 0.7;
     transition: all 0.3s ease;
     position: relative;
@@ -173,6 +177,52 @@
 
 .topic-link i {
     margin-left: 0.5rem;
+}
+
+/* About Section */
+.about-div-section {
+    padding: 8rem 0;
+}
+
+.about-div-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.about-div-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: var(--card-shadow);
+}
+
+.about-div-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-div-text p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.about-div-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.about-div-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 1rem auto 0;
 }
 
 /* ========== SPECIAL SECTIONS ========== */
@@ -336,6 +386,14 @@
 }
 
 /* Responsive Adjustments */
+
+@media (max-width: 992px) {
+    .about-div-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width: 768px) {
     .exam-prep {
         padding: 2.5rem;
@@ -553,6 +611,194 @@
     border-radius: 0.5rem;
     transition: width 0.5s ease;
 }
+
+/* ========== SUBTOPIC MODAL STYLES ========== */
+.subtopic-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtopic-modal-content {
+    background: var(--emath-card-bg);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    animation: modalFadeIn 0.3s ease;
+    position: relative;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.subtopic-modal h3 {
+    color: var(--emath-accent);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.subtopic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subtopic-item {
+    margin-bottom: 1rem;
+}
+
+.subtopic-link {
+    display: block;
+    padding: 1.2rem;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    border-left: 4px solid transparent;
+}
+
+.subtopic-link:hover {
+    background: rgba(246,156,0,0.2);
+    border-left-color: var(--emath-accent);
+    transform: translateX(5px);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: var(--emath-accent);
+    transform: rotate(90deg);
+}
+
+/* Additional modal styles for level-specific subtopics */
+.subtopic-subheader {
+    display: block;
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.8);
+    margin-top: 0.5rem;
+    font-weight: normal;
+}
+
+.subtopic-link i {
+    margin-right: 10px;
+    color: var(--emath-accent);
+    width: 20px;
+    text-align: center;
+}
+
+/* Level indicator in modal */
+.modal-level-indicator {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    background: var(--emath-accent);
+    color: var(--emath-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .subtopic-modal-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .subtopic-link {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+/* ========== Recently  viewed stuff ========== */
+
+/* Recently Viewed Styles */
+.recently-viewed-container {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: none;
+}
+
+.recently-viewed-title {
+    color: var(--emath-accent);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.recently-viewed-title i {
+    margin-right: 10px;
+}
+
+.recent-item .subtopic-link {
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+}
+
+.recent-item-meta {
+    display: block;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.6);
+    margin-top: 0.3rem;
+}
+
+.recent-item .subtopic-link i {
+    color: rgba(255,255,255,0.6);
+}
+
+.recent-item .subtopic-link:hover i {
+    color: var(--emath-accent);
+}
+
+/* Animation for recent items */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.recent-item {
+    animation: fadeIn 0.3s ease forwards;
+    opacity: 0;
+}
+
+.recent-item:nth-child(1) { animation-delay: 0.1s; }
+.recent-item:nth-child(2) { animation-delay: 0.2s; }
+.recent-item:nth-child(3) { animation-delay: 0.3s; }
+.recent-item:nth-child(4) { animation-delay: 0.4s; }
+.recent-item:nth-child(5) { animation-delay: 0.5s; }
 
 /* ========== RESPONSIVE ADJUSTMENTS ========== */
 @media (max-width: 768px) {

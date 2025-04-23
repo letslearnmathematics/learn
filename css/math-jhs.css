@@ -10,11 +10,11 @@
 /*BREAD CRUMB*/
 .breadcrumb {
     font-size: 1.2rem;
-    color: red;
+    color: rgb(21, 3, 44);
 }
 
 .breadcrumb span {
-    color: bisque;
+    color: rgb(226, 54, 11);
 }
 
 /* ========== MAIN CONTENT STYLES ========== */
@@ -59,7 +59,7 @@
     cursor: pointer;
     font-size: 1.6rem;
     font-weight: bold;
-    color: var(--emath-light);
+    color: var(--emath-dark);
     opacity: 0.7;
     transition: all 0.3s ease;
     position: relative;
@@ -177,6 +177,52 @@
 
 .topic-link i {
     margin-left: 0.5rem;
+}
+
+/* About Section */
+.about-div-section {
+    padding: 8rem 0;
+}
+
+.about-div-content {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.about-div-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: var(--card-shadow);
+}
+
+.about-div-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-div-text p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.about-div-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.about-div-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 1rem auto 0;
 }
 
 /* ========== SPECIAL SECTIONS ========== */
@@ -340,6 +386,14 @@
 }
 
 /* Responsive Adjustments */
+
+@media (max-width: 992px) {
+    .about-div-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
 @media (max-width: 768px) {
     .exam-prep {
         padding: 2.5rem;
