@@ -1,0 +1,125 @@
+/* Test Container Styles */
+.test-container {
+    background-color: var(--light);
+    border-radius: var(--border-radius);
+    padding: var(--space-md);
+    margin: var(--space-md) 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.test-instructions {
+    background-color: rgba(246, 156, 0, 0.1);
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    margin-bottom: var(--space-md);
+    border-left: 4px solid var(--secondary);
+}
+
+.test-instructions p {
+    margin-bottom: 0;
+}
+
+.timer-container {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    margin: var(--space-md) 0;
+    color: var(--accent);
+}
+
+.question-card {
+    margin-bottom: var(--space-lg);
+    display: none;
+}
+
+.question-card.active {
+    display: block;
+}
+
+.question-text {
+    font-weight: 500;
+    margin-bottom: var(--space-md);
+}
+
+.option {
+    display: block;
+    margin-bottom: var(--space-sm);
+    padding: var(--space-sm);
+    border: 1px solid var(--gray);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.option:hover {
+    background-color: rgba(57, 47, 93, 0.05);
+}
+
+.option.selected {
+    background-color: rgba(57, 47, 93, 0.1);
+    border-color: var(--primary);
+}
+
+.option input {
+    margin-right: var(--space-sm);
+}
+
+.test-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: var(--space-md);
+}
+
+.nav-btn {
+    background-color: var(--primary);
+    color: var(--light);
+    border: none;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover:not(:disabled) {
+    background-color: var(--accent);
+}
+
+.nav-btn:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+}
+
+.test-controls {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-md);
+    margin-top: var(--space-lg);
+}
+
+.control-btn {
+    background-color: var(--accent);
+    color: var(--light);
+    border: none;
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 500;
+}
+
+.control-btn:hover:not(:disabled) {
+    background-color: #7e1445;
+    transform: translateY(-2px);
+}
+
+.control-btn:disabled {
+    background-color: var(--gray);
+    cursor: not-allowed;
+}
+
+/* For Section B sub-question numbering */
+.sub-question-number {
+    list-style-type: lower-alpha;
+    margin-left: var(--space-lg);
+}

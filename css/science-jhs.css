@@ -1,0 +1,828 @@
+/* emath.css - Elective Mathematics Page Styles */
+:root {
+    --emath-accent: #f69c00; /* Using your existing accent color */
+    --emath-dark: #3E2F5D;   /* Your main dark color */
+    --emath-light: #ffffff;  /* White text */
+    --emath-card-bg: linear-gradient(135deg, rgba(74,44,130,0.9) 0%, rgba(62,47,93,0.9) 100%);
+    --emath-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/*BREAD CRUMB*/
+.breadcrumb {
+    font-size: 1.2rem;
+    color: rgb(21, 3, 44);
+}
+
+.breadcrumb span {
+    color: rgb(226, 54, 11);
+}
+
+/* ========== MAIN CONTENT STYLES ========== */
+.subject-title {
+    color: var(--emath-accent);
+    font-size: 2.8rem;
+    margin: 1.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subject-title i {
+    font-size: 2.2rem;
+}
+
+.subject-intro {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    border-left: 4px solid var(--emath-accent);
+}
+
+.indicators {
+    color: var(--emath-accent);
+}
+
+/* ========== TAB SYSTEM ========== */
+.class-tabs {
+    display: flex;
+    margin-bottom: 3rem;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+.tab-button {
+    background: transparent;
+    border: none;
+    padding: 1.2rem 2.5rem;
+    cursor: pointer;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--emath-dark);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.tab-button:hover {
+    opacity: 1;
+    color: var(--emath-accent);
+}
+
+.tab-button.active {
+    opacity: 1;
+    color: var(--emath-accent);
+}
+
+.tab-button.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--emath-accent);
+}
+
+.tab-content h2, .exam-prep h2 {
+    color: tomato;
+}
+
+/* ========== TOPICS GRID ========== */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.topic-card {
+    background: var(--emath-card-bg);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--emath-shadow);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+    border-color: var(--emath-accent);
+}
+
+.topic-header {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.topic-header i {
+    font-size: 2rem;
+    color: var(--emath-accent);
+}
+
+.topic-header h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: var(--emath-light);
+}
+
+.topic-body {
+    padding: 1.5rem;
+}
+
+.topic-body p {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    color: rgba(255,255,255,0.8);
+    min-height: 6rem;
+}
+
+.topic-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.7);
+}
+
+.topic-stats i {
+    margin-right: 0.5rem;
+    color: var(--emath-accent);
+}
+
+.topic-link {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: var(--emath-accent);
+    color: var(--emath-dark);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    text-align: center;
+    width: 100%;
+}
+
+.topic-link:hover {
+    background: #ffb733;
+    transform: translateX(5px);
+}
+
+.topic-link i {
+    margin-left: 0.5rem;
+}
+
+/* About Section */
+.about-div-section {
+    padding: 8rem 0;
+}
+
+.about-div-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.about-div-logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: var(--card-shadow);
+}
+
+.about-div-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.about-div-text p {
+    font-size: 1.8rem;
+    line-height: 1.8;
+}
+
+.about-div-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 3rem;
+    text-align: center;
+    position: relative;
+}
+
+.about-div-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: var(--secondary-color);
+    margin: 1rem auto 0;
+}
+
+/* ========== SPECIAL SECTIONS ========== */
+.section-title {
+    color: var(--emath-accent);
+    font-size: 2.4rem;
+    margin: 3rem 0 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-title i {
+    font-size: 2rem;
+}
+
+
+/* ========== EXAM PREPARATION SECTION ========== */
+.exam-prep {
+    background: rgba(255,255,255,0.03);
+    padding: 3rem;
+    border-radius: 1.5rem;
+    margin: 4rem 0;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.exam-prep::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--emath-accent);
+}
+
+.exam-prep h2 {
+    color: var(--emath-accent) !important;
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.exam-prep h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin-left: 1.5rem;
+}
+
+.exam-prep h2 i {
+    font-size: 2.2rem;
+}
+
+.exam-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+}
+
+.exam-card {
+    background: var(--emath-card-bg);
+    border-radius: 1rem;
+    padding: 2.5rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.1);
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.exam-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(246,156,0,0.1) 0%, rgba(62,47,93,0.2) 100%);
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.exam-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    border-color: var(--emath-accent);
+}
+
+.exam-card:hover::before {
+    opacity: 1;
+}
+
+.exam-card i {
+    font-size: 3.5rem;
+    color: var(--emath-accent);
+    margin-bottom: 1.8rem;
+    transition: transform 0.3s ease;
+}
+
+.exam-card:hover i {
+    transform: scale(1.1);
+}
+
+.exam-card h3 {
+    font-size: 1.8rem;
+    color: var(--emath-light);
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+}
+
+.exam-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--emath-accent);
+    transition: width 0.3s ease;
+}
+
+.exam-card:hover h3::after {
+    width: 80px;
+}
+
+.exam-card p {
+    font-size: 1.5rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 2.5rem;
+    line-height: 1.6;
+}
+
+.exam-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 2rem;
+    background: rgba(246,156,0,0.2);
+    color: var(--emath-accent);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    border: 1px solid var(--emath-accent);
+    gap: 0.8rem;
+}
+
+.exam-link:hover {
+    background: var(--emath-accent);
+    color: var(--emath-dark);
+    transform: translateX(5px);
+}
+
+/* Responsive Adjustments */
+
+@media (max-width: 992px) {
+    .about-div-content {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .exam-prep {
+        padding: 2.5rem;
+    }
+    
+    .exam-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .exam-prep {
+        padding: 2rem 1.5rem;
+    }
+    
+    .exam-prep h2 {
+        font-size: 2rem;
+    }
+}
+
+/* ========== RESOURCES SECTION ========== */
+.resources-section {
+    background: rgba(255,255,255,0.03);
+    padding: 3rem 2.5rem;
+    border-radius: 1.5rem;
+    margin: 4rem 0;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+}
+
+.resources-section h2 {
+    color: var(--emath-accent);
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.resources-section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--emath-accent);
+}
+
+.resource-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.resource-card {
+    background: var(--emath-card-bg);
+    border-radius: 1rem;
+    padding: 2.2rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.resource-card i {
+    font-size: 2.8rem;
+    color: var(--emath-accent);
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.resource-card h3 {
+    font-size: 1.8rem;
+    color: var(--emath-light);
+    margin-bottom: 1.2rem;
+}
+
+.resource-card p {
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    min-height: 4.2rem;
+}
+
+.resource-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.9rem 1.8rem;
+    background: rgba(246,156,0,0.1);
+    color: var(--emath-accent);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(246,156,0,0.3);
+    gap: 0.8rem;
+}
+
+.resource-link i {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+    margin-bottom: -0.4em;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    border-color: var(--emath-accent);
+}
+
+.resource-card:hover i {
+    transform: scale(1.1);
+}
+
+.resource-link:hover {
+    background: var(--emath-accent);
+    color: var(--emath-dark);
+}
+
+.resource-link:hover i {
+    transform: translateX(3px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .resource-cards {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
+    }
+    
+    .resources-section {
+        padding: 2.5rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .resources-section h2 {
+        font-size: 2.1rem;
+    }
+    
+    .resource-card {
+        padding: 2rem;
+    }
+}
+
+/* ========== SIDEBAR STYLES ========== */
+.quick-links {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.quick-links h3 {
+    color: var(--emath-accent);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.quick-links ul {
+    list-style: none;
+}
+
+.quick-links li {
+    margin-bottom: 1rem;
+}
+
+.quick-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+}
+
+.quick-links a:hover {
+    color: var(--emath-accent);
+    transform: translateX(5px);
+    background: rgba(255,255,255,0.1);
+}
+
+/* Progress Tracker */
+.progress-tracker {
+    background: rgba(255,255,255,0.05);
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+    overflow: hidden;
+}
+
+.progress {
+    height: 100%;
+    background: var(--emath-accent);
+    border-radius: 0.5rem;
+    transition: width 0.5s ease;
+}
+
+/* ========== SUBTOPIC MODAL STYLES ========== */
+.subtopic-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.subtopic-modal-content {
+    background: var(--emath-card-bg);
+    padding: 2.5rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.3);
+    animation: modalFadeIn 0.3s ease;
+    position: relative;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.subtopic-modal h3 {
+    color: var(--emath-accent);
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid rgba(255,255,255,0.1);
+}
+
+.subtopic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.subtopic-item {
+    margin-bottom: 1rem;
+}
+
+.subtopic-link {
+    display: block;
+    padding: 1.2rem;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    border-left: 4px solid transparent;
+}
+
+.subtopic-link:hover {
+    background: rgba(246,156,0,0.2);
+    border-left-color: var(--emath-accent);
+    transform: translateX(5px);
+}
+
+.close-modal {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    line-height: 1;
+}
+
+.close-modal:hover {
+    color: var(--emath-accent);
+    transform: rotate(90deg);
+}
+
+/* Additional modal styles for level-specific subtopics */
+.subtopic-subheader {
+    display: block;
+    font-size: 1.4rem;
+    color: rgba(255,255,255,0.8);
+    margin-top: 0.5rem;
+    font-weight: normal;
+}
+
+.subtopic-link i {
+    margin-right: 10px;
+    color: var(--emath-accent);
+    width: 20px;
+    text-align: center;
+}
+
+/* Level indicator in modal */
+.modal-level-indicator {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    background: var(--emath-accent);
+    color: var(--emath-dark);
+    padding: 0.3rem 0.8rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .subtopic-modal-content {
+        padding: 2rem 1.5rem;
+    }
+    
+    .subtopic-link {
+        padding: 1rem;
+        font-size: 1.4rem;
+    }
+}
+
+/* ========== Recently  viewed stuff ========== */
+
+/* Recently Viewed Styles */
+.recently-viewed-container {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: none;
+}
+
+.recently-viewed-title {
+    color: var(--emath-accent);
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.recently-viewed-title i {
+    margin-right: 10px;
+}
+
+.recent-item .subtopic-link {
+    padding: 1rem;
+    background: rgba(255,255,255,0.05);
+}
+
+.recent-item-meta {
+    display: block;
+    font-size: 1.2rem;
+    color: rgba(255,255,255,0.6);
+    margin-top: 0.3rem;
+}
+
+.recent-item .subtopic-link i {
+    color: rgba(255,255,255,0.6);
+}
+
+.recent-item .subtopic-link:hover i {
+    color: var(--emath-accent);
+}
+
+/* Animation for recent items */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-10px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+.recent-item {
+    animation: fadeIn 0.3s ease forwards;
+    opacity: 0;
+}
+
+.recent-item:nth-child(1) { animation-delay: 0.1s; }
+.recent-item:nth-child(2) { animation-delay: 0.2s; }
+.recent-item:nth-child(3) { animation-delay: 0.3s; }
+.recent-item:nth-child(4) { animation-delay: 0.4s; }
+.recent-item:nth-child(5) { animation-delay: 0.5s; }
+
+/* ========== RESPONSIVE ADJUSTMENTS ========== */
+@media (max-width: 768px) {
+    .topics-grid, .resource-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .class-tabs {
+        flex-wrap: wrap;
+    }
+    
+    .tab-button {
+        padding: 1rem 1.5rem;
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .subject-title {
+        font-size: 2.2rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
