@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // ========== SUBTOPIC SYSTEM ==========
     /*New for the subtopics*/
-    /**/
+    /*
     const subtopicsData = {
         "jhs1": {
             "Number & Numeration System": [
@@ -352,9 +352,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Probability as Fractions, Percentages &/or Ratios", url: "./math-jhs/jhs3/handling-data/chance-or-probability/probability-as-fractions-percentages.html" }
             ]
         }
-    }; 
+    }; */
 
-    /*In case I want to test a functionality 
+    /*In case I want to test a functionality */
     const subtopicsData = {
         "jhs1": {
             "Number & Numeration System": [
@@ -617,7 +617,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Probability as Fractions, Percentages &/or Ratios", url: "b9-4-2-1-2lesson1" }
             ]
         }
-    };*/
+    };
 
     // Get modal elements
     const subtopicModal = document.getElementById('subtopicModal');
