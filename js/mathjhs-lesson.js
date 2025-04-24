@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // PASSCO Year Selection Modal with actual links
-    const passcoLink = document.querySelector('.quick-link[href="../../../../passco-jhs"]');
+    const passcoLink = document.querySelector('.quick-link[href="../../../passco"]');
     
     // Create modal if it doesn't exist
     if (!document.getElementById('yearModal')) {
