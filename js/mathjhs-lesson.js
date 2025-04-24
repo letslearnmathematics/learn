@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Smooth scrolling ONLY for sidebar navigation links
+    document.querySelectorAll('.topic-menu a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
             
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
     };
 
     // PASSCO Year Selection Modal with actual links
-    const passcoLink = document.querySelector('.quick-link[href="../../../passco"]');
+    const passcoLink = document.querySelector('a[href*="passco"]');
     
     // Create modal if it doesn't exist
     if (!document.getElementById('yearModal')) {
@@ -110,155 +110,148 @@ document.addEventListener('DOMContentLoaded', function() {
     // Define your test links by year
     const testLinks = {
         "2024": {
-            url: "../../math-jhs/passco/bece-2024",
-            type: "web" // can be "web" or "pdf"
+            url: "/math-jhs/passco/bece-2024",
+            type: "web"
         },
         "2023": {
-            url: "../../math-jhs/passco/bece-2023",
+            url: "/math-jhs/passco/bece-2023",
             type: "web"
         },
         "2022": {
-            url: "../../math-jhs/passco/bece-2022",
+            url: "/math-jhs/passco/bece-2022",
             type: "web"
         },
         "2021": {
-            url: "../../math-jhs/passco/bece-2021",
+            url: "/math-jhs/passco/bece-2021",
             type: "web"
         },
         "2020": {
-            url: "../../math-jhs/passco/bece-2020",
+            url: "/math-jhs/passco/bece-2020",
             type: "web"
         },
         "2019": {
-            url: "../../math-jhs/passco/bece-2019",
+            url: "/math-jhs/passco/bece-2019",
             type: "web"
         },
         "2018": {
-            url: "../../math-jhs/passco/bece-2018",
+            url: "/math-jhs/passco/bece-2018",
             type: "web"
         },
         "2017": {
-            url: "../../math-jhs/passco/bece-2017",
+            url: "/math-jhs/passco/bece-2017",
             type: "web"
         },
         "2016": {
-            url: "../../math-jhs/passco/bece-2016",
+            url: "/math-jhs/passco/bece-2016",
             type: "web"
         },
         "2015": {
-            url: "../../math-jhs/passco/bece-2015",
+            url: "/math-jhs/passco/bece-2015",
             type: "web"
         },
         "2014": {
-            url: "../../math-jhs/passco/bece-2014",
+            url: "/math-jhs/passco/bece-2014",
             type: "web"
         },
         "2013": {
-            url: "../../math-jhs/passco/bece-2013",
+            url: "/math-jhs/passco/bece-2013",
             type: "web"
         },
         "2012": {
-            url: "../../math-jhs/passco/bece-2012",
+            url: "/math-jhs/passco/bece-2012",
             type: "web"
         },
         "2011": {
-            url: "../../math-jhs/passco/bece-2011",
+            url: "/math-jhs/passco/bece-2011",
             type: "web"
         },
         "2010": {
-            url: "../../math-jhs/passco/bece-2010",
+            url: "/math-jhs/passco/bece-2010",
             type: "web"
         },
         "2009": {
-            url: "../../math-jhs/passco/bece-2009",
+            url: "/math-jhs/passco/bece-2009",
             type: "web"
         },
         "2008": {
-            url: "../../math-jhs/passco/bece-2008",
+            url: "/math-jhs/passco/bece-2008",
             type: "web"
         },
         "2007": {
-            url: "../../math-jhs/passco/bece-2007",
+            url: "/math-jhs/passco/bece-2007",
             type: "web"
         },
         "2006": {
-            url: "../../math-jhs/passco/bece-2006",
+            url: "/math-jhs/passco/bece-2006",
             type: "web"
         },
         "2005": {
-            url: "../../math-jhs/passco/bece-2005",
+            url: "/math-jhs/passco/bece-2005",
             type: "web"
         },
         "2004": {
-            url: "../../math-jhs/passco/bece-2004",
+            url: "/math-jhs/passco/bece-2004",
             type: "web"
         },
         "2003": {
-            url: "../../math-jhs/passco/bece-2003",
+            url: "/math-jhs/passco/bece-2003",
             type: "web"
         },
         "2002": {
-            url: "../../math-jhs/passco/bece-2002",
+            url: "/math-jhs/passco/bece-2002",
             type: "web"
         },
         "2001": {
-            url: "../../math-jhs/passco/bece-2001",
+            url: "/math-jhs/passco/bece-2001",
             type: "web"
         },
         "2000": {
-            url: "../../math-jhs/passco/bece-2000",
+            url: "/math-jhs/passco/bece-2000",
             type: "web"
         },
         "1999": {
-            url: "../../math-jhs/passco/bece-1999",
+            url: "/math-jhs/passco/bece-1999",
             type: "web"
         },
         "1998": {
-            url: "../../math-jhs/passco/bece-1998",
+            url: "/math-jhs/passco/bece-1998",
             type: "web"
         },
         "1997": {
-            url: "../../math-jhs/passco/bece-1997",
+            url: "/math-jhs/passco/bece-1997",
             type: "web"
         },
         "1996": {
-            url: "../../math-jhs/passco/bece-1996",
+            url: "/math-jhs/passco/bece-1996",
             type: "web"
         },
         "1995": {
-            url: "../../math-jhs/passco/bece-1995",
+            url: "/math-jhs/passco/bece-1995",
             type: "web"
         },
         "1994": {
-            url: "../../math-jhs/passco/bece-1994",
+            url: "/math-jhs/passco/bece-1994",
             type: "web"
         },
         "1993": {
-            url: "../../math-jhs/passco/bece-1993",
+            url: "/math-jhs/passco/bece-1993",
             type: "web"
         },
         "1992": {
-            url: "../../math-jhs/passco/bece-1992",
+            url: "/math-jhs/passco/bece-1992",
             type: "web"
         },
         "1991": {
-            url: "../../math-jhs/passco/bece-1991",
+            url: "/math-jhs/passco/bece-1991",
             type: "web"
         },
         "1990": {
-            url: "../../math-jhs/passco/bece-1990",
+            url: "/math-jhs/passco/bece-1990",
             type: "web"
         }
-        // Add more years as needed
-        // For PDF files:
-        /*"2018": {
-            url: "../../pdfs/bece-2018.pdf",
-            type: "pdf"
-        },*/
-        // Add older years...
     };
     
-    // Generate year buttons
+    // Generate year buttons with proper click handling
     const yearGrid = document.querySelector('.year-grid');
     const currentYear = new Date().getFullYear();
     
@@ -267,9 +260,8 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Create buttons for each available year
     Object.keys(testLinks).sort((a, b) => b - a).forEach(year => {
-        const yearBtn = document.createElement('a');
+        const yearBtn = document.createElement('div'); // Changed from <a> to <div>
         yearBtn.className = 'year-btn';
-        yearBtn.href = testLinks[year].url;
         
         // Mark recent years (last 5 years)
         if (parseInt(year) >= currentYear - 5) {
@@ -284,11 +276,17 @@ document.addEventListener('DOMContentLoaded', function() {
         formatBadge.textContent = testLinks[year].type === 'pdf' ? 'PDF' : 'WEB';
         yearBtn.appendChild(formatBadge);
         
-        // Open PDFs in new tab
-        if (testLinks[year].type === 'pdf') {
-            yearBtn.target = '_blank';
-            yearBtn.rel = 'noopener noreferrer';
-        }
+        // Add click handler
+        yearBtn.addEventListener('click', function(e) {
+            if (testLinks[year].type === 'pdf') {
+                window.open(testLinks[year].url, '_blank');
+            } else {
+                window.location.href = testLinks[year].url;
+            }
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+            e.stopPropagation();
+        });
         
         yearGrid.appendChild(yearBtn);
     });
@@ -297,12 +295,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const modal = document.getElementById('yearModal');
     const closeModal = document.querySelector('.close-modal');
     
-    // When user clicks PASSCO link, show modal instead of navigating
+    // When user clicks PASSCO link, show modal
     if (passcoLink) {
         passcoLink.addEventListener('click', function(e) {
             e.preventDefault();
             modal.style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling behind modal
+            document.body.style.overflow = 'hidden';
         });
     }
     
@@ -310,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (closeModal) {
         closeModal.addEventListener('click', function() {
             modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
+            document.body.style.overflow = 'auto';
         });
     }
     
