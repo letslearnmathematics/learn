@@ -1,22 +1,250 @@
-// tests.js - Handles both free-range and timed tests
-
+// tests.js - Complete Test Management System
 document.addEventListener('DOMContentLoaded', function() {
+    // Global flag to track if any test is active
+    let testInProgress = false;
+    
     // Test data - 40 questions with options and correct answers
     const testQuestions = [
         {
             id: 1,
-            question: "What is 2 + 2?",
-            options: ["3", "4", "5", "6"],
+            question: "Find the image of the point (-3, 5) when it is rotated through 360&deg; about the origin.",
+            options: ["(5, -3)", "(-3, -5)", "(-3, 5)", "(-5, 3)"],
             correctAnswer: 1 // index of correct option (0-based)
         },
         {
             id: 2,
+            question: "There are 15 white and 25 black identical balls in a box. If a ball is selected",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 3,
             question: "What is the capital of Ghana?",
             options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
             correctAnswer: 1
         },
-        // Add 38 more questions in the same format
-        // ...
+        {
+            id: 4,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 5,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 6,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 7,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 8,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 9,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 10,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 11,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 12,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 13,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 14,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 15,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 16,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 17,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 18,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 19,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 20,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 21,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 22,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 23,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 24,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 25,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 26,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 27,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 28,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 29,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 30,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 31,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 32,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 33,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 34,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 35,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 36,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 37,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 38,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 39,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        },
+        {
+            id: 40,
+            question: "What is the capital of Ghana?",
+            options: ["Kumasi", "Accra", "Tamale", "Takoradi"],
+            correctAnswer: 1
+        }
     ];
 
     // Initialize Free Range Test
@@ -36,14 +264,51 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Start button for timed test
     document.getElementById('start-timed-test').addEventListener('click', function() {
+        if (testInProgress) {
+            alert('Please finish or submit your current test before starting another one.');
+            return;
+        }
+        testInProgress = true;
         timedTest.startTest();
         this.disabled = true;
         document.getElementById('submit-timed-test').disabled = false;
+        
+        // Disable free-range test navigation
+        document.getElementById('free-range-prev').disabled = true;
+        document.getElementById('free-range-next').disabled = true;
+        
+        // Visual indication
+        document.getElementById('section-a-free-range').classList.add('test-disabled');
     });
 
     // Submit button for timed test
     document.getElementById('submit-timed-test').addEventListener('click', function() {
         timedTest.submitTest();
+        testInProgress = false;
+        
+        // Re-enable free-range test navigation
+        document.getElementById('free-range-prev').disabled = false;
+        document.getElementById('free-range-next').disabled = false;
+        
+        // Remove visual indication
+        document.getElementById('section-a-free-range').classList.remove('test-disabled');
+    });
+
+    // Free-range navigation with test state check
+    document.getElementById('free-range-prev').addEventListener('click', function() {
+        if (testInProgress) {
+            alert('Please finish or submit your timed test before continuing with free-range questions.');
+            return;
+        }
+        freeRangeTest.navigate(-1);
+    });
+
+    document.getElementById('free-range-next').addEventListener('click', function() {
+        if (testInProgress) {
+            alert('Please finish or submit your timed test before continuing with free-range questions.');
+            return;
+        }
+        freeRangeTest.navigate(1);
     });
 });
 
@@ -62,6 +327,11 @@ class TestManager {
         this.initElements();
         this.renderQuestion();
         this.setupEventListeners();
+        
+        // Initialize timer display if timed test
+        if (this.isTimed) {
+            this.updateTimerDisplay();
+        }
     }
 
     initElements() {
@@ -76,8 +346,37 @@ class TestManager {
     }
 
     setupEventListeners() {
-        this.prevBtn.addEventListener('click', () => this.navigate(-1));
-        this.nextBtn.addEventListener('click', () => this.navigate(1));
+        this.prevBtn.addEventListener('click', () => {
+            if (!this.validateTestState()) return;
+            this.navigate(-1);
+        });
+        
+        this.nextBtn.addEventListener('click', () => {
+            if (!this.validateTestState()) return;
+            this.navigate(1);
+        });
+    }
+
+    validateTestState() {
+        if (this.isTimed && !this.testStarted) {
+            alert('Please start the test first.');
+            return false;
+        }
+        return true;
+    }
+
+    updateTimerDisplay() {
+        const minutes = Math.floor(this.timeRemaining / 60);
+        const seconds = this.timeRemaining % 60;
+        this.timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+        
+        // Visual warnings when time is running low
+        if (this.timeRemaining <= 300) { // 5 minutes
+            this.timerDisplay.classList.add('timer-warning');
+        }
+        if (this.timeRemaining <= 60) { // 1 minute
+            this.timerDisplay.classList.add('timer-critical');
+        }
     }
 
     renderQuestion() {
@@ -132,11 +431,7 @@ class TestManager {
         this.currentQuestionIndex += direction;
         
         // Ensure index stays within bounds
-        if (this.currentQuestionIndex < 0) {
-            this.currentQuestionIndex = 0;
-        } else if (this.currentQuestionIndex >= this.questions.length) {
-            this.currentQuestionIndex = this.questions.length - 1;
-        }
+        this.currentQuestionIndex = Math.max(0, Math.min(this.currentQuestionIndex, this.questions.length - 1));
 
         this.renderQuestion();
     }
@@ -158,11 +453,7 @@ class TestManager {
     startTimer() {
         this.timerInterval = setInterval(() => {
             this.timeRemaining--;
-            
-            // Update display
-            const minutes = Math.floor(this.timeRemaining / 60);
-            const seconds = this.timeRemaining % 60;
-            this.timerDisplay.textContent = `${minutes}:${seconds.toString().padStart(2, '0')}`;
+            this.updateTimerDisplay();
             
             // Time's up
             if (this.timeRemaining <= 0) {
@@ -176,6 +467,7 @@ class TestManager {
     submitTest() {
         if (this.isTimed) {
             clearInterval(this.timerInterval);
+            this.timerDisplay.classList.remove('timer-warning', 'timer-critical');
         }
         
         // Calculate score
@@ -187,7 +479,8 @@ class TestManager {
         });
         
         // Show results
-        alert(`You scored ${score} out of ${this.questions.length} (${Math.round((score / this.questions.length) * 100)}%)`);
+        const percentage = Math.round((score / this.questions.length) * 100);
+        alert(`You scored ${score} out of ${this.questions.length} (${percentage}%)`);
         
         // Reset test if needed
         if (this.isTimed) {
@@ -200,7 +493,7 @@ class TestManager {
         this.userAnswers = Array(this.questions.length).fill(null);
         this.testStarted = false;
         this.timeRemaining = this.timeLimit;
-        this.timerDisplay.textContent = `${Math.floor(this.timeLimit / 60)}:${(this.timeLimit % 60).toString().padStart(2, '0')}`;
+        this.updateTimerDisplay();
         this.renderQuestion();
         
         document.getElementById('start-timed-test').disabled = false;
