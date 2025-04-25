@@ -4,125 +4,192 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
-        <!-- Main Favicon -->
-        <link rel="icon" href="./images/android-chrome-192x192.png" type="image/png"> <!-- Consider using .png or .ico format -->
-    
-        <!-- Apple Touch Icon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        <!-- SEO and Social Meta Tags -->
+        <title>BECE 1990 | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Modelling Numbers for JHS Mathematics. Learn definitions, operations, Venn diagrams and practical applications.">
         
-        <!-- Other Sizes -->
-        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
         
-        <!-- Manifest -->
-        <link rel="manifest" href="/site.webmanifest">
-    
-        <!-- Open Graph Meta Tags for Social Sharing -->
-        <meta property="og:title" content="PASSCO BECE 2014">
-        <meta property="og:description" content="Prepare for the BECE with our expertly created lessons.">
-        <meta property="og:image" content="https://letslearnmathematics.github.io/learn/images/android-chrome-192x192.png"> <!-- Link to a larger image -->
-        <meta property="og:url" content="https://letslearnmathematics.github.io/learn">
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="BECE 1990 | JHS Mathematics">
+        <meta property="og:description" content="Try your hands on the BECE 1990 Mathematics past questions.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/passco/bece-1990">
         <meta property="og:type" content="website">
     
-    
-        <!-- CSS Links -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="./css/jhslessons.css">
-        <title>PASSCO BECE 2014</title>
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../passco/css/jhslessons.css">
+        <link rel="stylesheet" href="../passco/css/bece2024.css">
 
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
-     crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="../passco/css/math-challenge-bece2024.css">
     </head>
     <body>
-        <header>
-            <nav class="navbar">
-                <div class="logo-with-name">
-                    <a href="index.html"><img class="logo" src="./images/android-chrome-192x192.png" alt="Logo image"></a>
-                    <p>
-                        <span class="name">Let's</span> 
-                        <span class="name">Learn</span> 
-                        <span class="name">Mathematics</span>
-                    </p>
-                </div>
-                <div>
-                    <h1 class="tagline">
-                        BECE 2014
-                    </h1>
-                </div>
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                    <li class="nav-item"><a href="" class="nav-link">Contact</a></li>
-                </ul>
-                <div class="hamburger">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </div>        
-            </nav>
-        </header>
-        <main>
-            <section class="first-section">
-                <div class="main-section-container">
-                    <div class="left-aside">
-                        <h4>
-                            <a href="q-and-a.html">BECE</a>
-                        </h4>
-                        <p>Year to Practice: <br>
-                            <span><a href="b-e-c-e-1990.html" class="topic">1990</a></span>
-                            <span><a href="b-e-c-e-1991.html" class="topic">1991</a></span>
-                            <span><a href="b-e-c-e-1992.html" class="topic">1992</a></span>
-                            <span><a href="b-e-c-e-1993.html" class="topic">1993</a></span>
-                            <span><a href="b-e-c-e-1994.html" class="topic">1994</a></span>
-                            <span><a href="b-e-c-e-1995.html" class="topic">1995</a></span>
-                            <span><a href="b-e-c-e-1996.html" class="topic">1996</a></span>
-                            <span><a href="b-e-c-e-1997.html" class="topic">1997</a></span>
-                            <span><a href="b-e-c-e-1998.html" class="topic">1998</a></span>
-                            <span><a href="b-e-c-e-1999.html" class="topic">1999</a></span>
-                            <span><a href="b-e-c-e-2000.html" class="topic">2000</a></span>
-                            <span><a href="b-e-c-e-2001.html" class="topic">2001</a></span>
-                            <span><a href="b-e-c-e-2002a.html" class="topic">2002A</a></span>
-                            <span><a href="b-e-c-e-2002b.html" class="topic">2002B</a></span>
-                            <span><a href="b-e-c-e-2003.html" class="topic">2003</a></span>
-                            <span><a href="b-e-c-e-2004.html" class="topic">2004</a></span>
-                            <span><a href="b-e-c-e-2005.html" class="topic">2005</a></span>
-                            <span><a href="b-e-c-e-2006.html" class="topic">2006</a></span>
-                            <span><a href="b-e-c-e-2007.html" class="topic">2007</a></span>
-                            <span><a href="b-e-c-e-2008.html" class="topic">2008</a></span>
-                            <span><a href="b-e-c-e-2009.html" class="topic">2009</a></span>
-                            <span><a href="b-e-c-e-2010.html" class="topic">2010</a></span>
-                            <span><a href="b-e-c-e-2011.html" class="topic">2011</a></span>
-                            <span><a href="b-e-c-e-2012.html" class="topic">2012</a></span>
-                            <span><a href="b-e-c-e-2013.html" class="topic">2013</a></span>
-                            <span><a href="b-e-c-e-2014.html" class="topic">2014</a></span>
-                            <span><a href="b-e-c-e-2015.html" class="topic">2015</a></span>
-                            <span><a href="b-e-c-e-2016.html" class="topic">2016</a></span>
-                            <span><a href="b-e-c-e-2017.html" class="topic">2017</a></span>
-                            <span><a href="b-e-c-e-2018.html" class="topic">2018</a></span>
-                            <span><a href="b-e-c-e-2019.html" class="topic">2019</a></span>
-                            <span><a href="b-e-c-e-2020.html" class="topic">2020</a></span>
-                            <span><a href="b-e-c-e-2021.html" class="topic">2021</a></span>
-                            <span><a href="b-e-c-e-2022.html" class="topic">2022</a></span>
-                            <span><a href="b-e-c-e-2023.html" class="topic">2023</a></span>
-                            <span><a href="b-e-c-e-2024.html" class="topic">2024</a></span>
-                        </p>
-
-                        <!--
-                        <div>
-                            <h3>For sponsorship:</h3>
-                            <p>
-                                Kindly reach us on <strong>0208711375</strong> or <strong>0249969740</strong>
-                            </p>
-                            
-                            <a href="jhs3s1ss1.html"><button type="button" class="strand-button">Strand 1</button></a>
-                            <a href="jhs3s2ss1.html"><button type="button" class="strand-button">Strand 2</button></a>
-                            <a href="jhs3s3ss1.html"><button type="button" class="strand-button">Strand 3</button></a>
-                            <a href="jhs3s4ss1.html"><button type="button" class="strand-button">Strand 4</button></a>
-                            
-                        </div>
-                        -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
                     </div>
+                    
+                    <h1 class="lesson-title">BECE 1990</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">PAST QUESTIONS</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>BECE: 1990</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#instructions" class="active"><i class="fas fa-chevron-right"></i> Guide</a></li>
+                                <li><a href="#section-b"><i class="fas fa-chevron-right"></i> Section B</a></li>
+                                <!--<li><a href="#section-a-free-range"><i class="fas fa-chevron-right"></i> Section A </a></li>-->
+                                <li><a href="#section-a-timed"><i class="fas fa-chevron-right"></i> Section A (Timed) </a></li>
+                                <!--<li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>-->
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../q-and-a.html">PASSCO</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>BECE_1990</span>
+                        </nav>
+
+                      <!-- Video embed 
+                        <section class="video-embed">
+                            <h2 class="section-title">
+                                <i class="fas fa-video"></i> Video Lesson
+                            </h2>
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen></iframe>
+                            </div>
+                            <div class="video-description">
+                                <p>Watch this comprehensive explanation of Sets theory with worked examples.</p>
+                                <a href="#" class="video-download">
+                                    <i class="fas fa-download"></i> Download Video
+                                </a>
+                            </div>
+                        </section>
+                      -->
+
+                        <!-- Definition Section -->
+                        <section id="instructions" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> GUIDE (BECE - 1990)
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Try to solve each question within 15 minutes. Time yourself and see how well you can do.
+                                    After you are done solving the section B, try the timed section A, multiple choice questions at the 
+                                    bottom of the page.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                            
+                        </section>
 
                     <!--Main content in here-->
                     <div class="page-narative">
