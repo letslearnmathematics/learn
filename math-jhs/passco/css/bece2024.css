@@ -203,6 +203,11 @@ a {
     padding: var(--space-lg) 0;
 }
 
+.lesson-container .container{
+    margin: 0;
+    padding: 0;
+}
+
 .lesson-grid {
     display: grid;
     grid-template-columns: 250px 1fr;
@@ -580,7 +585,7 @@ a {
 .practice-section {
     background-color: rgba(149, 27, 88, 0.05);
     border-radius: var(--border-radius);
-    padding: var(--space-xl);
+    padding: var(--space-xl) var(--space-sm);
     margin-top: var(--space-xl);
 }
 
@@ -925,6 +930,57 @@ img {
     .site-links-list a {
         font-size: 1.3rem;
     }
+}
+
+@media only screen and (max-width: 425px) {
+
+    .lesson-grid, .lesson-sidebar, .lesson-content {
+        width: 100%;
+    }
+
+    .lesson-grid {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .lesson-content {
+        padding-right: 0.8rem;
+        padding-left: 0.8rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .lesson-section, .practice-section {
+        width: 100%;
+        margin-right: 0;
+        margin-left: 0;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .practice-section {
+        padding: var(--space-md);
+    }
+
+    .lesson-title {
+        font-size: 1.6rem;
+    }
+    
+    .lesson-title span {
+        font-size: 1.4rem;
+    }
+    
+    
+    
+    .site-links-column h3 {
+        font-size: 1.6rem;
+    }
+    
+    .site-links-list a {
+        font-size: 1.3rem;
+    }
+
+
 }
 
 /* Add this to your existing CSS file */
