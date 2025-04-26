@@ -21,6 +21,7 @@
     <!-- CSS Links -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/bece-tests-general.css">
     
     <title>The Let's Learn Project</title>
 
@@ -114,7 +115,7 @@
                         <a href="./math-jhs" class="level-link">
                             <i class="fas fa-school"></i> JHS Maths
                         </a>
-                        <a href="q-and-a" class="level-link">
+                        <a href="./math-jhs/passco" class="level-link" data-passco-modal>
                             <i class="fas fa-child"></i> PASSCO
                         </a>
                     </div>
@@ -309,5 +310,22 @@
     </footer>
 
     <script src="./js/script.js"></script>
+
+    <script>
+        // Current year for footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+   <!-- Year Selection Modal -->
+    <div id="yearModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+            <p>Choose a year to view its past questions:</p>
+            <div class="year-grid">
+                <!-- Years will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
 </body>
 </html>

@@ -343,3 +343,109 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 });
+
+// Modal functionality
+document.addEventListener("DOMContentLoaded", function() {
+    // Get modal elements
+    const modal = document.getElementById('yearModal');
+    const yearGrid = document.querySelector('.year-grid');
+    const closeModal = document.querySelector('.close-modal');
+    
+    // Define your test links by year
+    const testLinks = {
+        "2024": { url: "./math-jhs/passco/bece-2024", type: "web" },
+        "2023": { url: "./math-jhs/passco/bece-2023", type: "web" },
+        "2022": { url: "./math-jhs/passco/bece-2022", type: "web" },
+        "2021": { url: "./math-jhs/passco/bece-2021", type: "web" },
+        "2020": { url: "./math-jhs/passco/bece-2020", type: "web" },
+        "2019": { url: "./math-jhs/passco/bece-2019", type: "web" },
+        "2018": { url: "./math-jhs/passco/bece-2018", type: "web" },
+        "2017": { url: "./math-jhs/passco/bece-2017", type: "web" },
+        "2016": { url: "./math-jhs/passco/bece-2016", type: "web" },
+        "2015": { url: "./math-jhs/passco/bece-2015", type: "web" },
+        "2014": { url: "./math-jhs/passco/bece-2014", type: "web" },
+        "2013": { url: "./math-jhs/passco/bece-2013", type: "web" },
+        "2012": { url: "./math-jhs/passco/bece-2012", type: "web" },
+        "2011": { url: "./math-jhs/passco/bece-2011", type: "web" },
+        "2010": { url: "./math-jhs/passco/bece-2010", type: "web" },
+        "2009": { url: "./math-jhs/passco/bece-2009", type: "web" },
+        "2008": { url: "./math-jhs/passco/bece-2008", type: "web" },
+        "2007": { url: "./math-jhs/passco/bece-2007", type: "web" },
+        "2006": { url: "./math-jhs/passco/bece-2006", type: "web" },
+        "2005": { url: "./math-jhs/passco/bece-2005", type: "web" },
+        "2004": { url: "./math-jhs/passco/bece-2004", type: "web" },
+        "2003": { url: "./math-jhs/passco/bece-2003", type: "web" },
+        "2002": { url: "./math-jhs/passco/bece-2002", type: "web" },
+        "2001": { url: "./math-jhs/passco/bece-2001", type: "web" },
+        "2000": { url: "./math-jhs/passco/bece-2000", type: "web" },
+        "1999": { url: "./math-jhs/passco/bece-1999", type: "web" },
+        "1998": { url: "./math-jhs/passco/bece-1998", type: "web" },
+        "1997": { url: "./math-jhs/passco/bece-1997", type: "web" },
+        "1996": { url: "./math-jhs/passco/bece-1996", type: "web" },
+        "1995": { url: "./math-jhs/passco/bece-1995", type: "web" },
+        "1994": { url: "./math-jhs/passco/bece-1994", type: "web" },
+        "1993": { url: "./math-jhs/passco/bece-1993", type: "web" },
+        "1992": { url: "./math-jhs/passco/bece-1992", type: "web" },
+        "1991": { url: "./math-jhs/passco/bece-1991", type: "web" },
+        "1990": { url: "./math-jhs/passco/bece-1990.html", type: "web" }
+    };
+    
+    // Generate year buttons
+    const currentYear = new Date().getFullYear();
+    yearGrid.innerHTML = '';
+    
+    Object.keys(testLinks).sort((a, b) => b - a).forEach(year => {
+        const yearBtn = document.createElement('a');
+        yearBtn.className = 'year-btn';
+        yearBtn.href = testLinks[year].url;
+        
+        if (parseInt(year) >= currentYear - 5) {
+            yearBtn.classList.add('recent');
+        }
+        
+        yearBtn.innerHTML = year;
+        
+        const formatBadge = document.createElement('span');
+        formatBadge.className = `format-badge ${testLinks[year].type}-badge`;
+        formatBadge.textContent = testLinks[year].type === 'pdf' ? 'PDF' : 'WEB';
+        yearBtn.appendChild(formatBadge);
+        
+        if (testLinks[year].type === 'pdf') {
+            yearBtn.target = '_blank';
+            yearBtn.rel = 'noopener noreferrer';
+        }
+        
+        yearGrid.appendChild(yearBtn);
+    });
+    
+    // Set up modal toggle for all passco links
+    document.querySelectorAll('[data-passco-modal]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        });
+    });
+    
+    // Close modal when clicking X
+    closeModal.addEventListener('click', function() {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+    
+    // Close modal when clicking outside
+    window.addEventListener('click', function(e) {
+        if (e.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Close modal with ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+});
