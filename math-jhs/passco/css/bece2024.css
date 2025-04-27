@@ -1026,13 +1026,12 @@ img {
 
     .problem-card, .practice-header {
         width: 100%;
-        padding: 0;
-        margin-left: 0;
-        margin-right: 0;
+        padding: 0.8rem;
+        margin-left: 0.8rem;
+        margin-right: 0.8rem;
     }
 
     .main-question-number {
-        margin-right: 0;
         margin-left: 0;
         width: 100%;
     }
@@ -1055,6 +1054,123 @@ img {
     
     .site-links-list a {
         font-size: 1.3rem;
+    }
+
+     /* Base adjustments */
+     html {
+        font-size: 58%; /* Slightly reduce base font size */
+    }
+    
+    body {
+        overflow-x: hidden;
+        padding: 0;
+    }
+    
+    /* Header adjustments */
+    .header-content {
+        padding: var(--space-xs) 0;
+    }
+    
+    .branding {
+        flex: 1;
+        min-width: 0; /* Allow text truncation */
+    }
+    
+    .main-name {
+        font-size: 1.3rem;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .sub-name {
+        font-size: 0.9rem;
+    }
+    
+    .hamburger {
+        order: 1; /* Move to right side */
+    }
+    
+    /* Lesson content adjustments */
+    .lesson-content {
+        padding: var(--space-sm);
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .subsection-title {
+        font-size: 1.6rem;
+    }
+    
+    /* Problem cards */
+    .problem-card {
+        padding: var(--space-sm);
+    }
+    
+    .problem-card h3 {
+        font-size: 1.8rem;
+    }
+    
+    /* Images and videos */
+    .video-container iframe,
+    img.place {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Test components */
+    .test-instructions {
+        padding: var(--space-sm);
+    }
+    
+    .option {
+        padding: var(--space-xs) var(--space-sm);
+        font-size: 1.4rem;
+    }
+    
+    .test-navigation {
+        flex-direction: column;
+        gap: var(--space-sm);
+    }
+    
+    .nav-btn {
+        width: 100%;
+    }
+    
+    /* Footer adjustments */
+    .site-links-column {
+        flex: 1 1 100%;
+    }
+    
+    .site-links-list a {
+        font-size: 1.2rem;
+        padding: 0.2rem 0;
+    }
+    
+    /* Math expressions */
+    .math-example {
+        padding: var(--space-sm);
+        font-size: 1.3rem;
+        overflow-x: auto;
+    }
+    
+    /* Solution toggles */
+    .solution-toggle {
+        width: 100%;
+        padding: var(--space-xs);
+    }
+    
+    /* Breadcrumb */
+    .breadcrumb {
+        font-size: 1.2rem;
+        gap: 0.3rem;
+    }
+    
+    /* Game container */
+    #game-container {
+        padding: 0;
     }
 
 }
@@ -1208,7 +1324,8 @@ img {
 }
 
 .place {
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
     display: block;
-    margin: auto;
-    width: 100%;
 }

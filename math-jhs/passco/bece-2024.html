@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         
         <!-- SEO and Social Meta Tags -->
         <title>BECE 2024 | JHS Mathematics | The Let's Learn Project</title>
@@ -31,32 +31,8 @@
         <link rel="stylesheet" href="../passco/css/bece-tests-general.css">
     
         <!-- MathJax Configuration -->
-        <script>
-            MathJax = {
-                tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
-                    processEscapes: true,
-                    packages: {'[+]': ['ams']}
-                },
-                options: {
-                    ignoreHtmlClass: 'tex2jax_ignore',
-                    processHtmlClass: 'tex2jax_process'
-                },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
-                }
-            };
-        </script>
+
+        <script src="../../js/mathjax-config.js"></script>
         
         <!-- MathJax with combined TeX and MathML input, HTML output -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -135,7 +111,7 @@
                             <a href="#quick-test" class="quick-link">
                                 <i class="fas fa-pen-fancy"></i> Quick Test
                             </a>
-                            <a href="../../../../passco-jhs" class="quick-link">
+                            <a href="../../../../passco-jhs" class="quick-link" id="passco-link">
                                 <i class="fas fa-file-pdf"></i> PASSCO
                             </a>
                         </div>
@@ -265,47 +241,47 @@
                                             the map are 8 cm and 88 cm\(^2\) respectively, find in m\(^2\), the area of the actual field.
                                         </p>
                                     </li> 
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <p>Watch the video below for a comprehensive explanation of the solution.</p>
-                                        <div class="video-container">
-                                            <iframe  width="560" height="315" src="https://www.youtube.com/embed/_i8JNlLfO4o" 
-                                            title="YouTube video player" 
-                                            frameborder="0" 
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                            allowfullscreen>
-                                            </iframe>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Watch the video below for a comprehensive explanation of the solution.</p>
+                                            <div class="video-container">
+                                                <iframe  width="560" height="315" src="https://www.youtube.com/embed/_i8JNlLfO4o" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                                </iframe>
+                                            </div>
+                                            
+                                            <br><br>
+                                            <hr>
+                                            <br><br>
+                                            
+                                            <p><u>Question 1.b.</u></p>
+                                            <p> Scale \(\Rightarrow 1:100\) </p>
+                                            <p> width \(\Rightarrow 8\) cm </p>
+                                            <p> \(\Rightarrow\) Actual width \(= 8 \ cm \times 100\) </p>
+                                            <p> \(\Rightarrow\) Actual width \(= 800 \ cm\) </p>
+                                            <p> \(\Rightarrow\) Actual width \(= 8 \ m\) </p>
+                                            <p> Area \(\Rightarrow 88\) cm\(^2\) </p>
+                                            <p> Area = length \(\times\) width</p>
+                                            <p> \(\Rightarrow \text{length} = \dfrac{\text{Area}}{\text{width}}\) </p>
+                                            <p> \(\Rightarrow \text{length} = \dfrac{88 \ cm^2}{8 \ cm}\) </p>
+                                            <p> \(\Rightarrow \text{length} = 11 \ cm\) </p>
+                                            <p> \(\Rightarrow\) Actual length \(= 11 \ cm \times 100\) </p>
+                                            <p> \(\Rightarrow\) Actual length \(= 1100 \ cm\) </p>
+                                            <p> \(\Rightarrow\) Actual length \(= 11 \ m\) </p>
+                                            <p> \(\Rightarrow\) Actual Area \(=\) Actual length \(\times\) Actual width </p>
+                                            <p> \(\Rightarrow\) Actual Area \( 11 \ m \times 8 \ m\) </p>
+                                            <p> \(\Rightarrow\) Actual Area \(= 88 \ m^2\) </p>
+                                            <p> \(\therefore\) <u>the actual area of the field is 88 m\(^2\)</u> </p>
+
+                                        
+                                            
+                                            
                                         </div>
-                                        
-                                        <br><br>
-                                        <hr>
-                                        <br><br>
-                                        
-                                        <p><u>Question 1.b.</u></p>
-                                        <p> Scale \(\Rightarrow 1:100\) </p>
-                                        <p> width \(\Rightarrow 8\) cm </p>
-                                        <p> \(\Rightarrow\) Actual width \(= 8 \ cm \times 100\) </p>
-                                        <p> \(\Rightarrow\) Actual width \(= 800 \ cm\) </p>
-                                        <p> \(\Rightarrow\) Actual width \(= 8 \ m\) </p>
-                                        <p> Area \(\Rightarrow 88\) cm\(^2\) </p>
-                                        <p> Area = length \(\times\) width</p>
-                                        <p> \(\Rightarrow \text{length} = \dfrac{\text{Area}}{\text{width}}\) </p>
-                                        <p> \(\Rightarrow \text{length} = \dfrac{88 \ cm^2}{8 \ cm}\) </p>
-                                        <p> \(\Rightarrow \text{length} = 11 \ cm\) </p>
-                                        <p> \(\Rightarrow\) Actual length \(= 11 \ cm \times 100\) </p>
-                                        <p> \(\Rightarrow\) Actual length \(= 1100 \ cm\) </p>
-                                        <p> \(\Rightarrow\) Actual length \(= 11 \ m\) </p>
-                                        <p> \(\Rightarrow\) Actual Area \(=\) Actual length \(\times\) Actual width </p>
-                                        <p> \(\Rightarrow\) Actual Area \( 11 \ m \times 8 \ m\) </p>
-                                        <p> \(\Rightarrow\) Actual Area \(= 88 \ m^2\) </p>
-                                        <p> \(\therefore\) <u>the actual area of the field is 88 m\(^2\)</u> </p>
 
-                                    
-                                        
-                                        
-                                    </div>
-
-                                    <br><br>
+                                        <br><br>
 
                                     <li class="sub-question-number">
                                         <p>
@@ -314,25 +290,27 @@
                                         </p>
                                         <img src="../../images/2024q1.png" alt="magic square" class="place"> <br>
                                     </li>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <p><u>Question 1.c.</u></p>
-                                        <img src="./images/2024q1csolu.png" alt="magic square solution" class="place">
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><u>Question 1.c.</u></p>
 
+                                            <p>Watch the video below for a comprehensive explanation of the solution.</p>
+                                            <div class="video-container">
+                                                <iframe  width="560" height="315" src="https://www.youtube.com/embed/dxsihD2U1JY" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                                </iframe>
+                                            </div>
+
+                                            <br><br>
+                                            <hr>
+                                            <br><br>
+
+                                            <img src="../../images/2024q1csolu.png" alt="magic square solution" class="place">
+                                        </div>
                                         <br><br>
-                                        <hr>
-                                        <br><br>
-                                        
-                                        <div class="video-container">
-                                            <iframe  width="560" height="315" src="https://www.youtube.com/embed/dxsihD2U1JY" 
-                                            title="YouTube video player" 
-                                            frameborder="0" 
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                            allowfullscreen>
-                                            </iframe>
-                                        </div><br><br>
-                                    </div>
-                                    <br><br>
                                 </ol>
                             </div>
 
@@ -953,7 +931,7 @@
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="#passco-link"><i class="fas fa-question-circle"></i> Past Questions</a></li>
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
                                 <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
                                 <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->

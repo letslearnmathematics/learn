@@ -472,3 +472,21 @@
     border-left: 4px solid #4a6baf;
     margin-top: 1rem;
 }
+
+@media (max-width: 375px) {
+    #google-form-iframe {
+        min-height: 2200px; /* May need adjustment */
+        transform: scale(0.9);
+        transform-origin: top left;
+        width: 111.11%; /* Counteract scaling */
+    }
+    
+    .test-controls {
+        flex-direction: column;
+    }
+    
+    .control-btn {
+        width: 100%;
+        margin-bottom: var(--space-sm);
+    }
+}
