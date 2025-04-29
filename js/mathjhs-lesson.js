@@ -197,8 +197,12 @@ document.addEventListener('DOMContentLoaded', function() {
             url: "/math-jhs/passco/bece-2003",
             type: "web"
         },
-        "2002": {
-            url: "/math-jhs/passco/bece-2002",
+        "2002b": {
+            url: "/math-jhs/passco/bece-2002b",
+            type: "web"
+        },
+        "2002a": {
+            url: "/math-jhs/passco/bece-2002a",
             type: "web"
         },
         "2001": {
