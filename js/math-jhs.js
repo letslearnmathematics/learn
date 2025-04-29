@@ -364,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Rounding Decimals", url: "./math-jhs/jhs1/number/number-and-numeration-system/rounding-decimals" }
             ],
             "Number Operations": [
-                { name: "Multiplying By Powers of 10", url: "./b7-1-2-1-1lesson1" },
+                { name: "Multiplying By Powers of 10", url: "./math-jhs/jhs1/number/number-operations/multiplying-by-powers-of-10.html" },
                 { name: "Using Number Properties", url: "./b7-1-2-1-2lesson1" },
                 { name: "Operations (Word Problems)", url: "./b7-1-2-1-3lesson1" },
                 { name: "Addition & Subtraction", url: "b7-1-2-2-1lesson1" },
