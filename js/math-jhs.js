@@ -367,7 +367,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Multiplying By Powers of 10", url: "./math-jhs/jhs1/number/number-operations/multiplying-by-powers-of-10" },
                 { name: "Using Number Properties", url: "./math-jhs/jhs1/number/number-operations/using-number-properties" },
                 { name: "Operations (Word Problems)", url: "./math-jhs/jhs1/number/number-operations/operations-word-problems" },
-                { name: "Addition & Subtraction", url: "b7-1-2-2-1lesson1" },
+                { name: "Addition & Subtraction", url: "./math-jhs/jhs1/number/number-operations/addition-and-subtraction" },
                 { name: "Multiplication & Division", url: "b7-1-2-2-2lesson1" },
                 { name: "Decimals (Word Problems)", url: "b7-1-2-2-3lesson1" },
                 { name: "Repeated Factors", url: "b7-1-2-3-1lesson1" },
