@@ -372,9 +372,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Decimals (Word Problems)", url: "./math-jhs/jhs1/number/number-operations/decimals-word-problems.html" },
                 { name: "Repeated Factors", url: "./math-jhs/jhs1/number/number-operations/repeated-factors.html" },
                 { name: "Products and Powers (Indices)", url: "./math-jhs/jhs1/number/number-operations/products-and-powers-indices.html" },
-                { name: "The Zero Index (Exponent)", url: "b7-1-2-3-3lesson1" },
-                { name: "Value of Numbers in Index Form", url: "b7-1-2-3-4lesson1" },
-                { name: "H.C.F & L.C.M", url: "b7-1-2-3-5lesson1" }
+                { name: "The Zero Index (Exponent)", url: "./math-jhs/jhs1/number/number-operations/the-zero-index.html" },
+                { name: "Value of Numbers in Index Form", url: "./math-jhs/jhs1/number/number-operations/value-of-indexed-numbers.html" },
+                { name: "H.C.F & L.C.M", url: "./math-jhs/jhs1/number/number-operations/hcf-and-lcm.html" }
             ],
             "Fractions, Decimals & Percentages": [
                 { name: "Fractions", url: "b7-1-3-1-1lesson1" },
