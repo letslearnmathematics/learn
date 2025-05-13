@@ -1,0 +1,364 @@
+.place {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--light);
+    margin: 5% auto;
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.modal-content h3 {
+    color: var(--primary);
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.modal-content p {
+    margin-bottom: var(--space-md);
+    color: var(--gray-dark);
+}
+
+.close-modal {
+    position: absolute;
+    right: var(--space-md);
+    top: var(--space-sm);
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gray-dark);
+    transition: all 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--accent);
+    transform: rotate(90deg);
+}
+
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.year-btn {
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--primary-light);
+    border: 2px solid var(--primary);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.year-btn:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.year-btn.recent {
+    background-color: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent-dark);
+}
+
+.year-btn.recent:hover {
+    background-color: var(--accent);
+    color: var(--light);
+}
+
+.year-btn .format-badge {
+    font-size: 0.7rem;
+    margin-top: var(--space-xs);
+    padding: 2px 5px;
+    border-radius: 10px;
+    background-color: var(--secondary-light);
+    color: var(--secondary-dark);
+}
+
+.pdf-badge {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.web-badge {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 90%;
+    }
+    
+    .year-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+
+.year-btn {
+    cursor: pointer;
+    /* Add any other button styling you need */
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.year-btn:hover {
+    background: #e0e0e0;
+}
+
+.format-badge {
+    margin-left: 8px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+.pdf-badge {
+    background: #ff6b6b;
+    color: white;
+}
+
+.web-badge {
+    background: #4ecdc4;
+    color: white;
+}
+
+/* Multiplication layout styles */
+.multiplication-stack {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 10px 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #4a6baf;
+}
+
+.multiplication-stack .row {
+    display: flex;
+    align-items: center;
+    margin: 3px 0;
+}
+
+.multiplication-stack .number {
+    font-family: 'Courier New', monospace;
+    font-size: 1.1em;
+    min-width: 50px;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.multiplication-stack .operator-row {
+    margin-left: 15px;
+}
+
+.multiplication-stack .operator {
+    color: #4a6baf;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.multiplication-stack .divider {
+    border-top: 1px solid #ccc;
+    margin: 8px 0;
+    width: 80px;
+}
+
+.multiplication-stack .partial-product {
+    margin-left: 20px;
+    position: relative;
+}
+
+.multiplication-stack .plus {
+    color: #6c757d;
+    margin-right: 5px;
+    width: 15px;
+}
+
+.multiplication-stack .shifted {
+    padding-left: 15px;
+}
+
+.multiplication-stack .explanation {
+    font-size: 0.85em;
+    color: #6c757d;
+    margin-left: 15px;
+    font-style: italic;
+}
+
+.multiplication-stack .final-result {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.final-answer {
+    margin-top: 10px;
+    font-size: 1.05em;
+}
+
+/* Lattice grid styling */
+.lattice-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 0;
+    border: 2px solid #333;
+    width: 152px; /* 3*50px + 2*1px borders */
+    background: #fff;
+    margin: 1em 0;
+}
+
+.lattice-cell {
+    border: 1px solid #333;
+    position: relative;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1em;
+    min-width: 50px;
+    min-height: 50px;
+    box-sizing: border-box;
+}
+
+.lattice-corner {
+    background: #eee;
+    border: none;
+}
+
+.lattice-cell:not(.lattice-corner)::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-top: 1px solid #bbb;
+    border-left: 1px solid #bbb;
+    transform: skew(-45deg);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Diagonal lines for each cell except corner */
+.lattice-cell:not(.lattice-corner)::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: calc(100% - 4px);
+    height: calc(100% - 4px);
+    border-bottom: 1.5px solid #888;
+    transform: skew(-45deg);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Center numbers and fractions nicely */
+.lattice-cell {
+    font-family: 'Poppins', Arial, sans-serif;
+    font-weight: 500;
+    color: #222;
+    text-align: center;
+}
+
+/* Optional: Style fractions for clarity */
+.lattice-cell {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 600px) {
+    .lattice-grid {
+        grid-template-columns: repeat(3, 32px);
+        grid-template-rows: repeat(3, 32px);
+        width: 98px;
+    }
+    .lattice-cell {
+        min-width: 32px;
+        min-height: 32px;
+        font-size: 0.95em;
+    }
+}
+
+
+/* Additional CSS for tables */
+.decimal-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 0.9em;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.decimal-table thead tr {
+    background-color: #4a6baf;
+    color: #ffffff;
+    text-align: left;
+}
+
+.decimal-table th,
+.decimal-table td {
+    padding: 12px 15px;
+    border: 1px solid #dddddd;
+}
+
+.decimal-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.decimal-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.decimal-table tbody tr:last-of-type {
+    border-bottom: 2px solid #4a6baf;
+}
+
+.decimal-table tbody tr:hover {
+    background-color: #f1f5fd;
+}
+
+.table-caption {
+    font-style: italic;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+}

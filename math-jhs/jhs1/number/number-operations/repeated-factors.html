@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Repeated Factors and Powers | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Repeated Factors and Powers for JHS1 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Repeated Factors and Powers | JHS1 Mathematics">
+        <meta property="og:description" content="Learn about repeated factors and powers using counting objects.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/repeated-factors">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/repeated-factors.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-repeated-factors.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Repeated Factors and Powers</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS1: Number Operations</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Repeated Factors</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#modeling-factors"><i class="fas fa-chevron-right"></i> Modeling Repeated Factors</a></li>
+                                <li><a href="#power-numbers"><i class="fas fa-chevron-right"></i> Powers of Numbers</a></li>
+                                <li><a href="#features-power"><i class="fas fa-chevron-right"></i> Features of Powers</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Repeated_Factors</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    In mathematics, we often encounter situations where we multiply the same number by itself multiple times. This concept is called <strong>repeated factors</strong> and leads us to the idea of <strong>powers</strong> or <strong>exponents</strong>.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>For example:</p>
+                                    \[ 2 \times 2 \times 2 = 8 \]
+                                    <p>This can be written more compactly as \(2^3 = 8\)</p>
+                                </div>
+                                
+                                <p>In this lesson, we will:</p>
+                                <ol>
+                                    <li>Model repeated factors using counting objects</li>
+                                    <li>Understand what powers of numbers mean</li>
+                                    <li>Learn about the features of powers like \(2^3\)</li>
+                                </ol>
+                            </div>
+                        </section>
+                        
+                        <!-- Modeling Repeated Factors Section -->
+                        <section id="modeling-factors" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Modeling Repeated Factors
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Using Counting Objects
+                                </h3>
+                                <p>
+                                    We can use everyday objects like bottle tops, sticks, or counters to model repeated multiplication. This helps us visualize what powers represent.
+                                </p>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Example: Modeling \(3 \times 3\)
+                                </h3>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Step 1: Create Groups</h4>
+                                        <p>Make 3 groups with 3 bottle tops each:</p>
+                                        <div class="math-example">
+                                            <p>Group 1: 🍶 🍶 🍶</p>
+                                            <p>Group 2: 🍶 🍶 🍶</p>
+                                            <p>Group 3: 🍶 🍶 🍶</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 2: Count Total</h4>
+                                        <p>Count all the bottle tops:</p>
+                                        <p>3 groups × 3 bottle tops = 9 bottle tops total</p>
+                                        \[ 3 \times 3 = 9 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Example: Modeling \(2 \times 2 \times 2\)
+                                </h3>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Step 1: Create Layers</h4>
+                                        <p>Imagine building a cube with sticks:</p>
+                                        <div class="math-example">
+                                            <p>Layer 1: 2 sticks × 2 sticks</p>
+                                            <p>Layer 2: Another 2 sticks × 2 sticks on top</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 2: Count Total</h4>
+                                        <p>Count all the sticks used:</p>
+                                        <p>2 layers × (2 × 2 sticks) = 8 sticks total</p>
+                                        \[ 2 \times 2 \times 2 = 8 \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Use bottle tops to model 4 × 4. How many bottle tops would you need?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>You would need 4 groups of 4 bottle tops:</p>
+                                        <p>Group 1: 🍶 🍶 🍶 🍶</p>
+                                        <p>Group 2: 🍶 🍶 🍶 🍶</p>
+                                        <p>Group 3: 🍶 🍶 🍶 🍶</p>
+                                        <p>Group 4: 🍶 🍶 🍶 🍶</p>
+                                        <p>Total: 4 × 4 = 16 bottle tops</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Use sticks to model 3 × 3 × 3. How many sticks would you need?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>You would need 3 layers of 3 × 3 sticks:</p>
+                                        <p>Each layer has 9 sticks (3 × 3)</p>
+                                        <p>Total: 3 × 9 = 27 sticks</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>If you have 5 groups of 5 counters each, what multiplication does this represent?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This represents 5 × 5 = 25 counters total</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <br><br>
+                         
+                        <!-- Powers of Numbers Section -->
+                        <section id="power-numbers" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Powers of Numbers
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> What is a Power?
+                                </h3>
+                                <p>
+                                    A power is a short way to write repeated multiplication of the same number. It consists of two parts:
+                                </p>
+                                <ul>
+                                    <li>The <strong>base</strong> (the number being multiplied)</li>
+                                    <li>The <strong>exponent</strong> (how many times the base is multiplied)</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <p>For example:</p>
+                                    \[ 5 \times 5 \times 5 = 5^3 \]
+                                    <p>Read as "five to the power of three" or "five cubed"</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Special Names
+                                </h3>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Squared (Power of 2)</h4>
+                                        <p>When the exponent is 2, we say the number is "squared":</p>
+                                        \[ 4^2 = 4 \times 4 = 16 \]
+                                        <p>"Four squared equals sixteen"</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Cubed (Power of 3)</h4>
+                                        <p>When the exponent is 3, we say the number is "cubed":</p>
+                                        \[ 3^3 = 3 \times 3 \times 3 = 27 \]
+                                        <p>"Three cubed equals twenty-seven"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Write 7 × 7 × 7 × 7 in power notation.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>7 × 7 × 7 × 7 = \(7^4\)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>What is \(2^5\) equal to? (Write out the multiplication)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>\(2^5 = 2 \times 2 \times 2 \times 2 \times 2 = 32\)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>How would you say \(10^6\) in words?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>"Ten to the power of six" or "Ten to the sixth power"</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Features of Powers Section -->
+                        <section id="features-power" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Features of Powers
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Understanding \(2^3\)
+                                </h3>
+                                <p>
+                                    Let's examine the power \(2^3\) in detail to understand its components:
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ 2^3 = 8 \]
+                                </div>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>The Base (2)</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>The base is the number being multiplied by itself.</p>
+                                        <div class="math-example">
+                                            <p>In \(2^3\), the base is 2.</p>
+                                            <p>This means we're working with the number 2.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>The Exponent/Index (3)</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>The exponent tells us how many times to multiply the base by itself.</p>
+                                        <div class="math-example">
+                                            <p>In \(2^3\), the exponent is 3.</p>
+                                            <p>This means we multiply 2 by itself 3 times:</p>
+                                            \[ 2 \times 2 \times 2 \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>The Result (8)</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>The result of the multiplication is called the power value.</p>
+                                        <div class="math-example">
+                                            <p>For \(2^3\):</p>
+                                            \[ 2 \times 2 \times 2 = 8 \]
+                                            <p>So \(2^3 = 8\)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Identify the base and exponent in \(5^4\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Base: 5</p>
+                                        <p>Exponent: 4</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>For \(3^2 = 9\), which number is the power value?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>The power value is 9.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>If the base is 10 and the exponent is 3, write this in power notation and find its value.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>\(10^3 = 10 \times 10 \times 10 = 1000\)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your understanding of powers through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-repeated-factors.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/repeated-factors.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

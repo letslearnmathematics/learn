@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title> Products and Powers (Indices) | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to express numbers as products and as powers, and as products of powers. JHS1 Mathematics lesson.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Expressing Numbers as Products and Powers | JHS1 Mathematics">
+        <meta property="og:description" content="Learn how to express numbers as products, powers, and products of powers.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/products-and-powers-indices">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/products-and-powers-indices.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-products-and-powers-indices.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Products and Powers</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS1: Number Operations</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Products & Powers</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#expressing-products"><i class="fas fa-chevron-right"></i> Expressing as Products</a></li>
+                                <li><a href="#expressing-powers"><i class="fas fa-chevron-right"></i> Expressing as Powers</a></li>
+                                <li><a href="#product-of-powers"><i class="fas fa-chevron-right"></i> Product of Powers</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Products_and_Powers</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            <div class="concept-box">
+                                <p>
+                                    Numbers can be expressed in different forms to make calculations easier and reveal interesting patterns. Today we'll learn three important ways to express numbers:
+                                </p>
+                                <ol>
+                                    <li><strong>As a product</strong> of other numbers (multiplication)</li>
+                                    <li><strong>As a power</strong> (using exponents)</li>
+                                    <li><strong>As a product of powers</strong> (combining both concepts)</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Real-world Application</h4>
+                                        <p>Understanding these concepts helps with:</p>
+                                        <ul>
+                                            <li>Simplifying calculations</li>
+                                            <li>Finding common denominators</li>
+                                            <li>Working with area and volume</li>
+                                            <li>Understanding scientific notation</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> The area of a square with sides of 5cm can be expressed as:</p>
+                                    <ul>
+                                        <li>Product: 5 × 5 cm²</li>
+                                        <li>Power: 5² cm²</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Expressing as Product Section -->
+                        <section id="expressing-products" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Expressing Numbers as Products
+                            </h2>
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-times-circle"></i> What is a Product?
+                                </h3>
+                                <p>
+                                    A <strong>product</strong> is the result of multiplying numbers together. We can express any number as a product in multiple ways.
+                                </p>
+                                <div class="math-example">
+                                    \[ \text{Product} = \text{Factor} \times \text{Factor} \times \text{Factor} \]
+                                </div>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-hashtag"></i>
+                                        <h3>Method 1: Simple Products</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Break the number into two factors:</p>
+                                        <div class="math-example">
+                                            <p>24 = 6 × 4</p>
+                                            <p>24 = 3 × 8</p>
+                                            <p>24 = 2 × 12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-hashtag"></i>
+                                        <h3>Method 2: Multiple Factors</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Break the number into more than two factors:</p>
+                                        <div class="math-example">
+                                            <p>24 = 2 × 3 × 4</p>
+                                            <p>24 = 2 × 2 × 6</p>
+                                            <p>24 = 1 × 2 × 3 × 4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Points
+                                </h3>
+                                <ul>
+                                    <li>Every number can be expressed as a product of 1 and itself</li>
+                                    <li>There are often multiple ways to express a number as a product</li>
+                                    <li>Prime numbers can only be expressed as 1 × themselves</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Expressing as Power Section -->
+                        <section id="expressing-powers" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-superscript"></i> Expressing Numbers as Powers
+                            </h2>
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-arrow-up"></i> Understanding Powers
+                                </h3>
+                                <p>
+                                    A <strong>power</strong> is a shorthand way to write repeated multiplication of the same number.
+                                </p>
+                                <div class="math-example">
+                                    \[ \text{Base}^{\text{Exponent}} = \underbrace{\text{Base} \times \text{Base} \times \cdots \times \text{Base}}_{\text{Exponent times}} \]
+                                </div>
+                                <p>Example: 5³ = 5 × 5 × 5 = 125</p>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-table"></i> Common Powers to Know
+                                </h3>
+                                <table class="math-table">
+                                    <tr>
+                                        <th>Power</th>
+                                        <th>Value</th>
+                                        <th>Read As</th>
+                                    </tr>
+                                    <tr>
+                                        <td>2²</td>
+                                        <td>4</td>
+                                        <td>"Two squared"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2³</td>
+                                        <td>8</td>
+                                        <td>"Two cubed"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3²</td>
+                                        <td>9</td>
+                                        <td>"Three squared"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>5³</td>
+                                        <td>125</td>
+                                        <td>"Five cubed"</td>
+                                    </tr>
+                                    <tr>
+                                        <td>10²</td>
+                                        <td>100</td>
+                                        <td>"Ten squared"</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Example: Expressing 81 as a Power
+                                </h3>
+                                <div class="step-by-step">
+                                    <div class="step">
+                                        <span class="step-number">1</span>
+                                        <p>Find factors of 81: 9 × 9</p>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">2</span>
+                                        <p>Notice 9 × 9 can be written as 9²</p>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">3</span>
+                                        <p>Alternatively, 81 = 3 × 3 × 3 × 3 = 3⁴</p>
+                                    </div>
+                                </div>
+                                <p class="conclusion">∴ 81 can be expressed as 9² or 3⁴</p>
+                            </div>
+                        </section>
+
+                        <!-- Expressing as Product of Powers Section -->
+                        <section id="product-of-powers" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-layer-group"></i> Expressing as Product of Powers
+                            </h2>
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-puzzle-piece"></i> Combining Both Concepts
+                                </h3>
+                                <p>
+                                    We can break numbers down into products where each factor is expressed as a power.
+                                </p>
+                                <div class="math-example">
+                                    \[ \text{Number} = \text{Power} \times \text{Power} \times \cdots \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Example: Expressing 72 as Product of Powers
+                                </h3>
+                                <div class="step-by-step">
+                                    <div class="step">
+                                        <span class="step-number">1</span>
+                                        <p>Break 72 into prime factors: 72 = 2 × 2 × 2 × 3 × 3</p>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">2</span>
+                                        <p>Group identical factors: (2 × 2 × 2) and (3 × 3)</p>
+                                    </div>
+                                    <div class="step">
+                                        <span class="step-number">3</span>
+                                        <p>Write as powers: 2³ × 3²</p>
+                                    </div>
+                                </div>
+                                <p class="conclusion">∴ 72 = 2³ × 3²</p>
+                            </div>
+                            
+                            <div class="visual-explanation">
+                                <h4>Visual Representation</h4>
+                                <div class="visual-box">
+                                    <div class="factor-group">
+                                        <span class="factor">2</span>
+                                        <span class="factor">2</span>
+                                        <span class="factor">2</span>
+                                        <span class="arrow">→</span>
+                                        <span class="power">2³</span>
+                                    </div>
+                                    <div class="factor-group">
+                                        <span class="factor">3</span>
+                                        <span class="factor">3</span>
+                                        <span class="arrow">→</span>
+                                        <span class="power">3²</span>
+                                    </div>
+                                    <div class="final-product">
+                                        <span class="equals">=</span>
+                                        <span class="result">2³ × 3²</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section id="practice" class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercises</h2>
+                            </div>
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Basic Level</h3>
+                                    <ol class="problem-list">
+                                        <li>Express 16 as:
+                                            <ul>
+                                                <li>A product of two numbers (2 ways)</li>
+                                                <li>A power (2 ways)</li>
+                                            </ul>
+                                        </li>
+                                        <li>Write 5 × 5 × 5 × 5 as a power</li>
+                                        <li>Express 36 as a product of powers</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solutions</button>
+                                    <div class="solution">
+                                        <ol>
+                                            <li>
+                                                <ul>
+                                                    <li>4 × 4 or 2 × 8</li>
+                                                    <li>4² or 2⁴</li>
+                                                </ul>
+                                            </li>
+                                            <li>5⁴</li>
+                                            <li>6² or 2² × 3²</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Intermediate Level</h3>
+                                    <ol class="problem-list">
+                                        <li>Express 120 as:
+                                            <ul>
+                                                <li>A product of three numbers</li>
+                                                <li>A product of powers</li>
+                                            </ul>
+                                        </li>
+                                        <li>Which is greater: 2⁵ or 5²?</li>
+                                        <li>Express 144 as a product of powers in two different ways</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solutions</button>
+                                    <div class="solution">
+                                        <ol>
+                                            <li>
+                                                <ul>
+                                                    <li>5 × 4 × 6 or 10 × 3 × 4</li>
+                                                    <li>2³ × 3 × 5</li>
+                                                </ul>
+                                            </li>
+                                            <li>2⁵ = 32 > 25 = 5²</li>
+                                            <li>12² or 2⁴ × 3²</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Advanced Level</h3>
+                                    <ol class="problem-list">
+                                        <li>Express 360 as a product of powers of prime numbers</li>
+                                        <li>Find a number that can be expressed as both a square and a cube (hint: it's less than 100)</li>
+                                        <li>Express 1 as a product of powers in three different ways</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solutions</button>
+                                    <div class="solution">
+                                        <ol>
+                                            <li>2³ × 3² × 5</li>
+                                            <li>64 (8² or 4³)</li>
+                                            <li>1² × 1³, 2⁰ × 3⁰, 5⁰</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <br><br> 
+                       <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your understanding of powers through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-products-and-powers-indices.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/repeated-factors.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
