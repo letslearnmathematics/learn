@@ -369,22 +369,22 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Operations (Word Problems)", url: "./math-jhs/jhs1/number/number-operations/operations-word-problems" },
                 { name: "Addition & Subtraction", url: "./math-jhs/jhs1/number/number-operations/addition-and-subtraction" },
                 { name: "Multiplication & Division", url: "./math-jhs/jhs1/number/number-operations/multiplication-and-division" },
-                { name: "Decimals (Word Problems)", url: "./math-jhs/jhs1/number/number-operations/decimals-word-problems.html" },
-                { name: "Repeated Factors", url: "./math-jhs/jhs1/number/number-operations/repeated-factors.html" },
-                { name: "Products and Powers (Indices)", url: "./math-jhs/jhs1/number/number-operations/products-and-powers-indices.html" },
-                { name: "The Zero Index (Exponent)", url: "./math-jhs/jhs1/number/number-operations/the-zero-index.html" },
-                { name: "Value of Numbers in Index Form", url: "./math-jhs/jhs1/number/number-operations/value-of-indexed-numbers.html" },
-                { name: "H.C.F & L.C.M", url: "./math-jhs/jhs1/number/number-operations/hcf-and-lcm.html" }
+                { name: "Decimals (Word Problems)", url: "./math-jhs/jhs1/number/number-operations/decimals-word-problems" },
+                { name: "Repeated Factors", url: "./math-jhs/jhs1/number/number-operations/repeated-factors" },
+                { name: "Products and Powers (Indices)", url: "./math-jhs/jhs1/number/number-operations/products-and-powers-indices" },
+                { name: "The Zero Index (Exponent)", url: "./math-jhs/jhs1/number/number-operations/the-zero-index" },
+                { name: "Value of Numbers in Index Form", url: "./math-jhs/jhs1/number/number-operations/value-of-indexed-numbers" },
+                { name: "H.C.F & L.C.M", url: "./math-jhs/jhs1/number/number-operations/hcf-and-lcm" }
             ],
             "Fractions, Decimals & Percentages": [
-                { name: "Fractions", url: "b7-1-3-1-1lesson1" },
-                { name: "Comparing & Ordering Fractions", url: "b7-1-3-1-2lesson1" },
-                { name: "Addition & Subtraction of Fractions", url: "b7-1-3-2-1lesson1" },
-                { name: "Word Problems of Fractions", url: "b7-1-3-2-2lesson1" },
-                { name: "Multiplication of Fractions", url: "b7-1-3-3-1lesson1" },
-                { name: "Finding Fractions of Given Quantities", url: "b7-1-3-3-2lesson1" },
-                { name: "Division of Fractions", url: "b7-1-3-3-3lesson1" },
-                { name: "Dividing Given Quantities by a Fraction", url: "b7-1-3-3-4lesson1" }
+                { name: "Fractions", url: "./math-jhs/jhs1/number/fractions-decimals-and-percentages/fractions" },
+                { name: "Comparing & Ordering Fractions", url: "./math-jhs/jhs1/number/fractions-decimals-and-percentages/comparing-and-ordering-fractions" },
+                { name: "Addition & Subtraction of Fractions", url: "./math-jhs/jhs1/number/fractions-decimals-and-percentages/addition-and-subtraction-fraction" },
+                { name: "Word Problems of Fractions", url: "./math-jhs/jhs1/number/fractions-decimals-and-percentages/word-problems-fractions" },
+                { name: "Multiplication of Fractions", url: "./math-jhs/jhs1/number/fractions-decimals-and-percentages/multiplication-of-fractions" },
+                { name: "Finding Fractions of Given Quantities", url: "./math-jhs/jhs1/number/fractions-decimals-and-percentages/finding-fractions-of-quantities" },
+                { name: "Division of Fractions", url: "./math-jhs/jhs1/number/fractions-decimals-and-percentages/division-of-fractions" },
+                { name: "Dividing Given Quantities by a Fraction", url: "./math-jhs/jhs1/number/fractions-decimals-and-percentages/dividing-by-a-fraction" }
             ],
             "Ratios and Proportion": [
                 { name: "Ratios Between Two Quantities", url: "b7-1-4-1-1lesson1" },

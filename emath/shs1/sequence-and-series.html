@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Sequence & Series | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Sequence & Series for SHS1 Elective Mathematics. Learn arithmetic, geometric and recurrent sequences with practical applications.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Sequence & Series | Elective Mathematics">
+        <meta property="og:description" content="Master Sequences & Series with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sequences-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/sequences">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs1/css/sequences.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs1/css/math-challenge-sequences.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Sequence & Series</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-sort-numeric-up-alt"></i>
+                                <span>Sequence & Series</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#arithmetic"><i class="fas fa-chevron-right"></i> Arithmetic Progression</a></li>
+                                <li><a href="#geometric"><i class="fas fa-chevron-right"></i> Geometric Progression</a></li>
+                                <li><a href="#recurrent"><i class="fas fa-chevron-right"></i> Recurrent Sequence</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Real-World Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Sequence & Series</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Sequences
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A <strong>sequence</strong> is an ordered list of numbers following a specific pattern, while a <strong>series</strong> is the sum of the terms of a sequence.</p>
+                                
+                                <div class="math-example">
+                                    <p>Example sequence:</p>
+                                    \[ 2, 5, 8, 11, 14, \ldots \]
+                                    <p>Corresponding series:</p>
+                                    \[ 2 + 5 + 8 + 11 + 14 + \cdots \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Terminology:</h4>
+                                        <ul>
+                                            <li><strong>Term:</strong> Each number in the sequence (a₁, a₂, a₃, ...)</li>
+                                            <li><strong>General term:</strong> Formula for the nth term (aₙ)</li>
+                                            <li><strong>Finite sequence:</strong> Has a last term</li>
+                                            <li><strong>Infinite sequence:</strong> Continues indefinitely</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Arithmetic Progression Section -->
+                        <section id="arithmetic" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-align-left"></i> Arithmetic Progression (AP)
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A sequence where each term after the first is obtained by adding a constant <strong>common difference (d)</strong>.</p>
+                                
+                                <div class="math-example">
+                                    <p>Example AP:</p>
+                                    \[ 5, 9, 13, 17, 21, \ldots \quad (d = 4) \]
+                                </div>
+                                
+                                <div class="formula-card">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-square-root-alt"></i> AP Formulas
+                                    </h3>
+                                    <div class="formula-grid">
+                                        <div class="formula-item">
+                                            <h4>nth term:</h4>
+                                            \[ a_n = a_1 + (n-1)d \]
+                                        </div>
+                                        <div class="formula-item">
+                                            <h4>Sum of first n terms:</h4>
+                                            \[ S_n = \frac{n}{2}[2a_1 + (n-1)d] \]
+                                            <p>or</p>
+                                            \[ S_n = \frac{n}{2}(a_1 + a_n) \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="word-problem">
+                                    <h3>Example Problem:</h3>
+                                    <p>Find the 15th term and sum of first 15 terms of the AP: 3, 7, 11, 15, ...</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Given: a₁ = 3, d = 4</p>
+                                        <p>15th term:</p>
+                                        \[ a_{15} = 3 + (15-1) \times 4 = 3 + 56 = 59 \]
+                                        <p>Sum of first 15 terms:</p>
+                                        \[ S_{15} = \frac{15}{2}(3 + 59) = \frac{15}{2} \times 62 = 465 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-line"></i> Graphical Representation
+                                </h3>
+                                <p>APs produce straight lines when plotted, showing constant growth:</p>
+                                <div class="graph-container">
+                                    <canvas id="apGraph" width="400" height="200"></canvas>
+                                </div>
+                                <p class="graph-note">The linear pattern shows the constant common difference between terms</p>
+                            </div>
+                        </section>
+
+                        <!-- Geometric Progression Section -->
+                        <section id="geometric" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-bar"></i> Geometric Progression (GP)
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A sequence where each term after the first is obtained by multiplying by a constant <strong>common ratio (r)</strong>.</p>
+                                
+                                <div class="math-example">
+                                    <p>Example GP:</p>
+                                    \[ 2, 6, 18, 54, 162, \ldots \quad (r = 3) \]
+                                </div>
+                                
+                                <div class="formula-card">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-square-root-alt"></i> GP Formulas
+                                    </h3>
+                                    <div class="formula-grid">
+                                        <div class="formula-item">
+                                            <h4>nth term:</h4>
+                                            \[ a_n = a_1 \times r^{n-1} \]
+                                        </div>
+                                        <div class="formula-item">
+                                            <h4>Sum of first n terms:</h4>
+                                            \[ S_n = \frac{a_1(1 - r^n)}{1 - r} \quad (r \neq 1) \]
+                                        </div>
+                                        <div class="formula-item">
+                                            <h4>Sum to infinity:</h4>
+                                            \[ S_\infty = \frac{a_1}{1 - r} \quad (|r| < 1) \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="word-problem">
+                                    <h3>Example Problem:</h3>
+                                    <p>Find the 6th term and sum of first 6 terms of the GP: 5, 10, 20, 40, ...</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Given: a₁ = 5, r = 2</p>
+                                        <p>6th term:</p>
+                                        \[ a_6 = 5 \times 2^{5} = 5 \times 32 = 160 \]
+                                        <p>Sum of first 6 terms:</p>
+                                        \[ S_6 = \frac{5(1 - 2^6)}{1 - 2} = \frac{5(1 - 64)}{-1} = \frac{-315}{-1} = 315 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-line"></i> Exponential Growth/Decay
+                                </h3>
+                                <p>GPs show exponential patterns in real-world phenomena:</p>
+                                <div class="graph-container">
+                                    <canvas id="gpGraph" width="400" height="200"></canvas>
+                                </div>
+                                <p class="graph-note">The curve shows exponential growth when r > 1, decay when 0 < r < 1</p>
+                            </div>
+                        </section>
+
+                        <!-- Recurrent Sequence Section -->
+                        <section id="recurrent" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-redo"></i> Recurrent Sequences
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Sequences where each term is defined as a function of preceding terms.</p>
+                                
+                                <div class="math-example">
+                                    <p>Fibonacci sequence:</p>
+                                    \[ F_n = F_{n-1} + F_{n-2} \]
+                                    \[ \text{with } F_1 = 1, F_2 = 1 \]
+                                    \[ 1, 1, 2, 3, 5, 8, 13, \ldots \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Characteristics:</h4>
+                                        <ul>
+                                            <li>Requires initial terms</li>
+                                            <li>Recurrence relation defines subsequent terms</li>
+                                            <li>Can be linear or nonlinear</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="word-problem">
+                                    <h3>Example Problem:</h3>
+                                    <p>A sequence is defined by \( a_n = 2a_{n-1} + 3 \) with \( a_1 = 1 \). Find the first 5 terms.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Given: a₁ = 1</p>
+                                        <p>Subsequent terms:</p>
+                                        \[ a_2 = 2(1) + 3 = 5 \]
+                                        \[ a_3 = 2(5) + 3 = 13 \]
+                                        \[ a_4 = 2(13) + 3 = 29 \]
+                                        \[ a_5 = 2(29) + 3 = 61 \]
+                                        <p>Sequence: 1, 5, 13, 29, 61, ...</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-globe-africa"></i> Real-World Applications
+                            </h2>
+                            
+                            <div class="application-cards">
+                                <div class="app-card">
+                                    <div class="app-icon">
+                                        <i class="fas fa-piggy-bank"></i>
+                                    </div>
+                                    <div class="app-content">
+                                        <h3>Financial Mathematics</h3>
+                                        <ul>
+                                            <li>Simple interest (AP)</li>
+                                            <li>Compound interest (GP)</li>
+                                            <li>Loan repayments</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="app-card">
+                                    <div class="app-icon">
+                                        <i class="fas fa-microscope"></i>
+                                    </div>
+                                    <div class="app-content">
+                                        <h3>Science & Technology</h3>
+                                        <ul>
+                                            <li>Population growth</li>
+                                            <li>Radioactive decay</li>
+                                            <li>Fractal patterns</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="app-card">
+                                    <div class="app-icon">
+                                        <i class="fas fa-building"></i>
+                                    </div>
+                                    <div class="app-content">
+                                        <h3>Ghanaian Context</h3>
+                                        <ul>
+                                            <li>Population projections</li>
+                                            <li>Inflation calculations</li>
+                                            <li>Agricultural yield predictions</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="word-problem">
+                                <h3>Ghanaian Example:</h3>
+                                <p>A small business in Accra starts with 10 customers. Each month, the number of customers grows by 20%. How many customers will they have after 1 year?</p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>This is a GP with a₁ = 10, r = 1.2, n = 12</p>
+                                    \[ a_{12} = 10 \times (1.2)^{11} \approx 10 \times 7.43 \approx 74 \text{ customers} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1 (AP)</h3>
+                                    <p>The 4th term of an AP is 10 and the 10th term is 34. Find the first term and common difference.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using aₙ = a₁ + (n-1)d:</p>
+                                        \[ a_4 = a_1 + 3d = 10 \]
+                                        \[ a_{10} = a_1 + 9d = 34 \]
+                                        <p>Subtract equations:</p>
+                                        \[ 6d = 24 \Rightarrow d = 4 \]
+                                        \[ a_1 = 10 - 3(4) = -2 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2 (GP)</h3>
+                                    <p>The 3rd term of a GP is 36 and the 6th term is 972. Find the common ratio and first term.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using aₙ = a₁rⁿ⁻¹:</p>
+                                        \[ a_3 = a_1r^2 = 36 \]
+                                        \[ a_6 = a_1r^5 = 972 \]
+                                        <p>Divide equations:</p>
+                                        \[ r^3 = 27 \Rightarrow r = 3 \]
+                                        \[ a_1 = 36 / 3^2 = 4 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3 (Recurrent)</h3>
+                                    <p>A sequence is defined by \( x_n = x_{n-1} + 2x_{n-2} \) with \( x_1 = 1 \) and \( x_2 = 3 \). Find \( x_5 \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Calculate sequentially:</p>
+                                        \[ x_3 = x_2 + 2x_1 = 3 + 2(1) = 5 \]
+                                        \[ x_4 = x_3 + 2x_2 = 5 + 2(3) = 11 \]
+                                        \[ x_5 = x_4 + 2x_3 = 11 + 2(5) = 21 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/sequences" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your sequence skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../shs1/js/math-challenge-sequences.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs1/js/sequences.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Graph for AP
+            const apCtx = document.getElementById('apGraph').getContext('2d');
+            const apGraph = new Chart(apCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Term 1', 'Term 2', 'Term 3', 'Term 4', 'Term 5'],
+                    datasets: [{
+                        label: 'Arithmetic Progression (d=4)',
+                        data: [5, 9, 13, 17, 21],
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        tension: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+            
+            // Graph for GP
+            const gpCtx = document.getElementById('gpGraph').getContext('2d');
+            const gpGraph = new Chart(gpCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Term 1', 'Term 2', 'Term 3', 'Term 4', 'Term 5'],
+                    datasets: [{
+                        label: 'Geometric Progression (r=2)',
+                        data: [2, 4, 8, 16, 32],
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        tension: 0.4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

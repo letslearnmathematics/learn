@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Relations & Functions | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Relations and Functions for SHS1 Elective Mathematics. Learn about mappings, domains, ranges, inverse and composite functions.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Relations & Functions | Elective Mathematics">
+        <meta property="og:description" content="Master Relations and Functions with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/functions-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/functions">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs1/css/functions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs1/css/math-challenge-functions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Relations & Functions</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Relations & Functions</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#relations" class="active"><i class="fas fa-chevron-right"></i> Relations</a></li>
+                                <li><a href="#mapping"><i class="fas fa-chevron-right"></i> Mapping</a></li>
+                                <li><a href="#functions"><i class="fas fa-chevron-right"></i> Functions</a></li>
+                                <li><a href="#domain"><i class="fas fa-chevron-right"></i> Domain of a Function</a></li>
+                                <li><a href="#range"><i class="fas fa-chevron-right"></i> Range of a Function</a></li>
+                                <li><a href="#inverse"><i class="fas fa-chevron-right"></i> Inverse Functions</a></li>
+                                <li><a href="#composite"><i class="fas fa-chevron-right"></i> Composite Functions</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Relations & Functions</span>
+                        </nav>
+
+                        <!-- Relations Section -->
+                        <section id="relations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-link"></i> Relations
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A <strong>relation</strong> is a set of ordered pairs that establishes a connection between elements of two sets. In mathematics, we often write relations as \( (x, y) \) where \( x \) is related to \( y \).</p>
+                                
+                                <div class="math-example">
+                                    <p>Example of a relation:</p>
+                                    \[ R = \{(1, 2), (2, 4), (3, 6), (4, 8)\} \]
+                                    <p>This can be described by the rule \( y = 2x \)</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Types of Relations:</h4>
+                                        <ul>
+                                            <li><strong>One-to-One:</strong> Each x relates to only one y, and each y relates to only one x</li>
+                                            <li><strong>One-to-Many:</strong> An x relates to multiple y values</li>
+                                            <li><strong>Many-to-One:</strong> Multiple x values relate to the same y</li>
+                                            <li><strong>Many-to-Many:</strong> Multiple x relate to multiple y values</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Representation:</h4>
+                                        <p>Relations can be represented as:</p>
+                                        <ul>
+                                            <li>Ordered pairs</li>
+                                            <li>Arrow diagrams</li>
+                                            <li>Graphs</li>
+                                            <li>Equations</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-project-diagram"></i> Graphical Representation
+                                </h3>
+                                <p>Relations can be visualized on the Cartesian plane:</p>
+                             <!--
+                                <div class="graph-container">
+                                    <div class="coordinate-plane">
+                                         Graph will be rendered here 
+                                        <div class="relation-point" style="left: 20%; bottom: 20%;" data-point="(1,2)"></div>
+                                        <div class="relation-point" style="left: 30%; bottom: 40%;" data-point="(2,4)"></div>
+                                        <div class="relation-point" style="left: 40%; bottom: 60%;" data-point="(3,6)"></div>
+                                        <div class="relation-point" style="left: 50%; bottom: 80%;" data-point="(4,8)"></div>
+                                        <div class="x-axis">x</div>
+                                        <div class="y-axis">y</div>
+                                    </div>
+                                </div>
+                              -->
+                            </div>
+                        </section>
+                        
+                        <!-- Mapping Section -->
+                        <section id="mapping" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-arrows-alt"></i> Mapping
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A <strong>mapping</strong> shows how elements of one set (the domain) are paired with elements of another set (the codomain). Mappings can be represented using arrow diagrams.</p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-arrow-right"></i>
+                                            <h3>One-to-One Mapping</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <div class="mapping-diagram">
+                                                <div class="left-set">
+                                                    <div class="element">1</div>
+                                                    <div class="element">2</div>
+                                                    <div class="element">3</div>
+                                                </div>
+                                                <div class="right-set">
+                                                    <div class="element">a</div>
+                                                    <div class="element">b</div>
+                                                    <div class="element">c</div>
+                                                </div>
+                                                <div class="arrow a1"></div>
+                                                <div class="arrow b2"></div>
+                                                <div class="arrow c3"></div>
+                                            </div>
+                                            <p>Each element in the domain maps to exactly one unique element in the codomain.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-arrow-right"></i>
+                                            <h3>Many-to-One Mapping</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <div class="mapping-diagram">
+                                                <div class="left-set">
+                                                    <div class="element">1</div>
+                                                    <div class="element">2</div>
+                                                    <div class="element">3</div>
+                                                </div>
+                                                <div class="right-set">
+                                                    <div class="element">a</div>
+                                                    <div class="element">b</div>
+                                                </div>
+                                                <div class="arrow a1"></div>
+                                                <div class="arrow a2"></div>
+                                                <div class="arrow b3"></div>
+                                            </div>
+                                            <p>Multiple elements in the domain can map to the same element in the codomain.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Domain:</h4>
+                                        <p>The set of all possible input values (x-values)</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Codomain:</h4>
+                                        <p>The set of all possible output values (y-values)</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Range:</h4>
+                                        <p>The actual output values produced by the mapping</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Functions Section -->
+                        <section id="functions" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-function"></i> Functions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A <strong>function</strong> is a special type of relation where each input (x-value) has exactly one output (y-value). Functions are often written as \( f(x) = \) expression.</p>
+                                
+                                <div class="math-example">
+                                    <p>Example of a function:</p>
+                                    \[ f(x) = 2x + 3 \]
+                                    <p>For \( x = 1 \), \( f(1) = 2(1) + 3 = 5 \)</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Vertical Line Test:</h4>
+                                        <p>A graph represents a function if any vertical line intersects the graph at most once.</p>
+                                        <div class="graph-container small">
+                                            <div class="function-graph"></div>
+                                            <div class="vertical-line"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Function Notation:</h4>
+                                        <ul>
+                                            <li>\( f: x \mapsto 2x + 3 \) (Mapping notation)</li>
+                                            <li>\( f(x) = 2x + 3 \) (Function notation)</li>
+                                            <li>\( y = 2x + 3 \) (Equation form)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-check-circle"></i> Identifying Functions
+                                </h3>
+                                <p>Determine whether these relations are functions:</p>
+                                
+                                <div class="identification-examples">
+                                    <div class="example">
+                                        <p>1. \( \{(1, 2), (2, 4), (3, 6)\} \)</p>
+                                        <button class="solution-toggle">Show Answer</button>
+                                        <div class="solution">
+                                            <p>This <strong>is a function</strong> because each x-value has exactly one y-value.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="example">
+                                        <p>2. \( \{(1, 2), (1, 4), (2, 5)\} \)</p>
+                                        <button class="solution-toggle">Show Answer</button>
+                                        <div class="solution">
+                                            <p>This <strong>is not a function</strong> because x=1 has two different y-values (2 and 4).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Domain Section -->
+                        <section id="domain" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-arrows-alt-h"></i> Largest Possible Domain of a Function
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>The <strong>domain</strong> of a function is the set of all possible input values (x-values) for which the function is defined.</p>
+                                
+                                <div class="math-example">
+                                    <p>For \( f(x) = \frac{1}{x} \), the domain is all real numbers except 0:</p>
+                                    \[ \text{Domain} = \{x \in \mathbb{R} \mid x \neq 0\} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Common Restrictions:</h4>
+                                        <ul>
+                                            <li><strong>Denominators</strong> cannot be zero</li>
+                                            <li>Expressions under <strong>square roots</strong> must be ≥ 0</li>
+                                            <li><strong>Logarithms</strong> must have positive arguments</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="domain-examples">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-calculator"></i> Domain Examples
+                                    </h3>
+                                    
+                                    <div class="example-card">
+                                        <p>Find the largest possible domain for:</p>
+                                        \[ f(x) = \sqrt{x - 2} \]
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>The expression under the square root must be ≥ 0:</p>
+                                            \[ x - 2 \geq 0 \]
+                                            \[ x \geq 2 \]
+                                            <p>Domain: \( \{x \in \mathbb{R} \mid x \geq 2\} \) or \( [2, \infty) \)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="example-card">
+                                        <p>Find the largest possible domain for:</p>
+                                        \[ g(x) = \frac{1}{x^2 - 4} \]
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>The denominator cannot be zero:</p>
+                                            \[ x^2 - 4 \neq 0 \]
+                                            \[ x \neq \pm 2 \]
+                                            <p>Domain: \( \{x \in \mathbb{R} \mid x \neq -2, x \neq 2\} \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Range Section -->
+                        <section id="range" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-arrows-alt-v"></i> Range of a Function
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>The <strong>range</strong> of a function is the set of all possible output values (y-values) that result from using the domain.</p>
+                                
+                                <div class="math-example">
+                                    <p>For \( f(x) = x^2 \), the range is all real numbers ≥ 0:</p>
+                                    \[ \text{Range} = \{y \in \mathbb{R} \mid y \geq 0\} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Finding Range:</h4>
+                                        <ul>
+                                            <li>Analyze the function's behavior (graphically or algebraically)</li>
+                                            <li>For quadratic functions, find the vertex</li>
+                                            <li>For rational functions, find horizontal asymptotes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="range-examples">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-chart-line"></i> Range Examples
+                                    </h3>
+                                    
+                                    <div class="example-card">
+                                        <p>Find the range of:</p>
+                                        \[ f(x) = 2x + 3 \]
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>This is a linear function with no restrictions:</p>
+                                            <p>Range: \( \mathbb{R} \) (all real numbers)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="example-card">
+                                        <p>Find the range of:</p>
+                                        \[ g(x) = x^2 - 4x + 5 \]
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Complete the square:</p>
+                                            \[ g(x) = (x^2 - 4x + 4) + 1 = (x - 2)^2 + 1 \]
+                                            <p>The minimum value is 1 (when x=2):</p>
+                                            <p>Range: \( \{y \in \mathbb{R} \mid y \geq 1\} \) or \( [1, \infty) \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Inverse Functions Section -->
+                        <section id="inverse" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-exchange-alt"></i> Inverse of a Function
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>The <strong>inverse function</strong> \( f^{-1} \) reverses the original function \( f \), swapping x and y values. For \( f^{-1} \) to exist, \( f \) must be one-to-one.</p>
+                                
+                                <div class="math-example">
+                                    <p>Given \( f(x) = 2x + 3 \), find \( f^{-1}(x) \):</p>
+                                    <ol>
+                                        <li>Let \( y = 2x + 3 \)</li>
+                                        <li>Swap x and y: \( x = 2y + 3 \)</li>
+                                        <li>Solve for y: \( y = \frac{x - 3}{2} \)</li>
+                                    </ol>
+                                    \[ f^{-1}(x) = \frac{x - 3}{2} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Horizontal Line Test:</h4>
+                                        <p>A function has an inverse if any horizontal line intersects its graph at most once.</p>
+                                        <div class="graph-container small">
+                                            <div class="invertible-graph"></div>
+                                            <div class="horizontal-line"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Domain and Range Swap:</h4>
+                                        <p>For \( f \) with domain D and range R, \( f^{-1} \) has domain R and range D.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="concept-box highlight-box">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-exclamation-triangle"></i> Non-Invertible Functions
+                                    </h3>
+                                    <p>Functions that are not one-to-one (like quadratic functions) can be made invertible by restricting their domain.</p>
+                                    
+                                    <div class="math-example">
+                                        <p>For \( f(x) = x^2 \), if we restrict the domain to \( x \geq 0 \):</p>
+                                        \[ f^{-1}(x) = \sqrt{x} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Composite Functions Section -->
+                        <section id="composite" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-layer-group"></i> Composite Functions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A <strong>composite function</strong> combines two functions where the output of one becomes the input of the other, written as \( (f \circ g)(x) = f(g(x)) \).</p>
+                                
+                                <div class="math-example">
+                                    <p>Given \( f(x) = x + 2 \) and \( g(x) = 3x \), find \( f \circ g \) and \( g \circ f \):</p>
+                                    \[ (f \circ g)(x) = f(g(x)) = f(3x) = 3x + 2 \]
+                                    \[ (g \circ f)(x) = g(f(x)) = g(x + 2) = 3(x + 2) = 3x + 6 \]
+                                    <p class="note">Note: \( f \circ g \neq g \circ f \) in most cases</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Domain Consideration:</h4>
+                                        <p>The domain of \( f \circ g \) is all x in the domain of g where g(x) is in the domain of f.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="composite-examples">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-puzzle-piece"></i> Composite Function Examples
+                                    </h3>
+                                    
+                                    <div class="example-card">
+                                        <p>Given \( f(x) = \sqrt{x} \) and \( g(x) = x - 4 \), find \( f \circ g \) and its domain.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>First find the composition:</p>
+                                            \[ (f \circ g)(x) = f(g(x)) = \sqrt{x - 4} \]
+                                            <p>Now determine the domain:</p>
+                                            <p>For \( \sqrt{x - 4} \), we need \( x - 4 \geq 0 \), so \( x \geq 4 \)</p>
+                                            <p>Domain: \( [4, \infty) \)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="example-card">
+                                        <p>If \( h(x) = (x^2 + 1)^3 \), express h as a composition of two simpler functions.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Let \( f(x) = x^3 \) and \( g(x) = x^2 + 1 \)</p>
+                                            <p>Then \( h(x) = (f \circ g)(x) = f(g(x)) = f(x^2 + 1) = (x^2 + 1)^3 \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Determine whether \( \{(1, 5), (2, 5), (3, 6)\} \) represents a function. If yes, find its range.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This is a function (each x has exactly one y). Range: \( \{5, 6\} \)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the largest possible domain for \( f(x) = \frac{1}{\sqrt{x - 1}} \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>We need \( x - 1 > 0 \) (denominator can't be zero and square root must be positive):</p>
+                                        \[ x > 1 \]
+                                        <p>Domain: \( (1, \infty) \)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Given \( f(x) = 2x - 1 \) and \( g(x) = x^2 + 1 \), find \( (f \circ g)(2) \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First find \( g(2) \):</p>
+                                        \[ g(2) = 2^2 + 1 = 5 \]
+                                        <p>Then find \( f(g(2)) = f(5) \):</p>
+                                        \[ f(5) = 2(5) - 1 = 9 \]
+                                        <p>So \( (f \circ g)(2) = 9 \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/functions" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your understanding of relations and functions through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs1/js/math-challenge-functions.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs1/js/functions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
