@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Rational Functions | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Rational Functions for SHS1 Elective Mathematics. Learn definitions, domain, range, operations and partial fractions.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Rational Functions | Elective Mathematics">
+        <meta property="og:description" content="Master Rational Functions with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/rational-functions-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/rational-functions">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs1/css/sets.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs1/css/math-challenge-sets.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+        
+        <!-- New CSS for Rational Functions -->
+        <style>
+            /* Graph container styles */
+            .graph-container {
+                width: 100%;
+                max-width: 600px;
+                margin: 20px auto;
+                border: 1px solid #ddd;
+                border-radius: 8px;
+                padding: 15px;
+                background-color: #f9f9f9;
+            }
+            
+            .graph-placeholder {
+                width: 100%;
+                height: 300px;
+                background-color: #fff;
+                border: 1px solid #eee;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #666;
+                font-style: italic;
+            }
+            
+            /* Asymptote styling */
+            .asymptote {
+                color: #e74c3c;
+                font-weight: bold;
+            }
+            
+            /* Partial fractions table */
+            .partial-fractions-table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: 15px 0;
+            }
+            
+            .partial-fractions-table th, 
+            .partial-fractions-table td {
+                border: 1px solid #ddd;
+                padding: 8px;
+                text-align: left;
+            }
+            
+            .partial-fractions-table th {
+                background-color: #f2f2f2;
+            }
+            
+            /* Case examples */
+            .case-example {
+                background-color: #f8f9fa;
+                border-left: 4px solid #3498db;
+                padding: 12px;
+                margin: 15px 0;
+                border-radius: 0 4px 4px 0;
+            }
+            
+            /* Responsive adjustments */
+            @media (max-width: 768px) {
+                .graph-container {
+                    padding: 10px;
+                }
+                
+                .partial-fractions-table {
+                    font-size: 14px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Rational Functions</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Rational Functions</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Definition</a></li>
+                                <li><a href="#domain"><i class="fas fa-chevron-right"></i> Domain</a></li>
+                                <li><a href="#range"><i class="fas fa-chevron-right"></i> Range</a></li>
+                                <li><a href="#zeroes"><i class="fas fa-chevron-right"></i> Zeroes</a></li>
+                                <li><a href="#operations"><i class="fas fa-chevron-right"></i> Operations</a></li>
+                                <li><a href="#partial-fractions"><i class="fas fa-chevron-right"></i> Partial Fractions</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Rational Functions</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Definition of Rational Functions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A <strong>rational function</strong> is any function that can be expressed as the ratio of two polynomial functions:</p>
+                                
+                                <div class="math-example">
+                                    \[ f(x) = \frac{P(x)}{Q(x)} \]
+                                    <p>where \( P(x) \) and \( Q(x) \) are polynomials and \( Q(x) \neq 0 \).</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Examples:</h4>
+                                        <ul>
+                                            <li>\( f(x) = \frac{2x + 1}{x - 3} \)</li>
+                                            <li>\( g(x) = \frac{x^2 - 4}{x^2 + 3x + 2} \)</li>
+                                            <li>\( h(x) = \frac{5}{x^2 + 1} \)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Non-Examples:</h4>
+                                        <ul>
+                                            <li>\( f(x) = \sqrt{x} \) (not a polynomial in denominator)</li>
+                                            <li>\( g(x) = \frac{\sin x}{x} \) (numerator not polynomial)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="graph-container">
+                                    <h4>Graph of a Rational Function</h4>
+                                    <div class="graph-placeholder">
+                                        [ \( f(x) = \frac{1}{x} \) ]
+                                    </div>
+                                    <p class="graph-caption">Rational functions often have asymptotes and discontinuities</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Domain Section -->
+                        <section id="domain" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-search"></i> Domain of Rational Functions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>The <strong>domain</strong> of a rational function consists of all real numbers except those that make the denominator zero.</p>
+                                
+                                <div class="math-example">
+                                    <p>To find the domain:</p>
+                                    <ol>
+                                        <li>Set the denominator equal to zero: \( Q(x) = 0 \)</li>
+                                        <li>Solve for \( x \)</li>
+                                        <li>Exclude these values from the real numbers</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p>Example: Find domain of \( f(x) = \frac{x + 2}{x^2 - 9} \)</p>
+                                    <p>Solution:</p>
+                                    <p>Set denominator equal to zero:</p>
+                                    \[ x^2 - 9 = 0 \]
+                                    \[ x^2 = 9 \]
+                                    \[ x = \pm 3 \]
+                                    <p>Domain: All real numbers except \( x = 3 \) and \( x = -3 \)</p>
+                                    \[ \text{Domain} = \{x \in \mathbb{R} \mid x \neq -3, x \neq 3\} \]
+                                    <p>Interval notation: \( (-\infty, -3) \cup (-3, 3) \cup (3, \infty) \)</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Vertical Asymptotes:</h4>
+                                        <p>The values excluded from the domain often correspond to vertical asymptotes in the graph of the function.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Range Section -->
+                        <section id="range" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-arrows-alt-v"></i> Range of Rational Functions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>The <strong>range</strong> of a rational function is the set of all possible output values (y-values). Determining the range is often more complex than finding the domain.</p>
+                                
+                                <div class="math-example">
+                                    <p>Method to find range:</p>
+                                    <ol>
+                                        <li>Express the function as \( y = \frac{P(x)}{Q(x)} \)</li>
+                                        <li>Rearrange to form a quadratic in \( x \): \( yQ(x) = P(x) \)</li>
+                                        <li>For real \( x \), the discriminant must be ≥ 0</li>
+                                        <li>Solve the inequality for \( y \)</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p>Example: Find range of \( f(x) = \frac{1}{x - 2} \)</p>
+                                    <p>Solution:</p>
+                                    <p>Let \( y = \frac{1}{x - 2} \)</p>
+                                    <p>Solve for \( x \):</p>
+                                    \[ y(x - 2) = 1 \]
+                                    \[ x - 2 = \frac{1}{y} \]
+                                    \[ x = \frac{1}{y} + 2 \]
+                                    <p>Since \( x \) must be real and \( x \neq 2 \), \( y \) can be any real number except 0.</p>
+                                    \[ \text{Range} = \{y \in \mathbb{R} \mid y \neq 0\} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Horizontal Asymptotes:</h4>
+                                        <p>The behavior of the function as \( x \) approaches ±∞ often determines horizontal asymptotes, which may affect the range.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Zeroes Section -->
+                        <section id="zeroes" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-times-circle"></i> Zeroes of Rational Functions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>The <strong>zeroes</strong> (or roots) of a rational function are the x-values where the function equals zero. These occur where the numerator is zero (and the denominator is not zero).</p>
+                                
+                                <div class="math-example">
+                                    <p>To find zeroes:</p>
+                                    <ol>
+                                        <li>Set the numerator equal to zero: \( P(x) = 0 \)</li>
+                                        <li>Solve for \( x \)</li>
+                                        <li>Verify these values don't make the denominator zero</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p>Example: Find zeroes of \( f(x) = \frac{x^2 - 4}{x^2 - x - 6} \)</p>
+                                    <p>Solution:</p>
+                                    <p>Set numerator equal to zero:</p>
+                                    \[ x^2 - 4 = 0 \]
+                                    \[ x^2 = 4 \]
+                                    \[ x = \pm 2 \]
+                                    <p>Check denominator at these points:</p>
+                                    <p>For \( x = 2 \): \( (2)^2 - (2) - 6 = -4 \neq 0 \)</p>
+                                    <p>For \( x = -2 \): \( (-2)^2 - (-2) - 6 = 0 \) → Denominator zero!</p>
+                                    <p>Therefore, the only zero is at \( x = 2 \)</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Holes vs. Zeroes:</h4>
+                                        <p>If a value makes both numerator and denominator zero, there's a hole (removable discontinuity) rather than a zero.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Operations Section -->
+                        <section id="operations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Operations on Rational Functions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-circle"></i> Addition and Subtraction
+                                </h3>
+                                <p>To add/subtract rational functions:</p>
+                                <ol>
+                                    <li>Find a common denominator (usually the product of denominators)</li>
+                                    <li>Rewrite each fraction with the common denominator</li>
+                                    <li>Combine numerators</li>
+                                    <li>Simplify the result</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: Add \( \frac{2}{x + 1} + \frac{3}{x - 2} \)</p>
+                                    <p>Solution:</p>
+                                    <p>Common denominator: \( (x + 1)(x - 2) \)</p>
+                                    \[ \frac{2(x - 2) + 3(x + 1)}{(x + 1)(x - 2)} = \frac{2x - 4 + 3x + 3}{(x + 1)(x - 2)} \]
+                                    \[ = \frac{5x - 1}{(x + 1)(x - 2)} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-times"></i> Multiplication
+                                </h3>
+                                <p>To multiply rational functions:</p>
+                                <ol>
+                                    <li>Multiply numerators together</li>
+                                    <li>Multiply denominators together</li>
+                                    <li>Simplify by factoring and canceling common factors</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: Multiply \( \frac{x - 2}{x + 3} \times \frac{x^2 - 9}{x^2 - 4} \)</p>
+                                    <p>Solution:</p>
+                                    \[ \frac{(x - 2)(x^2 - 9)}{(x + 3)(x^2 - 4)} \]
+                                    <p>Factor numerator and denominator:</p>
+                                    \[ = \frac{(x - 2)(x - 3)(x + 3)}{(x + 3)(x - 2)(x + 2)} \]
+                                    <p>Cancel common factors:</p>
+                                    \[ = \frac{x - 3}{x + 2} \quad \text{for} \quad x \neq -3, x \neq 2 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-divide"></i> Division
+                                </h3>
+                                <p>To divide rational functions:</p>
+                                <ol>
+                                    <li>Multiply by the reciprocal of the divisor</li>
+                                    <li>Follow multiplication steps</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: Divide \( \frac{x^2 - 4}{x^2 + 3x + 2} \div \frac{x - 2}{x + 1} \)</p>
+                                    <p>Solution:</p>
+                                    \[ \frac{x^2 - 4}{x^2 + 3x + 2} \times \frac{x + 1}{x - 2} \]
+                                    <p>Factor all polynomials:</p>
+                                    \[ = \frac{(x - 2)(x + 2)}{(x + 1)(x + 2)} \times \frac{x + 1}{x - 2} \]
+                                    <p>Cancel common factors:</p>
+                                    \[ = 1 \quad \text{for} \quad x \neq -2, x \neq -1, x \neq 2 \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Partial Fractions Section -->
+                        <section id="partial-fractions" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-puzzle-piece"></i> Partial Fractions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p><strong>Partial fraction decomposition</strong> is the process of breaking down a complex rational expression into simpler fractions that can be more easily integrated or manipulated.</p>
+                                
+                                <div class="math-example">
+                                    <p>General Approach:</p>
+                                    <ol>
+                                        <li>Factor the denominator completely</li>
+                                        <li>Determine the form of the partial fractions based on the factors</li>
+                                        <li>Multiply through by the denominator to clear fractions</li>
+                                        <li>Solve for the unknown coefficients</li>
+                                    </ol>
+                                </div>
+                                
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Case 1: Distinct Linear Factors
+                                </h3>
+                                <div class="case-example">
+                                    <p>For each distinct linear factor \( (ax + b) \) in the denominator, there's a partial fraction \( \frac{A}{ax + b} \).</p>
+                                    <p>Example: Decompose \( \frac{3x + 5}{(x + 1)(x - 2)} \)</p>
+                                    <p>Solution:</p>
+                                    \[ \frac{3x + 5}{(x + 1)(x - 2)} = \frac{A}{x + 1} + \frac{B}{x - 2} \]
+                                    <p>Multiply through by \( (x + 1)(x - 2) \):</p>
+                                    \[ 3x + 5 = A(x - 2) + B(x + 1) \]
+                                    <p>Solve for A and B by substitution or equating coefficients:</p>
+                                    <p>Let \( x = -1 \): \( 3(-1) + 5 = A(-3) \) ⇒ \( A = -\frac{2}{3} \)</p>
+                                    <p>Let \( x = 2 \): \( 3(2) + 5 = B(3) \) ⇒ \( B = \frac{11}{3} \)</p>
+                                    <p>Thus:</p>
+                                    \[ \frac{3x + 5}{(x + 1)(x - 2)} = \frac{-2/3}{x + 1} + \frac{11/3}{x - 2} \]
+                                </div>
+                                
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Case 2: Repeated Linear Factors
+                                </h3>
+                                <div class="case-example">
+                                    <p>For a repeated linear factor \( (ax + b)^n \), include terms with all powers up to n:</p>
+                                    \[ \frac{A_1}{ax + b} + \frac{A_2}{(ax + b)^2} + \cdots + \frac{A_n}{(ax + b)^n} \]
+                                    <p>Example: Decompose \( \frac{x^2 + 1}{(x - 1)^3} \)</p>
+                                    <p>Solution:</p>
+                                    \[ \frac{x^2 + 1}{(x - 1)^3} = \frac{A}{x - 1} + \frac{B}{(x - 1)^2} + \frac{C}{(x - 1)^3} \]
+                                    <p>Multiply through and solve similarly to Case 1.</p>
+                                </div>
+                                
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Case 3: Irreducible Quadratic Factors
+                                </h3>
+                                <div class="case-example">
+                                    <p>For irreducible quadratics \( (ax^2 + bx + c) \), use a linear numerator:</p>
+                                    \[ \frac{Ax + B}{ax^2 + bx + c} \]
+                                    <p>Example: Decompose \( \frac{2x^2 - x + 4}{(x^2 + 1)(x - 1)} \)</p>
+                                    <p>Solution:</p>
+                                    \[ \frac{2x^2 - x + 4}{(x^2 + 1)(x - 1)} = \frac{Ax + B}{x^2 + 1} + \frac{C}{x - 1} \]
+                                    <p>Multiply through and solve for A, B, and C.</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Applications:</h4>
+                                        <p>Partial fractions are essential for:</p>
+                                        <ul>
+                                            <li>Integration of rational functions</li>
+                                            <li>Solving differential equations</li>
+                                            <li>Laplace transforms</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the domain of \( f(x) = \frac{x^2 + 3x}{x^2 - 5x + 6} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factor denominator: \( x^2 - 5x + 6 = (x - 2)(x - 3) \)</p>
+                                        <p>Denominator zero when \( x = 2 \) or \( x = 3 \)</p>
+                                        <p>Domain: All real numbers except \( x = 2 \) and \( x = 3 \)</p>
+                                        \[ (-\infty, 2) \cup (2, 3) \cup (3, \infty) \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the zeroes of \( g(x) = \frac{x^3 - 2x^2 - 5x + 6}{x^2 - 4} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factor numerator: \( x^3 - 2x^2 - 5x + 6 = (x - 1)(x + 2)(x - 3) \)</p>
+                                        <p>Factor denominator: \( x^2 - 4 = (x - 2)(x + 2) \)</p>
+                                        <p>Numerator zero at \( x = 1, -2, 3 \)</p>
+                                        <p>Denominator zero at \( x = 2, -2 \)</p>
+                                        <p>Thus, zeroes at \( x = 1 \) and \( x = 3 \) (x = -2 makes denominator zero)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Express \( \frac{5x - 1}{(x + 2)(x - 3)} \) in partial fractions</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( \frac{5x - 1}{(x + 2)(x - 3)} = \frac{A}{x + 2} + \frac{B}{x - 3} \)</p>
+                                        <p>Multiply through:</p>
+                                        \[ 5x - 1 = A(x - 3) + B(x + 2) \]
+                                        <p>Let \( x = -2 \): \( -10 - 1 = A(-5) \) ⇒ \( A = \frac{11}{5} \)</p>
+                                        <p>Let \( x = 3 \): \( 15 - 1 = B(5) \) ⇒ \( B = \frac{14}{5} \)</p>
+                                        <p>Thus:</p>
+                                        \[ \frac{5x - 1}{(x + 2)(x - 3)} = \frac{11/5}{x + 2} + \frac{14/5}{x - 3} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/rational-functions" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs1/js/math-challenge-sets.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs1/js/sets.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Additional scripts for rational functions
+            document.addEventListener('DOMContentLoaded', function() {
+                // Solution toggles
+                const toggles = document.querySelectorAll('.solution-toggle');
+                toggles.forEach(toggle => {
+                    toggle.addEventListener('click', function() {
+                        const solution = this.nextElementSibling;
+                        solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
+                        this.textContent = solution.style.display === 'block' ? 'Hide Solution' : 'Show Solution';
+                    });
+                });
+            });
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

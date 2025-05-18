@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Linear Programming | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Linear Programming for SHS1 Elective Mathematics. Learn graphical solutions, inequalities, and optimization techniques.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Linear Programming | Elective Mathematics">
+        <meta property="og:description" content="Master Linear Programming with graphical methods and optimization techniques for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/linear-programming-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/linear-programming">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs1/css/linear-programming.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs1/css/math-challenge-linear-programming.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Linear Programming</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Linear Programming</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#one-variable" class="active"><i class="fas fa-chevron-right"></i> One Variable Inequalities</a></li>
+                                <li><a href="#two-variables"><i class="fas fa-chevron-right"></i> Two Variable Inequalities</a></li>
+                                <li><a href="#system-inequalities"><i class="fas fa-chevron-right"></i> Systems of Inequalities</a></li>
+                                <li><a href="#linear-programming"><i class="fas fa-chevron-right"></i> Linear Programming</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Real-World Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Linear Programming</span>
+                        </nav>
+
+                        <!-- One Variable Inequalities Section -->
+                        <section id="one-variable" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-bar"></i> Graphical Solution to Linear Inequalities (One Variable)
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Linear inequalities in one variable can be represented graphically on a number line. The solution shows all values that satisfy the inequality.</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Basic Rules:</h4>
+                                        <ul>
+                                            <li><strong>&lt; (less than)</strong>: Open circle, arrow to the left</li>
+                                            <li><strong>&gt; (greater than)</strong>: Open circle, arrow to the right</li>
+                                            <li><strong>≤ (less than or equal to)</strong>: Closed circle, arrow to the left</li>
+                                            <li><strong>≥ (greater than or equal to)</strong>: Closed circle, arrow to the right</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="graph-container">
+                                    <div class="graph-title">Graphical Representation of x ≥ 3</div>
+                                    <div class="graph-placeholder">
+                                        <div class="number-line">
+                                            <!-- This would be replaced with actual SVG or canvas in implementation -->
+                                            <div style="position: absolute; left: 50%; top: 50%; width: 80%; height: 2px; background: #333; transform: translate(-50%, -50%);"></div>
+                                            <div style="position: absolute; left: 70%; top: 45%; width: 10px; height: 10px; background: #333; border-radius: 50%; transform: translate(-50%, -50%);"></div>
+                                            <div style="position: absolute; left: 70%; top: 60%;">3</div>
+                                            <div style="position: absolute; left: 75%; top: 45%; width: 50%; height: 2px; background: #333; transform: translate(0, -50%);"></div>
+                                            <div style="position: absolute; left: 75%; top: 40%; transform: translate(-50%, 0);">→</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Example 1:</h3>
+                                    <p>Solve and graph: \( 2x - 5 < 7 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="solution-steps">
+                                            <div class="solution-step">
+                                                \( 2x - 5 < 7 \)
+                                            </div>
+                                            <div class="solution-step">
+                                                Add 5 to both sides: \( 2x < 12 \)
+                                            </div>
+                                            <div class="solution-step">
+                                                Divide by 2: \( x < 6 \)
+                                            </div>
+                                        </div>
+                                        <p>The graph shows an open circle at 6 with an arrow to the left.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Two Variable Inequalities Section -->
+                        <section id="two-variables" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-area"></i> Graphical Solution to Linear Inequalities (Two Variables)
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Inequalities in two variables (like \( x \) and \( y \)) can be represented on the Cartesian plane. The solution is a shaded region called the <strong>half-plane</strong>.</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Graphing Steps:</h4>
+                                        <ol>
+                                            <li>Graph the corresponding equation (replace inequality with =)</li>
+                                            <li>Use dashed line for &lt; or &gt; and solid line for ≤ or ≥</li>
+                                            <li>Test a point (usually (0,0)) to determine which side to shade</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="graph-container">
+                                    <div class="graph-title">Graph of \( y ≤ 2x + 1 \)</div>
+                                    <div class="graph-placeholder">
+                                        <div class="graph-axes">
+                                            <!-- This would be replaced with actual graph in implementation -->
+                                            <div class="feasible-region" style="left: 50%; bottom: 50%; width: 50%; height: 50%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Example 2:</h3>
+                                    <p>Graph the inequality \( 3x + 2y ≥ 6 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="solution-steps">
+                                            <div class="solution-step">
+                                                First graph the line \( 3x + 2y = 6 \)
+                                            </div>
+                                            <div class="solution-step">
+                                                Find x-intercept (y=0): \( x = 2 \) → (2, 0)
+                                            </div>
+                                            <div class="solution-step">
+                                                Find y-intercept (x=0): \( y = 3 \) → (0, 3)
+                                            </div>
+                                            <div class="solution-step">
+                                                Draw solid line through these points (since ≥)
+                                            </div>
+                                            <div class="solution-step">
+                                                Test (0,0): \( 0 ≥ 6 \) is false → shade opposite side
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Systems of Inequalities Section -->
+                        <section id="system-inequalities" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-project-diagram"></i> Graphical Solution to Systems of Linear Inequalities
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A system of inequalities has solutions that satisfy all inequalities simultaneously. Graphically, this is the intersection of all individual solution regions.</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Concepts:</h4>
+                                        <ul>
+                                            <li><strong>Feasible Region:</strong> The overlapping area satisfying all inequalities</li>
+                                            <li><strong>Bounded vs Unbounded:</strong> Regions that are enclosed or extend infinitely</li>
+                                            <li><strong>Corner Points:</strong> Vertices of the feasible region (important for optimization)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="graph-container">
+                                    <div class="graph-title">System of Inequalities</div>
+                                    <div class="graph-placeholder">
+                                        <div class="graph-axes">
+                                            <!-- This would show multiple inequalities and their intersection -->
+                                            <div class="feasible-region" style="left: 60%; bottom: 50%; width: 30%; height: 30%;"></div>
+                                            <div class="corner-point" style="left: 60%; bottom: 50%;"></div>
+                                            <div class="corner-point" style="left: 60%; bottom: 80%;"></div>
+                                            <div class="corner-point" style="left: 90%; bottom: 50%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Example 3:</h3>
+                                    <div class="problem-statement">
+                                        <p>Graph the system:</p>
+                                        <ul>
+                                            <li>\( x + y ≤ 6 \)</li>
+                                            <li>\( 2x - y ≥ 0 \)</li>
+                                            <li>\( x ≥ 0 \)</li>
+                                            <li>\( y ≥ 0 \)</li>
+                                        </ul>
+                                    </div>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="solution-steps">
+                                            <div class="solution-step">
+                                                Graph each inequality separately
+                                            </div>
+                                            <div class="solution-step">
+                                                Find intersection points of boundary lines
+                                            </div>
+                                            <div class="solution-step">
+                                                The feasible region is a polygon with vertices at:
+                                                <ul>
+                                                    <li>(0,0)</li>
+                                                    <li>(0,6)</li>
+                                                    <li>(2,4)</li>
+                                                    <li>(3,3)</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Linear Programming Section -->
+                        <section id="linear-programming" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-optimize"></i> Linear Programming
+                            </h2>
+                            
+                            <div class="concept-box highlight-box">
+                                <p>Linear programming involves optimizing (maximizing or minimizing) a linear objective function subject to linear constraints (inequalities).</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Components:</h4>
+                                        <ul>
+                                            <li><strong>Objective Function:</strong> What to maximize/minimize (e.g., profit, cost)</li>
+                                            <li><strong>Constraints:</strong> Limitations on resources (inequalities)</li>
+                                            <li><strong>Feasible Region:</strong> All possible solutions satisfying constraints</li>
+                                            <li><strong>Optimal Solution:</strong> Found at a corner point of the feasible region</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Solving Method
+                                </h3>
+                                <ol>
+                                    <li>Graph all constraints to find the feasible region</li>
+                                    <li>Identify all corner points (vertices) of the feasible region</li>
+                                    <li>Evaluate the objective function at each corner point</li>
+                                    <li>Select the point that gives the optimal value</li>
+                                </ol>
+                                
+                                <div class="graph-container">
+                                    <div class="graph-title">Linear Programming Problem</div>
+                                    <div class="graph-placeholder">
+                                        <div class="graph-axes">
+                                            <div class="feasible-region" style="left: 50%; bottom: 50%; width: 30%; height: 30%;"></div>
+                                            <div class="objective-line" style="left: 50%; bottom: 50%; width: 40%; transform: rotate(-30deg);"></div>
+                                            <div class="corner-point" style="left: 50%; bottom: 50%;"></div>
+                                            <div class="corner-point" style="left: 50%; bottom: 80%;"></div>
+                                            <div class="corner-point" style="left: 80%; bottom: 50%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Example 4:</h3>
+                                    <div class="problem-statement">
+                                        <p>A farmer has 8 acres of land and can plant either corn (₵200 profit per acre) or beans (₵300 profit per acre). Constraints:</p>
+                                        <ul>
+                                            <li>Maximum of 6 acres for corn</li>
+                                            <li>Maximum of 5 acres for beans</li>
+                                            <li>Total planting cannot exceed 8 acres</li>
+                                        </ul>
+                                        <p>How many acres of each should be planted to maximize profit?</p>
+                                    </div>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="solution-steps">
+                                            <div class="solution-step">
+                                                Let \( x \) = acres of corn, \( y \) = acres of beans
+                                            </div>
+                                            <div class="solution-step">
+                                                Objective: Maximize \( P = 200x + 300y \)
+                                            </div>
+                                            <div class="solution-step">
+                                                Constraints:
+                                                <ul>
+                                                    <li>\( x ≤ 6 \)</li>
+                                                    <li>\( y ≤ 5 \)</li>
+                                                    <li>\( x + y ≤ 8 \)</li>
+                                                    <li>\( x ≥ 0 \), \( y ≥ 0 \)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="solution-step">
+                                                Corner points: (0,0), (0,5), (3,5), (6,2), (6,0)
+                                            </div>
+                                            <div class="solution-step">
+                                                Evaluate P at each point:
+                                                <table class="optimization-table">
+                                                    <tr>
+                                                        <th>Point (x,y)</th>
+                                                        <th>P = 200x + 300y</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>(0,0)</td>
+                                                        <td>₵0</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>(0,5)</td>
+                                                        <td>₵1,500</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>(3,5)</td>
+                                                        <td>₵2,100</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>(6,2)</td>
+                                                        <td>₵1,800</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>(6,0)</td>
+                                                        <td>₵1,200</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                            <div class="solution-step">
+                                                Maximum profit of ₵2,100 at (3,5) → 3 acres corn, 5 acres beans
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-industry"></i> Real-World Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Linear programming has numerous applications in business, economics, engineering, and military operations.</p>
+                                
+                                <div class="application-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-shopping-cart"></i>
+                                            <h3>Business</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ul>
+                                                <li>Product mix optimization</li>
+                                                <li>Inventory management</li>
+                                                <li>Transportation logistics</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-chart-pie"></i>
+                                            <h3>Economics</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ul>
+                                                <li>Resource allocation</li>
+                                                <li>Cost minimization</li>
+                                                <li>Revenue maximization</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-cogs"></i>
+                                            <h3>Engineering</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ul>
+                                                <li>Network design</li>
+                                                <li>Energy optimization</li>
+                                                <li>Production scheduling</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Example 5: Manufacturing Problem</h3>
+                                    <div class="problem-statement">
+                                        <p>A company produces two products (A and B) with the following constraints:</p>
+                                        <ul>
+                                            <li>Machine time: 2A + 3B ≤ 120 hours</li>
+                                            <li>Labor: 4A + 2B ≤ 160 hours</li>
+                                            <li>Profit: ₵50 per A, ₵70 per B</li>
+                                        </ul>
+                                        <p>Find the optimal production mix to maximize profit.</p>
+                                    </div>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="solution-steps">
+                                            <div class="solution-step">
+                                                Objective: Maximize \( P = 50A + 70B \)
+                                            </div>
+                                            <div class="solution-step">
+                                                Graph constraints to find feasible region
+                                            </div>
+                                            <div class="solution-step">
+                                                Corner points: (0,0), (0,40), (30,20), (40,0)
+                                            </div>
+                                            <div class="solution-step">
+                                                Evaluate P at each point:
+                                                <ul>
+                                                    <li>(0,0): ₵0</li>
+                                                    <li>(0,40): ₵2,800</li>
+                                                    <li>(30,20): ₵2,900</li>
+                                                    <li>(40,0): ₵2,000</li>
+                                                </ul>
+                                            </div>
+                                            <div class="solution-step">
+                                                Optimal solution: Produce 30 units of A and 20 units of B for ₵2,900 profit
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Graph the inequality \( y > -x + 4 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Dashed line through (0,4) and (4,0), shade above the line</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the maximum value of \( P = 3x + 5y \) subject to:
+                                        \( x + y ≤ 6 \), \( 2x + y ≤ 8 \), \( x ≥ 0 \), \( y ≥ 0 \)
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Corner points: (0,0), (0,6), (2,4), (4,0). Maximum P=22 at (2,4)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A baker makes cakes (₵20 profit) and pies (₵15 profit). Oven time: 2h per cake, 1h per pie, maximum 12h. Find optimal product mix.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let x=cakes, y=pies. Maximize P=20x+15y with 2x+y≤12. Solution: (6,0) → 6 cakes, 0 pies for ₵120 profit</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/linear-programming" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your linear programming skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                        <div class="game-screen">
+                                            <h3>Level 1: Graphing Inequalities</h3>
+                                            <p>Which graph represents \( y ≥ 2x - 1 \)?</p>
+                                            <!-- Game content would be dynamically generated -->
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs1/js/math-challenge-linear-programming.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs1/js/linear-programming.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

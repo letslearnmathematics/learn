@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Parabola | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Parabola for SHS1 Elective Mathematics. Learn equations, sketching, and tangent/normal concepts.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Parabola | Elective Mathematics">
+        <meta property="og:description" content="Master Parabola concepts with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/parabola-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/parabola">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs1/css/parabola.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+        <link rel="stylesheet" href="../shs1/css/math-challenge-parabola.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Parabola</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Parabola</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#equations"><i class="fas fa-chevron-right"></i> Equations</a></li>
+                                <li><a href="#sketching"><i class="fas fa-chevron-right"></i> Sketching</a></li>
+                                <li><a href="#tangent-normal"><i class="fas fa-chevron-right"></i> Tangent & Normal</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Parabola</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Parabola
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A <strong>parabola</strong> is a U-shaped curve that is the graph of a quadratic function. It is a conic section formed by the intersection of a cone with a plane parallel to its side.</p>
+                                
+                                <div class="math-example">
+                                    <p>Standard form of a parabola:</p>
+                                    \[ y = ax^2 + bx + c \]
+                                    <p>or</p>
+                                    \[ y = a(x - h)^2 + k \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Features:</h4>
+                                        <ul>
+                                            <li><strong>Vertex:</strong> The turning point (minimum/maximum)</li>
+                                            <li><strong>Axis of Symmetry:</strong> Vertical line through vertex</li>
+                                            <li><strong>Focus:</strong> Fixed point inside the parabola</li>
+                                            <li><strong>Directrix:</strong> Fixed line outside the parabola</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Real-World Examples:</h4>
+                                        <ul>
+                                            <li>Path of projectiles</li>
+                                            <li>Satellite dishes</li>
+                                            <li>Car headlights</li>
+                                            <li>Suspension bridges</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Basic Properties
+                                </h3>
+                                <div class="properties-grid">
+                                    <div class="property-card">
+                                        <h4>Concavity</h4>
+                                        <p>Determined by coefficient <em>a</em>:</p>
+                                        <ul>
+                                            <li>If \( a > 0 \): Opens upwards</li>
+                                            <li>If \( a < 0 \): Opens downwards</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="property-card">
+                                        <h4>Width</h4>
+                                        <p>Determined by |a|:</p>
+                                        <ul>
+                                            <li>Large |a|: Narrow parabola</li>
+                                            <li>Small |a|: Wide parabola</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="property-card">
+                                        <h4>Vertex Form</h4>
+                                        <p>Reveals vertex directly:</p>
+                                        \[ y = a(x - h)^2 + k \]
+                                        <p>Vertex at \( (h, k) \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Equations Section -->
+                        <section id="equations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-equals"></i> Equations of a Parabola
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-align-left"></i> Standard Forms
+                                </h3>
+                                
+                                <div class="standard-forms">
+                                    <div class="form-card">
+                                        <h4>1. Vertical Parabola</h4>
+                                        \[ y = ax^2 + bx + c \]
+                                        <p>Vertex at \( x = -\frac{b}{2a} \)</p>
+                                    </div>
+                                    
+                                    <div class="form-card">
+                                        <h4>2. Vertex Form</h4>
+                                        \[ y = a(x - h)^2 + k \]
+                                        <p>Vertex at \( (h, k) \)</p>
+                                    </div>
+                                    
+                                    <div class="form-card">
+                                        <h4>3. Horizontal Parabola</h4>
+                                        \[ x = ay^2 + by + c \]
+                                        <p>Opens left or right</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Converting Between Forms
+                                </h3>
+                                
+                                <div class="conversion-steps">
+                                    <h4>General to Vertex Form (Completing the Square)</h4>
+                                    <ol>
+                                        <li>Start with \( y = ax^2 + bx + c \)</li>
+                                        <li>Factor out <em>a</em>: \( y = a(x^2 + \frac{b}{a}x) + c \)</li>
+                                        <li>Complete the square: \( y = a\left[(x^2 + \frac{b}{a}x + (\frac{b}{2a})^2) - (\frac{b}{2a})^2\right] + c \)</li>
+                                        <li>Simplify: \( y = a(x + \frac{b}{2a})^2 + (c - \frac{b^2}{4a}) \)</li>
+                                    </ol>
+                                    
+                                    <div class="math-example">
+                                        <p>Example: Convert \( y = 2x^2 - 4x + 5 \) to vertex form</p>
+                                        <p>Solution:</p>
+                                        \[ y = 2(x^2 - 2x) + 5 \]
+                                        \[ y = 2[(x^2 - 2x + 1) - 1] + 5 \]
+                                        \[ y = 2(x - 1)^2 - 2 + 5 \]
+                                        \[ y = 2(x - 1)^2 + 3 \]
+                                        <p>Vertex at \( (1, 3) \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-bullseye"></i> Focus and Directrix
+                                </h3>
+                                <p>For a parabola \( y = ax^2 + bx + c \):</p>
+                                
+                                <div class="focus-directrix">
+                                    <div class="focus-card">
+                                        <h4>Focus</h4>
+                                        <p>For vertex form \( y = a(x - h)^2 + k \):</p>
+                                        \[ \text{Focus} = \left(h, k + \frac{1}{4a}\right) \]
+                                    </div>
+                                    
+                                    <div class="directrix-card">
+                                        <h4>Directrix</h4>
+                                        <p>Horizontal line:</p>
+                                        \[ y = k - \frac{1}{4a} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p>Example: Find focus and directrix of \( y = \frac{1}{8}x^2 \)</p>
+                                    <p>Solution:</p>
+                                    <p>Vertex at (0,0), \( a = \frac{1}{8} \)</p>
+                                    \[ \text{Focus} = \left(0, 0 + \frac{1}{4 \times \frac{1}{8}}\right) = (0, 2) \]
+                                    \[ \text{Directrix}: y = 0 - 2 = -2 \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Sketching Section -->
+                        <section id="sketching" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-pencil-ruler"></i> Sketching a Parabola
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-line"></i> Step-by-Step Sketching
+                                </h3>
+                                
+                                <div class="sketching-steps">
+                                    <ol>
+                                        <li><strong>Identify the form</strong> (standard or vertex)</li>
+                                        <li><strong>Find the vertex</strong> (h,k) or calculate \( (-\frac{b}{2a}, f(-\frac{b}{2a})) \)</li>
+                                        <li><strong>Determine direction</strong> (up if a>0, down if a<0)</li>
+                                        <li><strong>Find y-intercept</strong> (set x=0, solve for y)</li>
+                                        <li><strong>Find x-intercepts</strong> (set y=0, solve quadratic)</li>
+                                        <li><strong>Plot points</strong> and draw smooth curve</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="sketching-example">
+                                    <div class="example-card">
+                                        <h4>Example: Sketch \( y = x^2 - 4x + 3 \)</h4>
+                                        <ol>
+                                            <li>Vertex: \( x = -\frac{-4}{2} = 2 \), \( y = (2)^2 -4(2)+3 = -1 \) → (2,-1)</li>
+                                            <li>Opens upward (a=1>0)</li>
+                                            <li>Y-intercept: (0,3)</li>
+                                            <li>X-intercepts: \( x^2-4x+3=0 \) → (x-1)(x-3)=0 → (1,0) and (3,0)</li>
+                                        </ol>
+                                    </div>
+                                    
+                                    <div class="sketch-container">
+                                        <div class="parabola-sketch" id="parabola-sketch-1">
+                                            <!-- This will be populated by JavaScript -->
+                                        </div>
+                                        <div class="sketch-labels">
+                                            <span class="label-vertex">Vertex (2,-1)</span>
+                                            <span class="label-yint">Y-int (0,3)</span>
+                                            <span class="label-xints">X-ints (1,0), (3,0)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-expand"></i> Transformations
+                                </h3>
+                                
+                                <div class="transformation-cards">
+                                    <div class="transform-card">
+                                        <h4>Vertical Shift</h4>
+                                        \[ y = x^2 + k \]
+                                        <p>Shifts up/down by k units</p>
+                                    </div>
+                                    
+                                    <div class="transform-card">
+                                        <h4>Horizontal Shift</h4>
+                                        \[ y = (x - h)^2 \]
+                                        <p>Shifts left/right by h units</p>
+                                    </div>
+                                    
+                                    <div class="transform-card">
+                                        <h4>Vertical Stretch/Compress</h4>
+                                        \[ y = ax^2 \]
+                                        <p>|a|>1: Narrower, 0<|a|<1: Wider</p>
+                                    </div>
+                                    
+                                    <div class="transform-card">
+                                        <h4>Reflection</h4>
+                                        \[ y = -ax^2 \]
+                                        <p>Flips parabola upside down</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p>Describe transformations from \( y = x^2 \) to \( y = -2(x-3)^2 + 4 \):</p>
+                                    <ol>
+                                        <li>Reflected over x-axis (negative sign)</li>
+                                        <li>Vertically stretched by factor of 2</li>
+                                        <li>Shifted right 3 units</li>
+                                        <li>Shifted up 4 units</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Tangent and Normal Section -->
+                        <section id="tangent-normal" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-draw-polygon"></i> Tangent and Normal to a Parabola
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-slash"></i> Tangent Line
+                                </h3>
+                                
+                                <p>A line that touches the parabola at exactly one point (point of tangency).</p>
+                                
+                                <div class="tangent-methods">
+                                    <div class="method-card">
+                                        <h4>1. Using Derivatives</h4>
+                                        <ol>
+                                            <li>Find derivative \( \frac{dy}{dx} \) (gives slope)</li>
+                                            <li>Evaluate at point of tangency for slope m</li>
+                                            <li>Use point-slope form: \( y - y_1 = m(x - x_1) \)</li>
+                                        </ol>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <h4>2. Algebraic Method</h4>
+                                        <p>For parabola \( y = ax^2 + bx + c \) and line \( y = mx + d \):</p>
+                                        <ol>
+                                            <li>Set equations equal: \( ax^2 + bx + c = mx + d \)</li>
+                                            <li>Rearrange: \( ax^2 + (b-m)x + (c-d) = 0 \)</li>
+                                            <li>Set discriminant to zero (one solution): \( (b-m)^2 - 4a(c-d) = 0 \)</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p>Example: Find tangent to \( y = x^2 - 3x + 4 \) at x=2</p>
+                                    <p>Solution:</p>
+                                    <ol>
+                                        <li>Point: \( y = (2)^2 -3(2) + 4 = 2 \) → (2,2)</li>
+                                        <li>Derivative: \( \frac{dy}{dx} = 2x - 3 \)</li>
+                                        <li>Slope at x=2: \( m = 2(2) - 3 = 1 \)</li>
+                                        <li>Equation: \( y - 2 = 1(x - 2) \) → \( y = x \)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-perpendicular"></i> Normal Line
+                                </h3>
+                                
+                                <p>A line perpendicular to the tangent at the point of contact.</p>
+                                
+                                <div class="normal-method">
+                                    <ol>
+                                        <li>Find slope \( m_t \) of tangent (as above)</li>
+                                        <li>Slope of normal \( m_n = -\frac{1}{m_t} \)</li>
+                                        <li>Use point-slope form with \( m_n \)</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p>Continuing previous example:</p>
+                                    <ol>
+                                        <li>Tangent slope \( m_t = 1 \)</li>
+                                        <li>Normal slope \( m_n = -1 \)</li>
+                                        <li>Equation: \( y - 2 = -1(x - 2) \) → \( y = -x + 4 \)</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="sketch-container">
+                                    <div class="parabola-sketch" id="tangent-normal-sketch">
+                                        <!-- Will be populated by JavaScript -->
+                                    </div>
+                                    <div class="sketch-labels">
+                                        <span class="label-tangent">Tangent: y = x</span>
+                                        <span class="label-normal">Normal: y = -x + 4</span>
+                                        <span class="label-point">Point (2,2)</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-lightbulb"></i> Applications of Parabola
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-satellite-dish"></i> Real-World Applications
+                                </h3>
+                                
+                                <div class="application-cards">
+                                    <div class="app-card">
+                                        <h4>1. Projectile Motion</h4>
+                                        <p>The path of a thrown object follows a parabolic trajectory under gravity:</p>
+                                        \[ y = x\tanθ - \frac{gx^2}{2v^2\cos^2θ} \]
+                                        <p>Where θ = launch angle, v = initial velocity</p>
+                                    </div>
+                                    
+                                    <div class="app-card">
+                                        <h4>2. Satellite Dishes</h4>
+                                        <p>Parabolic shape focuses incoming signals to the receiver at the focus.</p>
+                                        <p>Equation: \( y = \frac{1}{4f}x^2 \) where f = focal length</p>
+                                    </div>
+                                    
+                                    <div class="app-card">
+                                        <h4>3. Architecture</h4>
+                                        <p>Parabolic arches distribute weight efficiently in bridges and buildings.</p>
+                                        <p>Example: The Gateway Arch in St. Louis</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Optimization Problems
+                                </h3>
+                                
+                                <div class="word-problem">
+                                    <h4>Example Problem:</h4>
+                                    <p>A farmer has 200m of fencing to enclose a rectangular area along a river (needs no fencing on river side). Find maximum possible area.</p>
+                                    
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <ol>
+                                            <li>Let x = length perpendicular to river, y = parallel</li>
+                                            <li>Fencing: \( 2x + y = 200 \) → \( y = 200 - 2x \)</li>
+                                            <li>Area: \( A = xy = x(200-2x) = 200x - 2x^2 \)</li>
+                                            <li>This is a parabola opening downward</li>
+                                            <li>Vertex at \( x = -\frac{b}{2a} = -\frac{200}{-4} = 50 \)</li>
+                                            <li>Maximum area: \( A = 200(50) - 2(50)^2 = 5000 \) m²</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Convert \( y = 3x^2 - 12x + 5 \) to vertex form and identify the vertex.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ y = 3(x^2 - 4x) + 5 \]
+                                        \[ y = 3[(x^2 - 4x + 4) - 4] + 5 \]
+                                        \[ y = 3(x - 2)^2 - 12 + 5 \]
+                                        \[ y = 3(x - 2)^2 - 7 \]
+                                        <p>Vertex at (2, -7)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the equation of the tangent to \( y = 2x^2 + 3x - 1 \) at x = -1.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Point: \( y = 2(-1)^2 + 3(-1) - 1 = -2 \) → (-1,-2)</p>
+                                        <p>Derivative: \( \frac{dy}{dx} = 4x + 3 \)</p>
+                                        <p>Slope at x=-1: \( m = 4(-1) + 3 = -1 \)</p>
+                                        <p>Equation: \( y + 2 = -1(x + 1) \) → \( y = -x - 3 \)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A ball is thrown upward from ground level with initial velocity 20 m/s. Its height follows \( h(t) = -5t^2 + 20t \). Find maximum height and time to hit ground.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Maximum height at vertex:</p>
+                                        \[ t = -\frac{b}{2a} = -\frac{20}{-10} = 2 \text{ sec} \]
+                                        \[ h(2) = -5(4) + 20(2) = 20 \text{ m} \]
+                                        <p>Time to hit ground (h=0):</p>
+                                        \[ -5t^2 + 20t = 0 \]
+                                        \[ -5t(t - 4) = 0 \]
+                                        <p>t=0 (start) or t=4 sec</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/parabola" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your parabola skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs1/js/math-challenge-parabola.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs1/js/parabola.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Parabola sketching functionality
+            document.addEventListener('DOMContentLoaded', function() {
+                // Initialize any parabola sketches here
+                console.log('Parabola lesson loaded');
+            });
+        </script>
+    </body>
+</html>
