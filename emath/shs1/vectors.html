@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Vectors in a Plane | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Vectors in a Plane for SHS1 Elective Mathematics. Learn vector operations, properties, and applications to geometry.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Vectors in a Plane | Elective Mathematics">
+        <meta property="og:description" content="Master Vectors with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/vectors-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/vectors">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs1/css/sets.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs1/css/math-challenge-sets.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Vectors in a Plane</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-arrow-up"></i>
+                                <span>Vectors in a Plane</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Vector Basics</a></li>
+                                <li><a href="#representation"><i class="fas fa-chevron-right"></i> Vector Representation</a></li>
+                                <li><a href="#operations"><i class="fas fa-chevron-right"></i> Vector Operations</a></li>
+                                <li><a href="#laws"><i class="fas fa-chevron-right"></i> Laws of Addition</a></li>
+                                <li><a href="#properties"><i class="fas fa-chevron-right"></i> Vector Properties</a></li>
+                                <li><a href="#products"><i class="fas fa-chevron-right"></i> Vector Products</a></li>
+                                <li><a href="#geometry"><i class="fas fa-chevron-right"></i> Geometry Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Vectors</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Vector Basics
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A <strong>vector</strong> is a mathematical quantity that has both magnitude (size) and direction. Unlike scalars which have only magnitude, vectors are represented by arrows where:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Magnitude:</h4>
+                                        <p>Length of the arrow represents the vector's magnitude (denoted as \( \|\vec{v}\| \) or \( |\vec{v}| \))</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Direction:</h4>
+                                        <p>Arrow's orientation indicates the direction of the vector</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p>Examples of vector quantities:</p>
+                                    <ul>
+                                        <li>Displacement: 5 km Northeast</li>
+                                        <li>Velocity: 20 m/s at 30° to the horizontal</li>
+                                        <li>Force: 10 N vertically upwards</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-arrows-alt"></i> Notation
+                                </h3>
+                                <p>Vectors can be represented in several ways:</p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-arrow-up"></i>
+                                            <h4>Arrow Notation</h4>
+                                        </div>
+                                        <div class="method-body">
+                                            \[ \vec{AB} \text{ or } \vec{a} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-bold"></i>
+                                            <h4>Boldface</h4>
+                                        </div>
+                                        <div class="method-body">
+                                            \[ \mathbf{a} \text{ or } \mathbf{AB} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-underline"></i>
+                                            <h4>Underline</h4>
+                                        </div>
+                                        <div class="method-body">
+                                            \[ \underline{a} \text{ or } \underline{AB} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Equal Vectors
+                                </h3>
+                                <p>Two vectors are equal if they have:</p>
+                                <ul>
+                                    <li>Same magnitude</li>
+                                    <li>Same direction</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <p>If \( \vec{AB} = \vec{CD} \), then:</p>
+                                    <ul>
+                                        <li>Length AB = Length CD</li>
+                                        <li>AB is parallel to CD</li>
+                                        <li>They point in the same direction</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Representation Section -->
+                        <section id="representation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-vector-square"></i> Vector Representation
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Standard Basis Form
+                                </h3>
+                                <p>In 2D space, any vector can be expressed using the standard basis vectors \( \mathbf{i} \) and \( \mathbf{j} \):</p>
+                                
+                                <div class="math-example">
+                                    \[ \vec{v} = a\mathbf{i} + b\mathbf{j} = \begin{pmatrix} a \\ b \end{pmatrix} \]
+                                    <p>Where:</p>
+                                    <ul>
+                                        <li>\( \mathbf{i} \) is the unit vector in the x-direction</li>
+                                        <li>\( \mathbf{j} \) is the unit vector in the y-direction</li>
+                                        <li>\( a \) and \( b \) are scalar components</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Magnitude:</h4>
+                                        \[ \|\vec{v}\| = \sqrt{a^2 + b^2} \]
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Direction:</h4>
+                                        \[ \theta = \tan^{-1}\left(\frac{b}{a}\right) \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-map-marked-alt"></i> Position Vectors
+                                </h3>
+                                <p>A position vector represents the location of a point relative to an origin:</p>
+                                
+                                <div class="math-example">
+                                    <p>If point \( P \) has coordinates \( (x, y) \), its position vector is:</p>
+                                    \[ \vec{OP} = x\mathbf{i} + y\mathbf{j} \]
+                                    <p>Where \( O \) is the origin \( (0, 0) \).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Unit Vectors
+                                </h3>
+                                <p>A unit vector has magnitude 1 and indicates direction:</p>
+                                
+                                <div class="math-example">
+                                    <p>The unit vector in the direction of \( \vec{v} \) is:</p>
+                                    \[ \hat{v} = \frac{\vec{v}}{\|\vec{v}\|} \]
+                                    
+                                    <p>Standard unit vectors:</p>
+                                    \[ \mathbf{i} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \quad \mathbf{j} = \begin{pmatrix} 0 \\ 1 \end{pmatrix} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Operations Section -->
+                        <section id="operations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Vector Operations
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus"></i> Vector Addition
+                                </h3>
+                                <p>To add two vectors component-wise:</p>
+                                
+                                <div class="math-example">
+                                    <p>If \( \vec{u} = \begin{pmatrix} u_1 \\ u_2 \end{pmatrix} \) and \( \vec{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \):</p>
+                                    \[ \vec{u} + \vec{v} = \begin{pmatrix} u_1 + v_1 \\ u_2 + v_2 \end{pmatrix} \]
+                                    
+                                    <div class="visual-addition">
+                                        <div class="vector-diagram">
+                                            <div class="vector u"></div>
+                                            <div class="vector v"></div>
+                                            <div class="vector resultant"></div>
+                                        </div>
+                                        <p>Graphical addition uses the "tip-to-tail" method</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-minus"></i> Vector Subtraction
+                                </h3>
+                                <p>Subtraction is equivalent to adding the negative vector:</p>
+                                
+                                <div class="math-example">
+                                    \[ \vec{u} - \vec{v} = \vec{u} + (-\vec{v}) = \begin{pmatrix} u_1 - v_1 \\ u_2 - v_2 \end{pmatrix} \]
+                                    
+                                    <div class="visual-subtraction">
+                                        <div class="vector u"></div>
+                                        <div class="vector v"></div>
+                                        <div class="vector difference"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-arrows-alt-v"></i> Scalar Multiplication
+                                </h3>
+                                <p>Multiplying a vector by a scalar changes its magnitude:</p>
+                                
+                                <div class="math-example">
+                                    <p>For scalar \( k \) and vector \( \vec{v} = \begin{pmatrix} v_1 \\ v_2 \end{pmatrix} \):</p>
+                                    \[ k\vec{v} = \begin{pmatrix} kv_1 \\ kv_2 \end{pmatrix} \]
+                                    
+                                    <div class="key-points">
+                                        <div class="point">
+                                            <h4>If \( k > 0 \):</h4>
+                                            <p>Same direction, scaled magnitude</p>
+                                        </div>
+                                        <div class="point">
+                                            <h4>If \( k < 0 \):</h4>
+                                            <p>Opposite direction, scaled magnitude</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-balance-scale"></i> Resultant of Vectors
+                                </h3>
+                                <p>The resultant vector is the single vector that has the same effect as multiple vectors combined:</p>
+                                
+                                <div class="math-example">
+                                    <p>For vectors \( \vec{u} \) and \( \vec{v} \):</p>
+                                    \[ \vec{R} = \vec{u} + \vec{v} \]
+                                    
+                                    <p>Magnitude of resultant:</p>
+                                    \[ \|\vec{R}\| = \sqrt{\|\vec{u}\|^2 + \|\vec{v}\|^2 + 2\|\vec{u}\|\|\vec{v}\|\cos\theta} \]
+                                    <p>Where \( \theta \) is the angle between \( \vec{u} \) and \( \vec{v} \).</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Laws Section -->
+                        <section id="laws" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-gavel"></i> Laws of Vector Addition
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-shapes"></i> Parallelogram Law
+                                </h3>
+                                <p>If two vectors are adjacent sides of a parallelogram, their sum is the diagonal:</p>
+                                
+                                <div class="math-example">
+                                    <div class="parallelogram-diagram">
+                                        <div class="vector a"></div>
+                                        <div class="vector b"></div>
+                                        <div class="vector resultant"></div>
+                                        <div class="parallelogram"></div>
+                                    </div>
+                                    
+                                    <p>For vectors \( \vec{a} \) and \( \vec{b} \):</p>
+                                    \[ \vec{a} + \vec{b} = \text{Diagonal of parallelogram} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-draw-polygon"></i> Polygon Law
+                                </h3>
+                                <p>For adding multiple vectors by placing them tip-to-tail:</p>
+                                
+                                <div class="math-example">
+                                    <div class="polygon-diagram">
+                                        <div class="vector v1"></div>
+                                        <div class="vector v2"></div>
+                                        <div class="vector v3"></div>
+                                        <div class="vector resultant"></div>
+                                    </div>
+                                    
+                                    <p>For vectors \( \vec{v}_1, \vec{v}_2, \ldots, \vec{v}_n \):</p>
+                                    \[ \vec{R} = \vec{v}_1 + \vec{v}_2 + \cdots + \vec{v}_n \]
+                                    <p>The resultant joins the tail of the first to the tip of the last.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> Resolution of Vectors
+                                </h3>
+                                <p>Breaking a vector into perpendicular components:</p>
+                                
+                                <div class="math-example">
+                                    <p>For vector \( \vec{v} \) at angle \( \theta \):</p>
+                                    \[ v_x = \|\vec{v}\|\cos\theta \]
+                                    \[ v_y = \|\vec{v}\|\sin\theta \]
+                                    
+                                    <div class="resolution-diagram">
+                                        <div class="vector v"></div>
+                                        <div class="component x"></div>
+                                        <div class="component y"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Properties Section -->
+                        <section id="properties" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-cogs"></i> Properties of Vectors
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-random"></i> Commutative Property
+                                </h3>
+                                <p>Order of addition doesn't matter:</p>
+                                \[ \vec{a} + \vec{b} = \vec{b} + \vec{a} \]
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-layer-group"></i> Associative Property
+                                </h3>
+                                <p>Grouping doesn't affect addition:</p>
+                                \[ (\vec{a} + \vec{b}) + \vec{c} = \vec{a} + (\vec{b} + \vec{c}) \]
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ban"></i> Additive Identity
+                                </h3>
+                                <p>The zero vector \( \vec{0} \) leaves vectors unchanged:</p>
+                                \[ \vec{a} + \vec{0} = \vec{a} \]
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-undo"></i> Additive Inverse
+                                </h3>
+                                <p>Every vector has an opposite that sums to zero:</p>
+                                \[ \vec{a} + (-\vec{a}) = \vec{0} \]
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-link"></i> Parallel Vectors
+                                </h3>
+                                <p>Two vectors are parallel if one is a scalar multiple of the other:</p>
+                                \[ \vec{a} \parallel \vec{b} \iff \vec{a} = k\vec{b} \text{ for some scalar } k \]
+                            </div>
+                        </section>
+
+                        <!-- Products Section -->
+                        <section id="products" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-times"></i> Vector Products
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-dot-circle"></i> Dot (Scalar) Product
+                                </h3>
+                                <p>The dot product produces a scalar value:</p>
+                                
+                                <div class="math-example">
+                                    <p>For vectors \( \vec{a} = \begin{pmatrix} a_1 \\ a_2 \end{pmatrix} \) and \( \vec{b} = \begin{pmatrix} b_1 \\ b_2 \end{pmatrix} \):</p>
+                                    \[ \vec{a} \cdot \vec{b} = a_1b_1 + a_2b_2 \]
+                                    
+                                    <p>Geometrically:</p>
+                                    \[ \vec{a} \cdot \vec{b} = \|\vec{a}\|\|\vec{b}\|\cos\theta \]
+                                    <p>Where \( \theta \) is the angle between them.</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Orthogonal Vectors:</h4>
+                                        <p>If \( \vec{a} \cdot \vec{b} = 0 \), the vectors are perpendicular</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Angle Between Vectors:</h4>
+                                        \[ \cos\theta = \frac{\vec{a} \cdot \vec{b}}{\|\vec{a}\|\|\vec{b}\|} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-times-circle"></i> Cross Product (Preview)
+                                </h3>
+                                <p>In 3D space, the cross product produces a vector perpendicular to both input vectors:</p>
+                                
+                                <div class="math-example">
+                                    <p>For 2D vectors \( \vec{a} \) and \( \vec{b} \), the magnitude is:</p>
+                                    \[ \|\vec{a} \times \vec{b}\| = \|\vec{a}\|\|\vec{b}\|\sin\theta \]
+                                    <p>(Note: Full cross product is covered in SHS3 3D vectors)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Geometry Section -->
+                        <section id="geometry" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Geometry Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Section Formula
+                                </h3>
+                                <p>Finding a point that divides a line segment in a given ratio:</p>
+                                
+                                <div class="math-example">
+                                    <p>If point \( P \) divides \( AB \) in ratio \( m:n \), its position vector is:</p>
+                                    \[ \vec{OP} = \frac{n\vec{OA} + m\vec{OB}}{m + n} \]
+                                    
+                                    <div class="section-diagram">
+                                        <div class="point a">A</div>
+                                        <div class="point p">P</div>
+                                        <div class="point b">B</div>
+                                        <div class="ratio">m : n</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-vector-square"></i> Collinear Points
+                                </h3>
+                                <p>Points are collinear if their position vectors satisfy:</p>
+                                
+                                <div class="math-example">
+                                    <p>Points \( A, B, C \) are collinear if:</p>
+                                    \[ \vec{AB} = k\vec{AC} \text{ for some scalar } k \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chess-board"></i> Parallelogram Properties
+                                </h3>
+                                <p>Using vectors to prove geometric properties:</p>
+                                
+                                <div class="math-example">
+                                    <p>For parallelogram \( ABCD \):</p>
+                                    <ul>
+                                        <li>\( \vec{AB} = \vec{DC} \)</li>
+                                        <li>\( \vec{AD} = \vec{BC} \)</li>
+                                        <li>Diagonals: \( \vec{AC} = \vec{AB} + \vec{AD} \)</li>
+                                        <li>Diagonals bisect each other</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-bullseye"></i> Centroid of Triangle
+                                </h3>
+                                <p>The intersection point of medians:</p>
+                                
+                                <div class="math-example">
+                                    <p>For triangle with vertices \( A, B, C \):</p>
+                                    \[ \vec{OG} = \frac{\vec{OA} + \vec{OB} + \vec{OC}}{3} \]
+                                    
+                                    <div class="centroid-diagram">
+                                        <div class="triangle"></div>
+                                        <div class="centroid"></div>
+                                        <div class="medians"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Given \( \vec{a} = 3\mathbf{i} - 2\mathbf{j} \) and \( \vec{b} = -\mathbf{i} + 4\mathbf{j} \), find \( \vec{a} + \vec{b} \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \vec{a} + \vec{b} = (3-1)\mathbf{i} + (-2+4)\mathbf{j} = 2\mathbf{i} + 2\mathbf{j} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the angle between \( \vec{u} = \begin{pmatrix} 1 \\ \sqrt{3} \end{pmatrix} \) and \( \vec{v} = \begin{pmatrix} -\sqrt{3} \\ 1 \end{pmatrix} \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First calculate dot product and magnitudes:</p>
+                                        \[ \vec{u} \cdot \vec{v} = (1)(-\sqrt{3}) + (\sqrt{3})(1) = 0 \]
+                                        <p>Since dot product is 0, the vectors are perpendicular (90°).</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Prove that the points \( A(1,2) \), \( B(4,5) \), and \( C(-2,-1) \) are collinear using vectors.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Find vectors \( \vec{AB} \) and \( \vec{AC} \):</p>
+                                        \[ \vec{AB} = \begin{pmatrix} 3 \\ 3 \end{pmatrix}, \quad \vec{AC} = \begin{pmatrix} -3 \\ -3 \end{pmatrix} \]
+                                        <p>Since \( \vec{AC} = -1 \times \vec{AB} \), the points are collinear.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/vectors" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your vector math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs1/js/math-challenge-sets.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs1/js/sets.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

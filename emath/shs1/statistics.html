@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Statistics | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Statistics for SHS1 Elective Mathematics. Learn data collection, representation, measures of central tendency and dispersion.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Statistics | Elective Mathematics">
+        <meta property="og:description" content="Master Statistics with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/stats-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/statistics">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs1/css/sets.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs1/css/math-challenge-sets.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Statistics</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-chart-bar"></i>
+                                <span>Statistics</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#collecting-data"><i class="fas fa-chevron-right"></i> Collecting Data</a></li>
+                                <li><a href="#data-categorisation"><i class="fas fa-chevron-right"></i> Data Categorisation</a></li>
+                                <li><a href="#tabular-representation"><i class="fas fa-chevron-right"></i> Tabular Representation</a></li>
+                                <li><a href="#graphical-categorical"><i class="fas fa-chevron-right"></i> Graphical (Categorical)</a></li>
+                                <li><a href="#graphical-continuous"><i class="fas fa-chevron-right"></i> Graphical (Continuous)</a></li>
+                                <li><a href="#central-tendency"><i class="fas fa-chevron-right"></i> Central Tendency</a></li>
+                                <li><a href="#dispersion"><i class="fas fa-chevron-right"></i> Measures of Dispersion</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Statistics</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Statistics
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p><strong>Statistics</strong> is the science of collecting, organizing, analyzing, interpreting, and presenting data. It helps us make sense of information and draw meaningful conclusions.</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Concepts:</h4>
+                                        <ul>
+                                            <li><strong>Data:</strong> Raw facts and figures collected for analysis</li>
+                                            <li><strong>Population:</strong> Complete set of items under study</li>
+                                            <li><strong>Sample:</strong> Subset of the population used for analysis</li>
+                                            <li><strong>Variable:</strong> Characteristic that can take different values</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Importance in Ghana:</h4>
+                                        <p>Statistics is used in:</p>
+                                        <ul>
+                                            <li>Economic planning (GDP, inflation rates)</li>
+                                            <li>Public health (disease prevalence)</li>
+                                            <li>Education (exam performance analysis)</li>
+                                            <li>Business (market research)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question-circle"></i> Statistical Questions
+                                </h3>
+                                <p>A good statistical question:</p>
+                                <ul>
+                                    <li>Has variability in possible answers</li>
+                                    <li>Can be answered with collected data</li>
+                                    <li>Leads to meaningful analysis</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <p><strong>Examples:</strong></p>
+                                    <ul>
+                                        <li>"What is the average height of SHS1 students in Ghana?"</li>
+                                        <li>"How many hours per week do students spend studying math?"</li>
+                                        <li>"What is the most common transportation method to school?"</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Collecting Data Section -->
+                        <section id="collecting-data" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-database"></i> Collecting and Representing Data
+                            </h2>
+                            
+                            <div class="method-cards">
+                                <!-- Primary Data -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-hand-holding"></i>
+                                        <h3>Primary Data Collection</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>First-hand data collected directly by the researcher:</p>
+                                        <ul>
+                                            <li><strong>Surveys:</strong> Questionnaires or interviews</li>
+                                            <li><strong>Experiments:</strong> Controlled studies</li>
+                                            <li><strong>Observations:</strong> Direct measurements</li>
+                                        </ul>
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> Conducting a survey in your school about favorite subjects</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Secondary Data -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-book"></i>
+                                        <h3>Secondary Data</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Data collected by others and reused:</p>
+                                        <ul>
+                                            <li>Government reports (GSS)</li>
+                                            <li>School records</li>
+                                            <li>Published research</li>
+                                            <li>Online databases</li>
+                                        </ul>
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> Using WAEC exam statistics from previous years</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-clipboard-check"></i> Data Collection Considerations
+                                </h3>
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Sampling Methods:</h4>
+                                        <ul>
+                                            <li><strong>Random:</strong> Equal chance for all members</li>
+                                            <li><strong>Stratified:</strong> Proportional from subgroups</li>
+                                            <li><strong>Systematic:</strong> Regular intervals</li>
+                                            <li><strong>Convenience:</strong> Easily available subjects</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Data Quality:</h4>
+                                        <ul>
+                                            <li>Accuracy (free from errors)</li>
+                                            <li>Reliability (consistent results)</li>
+                                            <li>Validity (measures what it should)</li>
+                                            <li>Representativeness (reflects population)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Data Categorisation Section -->
+                        <section id="data-categorisation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-tags"></i> Data Categorisation
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-shapes"></i> Types of Data
+                                </h3>
+                                
+                                <div class="special-set-cards">
+                                    <div class="set-card">
+                                        <h4>Qualitative Data</h4>
+                                        <p>Non-numerical, descriptive information:</p>
+                                        <ul>
+                                            <li><strong>Nominal:</strong> Categories without order (e.g., gender, color)</li>
+                                            <li><strong>Ordinal:</strong> Ordered categories (e.g., Likert scales, education level)</li>
+                                        </ul>
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> Favorite subjects of students: Math, English, Science</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="set-card">
+                                        <h4>Quantitative Data</h4>
+                                        <p>Numerical measurements:</p>
+                                        <ul>
+                                            <li><strong>Discrete:</strong> Countable values (e.g., number of siblings)</li>
+                                            <li><strong>Continuous:</strong> Measurable values (e.g., height, weight)</li>
+                                        </ul>
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> Test scores: 75, 82, 90, 65</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Measurement Scales
+                                </h3>
+                                <div class="measurement-scales">
+                                    <div class="scale-card">
+                                        <h4>Nominal Scale</h4>
+                                        <p>Categories without order (e.g., gender, religion)</p>
+                                    </div>
+                                    <div class="scale-card">
+                                        <h4>Ordinal Scale</h4>
+                                        <p>Ordered categories (e.g., class positions, satisfaction levels)</p>
+                                    </div>
+                                    <div class="scale-card">
+                                        <h4>Interval Scale</h4>
+                                        <p>Equal intervals, no true zero (e.g., temperature in °C)</p>
+                                    </div>
+                                    <div class="scale-card">
+                                        <h4>Ratio Scale</h4>
+                                        <p>Equal intervals with true zero (e.g., height, weight, age)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Tabular Representation Section -->
+                        <section id="tabular-representation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-table"></i> Tabular Representation of Data
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list"></i> Ungrouped Data
+                                </h3>
+                                <p>Raw data presented as individual values:</p>
+                                
+                                <div class="math-example">
+                                    <table class="data-table">
+                                        <caption>Test Scores of 10 Students</caption>
+                                        <tr>
+                                            <th>Student ID</th>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                            <td>9</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <th>Score (%)</th>
+                                            <td>85</td>
+                                            <td>72</td>
+                                            <td>90</td>
+                                            <td>65</td>
+                                            <td>78</td>
+                                            <td>82</td>
+                                            <td>95</td>
+                                            <td>68</td>
+                                            <td>75</td>
+                                            <td>88</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-object-group"></i> Grouped Data
+                                </h3>
+                                <p>Data organized into classes or intervals:</p>
+                                
+                                <div class="math-example">
+                                    <table class="data-table">
+                                        <caption>Frequency Distribution of Test Scores</caption>
+                                        <tr>
+                                            <th>Class Interval</th>
+                                            <th>Frequency</th>
+                                            <th>Cumulative Frequency</th>
+                                        </tr>
+                                        <tr>
+                                            <td>60-69</td>
+                                            <td>2</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>70-79</td>
+                                            <td>3</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>80-89</td>
+                                            <td>3</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>90-99</td>
+                                            <td>2</td>
+                                            <td>10</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Class Boundaries:</h4>
+                                        <p>True limits of each class (e.g., 59.5-69.5 for 60-69)</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Class Mark:</h4>
+                                        <p>Midpoint of each class: \( \frac{\text{Lower} + \text{Upper}}{2} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Graphical Categorical Section -->
+                        <section id="graphical-categorical" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-pie"></i> Graphical Representation of Categorical Data
+                            </h2>
+                            
+                            <div class="method-cards">
+                                <!-- Bar Chart -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-chart-bar"></i>
+                                        <h3>Bar Charts</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Used for comparing discrete categories:</p>
+                                        <ul>
+                                            <li>Bars don't touch each other</li>
+                                            <li>Can be vertical or horizontal</li>
+                                            <li>Good for nominal or ordinal data</li>
+                                        </ul>
+                                        <div class="graph-placeholder" id="bar-chart-placeholder">
+                                            <!-- JavaScript will render chart here -->
+                                            <img src="../../images/bar-chart-example.png" alt="Bar Chart Example" class="graph-example">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Pie Chart -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-chart-pie"></i>
+                                        <h3>Pie Charts</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Shows proportions of a whole:</p>
+                                        <ul>
+                                            <li>Angles represent percentages</li>
+                                            <li>Best for 3-7 categories</li>
+                                            <li>Total must sum to 100%</li>
+                                        </ul>
+                                        <div class="graph-placeholder" id="pie-chart-placeholder">
+                                            <!-- JavaScript will render chart here -->
+                                            <img src="../../images/pie-chart-example.png" alt="Pie Chart Example" class="graph-example">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-thumbtack"></i> Pictograms
+                                </h3>
+                                <p>Uses pictures or symbols to represent quantities:</p>
+                                <ul>
+                                    <li>Visually appealing but less precise</li>
+                                    <li>Common in newspapers and magazines</li>
+                                    <li>Can be misleading if not scaled properly</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Graphical Continuous Section -->
+                        <section id="graphical-continuous" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line"></i> Graphical Representation of Continuous Data
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-signal"></i> Histograms
+                                </h3>
+                                <p>Similar to bar charts but for continuous data:</p>
+                                <ul>
+                                    <li>Bars touch each other</li>
+                                    <li>Area represents frequency</li>
+                                    <li>Shows distribution shape</li>
+                                </ul>
+                                <div class="graph-placeholder" id="histogram-placeholder">
+                                    <!-- JavaScript will render chart here -->
+                                    <img src="../../images/histogram-example.png" alt="Histogram Example" class="graph-example">
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-dot-circle"></i> Frequency Polygons
+                                </h3>
+                                <p>Line graph of class marks vs frequencies:</p>
+                                <ul>
+                                    <li>Points connected by straight lines</li>
+                                    <li>Can compare multiple distributions</li>
+                                    <li>Closed by extending to axis</li>
+                                </ul>
+                                <div class="graph-placeholder" id="polygon-placeholder">
+                                    <!-- JavaScript will render chart here -->
+                                    <img src="../../images/frequency-polygon-example.png" alt="Frequency Polygon Example" class="graph-example">
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-area"></i> Cumulative Frequency Curve (Ogive)
+                                </h3>
+                                <p>Shows running total of frequencies:</p>
+                                <ul>
+                                    <li>X-axis: Upper class boundaries</li>
+                                    <li>Y-axis: Cumulative frequencies</li>
+                                    <li>Used to find medians, quartiles</li>
+                                </ul>
+                                <div class="graph-placeholder" id="ogive-placeholder">
+                                    <!-- JavaScript will render chart here -->
+                                    <img src="../../images/ogive-example.png" alt="Ogive Example" class="graph-example">
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Central Tendency Section -->
+                        <section id="central-tendency" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-balance-scale"></i> Measures of Central Tendency
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Mean
+                                </h3>
+                                <p>The arithmetic average of all values:</p>
+                                \[ \text{Mean} = \frac{\sum x}{n} \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Find the mean of 5, 7, 9, 11</p>
+                                    \[ \text{Mean} = \frac{5 + 7 + 9 + 11}{4} = \frac{32}{4} = 8 \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Grouped Data:</h4>
+                                        \[ \text{Mean} = \frac{\sum (f \times x)}{\sum f} \]
+                                        <p>Where \( f \) = frequency, \( x \) = class mark</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-sort-amount-down"></i> Median
+                                </h3>
+                                <p>The middle value when data is ordered:</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example (odd n):</strong> Find median of 3, 5, 7, 9, 11</p>
+                                    \[ \text{Median} = 7 \text{ (3rd value)} \]
+                                    
+                                    <p><strong>Example (even n):</strong> Find median of 4, 6, 8, 10</p>
+                                    \[ \text{Median} = \frac{6 + 8}{2} = 7 \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Grouped Data:</h4>
+                                        \[ \text{Median} = L + \left( \frac{\frac{n}{2} - F}{f} \right) \times c \]
+                                        <p>Where:<br>
+                                        \( L \) = lower boundary of median class<br>
+                                        \( n \) = total frequency<br>
+                                        \( F \) = cumulative frequency before median class<br>
+                                        \( f \) = frequency of median class<br>
+                                        \( c \) = class width</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-flag"></i> Mode
+                                </h3>
+                                <p>The most frequently occurring value:</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Find mode of 2, 3, 3, 5, 7, 7, 7, 9</p>
+                                    \[ \text{Mode} = 7 \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Grouped Data:</h4>
+                                        \[ \text{Mode} = L + \left( \frac{f_m - f_1}{(f_m - f_1) + (f_m - f_2)} \right) \times c \]
+                                        <p>Where:<br>
+                                        \( L \) = lower boundary of modal class<br>
+                                        \( f_m \) = frequency of modal class<br>
+                                        \( f_1 \) = frequency before modal class<br>
+                                        \( f_2 \) = frequency after modal class<br>
+                                        \( c \) = class width</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-bar"></i> Choosing the Right Measure
+                                </h3>
+                                <table class="data-table">
+                                    <tr>
+                                        <th>Measure</th>
+                                        <th>Best For</th>
+                                        <th>Affected By</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Mean</td>
+                                        <td>Interval/ratio data, no outliers</td>
+                                        <td>All values</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Median</td>
+                                        <td>Ordinal data, skewed distributions</td>
+                                        <td>Middle values</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mode</td>
+                                        <td>Nominal data, identifying peaks</td>
+                                        <td>Frequency counts</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Dispersion Section -->
+                        <section id="dispersion" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-expand"></i> Measures of Dispersion
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-arrows-alt-h"></i> Range
+                                </h3>
+                                <p>Difference between highest and lowest values:</p>
+                                \[ \text{Range} = \text{Max} - \text{Min} \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Find range of 5, 7, 9, 11, 13</p>
+                                    \[ \text{Range} = 13 - 5 = 8 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-square-root-alt"></i> Variance and Standard Deviation
+                                </h3>
+                                <p>Measures of spread around the mean:</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Variance (σ²):</strong></p>
+                                    \[ \sigma^2 = \frac{\sum (x - \bar{x})^2}{n} \]
+                                    
+                                    <p><strong>Standard Deviation (σ):</strong></p>
+                                    \[ \sigma = \sqrt{\frac{\sum (x - \bar{x})^2}{n}} \]
+                                    
+                                    <p><strong>Example:</strong> Find SD of 2, 4, 6, 8</p>
+                                    <p>Mean = 5</p>
+                                    \[ \sigma = \sqrt{\frac{(2-5)^2 + (4-5)^2 + (6-5)^2 + (8-5)^2}{4}} = \sqrt{\frac{9+1+1+9}{4}} = \sqrt{5} \approx 2.24 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-percentage"></i> Quartiles and Interquartile Range
+                                </h3>
+                                <p>Divides data into four equal parts:</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Quartiles:</strong></p>
+                                    <ul>
+                                        <li>Q1: 25th percentile</li>
+                                        <li>Q2: 50th percentile (Median)</li>
+                                        <li>Q3: 75th percentile</li>
+                                    </ul>
+                                    
+                                    <p><strong>Interquartile Range (IQR):</strong></p>
+                                    \[ \text{IQR} = Q3 - Q1 \]
+                                    
+                                    <p><strong>Example:</strong> Find IQR of 1, 3, 5, 7, 9, 11, 13</p>
+                                    <p>Q1 = 3, Q3 = 11</p>
+                                    \[ \text{IQR} = 11 - 3 = 8 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-box"></i> Box-and-Whisker Plots
+                                </h3>
+                                <p>Visual representation of dispersion:</p>
+                                <ul>
+                                    <li>Box shows Q1, Median, Q3</li>
+                                    <li>Whiskers show range (or 1.5×IQR)</li>
+                                    <li>Outliers marked individually</li>
+                                </ul>
+                                <div class="graph-placeholder" id="boxplot-placeholder">
+                                    <!-- JavaScript will render chart here -->
+                                    <img src="../../images/boxplot-example.png" alt="Box Plot Example" class="graph-example">
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>The ages of 10 students are: 15, 16, 14, 15, 17, 16, 15, 16, 17, 18. Calculate the mean, median, and mode.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Mean:</strong> (15+16+14+15+17+16+15+16+17+18)/10 = 15.9 years</p>
+                                        <p><strong>Median:</strong> Ordered: 14,15,15,15,16,16,16,17,17,18 → (16+16)/2 = 16</p>
+                                        <p><strong>Mode:</strong> 15 and 16 (bimodal)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Given the frequency distribution below, calculate the mean:</p>
+                                    <table class="data-table">
+                                        <tr><th>Class</th><td>10-19</td><td>20-29</td><td>30-39</td><td>40-49</td></tr>
+                                        <tr><th>Frequency</th><td>5</td><td>8</td><td>12</td><td>5</td></tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Class marks: 14.5, 24.5, 34.5, 44.5</p>
+                                        <p>Σ(f×x) = (5×14.5)+(8×24.5)+(12×34.5)+(5×44.5) = 72.5 + 196 + 414 + 222.5 = 905</p>
+                                        <p>Σf = 5+8+12+5 = 30</p>
+                                        <p>Mean = 905/30 ≈ 30.17</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Calculate the standard deviation for the data set: 4, 8, 6, 5, 7</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Mean = (4+8+6+5+7)/5 = 6</p>
+                                        <p>Variance = [(4-6)² + (8-6)² + (6-6)² + (5-6)² + (7-6)²]/5 = (4+4+0+1+1)/5 = 10/5 = 2</p>
+                                        <p>Standard Deviation = √2 ≈ 1.41</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/statistics" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your statistics skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs1/js/math-challenge-sets.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs1/js/statistics.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

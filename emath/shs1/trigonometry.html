@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Trigonometry | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Trigonometry for SHS1 Elective Mathematics. Learn ratios, functions, angles of elevation/depression, and applications.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Trigonometry | Elective Mathematics">
+        <meta property="og:description" content="Master Trigonometry with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/trigonometry-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/trigonometry">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs1/css/sets.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs1/css/math-challenge-sets.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Trigonometry</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-triangle"></i>
+                                <span>Trigonometry</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#trig-ratios"><i class="fas fa-chevron-right"></i> Trigonometric Ratios</a></li>
+                                <li><a href="#trig-functions"><i class="fas fa-chevron-right"></i> Trigonometric Functions</a></li>
+                                <li><a href="#elevation-depression"><i class="fas fa-chevron-right"></i> Angles of Elevation/Depression</a></li>
+                                <li><a href="#special-angles"><i class="fas fa-chevron-right"></i> Special Angles</a></li>
+                                <li><a href="#quadrantal-angles"><i class="fas fa-chevron-right"></i> Quadrantal Angles</a></li>
+                                <li><a href="#radian-measure"><i class="fas fa-chevron-right"></i> Radian Measurement</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Trigonometry</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Trigonometry
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p><strong>Trigonometry</strong> is the branch of mathematics that studies relationships between side lengths and angles of triangles. The word comes from Greek "trigonon" (triangle) and "metron" (measure).</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Right-Angled Triangle:</h4>
+                                        <div class="triangle-diagram">
+                                            <div class="right-triangle">
+                                                <div class="hypotenuse">Hypotenuse (h)</div>
+                                                <div class="opposite">Opposite (o)</div>
+                                                <div class="adjacent">Adjacent (a)</div>
+                                                <div class="right-angle"></div>
+                                                <div class="angle-label">θ</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Applications:</h4>
+                                        <ul>
+                                            <li>Surveying and navigation</li>
+                                            <li>Engineering and construction</li>
+                                            <li>Physics and astronomy</li>
+                                            <li>Computer graphics</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Trigonometric Ratios Section -->
+                        <section id="trig-ratios" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-divide"></i> Trigonometric Ratios
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>The three primary trigonometric ratios relate the sides of a right-angled triangle to an acute angle:</p>
+                                
+                                <div class="ratio-cards">
+                                    <div class="ratio-card">
+                                        <h4>Sine (sin)</h4>
+                                        \[ \sin θ = \frac{\text{Opposite}}{\text{Hypotenuse}} = \frac{o}{h} \]
+                                    </div>
+                                    
+                                    <div class="ratio-card">
+                                        <h4>Cosine (cos)</h4>
+                                        \[ \cos θ = \frac{\text{Adjacent}}{\text{Hypotenuse}} = \frac{a}{h} \]
+                                    </div>
+                                    
+                                    <div class="ratio-card">
+                                        <h4>Tangent (tan)</h4>
+                                        \[ \tan θ = \frac{\text{Opposite}}{\text{Adjacent}} = \frac{o}{a} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Example:</h3>
+                                    <p>For a right-angled triangle with opposite = 3, adjacent = 4, hypotenuse = 5:</p>
+                                    \[ \sin θ = \frac{3}{5}, \quad \cos θ = \frac{4}{5}, \quad \tan θ = \frac{3}{4} \]
+                                </div>
+                                
+                                <div class="concept-box highlight-box">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-hand-point-up"></i> Mnemonic: SOH-CAH-TOA
+                                    </h3>
+                                    <ul>
+                                        <li><strong>SOH</strong>: Sine = Opposite / Hypotenuse</li>
+                                        <li><strong>CAH</strong>: Cosine = Adjacent / Hypotenuse</li>
+                                        <li><strong>TOA</strong>: Tangent = Opposite / Adjacent</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="concept-box">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-exchange-alt"></i> Reciprocal Ratios
+                                    </h3>
+                                    <div class="ratio-cards">
+                                        <div class="ratio-card">
+                                            <h4>Cosecant (csc)</h4>
+                                            \[ \csc θ = \frac{1}{\sin θ} = \frac{h}{o} \]
+                                        </div>
+                                        
+                                        <div class="ratio-card">
+                                            <h4>Secant (sec)</h4>
+                                            \[ \sec θ = \frac{1}{\cos θ} = \frac{h}{a} \]
+                                        </div>
+                                        
+                                        <div class="ratio-card">
+                                            <h4>Cotangent (cot)</h4>
+                                            \[ \cot θ = \frac{1}{\tan θ} = \frac{a}{o} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Trigonometric Functions Section -->
+                        <section id="trig-functions" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-wave-square"></i> Trigonometric Functions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Trigonometric functions extend the concept of ratios to all angles using the unit circle (radius = 1):</p>
+                                
+                                <div class="unit-circle-container">
+                                    <div class="unit-circle">
+                                        <div class="circle"></div>
+                                        <div class="radius-line"></div>
+                                        <div class="x-coordinate"></div>
+                                        <div class="y-coordinate"></div>
+                                        <div class="angle-mark">θ</div>
+                                        <div class="point">(x, y)</div>
+                                    </div>
+                                    <div class="unit-circle-legend">
+                                        <p>For any angle θ:</p>
+                                        \[ \sin θ = y \]
+                                        \[ \cos θ = x \]
+                                        \[ \tan θ = \frac{y}{x} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Periodicity:</h4>
+                                        <p>Trigonometric functions repeat every 360° (2π radians):</p>
+                                        \[ \sin(θ + 360°) = \sin θ \]
+                                        \[ \cos(θ + 360°) = \cos θ \]
+                                        \[ \tan(θ + 180°) = \tan θ \]
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Graphs:</h4>
+                                        <div class="function-graphs">
+                                            <div class="graph-container">
+                                                <div class="graph sin-graph"></div>
+                                                <span>Sine</span>
+                                            </div>
+                                            <div class="graph-container">
+                                                <div class="graph cos-graph"></div>
+                                                <span>Cosine</span>
+                                            </div>
+                                            <div class="graph-container">
+                                                <div class="graph tan-graph"></div>
+                                                <span>Tangent</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="concept-box">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-project-diagram"></i> Pythagorean Identities
+                                    </h3>
+                                    <div class="identity-cards">
+                                        <div class="identity-card">
+                                            \[ \sin^2θ + \cos^2θ = 1 \]
+                                        </div>
+                                        <div class="identity-card">
+                                            \[ 1 + \tan^2θ = \sec^2θ \]
+                                        </div>
+                                        <div class="identity-card">
+                                            \[ 1 + \cot^2θ = \csc^2θ \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Angles of Elevation/Depression Section -->
+                        <section id="elevation-depression" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-angle-up"></i> Angles of Elevation and Depression
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <div class="angle-diagrams">
+                                    <div class="angle-diagram">
+                                        <h4>Angle of Elevation</h4>
+                                        <div class="elevation-diagram">
+                                            <div class="horizontal-line"></div>
+                                            <div class="line-of-sight"></div>
+                                            <div class="angle-mark"></div>
+                                            <div class="eye"></div>
+                                            <div class="object"></div>
+                                            <div class="label">Angle of Elevation</div>
+                                        </div>
+                                        <p>Angle between horizontal and line of sight when looking <em>upward</em></p>
+                                    </div>
+                                    
+                                    <div class="angle-diagram">
+                                        <h4>Angle of Depression</h4>
+                                        <div class="depression-diagram">
+                                            <div class="horizontal-line"></div>
+                                            <div class="line-of-sight"></div>
+                                            <div class="angle-mark"></div>
+                                            <div class="eye"></div>
+                                            <div class="object"></div>
+                                            <div class="label">Angle of Depression</div>
+                                        </div>
+                                        <p>Angle between horizontal and line of sight when looking <em>downward</em></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Example Problem:</h3>
+                                    <p>A 20m tall building casts a shadow 15m long. Find the angle of elevation of the sun.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using tangent ratio:</p>
+                                        \[ \tan θ = \frac{\text{Opposite}}{\text{Adjacent}} = \frac{20}{15} \]
+                                        \[ θ = \tan^{-1}\left(\frac{4}{3}\right) ≈ 53.13° \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Special Angles Section -->
+                        <section id="special-angles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-star"></i> Special Angles
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Certain angles have exact trigonometric values that can be derived geometrically:</p>
+                                
+                                <div class="special-angles-table">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Angle (θ)</th>
+                                                <th>sin θ</th>
+                                                <th>cos θ</th>
+                                                <th>tan θ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>0°</td>
+                                                <td>0</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>30°</td>
+                                                <td>1/2</td>
+                                                <td>√3/2</td>
+                                                <td>√3/3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>45°</td>
+                                                <td>√2/2</td>
+                                                <td>√2/2</td>
+                                                <td>1</td>
+                                            </tr>
+                                            <tr>
+                                                <td>60°</td>
+                                                <td>√3/2</td>
+                                                <td>1/2</td>
+                                                <td>√3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>90°</td>
+                                                <td>1</td>
+                                                <td>0</td>
+                                                <td>∞</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Derivation of 45° Values:</h3>
+                                    <p>Consider an isosceles right triangle with legs = 1:</p>
+                                    \[ \text{Hypotenuse} = \sqrt{1^2 + 1^2} = \sqrt{2} \]
+                                    \[ \sin 45° = \cos 45° = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2} \]
+                                    \[ \tan 45° = \frac{1}{1} = 1 \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Quadrantal Angles Section -->
+                        <section id="quadrantal-angles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-compass"></i> Quadrantal Angles
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Angles that lie on the x-axis or y-axis (0°, 90°, 180°, 270°, 360°):</p>
+                                
+                                <div class="quadrant-diagram">
+                                    <div class="coordinate-system">
+                                        <div class="x-axis"></div>
+                                        <div class="y-axis"></div>
+                                        <div class="quadrant-labels">
+                                            <span class="quad-i">I</span>
+                                            <span class="quad-ii">II</span>
+                                            <span class="quad-iii">III</span>
+                                            <span class="quad-iv">IV</span>
+                                        </div>
+                                        <div class="angle-marks">
+                                            <div class="angle-mark">0°</div>
+                                            <div class="angle-mark">90°</div>
+                                            <div class="angle-mark">180°</div>
+                                            <div class="angle-mark">270°</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Signs in Quadrants:</h4>
+                                        <ul>
+                                            <li><strong>I</strong>: All positive</li>
+                                            <li><strong>II</strong>: sin positive</li>
+                                            <li><strong>III</strong>: tan positive</li>
+                                            <li><strong>IV</strong>: cos positive</li>
+                                        </ul>
+                                        <p class="mnemonic">Mnemonic: <strong>A</strong>ll <strong>S</strong>tudents <strong>T</strong>ake <strong>C</strong>alculus</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Reference Angles:</h4>
+                                        <p>For any angle θ, its reference angle is the acute angle between the terminal side and the x-axis:</p>
+                                        <table class="reference-table">
+                                            <tr>
+                                                <th>Quadrant</th>
+                                                <th>Reference Angle</th>
+                                            </tr>
+                                            <tr>
+                                                <td>I</td>
+                                                <td>θ</td>
+                                            </tr>
+                                            <tr>
+                                                <td>II</td>
+                                                <td>180° - θ</td>
+                                            </tr>
+                                            <tr>
+                                                <td>III</td>
+                                                <td>θ - 180°</td>
+                                            </tr>
+                                            <tr>
+                                                <td>IV</td>
+                                                <td>360° - θ</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Radian Measurement Section -->
+                        <section id="radian-measure" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-circle"></i> Radian Measurement
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>An alternative to degree measurement where angles are defined by arc length:</p>
+                                \[ 1 \text{ radian} = \frac{180°}{π} ≈ 57.2958° \]
+                                
+                                <div class="radian-diagram">
+                                    <div class="circle">
+                                        <div class="radius"></div>
+                                        <div class="arc"></div>
+                                        <div class="arc-length">r</div>
+                                        <div class="radius-length">r</div>
+                                        <div class="angle-mark">1 rad</div>
+                                    </div>
+                                    <div class="radian-definition">
+                                        <p>1 radian is the angle subtended by an arc equal in length to the radius</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Conversions:</h4>
+                                        \[ π \text{ radians} = 180° \]
+                                        \[ 1° = \frac{π}{180} \text{ radians} \]
+                                        \[ 1 \text{ radian} = \frac{180°}{π} \]
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Common Conversions:</h4>
+                                        <table class="conversion-table">
+                                            <tr>
+                                                <th>Degrees</th>
+                                                <th>Radians</th>
+                                            </tr>
+                                            <tr>
+                                                <td>30°</td>
+                                                <td>π/6</td>
+                                            </tr>
+                                            <tr>
+                                                <td>45°</td>
+                                                <td>π/4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>60°</td>
+                                                <td>π/3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>90°</td>
+                                                <td>π/2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>180°</td>
+                                                <td>π</td>
+                                            </tr>
+                                            <tr>
+                                                <td>360°</td>
+                                                <td>2π</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Example Conversions:</h3>
+                                    <p>Convert 150° to radians:</p>
+                                    \[ 150° × \frac{π}{180°} = \frac{5π}{6} \text{ radians} \]
+                                    <p>Convert 3π/4 radians to degrees:</p>
+                                    \[ \frac{3π}{4} × \frac{180°}{π} = 135° \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the exact value of sin 60° cos 30° + cos 60° sin 30°</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using special angles:</p>
+                                        \[ \frac{\sqrt{3}}{2} × \frac{\sqrt{3}}{2} + \frac{1}{2} × \frac{1}{2} = \frac{3}{4} + \frac{1}{4} = 1 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A ladder 5m long leans against a wall, making a 60° angle with the ground. How far up the wall does it reach?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \sin 60° = \frac{\text{Height}}{5} \]
+                                        \[ \text{Height} = 5 × \frac{\sqrt{3}}{2} ≈ 4.33 \text{ m} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Convert 5π/12 radians to degrees and find its reference angle.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{5π}{12} × \frac{180°}{π} = 75° \]
+                                        <p>75° is in Quadrant I, so reference angle = 75°</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/trigonometry" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your trigonometry skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs1/js/math-challenge-sets.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs1/js/trigonometry.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

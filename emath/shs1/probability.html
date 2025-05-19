@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Combinations, Permutation & Probability | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Combinations, Permutation & Probability for SHS1 Elective Mathematics. Learn counting principles, arrangements, and probability concepts.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Combinations, Permutation & Probability | Elective Mathematics">
+        <meta property="og:description" content="Master counting principles and probability with interactive lessons for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/probability-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/probability">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs1/css/sets.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs1/css/math-challenge-sets.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Combinations, Permutation & Probability</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-random"></i>
+                                <span>Probability</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#counting-principle"><i class="fas fa-chevron-right"></i> Counting Principle</a></li>
+                                <li><a href="#permutations-combinations"><i class="fas fa-chevron-right"></i> Permutations & Combinations</a></li>
+                                <li><a href="#relationship"><i class="fas fa-chevron-right"></i> Relationship Between Them</a></li>
+                                <li><a href="#everyday-probability"><i class="fas fa-chevron-right"></i> Probability in Life</a></li>
+                                <li><a href="#event-probability"><i class="fas fa-chevron-right"></i> Probability of Events</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Probability</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Counting & Probability
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p><strong>Combinatorics</strong> is the branch of mathematics concerned with counting, arrangement, and probability. It helps us solve problems like:</p>
+                                
+                                <ul class="example-list">
+                                    <li>How many possible passwords can be created with 8 characters?</li>
+                                    <li>What's the probability of winning a lottery?</li>
+                                    <li>How many ways can a committee be formed from a group?</li>
+                                </ul>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Permutation:</h4>
+                                        <p>An ordered arrangement of objects where <em>order matters</em>.</p>
+                                        <p class="math-example">Example: Arrangements of letters A, B, C → ABC, ACB, BAC, etc.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Combination:</h4>
+                                        <p>A selection of objects where <em>order doesn't matter</em>.</p>
+                                        <p class="math-example">Example: Choosing 2 fruits from apple, banana, orange → apple+banana is same as banana+apple</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-dice"></i> Probability Basics
+                                </h3>
+                                <p>Probability measures how likely an event is to occur, expressed as a number between 0 (impossible) and 1 (certain).</p>
+                                
+                                <div class="math-example">
+                                    <p>Probability formula:</p>
+                                    \[ P(E) = \frac{\text{Number of favorable outcomes}}{\text{Total possible outcomes}} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Counting Principle Section -->
+                        <section id="counting-principle" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-sort-amount-up"></i> Fundamental Counting Principle
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Also known as the <strong>Multiplication Rule</strong>, it states that if one event can occur in <em>m</em> ways and a second can occur independently in <em>n</em> ways, then the two events can occur in <em>m × n</em> ways.</p>
+                                
+                                <div class="math-example">
+                                    <p>Example: If you have 3 shirts and 4 pants, you can create:</p>
+                                    \[ 3 \times 4 = 12 \text{ different outfits} \]
+                                </div>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-layer-group"></i>
+                                            <h3>Extended Principle</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>For multiple events:</p>
+                                            \[ m \times n \times p \times \ldots \]
+                                            <p class="math-example">Example: 3 shirts, 4 pants, 2 hats → 3×4×2 = 24 combinations</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-lock"></i>
+                                            <h3>With Restrictions</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>When some choices are limited:</p>
+                                            <p class="math-example">Example: 5-digit PIN where first digit can't be 0 → 9×10×10×10×10 = 90,000 possible PINs</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Practice Problems
+                                </h3>
+                                
+                                <div class="problem-card">
+                                    <p>1. A restaurant offers 5 main dishes, 3 sides, and 4 drinks. How many possible meals can be ordered?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 5 \times 3 \times 4 = 60 \text{ possible meals} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <p>2. How many 4-letter words can be formed from the English alphabet if letters can be repeated?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 26 \times 26 \times 26 \times 26 = 26^4 = 456,976 \text{ words} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Permutations and Combinations Section -->
+                        <section id="permutations-combinations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-arrows-alt"></i> Permutations and Combinations
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-sort-alpha-up"></i> Permutations
+                                </h3>
+                                <p>Arrangements where <em>order matters</em>. Two types:</p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-repeat"></i>
+                                            <h3>With Repetition</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>When items can be reused:</p>
+                                            \[ P(n, k) = n^k \]
+                                            <p class="math-example">Example: 3-digit codes using 0-9 → 10³ = 1,000 permutations</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-ban"></i>
+                                            <h3>Without Repetition</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>When items cannot be reused:</p>
+                                            \[ P(n, k) = \frac{n!}{(n-k)!} \]
+                                            <p class="math-example">Example: Arranging 4 books out of 7 → 7!/(7-4)! = 7×6×5×4 = 840 ways</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-object-group"></i> Combinations
+                                </h3>
+                                <p>Selections where <em>order doesn't matter</em>:</p>
+                                
+                                <div class="math-example">
+                                    \[ C(n, k) = \binom{n}{k} = \frac{n!}{k!(n-k)!} \]
+                                    <p>Example: Choosing 3 toppings from 8 available → C(8,3) = 56 combinations</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Differences:</h4>
+                                        <ul>
+                                            <li>Permutation: ABC ≠ ACB</li>
+                                            <li>Combination: ABC = ACB</li>
+                                        </ul>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Notation:</h4>
+                                        <p>Combinations are often read as "n choose k"</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Factorial Notation
+                                </h3>
+                                <p>n! (n factorial) is the product of all positive integers ≤ n:</p>
+                                \[ n! = n \times (n-1) \times (n-2) \times \ldots \times 1 \]
+                                <p class="math-example">Example: 4! = 4×3×2×1 = 24</p>
+                                <p><em>Special case:</em> 0! = 1</p>
+                            </div>
+                        </section>
+
+                        <!-- Relationship Section -->
+                        <section id="relationship" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-link"></i> Relationship Between Permutations and Combinations
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Permutations and combinations are related through the ordering of elements:</p>
+                                
+                                <div class="math-example">
+                                    \[ P(n, k) = C(n, k) \times k! \]
+                                    <p>This shows that permutations are just combinations with the selected items arranged in different orders.</p>
+                                </div>
+                                
+                                <div class="illustration-box">
+                                    <h4>Visual Comparison:</h4>
+                                    <div class="comparison-grid">
+                                        <div class="comparison-card">
+                                            <h5>Combination (Selection)</h5>
+                                            <p>Choose 2 letters from A,B,C,D:</p>
+                                            <ul>
+                                                <li>AB</li>
+                                                <li>AC</li>
+                                                <li>AD</li>
+                                                <li>BC</li>
+                                                <li>BD</li>
+                                                <li>CD</li>
+                                            </ul>
+                                            <p>C(4,2) = 6</p>
+                                        </div>
+                                        <div class="comparison-card">
+                                            <h5>Permutation (Arrangement)</h5>
+                                            <p>Arrange 2 letters from A,B,C,D:</p>
+                                            <ul>
+                                                <li>AB, BA</li>
+                                                <li>AC, CA</li>
+                                                <li>AD, DA</li>
+                                                <li>BC, CB</li>
+                                                <li>BD, DB</li>
+                                                <li>CD, DC</li>
+                                            </ul>
+                                            <p>P(4,2) = 12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Conversion Formula
+                                </h3>
+                                <p>To convert between permutations and combinations:</p>
+                                \[ C(n, k) = \frac{P(n, k)}{k!} \]
+                                <p class="math-example">Example: P(5,3) = 60 → C(5,3) = 60/6 = 10</p>
+                            </div>
+                        </section>
+
+                        <!-- Everyday Probability Section -->
+                        <section id="everyday-probability" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shopping-cart"></i> Probability in Everyday Life
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Probability concepts are used in various real-world situations:</p>
+                                
+                                <div class="application-cards">
+                                    <div class="app-card">
+                                        <h4><i class="fas fa-chart-line"></i> Business Decisions</h4>
+                                        <p>Calculating risks and expected values for investments</p>
+                                    </div>
+                                    <div class="app-card">
+                                        <h4><i class="fas fa-medal"></i> Games & Sports</h4>
+                                        <p>Determining odds in lotteries or sports betting</p>
+                                    </div>
+                                    <div class="app-card">
+                                        <h4><i class="fas fa-umbrella"></i> Insurance</h4>
+                                        <p>Calculating premiums based on risk probabilities</p>
+                                    </div>
+                                    <div class="app-card">
+                                        <h4><i class="fas fa-dna"></i> Genetics</h4>
+                                        <p>Predicting inheritance of traits</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="real-world-example">
+                                    <h3 class="subsection-title">
+                                        <i class="fas fa-question-circle"></i> Practical Example
+                                    </h3>
+                                    <p><strong>Scenario:</strong> A school is planning a trip and needs to form a committee of 3 students (1 leader, 1 secretary, 1 treasurer) from a class of 25.</p>
+                                    
+                                    <div class="solution-steps">
+                                        <div class="step">
+                                            <h4>Step 1: Identify Problem Type</h4>
+                                            <p>This is a permutation problem because the order/position matters (leader ≠ secretary ≠ treasurer).</p>
+                                        </div>
+                                        <div class="step">
+                                            <h4>Step 2: Apply Permutation Formula</h4>
+                                            \[ P(25, 3) = \frac{25!}{(25-3)!} = 25 \times 24 \times 23 = 13,800 \text{ ways} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Event Probability Section -->
+                        <section id="event-probability" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-dice-five"></i> Probability of Given Events
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Calculating Probabilities
+                                </h3>
+                                <p>Basic probability rules and formulas:</p>
+                                
+                                <div class="probability-rules">
+                                    <div class="rule-card">
+                                        <h4>Simple Probability</h4>
+                                        \[ P(E) = \frac{n(E)}{n(S)} \]
+                                        <p>Where n(E) = favorable outcomes, n(S) = total possible outcomes</p>
+                                    </div>
+                                    <div class="rule-card">
+                                        <h4>Complement Rule</h4>
+                                        \[ P(E') = 1 - P(E) \]
+                                        <p>Probability of event not occurring</p>
+                                    </div>
+                                    <div class="rule-card">
+                                        <h4>Independent Events</h4>
+                                        \[ P(A \cap B) = P(A) \times P(B) \]
+                                        <p>For events that don't affect each other</p>
+                                    </div>
+                                    <div class="rule-card">
+                                        <h4>Mutually Exclusive Events</h4>
+                                        \[ P(A \cup B) = P(A) + P(B) \]
+                                        <p>Events that cannot occur together</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-pie"></i> Probability Examples
+                                </h3>
+                                
+                                <div class="example-cards">
+                                    <div class="example-card">
+                                        <h4>Example 1: Dice Roll</h4>
+                                        <p>What's the probability of rolling a prime number on a 6-sided die?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Prime numbers on a die: 2, 3, 5 (3 outcomes)</p>
+                                            \[ P(\text{Prime}) = \frac{3}{6} = \frac{1}{2} \]
+                                        </div>
+                                    </div>
+
+                                    <br>
+                                    
+                                    <div class="example-card">
+                                        <h4>Example 2: Card Draw</h4>
+                                        <p>Probability of drawing a heart or a king from a standard deck?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>P(Heart) = 13/52, P(King) = 4/52, P(Heart and King) = 1/52</p>
+                                            \[ P(\text{Heart or King}) = \frac{13}{52} + \frac{4}{52} - \frac{1}{52} = \frac{16}{52} = \frac{4}{13} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-triangle"></i> Common Mistakes
+                                </h3>
+                                <ul class="mistakes-list">
+                                    <li>Confusing permutations with combinations</li>
+                                    <li>Assuming events are independent when they're not</li>
+                                    <li>Forgetting to subtract overlapping events in "OR" probabilities</li>
+                                    <li>Miscounting total possible outcomes</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>How many ways can 4 people be arranged in a line?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 4! = 24 \text{ ways} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A committee of 3 needs to be chosen from 10 people. How many different committees are possible?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ C(10,3) = 120 \text{ committees} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>What is the probability of getting exactly two heads when flipping three fair coins?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible outcomes: HHH, HHT, HTH, THH, HTT, THT, TTH, TTT (8 total)</p>
+                                        <p>Favorable outcomes: HHT, HTH, THH (3 outcomes)</p>
+                                        \[ P(\text{Two Heads}) = \frac{3}{8} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/probability" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your probability skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs1/js/math-challenge-sets.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs1/js/sets.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
