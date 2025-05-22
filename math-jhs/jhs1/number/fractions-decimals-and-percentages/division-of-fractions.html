@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Division of Fractions | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to divide fractions and solve word problems involving division of fractions.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Division of Fractions | JHS Mathematics">
+        <meta property="og:description" content="Learn to divide fractions and solve word problems involving fractions.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/fractions">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Division of Fractions</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Fractions</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Division of Fractions</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#dividing-fractions"><i class="fas fa-chevron-right"></i> Dividing Fractions</a></li>
+                                <li><a href="#word-problems"><i class="fas fa-chevron-right"></i> Word Problems</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Division_of_Fractions</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Dividing fractions is an important mathematical operation that helps us solve problems where we need to split quantities into equal parts. Understanding fraction division is essential for many real-world applications.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{Examples: } \frac{1}{2} \div \frac{1}{4}, \frac{3}{4} \div \frac{2}{5}, 2 \div \frac{1}{3} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Key Concepts
+                                </h3>
+                                <p>
+                                    Before dividing fractions, it's important to understand these concepts:
+                                </p>
+                                <ul>
+                                    <li><strong>Reciprocal</strong>: The reciprocal of a fraction is obtained by flipping its numerator and denominator</li>
+                                    <li><strong>Whole numbers as fractions</strong>: Any whole number can be written as a fraction with denominator 1</li>
+                                    <li><strong>Simplifying fractions</strong>: Reducing fractions to their simplest form</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Examples:</p>
+                                    <p>Reciprocal of \(\frac{3}{4}\) is \(\frac{4}{3}\)</p>
+                                    <p>5 can be written as \(\frac{5}{1}\)</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Dividing Fractions Section -->
+                        <section id="dividing-fractions" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-divide"></i> Dividing Fractions
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> The Division Rule
+                                </h3>
+                                <p>
+                                    To divide by a fraction:
+                                </p>
+                                <ol>
+                                    <li>Find the reciprocal of the divisor (the fraction you're dividing by)</li>
+                                    <li>Multiply the dividend (the first fraction) by this reciprocal</li>
+                                    <li>Simplify the resulting fraction if possible</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: \(\frac{1}{2} \div \frac{1}{4}\)</h4>
+                                        <div class="math-example">
+                                            \[ \frac{1}{2} \div \frac{1}{4} = \frac{1}{2} \times \frac{4}{1} = \frac{4}{2} = 2 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: \(\frac{3}{4} \div \frac{2}{5}\)</h4>
+                                        <div class="math-example">
+                                            \[ \frac{3}{4} \div \frac{2}{5} = \frac{3}{4} \times \frac{5}{2} = \frac{15}{8} = 1\frac{7}{8} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Dividing Whole Numbers by Fractions
+                                </h3>
+                                <p>
+                                    When dividing a whole number by a fraction:
+                                </p>
+                                <ol>
+                                    <li>Write the whole number as a fraction (with denominator 1)</li>
+                                    <li>Follow the same division rule (multiply by reciprocal)</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: \(3 \div \frac{1}{2}\)</p>
+                                    \[ 3 \div \frac{1}{2} = \frac{3}{1} \times \frac{2}{1} = \frac{6}{1} = 6 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-table"></i> Division Examples Table
+                                </h3>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Division Problem</th>
+                                            <th>Reciprocal Step</th>
+                                            <th>Solution</th>
+                                        </tr>
+                                        <tr>
+                                            <td>\(\frac{2}{3} \div \frac{1}{6}\)</td>
+                                            <td>\(\frac{2}{3} \times \frac{6}{1}\)</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\(\frac{5}{8} \div \frac{3}{4}\)</td>
+                                            <td>\(\frac{5}{8} \times \frac{4}{3}\)</td>
+                                            <td>\(\frac{5}{6}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\(4 \div \frac{2}{5}\)</td>
+                                            <td>\(\frac{4}{1} \times \frac{5}{2}\)</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\(\frac{7}{10} \div \frac{3}{5}\)</td>
+                                            <td>\(\frac{7}{10} \times \frac{5}{3}\)</td>
+                                            <td>\(\frac{7}{6}\) or \(1\frac{1}{6}\)</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Word Problems Section -->
+                        <section id="word-problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-question-circle"></i> Word Problems
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-puzzle-piece"></i> Solving Word Problems
+                                </h3>
+                                <p>
+                                    To solve word problems involving division of fractions:
+                                </p>
+                                <ol>
+                                    <li>Read the problem carefully and identify what is being asked</li>
+                                    <li>Determine which numbers represent the dividend and divisor</li>
+                                    <li>Set up the division problem</li>
+                                    <li>Solve using the fraction division rule</li>
+                                    <li>Interpret the answer in the context of the problem</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Sharing Pizza</h4>
+                                        <p>If a pizza is cut into \(\frac{1}{4}\) slices, how many slices can you get from \(\frac{3}{4}\) of a pizza?</p>
+                                        <div class="math-example">
+                                            \[ \frac{3}{4} \div \frac{1}{4} = \frac{3}{4} \times \frac{4}{1} = \frac{12}{4} = 3 \text{ slices} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Ribbon Length</h4>
+                                        <p>How many \(\frac{3}{8}\) meter pieces can be cut from a \(\frac{9}{4}\) meter ribbon?</p>
+                                        <div class="math-example">
+                                            \[ \frac{9}{4} \div \frac{3}{8} = \frac{9}{4} \times \frac{8}{3} = \frac{72}{12} = 6 \text{ pieces} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Problem Solving Strategies
+                                </h3>
+                                <p>
+                                    Helpful strategies for fraction division word problems:
+                                </p>
+                                <ul>
+                                    <li>Draw diagrams to visualize the problem</li>
+                                    <li>Look for key words like "how many", "per", or "each"</li>
+                                    <li>Check if your answer makes sense in the real-world context</li>
+                                    <li>Estimate before calculating to check reasonableness</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: If 1 liter of paint covers \(\frac{1}{6}\) of a wall, how many liters are needed for 2 walls?</p>
+                                    \[ 2 \div \frac{1}{6} = 2 \times \frac{6}{1} = 12 \text{ liters} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                </h3>
+                                <p>
+                                    Fraction division is used in many real-world situations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Cooking Measurements</h4>
+                                        <p>If a recipe calls for \(\frac{1}{2}\) cup of flour per batch, how many batches can you make with \(3\frac{1}{2}\) cups?</p>
+                                        <div class="math-example">
+                                            \[ 3\frac{1}{2} \div \frac{1}{2} = \frac{7}{2} \times \frac{2}{1} = 7 \text{ batches} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Construction</h4>
+                                        <p>How many \(\frac{3}{4}\) foot boards can be cut from a 12 foot plank?</p>
+                                        <div class="math-example">
+                                            \[ 12 \div \frac{3}{4} = \frac{12}{1} \times \frac{4}{3} = \frac{48}{3} = 16 \text{ boards} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Medicine Dosage</h4>
+                                        <p>If a medicine dosage is \(\frac{1}{8}\) teaspoon per day, how many days will a \(\frac{3}{4}\) teaspoon bottle last?</p>
+                                        <div class="math-example">
+                                            \[ \frac{3}{4} \div \frac{1}{8} = \frac{3}{4} \times \frac{8}{1} = \frac{24}{4} = 6 \text{ days} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Calculate: \(\frac{2}{3} \div \frac{4}{5}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{2}{3} \div \frac{4}{5} = \frac{2}{3} \times \frac{5}{4} = \frac{10}{12} = \frac{5}{6} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve: \(5 \div \frac{2}{3}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 5 \div \frac{2}{3} = \frac{5}{1} \times \frac{3}{2} = \frac{15}{2} = 7\frac{1}{2} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>How many \(\frac{1}{4}\) cup servings are in \(\frac{3}{2}\) cups of yogurt?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{3}{2} \div \frac{1}{4} = \frac{3}{2} \times \frac{4}{1} = \frac{12}{2} = 6 \text{ servings} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A car travels \(\frac{1}{5}\) mile per minute. How long will it take to travel 12 miles?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 12 \div \frac{1}{5} = \frac{12}{1} \times \frac{5}{1} = 60 \text{ minutes} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Calculate: \(\frac{7}{8} \div \frac{3}{4}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{7}{8} \div \frac{3}{4} = \frac{7}{8} \times \frac{4}{3} = \frac{28}{24} = \frac{7}{6} = 1\frac{1}{6} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>A recipe requires \(\frac{3}{4}\) pound of flour. How many recipes can be made with \(4\frac{1}{2}\) pounds of flour?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 4\frac{1}{2} \div \frac{3}{4} = \frac{9}{2} \times \frac{4}{3} = \frac{36}{6} = 6 \text{ recipes} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with dividing fractions and solving word problems</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

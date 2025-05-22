@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Comparing and Ordering Fractions | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to compare and order fractions, decimals, and percentages.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Comparing and Ordering Fractions | JHS Mathematics">
+        <meta property="og:description" content="Learn to compare and order fractions, decimals, and percentages.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/fractions">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/comparing-and-ordering-fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-comparing-and-ordering-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Comparing and Ordering Fractions</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Fractions</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Comparing and Ordering</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#ascending-descending"><i class="fas fa-chevron-right"></i> Ordering Fractions</a></li>
+                                <li><a href="#comparing-decimals"><i class="fas fa-chevron-right"></i> Comparing Decimals</a></li>
+                                <li><a href="#mixed-comparisons"><i class="fas fa-chevron-right"></i> Mixed Comparisons</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Comparing_Fractions</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Comparing and ordering fractions is an essential skill in mathematics. It helps us understand the relative sizes of different fractions and organize them systematically.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{Key concepts: } \frac{1}{2} < \frac{2}{3}, 0.25 = \frac{1}{4}, 50\% = \frac{1}{2} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Methods for Comparing Fractions
+                                </h3>
+                                <p>
+                                    There are several ways to compare fractions:
+                                </p>
+                                <ul>
+                                    <li><strong>Common Denominator</strong>: Convert to equivalent fractions with the same denominator</li>
+                                    <li><strong>Decimal Conversion</strong>: Convert fractions to decimals for comparison</li>
+                                    <li><strong>Cross-Multiplication</strong>: Compare numerators after cross-multiplying</li>
+                                    <li><strong>Benchmark Fractions</strong>: Compare to known fractions like 1/2, 1/4, etc.</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Ordering Section -->
+                        <section id="ascending-descending" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-sort-amount-up"></i> Ordering Fractions
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-arrow-up"></i> Ascending Order
+                                </h3>
+                                <p>
+                                    To arrange fractions from least to greatest:
+                                </p>
+                                <ol>
+                                    <li>Find a common denominator for all fractions</li>
+                                    <li>Convert each fraction to an equivalent fraction with this denominator</li>
+                                    <li>Compare the numerators</li>
+                                    <li>Arrange from smallest to largest numerator</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: Arrange \(\frac{1}{2}, \frac{2}{5}, \frac{3}{10}\) in ascending order:</p>
+                                    <p>Common denominator is 10:</p>
+                                    \[ \frac{1}{2} = \frac{5}{10}, \frac{2}{5} = \frac{4}{10}, \frac{3}{10} = \frac{3}{10} \]
+                                    <p>Order: \(\frac{3}{10}, \frac{4}{10}, \frac{5}{10}\) or \(\frac{3}{10}, \frac{2}{5}, \frac{1}{2}\)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-arrow-down"></i> Descending Order
+                                </h3>
+                                <p>
+                                    To arrange fractions from greatest to least:
+                                </p>
+                                <ol>
+                                    <li>Find a common denominator</li>
+                                    <li>Convert all fractions to equivalent fractions</li>
+                                    <li>Compare numerators</li>
+                                    <li>Arrange from largest to smallest numerator</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: Arrange \(\frac{3}{4}, \frac{5}{8}, \frac{2}{3}\) in descending order:</p>
+                                    <p>Common denominator is 24:</p>
+                                    \[ \frac{3}{4} = \frac{18}{24}, \frac{5}{8} = \frac{15}{24}, \frac{2}{3} = \frac{16}{24} \]
+                                    <p>Order: \(\frac{18}{24}, \frac{16}{24}, \frac{15}{24}\) or \(\frac{3}{4}, \frac{2}{3}, \frac{5}{8}\)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Comparing Decimals Section -->
+                        <section id="comparing-decimals" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-balance-scale"></i> Comparing Decimal Fractions
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-greater-than"></i> Which Decimal is Greater?
+                                </h3>
+                                <p>
+                                    To compare decimal fractions:
+                                </p>
+                                <ol>
+                                    <li>Compare whole number parts first</li>
+                                    <li>If equal, compare tenths digits</li>
+                                    <li>If still equal, compare hundredths digits</li>
+                                    <li>Continue until you find a difference</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: Which is greater, 0.35 or 0.4?</p>
+                                    <p>Compare tenths: 3 (from 0.35) vs 4 (from 0.4)</p>
+                                    <p>4 > 3, so 0.4 > 0.35</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-sort-numeric-up"></i> Ordering Decimal Numbers
+                                </h3>
+                                <p>
+                                    To order decimal numbers from least to greatest:
+                                </p>
+                                <ol>
+                                    <li>Align decimal points (add trailing zeros if needed)</li>
+                                    <li>Compare digit by digit from left to right</li>
+                                    <li>Arrange based on the first differing digit</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: Order 0.6, 0.06, 0.606, 0.66:</p>
+                                    <p>Aligned: 0.600, 0.060, 0.606, 0.660</p>
+                                    <p>Order: 0.060, 0.600, 0.606, 0.660 or 0.06, 0.6, 0.606, 0.66</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Mixed Comparisons Section -->
+                        <section id="mixed-comparisons" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-random"></i> Mixed Comparisons
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Comparing Different Forms
+                                </h3>
+                                <p>
+                                    To compare fractions, decimals, and percentages:
+                                </p>
+                                <ol>
+                                    <li>Convert all values to the same form (usually decimals)</li>
+                                    <li>Then compare the decimal values</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Compare \(\frac{3}{5}\) and 60%</h4>
+                                        <div class="math-example">
+                                            \[ \frac{3}{5} = 0.6 \]
+                                            \[ 60\% = 0.6 \]
+                                            <p>They are equal</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Order 0.3, \(\frac{1}{4}\), 35%</h4>
+                                        <div class="math-example">
+                                            \[ \frac{1}{4} = 0.25 \]
+                                            \[ 35\% = 0.35 \]
+                                            <p>Order: \(\frac{1}{4}\), 0.3, 35%</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-table"></i> Conversion Reference
+                                </h3>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Fraction</th>
+                                            <th>Decimal</th>
+                                            <th>Percentage</th>
+                                        </tr>
+                                        <tr>
+                                            <td>\(\frac{1}{2}\)</td>
+                                            <td>0.5</td>
+                                            <td>50%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\(\frac{1}{4}\)</td>
+                                            <td>0.25</td>
+                                            <td>25%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\(\frac{3}{4}\)</td>
+                                            <td>0.75</td>
+                                            <td>75%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\(\frac{1}{5}\)</td>
+                                            <td>0.2</td>
+                                            <td>20%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\(\frac{1}{10}\)</td>
+                                            <td>0.1</td>
+                                            <td>10%</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                </h3>
+                                <p>
+                                    Comparing and ordering fractions is useful in many real-world situations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Test Scores</h4>
+                                        <p>Comparing test scores in different formats:</p>
+                                        <div class="math-example">
+                                            <p>Which is better: 17/20 or 83%?</p>
+                                            \[ \frac{17}{20} = 0.85 = 85\% \]
+                                            <p>85% > 83%, so 17/20 is better</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Recipe Measurements</h4>
+                                        <p>Ordering ingredient amounts:</p>
+                                        <div class="math-example">
+                                            <p>Order from least to most: 0.3 cup, \(\frac{1}{3}\) cup, 25% cup</p>
+                                            \[ 25\% = 0.25, \frac{1}{3} \approx 0.333 \]
+                                            <p>Order: 25% (0.25), 0.3, \(\frac{1}{3}\)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Sports Statistics</h4>
+                                        <p>Comparing player success rates:</p>
+                                        <div class="math-example">
+                                            <p>Which is better: 5/8 or 0.62?</p>
+                                            \[ \frac{5}{8} = 0.625 \]
+                                            <p>0.625 > 0.62, so 5/8 is better</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Arrange in ascending order: \(\frac{2}{3}, \frac{1}{2}, \frac{5}{6}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Common denominator is 6:</p>
+                                        \[ \frac{1}{2} = \frac{3}{6}, \frac{2}{3} = \frac{4}{6}, \frac{5}{6} = \frac{5}{6} \]
+                                        <p>Order: \(\frac{1}{2}, \frac{2}{3}, \frac{5}{6}\)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Which is greater: 0.125 or \(\frac{1}{8}\)?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{1}{8} = 0.125 \]
+                                        <p>They are equal</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Order from least to greatest: 0.4, \(\frac{3}{8}\), 45%</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{3}{8} = 0.375, 45\% = 0.45 \]
+                                        <p>Order: \(\frac{3}{8}\), 0.4, 45%</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Arrange in descending order: \(\frac{7}{10}, 0.68, \frac{2}{3}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{7}{10} = 0.7, \frac{2}{3} \approx 0.666... \]
+                                        <p>Order: \(\frac{7}{10}\), 0.68, \(\frac{2}{3}\)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Which is larger: \(\frac{4}{9}\) or 0.44?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{4}{9} \approx 0.444... \]
+                                        <p>\(\frac{4}{9}\) is larger than 0.44</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Order from greatest to least: 75%, \(\frac{7}{10}\), 0.72</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 75\% = 0.75, \frac{7}{10} = 0.7 \]
+                                        <p>Order: 75%, 0.72, \(\frac{7}{10}\)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with comparing and ordering fractions, decimals, and percentages</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-comparing-and-ordering-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/comparing-and-ordering-fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

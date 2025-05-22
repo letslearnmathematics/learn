@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Multiplication of Fractions | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to multiply fractions with whole numbers and other fractions, and calculate percentages.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Multiplication of Fractions | JHS Mathematics">
+        <meta property="og:description" content="Learn to multiply fractions with whole numbers and other fractions.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/fractions">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Multiplication of Fractions</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Fractions</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Multiplication</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#whole-by-fraction"><i class="fas fa-chevron-right"></i> Whole × Fraction</a></li>
+                                <li><a href="#fraction-by-whole"><i class="fas fa-chevron-right"></i> Fraction × Whole</a></li>
+                                <li><a href="#fraction-by-fraction"><i class="fas fa-chevron-right"></i> Fraction × Fraction</a></li>
+                                <li><a href="#percentages"><i class="fas fa-chevron-right"></i> Percentages</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Multiplication_of_Fractions</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Multiplying fractions involves different approaches depending on what you're multiplying. We'll learn how to:
+                                </p>
+                                <ul>
+                                    <li>Multiply a whole number by a fraction (read as "times")</li>
+                                    <li>Multiply a fraction by a whole number (read as "of")</li>
+                                    <li>Multiply a fraction by another fraction (read as "of")</li>
+                                    <li>Calculate percentages of numbers</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Key Concepts
+                                </h3>
+                                <p>
+                                    A fraction represents a part of a whole. When multiplying fractions:
+                                </p>
+                                <div class="math-example">
+                                    \[ \frac{\text{Numerator}}{\text{Denominator}} \]
+                                </div>
+                                <ul>
+                                    <li><strong>Numerator</strong>: The number above the fraction bar</li>
+                                    <li><strong>Denominator</strong>: The number below the fraction bar</li>
+                                    <li><strong>Product</strong>: The result of multiplication</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Whole by Fraction Section -->
+                        <section id="whole-by-fraction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-times"></i> Whole Number × Fraction
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Multiplication as "Times"
+                                </h3>
+                                <p>
+                                    When multiplying a whole number by a fraction, we read it as "times":
+                                </p>
+                                <ol>
+                                    <li>Multiply the whole number by the numerator</li>
+                                    <li>Keep the same denominator</li>
+                                    <li>Simplify if possible</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: \(3 \times \frac{2}{5}\)</h4>
+                                        <div class="math-example">
+                                            \[ 3 \times \frac{2}{5} = \frac{3 \times 2}{5} = \frac{6}{5} = 1\frac{1}{5} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: \(4 \times \frac{3}{8}\)</h4>
+                                        <div class="math-example">
+                                            \[ 4 \times \frac{3}{8} = \frac{4 \times 3}{8} = \frac{12}{8} = \frac{3}{2} = 1\frac{1}{2} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Understanding the Concept
+                                </h3>
+                                <p>
+                                    Multiplying a whole number by a fraction means taking that fraction multiple times:
+                                </p>
+                                <div class="math-example">
+                                    \[ 3 \times \frac{2}{5} = \frac{2}{5} + \frac{2}{5} + \frac{2}{5} = \frac{6}{5} \]
+                                </div>
+                                <p>This is why we multiply the numerator by the whole number.</p>
+                            </div>
+                        </section>
+                        
+                        <!-- Fraction by Whole Section -->
+                        <section id="fraction-by-whole" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-times"></i> Fraction × Whole Number
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-divide"></i> Multiplication as "Of"
+                                </h3>
+                                <p>
+                                    When multiplying a fraction by a whole number, we read it as "of":
+                                </p>
+                                <ol>
+                                    <li>Convert the whole number to a fraction (put it over 1)</li>
+                                    <li>Multiply numerators together</li>
+                                    <li>Multiply denominators together</li>
+                                    <li>Simplify the result</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: \(\frac{2}{3} \times 6\)</h4>
+                                        <div class="math-example">
+                                            \[ \frac{2}{3} \times \frac{6}{1} = \frac{2 \times 6}{3 \times 1} = \frac{12}{3} = 4 \]
+                                            <p>This means "two-thirds of six is four"</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: \(\frac{3}{4} \times 8\)</h4>
+                                        <div class="math-example">
+                                            \[ \frac{3}{4} \times \frac{8}{1} = \frac{3 \times 8}{4 \times 1} = \frac{24}{4} = 6 \]
+                                            <p>This means "three-fourths of eight is six"</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-cut"></i> Simplifying Before Multiplying
+                                </h3>
+                                <p>
+                                    You can simplify before multiplying to make calculations easier:
+                                </p>
+                                <div class="math-example">
+                                    <p>Example: \(\frac{3}{4} \times 8\)</p>
+                                    <p>Divide 4 (denominator) and 8 (whole number) by 4:</p>
+                                    \[ \frac{3}{4} \times 8 = \frac{3}{1} \times 2 = 6 \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Fraction by Fraction Section -->
+                        <section id="fraction-by-fraction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-times"></i> Fraction × Fraction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Multiplying Two Fractions
+                                </h3>
+                                <p>
+                                    To multiply two fractions (read as "of"):
+                                </p>
+                                <ol>
+                                    <li>Multiply the numerators together</li>
+                                    <li>Multiply the denominators together</li>
+                                    <li>Simplify the resulting fraction</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: \(\frac{1}{2} \times \frac{3}{4}\)</h4>
+                                        <div class="math-example">
+                                            \[ \frac{1}{2} \times \frac{3}{4} = \frac{1 \times 3}{2 \times 4} = \frac{3}{8} \]
+                                            <p>This means "half of three-fourths is three-eighths"</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: \(\frac{2}{3} \times \frac{5}{7}\)</h4>
+                                        <div class="math-example">
+                                            \[ \frac{2}{3} \times \frac{5}{7} = \frac{2 \times 5}{3 \times 7} = \frac{10}{21} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-cut"></i> Cross-Simplification
+                                </h3>
+                                <p>
+                                    Simplify before multiplying by canceling common factors:
+                                </p>
+                                <div class="math-example">
+                                    <p>Example: \(\frac{3}{4} \times \frac{8}{9}\)</p>
+                                    <p>Simplify 4 and 8 (divide by 4), and 3 and 9 (divide by 3):</p>
+                                    \[ \frac{3}{4} \times \frac{8}{9} = \frac{1}{1} \times \frac{2}{3} = \frac{2}{3} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Percentages Section -->
+                        <section id="percentages" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-percentage"></i> Calculating Percentages
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Percentages as Fractions
+                                </h3>
+                                <p>
+                                    Percent means "per hundred", so percentages are fractions with denominator 100:
+                                </p>
+                                <div class="math-example">
+                                    \[ 25\% = \frac{25}{100} = \frac{1}{4} \]
+                                </div>
+                                <p>To calculate a percentage of a number:</p>
+                                <ol>
+                                    <li>Convert the percentage to a fraction or decimal</li>
+                                    <li>Multiply by the number</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: 20% of 50</h4>
+                                        <div class="math-example">
+                                            \[ 20\% = \frac{20}{100} = \frac{1}{5} \]
+                                            \[ \frac{1}{5} \times 50 = 10 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: 75% of 120</h4>
+                                        <div class="math-example">
+                                            \[ 75\% = \frac{75}{100} = \frac{3}{4} \]
+                                            \[ \frac{3}{4} \times 120 = 90 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Percentage Shortcuts
+                                </h3>
+                                <p>
+                                    Some percentages have easy fraction equivalents:
+                                </p>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Percentage</th>
+                                            <th>Fraction</th>
+                                        </tr>
+                                        <tr>
+                                            <td>50%</td>
+                                            <td>\(\frac{1}{2}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>25%</td>
+                                            <td>\(\frac{1}{4}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>75%</td>
+                                            <td>\(\frac{3}{4}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20%</td>
+                                            <td>\(\frac{1}{5}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10%</td>
+                                            <td>\(\frac{1}{10}\)</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Calculate \(5 \times \frac{3}{4}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 5 \times \frac{3}{4} = \frac{15}{4} = 3\frac{3}{4} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find \(\frac{2}{3}\) of 15</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{2}{3} \times 15 = \frac{30}{3} = 10 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Multiply \(\frac{3}{5} \times \frac{2}{7}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{3}{5} \times \frac{2}{7} = \frac{6}{35} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Calculate 30% of 80</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 30\% = \frac{30}{100} = \frac{3}{10} \]
+                                        \[ \frac{3}{10} \times 80 = 24 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Simplify before multiplying: \(\frac{4}{9} \times \frac{3}{8}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Simplify 4 and 8 (divide by 4), and 3 and 9 (divide by 3):</p>
+                                        \[ \frac{4}{9} \times \frac{3}{8} = \frac{1}{3} \times \frac{1}{2} = \frac{1}{6} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>A recipe calls for \(\frac{3}{4}\) cup of flour. How much is needed for 5 batches?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 5 \times \frac{3}{4} = \frac{15}{4} = 3\frac{3}{4} \text{ cups} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with fraction multiplication and percentages</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

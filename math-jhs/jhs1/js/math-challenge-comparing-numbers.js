@@ -587,7 +587,6 @@ const allQuestions = {
         videoSolution: ""
     }
     ],
-
     2: [
     {
         text: "Which number is 1 million less than 1 billion?",
@@ -1177,253 +1176,284 @@ const allQuestions = {
     }
     ], 
     6: [
-        // Level 6 questions would go here
-      // Follow same format as level 1
-        {
-            text: "A store has 3 blocks + 7 flats of product. They sell 1 block + 2 flats + 5 rods in a day. How much inventory remains?",
-            answers: ["1,450 cubes", "2,450 cubes", "1,550 cubes", "2,550 cubes"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 4 rods + 3 cubes of goods every hour. How many cubes are made in an 8-hour shift?",
-            answers: ["344 cubes", "434 cubes", "3,440 cubes", "4,340 cubes"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Sarah saves 2 flats + 5 rods weekly. How many cubes does she save in 4 weeks?",
-            answers: ["100", "250", "1,000", "10,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A wall is 0.5 blocks + 2 flats tall. How many cubes is the height?",
-            answers: ["520", "700", "1,200", "7,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A Gh₵1,000.00 phone is discounted by 3 rods + 2 cubes. What's the new price in cubes?",
-            answers: ["Gh₵968.00", "Gh₵986.00", "Gh₵698.00", "Gh₵896.00"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A farmer harvests 5 blocks + 4 flats of corn. If 1 flat spoils, how much remains?",
-            answers: ["5,500", "530", "5,400", "5,300"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A truck carries 2 blocks + 5 rods of sand per trip. How many cubes can it transport in 3 trips?",
-            answers: ["2,500", "2,050", "615", "6,150"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Water boils at 1 flat °C. If it cools by 3 rods °C, what's the new temperature?",
-            answers: ["30°C", "70°C", "130°C", "170°C"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A runner completes 1 block + 2 flats meters in a race. How many meters is that?",
-            answers: ["1,002", "1,020", "1,200", "12,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A cake requires 3 rods + 4 cubes of flour. How much flour is needed for 5 cakes?",
-            answers: ["170", "107", "1,700", "17,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 3 blocks + \\(x\\) rods = 3,200 cubes, find the value of \\(x\\)?",
-            answers: ["2", "20", "200", "2,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is \\(\\dfrac{1}{2}\\) block + \\(\\dfrac{1}{4}\\) flat in cubes?",
-            answers: ["525", "600", "1,025", "1,250"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If \\(x\\) rods = 1 flat, what is \\(x\\)?",
-            answers: ["15", "5", "20", "10"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A store has 5 blocks of inventory. It sells 2 blocks + 3 flats + 4 rods on Monday. How much remains?",
-            answers: ["2,660", "2,340", "4,340", "1,640"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which is greater: 0.6 blocks or 7 flats?",
-            answers: ["0.6 blocks", "7 flats", "They are equal", "Not enough information"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, how many flats are in 50 rods?",
-            answers: ["0.5", "5", "50", "500"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank has 4,500 cubes of water. How many full blocks + flats is this?",
-            answers: ["4 blocks + 5 flats", "5 blocks + 4 flats", "3 blocks + 15 flats", "2 blocks + 25 flats"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.3 blocks - 15 rods?",
-            answers: ["150", "15", "1,500", "0"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 10 flats, and 1 flat = 10 rods, how many rods are in 2 blocks?",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A construction project needs 12,000 cubes of concrete. How many full blocks are required?",
-            answers: ["12", "120", "1,200", "1.2"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
+    {
+        "text": "What is the sum of 7.8 billion and 9.25 billion, expressed in millions?",
+        "answers": ["17,050 million", "16,500 million", "17,500 million", "16,050 million"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Compare: (2.7 billion ÷ 4.5) ___ (600 million × 1)",
+        "answers": [">", "<", "=", "≠"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If you subtract 375.25 million from 5.5 billion, what remains?",
+        "answers": ["5,124,750,000", "5,125,000,000", "5,124,000,000", "5,125,750,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is 62.5% of 7.2 billion?",
+        "answers": ["4.5 billion", "4.8 billion", "4.2 billion", "4.0 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which expression equals 2.4 billion?",
+        "answers": [
+            "(7.2 billion ÷ 3) + (300 million × 2)",
+            "(1.5 billion × 2) - 600 million",
+            "(9.6 billion ÷ 4) + 0 million",
+            "All of the above"
+        ],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "Round 12,845,372,619 to the nearest hundred million",
+        "answers": ["12,800,000,000", "12,900,000,000", "12,850,000,000", "12,700,000,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If A = 24.8 billion and B = 24,799,999,999, then A - B =",
+        "answers": ["1", "10", "100", "1,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "How many times greater is 5.4 billion than 36 million?",
+        "answers": ["150", "15", "1,500", "150,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which number is 125 million less than 6.3 billion?",
+        "answers": ["6,175,000,000", "6,150,000,000", "6,125,000,000", "6,200,000,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If you divide 18.6 billion by 400, what is the result?",
+        "answers": ["46.5 million", "465 million", "4.65 million", "465,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which digit in 12,345,678,900 has a place value of 10 billion?",
+        "answers": ["1", "2", "3", "4"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the product of 825 million and 12?",
+        "answers": ["9.9 billion", "99 billion", "9.09 billion", "9.0 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If 14.4 billion = 144 × N, what is N?",
+        "answers": ["10 million", "100 million", "1 billion", "10 billion"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which interval includes numbers from 4.85 billion to 5.15 billion, excluding 5 billion?",
+        "answers": [
+            "4,850,000,000 ≤ X < 5,000,000,000",
+            "4,850,000,000 < X ≤ 5,150,000,000",
+            "4,850,000,000 ≤ X ≤ 5,150,000,000, X ≠ 5,000,000,000",
+            "5,000,000,000 < X ≤ 5,150,000,000"
+        ],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If 10.8 billion is split equally among 12 countries, how much per country?",
+        "answers": ["900 million", "90 million", "9 billion", "9 million"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the missing term: 6.3 billion, 5.6 billion, ___, 4.2 billion, 3.5 billion?",
+        "answers": ["4.9 billion", "4.8 billion", "4.7 billion", "4.6 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which is NOT equal to 3.25 billion?",
+        "answers": [
+            "3,250 million",
+            "13/4 of 1 billion",
+            "325 × 10 million",
+            "4 billion - 1 billion"
+        ],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "If a number is 1/8 of 24 billion, what is 30% of that number?",
+        "answers": ["900 million", "3 billion", "1.5 billion", "1.8 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which comparison is true?",
+        "answers": [
+            "3.6 billion + 900 million > 4.6 billion",
+            "37.5% of 8 billion = 3 billion",
+            "1.1 billion × 4 < 4.4 billion",
+            "All are true"
+        ],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the next number in the pattern: 375 million, 3.75 billion, 37.5 billion, ___?",
+        "answers": ["375 billion", "3.75 trillion", "187.5 billion", "75 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    }
     ], 
     7: [
-        // Level 7 questions would go here
-      // Follow same format as level 1
-        {
-            text: "If 5 rods + \\(x\\) cubes = 1 flat, what is the value of \\(x\\)?",
-            answers: ["40", "50", "60", "100"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is \\(\\dfrac{3}{4}\\) block - 2 rods in cubes?",
-            answers: ["550", "650", "730", "800"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A truck carries 2 blocks + 3 flats of sand. It drops off 5 rods + 7 cubes. How much sand remains?",
-            answers: ["2,243", "2,343", "2,443", "2,543"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which is greater: 0.7 blocks or 6 flats + 5 rods?",
-            answers: ["0.7 blocks", "6 flats + 5 rods", "Equal", "Not comparable"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 150 rods = _____ blocks, what fills the blank?",
-            answers: ["0.15", "1.5", "15", "150"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A box weighs 3,050 cubes. How many full blocks + flats + rods is this?",
-            answers: ["3 blocks + 0 flats + 5 rods", "3 blocks + 5 flats + 0 rods", "30 blocks + 5 rods", "305 flats"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 5 flats, 1 flat = 2 rods, and 1 rod = 10 cubes, how many cubes are in 2 blocks?",
-            answers: ["100", "200", "1,000", "2,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A bakery uses 2 flats + 8 rods of flour daily. How much flour is used in 5 days?",
-            answers: ["1,400", "2,800", "14,000", "28,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.4 blocks \\(\\times\\) 5 rods? (Assume rod = 10 cubes)",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If A = \\(\\dfrac{1}{4}\\) block, B = 3 rods, and C = 0.2 flats, which is smallest?",
-            answers: ["A", "B", "C", "All equal"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A container holds 2.5 blocks of water. How many flats is this equivalent to?",
-            answers: ["2.5", "25", "250", "2,500"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = \\(x\\) rods, what is the value of \\(x\\)?",
-            answers: ["10", "100", "1,000", "10,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 3 blocks + 5 flats of goods daily. How many cubes are produced in 4 days?",
-            answers: ["1,400", "3,500", "14,000", "35,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is \\(\\dfrac{3}{4}\\) block + \\(\\dfrac{1}{5}\\) flat in cubes?",
-            answers: ["755", "770", "800", "850"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which quantity is largest?",
-            answers: ["0.6 blocks", "7 flats", "65 rods", "600 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A machine makes 2 rods + 5 cubes every minute. How much does it produce in 30 minutes?",
-            answers: ["75", "250", "750", "7500"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 cube = 1 gram, how many kilograms is 1 block?",
-            answers: ["1", "10", "100", "1,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A shipment contains 4,200 cubes. How many full blocks and flats is this?",
-            answers: ["4 blocks + 2 flats", "2 blocks + 4 flats", "42 flats", "420 rods"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "35% of a block equals how many rods?",
-            answers: ["3.5", "35", "350", "3,500"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Boxes hold 1 flat (100 cubes) each. How many boxes are needed for 3 blocks + 2 rods?",
-            answers: ["30", "31", "32", "40"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ]
+    {
+        "text": "What is 3.75 billion increased by 12.5%?",
+        "answers": ["4.21875 billion", "4.5 billion", "4.125 billion", "4.3125 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If (4.8 billion ÷ 0.6) = (X × 800 million), what is X?",
+        "answers": ["10", "100", "1", "0.1"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the difference between 18.9 billion and the product of 2.7 billion and 7?",
+        "answers": ["0", "1 million", "100 million", "1 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which is greater: 37.5% of 12.8 billion or 5/8 of 7.68 billion?",
+        "answers": ["They are equal", "37.5% of 12.8 billion", "5/8 of 7.68 billion", "Cannot be determined"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If 15 billion is divided in a 3:5 ratio, what is the larger share?",
+        "answers": ["9.375 billion", "5.625 billion", "8.5 billion", "6.5 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is 1.44 billion expressed as a percentage of 18 billion?",
+        "answers": ["8%", "12%", "6%", "10%"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which expression equals 7.2 billion?",
+        "answers": [
+            "(28.8 billion ÷ 4) + 0",
+            "(1.8 billion × 4) + 0",
+            "(10.8 billion × ⅔)",
+            "All of the above"
+        ],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "If A = 5.6 billion and B = 5,599,999,999, then A - B =",
+        "answers": ["1", "10", "100", "1,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "How many times greater is 6.3 billion than 42 million?",
+        "answers": ["150", "15", "1,500", "15,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which number is 225 million more than 8.775 billion?",
+        "answers": ["9 billion", "8.9 billion", "9.1 billion", "9.2 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If you divide 25.2 billion by 600, what is the result?",
+        "answers": ["42 million", "420 million", "4.2 million", "420,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which digit in 45,678,901,234 has a place value of 50 billion?",
+        "answers": ["4", "5", "6", "7"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the product of 675 million and 16?",
+        "answers": ["10.8 billion", "108 billion", "1.08 billion", "108 million"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If 19.2 billion = 192 × N, what is N?",
+        "answers": ["10 million", "100 million", "1 billion", "10 billion"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which interval includes numbers from 7.25 billion to 7.75 billion, excluding 7.5 billion?",
+        "answers": [
+            "7,250,000,000 ≤ X < 7,500,000,000",
+            "7,250,000,000 < X ≤ 7,750,000,000",
+            "7,250,000,000 ≤ X ≤ 7,750,000,000, X ≠ 7,500,000,000",
+            "7,500,000,000 < X ≤ 7,750,000,000"
+        ],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If 13.5 billion is split equally among 15 countries, how much per country?",
+        "answers": ["900 million", "90 million", "9 billion", "9 million"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the missing term: 8.4 billion, 7.7 billion, ___, 6.3 billion, 5.6 billion?",
+        "answers": ["7 billion", "6.8 billion", "6.5 billion", "6.2 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which is NOT equal to 4.5 billion?",
+        "answers": [
+            "4,500 million",
+            "9/2 of 1 billion",
+            "450 × 10 million",
+            "5 billion - 1 billion"
+        ],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "If a number is 1/6 of 30 billion, what is 40% of that number?",
+        "answers": ["2 billion", "1.5 billion", "1.8 billion", "2.5 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the next number in the pattern: 625 million, 6.25 billion, 62.5 billion, ___?",
+        "answers": ["625 billion", "6.25 trillion", "312.5 billion", "125 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    }
+]
   };
 
 // Start the game when the page loads

@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Word Problems (Fractions) | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to solve word problems involving addition and subtraction of fractions.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Word Problems (Fractions) | JHS Mathematics">
+        <meta property="og:description" content="Learn to solve word problems involving addition and subtraction of fractions.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/fractions">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Word Problems (Fractions)</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Fractions</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Word Problems</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#addition"><i class="fas fa-chevron-right"></i> Addition Problems</a></li>
+                                <li><a href="#subtraction"><i class="fas fa-chevron-right"></i> Subtraction Problems</a></li>
+                                <li><a href="#mixed"><i class="fas fa-chevron-right"></i> Mixed Problems</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Word_Problems_Fractions</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Word problems with fractions help us solve real-life situations involving parts of wholes. To solve these problems, we need to understand what the question is asking and then translate it into mathematical operations with fractions.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Key Steps:</strong></p>
+                                    <ol>
+                                        <li>Read the problem carefully</li>
+                                        <li>Identify what is being asked</li>
+                                        <li>Determine which fractions are involved</li>
+                                        <li>Decide whether to add or subtract</li>
+                                        <li>Find a common denominator if needed</li>
+                                        <li>Perform the calculation</li>
+                                        <li>Simplify your answer</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Fraction Word Problems
+                                </h3>
+                                <p>
+                                    When solving fraction word problems, pay attention to these key words:
+                                </p>
+                                <ul>
+                                    <li><strong>Addition words:</strong> total, sum, combined, altogether, in all</li>
+                                    <li><strong>Subtraction words:</strong> difference, remaining, left, more than, less than</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: "Mary ate \(\frac{1}{4}\) of the pizza and John ate \(\frac{1}{3}\). What fraction of the pizza was eaten altogether?"</p>
+                                    <p>This is an addition problem: \(\frac{1}{4} + \frac{1}{3}\)</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Addition Problems Section -->
+                        <section id="addition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-plus-circle"></i> Addition Problems
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Solving Addition Problems
+                                </h3>
+                                <p>
+                                    To add fractions in word problems:
+                                </p>
+                                <ol>
+                                    <li>Identify the fractions to be added</li>
+                                    <li>Find a common denominator</li>
+                                    <li>Convert each fraction to have this denominator</li>
+                                    <li>Add the numerators</li>
+                                    <li>Simplify if possible</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Same Denominator</h4>
+                                        <p>Sarah walked \(\frac{2}{5}\) km to school and then \(\frac{1}{5}\) km to the store. How far did she walk in total?</p>
+                                        <div class="math-example">
+                                            \[ \frac{2}{5} + \frac{1}{5} = \frac{2+1}{5} = \frac{3}{5} \text{ km} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Different Denominators</h4>
+                                        <p>A recipe calls for \(\frac{1}{2}\) cup of flour and \(\frac{1}{3}\) cup of sugar. What is the total amount of dry ingredients?</p>
+                                        <div class="math-example">
+                                            <p>Find common denominator (6):</p>
+                                            \[ \frac{1}{2} = \frac{3}{6}, \frac{1}{3} = \frac{2}{6} \]
+                                            \[ \frac{3}{6} + \frac{2}{6} = \frac{5}{6} \text{ cup} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pencil-alt"></i> Practice Addition Problems
+                                </h3>
+                                <div class="math-example">
+                                    <p><strong>Problem 1:</strong> Tom drank \(\frac{1}{4}\) liter of milk in the morning and \(\frac{3}{8}\) liter in the evening. How much milk did he drink in total?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Common denominator is 8:</p>
+                                        \[ \frac{1}{4} = \frac{2}{8} \]
+                                        \[ \frac{2}{8} + \frac{3}{8} = \frac{5}{8} \text{ liter} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Problem 2:</strong> A farmer planted \(\frac{2}{7}\) of his field with corn and \(\frac{3}{7}\) with wheat. What fraction of the field is planted?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{2}{7} + \frac{3}{7} = \frac{5}{7} \text{ of the field} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                            
+                        <!-- Subtraction Problems Section -->
+                        <section id="subtraction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-minus-circle"></i> Subtraction Problems
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Solving Subtraction Problems
+                                </h3>
+                                <p>
+                                    To subtract fractions in word problems:
+                                </p>
+                                <ol>
+                                    <li>Identify the fractions involved</li>
+                                    <li>Find a common denominator</li>
+                                    <li>Convert each fraction to have this denominator</li>
+                                    <li>Subtract the numerators</li>
+                                    <li>Simplify if possible</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Same Denominator</h4>
+                                        <p>A tank had \(\frac{7}{8}\) gallons of water. \(\frac{3}{8}\) gallons were used. How much water remains?</p>
+                                        <div class="math-example">
+                                            \[ \frac{7}{8} - \frac{3}{8} = \frac{4}{8} = \frac{1}{2} \text{ gallon} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Different Denominators</h4>
+                                        <p>Mary had \(\frac{3}{4}\) meter of ribbon. She used \(\frac{1}{3}\) meter for a project. How much ribbon is left?</p>
+                                        <div class="math-example">
+                                            <p>Common denominator (12):</p>
+                                            \[ \frac{3}{4} = \frac{9}{12}, \frac{1}{3} = \frac{4}{12} \]
+                                            \[ \frac{9}{12} - \frac{4}{12} = \frac{5}{12} \text{ meter} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pencil-alt"></i> Practice Subtraction Problems
+                                </h3>
+                                <div class="math-example">
+                                    <p><strong>Problem 1:</strong> A cake was cut into 6 equal slices. After dinner, \(\frac{5}{6}\) of the cake remained. The next day, \(\frac{1}{2}\) was eaten. How much cake is left now?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Common denominator is 6:</p>
+                                        \[ \frac{5}{6} - \frac{1}{2} = \frac{5}{6} - \frac{3}{6} = \frac{2}{6} = \frac{1}{3} \text{ of the cake} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Problem 2:</strong> A bottle contained \(\frac{7}{8}\) liter of juice. Sam drank \(\frac{1}{4}\) liter. How much juice remains?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Common denominator is 8:</p>
+                                        \[ \frac{7}{8} - \frac{1}{4} = \frac{7}{8} - \frac{2}{8} = \frac{5}{8} \text{ liter} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Mixed Problems Section -->
+                        <section id="mixed" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-random"></i> Mixed Problems
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Combined Addition and Subtraction
+                                </h3>
+                                <p>
+                                    Some word problems require both addition and subtraction operations. Read carefully to determine the correct sequence of operations.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1</h4>
+                                        <p>Lisa had \(\frac{5}{6}\) cup of flour. She used \(\frac{1}{3}\) cup for cookies and \(\frac{1}{4}\) cup for pancakes. How much flour is left?</p>
+                                        <div class="math-example">
+                                            <p>First add what was used, then subtract from total:</p>
+                                            <p>Common denominator is 12:</p>
+                                            \[ \frac{1}{3} + \frac{1}{4} = \frac{4}{12} + \frac{3}{12} = \frac{7}{12} \]
+                                            \[ \frac{5}{6} - \frac{7}{12} = \frac{10}{12} - \frac{7}{12} = \frac{3}{12} = \frac{1}{4} \text{ cup} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2</h4>
+                                        <p>A tank was \(\frac{2}{3}\) full. After adding \(\frac{1}{6}\) more, \(\frac{1}{2}\) was used. What fraction of the tank remains?</p>
+                                        <div class="math-example">
+                                            <p>First add, then subtract:</p>
+                                            <p>Common denominator is 6:</p>
+                                            \[ \frac{2}{3} + \frac{1}{6} = \frac{4}{6} + \frac{1}{6} = \frac{5}{6} \]
+                                            \[ \frac{5}{6} - \frac{1}{2} = \frac{5}{6} - \frac{3}{6} = \frac{2}{6} = \frac{1}{3} \text{ of the tank} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pencil-alt"></i> Practice Mixed Problems
+                                </h3>
+                                <div class="math-example">
+                                    <p><strong>Problem 1:</strong> A farmer harvested \(\frac{3}{5}\) of his crops on Monday and \(\frac{1}{4}\) on Tuesday. What fraction of crops remains to be harvested?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First add harvested portions:</p>
+                                        <p>Common denominator is 20:</p>
+                                        \[ \frac{3}{5} + \frac{1}{4} = \frac{12}{20} + \frac{5}{20} = \frac{17}{20} \]
+                                        <p>Then subtract from whole:</p>
+                                        \[ 1 - \frac{17}{20} = \frac{20}{20} - \frac{17}{20} = \frac{3}{20} \text{ remaining} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Problem 2:</strong> A rope was \(\frac{7}{8}\) meters long. \(\frac{1}{2}\) meter was cut off, then \(\frac{1}{4}\) meter was added. What is the new length?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First subtract, then add:</p>
+                                        <p>Common denominator is 8:</p>
+                                        \[ \frac{7}{8} - \frac{1}{2} = \frac{7}{8} - \frac{4}{8} = \frac{3}{8} \]
+                                        \[ \frac{3}{8} + \frac{1}{4} = \frac{3}{8} + \frac{2}{8} = \frac{5}{8} \text{ meter} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Emma read \(\frac{1}{3}\) of her book on Monday and \(\frac{1}{4}\) on Tuesday. What fraction of the book has she read?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Common denominator is 12:</p>
+                                        \[ \frac{1}{3} + \frac{1}{4} = \frac{4}{12} + \frac{3}{12} = \frac{7}{12} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A water tank was \(\frac{5}{6}\) full. After some was used, \(\frac{1}{3}\) remained. What fraction was used?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Common denominator is 6:</p>
+                                        \[ \frac{5}{6} - \frac{1}{3} = \frac{5}{6} - \frac{2}{6} = \frac{3}{6} = \frac{1}{2} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>John walked \(\frac{3}{4}\) km to school and then \(\frac{2}{5}\) km to the library. What was his total distance walked?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Common denominator is 20:</p>
+                                        \[ \frac{3}{4} + \frac{2}{5} = \frac{15}{20} + \frac{8}{20} = \frac{23}{20} = 1\frac{3}{20} \text{ km} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A pizza was divided into 8 slices. Mary ate 3 slices and John ate 2 slices. What fraction of the pizza was left?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Total eaten: \(\frac{3}{8} + \frac{2}{8} = \frac{5}{8}\)</p>
+                                        <p>Left: \(1 - \frac{5}{8} = \frac{3}{8}\)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>A recipe requires \(\frac{1}{2}\) cup sugar and \(\frac{1}{3}\) cup flour. How much more sugar than flour is needed?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Common denominator is 6:</p>
+                                        \[ \frac{1}{2} - \frac{1}{3} = \frac{3}{6} - \frac{2}{6} = \frac{1}{6} \text{ cup} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>A tank had \(\frac{3}{4}\) liter of oil. \(\frac{1}{2}\) liter was added, then \(\frac{1}{3}\) liter was used. How much oil is now in the tank?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First add: \(\frac{3}{4} + \frac{1}{2} = \frac{3}{4} + \frac{2}{4} = \frac{5}{4}\)</p>
+                                        <p>Then subtract: \(\frac{5}{4} - \frac{1}{3} = \frac{15}{12} - \frac{4}{12} = \frac{11}{12}\) liter</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with fraction word problems</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
