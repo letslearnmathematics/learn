@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Experimental Law | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Experimental Law for SHS2 Elective Mathematics. Learn how to establish mathematical relationships from experiments.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Experimental Law | Elective Mathematics">
+        <meta property="og:description" content="Master Experimental Law with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/experimental-law-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs2/experimental-law">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs2/css/experimental-law.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs2/css/math-challenge-experimental.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Experimental Law</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS2 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-flask"></i>
+                                <span>Experimental Law</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#direct-proportion"><i class="fas fa-chevron-right"></i> Direct Proportion</a></li>
+                                <li><a href="#inverse-proportion"><i class="fas fa-chevron-right"></i> Inverse Proportion</a></li>
+                                <li><a href="#joint-variation"><i class="fas fa-chevron-right"></i> Joint Variation</a></li>
+                                <li><a href="#exponential-relations"><i class="fas fa-chevron-right"></i> Exponential Relations</a></li>
+                                <li><a href="#logarithmic-relations"><i class="fas fa-chevron-right"></i> Logarithmic Relations</a></li>
+                                <li><a href="#practical-methods"><i class="fas fa-chevron-right"></i> Practical Methods</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs2">SHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Experimental Law</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-flask"></i> Introduction to Experimental Law
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Experimental law in mathematics involves establishing mathematical relationships between variables based on experimental data. This is crucial in scientific research and engineering applications.</p>
+                                
+                                <div class="key-points">
+                                    <div class="point-card">
+                                        <h3>Key Concepts</h3>
+                                        <ul>
+                                            <li><strong>Variables:</strong> Quantities that change in an experiment (independent and dependent)</li>
+                                            <li><strong>Relationship:</strong> How one variable changes with respect to another</li>
+                                            <li><strong>Constants:</strong> Fixed values in the relationship</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point-card">
+                                        <h3>Common Relationships</h3>
+                                        <ul>
+                                            <li>Direct proportion: \( y \propto x \)</li>
+                                            <li>Inverse proportion: \( y \propto \frac{1}{x} \)</li>
+                                            <li>Exponential relationships: \( y = ka^x \)</li>
+                                            <li>Logarithmic relationships: \( y = k\log x \)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>General Approach</h3>
+                                    <ol>
+                                        <li>Collect experimental data (x and y values)</li>
+                                        <li>Plot graphs to identify patterns</li>
+                                        <li>Test different relationships (linear, quadratic, etc.)</li>
+                                        <li>Determine constants in the relationship</li>
+                                        <li>Verify the established law with additional data</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Direct Proportion Section -->
+                        <section id="direct-proportion" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line"></i> Direct Proportion
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>When two quantities are directly proportional, their ratio remains constant. This creates a straight-line graph through the origin.</p>
+                                
+                                <div class="math-example">
+                                    \[ y \propto x \implies y = kx \]
+                                    <p>Where <em>k</em> is the constant of proportionality.</p>
+                                </div>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-table"></i>
+                                            <h3>From Data Table</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Check if \( \frac{y}{x} \) is constant for all data points.</p>
+                                            <div class="math-example">
+                                                <table>
+                                                    <tr><th>x</th><th>y</th><th>y/x</th></tr>
+                                                    <tr><td>1</td><td>3</td><td>3.0</td></tr>
+                                                    <tr><td>2</td><td>6</td><td>3.0</td></tr>
+                                                    <tr><td>3</td><td>9</td><td>3.0</td></tr>
+                                                    <tr><td>4</td><td>12</td><td>3.0</td></tr>
+                                                </table>
+                                                <p>Since \( \frac{y}{x} = 3 \) for all points, \( y = 3x \).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-chart-bar"></i>
+                                            <h3>From Graph</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>A straight line through the origin indicates direct proportion.</p>
+                                            <div class="graph-placeholder">
+                                                <img src="../../images/direct-proportion-graph.png" alt="Direct Proportion Graph" class="graph-img">
+                                            </div>
+                                            <p>Gradient (slope) = constant of proportionality</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="concept-box highlight-box">
+                                    <h3>Example Application</h3>
+                                    <p>Hooke's Law states that the extension of a spring is directly proportional to the force applied.</p>
+                                    <div class="math-example">
+                                        \[ F \propto x \implies F = kx \]
+                                        <p>Where <em>F</em> is force, <em>x</em> is extension, and <em>k</em> is the spring constant.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Inverse Proportion Section -->
+                        <section id="inverse-proportion" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line-down"></i> Inverse Proportion
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>When two quantities are inversely proportional, their product remains constant. The graph is a hyperbola.</p>
+                                
+                                <div class="math-example">
+                                    \[ y \propto \frac{1}{x} \implies y = \frac{k}{x} \]
+                                    <p>Where <em>k</em> is the constant of proportionality.</p>
+                                </div>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-table"></i>
+                                            <h3>From Data Table</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Check if \( y \times x \) is constant for all data points.</p>
+                                            <div class="math-example">
+                                                <table>
+                                                    <tr><th>x</th><th>y</th><th>y×x</th></tr>
+                                                    <tr><td>1</td><td>12</td><td>12</td></tr>
+                                                    <tr><td>2</td><td>6</td><td>12</td></tr>
+                                                    <tr><td>3</td><td>4</td><td>12</td></tr>
+                                                    <tr><td>4</td><td>3</td><td>12</td></tr>
+                                                </table>
+                                                <p>Since \( y \times x = 12 \) for all points, \( y = \frac{12}{x} \).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-chart-bar"></i>
+                                            <h3>From Graph</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>A hyperbola indicates inverse proportion.</p>
+                                            <div class="graph-placeholder">
+                                                <img src="../../images/inverse-proportion-graph.png" alt="Inverse Proportion Graph" class="graph-img">
+                                            </div>
+                                            <p>Plotting \( y \) against \( \frac{1}{x} \) gives a straight line through origin.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="concept-box highlight-box">
+                                    <h3>Example Application</h3>
+                                    <p>Boyle's Law states that for a fixed amount of gas at constant temperature, pressure is inversely proportional to volume.</p>
+                                    <div class="math-example">
+                                        \[ P \propto \frac{1}{V} \implies P = \frac{k}{V} \]
+                                        <p>Where <em>P</em> is pressure, <em>V</em> is volume, and <em>k</em> is a constant.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Joint Variation Section -->
+                        <section id="joint-variation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-project-diagram"></i> Joint Variation
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Joint variation occurs when a quantity varies directly with the product of two or more other quantities.</p>
+                                
+                                <div class="math-example">
+                                    \[ z \propto xy \implies z = kxy \]
+                                    <p>Where <em>k</em> is the constant of proportionality.</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point-card">
+                                        <h3>Identifying Joint Variation</h3>
+                                        <ol>
+                                            <li>Check if \( \frac{z}{xy} \) is constant for all data points</li>
+                                            <li>Alternatively, keep one variable constant and check direct proportion with the other</li>
+                                        </ol>
+                                    </div>
+                                    
+                                    <div class="point-card">
+                                        <h3>Example Problem</h3>
+                                        <p>The electrical resistance (R) of a wire varies directly with its length (L) and inversely with the square of its diameter (d). Establish the relationship.</p>
+                                        <div class="math-example">
+                                            \[ R \propto \frac{L}{d^2} \implies R = k\frac{L}{d^2} \]
+                                            <p>Where <em>k</em> is the resistivity of the material.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="concept-box highlight-box">
+                                    <h3>Practical Method</h3>
+                                    <ol>
+                                        <li>Vary one quantity while keeping others constant</li>
+                                        <li>Determine the relationship between the variables</li>
+                                        <li>Combine the individual relationships</li>
+                                        <li>Determine the proportionality constant using given data</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Exponential Relations Section -->
+                        <section id="exponential-relations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-exponential"></i> Exponential Relationships
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Exponential relationships occur when a quantity changes by a constant factor over equal intervals.</p>
+                                
+                                <div class="math-example">
+                                    \[ y = ka^x \]
+                                    <p>Where <em>k</em> is the initial value and <em>a</em> is the growth/decay factor.</p>
+                                </div>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-table"></i>
+                                            <h3>From Data Table</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Check if the ratio \( \frac{y_{n+1}}{y_n} \) is constant.</p>
+                                            <div class="math-example">
+                                                <table>
+                                                    <tr><th>x</th><th>y</th><th>y<sub>n+1</sub>/y<sub>n</sub></th></tr>
+                                                    <tr><td>0</td><td>5</td><td>-</td></tr>
+                                                    <tr><td>1</td><td>10</td><td>2.0</td></tr>
+                                                    <tr><td>2</td><td>20</td><td>2.0</td></tr>
+                                                    <tr><td>3</td><td>40</td><td>2.0</td></tr>
+                                                </table>
+                                                <p>Since the ratio is constant, \( y = 5 \times 2^x \).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-chart-bar"></i>
+                                            <h3>From Graph</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>An exponential curve that increases or decreases rapidly.</p>
+                                            <div class="graph-placeholder">
+                                                <img src="../../images/exponential-graph.png" alt="Exponential Graph" class="graph-img">
+                                            </div>
+                                            <p>Plotting \( \log y \) against \( x \) gives a straight line.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="concept-box highlight-box">
+                                    <h3>Example Application</h3>
+                                    <p>Radioactive decay follows an exponential relationship:</p>
+                                    <div class="math-example">
+                                        \[ N(t) = N_0 e^{-\lambda t} \]
+                                        <p>Where \( N_0 \) is initial quantity, \( \lambda \) is decay constant, and \( t \) is time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Logarithmic Relations Section -->
+                        <section id="logarithmic-relations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-logarithmic"></i> Logarithmic Relationships
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Logarithmic relationships occur when the rate of change decreases as the independent variable increases.</p>
+                                
+                                <div class="math-example">
+                                    \[ y = a + b\ln x \]
+                                    <p>Where <em>a</em> and <em>b</em> are constants.</p>
+                                </div>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-table"></i>
+                                            <h3>From Data Table</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Check if plotting \( y \) against \( \ln x \) gives a straight line.</p>
+                                            <div class="math-example">
+                                                <table>
+                                                    <tr><th>x</th><th>ln x</th><th>y</th></tr>
+                                                    <tr><td>1</td><td>0</td><td>2</td></tr>
+                                                    <tr><td>2.718</td><td>1</td><td>5</td></tr>
+                                                    <tr><td>7.389</td><td>2</td><td>8</td></tr>
+                                                    <tr><td>20.086</td><td>3</td><td>11</td></tr>
+                                                </table>
+                                                <p>Since \( y \) increases linearly with \( \ln x \), \( y = 2 + 3\ln x \).</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-chart-bar"></i>
+                                            <h3>From Graph</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>A logarithmic curve that increases rapidly then levels off.</p>
+                                            <div class="graph-placeholder">
+                                                <img src="../../images/logarithmic-graph.png" alt="Logarithmic Graph" class="graph-img">
+                                            </div>
+                                            <p>Plotting \( y \) against \( \ln x \) linearizes the relationship.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="concept-box highlight-box">
+                                    <h3>Example Application</h3>
+                                    <p>The Weber-Fechner law in psychology states that perceived intensity is proportional to the logarithm of actual intensity.</p>
+                                    <div class="math-example">
+                                        \[ P = k\ln S \]
+                                        <p>Where <em>P</em> is perceived intensity and <em>S</em> is stimulus intensity.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Practical Methods Section -->
+                        <section id="practical-methods" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-tools"></i> Practical Methods for Determining Laws
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3>Step-by-Step Approach</h3>
+                                <div class="method-steps">
+                                    <div class="step-card">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Collect Data</h4>
+                                            <p>Record accurate measurements of the variables under investigation.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-card">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Plot Graphs</h4>
+                                            <p>Plot y against x, y against 1/x, log y against x, etc. to identify patterns.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-card">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Identify Linear Form</h4>
+                                            <p>Find the transformation that produces a straight-line graph.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-card">
+                                        <div class="step-number">4</div>
+                                        <div class="step-content">
+                                            <h4>Determine Constants</h4>
+                                            <p>Use the gradient and intercept to find constants in the relationship.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="step-card">
+                                        <div class="step-number">5</div>
+                                        <div class="step-content">
+                                            <h4>Verify the Law</h4>
+                                            <p>Test the established law with additional experimental data.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="concept-box highlight-box">
+                                    <h3>Common Transformations</h3>
+                                    <table class="transformation-table">
+                                        <tr>
+                                            <th>Suspected Relationship</th>
+                                            <th>Graph to Plot</th>
+                                            <th>What to Expect</th>
+                                        </tr>
+                                        <tr>
+                                            <td>\( y = kx^n \)</td>
+                                            <td>log y vs log x</td>
+                                            <td>Straight line with gradient n</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\( y = ka^x \)</td>
+                                            <td>log y vs x</td>
+                                            <td>Straight line with gradient log a</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\( y = k/x \)</td>
+                                            <td>y vs 1/x</td>
+                                            <td>Straight line through origin</td>
+                                        </tr>
+                                        <tr>
+                                            <td>\( y = a + b\ln x \)</td>
+                                            <td>y vs ln x</td>
+                                            <td>Straight line with gradient b</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Worked Example</h3>
+                                    <p>Given the following data, determine the relationship between x and y:</p>
+                                    <table>
+                                        <tr><th>x</th><th>1</th><th>2</th><th>3</th><th>4</th></tr>
+                                        <tr><th>y</th><th>8</th><td>32</td><td>72</td><td>128</td></tr>
+                                    </table>
+                                    <p><strong>Solution:</strong></p>
+                                    <ol>
+                                        <li>Test for direct proportion: \( \frac{y}{x} \) values are 8, 16, 24, 32 → not constant</li>
+                                        <li>Test for \( y = kx^n \) by plotting log y vs log x:</li>
+                                        <table>
+                                            <tr><th>log x</th><td>0</td><td>0.301</td><td>0.477</td><td>0.602</td></tr>
+                                            <tr><th>log y</th><td>0.903</td><td>1.505</td><td>1.857</td><td>2.107</td></tr>
+                                        </table>
+                                        <li>Gradient ≈ 2 (power relationship), intercept ≈ 0.903 (log k)</li>
+                                        <li>Thus \( y = 8x^2 \) (since \( 10^{0.903} ≈ 8 \))</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>The following data shows how quantity y varies with x. Determine the relationship.</p>
+                                    <table>
+                                        <tr><th>x</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                                        <tr><th>y</th><td>5</td><td>20</td><td>45</td><td>80</td></tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Testing \( y = kx^n \):</p>
+                                        <p>Plotting log y vs log x gives a straight line with gradient 2 and intercept 0.699 (log 5).</p>
+                                        <p>Thus \( y = 5x^2 \).</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>In an experiment, the following values were recorded. Find the law connecting P and Q.</p>
+                                    <table>
+                                        <tr><th>Q</th><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+                                        <tr><th>P</th><td>12</td><td>6</td><td>4</td><td>3</td></tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Testing \( P \times Q \) gives 12 for all points.</p>
+                                        <p>Thus \( P = \frac{12}{Q} \) (inverse proportion).</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>The following data shows exponential growth. Determine the equation.</p>
+                                    <table>
+                                        <tr><th>t</th><td>0</td><td>1</td><td>2</td><td>3</td></tr>
+                                        <tr><th>N</th><td>10</td><td>20</td><td>40</td><td>80</td></tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>The ratio \( \frac{N_{n+1}}{N_n} = 2 \) is constant.</p>
+                                        <p>Thus \( N = 10 \times 2^t \).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/experimental-law" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your experimental law skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs2/js/math-challenge-experimental.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs2/js/experimental-law.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

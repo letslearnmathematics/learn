@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Indices & Logarithms | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Indices and Logarithms for SHS2 Elective Mathematics. Learn laws, equations, and applications.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Indices & Logarithms | Elective Mathematics">
+        <meta property="og:description" content="Master Indices and Logarithms with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/indices-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs2/indices">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs2/css/indices.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs2/css/math-challenge-indices.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Indices & Logarithms</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS2 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-calculator"></i>
+                                <span>Indices & Logs</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#laws-indices" class="active"><i class="fas fa-chevron-right"></i> Laws of Indices</a></li>
+                                <li><a href="#equations-indices"><i class="fas fa-chevron-right"></i> Equations with Indices</a></li>
+                                <li><a href="#laws-logs"><i class="fas fa-chevron-right"></i> Laws of Logarithms</a></li>
+                                <li><a href="#equations-logs"><i class="fas fa-chevron-right"></i> Logarithmic Equations</a></li>
+                                <li><a href="#change-base"><i class="fas fa-chevron-right"></i> Change of Base</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs1">SHS1</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Indices & Logs</span>
+                        </nav>
+
+                        <!-- Laws of Indices Section -->
+                        <section id="laws-indices" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-superscript"></i> Laws of Indices
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Indices (or exponents) are a shorthand way of showing how many times a number is multiplied by itself. The general form is:</p>
+                                
+                                <div class="math-example">
+                                    \[ a^n = \underbrace{a \times a \times \cdots \times a}_{n \text{ times}} \]
+                                    <p>Where <em>a</em> is the base and <em>n</em> is the index/exponent.</p>
+                                </div>
+
+                                <h3 class="subsection-title">Fundamental Laws of Indices</h3>
+                                
+                                <div class="key-points">
+                                    
+                                    
+                                    <div class="law-card">
+                                        <h4>1. Multiplication Law</h4>
+                                        \[ a^m \times a^n = a^{m+n} \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ 2^3 \times 2^4 = 2^{3+4} = 2^7 = 128 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>2. Division Law</h4>
+                                        \[ \frac{a^m}{a^n} = a^{m-n} \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ \frac{5^6}{5^2} = 5^{6-2} = 5^4 = 625 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>3. Power of a Power</h4>
+                                        \[ (a^m)^n = a^{m \times n} \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ (3^2)^4 = 3^{2 \times 4} = 3^8 = 6561 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>4. Zero Exponent</h4>
+                                        \[ a^0 = 1 \quad (a \neq 0) \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ 7^0 = 1 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>5. Negative Exponent</h4>
+                                        \[ a^{-n} = \frac{1}{a^n} \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ 2^{-3} = \frac{1}{2^3} = \frac{1}{8} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>6. Fractional Exponent</h4>
+                                        \[ a^{1/n} = \sqrt[n]{a} \]
+                                        \[ a^{m/n} = (\sqrt[n]{a})^m \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ 8^{2/3} = (\sqrt[3]{8})^2 = 2^2 = 4 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">Special Cases</h3>
+                                <div class="special-cases">
+                                    <div class="case-card">
+                                        <h4>Same Exponent</h4>
+                                        \[ a^n \times b^n = (a \times b)^n \]
+                                        <div class="math-example">
+                                            \[ 2^3 \times 5^3 = (2 \times 5)^3 = 10^3 = 1000 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="case-card">
+                                        <h4>Roots as Indices</h4>
+                                        \[ \sqrt{a} = a^{1/2} \]
+                                        \[ \sqrt[n]{a} = a^{1/n} \]
+                                        <div class="math-example">
+                                            \[ \sqrt{25} = 25^{1/2} = 5 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Equations with Indices Section -->
+                        <section id="equations-indices" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-equals"></i> Equations Involving Indices
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>To solve equations with indices, we often express both sides with the same base and then equate the exponents.</p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-bolt"></i>
+                                            <h3>Method 1: Same Base</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>If \( a^m = a^n \) then \( m = n \) (for \( a \neq 0, 1 \))</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                \[ 3^{2x+1} = 3^{x-3} \]
+                                                \[ \Rightarrow 2x + 1 = x - 3 \]
+                                                \[ \Rightarrow x = -4 \]
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-exchange-alt"></i>
+                                            <h3>Method 2: Different Bases</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Express both sides as powers of the same base</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                \[ 8^{x} = 16^{x-1} \]
+                                                \[ (2^3)^x = (2^4)^{x-1} \]
+                                                \[ 2^{3x} = 2^{4x-4} \]
+                                                \[ \Rightarrow 3x = 4x - 4 \]
+                                                \[ \Rightarrow x = 4 \]
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-subscript"></i>
+                                            <h3>Method 3: Substitution</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Use substitution for complex equations</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                \[ 2^{2x} - 5 \times 2^x + 4 = 0 \]
+                                                Let \( y = 2^x \):
+                                                \[ y^2 - 5y + 4 = 0 \]
+                                                \[ (y-1)(y-4) = 0 \]
+                                                \[ y = 1 \text{ or } 4 \]
+                                                \[ 2^x = 1 \Rightarrow x = 0 \]
+                                                \[ 2^x = 4 \Rightarrow x = 2 \]
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">Common Pitfalls</h3>
+                                <div class="pitfalls">
+                                    <div class="pitfall-card">
+                                        <h4>Base = 1</h4>
+                                        <p>Remember \( 1^n = 1 \) for any <em>n</em>. The equation \( 1^x = 1^5 \) has infinite solutions!</p>
+                                    </div>
+                                    
+                                    <div class="pitfall-card">
+                                        <h4>Base = 0</h4>
+                                        <p>\( 0^n = 0 \) for \( n > 0 \), but \( 0^0 \) is undefined.</p>
+                                    </div>
+                                    
+                                    <div class="pitfall-card">
+                                        <h4>Negative Bases</h4>
+                                        <p>Be careful with even roots of negative numbers: \( (-1)^{1/2} \) is not real.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Laws of Logarithms Section -->
+                        <section id="laws-logs" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Laws of Logarithms
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A logarithm answers the question: "To what power must the base be raised to get this number?"</p>
+                                
+                                <div class="math-example">
+                                    \[ \log_b a = c \iff b^c = a \]
+                                    <p>Where <em>b</em> is the base, <em>a</em> is the argument, and <em>c</em> is the logarithm.</p>
+                                </div>
+
+                                <h3 class="subsection-title">Fundamental Laws of Logarithms</h3>
+
+                                <div class="key-points">
+                                    <div class="law-card">
+                                        <h4>1. Product Law</h4>
+                                        \[ \log_b (xy) = \log_b x + \log_b y \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ \log_2 (8 \times 4) = \log_2 8 + \log_2 4 = 3 + 2 = 5 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>2. Quotient Law</h4>
+                                        \[ \log_b \left(\frac{x}{y}\right) = \log_b x - \log_b y \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ \log_{10} \left(\frac{1000}{10}\right) = \log_{10} 1000 - \log_{10} 10 = 3 - 1 = 2 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>3. Power Law</h4>
+                                        \[ \log_b (x^n) = n \log_b x \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ \log_3 (81^2) = 2 \log_3 81 = 2 \times 4 = 8 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>4. Change of Base</h4>
+                                        \[ \log_b a = \frac{\log_k a}{\log_k b} \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ \log_2 5 = \frac{\log_{10} 5}{\log_{10} 2} \approx \frac{0.6990}{0.3010} \approx 2.3219 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>5. Logarithm of 1</h4>
+                                        \[ \log_b 1 = 0 \]
+                                        <div class="math-example">
+                                            <p>Because \( b^0 = 1 \) for any base \( b \).</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>6. Logarithm of Base</h4>
+                                        \[ \log_b b = 1 \]
+                                        <div class="math-example">
+                                            <p>Because \( b^1 = b \).</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">Special Logarithmic Forms</h3>
+                                <div class="special-forms">
+                                    <div class="form-card">
+                                        <h4>Common Logarithm</h4>
+                                        \[ \log_{10} x \text{ (Base 10, often written as } \log x) \]
+                                    </div>
+                                    
+                                    <div class="form-card">
+                                        <h4>Natural Logarithm</h4>
+                                        \[ \log_e x \text{ (Base e ≈ 2.718, written as } \ln x) \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Logarithmic Equations Section -->
+                        <section id="equations-logs" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-balance-scale"></i> Equations Involving Logarithms
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Logarithmic equations can be solved by converting them to exponential form or using logarithmic identities.</p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-exchange-alt"></i>
+                                            <h3>Method 1: Exponential Conversion</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Convert from logarithmic to exponential form</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                \[ \log_2 (x + 3) = 4 \]
+                                                \[ \Rightarrow x + 3 = 2^4 \]
+                                                \[ x + 3 = 16 \]
+                                                \[ x = 13 \]
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-compress"></i>
+                                            <h3>Method 2: Condensing Logs</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Combine multiple log terms into one</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                \[ \log x + \log (x-3) = 1 \]
+                                                \[ \log [x(x-3)] = 1 \]
+                                                \[ x(x-3) = 10^1 \]
+                                                \[ x^2 - 3x - 10 = 0 \]
+                                                \[ (x-5)(x+2) = 0 \]
+                                                \[ x = 5 \text{ (since } x > 0) \]
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-expand"></i>
+                                            <h3>Method 3: Expanding Logs</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Break complex log expressions into simpler parts</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                \[ \log \left(\frac{x^2 \sqrt{y}}{z}\right) = 2\log x + \frac{1}{2}\log y - \log z \]
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">Important Considerations</h3>
+                                <ul class="considerations">
+                                    <li><strong>Domain Restrictions:</strong> \( \log_b a \) is only defined when \( a > 0 \) and \( b > 0, b \neq 1 \)</li>
+                                    <li><strong>Check Solutions:</strong> Always verify that solutions satisfy the original equation's domain</li>
+                                    <li><strong>Graphical Interpretation:</strong> Logarithmic functions are only defined for positive real numbers</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Change of Base Section -->
+                        <section id="change-base" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-retweet"></i> Change of Base Formula
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>The change of base formula allows us to evaluate logarithms with any base using logarithms of another base.</p>
+                                
+                                <div class="math-example">
+                                    \[ \log_b a = \frac{\log_k a}{\log_k b} \]
+                                    <p>Where <em>k</em> is any positive number (commonly 10 or <em>e</em>).</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Practical Applications:</h4>
+                                        <ul>
+                                            <li>Calculators typically only have \( \log_{10} \) and \( \ln \) buttons</li>
+                                            <li>Allows conversion between different logarithmic bases</li>
+                                            <li>Useful for solving equations with different bases</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Examples:</h4>
+                                        <div class="math-example">
+                                            <p>Evaluate \( \log_3 7 \):</p>
+                                            \[ \log_3 7 = \frac{\log_{10} 7}{\log_{10} 3} \approx \frac{0.8451}{0.4771} \approx 1.7712 \]
+                                            
+                                            <p>Solve \( \log_4 x = \log_2 5 \):</p>
+                                            \[ \frac{\log_2 x}{\log_2 4} = \log_2 5 \]
+                                            \[ \frac{\log_2 x}{2} = \log_2 5 \]
+                                            \[ \log_2 x = 2\log_2 5 \]
+                                            \[ x = 5^2 = 25 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-lightbulb"></i> Applications of Indices & Logarithms
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Indices and logarithms have wide-ranging applications in science, engineering, and finance.</p>
+                                
+                                <div class="application-cards">
+                                    <div class="app-card">
+                                        <h4>1. Exponential Growth/Decay</h4>
+                                        \[ P(t) = P_0 e^{kt} \]
+                                        <p>Population growth, radioactive decay, etc.</p>
+                                    </div>
+                                    
+                                    <div class="app-card">
+                                        <h4>2. pH Scale (Chemistry)</h4>
+                                        \[ \text{pH} = -\log_{10} [\text{H}^+] \]
+                                        <p>Measures acidity/alkalinity</p>
+                                    </div>
+                                    
+                                    <div class="app-card">
+                                        <h4>3. Richter Scale (Seismology)</h4>
+                                        \[ M = \log_{10} A - \log_{10} A_0 \]
+                                        <p>Measures earthquake magnitude</p>
+                                    </div>
+                                    
+                                    <div class="app-card">
+                                        <h4>4. Compound Interest</h4>
+                                        \[ A = P \left(1 + \frac{r}{n}\right)^{nt} \]
+                                        <p>Calculating investment growth</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Real-World Example</h3>
+                                    <p>A bacteria culture doubles every 3 hours. If initially there are 500 bacteria, how long will it take to reach 50,000?</p>
+                                    <p><strong>Solution:</strong></p>
+                                    \[ P(t) = P_0 \times 2^{t/3} \]
+                                    \[ 50,000 = 500 \times 2^{t/3} \]
+                                    \[ 100 = 2^{t/3} \]
+                                    \[ \log_{10} 100 = \frac{t}{3} \log_{10} 2 \]
+                                    \[ 2 = \frac{t}{3} \times 0.3010 \]
+                                    \[ t \approx 19.93 \text{ hours} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Simplify \( \frac{3^{2x+1} \times 9^{x-1}}{27^x} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ = \frac{3^{2x+1} \times (3^2)^{x-1}}{(3^3)^x} \]
+                                        \[ = \frac{3^{2x+1} \times 3^{2x-2}}{3^{3x}} \]
+                                        \[ = 3^{(2x+1+2x-2)-3x} = 3^{x-1} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve for <em>x</em>: \( \log_3 (x+1) + \log_3 (x-1) = 1 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \log_3 [(x+1)(x-1)] = 1 \]
+                                        \[ x^2 - 1 = 3^1 \]
+                                        \[ x^2 = 4 \]
+                                        \[ x = 2 \text{ (x > 1)} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Evaluate \( \log_2 5 \times \log_5 8 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ = \frac{\ln 5}{\ln 2} \times \frac{\ln 8}{\ln 5} = \frac{\ln 8}{\ln 2} \]
+                                        \[ = \frac{\ln 2^3}{\ln 2} = \frac{3\ln 2}{\ln 2} = 3 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/indices" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your indices and logarithms skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs2/js/math-challenge-indices.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs2/js/indices.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

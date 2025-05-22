@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Coordinate Geometry (Circles) | Elective Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Coordinate Geometry of Circles for SHS2 Elective Mathematics. Learn equations, tangents, normals, and loci.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Coordinate Geometry (Circles) | Elective Mathematics">
+        <meta property="og:description" content="Master Coordinate Geometry of Circles with interactive lessons and practice problems for SHS students">
+        <meta property="og:image" content="https://theletslearnproject.com/images/circles-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs2/coordinate-geometry-circles">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../css/emath-lesson.css">
+        <link rel="stylesheet" href="../shs2/css/coordinate-geometry.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../shs2/css/math-challenge-coordinate.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Coordinate Geometry (Circles)</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">SHS2 E-Maths</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-circle"></i>
+                                <span>Coordinate Geometry</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#equation-circle" class="active"><i class="fas fa-chevron-right"></i> Equation of a Circle</a></li>
+                                <li><a href="#center-radius"><i class="fas fa-chevron-right"></i> Finding Center & Radius</a></li>
+                                <li><a href="#tangent-normal"><i class="fas fa-chevron-right"></i> Tangent & Normal</a></li>
+                                <li><a href="#loci"><i class="fas fa-chevron-right"></i> Loci</a></li>
+                                <li><a href="#intersection"><i class="fas fa-chevron-right"></i> Intersection Problems</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath">E-Maths</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../emath#shs2">SHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Coordinate Geometry</span>
+                        </nav>
+
+                        <!-- Equation of a Circle Section -->
+                        <section id="equation-circle" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-circle"></i> Equation of a Circle
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A circle is the set of all points in a plane that are equidistant from a fixed point called the center. The distance from the center to any point on the circle is called the radius.</p>
+                                
+                                <div class="math-example">
+                                    <h3>Standard Form</h3>
+                                    \[ (x - h)^2 + (y - k)^2 = r^2 \]
+                                    <p>Where <em>(h, k)</em> is the center and <em>r</em> is the radius.</p>
+                                </div>
+
+                                <h3 class="subsection-title">Key Forms of Circle Equations</h3>
+                                
+                                <div class="key-points">
+                                    <div class="law-card">
+                                        <h4>1. Center at Origin</h4>
+                                        \[ x^2 + y^2 = r^2 \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ x^2 + y^2 = 9 \]
+                                            <p>Center at (0,0), radius = 3</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>2. General Form</h4>
+                                        \[ x^2 + y^2 + 2gx + 2fy + c = 0 \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ x^2 + y^2 - 4x + 6y - 12 = 0 \]
+                                            <p>Can be converted to standard form by completing the square</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>3. Parametric Form</h4>
+                                        \[ x = h + r\cosθ \]
+                                        \[ y = k + r\sinθ \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            <p>For circle (x-2)² + (y+1)² = 16:</p>
+                                            \[ x = 2 + 4\cosθ \]
+                                            \[ y = -1 + 4\sinθ \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">Derivation of Circle Equation</h3>
+                                <p>Using the distance formula between center (h,k) and any point (x,y) on the circle:</p>
+                                \[ \sqrt{(x - h)^2 + (y - k)^2} = r \]
+                                <p>Squaring both sides gives the standard form:</p>
+                                \[ (x - h)^2 + (y - k)^2 = r^2 \]
+                            </div>
+                        </section>
+                        
+                        <!-- Finding Center and Radius Section -->
+                        <section id="center-radius" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-bullseye"></i> Finding Center & Radius
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Given the general form of a circle's equation, we can find its center and radius by completing the square.</p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-square-root-alt"></i>
+                                            <h3>Method 1: Completing the Square</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>Convert from general to standard form</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                \[ x^2 + y^2 - 6x + 4y - 3 = 0 \]
+                                                <p>Group x and y terms:</p>
+                                                \[ (x^2 - 6x) + (y^2 + 4y) = 3 \]
+                                                <p>Complete the square:</p>
+                                                \[ (x^2 - 6x + 9) + (y^2 + 4y + 4) = 3 + 9 + 4 \]
+                                                \[ (x - 3)^2 + (y + 2)^2 = 16 \]
+                                                <p>Center: (3, -2), Radius: 4</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-project-diagram"></i>
+                                            <h3>Method 2: Using Coefficients</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>For general form \( x^2 + y^2 + 2gx + 2fy + c = 0 \):</p>
+                                            <ul>
+                                                <li>Center: (-g, -f)</li>
+                                                <li>Radius: \( \sqrt{g^2 + f^2 - c} \)</li>
+                                            </ul>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                \[ x^2 + y^2 + 8x - 10y + 5 = 0 \]
+                                                <p>Here 2g=8 ⇒ g=4, 2f=-10 ⇒ f=-5</p>
+                                                <p>Center: (-4, 5)</p>
+                                                <p>Radius: \( \sqrt{4^2 + (-5)^2 - 5} = \sqrt{16 + 25 - 5} = 6 \)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">Special Cases</h3>
+                                <div class="special-cases">
+                                    <div class="case-card">
+                                        <h4>Point Circle</h4>
+                                        <p>When radius = 0, the circle degenerates to a single point</p>
+                                        \[ (x-2)^2 + (y+3)^2 = 0 \]
+                                        <p>Represents just the point (2, -3)</p>
+                                    </div>
+                                    
+                                    <div class="case-card">
+                                        <h4>Imaginary Circle</h4>
+                                        <p>When \( g^2 + f^2 - c < 0 \), no real points satisfy the equation</p>
+                                        \[ x^2 + y^2 - 4x + 6y + 15 = 0 \]
+                                        <p>Radius would be \( \sqrt{4 + 9 - 15} = \sqrt{-2} \) (imaginary)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Tangent and Normal Section -->
+                        <section id="tangent-normal" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-draw-polygon"></i> Tangent & Normal to a Circle
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A tangent to a circle is a straight line that touches the circle at exactly one point, called the point of tangency. The normal is the line perpendicular to the tangent at the point of contact.</p>
+                                
+                                <div class="key-points">
+                                    <div class="law-card">
+                                        <h4>1. Equation of Tangent</h4>
+                                        <p>At point (x₁, y₁) on circle \( (x-h)^2 + (y-k)^2 = r^2 \):</p>
+                                        \[ (x₁ - h)(x - h) + (y₁ - k)(y - k) = r^2 \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            <p>Find tangent to \( (x-2)^2 + (y+1)^2 = 25 \) at (5,3)</p>
+                                            \[ (5-2)(x-2) + (3-(-1))(y-(-1)) = 25 \]
+                                            \[ 3(x-2) + 4(y+1) = 25 \]
+                                            \[ 3x + 4y - 6 + 4 = 25 \]
+                                            \[ 3x + 4y = 27 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>2. Condition for Tangency</h4>
+                                        <p>A line \( y = mx + c \) is tangent to \( x^2 + y^2 = r^2 \) if:</p>
+                                        \[ c^2 = r^2(1 + m^2) \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            <p>Show \( y = 2x + 5 \) is tangent to \( x^2 + y^2 = 5 \)</p>
+                                            <p>Here m=2, c=5, r²=5</p>
+                                            \[ 5^2 = 5(1 + 2^2) \]
+                                            \[ 25 = 5(5) \]
+                                            \[ 25 = 25 \] ✓
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>3. Length of Tangent</h4>
+                                        <p>From external point (x₁,y₁) to circle \( x^2 + y^2 + 2gx + 2fy + c = 0 \):</p>
+                                        \[ L = \sqrt{x₁^2 + y₁^2 + 2gx₁ + 2fy₁ + c} \]
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            <p>Find tangent length from (3,4) to \( x^2 + y^2 = 25 \)</p>
+                                            \[ L = \sqrt{3^2 + 4^2 - 25} = \sqrt{9 + 16 - 25} = 0 \]
+                                            <p>Point is on the circle (tangent length is 0)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">Equation of Normal</h3>
+                                <p>The normal to a circle at any point is the line joining that point to the center of the circle.</p>
+                                <div class="math-example">
+                                    <p>For circle \( (x-1)^2 + (y-2)^2 = 9 \) at point (4,2):</p>
+                                    <p>Center is (1,2), point is (4,2)</p>
+                                    <p>Slope of normal (and radius): \( \frac{2-2}{4-1} = 0 \)</p>
+                                    <p>Equation: y = 2 (horizontal line)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Loci Section -->
+                        <section id="loci" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-project-diagram"></i> Loci in Circle Geometry
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>A locus (plural: loci) is the set of all points that satisfy a given condition. In circle geometry, we often find equations of loci that maintain certain relationships to given circles.</p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-ruler-combined"></i>
+                                            <h3>1. Constant Distance from Center</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>The locus of points at a fixed distance from a center is a circle.</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                <p>Find locus of points 5 units from (2,-3)</p>
+                                                \[ (x-2)^2 + (y+3)^2 = 25 \]
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-equals"></i>
+                                            <h3>2. Equal Distance from Two Points</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>The perpendicular bisector of the line segment joining the points.</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                <p>Find locus equidistant from (1,2) and (3,4)</p>
+                                                <p>Midpoint: (2,3), Slope: \( \frac{4-2}{3-1} = 1 \)</p>
+                                                <p>Perpendicular slope: -1</p>
+                                                \[ y - 3 = -1(x - 2) \]
+                                                \[ y = -x + 5 \]
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-tint"></i>
+                                            <h3>3. Power of a Point</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>For a fixed point P(x₁,y₁), the locus of points Q such that PQ is tangent to a given circle.</p>
+                                            <div class="math-example">
+                                                <p>Example:</p>
+                                                <p>Given circle \( x^2 + y^2 = 25 \), find locus of points P from which tangents to circle are perpendicular.</p>
+                                                <p>This forms another circle (called the director circle) with same center and radius \( r\sqrt{2} \):</p>
+                                                \[ x^2 + y^2 = 50 \]
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">Common Locus Problems</h3>
+                                <ul class="considerations">
+                                    <li><strong>Moving point on circle:</strong> As a point moves around a circle, its coordinates can be expressed parametrically</li>
+                                    <li><strong>Chord midpoint locus:</strong> The locus of midpoints of parallel chords in a circle is a diameter perpendicular to the chords</li>
+                                    <li><strong>Angle condition:</strong> Points subtending a right angle on a diameter form a circle (Thales' theorem)</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Intersection Problems Section -->
+                        <section id="intersection" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-times"></i> Intersection Problems
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>We can find points of intersection between circles and lines or between two circles by solving their equations simultaneously.</p>
+                                
+                                <div class="key-points">
+                                    <div class="law-card">
+                                        <h4>1. Circle-Line Intersection</h4>
+                                        <p>Substitute linear equation into circle equation and solve quadratic</p>
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            <p>Find intersection of \( x^2 + y^2 = 25 \) and \( y = 2x + 1 \)</p>
+                                            \[ x^2 + (2x + 1)^2 = 25 \]
+                                            \[ x^2 + 4x^2 + 4x + 1 = 25 \]
+                                            \[ 5x^2 + 4x - 24 = 0 \]
+                                            <p>Solve using quadratic formula to find x, then y values</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>2. Circle-Circle Intersection</h4>
+                                        <p>Subtract equations to eliminate quadratic terms, then solve with one original equation</p>
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            <p>Find intersection of \( x^2 + y^2 = 25 \) and \( (x-3)^2 + y^2 = 16 \)</p>
+                                            <p>Subtract second from first:</p>
+                                            \[ x^2 - (x^2 - 6x + 9) = 9 \]
+                                            \[ 6x - 9 = 9 \]
+                                            \[ x = 3 \]
+                                            <p>Substitute back: \( 9 + y^2 = 25 \) ⇒ \( y = ±4 \)</p>
+                                            <p>Points: (3,4) and (3,-4)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="law-card">
+                                        <h4>3. Radical Axis</h4>
+                                        <p>The line formed by subtracting two circle equations (contains all points with equal power relative to both circles)</p>
+                                        <div class="math-example">
+                                            <p>For circles \( C_1 \) and \( C_2 \), radical axis is \( C_1 - C_2 = 0 \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">Intersection Cases</h3>
+                                <div class="intersection-cases">
+                                    <div class="case-card">
+                                        <h4>Two distinct points</h4>
+                                        <p>When distance between centers is less than sum and greater than difference of radii</p>
+                                    </div>
+                                    
+                                    <div class="case-card">
+                                        <h4>One point (tangent)</h4>
+                                        <p>When distance equals sum (external) or difference (internal) of radii</p>
+                                    </div>
+                                    
+                                    <div class="case-card">
+                                        <h4>No intersection</h4>
+                                        <p>When distance is greater than sum or less than difference of radii</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-lightbulb"></i> Applications of Circle Geometry
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>Circle geometry has numerous practical applications in science, engineering, and technology.</p>
+                                
+                                <div class="application-cards">
+                                    <div class="app-card">
+                                        <h4>1. Navigation Systems</h4>
+                                        <p>GPS uses trilateration based on circular loci from satellites</p>
+                                    </div>
+                                    
+                                    <div class="app-card">
+                                        <h4>2. Optics</h4>
+                                        <p>Lens surfaces are often circular, requiring tangent calculations</p>
+                                    </div>
+                                    
+                                    <div class="app-card">
+                                        <h4>3. Mechanical Engineering</h4>
+                                        <p>Gear design involves precise circle geometry</p>
+                                    </div>
+                                    
+                                    <div class="app-card">
+                                        <h4>4. Architecture</h4>
+                                        <p>Circular structures require precise geometric calculations</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h3>Real-World Example</h3>
+                                    <p>A satellite orbits Earth such that it's always 1000km from point A on Earth's surface and 2000km from point B. Find the locus of possible satellite positions (Earth radius ≈ 6371km).</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>This involves solving for the intersection of two spheres (3D circles), resulting in another circle (the locus).</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the center and radius of the circle \( x^2 + y^2 - 8x + 10y - 8 = 0 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Complete the square:</p>
+                                        \[ (x^2 - 8x) + (y^2 + 10y) = 8 \]
+                                        \[ (x^2 - 8x + 16) + (y^2 + 10y + 25) = 8 + 16 + 25 \]
+                                        \[ (x - 4)^2 + (y + 5)^2 = 49 \]
+                                        <p>Center: (4, -5), Radius: 7</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the equation of the tangent to the circle \( (x-2)^2 + (y+1)^2 = 10 \) at the point (3,0)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using tangent formula:</p>
+                                        \[ (3-2)(x-2) + (0-(-1))(y-(-1)) = 10 \]
+                                        \[ 1(x-2) + 1(y+1) = 10 \]
+                                        \[ x + y - 1 = 10 \]
+                                        \[ x + y = 11 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Find the locus of points equidistant from (1,3) and the line y = -1</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let (x,y) be a point on the locus:</p>
+                                        \[ \sqrt{(x-1)^2 + (y-3)^2} = |y + 1| \]
+                                        <p>Square both sides:</p>
+                                        \[ (x-1)^2 + (y-3)^2 = (y+1)^2 \]
+                                        \[ (x-1)^2 + y^2 - 6y + 9 = y^2 + 2y + 1 \]
+                                        \[ (x-1)^2 - 8y + 8 = 0 \]
+                                        \[ (x-1)^2 = 8(y - 1) \]
+                                        <p>This is a parabola with vertex at (1,1)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="../../practice/coordinate-geometry" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your coordinate geometry skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a> <br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../shs2/js/math-challenge-coordinate.js"></script>
+        <script src="../../js/emath-lesson.js"></script>
+        <script src="../shs2/js/coordinate-geometry.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
