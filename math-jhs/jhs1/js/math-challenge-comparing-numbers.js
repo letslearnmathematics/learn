@@ -461,622 +461,720 @@ function initGame() {
 // Make sure allQuestions is defined before the game starts
 const allQuestions = {
     1: [
-      {
-        text: "If 1 rod = 10 cubes, how many cubes are in 3 rods?",
-        answers: ["3", "30", "300", "3,000"],
+    {
+        text: "Which number is greater: 5,678,901 or 5,678,910?",
+        answers: ["5,678,901", "5,678,910", "They are equal", "Cannot compare"],
         correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods make 1 flat?",
-        answers: ["1", "10", "100", "1,000"],
+        videoSolution: ""
+    },
+    {
+        text: "Compare using the correct symbol: 1,234,567 ___ 1,234,576",
+        answers: [">", "<", "=", "≠"],
         correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is the value of 2 flats + 5 rods + 7 cubes?",
-        answers: ["275", "2,057", "257", "2570"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 1 block?",
-        answers: ["10", "100", "1,000", "10,000"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 6 blocks, how many flats is that?",
-        answers: ["6", "60", "600", "6,000"],
+        videoSolution: ""
+    },
+    {
+        text: "Which number comes between 45,678,900 and 45,678,902?",
+        answers: ["45,678,899", "45,678,901", "45,678,903", "45,678,905"],
         correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Convert 8 rods + 9 cubes to total cubes.",
-        answers: ["17", "69", "89", "98"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods are in 2 flats?",
-        answers: ["2", "20", "200", "2,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is 1 block - 3 flats in cubes?",
-        answers: ["7", "70", "700", "7,000"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 60 cubes, how many rods can you make?",
-        answers: ["6", "60", "600", "6,000"],
+        videoSolution: ""
+    },
+    {
+        text: "What is the value of the 7 in 87,654,321?",
+        answers: ["7,000,000", "70,000,000", "700,000", "7,000"],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 1 flat + 2 rods?",
-        answers: ["12", "102", "120", "1,200"],
+        videoSolution: ""
+    },
+    {
+        text: "Skip count by 100 from 1,000,000 to the 5th term",
+        answers: ["1,000,500", "1,005,000", "1,100,000", "1,500,000"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Which is the smallest: 12,345,678; 12,345,687; or 12,345,768?",
+        answers: ["12,345,678", "12,345,687", "12,345,768", "All equal"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Compare: 999,999,999 ___ 1,000,000,000",
+        answers: [">", "<", "=", "≥"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What number is 10,000 more than 45,678,901?",
+        answers: ["45,688,901", "45,678,911", "45,778,901", "46,678,901"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Which digit in 987,654,321 has the highest place value?",
+        answers: ["9", "8", "7", "1"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Skip count backwards by 1,000 from 10,000,000 to the 3rd term",
+        answers: ["9,999,000", "9,997,000", "9,990,000", "9,700,000"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Arrange in ascending order: 76,543,210; 76,543,201; 76,543,102",
+        answers: [
+            "76,543,210, 76,543,201, 76,543,102",
+            "76,543,102, 76,543,201, 76,543,210",
+            "76,543,201, 76,543,102, 76,543,210",
+            "76,543,102, 76,543,210, 76,543,201"
+        ],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is 50,000 less than 100,000,000?",
+        answers: ["99,950,000", "50,000,000", "95,000,000", "99,500,000"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Compare: 123,456,789 ___ 123,456,798",
+        answers: [">", "<", "=", "≤"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Which number is 100,000 more than 89,999,999?",
+        answers: ["90,000,000", "90,099,999", "89,100,999", "90,999,999"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is the place value of 4 in 345,678,912?",
+        answers: ["Millions", "Ten Millions", "Hundred Millions", "Billions"],
         correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Which equals 250 cubes?",
-        answers: ["2 flats + 5 rods", "2 rods + 5 flats", "2 blocks + 5 cubes", "2 blocks + 5 rods"],
+        videoSolution: ""
+    },
+    {
+        text: "Skip count by 1,000,000 from 5,000,000 to the 4th term",
+        answers: ["8,000,000", "9,000,000", "10,000,000", "20,000,000"],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Subtract: 1 flat - 4 rods. Result in cubes?",
-        answers: ["6", "60", "96", "600"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many full flats can you make from 325 cubes?",
-        answers: ["3", "32", "325", "3,250"],
+        videoSolution: ""
+    },
+    {
+        text: "Which is greater: 234,567,890 or 234,567,089?",
+        answers: ["234,567,890", "234,567,089", "Equal", "Cannot determine"],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Add: 3 rods + 7 rods. Total cubes?",
-        answers: ["10", "37", "100", "370"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If 1 block = 10 flats, how many flats are in 5 blocks?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 4 rods + 9 cubes?",
-        answers: ["49", "409", "94", "490"],
+        videoSolution: ""
+    },
+    {
+        text: "What number is 1 less than 1,000,000,000?",
+        answers: ["999,999,999", "999,999,990", "900,000,000", "99,999,999"],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you combine 2 flats + 0 rods + 3 cubes, what is the total?",
-        answers: ["23", "203", "230", "2,003"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods are needed to make 1 block?",
-        answers: ["10", "100", "1,000", "10,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is 5 flats - 2 rods in cubes?",
-        answers: ["3", "48", "480", "498"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 120 cubes, how many flats can you make?",
-        answers: ["1", "12", "120", "1,200"],
+        videoSolution: ""
+    },
+    {
+        text: "Compare: 987,654,321 ___ 987,654,312",
+        answers: [">", "<", "=", "≥"],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      }
+        videoSolution: ""
+    },
+    {
+        text: "Which digit determines that 456,789,123 is greater than 456,789,113?",
+        answers: ["2 (tens)", "1 (hundreds)", "3 (ones)", "9 (thousands)"],
+        correctIndex: 0,
+        videoSolution: ""
+    }
     ],
+
     2: [
-      // Level 2 questions would go here
-      // Follow same format as level 1
-      {
-        text: "How many cubes are in 7 rods + 2 cubes?",
-        answers: ["27", "72", "702", "720"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+    {
+        text: "Which number is 1 million less than 1 billion?",
+        answers: ["999,999,999", "999,000,000", "900,000,000", "99,999,999"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        text: "What is the value of 1 flat + 0 rods + 5 cubes?",
-        answers: ["15", "105", "150", "1,005"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        text: "Compare: 45,678,901 + 1,000,000 ___ 46,678,901",
+        answers: [">", "<", "=", "≠"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        text: "How many rods make 5 flats?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Subtract: 3 flats - 4 rods. Result in cubes?",
-        answers: ["26", "260", "296", "2,600"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If you have 15 rods, how many cubes is that?",
-        answers: ["15", "150", "1,500", "15,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many full rods can you make from 84 cubes?",
-        answers: ["8", "84", "840", "8,400"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 1 block + 2 flats + 3 rods + 4 cubes?",
-        answers: ["123", "1,234", "12,340", "123,400"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Convert 9 rods + 9 cubes to total cubes.",
-        answers: ["18", "99", "909", "999"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in half a flat?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If 1 block = 10 flats, how many cubes are in 0.5 blocks?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Add: 1 rod + 1 flat + 1 block. Total cubes?",
-        answers: ["111", "1,110", "11,100", "111,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many flats are in 2 blocks + 5 flats?",
-        answers: ["7", "25", "250", "2,500"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 3 rods \\(\\times\\) 4 in cubes?",
-        answers: ["12", "120", "1,200", "12,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Divide: 1 block \\(\\div\\) 2 rods. Result?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If you have 250 cubes, how many full flats can you make?",
-        answers: ["2", "25", "250", "2,500"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in 0.1 blocks?",
+        text: "What is the difference between 500,000,000 and 499,999,999?",
         answers: ["1", "10", "100", "1,000"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        text: "Combine: 4 flats + 9 rods + 6 cubes. Total cubes?",
-        answers: ["4.096", "469", "496", "964"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        text: "If you skip count by 10,000 from 12,345,678, what is the 5th term?",
+        answers: ["12,385,678", "12,395,678", "12,845,678", "12,345,718"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        text: "What is 1 flat - 1 rod - 1 cube, in cubes?",
-        answers: ["89", "98", "109", "189"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        text: "Which comparison is correct?",
+        answers: [
+            "123,456 < 123,465",
+            "9,999,999 > 10,000,000",
+            "78,901,234 = 78,910,234",
+            "456,789,012 < 456,789,002"
+        ],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        text: "If 20 rods = _____ cubes, the missing value is:",
-        answers: ["20", "200", "2,000", "20,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        text: "What number makes this true? 987,654,32_ > 987,654,325",
+        answers: ["4", "5", "6", "Any digit"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        text: "How many cubes are in 0.25 flats?",
-        answers: ["25", "250", "2.5", "2,500"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        text: "Round 456,789,123 to the nearest million",
+        answers: ["456,000,000", "457,000,000", "460,000,000", "500,000,000"],
+        correctIndex: 1,
+        videoSolution: ""
     },
+    {
+        text: "If A = 234,567,890 and B = 234,567,980, then:",
+        answers: [
+            "A > B by 90",
+            "A < B by 90",
+            "A = B",
+            "A < B by 9"
+        ],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is 10,000,000 - 9,999,999?",
+        answers: ["1", "10", "100", "1,000"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Which digit change makes 67,890,123 < 67,890,023?",
+        answers: [
+            "Change the millions digit",
+            "Change the ten-thousands digit",
+            "Change the hundreds digit",
+            "This is impossible"
+        ],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "If you count backwards by 100,000 from 5,000,000, what's the 3rd term?",
+        answers: ["4,800,000", "4,700,000", "4,900,000", "4,000,000"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Which number is closest to 1 billion without reaching it?",
+        answers: ["999,999,999", "999,999,990", "999,990,000", "990,000,000"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Complete: 345,678,901 < 345,678,9__ < 345,679,000",
+        answers: ["00", "01", "10", "99"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is the smallest 9-digit number greater than 999,999,999?",
+        answers: ["1,000,000,000", "999,999,990", "1,111,111,111", "900,000,000"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "If X = 123,456,789 and Y = 123,456,798, then X - Y =",
+        answers: ["9", "-9", "19", "-19"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Which interval would include 456,789,000 but not 456,790,000?",
+        answers: [
+            "456,780,000 to 456,789,999",
+            "456,700,000 to 456,799,999",
+            "456,789,000 to 456,789,999",
+            "456,000,000 to 457,000,000"
+        ],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "How many 10,000s are in 100,000,000?",
+        answers: ["10", "100", "1,000", "10,000"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Which comparison is false?",
+        answers: [
+            "1 billion > 999 million",
+            "50 million < 500 million",
+            "100,000 = 1 million",
+            "25,000,000 > 24,999,999"
+        ],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "If you add 1 to the largest 9-digit number, you get:",
+        answers: [
+            "The smallest 10-digit number",
+            "1,000,000,000",
+            "Both A and B",
+            "An undefined number"
+        ],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Which number satisfies: 888,888,888 < ___ < 888,888,898",
+        answers: ["888,888,889", "888,888,880", "888,888,900", "888,888,808"],
+        correctIndex: 0,
+        videoSolution: ""
+    }
     ],
     3: [
-      // Level 3 questions would go here
-      // Follow same format as level 1
     {
-        text: "Add: 3 rods + 5 rods. Total cubes?",
-        answers: ["8", "80", "800", "8,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is 500 million less than 2 billion?",
+        "answers": ["1,500,000,000", "1,000,000,000", "1,999,500,000", "1,500,000,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Subtract: 1 flat - 2 rods. Remaining cubes?",
-        answers: ["8", "80", "98", "800"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Compare: 123,456,789 + 1,000,000 ___ 124,456,789",
+        "answers": [">", "<", "=", "≠"],
+        "correctIndex": 2,
+        "videoSolution": ""
     },
     {
-        text: "Multiply: 4 rods \\(\\times\\) 3. Total cubes?",
-        answers: ["12", "120", "1,200", "12,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is the difference between 1,000,000,000 and 999,999,999?",
+        "answers": ["1", "10", "100", "1,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Divide: 1 block \\(\\div\\) 5 rods. Result?",
-        answers: ["2", "20", "200", "2,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "If you skip count by 100,000 from 50,000,000, what is the 4th term?",
+        "answers": ["50,400,000", "50,300,000", "50,500,000", "50,600,000"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "What is 2 flats + 7 rods + 4 cubes?",
-        answers: ["2,074", "247", "274", "724"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which comparison is correct?",
+        "answers": [
+            "250,000,000 > 249,999,999",
+            "99,999,999 > 100,000,000",
+            "456,789,012 = 456,789,021",
+            "123,456,789 < 123,456,780"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "If you have 5 rods \\(\\times\\) 4, how many cubes total?",
-        answers: ["20", "200", "2,000", "20,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What number makes this true? 765,432,10_ > 765,432,105",
+        "answers": ["4", "5", "6", "Any digit"],
+        "correctIndex": 2,
+        "videoSolution": ""
     },
     {
-        text: "Solve: 1 block - 3 flats + 2 rods.",
-        answers: ["720", "702", "270", "1,320"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Round 789,456,123 to the nearest ten million",
+        "answers": ["780,000,000", "790,000,000", "789,000,000", "800,000,000"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "How many cubes are in 0.5 flats + 2 rods?",
-        answers: ["25", "45", "70", "700"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "If A = 345,678,901 and B = 345,678,091, then:",
+        "answers": [
+            "A > B by 810",
+            "A < B by 810",
+            "A = B",
+            "A > B by 900"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "What is 3 rods \\(\\times\\) 2 rods?",
-        answers: ["6 cubes", "60 cubes", "600 cubes", "6,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is 100,000,000 - 99,999,999?",
+        "answers": ["1", "10", "100", "1,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Divide: 2 blocks \\(\\div\\) 4 flats. Result?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which digit change makes 89,012,345 < 89,012,344?",
+        "answers": [
+            "Change the millions digit",
+            "Change the ten-thousands digit",
+            "Change the ones digit",
+            "This is impossible"
+        ],
+        "correctIndex": 3,
+        "videoSolution": ""
     },
     {
-        text: "Subtract: 10 rods - 25 cubes.",
-        answers: ["7.5 cubes", "75 cubes", "750 cubes", "7,500 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "If you count backwards by 1,000,000 from 10,000,000, what's the 3rd term?",
+        "answers": ["8,000,000", "7,000,000", "9,000,000", "6,000,000"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "Add: 0.3 blocks + 4 rods. Total cubes?",
-        answers: ["34", "340", "430", "3,040"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which number is closest to 500 million without reaching it?",
+        "answers": ["499,999,999", "499,999,990", "499,990,000", "490,000,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Multiply: 1 flat \\(\\times\\) 1 rod.",
-        answers: ["10 cubes", "100 cubes", "1,000 cubes", "10,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Complete: 678,901,234 < 678,901,2__ < 678,901,300",
+        "answers": ["34", "35", "40", "99"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "If 1 rod = 10 cubes, what is 7 rods ÷ 2?",
-        answers: ["3.5 cubes", "35 cubes", "350 cubes", "3,500 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is the smallest 8-digit number greater than 99,999,999?",
+        "answers": ["100,000,000", "99,999,990", "100,000,001", "90,000,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Solve: 5 flats - 3 rods + 1 block.",
-        answers: ["1,270", "1,470", "1,700", "15,300"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "If X = 987,654,321 and Y = 987,654,312, then X - Y =",
+        "answers": ["9", "-9", "19", "-19"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "How many cubes are in 0.2 blocks + 0.5 flats?",
-        answers: ["25", "250", "2,500", "25,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which interval would include 123,456,700 but not 123,457,000?",
+        "answers": [
+            "123,456,000 to 123,456,999",
+            "123,450,000 to 123,459,999",
+            "123,456,700 to 123,456,799",
+            "123,400,000 to 123,500,000"
+        ],
+        "correctIndex": 2,
+        "videoSolution": ""
     },
     {
-        text: "What is 12 rods \\(\\times\\) 5?",
-        answers: ["60 cubes", "600 cubes", "6,000 cubes", "60,000 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "How many 100,000s are in 10,000,000?",
+        "answers": ["10", "100", "1,000", "10,000"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "Divide: 3 blocks \\(\\div\\) 6 rods.",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which comparison is false?",
+        "answers": [
+            "1 billion > 999,999,999",
+            "75 million < 750 million",
+            "10,000 = 100,000",
+            "30,000,000 > 29,999,999"
+        ],
+        "correctIndex": 2,
+        "videoSolution": ""
     },
     {
-        text: "Add: 0.7 flats + 8 cubes.",
-        answers: ["15", "78", "708", "780"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "If you add 1 to the largest 8-digit number, you get:",
+        "answers": [
+            "The smallest 9-digit number",
+            "100,000,000",
+            "Both A and B",
+            "An undefined number"
+        ],
+        "correctIndex": 2,
+        "videoSolution": ""
     },
     {
-        text: "Subtract: 1 block - 0.5 blocks.",
-        answers: ["5 cubes", "50 cubes", "500 cubes", "5,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    ], 
+        "text": "Which number satisfies: 555,555,555 < ___ < 555,555,565",
+        "answers": ["555,555,556", "555,555,550", "555,555,600", "555,555,506"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    }
+    ],
     4: [
-        // Level 4 questions would go here
-      // Follow same format as level 1
-        {
-            text: "Solve: (2 flats \\(\\times\\) 3) + (5 rods \\(\\times\\) 4).",
-            answers: ["800", "1,100", "1,600", "2,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, what is 1 flat \\(\\div\\) 2 rods?",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.4 blocks + 3 flats - 2 rods?",
-            answers: ["420", "480", "4,200", "4,800"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 0.5 blocks \\(\\times\\) 10 rods.",
-            answers: ["50 cubes", "500 cubes", "5,000 cubes", "50,000 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "1,000 cubes ÷ 25 cubes",
-            answers: ["2 rods", "4 rods", "40 rods", "400 rods"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A builder uses 3 flats + 8 rods of material. How many cubes is this?",
-            answers: ["38", "308", "380", "3,080"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Subtract: 1.5 blocks - 7 flats. Result in cubes?",
-            answers: ["80", "800", "8,000", "80,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 6 rods \\(\\times\\) 0.5 flats. (Hint: 0.5 flat = 50 cubes)",
-            answers: ["30 cubes", "300 cubes", "3,000 cubes", "30,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A shop sells 2 rods + 5 cubes of ribbon per customer. How much ribbon for 4 customers?",
-            answers: ["25 cubes", "100 cubes", "250 cubes", "1,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Divide: 9 flats \\(\\div\\) 3 rods.",
-            answers: ["3", "30", "300", "3,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Solve: (1 block - 2 rods) + (3 flats \\(\\times\\) 2).",
-            answers: ["1,160", "1,600", "2,600", "3,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, what is \\frac{1}{4} block + \\frac{1}{2} flat?",
-            answers: ["250 cubes", "300 cubes", "350 cubes", "400 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A recipe requires 2 rods + 7 cubes of sugar. Double the recipe.",
-            answers: ["27 cubes", "54 cubes", "270 cubes", "540 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many full rods can you make from 365 cubes?",
-            answers: ["3", "36", "360", "3,650"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.2 blocks + 30 rods - 1 flat?",
-            answers: ["10 cubes", "100 cubes", "1,000 cubes", "10,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A classroom has 4 blocks + 5 flats of paper. How many sheets if 1 cube = 1 sheet?",
-            answers: ["45", "450", "4,500", "45,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 5 rods = 50 cubes, what is 5 rods \\(\\times\\) 5 rods?",
-            answers: ["25 cubes", "250 cubes", "2,500 cubes", "25,000 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank has 2 blocks - 5 flats of water. How many cubes remain?",
-            answers: ["500", "1,500", "2,500", "5,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Combine: 0.3 flats + 4 rods + 0.7 blocks.",
-            answers: ["740 cubes", "804 cubes", "840 cubes", "8,040 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 1 block + 2 flats daily. Weekly production?",
-            answers: ["1,200 cubes", "8,400 cubes", "12,000 cubes", "84,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ], 
+    {
+        "text": "What is the sum of 1.75 billion and 325 million, expressed in millions?",
+        "answers": ["2,075 million", "2,000 million", "2,100 million", "1,775 million"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Compare: (375 million × 4) ___ (1.5 billion ÷ 1)",
+        "answers": [">", "<", "=", "≠"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If you subtract 18.5 million from 1.85 billion, what remains?",
+        "answers": ["1,831,500,000", "1,830,000,000", "1,825,000,000", "1,800,000,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is 30% of 6.5 billion?",
+        "answers": ["1.95 billion", "2.15 billion", "1.5 billion", "2.0 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which expression equals 750 million?",
+        "answers": [
+            "(1.5 billion ÷ 2) + (50 million × 0)",
+            "(500 million × 2) - 250 million",
+            "(2.25 billion ÷ 3) + 75 million",
+            "All of the above"
+        ],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "Round 4,629,753,186 to the nearest hundred million",
+        "answers": ["4,600,000,000", "4,700,000,000", "4,630,000,000", "4,500,000,000"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "If A = 8.2 billion and B = 8,199,999,999, then A - B =",
+        "answers": ["1", "10", "100", "1,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "How many times greater is 1.2 billion than 30 million?",
+        "answers": ["40", "400", "4,000", "40,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which number is 15 million less than 3.3 billion?",
+        "answers": ["3,285,000,000", "3,150,000,000", "3,285,000,000", "3,299,985,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If you divide 9.6 billion by 300, what is the result?",
+        "answers": ["32 million", "320 million", "3.2 million", "320,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which digit in 7,654,321,098 has a place value of 10 million?",
+        "answers": ["7", "6", "5", "4"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the product of 450 million and 6?",
+        "answers": ["2.7 billion", "27 billion", "270 million", "2.5 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If 2.4 billion = 24 × N, what is N?",
+        "answers": ["10 million", "100 million", "1 billion", "10 billion"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which interval includes numbers from 2.1 billion to 2.3 billion, excluding 2.2 billion?",
+        "answers": [
+            "2,100,000,000 ≤ X < 2,200,000,000",
+            "2,100,000,000 < X ≤ 2,300,000,000",
+            "2,100,000,000 ≤ X ≤ 2,300,000,000, X ≠ 2,200,000,000",
+            "2,200,000,000 < X ≤ 2,300,000,000"
+        ],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If 5.4 billion is split equally among 6 countries, how much per country?",
+        "answers": ["900 million", "90 million", "9 billion", "9 million"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the missing term: 3.6 billion, 3 billion, ___, 1.8 billion, 900 million?",
+        "answers": ["2.4 billion", "2.7 billion", "2.1 billion", "1.5 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which is NOT equal to 1.25 billion?",
+        "answers": [
+            "1,250 million",
+            "5/4 of 1 billion",
+            "125 × 10 million",
+            "1.5 billion - 500 million"
+        ],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "If a number is 1/8 of 12 billion, what is 25% of that number?",
+        "answers": ["375 million", "3 billion", "300 million", "1.5 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which comparison is true?",
+        "answers": [
+            "1.8 billion + 300 million > 2.1 billion",
+            "40% of 5 billion = 2 billion",
+            "700 million × 4 < 2.8 billion",
+            "All are true"
+        ],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the next number in the pattern: 100 million, 1 billion, 10 billion, ___?",
+        "answers": ["100 billion", "1 trillion", "50 billion", "20 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    }
+    ],
     5: [
-        // Level 5 questions would go here
-      // Follow same format as level 1
-        {
-            text: "Emma buys a toy for 2 flats + 3 rods + 5 cubes. How much does she spend (in cubes)?",
-            answers: ["235", "253", "352", "325"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A book costs 1 block - 2 flats. What's the price in cubes?",
-            answers: ["800", "1,200", "8,000", "12,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = Gh₵10.00, how much is 5 flats + 4 rods?",
-            answers: ["Gh₵54.00", "Gh₵540.00", "Gh₵5,400.00", "Gh₵54,000.00"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A wall is built with 3 blocks + 5 flats of bricks. How many bricks are used?",
-            answers: ["305", "3,050", "3,500", "35,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A rope is 4 rods + 7 cubes long. How many cubes is that?",
-            answers: ["407", "470", "4,007", "47"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank holds 2 blocks of water. If you remove 5 flats, how much remains?",
-            answers: ["500", "1,500", "2,500", "5,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A machine makes 1 flat of widgets every hour. How many widgets does it make in 8 hours?",
-            answers: ["8", "80", "800", "8,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A worker packs 2 rods of boxes daily. How many cubes does he pack in 5 days?",
-            answers: ["10", "100", "500", "1,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Half a block + a quarter flat = ___ cubes.",
-            answers: ["250", "525", "600", "1,025"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "0.3 blocks + 0.7 flats = ___ cubes.",
-            answers: ["37", "3,070", "3,700", "370"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A store has 5 blocks of stock. It sells 3 flats + 2 rods daily. How many cubes remain after 2 days?",
-            answers: ["4,360", "4,600", "4,960", "5,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "You have 2 blocks. You give away 1 flat + 5 rods + 3 cubes. How much is left?",
-            answers: ["847", "1,847", "2,153", "2,847"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A pizza is cut into 1 flat + 2 rods slices. How many slices is that?",
-            answers: ["12", "102", "120", "1,020"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A school orders 4 blocks + 5 rods of pencils. How many pencils is that?",
-            answers: ["405", "4,500", "45,000", "4,050"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A car travels 1 rod km per minute. How far in 1 flat minutes?",
-            answers: ["10 km", "100 km", "0.1 km", "1,000 km"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Combine: 0.5 blocks + 25 rods - 3 flats.",
-            answers: ["0 cubes", "200 cubes", "450 cubes", "700 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 1,000 marbles, how many marbles are in 2.5 blocks?",
-            answers: ["25", "250", "2,500", "25,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A box weighs 1 block - 5 rods. What's its weight in cubes?",
-            answers: ["50", "500", "950", "995"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A recipe needs 3 rods + 2 cubes of flour. What is triple the recipe.",
-            answers: ["96", "15", "9", "32"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A garden has 2 blocks of plants. If 1 flat + 2 rods die, how many survive?",
-            answers: ["1,880", "1,808", "1,280", "1,082"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
+    {
+        "text": "What is the sum of 4.25 billion and 1.75 billion, expressed in millions?",
+        "answers": ["6,000 million", "5,000 million", "6,500 million", "5,500 million"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Compare: (1.8 billion ÷ 3) ___ (600 million × 1)",
+        "answers": [">", "<", "=", "≠"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If you subtract 125.5 million from 2.5 billion, what remains?",
+        "answers": ["2,374,500,000", "2,375,000,000", "2,365,000,000", "2,400,000,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is 45% of 8.4 billion?",
+        "answers": ["3.78 billion", "3.5 billion", "4.0 billion", "3.25 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which expression equals 1.2 billion?",
+        "answers": [
+            "(3.6 billion ÷ 3) + (150 million × 2)",
+            "(800 million × 2) - 400 million",
+            "(4.8 billion ÷ 4) + 300 million",
+            "All of the above"
+        ],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "Round 8,472,635,921 to the nearest ten million",
+        "answers": ["8,470,000,000", "8,500,000,000", "8,480,000,000", "8,400,000,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If A = 12.5 billion and B = 12,499,999,999, then A - B =",
+        "answers": ["1", "10", "100", "1,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "How many times greater is 3.6 billion than 45 million?",
+        "answers": ["80", "800", "8,000", "80,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which number is 75 million less than 4.8 billion?",
+        "answers": ["4,725,000,000", "4,750,000,000", "4,725,000,000", "4,799,925,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If you divide 12.9 billion by 300, what is the result?",
+        "answers": ["43 million", "430 million", "4.3 million", "4,300,000"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which digit in 9,876,543,210 has a place value of 100 million?",
+        "answers": ["9", "8", "7", "6"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the product of 675 million and 8?",
+        "answers": ["5.4 billion", "54 billion", "5.04 billion", "5.8 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If 7.2 billion = 72 × N, what is N?",
+        "answers": ["10 million", "100 million", "1 billion", "10 billion"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which interval includes numbers from 3.15 billion to 3.45 billion, excluding 3.3 billion?",
+        "answers": [
+            "3,150,000,000 ≤ X < 3,300,000,000",
+            "3,150,000,000 < X ≤ 3,450,000,000",
+            "3,150,000,000 ≤ X ≤ 3,450,000,000, X ≠ 3,300,000,000",
+            "3,300,000,000 < X ≤ 3,450,000,000"
+        ],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If 8.1 billion is split equally among 9 countries, how much per country?",
+        "answers": ["900 million", "90 million", "9 billion", "9 million"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the missing term: 4.8 billion, 4.2 billion, ___, 3 billion, 2.4 billion?",
+        "answers": ["3.6 billion", "3.9 billion", "3.3 billion", "3.0 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which is NOT equal to 2.75 billion?",
+        "answers": [
+            "2,750 million",
+            "11/4 of 1 billion",
+            "275 × 10 million",
+            "3 billion - 500 million"
+        ],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "If a number is 1/6 of 18 billion, what is 40% of that number?",
+        "answers": ["1.2 billion", "3 billion", "1.5 billion", "1.8 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Which comparison is true?",
+        "answers": [
+            "2.4 billion + 600 million > 3.1 billion",
+            "35% of 6 billion = 2.1 billion",
+            "900 million × 5 < 4.5 billion",
+            "All are true"
+        ],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is the next number in the pattern: 250 million, 2.5 billion, 25 billion, ___?",
+        "answers": ["250 billion", "2.5 trillion", "125 billion", "50 billion"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    }
     ], 
     6: [
         // Level 6 questions would go here
