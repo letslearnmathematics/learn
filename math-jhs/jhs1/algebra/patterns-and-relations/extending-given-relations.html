@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Extending Given Relations | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to extend given relations, study number patterns, and complete tables in mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Extending Given Relations | JHS Mathematics">
+        <meta property="og:description" content="Learn to extend given relations and study number patterns.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/relations">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Extending Given Relations</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Relations</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Extending Relations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#symbolic"><i class="fas fa-chevron-right"></i> Symbolic Relations</a></li>
+                                <li><a href="#patterns"><i class="fas fa-chevron-right"></i> Number Patterns</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Extending_Relations</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Extending given relations involves recognizing patterns in numbers or symbols and continuing them according to established rules. This skill helps us predict future terms in sequences and understand mathematical relationships.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{Example: } 2, 4, 6, 8, \underline{\quad} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Key Concepts
+                                </h3>
+                                <p>
+                                    A relation shows how numbers or objects are connected:
+                                </p>
+                                <ul>
+                                    <li><strong>Numerical Relations</strong>: Patterns in number sequences</li>
+                                    <li><strong>Symbolic Relations</strong>: Relationships expressed with variables</li>
+                                    <li><strong>Tabular Relations</strong>: Patterns shown in tables</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: In the relation y = x + 2, when x is 3, y is 5.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Symbolic Relations Section -->
+                        <section id="symbolic" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-project-diagram"></i> Extending Symbolic Relations
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-equals"></i> Understanding Symbolic Relations
+                                </h3>
+                                <p>
+                                    A symbolic relation uses variables to show how quantities are related. We can extend these relations by substituting values.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: y = 2x + 1</h4>
+                                        <p>Complete the table for x = 1, 2, 3, 4:</p>
+                                        <div class="math-example">
+                                            <table class="fraction-table">
+                                                <tr>
+                                                    <th>x</th>
+                                                    <th>y</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>1</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>5</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>3</td>
+                                                    <td>7</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>9</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: a = b × 3 - 2</h4>
+                                        <p>Find a when b = 4, 5, 6:</p>
+                                        <div class="math-example">
+                                            <table class="fraction-table">
+                                                <tr>
+                                                    <th>b</th>
+                                                    <th>a</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>10</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>13</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>6</td>
+                                                    <td>16</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Extending Simple Equations
+                                </h3>
+                                <p>
+                                    To extend a given relation:
+                                </p>
+                                <ol>
+                                    <li>Identify the pattern or rule</li>
+                                    <li>Apply the rule to new values</li>
+                                    <li>Verify the pattern continues</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Given: m = n + 5</p>
+                                    <p>When n = 10, m = 15</p>
+                                    <p>When n = 15, m = 20</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Number Patterns Section -->
+                        <section id="patterns" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-sort-numeric-up"></i> Number Patterns and Tables
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Recognizing Number Patterns
+                                </h3>
+                                <p>
+                                    Number patterns follow specific rules that can be identified and extended:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Arithmetic Sequences</h4>
+                                        <p>Add or subtract the same number each time:</p>
+                                        <div class="math-example">
+                                            \[ 5, 8, 11, 14, \underline{17} \text{ (Rule: Add 3)} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Geometric Sequences</h4>
+                                        <p>Multiply or divide by the same number each time:</p>
+                                        <div class="math-example">
+                                            \[ 3, 6, 12, 24, \underline{48} \text{ (Rule: Multiply by 2)} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Special Patterns</h4>
+                                        <p>Other patterns like square numbers or alternating sequences:</p>
+                                        <div class="math-example">
+                                            \[ 1, 4, 9, 16, \underline{25} \text{ (Square numbers)} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-table"></i> Completing Tables
+                                </h3>
+                                <p>
+                                    To complete a table of values:
+                                </p>
+                                <ol>
+                                    <li>Study the given values to find the pattern</li>
+                                    <li>Apply the pattern to missing values</li>
+                                    <li>Check your answers make sense</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Complete the table:</p>
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Input (x)</th>
+                                            <th>Output (y)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>13</td>
+                                        </tr>
+                                    </table>
+                                    <p>Rule: y = 3x + 1</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-search"></i> Finding the Rule
+                                </h3>
+                                <p>
+                                    To find the rule in a pattern:
+                                </p>
+                                <ol>
+                                    <li>Look at how numbers change from one term to the next</li>
+                                    <li>Check if it's addition, subtraction, multiplication, or division</li>
+                                    <li>Test your rule on known values</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Given sequence: 2, 5, 8, 11, ...</p>
+                                    <p>Pattern: +3 each time</p>
+                                    <p>Next term: 14</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                </h3>
+                                <p>
+                                    Extending relations is useful in many real-world situations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Savings Growth</h4>
+                                        <p>If you save $10 each week, how much after 8 weeks?</p>
+                                        <div class="math-example">
+                                            \[ \text{Week 1: \$10, Week 2: \$20, ..., Week 8: \$80} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Plant Growth</h4>
+                                        <p>A plant grows 2cm each day. How tall after 1 week?</p>
+                                        <div class="math-example">
+                                            \[ \text{Day 1: 2cm, Day 2: 4cm, ..., Day 7: 14cm} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Pricing</h4>
+                                        <p>If 3 pencils cost \$1.50, how much for 7 pencils?</p>
+                                        <div class="math-example">
+                                            \[ \text{Each pencil: \$0.50} \]
+                                            \[ \text{7 pencils: \$3.50} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Extend the sequence: 4, 7, 10, 13, __, __</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Pattern: +3 each time</p>
+                                        <p>Next terms: 16, 19</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Complete the table for y = 2x - 1 when x = 3, 4, 5</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <table class="fraction-table">
+                                            <tr>
+                                                <th>x</th>
+                                                <th>y</th>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>7</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>9</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Find the rule and next term: 5, 10, 20, 40, __</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Rule: ×2 each time</p>
+                                        <p>Next term: 80</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>If p = 3q + 2, find p when q = 6, 7, 8</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <table class="fraction-table">
+                                            <tr>
+                                                <th>q</th>
+                                                <th>p</th>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>20</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>23</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>26</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Complete: 12, 9, 6, 3, __, __</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Pattern: -3 each time</p>
+                                        <p>Next terms: 0, -3</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Find the missing values in the table:</p>
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>x</th>
+                                            <th>y</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>9</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>13</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>?</td>
+                                        </tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Rule: y = 2x + 1</p>
+                                        <p>When x = 8, y = 17</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with extending relations and number patterns</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

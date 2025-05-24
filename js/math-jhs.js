@@ -388,16 +388,16 @@ document.addEventListener("DOMContentLoaded", function() {
             ],
             "Ratios and Proportion": [
                 { name: "Ratios Between Two Quantities", url: "./math-jhs/jhs1/number/ratios-and-proportion/ratios-between-two-quantities" },
-                { name: "Unit Rate", url: "./math-jhs/jhs1/number/ratios-and-proportion/unit-rate.html" },
+                { name: "Unit Rate", url: "./math-jhs/jhs1/number/ratios-and-proportion/unit-rate" },
                 { name: "Tables of Equivalent Ratios", url: "./math-jhs/jhs1/number/ratios-and-proportion/tables-of-equivalent-ratios" },
                 { name: "Proportional Reasoning", url: "./math-jhs/jhs1/number/ratios-and-proportion/proportional-reasoning" },
                 { name: "Percentage As A Rate", url: "./math-jhs/jhs1/number/ratios-and-proportion/percentage-as-rate" }
             ],
             "Patterns and Relations": [
-                { name: "Extending Given Relations", url: "b7-2-1-1-1lesson1" },
-                { name: "Rule Of A Relation", url: "b7-2-1-1-2lesson1" },
-                { name: "Predicting Subsequent Elements", url: "b7-2-1-1-3lesson1" },
-                { name: "Graphs of Given Relations", url: "b7-2-1-1-4lesson1" }
+                { name: "Extending Given Relations", url: "./math-jhs/jhs1/algebra/patterns-and-relations/extending-given-relations" },
+                { name: "Rule Of A Relation", url: "./math-jhs/jhs1/algebra/patterns-and-relations/rule-of-a-relation" },
+                { name: "Predicting Subsequent Elements", url: "./math-jhs/jhs1/algebra/patterns-and-relations/predicting-subsequent-elements" },
+                { name: "Graphs of Given Relations", url: "./math-jhs/jhs1/algebra/patterns-and-relations/graphs-of-given-relations" }
             ],
             "Algebraic Expressions": [
                 { name: "Creating Algebraic Expressions", url: "b7-2-2-1-1lesson1" },

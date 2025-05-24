@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Percent of a Quantity | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to find a percent of a quantity as a rate per 100.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Percent of a Quantity | JHS Mathematics">
+        <meta property="og:description" content="Learn to find a percent of a quantity as a rate per 100.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/percent">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Percent of a Quantity</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Percentages</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Percent of a Quantity</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#understanding"><i class="fas fa-chevron-right"></i> Understanding Percent</a></li>
+                                <li><a href="#calculating"><i class="fas fa-chevron-right"></i> Calculating Percentages</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Percent_of_Quantity</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A percentage is a way to express a number as a fraction of 100. The word "percent" means "per hundred" or "out of 100." We use the percent symbol (%) to show percentages.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{For example: } 25\% \text{ means } 25 \text{ out of } 100 \text{ or } \frac{25}{100} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Why Percentages Matter
+                                </h3>
+                                <p>
+                                    Percentages are used everywhere in daily life:
+                                </p>
+                                <ul>
+                                    <li><strong>Discounts</strong>: "25% off sale" means you pay 25% less than the original price</li>
+                                    <li><strong>Grades</strong>: "You scored 85% on the test" means you got 85 out of 100 points</li>
+                                    <li><strong>Interest Rates</strong>: "5% interest" means you pay 5 extra for every 100 you borrow</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Understanding Percent Section -->
+                        <section id="understanding" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-percentage"></i> Understanding Percent
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> The Meaning of Percent
+                                </h3>
+                                <p>
+                                    Percent means "per hundred" or "out of 100." It's a way to compare quantities by scaling them to a common base of 100.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Visual Representation</h4>
+                                        <p>Imagine a grid with 100 squares:</p>
+                                        <div class="math-example">
+                                            <div class="percent-grid">
+                                                <div class="grid-container">
+                                                    <!-- This will be filled with 100 squares via JavaScript -->
+                                                    <p>25% would mean 25 squares are colored</p>
+                                                    <p>50% would mean 50 squares are colored</p>
+                                                    <p>100% means all squares are colored</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Equivalent Forms</h4>
+                                        <p>Percentages can be written as fractions and decimals:</p>
+                                        <div class="math-example">
+                                            \[ 25\% = \frac{25}{100} = 0.25 \]
+                                            \[ 50\% = \frac{50}{100} = 0.5 \]
+                                            \[ 100\% = \frac{100}{100} = 1 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Converting Between Forms
+                                </h3>
+                                <p>
+                                    You can convert between percentages, fractions, and decimals:
+                                </p>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Percentage</th>
+                                            <th>Fraction</th>
+                                            <th>Decimal</th>
+                                        </tr>
+                                        <tr>
+                                            <td>25%</td>
+                                            <td>\(\frac{25}{100} = \frac{1}{4}\)</td>
+                                            <td>0.25</td>
+                                        </tr>
+                                        <tr>
+                                            <td>50%</td>
+                                            <td>\(\frac{50}{100} = \frac{1}{2}\)</td>
+                                            <td>0.5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>75%</td>
+                                            <td>\(\frac{75}{100} = \frac{3}{4}\)</td>
+                                            <td>0.75</td>
+                                        </tr>
+                                        <tr>
+                                            <td>100%</td>
+                                            <td>\(\frac{100}{100} = 1\)</td>
+                                            <td>1.0</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Calculating Percentages Section -->
+                        <section id="calculating" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Calculating Percentages
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-divide"></i> Finding a Percent of a Quantity
+                                </h3>
+                                <p>
+                                    To find a percent of a quantity, follow these steps:
+                                </p>
+                                <ol>
+                                    <li>Convert the percentage to a decimal (divide by 100)</li>
+                                    <li>Multiply the decimal by the quantity</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Find 20% of 150</h4>
+                                        <div class="math-example">
+                                            \[ 20\% = 0.20 \]
+                                            \[ 0.20 \times 150 = 30 \]
+                                            <p>So, 20% of 150 is 30</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Find 15% of 80</h4>
+                                        <div class="math-example">
+                                            \[ 15\% = 0.15 \]
+                                            \[ 0.15 \times 80 = 12 \]
+                                            <p>So, 15% of 80 is 12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-percent"></i> Alternative Method: Using Fractions
+                                </h3>
+                                <p>
+                                    You can also find percentages using fractions:
+                                </p>
+                                <div class="math-example">
+                                    <p>Example: Find 25% of 200</p>
+                                    \[ 25\% = \frac{25}{100} = \frac{1}{4} \]
+                                    \[ \frac{1}{4} \times 200 = 50 \]
+                                    <p>So, 25% of 200 is 50</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-line"></i> Percentage Increase/Decrease
+                                </h3>
+                                <p>
+                                    To calculate percentage increase or decrease:
+                                </p>
+                                <ol>
+                                    <li>Find the difference between the new and old values</li>
+                                    <li>Divide the difference by the original value</li>
+                                    <li>Multiply by 100 to get the percentage</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: A price increases from \$50 to \$60</p>
+                                    \[ \text{Difference} = 60 - 50 = 10 \]
+                                    \[ \frac{10}{50} = 0.2 \]
+                                    \[ 0.2 \times 100 = 20\% \text{ increase} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shopping-cart"></i> Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                </h3>
+                                <p>
+                                    Understanding percentages is useful in many real-world situations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Shopping Discounts</h4>
+                                        <p>A \$120 jacket is on sale for 30% off. What's the sale price?</p>
+                                        <div class="math-example">
+                                            \[ 30\% \text{ of } 120 = 0.30 \times 120 = 36 \]
+                                            \[ \text{Sale price} = 120 - 36 = \$84 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Tips at Restaurants</h4>
+                                        <p>You want to leave a 15% tip on a \$45 meal bill.</p>
+                                        <div class="math-example">
+                                            \[ 15\% \text{ of } 45 = 0.15 \times 45 = 6.75 \]
+                                            <p>Tip amount: \$6.75</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Test Scores</h4>
+                                        <p>You answered 34 out of 40 questions correctly. What percentage is this?</p>
+                                        <div class="math-example">
+                                            \[ \frac{34}{40} = 0.85 \]
+                                            \[ 0.85 \times 100 = 85\% \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find 30% of 250</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 0.30 \times 250 = 75 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>What is 15% of 80?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 0.15 \times 80 = 12 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A \$25 shirt has a 20% discount. What's the sale price?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 20\% \text{ of } 25 = 5 \]
+                                        \[ \text{Sale price} = 25 - 5 = \$20 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Convert 65% to a decimal and fraction</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Decimal: 0.65</p>
+                                        <p>Fraction: \(\frac{65}{100} = \frac{13}{20}\)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>A population increased from 500 to 575. What's the percentage increase?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Increase} = 575 - 500 = 75 \]
+                                        \[ \frac{75}{500} = 0.15 \]
+                                        \[ 0.15 \times 100 = 15\% \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>You scored 42 out of 50 on a test. What percentage is this?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{42}{50} = 0.84 \]
+                                        \[ 0.84 \times 100 = 84\% \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with percentages of quantities</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Create percentage grid visualization
+            document.addEventListener('DOMContentLoaded', function() {
+                const gridContainer = document.querySelector('.percent-grid .grid-container');
+                if (gridContainer) {
+                    for (let i = 0; i < 100; i++) {
+                        const square = document.createElement('div');
+                        square.className = 'grid-square';
+                        gridContainer.insertBefore(square, gridContainer.firstChild);
+                    }
+                }
+            });
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

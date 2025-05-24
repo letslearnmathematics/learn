@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Proportional Reasoning | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to use proportional reasoning to find missing values in tables and plot coordinate pairs.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Proportional Reasoning | JHS Mathematics">
+        <meta property="og:description" content="Learn to find missing values using proportions and plot coordinate pairs.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/proportional-reasoning">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Proportional Reasoning</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Ratios & Proportions</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Proportional Reasoning</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#missing-values"><i class="fas fa-chevron-right"></i> Finding Missing Values</a></li>
+                                <li><a href="#coordinate-plane"><i class="fas fa-chevron-right"></i> Coordinate Plane</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Proportional_Reasoning</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Proportional reasoning involves understanding relationships between quantities that change at the same rate. When two quantities are proportional, their ratio remains constant.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{If } \frac{a}{b} = \frac{c}{d}, \text{ then } a \text{ and } b \text{ are proportional to } c \text{ and } d \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Ratios
+                                </h3>
+                                <p>
+                                    A ratio compares two quantities. When two ratios are equal, they form a proportion:
+                                </p>
+                                <div class="math-example">
+                                    \[ \frac{2}{3} = \frac{4}{6} \text{ is a proportion because both ratios equal } \frac{2}{3} \]
+                                </div>
+                                <ul>
+                                    <li><strong>Direct Proportion</strong>: As one quantity increases, the other increases at the same rate</li>
+                                    <li><strong>Constant Ratio</strong>: The ratio between the two quantities always stays the same</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: If 3 pencils cost \$1.50, then 6 pencils cost \$3.00 (same ratio of 2 pencils per \$1)</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Missing Values Section -->
+                        <section id="missing-values" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-search"></i> Finding Missing Values
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question-circle"></i> Using Proportional Reasoning
+                                </h3>
+                                <p>
+                                    To find missing values in proportional tables:
+                                </p>
+                                <ol>
+                                    <li>Identify the constant ratio between known pairs</li>
+                                    <li>Apply this ratio to find the missing value</li>
+                                    <li>Check that all ratios in the table are equal</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Complete the table</h4>
+                                        <div class="math-example">
+                                            <table class="fraction-table">
+                                                <tr>
+                                                    <th>Boxes</th>
+                                                    <th>Apples</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>2</td>
+                                                    <td>24</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>5</td>
+                                                    <td>?</td>
+                                                </tr>
+                                            </table>
+                                            <p>Solution: Find apples per box (24 ÷ 2 = 12 apples/box)</p>
+                                            <p>Then 5 boxes × 12 apples/box = 60 apples</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Using cross-multiplication</h4>
+                                        <div class="math-example">
+                                            \[ \frac{3}{4} = \frac{x}{20} \]
+                                            \[ 4x = 3 \times 20 \]
+                                            \[ x = \frac{60}{4} = 15 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-table"></i> Proportional Tables
+                                </h3>
+                                <p>
+                                    Proportional tables show equivalent ratios. All columns should have the same ratio when you divide corresponding values:
+                                </p>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Time (hours)</th>
+                                            <th>Distance (km)</th>
+                                            <th>Ratio (km/h)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>60</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>120</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>180</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>?</td>
+                                            <td>300</td>
+                                            <td>60</td>
+                                        </tr>
+                                    </table>
+                                    <p>Missing value: 300 ÷ 60 = 5 hours</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Coordinate Plane Section -->
+                        <section id="coordinate-plane" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-map-marked-alt"></i> Coordinate Plane
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-map"></i> Plotting Points
+                                </h3>
+                                <p>
+                                    The coordinate plane has two perpendicular number lines (axes):
+                                </p>
+                                <ul>
+                                    <li><strong>x-axis</strong>: Horizontal axis (left-right)</li>
+                                    <li><strong>y-axis</strong>: Vertical axis (up-down)</li>
+                                    <li><strong>Origin</strong>: (0,0) where axes intersect</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <p>Points are written as (x, y) pairs:</p>
+                                    <p>(3, 4) means 3 units right, 4 units up</p>
+                                    <p>(-2, 5) means 2 units left, 5 units up</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-line"></i> Graphing Proportional Relationships
+                                </h3>
+                                <p>
+                                    Proportional relationships graph as straight lines through the origin:
+                                </p>
+                                <ol>
+                                    <li>Create a table of (x, y) values</li>
+                                    <li>Plot each point on the coordinate plane</li>
+                                    <li>Connect the points with a straight line</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: y = 2x</p>
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>x</th>
+                                            <th>y</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>4</td>
+                                        </tr>
+                                    </table>
+                                    <p>This would graph as a straight line through (0,0), (1,2), (2,4)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> Identifying Proportions from Graphs
+                                </h3>
+                                <p>
+                                    To determine if a graph shows a proportional relationship:
+                                </p>
+                                <ul>
+                                    <li>The line must be straight</li>
+                                    <li>It must pass through the origin (0,0)</li>
+                                    <li>The ratio y/x must be constant for all points</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: These points show a proportion because:</p>
+                                    <p>3/1 = 6/2 = 9/3 = 3 (constant ratio)</p>
+                                    <p>And the line would pass through (0,0)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                </h3>
+                                <p>
+                                    Proportional reasoning is used in many real-world situations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Recipe Scaling</h4>
+                                        <p>If a cookie recipe for 24 cookies uses 2 cups of flour:</p>
+                                        <div class="math-example">
+                                            \[ \frac{2 \text{ cups}}{24 \text{ cookies}} = \frac{x}{36 \text{ cookies}} \]
+                                            \[ x = 3 \text{ cups} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Map Scales</h4>
+                                        <p>If 1 cm on a map equals 5 km in real life:</p>
+                                        <div class="math-example">
+                                            \[ \frac{1 \text{ cm}}{5 \text{ km}} = \frac{4 \text{ cm}}{x} \]
+                                            \[ x = 20 \text{ km} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Speed Calculations</h4>
+                                        <p>If a car travels 240 km in 3 hours at constant speed:</p>
+                                        <div class="math-example">
+                                            \[ \frac{240 \text{ km}}{3 \text{ hours}} = \frac{x}{5 \text{ hours}} \]
+                                            \[ x = 400 \text{ km} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Complete the table if y is proportional to x:</p>
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>x</th>
+                                            <th>y</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>?</td>
+                                        </tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Ratio is 10/2 = 5, so y = 5x</p>
+                                        <p>For x=5: y=5×5=25</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve for x: \(\frac{7}{8} = \frac{x}{32}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 8x = 7 \times 32 \]
+                                        \[ 8x = 224 \]
+                                        \[ x = 28 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Plot the points (1,3), (2,6), (3,9) and determine if they show a proportional relationship</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Yes, because:</p>
+                                        <p>3/1 = 6/2 = 9/3 = 3 (constant ratio)</p>
+                                        <p>And the line would pass through (0,0)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>If 5 notebooks cost \$12.50, how much would 8 notebooks cost?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{12.50}{5} = 2.50 \text{ per notebook} \]
+                                        \[ 8 \times 2.50 = \$20.00 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Which of these tables shows a proportional relationship?</p>
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Table A</th>
+                                            <th>Table B</th>
+                                        </tr>
+                                        <tr>
+                                            <td>x:1, y:2</td>
+                                            <td>x:1, y:3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>x:2, y:3</td>
+                                            <td>x:2, y:6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>x:3, y:4</td>
+                                            <td>x:3, y:9</td>
+                                        </tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Table B shows a proportional relationship because:</p>
+                                        <p>3/1 = 6/2 = 9/3 = 3 (constant ratio)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Graph the points (0,0), (1,4), (2,8) and write the proportional relationship as an equation</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>The equation is y = 4x</p>
+                                        <p>Because 4/1 = 8/2 = 4 (constant ratio)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with proportional reasoning and coordinate graphing</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
