@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Ratios Between Two Quantities | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to determine, express, and describe ratios between two quantities.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Ratios Between Two Quantities | JHS Mathematics">
+        <meta property="og:description" content="Learn to determine, express, and describe ratios between two quantities.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/ratios-and-proportion/ratios-between-two-quantities">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Ratios Between Two Quantities</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Ratios</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Ratios Between Two Quantities</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#determining"><i class="fas fa-chevron-right"></i> Determining Ratios</a></li>
+                                <li><a href="#expressing"><i class="fas fa-chevron-right"></i> Expressing Ratios</a></li>
+                                <li><a href="#language"><i class="fas fa-chevron-right"></i> Ratio Language</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Ratios_Between_Quantities</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A ratio compares two quantities of the same kind, showing how much of one thing there is compared to another. Ratios are written with a colon (:) between the numbers.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{Ratio of a to b is written as } a : b \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Ratios
+                                </h3>
+                                <p>
+                                    Ratios help us compare quantities in different situations:
+                                </p>
+                                <ul>
+                                    <li><strong>Part-to-part</strong>: Comparing parts of a whole (e.g., 3 boys to 5 girls)</li>
+                                    <li><strong>Part-to-whole</strong>: Comparing a part to the whole (e.g., 3 boys to 8 total students)</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: In a class of 10 boys and 15 girls, the ratio of boys to girls is 10:15</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Determining Ratios Section -->
+                        <section id="determining" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Determining Ratios
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> Finding the Ratio
+                                </h3>
+                                <p>
+                                    To determine the ratio between two quantities:
+                                </p>
+                                <ol>
+                                    <li>Identify the two quantities being compared</li>
+                                    <li>Write them in order with a colon between</li>
+                                    <li>Simplify the ratio if possible</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Simple Ratio</h4>
+                                        <p>There are 4 red balls and 6 blue balls. What is the ratio of red to blue balls?</p>
+                                        <div class="math-example">
+                                            \[ \text{Red : Blue} = 4 : 6 \]
+                                            \[ \text{Simplified} = 2 : 3 \text{ (divided both by 2)} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Different Units</h4>
+                                        <p>Convert to same units first: 50cm to 2m</p>
+                                        <div class="math-example">
+                                            \[ 2m = 200cm \]
+                                            \[ \text{Ratio} = 50 : 200 \]
+                                            \[ \text{Simplified} = 1 : 4 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                            
+                        <!-- Expressing Ratios Section -->
+                        <section id="expressing" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-exchange-alt"></i> Expressing Ratios
+                            </h2>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pen"></i> Different Ways to Write Ratios
+                                </h3>
+                                <p>
+                                    Ratios can be expressed in several forms:
+                                </p>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Form</th>
+                                            <th>Example</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Using colon</td>
+                                            <td>3 : 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>As a fraction</td>
+                                            <td>\(\frac{3}{4}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Using "to"</td>
+                                            <td>3 to 4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>In words</td>
+                                            <td>"The ratio is three to four"</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-sort-amount-up"></i> Order Matters in Ratios
+                                </h3>
+                                <p>
+                                    The order in which quantities are written in a ratio is important:
+                                </p>
+                                <div class="math-example">
+                                    \[ \text{The ratio 2:3 is different from 3:2} \]
+                                    <p>Example: For every 2 apples there are 3 oranges (2:3) is not the same as for every 3 apples there are 2 oranges (3:2)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Ratio Language Section -->
+                        <section id="language" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-comments"></i> Ratio Language
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-language"></i> Describing Ratios
+                                </h3>
+                                <p>
+                                    We can describe ratios using different words and phrases:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Comparison Phrases</h4>
+                                        <ul>
+                                            <li>"For every 2 boys, there are 3 girls"</li>
+                                            <li>"The ratio of teachers to students is 1:20"</li>
+                                            <li>"There are 4 red marbles for each blue marble"</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Simplified Forms</h4>
+                                        <p>Always simplify ratios when possible:</p>
+                                        <div class="math-example">
+                                            \[ 6:9 \text{ becomes } 2:3 \]
+                                            \[ 15:20 \text{ becomes } 3:4 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                </h3>
+                                <p>
+                                    Understanding ratio language is useful in real-world situations:
+                                </p>
+                                <div class="math-example">
+                                    <p><strong>Recipe:</strong> "Mix water and juice concentrate in a 3:1 ratio" means 3 parts water to 1 part concentrate</p>
+                                    <p><strong>Map Scale:</strong> "Scale of 1:50,000" means 1cm on map represents 50,000cm in real life</p>
+                                    <p><strong>Classroom:</strong> "Student-teacher ratio of 25:1" means 25 students per teacher</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>There are 12 boys and 18 girls in a class. What is the ratio of boys to girls in simplest form?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Boys : Girls} = 12 : 18 = 2 : 3 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Express the ratio 15:25 in simplest form.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 15 : 25 = 3 : 5 \text{ (divided both by 5)} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>In a basket, there are 5 apples and 7 oranges. Write the ratio of apples to total fruits.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Total fruits} = 5 + 7 = 12 \]
+                                        \[ \text{Apples : Total} = 5 : 12 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Convert 200m to 1km as a simplified ratio.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 1km = 1000m \]
+                                        \[ 200 : 1000 = 1 : 5 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Describe the ratio 3:7 using the phrase "for every..."</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>For every 3 of the first quantity, there are 7 of the second quantity.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>A recipe calls for flour and sugar in a 5:2 ratio. If you use 10 cups of flour, how much sugar is needed?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Flour : Sugar} = 5 : 2 = 10 : x \]
+                                        \[ 5 \times 2 = 10 \text{ so } 2 \times 2 = 4 \]
+                                        \[ \text{Sugar needed} = 4 \text{ cups} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with ratios between quantities</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

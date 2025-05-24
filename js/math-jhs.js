@@ -387,11 +387,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Dividing Given Quantities by a Fraction", url: "./math-jhs/jhs1/number/fractions-decimals-and-percentages/dividing-by-a-fraction" }
             ],
             "Ratios and Proportion": [
-                { name: "Ratios Between Two Quantities", url: "b7-1-4-1-1lesson1" },
-                { name: "Unit Rate", url: "b7-1-4-1-2lesson1" },
-                { name: "Tables of Equivalent Ratios", url: "b7-1-4-1-3lesson1" },
-                { name: "Proportional Reasoning", url: "b7-1-4-1-4lesson1" },
-                { name: "Percentage As A Rate", url: "b7-1-4-1-5lesson1" }
+                { name: "Ratios Between Two Quantities", url: "./math-jhs/jhs1/number/ratios-and-proportion/ratios-between-two-quantities" },
+                { name: "Unit Rate", url: "./math-jhs/jhs1/number/ratios-and-proportion/unit-rate.html" },
+                { name: "Tables of Equivalent Ratios", url: "./math-jhs/jhs1/number/ratios-and-proportion/tables-of-equivalent-ratios" },
+                { name: "Proportional Reasoning", url: "./math-jhs/jhs1/number/ratios-and-proportion/proportional-reasoning" },
+                { name: "Percentage As A Rate", url: "./math-jhs/jhs1/number/ratios-and-proportion/percentage-as-rate" }
             ],
             "Patterns and Relations": [
                 { name: "Extending Given Relations", url: "b7-2-1-1-1lesson1" },
