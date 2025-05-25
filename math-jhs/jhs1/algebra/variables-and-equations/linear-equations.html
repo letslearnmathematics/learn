@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Word Problems & Linear Equations | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to translate word problems to linear equations in one variable and vice versa.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Word Problems & Linear Equations | JHS Mathematics">
+        <meta property="og:description" content="Learn to translate between word problems and linear equations in one variable.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/linear-equations">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Word Problems & Linear Equations</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Word Problems & Equations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#flag-diagram"><i class="fas fa-chevron-right"></i> Flag Diagram Method</a></li>
+                                <li><a href="#word-to-equation"><i class="fas fa-chevron-right"></i> Word to Equation</a></li>
+                                <li><a href="#equation-to-word"><i class="fas fa-chevron-right"></i> Equation to Word</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Word_Problems_Equations</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Many real-world problems can be translated into mathematical equations. In this lesson, we'll focus on converting word problems to linear equations with one variable and vice versa.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{Example: } \text{"Five more than a number is 12"} \rightarrow x + 5 = 12 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Key Concepts
+                                </h3>
+                                <p>
+                                    A linear equation in one variable is an equation that can be written in the form:
+                                </p>
+                                <div class="math-example">
+                                    \[ ax + b = c \]
+                                </div>
+                                <ul>
+                                    <li><strong>Variable</strong>: A symbol (usually x) representing an unknown value</li>
+                                    <li><strong>Coefficient</strong>: The number multiplying the variable (a)</li>
+                                    <li><strong>Constants</strong>: The known numbers (b and c)</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: In \(3x + 7 = 16\), 3 is the coefficient, 7 and 16 are constants.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Flag Diagram Section -->
+                        <section id="flag-diagram" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-flag"></i> Flag Diagram Method
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-project-diagram"></i> Understanding Flag Diagrams
+                                </h3>
+                                <p>
+                                    A flag diagram helps visualize the relationship between a word problem and its equation:
+                                </p>
+                                <ol>
+                                    <li>Write the word problem at the top</li>
+                                    <li>Break it down into mathematical components</li>
+                                    <li>Show the inverse operations needed to solve it</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example Problem:</h4>
+                                        <p>"A number multiplied by 4 then subtracted by 5 gives 15"</p>
+                                        <div class="math-example">
+                                            <div class="flag-diagram">
+                                                <div class="flag-top">Word Problem</div>
+                                                <div class="flag-pole">↓</div>
+                                                <div class="flag-bottom">4x - 5 = 15</div>
+                                                <div class="flag-pole">↓</div>
+                                                <div class="flag-bottom">Inverse: Add 5, then divide by 4</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Solving with Flag Diagrams
+                                </h3>
+                                <p>
+                                    Using the flag diagram method to solve equations:
+                                </p>
+                                <div class="math-example">
+                                    <p>Problem: \(2x + 3 = 11\)</p>
+                                    <div class="flag-diagram">
+                                        <div class="flag-top">Equation</div>
+                                        <div class="flag-pole">↓</div>
+                                        <div class="flag-bottom">Subtract 3 from both sides: \(2x = 8\)</div>
+                                        <div class="flag-pole">↓</div>
+                                        <div class="flag-bottom">Divide both sides by 2: \(x = 4\)</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Word to Equation Section -->
+                        <section id="word-to-equation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-language"></i> Translating Word Problems to Equations
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-puzzle-piece"></i> Key Words and Phrases
+                                </h3>
+                                <p>
+                                    Certain words in problems indicate specific mathematical operations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Addition (+)</h4>
+                                        <p>sum, more than, increased by, added to</p>
+                                        <div class="math-example">
+                                            \[ \text{"5 more than x"} \rightarrow x + 5 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Subtraction (-)</h4>
+                                        <p>difference, less than, decreased by, subtracted from</p>
+                                        <div class="math-example">
+                                            \[ \text{"7 less than x"} \rightarrow x - 7 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Multiplication (×)</h4>
+                                        <p>product, times, multiplied by, of</p>
+                                        <div class="math-example">
+                                            \[ \text{"twice x"} \rightarrow 2x \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Division (÷)</h4>
+                                        <p>quotient, divided by, per, ratio of</p>
+                                        <div class="math-example">
+                                            \[ \text{"x divided by 3"} \rightarrow \frac{x}{3} \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Equals (=)</h4>
+                                        <p>is, gives, yields, results in</p>
+                                        <div class="math-example">
+                                            \[ \text{"x plus 2 is 10"} \rightarrow x + 2 = 10 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-sitemap"></i> Step-by-Step Translation
+                                </h3>
+                                <p>
+                                    To translate word problems to equations:
+                                </p>
+                                <ol>
+                                    <li>Identify the unknown (usually "what number" or "how many")</li>
+                                    <li>Assign a variable to represent the unknown</li>
+                                    <li>Translate words to mathematical operations</li>
+                                    <li>Write the complete equation</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: "If 5 is subtracted from twice a number, the result is 13"</p>
+                                    <ol>
+                                        <li>Let x = the unknown number</li>
+                                        <li>"Twice a number" → 2x</li>
+                                        <li>"5 is subtracted from" → 2x - 5</li>
+                                        <li>"the result is 13" → 2x - 5 = 13</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-table"></i> Common Problem Types
+                                </h3>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Problem Type</th>
+                                            <th>Example</th>
+                                            <th>Equation</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Consecutive Numbers</td>
+                                            <td>"Two consecutive numbers sum to 25"</td>
+                                            <td>x + (x + 1) = 25</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Age Problems</td>
+                                            <td>"John is 5 years older than Mary"</td>
+                                            <td>J = M + 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number Relationships</td>
+                                            <td>"A number plus its double is 36"</td>
+                                            <td>x + 2x = 36</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Distance Problems</td>
+                                            <td>"A car travels 60km in x hours"</td>
+                                            <td>60 = x × speed</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Equation to Word Section -->
+                        <section id="equation-to-word" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-comment-alt"></i> Writing Word Problems for Equations
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-edit"></i> Reverse Translation
+                                </h3>
+                                <p>
+                                    To create word problems from equations:
+                                </p>
+                                <ol>
+                                    <li>Identify the mathematical operations in the equation</li>
+                                    <li>Choose a real-world context (money, age, measurement, etc.)</li>
+                                    <li>Use appropriate vocabulary for each operation</li>
+                                    <li>Write a complete, clear problem statement</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example Equation: 3x + 4 = 19</h4>
+                                        <p>Possible word problem:</p>
+                                        <div class="math-example">
+                                            <p>"A student buys 3 books at the same price each, plus a \$4 notebook. The total cost is \$19. What is the price of one book?"</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Tips for Good Word Problems
+                                </h3>
+                                <p>
+                                    Effective word problems should:
+                                </p>
+                                <ul>
+                                    <li>Be clear and unambiguous</li>
+                                    <li>Use simple, understandable language</li>
+                                    <li>Have a realistic scenario</li>
+                                    <li>Contain all necessary information</li>
+                                    <li>Ask a specific question</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Poor: "Some number times 3 plus 4 is 19"</p>
+                                    <p>Better: "A gardener plants 3 rows of flowers with equal number in each row, plus 4 extra flowers. Total is 19 flowers. How many in each row?"</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Translate to an equation: "Seven less than three times a number is 14"</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 3x - 7 = 14 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Write a word problem for: \(2x + 10 = 24\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible answer: "Two friends have the same amount of money. Together they have \$24, but one friend also has an extra \$10. How much does each friend have?"</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Translate to an equation: "The sum of a number and its half is 27"</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ x + \frac{x}{2} = 27 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Solve using flag diagram: \(5x - 3 = 22\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="flag-diagram">
+                                            <div class="flag-top">5x - 3 = 22</div>
+                                            <div class="flag-pole">↓</div>
+                                            <div class="flag-bottom">Add 3: 5x = 25</div>
+                                            <div class="flag-pole">↓</div>
+                                            <div class="flag-bottom">Divide by 5: x = 5</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Translate to an equation: "The product of 4 and a number decreased by 6 is equal to 18"</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 4x - 6 = 18 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Write a word problem for: \(\frac{x}{3} - 2 = 5\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible answer: "After dividing my money into 3 equal parts and giving away \$2, I have \$5 left. How much did I have originally?"</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with word problems and linear equations</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

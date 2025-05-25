@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Modeling Linear Equations | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to model linear equations using algebraic tiles and solve them step-by-step.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Modeling Linear Equations | JHS Mathematics">
+        <meta property="og:description" content="Learn to model and solve linear equations using algebraic tiles.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/algebra/linear-equations">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Modeling Linear Equations</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Linear Equations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#algebra-tiles"><i class="fas fa-chevron-right"></i> Algebraic Tiles</a></li>
+                                <li><a href="#modeling"><i class="fas fa-chevron-right"></i> Modeling Equations</a></li>
+                                <li><a href="#solving"><i class="fas fa-chevron-right"></i> Solving Equations</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Linear_Equations</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A linear equation is an equation that makes a straight line when graphed. It typically has one or two variables, usually x and y, with no exponents or powers. In this lesson, we'll learn how to model these equations using algebraic tiles and solve them step by step.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{Examples: } 2x + 3 = 7, \quad y = 4x - 2 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Linear Equations
+                                </h3>
+                                <p>
+                                    A linear equation has three main components:
+                                </p>
+                                <ul>
+                                    <li><strong>Variables</strong>: Letters that represent unknown values (usually x or y)</li>
+                                    <li><strong>Coefficients</strong>: Numbers multiplying the variables (like the 2 in 2x)</li>
+                                    <li><strong>Constants</strong>: Fixed numbers in the equation (like the 3 in 2x + 3 = 7)</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: In \(3x - 5 = 10\):</p>
+                                    <ul>
+                                        <li>Variable: x</li>
+                                        <li>Coefficient: 3</li>
+                                        <li>Constants: -5 and 10</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Algebraic Tiles Section -->
+                        <section id="algebra-tiles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Algebraic Tiles
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-square"></i> Understanding Algebraic Tiles
+                                </h3>
+                                <p>
+                                    Algebraic tiles are physical or visual tools that help us represent and solve equations. There are three main types:
+                                </p>
+                                <ol>
+                                    <li><strong>Unit tiles</strong>: Small squares representing +1 or -1</li>
+                                    <li><strong>Variable tiles</strong>: Rectangles representing +x or -x</li>
+                                    <li><strong>Variable squared tiles</strong>: Large squares representing x² or -x²</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Positive and Negative Tiles</h4>
+                                        <div class="math-example">
+                                            <table class="fraction-table">
+                                                <tr>
+                                                    <th>Tile</th>
+                                                    <th>Positive</th>
+                                                    <th>Negative</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>Unit</td>
+                                                    <td><div class="tile positive-unit">+1</div></td>
+                                                    <td><div class="tile negative-unit">-1</div></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Variable</td>
+                                                    <td><div class="tile positive-x">+x</div></td>
+                                                    <td><div class="tile negative-x">-x</div></td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-puzzle-piece"></i> Zero Pairs
+                                </h3>
+                                <p>
+                                    A zero pair is a positive and negative tile of the same type that cancel each other out:
+                                </p>
+                                <div class="math-example">
+                                    <div class="tile-group">
+                                        <div class="tile positive-unit">+1</div>
+                                        <div class="tile negative-unit">-1</div>
+                                        <span>= 0</span>
+                                    </div>
+                                    <div class="tile-group">
+                                        <div class="tile positive-x">+x</div>
+                                        <div class="tile negative-x">-x</div>
+                                        <span>= 0</span>
+                                    </div>
+                                </div>
+                                <p>We use zero pairs to simplify equations when solving them.</p>
+                            </div>
+                        </section>
+                        
+                        <!-- Modeling Equations Section -->
+                        <section id="modeling" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-cubes"></i> Modeling Equations
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-project-diagram"></i> Representing Equations with Tiles
+                                </h3>
+                                <p>
+                                    Let's model the equation \(2x + 3 = 7\) using algebraic tiles:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Left Side (2x + 3)</h4>
+                                        <div class="math-example">
+                                            <div class="tile-model">
+                                                <div class="tile positive-x">+x</div>
+                                                <div class="tile positive-x">+x</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Right Side (7)</h4>
+                                        <div class="math-example">
+                                            <div class="tile-model">
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-balance-scale"></i> Maintaining Balance
+                                </h3>
+                                <p>
+                                    The key rule when working with equations is that whatever you do to one side, you must do to the other to maintain balance.
+                                </p>
+                                <div class="math-example">
+                                    <p>Example: If we remove 3 unit tiles from both sides of \(2x + 3 = 7\):</p>
+                                    <div class="tile-model">
+                                        <div class="tile positive-x">+x</div>
+                                        <div class="tile positive-x">+x</div>
+                                        <span>=</span>
+                                        <div class="tile positive-unit">+1</div>
+                                        <div class="tile positive-unit">+1</div>
+                                        <div class="tile positive-unit">+1</div>
+                                        <div class="tile positive-unit">+1</div>
+                                    </div>
+                                    <p>This simplifies to \(2x = 4\)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Solving Equations Section -->
+                        <section id="solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Solving Equations
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-steps"></i> Step-by-Step Solving
+                                </h3>
+                                <p>
+                                    Let's solve \(2x + 3 = 7\) using algebraic tiles:
+                                </p>
+                                <ol>
+                                    <li>Model the original equation with tiles</li>
+                                    <li>Remove the same number of unit tiles from both sides</li>
+                                    <li>Divide the remaining tiles into equal groups</li>
+                                    <li>Determine the value of x</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Step 1: Original Equation</h4>
+                                        <div class="math-example">
+                                            <p>\(2x + 3 = 7\)</p>
+                                            <div class="tile-model">
+                                                <div class="tile positive-x">+x</div>
+                                                <div class="tile positive-x">+x</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <span>=</span>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 2: Remove 3 units from each side</h4>
+                                        <div class="math-example">
+                                            <p>\(2x = 4\)</p>
+                                            <div class="tile-model">
+                                                <div class="tile positive-x">+x</div>
+                                                <div class="tile positive-x">+x</div>
+                                                <span>=</span>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 3: Divide into equal groups</h4>
+                                        <div class="math-example">
+                                            <p>Each x tile equals 2 unit tiles</p>
+                                            <div class="tile-model">
+                                                <div class="tile positive-x">+x</div>
+                                                <span>=</span>
+                                                <div class="tile positive-unit">+1</div>
+                                                <div class="tile positive-unit">+1</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 4: Solution</h4>
+                                        <div class="math-example">
+                                            <p>\(x = 2\)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-triangle"></i> Dealing with Negative Values
+                                </h3>
+                                <p>
+                                    When you have negative tiles, you can add zero pairs to help solve the equation:
+                                </p>
+                                <div class="math-example">
+                                    <p>Example: Solve \(3x - 2 = 4\)</p>
+                                    <ol>
+                                        <li>Model the equation (3x tiles and 2 negative unit tiles on left, 4 positive units on right)</li>
+                                        <li>Add 2 positive units to both sides (creating zero pairs with the negatives)</li>
+                                        <li>This gives \(3x = 6\)</li>
+                                        <li>Divide both sides by 3 to get \(x = 2\)</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Model and solve \(x + 4 = 7\) using algebraic tiles</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Model: x tile + 4 unit tiles = 7 unit tiles</p>
+                                        <p>2. Remove 4 units from both sides: x = 3</p>
+                                        <p>Solution: \(x = 3\)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve \(2x - 3 = 5\) using tiles</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Model: 2x tiles + 3 negative units = 5 positive units</p>
+                                        <p>2. Add 3 units to both sides: 2x = 8</p>
+                                        <p>3. Divide both sides by 2: x = 4</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>What is a zero pair in algebra tiles?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>A positive and negative tile of the same type that cancel each other out (like +1 and -1, or +x and -x).</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Model and solve \(5 = 2x + 1\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Model: 5 unit tiles = 2x tiles + 1 unit tile</p>
+                                        <p>2. Remove 1 unit from both sides: 4 = 2x</p>
+                                        <p>3. Divide both sides by 2: x = 2</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Solve \(4x + 2 = 3x + 5\) using tiles</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Model both sides with tiles</p>
+                                        <p>2. Remove 3x tiles from both sides: x + 2 = 5</p>
+                                        <p>3. Remove 2 units from both sides: x = 3</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Why must you do the same operation to both sides of an equation?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>To maintain the balance of the equation. An equation is like a balanced scale - whatever you do to one side must be done to the other to keep it balanced.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with modeling and solving linear equations</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Solving Linear Equations | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to solve linear equations in one variable using the balance method.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Solving Linear Equations | JHS Mathematics">
+        <meta property="og:description" content="Learn to solve linear equations in one variable using the balance method.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/linear-equations">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Solving Linear Equations</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Linear Equations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#balance-method"><i class="fas fa-chevron-right"></i> Balance Method</a></li>
+                                <li><a href="#solving-steps"><i class="fas fa-chevron-right"></i> Solving Steps</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Linear_Equations</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A linear equation in one variable is an equation that can be written in the form:
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ ax + b = c \]
+                                </div>
+                                
+                                <p>where:</p>
+                                <ul>
+                                    <li><strong>x</strong> is the variable (unknown we need to solve for)</li>
+                                    <li><strong>a, b, c</strong> are constants (numbers)</li>
+                                    <li><strong>a</strong> is not equal to zero</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Equations
+                                </h3>
+                                <p>
+                                    An equation is like a balance scale - both sides must remain equal. The solution to an equation is the value of the variable that makes the equation true.
+                                </p>
+                                <div class="math-example">
+                                    <p>Example: In the equation \( 2x + 3 = 7 \):</p>
+                                    <p>The solution is \( x = 2 \) because:</p>
+                                    \[ 2(2) + 3 = 7 \]
+                                    \[ 4 + 3 = 7 \]
+                                    \[ 7 = 7 \] (This is true!)
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Balance Method Section -->
+                        <section id="balance-method" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-balance-scale"></i> Balance Method
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-equals"></i> The Balance Concept
+                                </h3>
+                                <p>
+                                    The balance method treats the equation like a balanced scale. Whatever you do to one side, you must do to the other to keep it balanced.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Simple Equation</h4>
+                                        <p>Solve \( x + 3 = 5 \)</p>
+                                        <div class="math-example">
+                                            <p>Subtract 3 from both sides:</p>
+                                            \[ x + 3 - 3 = 5 - 3 \]
+                                            \[ x = 2 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: With Multiplication</h4>
+                                        <p>Solve \( 2x = 8 \)</p>
+                                        <div class="math-example">
+                                            <p>Divide both sides by 2:</p>
+                                            \[ \frac{2x}{2} = \frac{8}{2} \]
+                                            \[ x = 4 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Inverse Operations
+                                </h3>
+                                <p>
+                                    To solve equations, we use inverse operations (opposite operations) to isolate the variable:
+                                </p>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Operation</th>
+                                            <th>Inverse Operation</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Addition (+)</td>
+                                            <td>Subtraction (-)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Subtraction (-)</td>
+                                            <td>Addition (+)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Multiplication (×)</td>
+                                            <td>Division (÷)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Division (÷)</td>
+                                            <td>Multiplication (×)</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Solving Steps Section -->
+                        <section id="solving-steps" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-list-ol"></i> Solving Steps
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-footsteps"></i> Step-by-Step Method
+                                </h3>
+                                <p>
+                                    Follow these steps to solve linear equations:
+                                </p>
+                                <ol>
+                                    <li><strong>Simplify both sides</strong> - Remove parentheses and combine like terms</li>
+                                    <li><strong>Move variable terms</strong> - Get all variable terms on one side</li>
+                                    <li><strong>Move constant terms</strong> - Get all constant terms on the other side</li>
+                                    <li><strong>Isolate the variable</strong> - Divide or multiply to get x alone</li>
+                                    <li><strong>Check your solution</strong> - Substitute back into the original equation</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Two-Step Equation</h4>
+                                        <p>Solve \( 3x - 5 = 10 \)</p>
+                                        <div class="math-example">
+                                            <p>Step 1: Add 5 to both sides</p>
+                                            \[ 3x - 5 + 5 = 10 + 5 \]
+                                            \[ 3x = 15 \]
+                                            <p>Step 2: Divide both sides by 3</p>
+                                            \[ \frac{3x}{3} = \frac{15}{3} \]
+                                            \[ x = 5 \]
+                                            <p>Check: \( 3(5) - 5 = 15 - 5 = 10 \) ✓</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: With Variables on Both Sides</h4>
+                                        <p>Solve \( 2x + 3 = 5x - 9 \)</p>
+                                        <div class="math-example">
+                                            <p>Step 1: Subtract 2x from both sides</p>
+                                            \[ 2x + 3 - 2x = 5x - 9 - 2x \]
+                                            \[ 3 = 3x - 9 \]
+                                            <p>Step 2: Add 9 to both sides</p>
+                                            \[ 3 + 9 = 3x - 9 + 9 \]
+                                            \[ 12 = 3x \]
+                                            <p>Step 3: Divide both sides by 3</p>
+                                            \[ \frac{12}{3} = \frac{3x}{3} \]
+                                            \[ 4 = x \]
+                                            <p>Check: \( 2(4) + 3 = 8 + 3 = 11 \) and \( 5(4) - 9 = 20 - 9 = 11 \) ✓</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-triangle"></i> Common Mistakes
+                                </h3>
+                                <p>
+                                    Watch out for these common errors when solving equations:
+                                </p>
+                                <ul>
+                                    <li>Forgetting to perform the same operation on both sides</li>
+                                    <li>Making sign errors when moving terms</li>
+                                    <li>Dividing incorrectly (especially with fractions)</li>
+                                    <li>Misapplying the distributive property</li>
+                                    <li>Forgetting to check the solution</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                </h3>
+                                <p>
+                                    Linear equations are used to solve many real-world problems:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Age Problems</h4>
+                                        <p>John is 5 years older than Mary. In 3 years, the sum of their ages will be 31. How old is each now?</p>
+                                        <div class="math-example">
+                                            <p>Let Mary's age = x, then John's age = x + 5</p>
+                                            <p>In 3 years: (x + 3) + (x + 5 + 3) = 31</p>
+                                            \[ 2x + 11 = 31 \]
+                                            \[ 2x = 20 \]
+                                            \[ x = 10 \]
+                                            <p>Mary is 10, John is 15</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Number Problems</h4>
+                                        <p>The sum of three consecutive numbers is 54. Find the numbers.</p>
+                                        <div class="math-example">
+                                            <p>Let first number = x, then next numbers = x + 1, x + 2</p>
+                                            \[ x + (x + 1) + (x + 2) = 54 \]
+                                            \[ 3x + 3 = 54 \]
+                                            \[ 3x = 51 \]
+                                            \[ x = 17 \]
+                                            <p>Numbers are 17, 18, 19</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Distance Problems</h4>
+                                        <p>A car travels 240 km in 3 hours. What is its speed?</p>
+                                        <div class="math-example">
+                                            <p>Distance = Speed × Time</p>
+                                            \[ 240 = s \times 3 \]
+                                            \[ s = \frac{240}{3} = 80 \text{ km/h} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Solve for x: \( x + 7 = 15 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ x + 7 - 7 = 15 - 7 \]
+                                        \[ x = 8 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve for y: \( 3y = 27 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{3y}{3} = \frac{27}{3} \]
+                                        \[ y = 9 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Solve for a: \( 2a - 5 = 13 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 2a - 5 + 5 = 13 + 5 \]
+                                        \[ 2a = 18 \]
+                                        \[ a = 9 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Solve for b: \( 4b + 3 = 2b + 11 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 4b - 2b + 3 = 2b - 2b + 11 \]
+                                        \[ 2b + 3 = 11 \]
+                                        \[ 2b = 8 \]
+                                        \[ b = 4 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>The sum of two numbers is 45. One number is 9 more than the other. Find the numbers.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let first number = x, second number = x + 9</p>
+                                        \[ x + (x + 9) = 45 \]
+                                        \[ 2x + 9 = 45 \]
+                                        \[ 2x = 36 \]
+                                        \[ x = 18 \]
+                                        <p>Numbers are 18 and 27</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>A rectangle's length is 5 cm more than its width. The perimeter is 38 cm. Find the dimensions.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let width = w, length = w + 5</p>
+                                        <p>Perimeter = 2(length + width)</p>
+                                        \[ 2(w + w + 5) = 38 \]
+                                        \[ 2(2w + 5) = 38 \]
+                                        \[ 4w + 10 = 38 \]
+                                        \[ 4w = 28 \]
+                                        \[ w = 7 \]
+                                        <p>Width = 7 cm, Length = 12 cm</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with solving linear equations</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

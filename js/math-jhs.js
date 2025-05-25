@@ -400,17 +400,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Graphs of Given Relations", url: "./math-jhs/jhs1/algebra/patterns-and-relations/graphs-of-given-relations" }
             ],
             "Algebraic Expressions": [
-                { name: "Creating Algebraic Expressions", url: "b7-2-2-1-1lesson1" },
-                { name: "Addition & Subtraction (Algebra)", url: "b7-2-2-1-2lesson1" },
-                { name: "Multiplication & Division (Algebra)", url: "b7-2-2-1-3lesson1" },
-                { name: "Substitution Of Values", url: "b7-2-2-1-4lesson1" },
-                { name: "Operations On Algebraic Expressions", url: "b7-2-2-1-5lesson1" }
+                { name: "Creating Algebraic Expressions", url: "./math-jhs/jhs1/algebra/algebraic-expressions/creating-algebraic-expressions" },
+                { name: "Addition & Subtraction (Algebra)", url: "./math-jhs/jhs1/algebra/algebraic-expressions/addition-and-subtraction-algebra" },
+                { name: "Multiplication & Division (Algebra)", url: "./math-jhs/jhs1/algebra/algebraic-expressions/multiplication-and-division-algebra" },
+                { name: "Substitution Of Values", url: "./math-jhs/jhs1/algebra/algebraic-expressions/substitution-of-values" },
+                { name: "Operations On Algebraic Expressions", url: "./math-jhs/jhs1/algebra/algebraic-expressions/operations-on-algebraic-expressions" }
             ],
             "Variables and Equations": [
-                { name: "Linear Equations", url: "b7-2-3-1-1lesson1" },
-                { name: "Modelling Using Concrete Materials", url: "b7-2-3-1-2lesson1" },
-                { name: "Modelling Using Algebraic Tiles", url: "b7-2-3-1-3lesson1" },
-                { name: "Linear Equations in One (1) Variable", url: "b7-2-3-1-4lesson1" }
+                { name: "Linear Equations", url: "./math-jhs/jhs1/algebra/variables-and-equations/linear-equations" },
+                { name: "Modelling Using Concrete Materials", url: "./math-jhs/jhs1/algebra/variables-and-equations/modelling-using-concrete-materials" },
+                { name: "Modelling Using Algebraic Tiles", url: "./math-jhs/jhs1/algebra/variables-and-equations/modelling-using-algebraic-tiles" },
+                { name: "Linear Equations in One (1) Variable", url: "./math-jhs/jhs1/algebra/variables-and-equations/linear-equations-one-variable" }
             ],
             "Shapes and Space": [
                 { name: "Measuring and Classifying Angles", url: "b7-3-1-1-1lesson1" },

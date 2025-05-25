@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Modeling Linear Equations | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to model and solve linear equations using concrete materials like counters and integer tiles.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Modeling Linear Equations | JHS Mathematics">
+        <meta property="og:description" content="Learn to model and solve linear equations using concrete materials.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/algebra/linear-equations">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Modeling Linear Equations</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Modeling Equations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#objects-balance"><i class="fas fa-chevron-right"></i> Objects on Balance</a></li>
+                                <li><a href="#shapes-balance"><i class="fas fa-chevron-right"></i> Shapes on Balance</a></li>
+                                <li><a href="#symbolic-methods"><i class="fas fa-chevron-right"></i> Symbolic Methods</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Modeling_Equations</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Linear equations are mathematical statements that show two expressions are equal. They often contain variables (like x) that we need to solve for. We can model these equations using concrete materials like counters and integer tiles to help visualize and understand the solving process.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{Example equation: } 2x + 3 = 7 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Equations
+                                </h3>
+                                <p>
+                                    An equation is like a balance scale - both sides must remain equal. When we solve equations, we perform the same operation to both sides to maintain the balance:
+                                </p>
+                                <ul>
+                                    <li><strong>Variables</strong>: Represent unknown values (often shown as shapes or letters)</li>
+                                    <li><strong>Constants</strong>: Known values (numbers or counters)</li>
+                                    <li><strong>Balance</strong>: Both sides of the equation must remain equal</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: In \( x + 2 = 5 \), x is the variable, 2 and 5 are constants.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Objects on Balance Section -->
+                        <section id="objects-balance" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-balance-scale"></i> Objects on Balance
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-cubes"></i> Using Counters
+                                </h3>
+                                <p>
+                                    We can model equations using counters (like coins or blocks) where:
+                                </p>
+                                <ol>
+                                    <li>Each counter represents +1</li>
+                                    <li>Variables are represented by containers or unknown groups</li>
+                                    <li>The balance scale shows both sides are equal</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: \( x + 3 = 5 \)</h4>
+                                        <div class="math-example">
+                                            <p>Left side: 1 bag (x) + 3 counters</p>
+                                            <p>Right side: 5 counters</p>
+                                            <p>Remove 3 counters from both sides: x = 2</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: \( 2x = 8 \)</h4>
+                                        <div class="math-example">
+                                            <p>Left side: 2 identical bags (each x)</p>
+                                            <p>Right side: 8 counters</p>
+                                            <p>Divide both sides by 2: x = 4</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Solving Step-by-Step
+                                </h3>
+                                <p>
+                                    The process for solving equations with objects:
+                                </p>
+                                <ol>
+                                    <li>Represent the equation with objects on a balance scale</li>
+                                    <li>Add/remove the same objects from both sides to keep balance</li>
+                                    <li>Combine like terms by grouping identical objects</li>
+                                    <li>Isolate the variable by removing other objects</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: Solve \( x + 4 = 2x + 1 \)</p>
+                                    <p>1. Remove x from both sides: 4 = x + 1</p>
+                                    <p>2. Remove 1 from both sides: 3 = x</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Shapes on Balance Section -->
+                        <section id="shapes-balance" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Shapes on Balance
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-square"></i> Using Geometric Shapes
+                                </h3>
+                                <p>
+                                    We can use shapes to represent variables in equations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Squares as Variables</h4>
+                                        <p>Each square represents one variable (x):</p>
+                                        <div class="math-example">
+                                            \[ \text{Example: } \square + 3 = 5 \]
+                                            <p>Remove 3 from both sides: \(\square = 2\)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Different Shapes</h4>
+                                        <p>Different shapes can represent different variables:</p>
+                                        <div class="math-example">
+                                            \[ \text{Example: } \triangle + \square = 5 \]
+                                            <p>If \(\triangle = 2\), then \(\square = 3\)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-sort-amount-up"></i> Solving with Shapes
+                                </h3>
+                                <p>
+                                    To solve equations with shapes:
+                                </p>
+                                <ol>
+                                    <li>Identify what each shape represents</li>
+                                    <li>Maintain balance by doing the same to both sides</li>
+                                    <li>Substitute known values when possible</li>
+                                    <li>Simplify by combining like shapes</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: Solve \( 2\square + 1 = \square + 4 \)</p>
+                                    <p>1. Remove \(\square\) from both sides: \(\square + 1 = 4\)</p>
+                                    <p>2. Remove 1 from both sides: \(\square = 3\)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-table"></i> Shape Representation Table
+                                </h3>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Symbol</th>
+                                            <th>Represents</th>
+                                            <th>Example</th>
+                                        </tr>
+                                        <tr>
+                                            <td>□</td>
+                                            <td>Variable (x)</td>
+                                            <td>□ + 2 = 5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>△</td>
+                                            <td>Variable (y)</td>
+                                            <td>△ = 2□</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Numbers</td>
+                                            <td>Constants</td>
+                                            <td>3, -2, 5</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Symbolic Methods Section -->
+                        <section id="symbolic-methods" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Symbolic Methods
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Connecting to Algebra
+                                </h3>
+                                <p>
+                                    The concrete models lead directly to symbolic algebraic methods:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Addition/Subtraction</h4>
+                                        <p>Adding/removing objects becomes adding/subtracting terms:</p>
+                                        <div class="math-example">
+                                            \[ x + 3 = 7 \]
+                                            \[ x + 3 - 3 = 7 - 3 \]
+                                            \[ x = 4 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Multiplication/Division</h4>
+                                        <p>Grouping objects becomes multiplying/dividing:</p>
+                                        <div class="math-example">
+                                            \[ 2x = 8 \]
+                                            \[ \frac{2x}{2} = \frac{8}{2} \]
+                                            \[ x = 4 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-project-diagram"></i> Solving Process
+                                </h3>
+                                <p>
+                                    The general process for solving linear equations:
+                                </p>
+                                <ol>
+                                    <li>Simplify both sides (distribute, combine like terms)</li>
+                                    <li>Move variable terms to one side, constants to the other</li>
+                                    <li>Isolate the variable by multiplying/dividing</li>
+                                    <li>Check your solution by substituting back in</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: Solve \( 2(x + 1) = 10 \)</p>
+                                    <p>1. Distribute: \( 2x + 2 = 10 \)</p>
+                                    <p>2. Subtract 2: \( 2x = 8 \)</p>
+                                    <p>3. Divide by 2: \( x = 4 \)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Model and solve \( x + 2 = 5 \) using counters</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Left side: 1 bag + 2 counters</p>
+                                        <p>Right side: 5 counters</p>
+                                        <p>Remove 2 counters from both sides: x = 3</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve \( 3\square = 12 \) using shapes</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Divide both sides by 3: \(\square = 4\)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Solve \( 2x + 1 = x + 4 \) symbolically</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Subtract x: \( x + 1 = 4 \)</p>
+                                        <p>Subtract 1: \( x = 3 \)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Model \( 2y = y + 3 \) with shapes and solve</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Left side: 2 triangles</p>
+                                        <p>Right side: 1 triangle + 3 counters</p>
+                                        <p>Remove 1 triangle: \( \triangle = 3 \)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Solve \( 4 = 5 - x \) using counters</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Right side: 5 counters minus 1 bag</p>
+                                        <p>Add x to both sides: \( 4 + x = 5 \)</p>
+                                        <p>Subtract 4: \( x = 1 \)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Solve \( 2(\square + 1) = 8 \) using shapes</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Divide both sides by 2: \( \square + 1 = 4 \)</p>
+                                        <p>Subtract 1: \( \square = 3 \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with modeling and solving linear equations</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
