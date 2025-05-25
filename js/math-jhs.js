@@ -413,16 +413,16 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Linear Equations in One (1) Variable", url: "./math-jhs/jhs1/algebra/variables-and-equations/linear-equations-one-variable" }
             ],
             "Shapes and Space": [
-                { name: "Measuring and Classifying Angles", url: "b7-3-1-1-1lesson1" },
-                { name: "Complementary and Supplementary Angles", url: "b7-3-1-1-2lesson1" },
-                { name: "Adjacent & Vertically Opposite Angles", url: "b7-3-1-1-3lesson1" },
-                { name: "Construction Perpendicular Line Segment", url: "b7-3-1-2-1lesson1" },
-                { name: "Construction Perpendicular Bisector", url: "b7-3-1-2-2lesson1" },
-                { name: "Copy & Bisect Angles", url: "b7-3-1-2-3lesson1" },
-                { name: "Construction of Angle 90&deg; and 45&deg; ", url: "b7-3-1-2-4lesson1" },
-                { name: "Construction of Angle 60&deg; and 30&deg;", url: "b7-3-1-2-5lesson1" },
-                { name: "Construction of Angle 75&deg; and 15&deg;", url: "b7-3-1-2-6lesson1" },
-                { name: "Real Life Examples of Bisectors", url: "b7-3-1-2-7lesson1" }
+                { name: "Measuring and Classifying Angles", url: "./math-jhs/jhs1/geometry/shapes-and-space/measure-and-classify-angles" },
+                { name: "Complementary and Supplementary Angles", url: "./math-jhs/jhs1/geometry/shapes-and-space/complementary-supplementary-angles" },
+                { name: "Adjacent & Vertically Opposite Angles", url: "./math-jhs/jhs1/geometry/shapes-and-space/adjacent-vertically-opposite-angles" },
+                { name: "Construction Perpendicular Line Segment", url: "./math-jhs/jhs1/geometry/shapes-and-space/construction-perpendicular-line" },
+                { name: "Construction Perpendicular Bisector", url: "./math-jhs/jhs1/geometry/shapes-and-space/construction-perpendicular-bisector.html" },
+                { name: "Copy & Bisect Angles", url: "./math-jhs/jhs1/geometry/shapes-and-space/copy-and-bisect-angles.html" },
+                { name: "Construction of Angle 90&deg; and 45&deg; ", url: "./math-jhs/jhs1/geometry/shapes-and-space/construction-angle90-angle45.html" },
+                { name: "Construction of Angle 60&deg; and 30&deg;", url: "./math-jhs/jhs1/geometry/shapes-and-space/construction-angle60-angle30.html" },
+                { name: "Construction of Angle 75&deg; and 15&deg;", url: "./math-jhs/jhs1/geometry/shapes-and-space/construction-angle75-angle15.html" },
+                { name: "Real Life Examples of Bisectors", url: "./math-jhs/jhs1/geometry/shapes-and-space/real-life-bisectors.html" }
             ],
             "Measurements": [
                 { name: "Perimeter of Given Shapes", url: "b7-3-2-1-1lesson1" },

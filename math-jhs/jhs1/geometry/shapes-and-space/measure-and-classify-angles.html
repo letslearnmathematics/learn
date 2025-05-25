@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Types of Angles | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn to measure and classify angles as right, acute, obtuse or reflex angles.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Types of Angles | JHS Mathematics">
+        <meta property="og:description" content="Learn to measure and classify angles as right, acute, obtuse or reflex angles.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/geometry/angles">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Types of Angles</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-shapes"></i>
+                                <span>Angles</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#angle-types"><i class="fas fa-chevron-right"></i> Angle Types</a></li>
+                                <li><a href="#measuring"><i class="fas fa-chevron-right"></i> Measuring Angles</a></li>
+                                <li><a href="#drawing"><i class="fas fa-chevron-right"></i> Drawing Angles</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Angles</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Angles are formed when two or more lines or line segments meet or 
+                                    intersect at a common point called <strong>vertex</strong>. The measure
+                                    of the angle is the amount of rotation or turn around the fixed point.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <img src="../../../../images/angle-definition.jpg" alt="Angle definition" class="square">
+                                </div>
+                                
+                                <p>Key facts about angles:</p>
+                                <ul>
+                                    <li>Formed by two lines/rays meeting at a vertex</li>
+                                    <li>Measured in degrees (°)</li>
+                                    <li>Can be classified by their size</li>
+                                    <li>Important in geometry and real-world applications</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Angle Notation
+                                </h3>
+                                <p>
+                                    Angles are named using three points, with the vertex point in the middle:
+                                </p>
+                                <div class="math-example">
+                                    <img src="../../../../images/angles2.png" alt="Angle notation" class="place">
+                                    <p>This angle is written as: \(\angle ABC\)</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Angle Types Section -->
+                        <section id="angle-types" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Angle Types
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-angle-right"></i> Classification by Size
+                                </h3>
+                                <p>
+                                    Angles can be classified into five main types based on their measurement:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>1. Acute Angles</h4>
+                                        <p>Less than 90°</p>
+                                        <div class="math-example">
+                                            <p>Examples: 30°, 45°, 60°, 75°</p>
+                                            <img src="../../../../images/acute-angle.png" alt="Acute angle" class="small-img">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>2. Right Angles</h4>
+                                        <p>Exactly 90°</p>
+                                        <div class="math-example">
+                                            <p>Forms perfect "L" shape</p>
+                                            <img src="../../../../images/right-angle.png" alt="Right angle" class="small-img">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>3. Obtuse Angles</h4>
+                                        <p>Between 90° and 180°</p>
+                                        <div class="math-example">
+                                            <p>Examples: 120°, 135°, 150°</p>
+                                            <img src="../../../../images/o" alt="Obtuse angle" class="small-img">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>4. Straight Angles</h4>
+                                        <p>Exactly 180°</p>
+                                        <div class="math-example">
+                                            <p>Forms a straight line</p>
+                                            <img src="../../../../images/straight-angle.png" alt="Straight angle" class="small-img">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>5. Reflex Angles</h4>
+                                        <p>Between 180° and 360°</p>
+                                        <div class="math-example">
+                                            <p>Examples: 210°, 270°, 300°</p>
+                                            <img src="../../../../images/reflex-angle.png" alt="Reflex angle" class="small-img">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Angle Relationships
+                                </h3>
+                                <p>
+                                    Understanding angle types helps in solving geometry problems:
+                                </p>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Angle Type</th>
+                                            <th>Measurement Range</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Acute</td>
+                                            <td>0° < angle < 90°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Right</td>
+                                            <td>Exactly 90°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Obtuse</td>
+                                            <td>90° < angle < 180°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Straight</td>
+                                            <td>Exactly 180°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Reflex</td>
+                                            <td>180° < angle < 360°</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Measuring Angles Section -->
+                        <section id="measuring" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-ruler"></i> Measuring Angles
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-footsteps"></i> Using a Protractor
+                                </h3>
+                                <p>
+                                    To measure angles accurately, we use a protractor:
+                                </p>
+                                <ol>
+                                    <li><strong>Place the protractor</strong> - Align the center with the vertex</li>
+                                    <li><strong>Align the baseline</strong> - Match one ray with the 0° line</li>
+                                    <li><strong>Read the measurement</strong> - Where the other ray crosses the scale</li>
+                                    <li><strong>Classify the angle</strong> - Determine if it's acute, right, obtuse or reflex</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Measuring an Acute Angle</h4>
+                                        <div class="math-example">
+                                            <img src="../../../../images/measuring-acute.png" alt="Measuring acute angle" class="medium-img">
+                                            <p>This angle measures 45° → acute angle</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Measuring an Obtuse Angle</h4>
+                                        <div class="math-example">
+                                            <img src="./images/measuring-obtuse.png" alt="Measuring obtuse angle" class="medium-img">
+                                            <p>This angle measures 120° → obtuse angle</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-triangle"></i> Common Mistakes
+                                </h3>
+                                <p>
+                                    Watch out for these common errors when measuring angles:
+                                </p>
+                                <ul>
+                                    <li>Misaligning the protractor center with the vertex</li>
+                                    <li>Reading from the wrong scale (inner vs outer)</li>
+                                    <li>Confusing acute and obtuse angles</li>
+                                    <li>Forgetting to check if the angle is reflex (>180°)</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Drawing Angles Section -->
+                        <section id="drawing" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-pencil-ruler"></i> Drawing Angles
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Using a Protractor
+                                </h3>
+                                <p>
+                                    Follow these steps to draw angles accurately:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Step 1: Draw a baseline</h4>
+                                        <p>Use a ruler to draw a straight line (this will be one side of your angle)</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 2: Mark the vertex</h4>
+                                        <p>Place a point at one end of your line - this will be the angle's vertex</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 3: Position the protractor</h4>
+                                        <p>Place the protractor's center on the vertex, aligning the baseline with your drawn line</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 4: Mark the angle</h4>
+                                        <p>Make a small dot at the desired angle measurement (e.g., 60°)</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 5: Complete the angle</h4>
+                                        <p>Remove the protractor and draw a line from the vertex through your marked point</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example: Drawing a 120° Angle</h4>
+                                    <img src="./images/drawing-angle.gif" alt="Drawing angle demonstration" class="medium-img">
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Practice Angles to Draw
+                                </h3>
+                                <p>
+                                    Try drawing these angles and classify them:
+                                </p>
+                                <div class="math-example">
+                                    <ul class="two-column-list">
+                                        <li>30° (acute)</li>
+                                        <li>45° (acute)</li>
+                                        <li>60° (acute)</li>
+                                        <li>75° (acute)</li>
+                                        <li>90° (right)</li>
+                                        <li>120° (obtuse)</li>
+                                        <li>150° (obtuse)</li>
+                                        <li>180° (straight)</li>
+                                        <li>270° (reflex)</li>
+                                        <li>300° (reflex)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Protractor Lesson Content -->
+                            <div class="page-narative">
+                                <div class="groups">
+                                    <div class="maintopic">Using the Protractor</div> <br>
+                                    <p>
+                                        You can use the protractor to measure the size of angles. You can also
+                                        use the protractor to draw angles. In this lesson, we will learn how to use
+                                        the protractor to draw angles such as 30&deg;, 45&deg;, 60&deg;, 75&deg;,
+                                        90&deg;, 120&deg;, 150&deg;, 270&deg; and 300&deg;.
+                                    </p>
+                                    <p>
+                                        The video below describes how to use the protractor when
+                                        drawing and measuring angles.
+                                    </p>
+                                    <p>
+                                        Watch the videos below to watch how to use the protractor to draw given angles.
+                                    </p>
+
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+
+                                    <p>
+                                        <strong>Note:</strong><br>
+                                        Please subscribe to the channel to help us keep building this page. Thank you.
+                                    </p>
+                                    <br>
+
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/-pWSxbJXHgY" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+                                    
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+
+                                    <!--------------------->
+                                    <h3>Using the Protractor to draw angle 30&deg;</h3><br>
+                                    <p>
+                                        Watch the video below to see how to construct angle \(30^\circ\) using the protractor.
+                                    </p>
+                                    <br><br>
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/xZ1OiX6pMfI" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+                                    
+                                    <h3>Using the Protractor to draw angle 45&deg;</h3><br>
+                                    <p>
+                                        Watch the video below to see how to construct angle \(45^\circ\) using the protractor.
+                                    </p>
+                                    <br><br>
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/t1NCN3X9Yf0" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+
+                                    <h3>Using the Protractor to draw angle 60&deg;</h3><br>
+                                    <p>
+                                        Watch the video below to see how to construct angle \(60^\circ\) using the protractor.
+                                    </p>
+                                    <br><br>
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/SQpFD635jNQ" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+
+                                    <h3>Using the Protractor to draw angle 75&deg;</h3><br>
+                                    <p>
+                                        Watch the video below to see how to construct angle \(75^\circ\) using the protractor.
+                                    </p>
+                                    <br><br>
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/CD0DHwJvwQc" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+
+                                    <h3>Using the Protractor to draw angle 90&deg;</h3><br>
+                                    <p>
+                                        Watch the video below to see how to construct angle \(90^\circ\) using the protractor.
+                                    </p>
+                                    <br><br>
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/TaCj7Kwi6z8" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+
+                                    <h3>Using the Protractor to draw angle 120&deg;</h3><br>
+                                    <p>
+                                        Watch the video below to see how to construct angle \(120^\circ\) using the protractor.
+                                    </p>
+                                    <br><br>
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/jhLDiIQvoXY" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+
+                                    <h3>Using the Protractor to draw angle 150&deg;</h3><br>
+                                    <p>
+                                        Watch the video below to see how to construct angle \(150^\circ\) using the protractor.
+                                    </p>
+                                    <br><br>
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/FBHhErXkTgo" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+
+                                    <h3>Using the Protractor to draw angle 270&deg;</h3><br>
+                                    <p>
+                                        Watch the video below to see how to construct angle \(270^\circ\) using the protractor.
+                                    </p>
+                                    <br><br>
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/o9r_G9qg3jw" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+
+                                    <h3>Using the Protractor to draw angle 300&deg;</h3><br>
+                                    <p>
+                                        Watch the video below to see how to construct angle \(300^\circ\) using the protractor.
+                                    </p>
+                                    <br><br>
+                                    <div class="video-container">
+                                        <iframe  width="560" height="315" src="https://www.youtube.com/embed/2oR-mOQ7SP0" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                        </iframe>
+                                    </div><br><br>
+
+                                    <br><br>
+                                    <hr>
+                                    <br><br>
+                                    
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Classify an angle that measures 35°</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>35° is less than 90°, so it's an <strong>acute angle</strong>.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>What type of angle is 90°?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>90° is exactly a <strong>right angle</strong>.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Classify an angle that measures 135°</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>135° is between 90° and 180°, so it's an <strong>obtuse angle</strong>.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>What type of angle is 210°?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>210° is between 180° and 360°, so it's a <strong>reflex angle</strong>.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Draw and label a 60° angle</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Steps:</p>
+                                        <ol>
+                                            <li>Draw a baseline</li>
+                                            <li>Place protractor center at endpoint</li>
+                                            <li>Mark at 60°</li>
+                                            <li>Draw line from endpoint through mark</li>
+                                        </ol>
+                                        <p>Result should be an acute angle.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Measure this angle and classify it:</p>
+                                    <img src="./images/angle-to-measure.png" alt="Angle to measure" class="small-img">
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Angle measures 150° → <strong>obtuse angle</strong></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with angle classification and measurement</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

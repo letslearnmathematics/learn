@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Complementary and Supplementary Angles | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to solve problems using complementary and supplementary angles.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Complementary and Supplementary Angles | JHS Mathematics">
+        <meta property="og:description" content="Learn to solve problems using complementary and supplementary angles.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/angles">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Complementary and Supplementary Angles</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Angles</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Complementary & Supplementary</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#complementary"><i class="fas fa-chevron-right"></i> Complementary Angles</a></li>
+                                <li><a href="#supplementary"><i class="fas fa-chevron-right"></i> Supplementary Angles</a></li>
+                                <li><a href="#problems"><i class="fas fa-chevron-right"></i> Problem Solving</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Angles</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    In geometry, angles can have special relationships when their measures add up to certain values. Two important relationships are complementary angles and supplementary angles.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Key Facts:</p>
+                                    <ul>
+                                        <li>The sum of complementary angles is 90°</li>
+                                        <li>The sum of supplementary angles is 180°</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Angle Relationships
+                                </h3>
+                                <p>
+                                    Angles are measured in degrees (°). When two angles are combined, their measures add up:
+                                </p>
+                                <div class="math-example">
+                                    \[ \text{Angle A} + \text{Angle B} = \text{Total Degrees} \]
+                                </div>
+                                <ul>
+                                    <li><strong>Complementary</strong>: Two angles that add up to 90°</li>
+                                    <li><strong>Supplementary</strong>: Two angles that add up to 180°</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Examples:</p>
+                                    <ul>
+                                        <li>30° and 60° are complementary (30° + 60° = 90°)</li>
+                                        <li>70° and 110° are supplementary (70° + 110° = 180°)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Complementary Angles Section -->
+                        <section id="complementary" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-angle-left"></i> Complementary Angles
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-circle"></i> Finding Missing Complementary Angles
+                                </h3>
+                                <p>
+                                    To find a missing complementary angle:
+                                </p>
+                                <ol>
+                                    <li>Identify the known angle</li>
+                                    <li>Subtract the known angle from 90°</li>
+                                    <li>The result is the measure of the missing angle</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Find the complement of 35°</h4>
+                                        <div class="math-example">
+                                            \[ 90° - 35° = 55° \]
+                                            <p>The complementary angle is 55°</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Find angle x if x and 48° are complementary</h4>
+                                        <div class="math-example">
+                                            \[ x + 48° = 90° \]
+                                            \[ x = 90° - 48° \]
+                                            \[ x = 42° \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-draw-polygon"></i> Visualizing Complementary Angles
+                                </h3>
+                                <p>
+                                    Complementary angles often form right angles when placed adjacent to each other:
+                                </p>
+                                <div class="math-example">
+                                    <!--
+                                    <div style="text-align: center; margin: 20px 0;">
+                                        <svg width="200" height="200" viewBox="0 0 200 200">
+                                            <line x1="100" y1="20" x2="100" y2="180" stroke="black" stroke-width="2"/>
+                                            <line x1="20" y1="100" x2="180" y2="100" stroke="black" stroke-width="2"/>
+                                            <path d="M 100 100 L 180 100 L 100 20 Z" fill="none" stroke="blue" stroke-width="2"/>
+                                            <text x="140" y="80" font-size="16" fill="blue">35°</text>
+                                            <text x="80" y="60" font-size="16" fill="blue">55°</text>
+                                        </svg>
+                                    </div>
+                                    <p>The two angles (35° and 55°) together form a right angle (90°)</p>
+                                    -->
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Supplementary Angles Section -->
+                        <section id="supplementary" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-angle-right"></i> Supplementary Angles
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-square"></i> Finding Missing Supplementary Angles
+                                </h3>
+                                <p>
+                                    To find a missing supplementary angle:
+                                </p>
+                                <ol>
+                                    <li>Identify the known angle</li>
+                                    <li>Subtract the known angle from 180°</li>
+                                    <li>The result is the measure of the missing angle</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Find the supplement of 75°</h4>
+                                        <div class="math-example">
+                                            \[ 180° - 75° = 105° \]
+                                            <p>The supplementary angle is 105°</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Find angle y if y and 112° are supplementary</h4>
+                                        <div class="math-example">
+                                            \[ y + 112° = 180° \]
+                                            \[ y = 180° - 112° \]
+                                            \[ y = 68° \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-shapes"></i> Visualizing Supplementary Angles
+                                </h3>
+                                <p>
+                                    Supplementary angles often form straight lines when placed adjacent to each other:
+                                </p>
+                                <div class="math-example">
+                                    <!--
+                                    <div style="text-align: center; margin: 20px 0;">
+                                        <svg width="300" height="150" viewBox="0 0 300 150">
+                                            <line x1="50" y1="75" x2="250" y2="75" stroke="black" stroke-width="2"/>
+                                            <line x1="150" y1="75" x2="150" y2="25" stroke="red" stroke-width="2"/>
+                                            <path d="M 150 75 L 250 75 L 150 25 Z" fill="none" stroke="red" stroke-width="2"/>
+                                            <text x="190" y="60" font-size="16" fill="red">112°</text>
+                                            <text x="170" y="40" font-size="16" fill="red">68°</text>
+                                        </svg>
+                                    </div>
+                                    <p>The two angles (112° and 68°) together form a straight angle (180°)</p>
+                                    -->
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Problem Solving Section -->
+                        <section id="problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Problem Solving
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question-circle"></i> Solving for Missing Angles
+                                </h3>
+                                <p>
+                                    Apply your knowledge of complementary and supplementary angles to solve for unknown angles:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Problem Type 1: Complementary Angles</h4>
+                                        <p>Find the angle that is complementary to:</p>
+                                        <div class="math-example">
+                                            <p>a) 27°</p>
+                                            \[ 90° - 27° = 63° \]
+                                            <p>b) 15.5°</p>
+                                            \[ 90° - 15.5° = 74.5° \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Problem Type 2: Supplementary Angles</h4>
+                                        <p>Find the angle that is supplementary to:</p>
+                                        <div class="math-example">
+                                            <p>a) 83°</p>
+                                            \[ 180° - 83° = 97° \]
+                                            <p>b) 145.2°</p>
+                                            \[ 180° - 145.2° = 34.8° \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Problem Type 3: Word Problems</h4>
+                                        <p>Two angles are complementary. One angle is twice the other. Find both angles.</p>
+                                        <div class="math-example">
+                                            <p>Let x = smaller angle</p>
+                                            \[ x + 2x = 90° \]
+                                            \[ 3x = 90° \]
+                                            \[ x = 30° \]
+                                            <p>The angles are 30° and 60°</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the complement of 18°</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 90° - 18° = 72° \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the supplement of 125°</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 180° - 125° = 55° \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Two angles are complementary. If one angle is 45°, what is the other angle?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 90° - 45° = 45° \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Find angle x if x and 73° are supplementary</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ x + 73° = 180° \]
+                                        \[ x = 180° - 73° \]
+                                        \[ x = 107° \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Two angles are supplementary. One angle is 3 times the other. Find both angles.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let x = smaller angle</p>
+                                        \[ x + 3x = 180° \]
+                                        \[ 4x = 180° \]
+                                        \[ x = 45° \]
+                                        <p>The angles are 45° and 135°</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Find the complement of 89.5°</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 90° - 89.5° = 0.5° \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with complementary and supplementary angles</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
