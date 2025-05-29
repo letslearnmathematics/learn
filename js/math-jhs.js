@@ -425,34 +425,34 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Real Life Examples of Bisectors", url: "./math-jhs/jhs1/geometry/shapes-and-space/real-life-bisectors" }
             ],
             "Measurements": [
-                { name: "Perimeter of Given Shapes", url: "./math-jhs/jhs1/geometry/measurement/perimeter-of-given-shapes.html" },
-                { name: "Circle: Diameter & Circumference", url: "./math-jhs/jhs1/geometry/measurement/circle-diameter-circumference.html" },
-                { name: "Triangles & Rectangles in Square Grid", url: "./math-jhs/jhs1/geometry/measurement/triangles-rectangles-in-square-grid.html" },
-                { name: "Deducing the Formula for the Area of a Triangle", url: "./math-jhs/jhs1/geometry/measurement/deducing-formula-area-of-triangles.html" },
-                { name: "Area of a Triangle", url: "./math-jhs/jhs1/geometry/measurement/area-of-triangles.html" },
-                { name: "Bearings", url: "./math-jhs/jhs1/geometry/measurement/bearings.html" },
-                { name: "Back Bearings", url: "./math-jhs/jhs1/geometry/measurement/back-bearings.html" },
-                { name: "Scalar & Vector Quantities", url: "./math-jhs/jhs1/geometry/measurement/scalar-vector-quantities.html" },
-                { name: "Magnitude & Direction of Vectors", url: "./math-jhs/jhs1/geometry/measurement/magnitude-direction-of-vectors.html" },
-                { name: "Converting Between the Forms of Vectors", url: "./math-jhs/jhs1/geometry/measurement/converting-vector-forms.html" }
+                { name: "Perimeter of Given Shapes", url: "./math-jhs/jhs1/geometry/measurement/perimeter-of-given-shapes" },
+                { name: "Circle: Diameter & Circumference", url: "./math-jhs/jhs1/geometry/measurement/circle-diameter-circumference" },
+                { name: "Triangles & Rectangles in Square Grid", url: "./math-jhs/jhs1/geometry/measurement/triangles-rectangles-in-square-grid" },
+                { name: "Deducing the Formula for the Area of a Triangle", url: "./math-jhs/jhs1/geometry/measurement/deducing-formula-area-of-triangles" },
+                { name: "Area of a Triangle", url: "./math-jhs/jhs1/geometry/measurement/area-of-triangles" },
+                { name: "Bearings", url: "./math-jhs/jhs1/geometry/measurement/bearings" },
+                { name: "Back Bearings", url: "./math-jhs/jhs1/geometry/measurement/back-bearings" },
+                { name: "Scalar & Vector Quantities", url: "./math-jhs/jhs1/geometry/measurement/scalar-vector-quantities" },
+                { name: "Magnitude & Direction of Vectors", url: "./math-jhs/jhs1/geometry/measurement/magnitude-direction-of-vectors" },
+                { name: "Converting Between the Forms of Vectors", url: "./math-jhs/jhs1/geometry/measurement/converting-vector-forms" }
             ],
             "Position and Transformation": [
-                { name: "Reflectional Symmetry", url: "b7-3-3-1-1lesson1" },
-                { name: "Reflection In A Given Line", url: "b7-3-3-1-2lesson1" },
-                { name: "Translation By A Given Vector", url: "b7-3-3-1-3lesson1" },
-                { name: "Congruent And Similar Shapes", url: "b7-3-3-1-4lesson1" }
+                { name: "Reflectional Symmetry", url: "./math-jhs/jhs1/geometry/position-and-transformation/reflectional-symmetry" },
+                { name: "Reflection In A Given Line", url: "./math-jhs/jhs1/geometry/position-and-transformation/reflection-in-a-given-line.html" },
+                { name: "Translation By A Given Vector", url: "./math-jhs/jhs1/geometry/position-and-transformation/translation-by-a-vector.html" },
+                { name: "Congruent And Similar Shapes", url: "./math-jhs/jhs1/geometry/position-and-transformation/congruence.html" }
             ],
             "Data": [
-                { name: "Methods Of Collecting Data", url: "b7-4-1-1-1lesson1" },
-                { name: "Designing Question Forms", url: "b7-4-1-1-2lesson1" },
-                { name: "Organising And Presenting Data", url: "b7-4-1-1-3lesson1" },
-                { name: "Mean Of Ungrouped Data", url: "b7-4-1-2-1lesson1" },
-                { name: "Median Of Ungrouped Data", url: "b7-4-1-2-2lesson1" }
+                { name: "Methods Of Collecting Data", url: "./math-jhs/jhs1/handling-data/data/method-of-collecting-data.html" },
+                { name: "Designing Question Forms", url: "./math-jhs/jhs1/handling-data/data/designing-question-forms.html" },
+                { name: "Organising And Presenting Data", url: "./math-jhs/jhs1/handling-data/data/organising-and-presenting-data.html" },
+                { name: "Mean Of Ungrouped Data", url: "./math-jhs/jhs1/handling-data/data/mean-of-ungrouped-data.html" },
+                { name: "Median Of Ungrouped Data", url: "./math-jhs/jhs1/handling-data/data/median-of-ungrouped-data.html" }
             ],
             "Chance or Probability": [
-                { name: "The Likelihood of an Event", url: "b7-4-2-1-1lesson1" },
-                { name: "The Likelihood of a Single Outcome", url: "b7-4-2-1-2lesson1" },
-                { name: "Probability as Fractions & Percentages", url: "b7-4-2-1-3lesson1" }
+                { name: "The Likelihood of an Event", url: "./math-jhs/jhs1/handling-data/chance-or-probability/likelihood-of-an-event.html" },
+                { name: "The Likelihood of a Single Outcome", url: "./math-jhs/jhs1/handling-data/chance-or-probability/likelihood-of-single-outcomes.html" },
+                { name: "Probability as Fractions & Percentages", url: "./math-jhs/jhs1/handling-data/chance-or-probability/probability-as-fractions-percentages.html" }
             ]
         },
         "jhs2": {

@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO and Social Meta Tags -->
-        <title>Perimeter with Mixed Units | JHS Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Learn how to calculate perimeter when dimensions are given in different units like km and m, m and cm, or cm and mm.">
+        <title>Bearings | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to describe the bearing of a point from another point using protractors and three-digit notation.">
         
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
@@ -15,10 +15,10 @@
         <link rel="manifest" href="../../../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Perimeter with Mixed Units | JHS Mathematics">
-        <meta property="og:description" content="Learn to calculate perimeter when dimensions are in different units.">
+        <meta property="og:title" content="Bearings | JHS Mathematics">
+        <meta property="og:description" content="Learn to describe bearings using protractors and three-digit notation.">
         <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/perimeter">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/geometry/bearings">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -85,7 +85,7 @@
                         </a>
                     </div>
                     
-                    <h1 class="lesson-title">Perimeter with Mixed Units</h1>
+                    <h1 class="lesson-title">Bearings</h1>
                     
                     <nav class="main-nav">
                         <ul class="nav-list">
@@ -112,16 +112,15 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">JHS: Measurement</h3>
+                            <h3 class="sidebar-title">JHS: Geometry</h3>
                             <div class="current-topic">
-                                <i class="fas fa-ruler-combined"></i>
-                                <span>Perimeter with Mixed Units</span>
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Bearings</span>
                             </div>
                             <ul class="topic-menu">
                                 <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
-                                <li><a href="#km-m"><i class="fas fa-chevron-right"></i> km and m</a></li>
-                                <li><a href="#m-cm"><i class="fas fa-chevron-right"></i> m and cm</a></li>
-                                <li><a href="#cm-mm"><i class="fas fa-chevron-right"></i> cm and mm</a></li>
+                                <li><a href="#measuring"><i class="fas fa-chevron-right"></i> Measuring Bearings</a></li>
+                                <li><a href="#vectors"><i class="fas fa-chevron-right"></i> Vectors and Bearings</a></li>
                                 <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
                             </ul>
                             
@@ -153,22 +152,23 @@
                             <i class="fas fa-chevron-right"></i>
                             <a href="../../../../math-jhs">JHS</a>
                             <i class="fas fa-chevron-right"></i>
-                            <span>Perimeter_Mixed_Units</span>
+                            <span>Bearings</span>
                         </nav>
 
                         <!-- Introduction Section -->
                         <section id="introduction" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-book-open"></i> Introduction
+                                <i class="fas fa-book-open"></i> Introduction to Bearings
                             </h2>
                             
                             <div class="concept-box">
                                 <p>
-                                    Perimeter is the total distance around a shape. When calculating perimeter, all sides must be in the same unit. This lesson will teach you how to handle shapes with sides measured in different units.
+                                    A bearing is a way to describe the direction of one point from another. In mathematics, we use three-digit bearings measured in degrees clockwise from North.
                                 </p>
                                 
                                 <div class="math-example">
-                                    \[ \text{Perimeter} = \text{Sum of all sides of the shape} \]
+                                    <img src="../../images/bearing-example.png" alt="Basic bearing example" style="max-width: 300px;">
+                                    <p>Point B is at a bearing of 045° from point A</p>
                                 </div>
                             </div>
                             
@@ -177,151 +177,130 @@
                                     <i class="fas fa-asterisk"></i> Key Concepts
                                 </h3>
                                 <p>
-                                    There are two main approaches when dealing with mixed units:
+                                    <strong>True bearings</strong> are always:
                                 </p>
                                 <ul>
-                                    <li><strong>Convert to smaller unit</strong>: Change all measurements to the smaller unit before adding</li>
-                                    <li><strong>Convert to decimal</strong>: Change the smaller unit to a decimal fraction of the larger unit</li>
+                                    <li>Measured from North (0°)</li>
+                                    <li>Measured in a clockwise direction</li>
+                                    <li>Expressed as three digits (e.g., 045° not 45°)</li>
                                 </ul>
                                 <div class="math-example">
-                                    <p>Example: 2m 50cm can be:</p>
+                                    <p>Example bearings:</p>
                                     <ul>
-                                        <li>200cm + 50cm = 250cm (smaller unit)</li>
-                                        <li>2m + 0.5m = 2.5m (decimal fraction)</li>
+                                        <li>North: 000°</li>
+                                        <li>East: 090°</li>
+                                        <li>South: 180°</li>
+                                        <li>West: 270°</li>
                                     </ul>
                                 </div>
                             </div>
                         </section>
                         
-                        <!-- km and m Section -->
-                        <section id="km-m" class="lesson-section">
+                        <!-- Measuring Section -->
+                        <section id="measuring" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-road"></i> km and m
+                                <i class="fas fa-ruler"></i> Measuring Bearings
                             </h2>
 
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-exchange-alt"></i> Converting km to m
+                                    <i class="fas fa-angle-double-right"></i> Using a Protractor
                                 </h3>
                                 <p>
-                                    To convert kilometers to meters:
+                                    To find the bearing of point B from point A:
                                 </p>
                                 <ol>
-                                    <li>Remember that 1 km = 1000 m</li>
-                                    <li>Multiply the km value by 1000</li>
-                                    <li>Add the remaining meters</li>
+                                    <li>Draw a North line at point A</li>
+                                    <li>Draw a straight line connecting A to B</li>
+                                    <li>Measure the angle clockwise from North to line AB</li>
+                                    <li>Write the angle as a three-digit number (e.g., 045°)</li>
                                 </ol>
                                 
                                 <div class="key-points">
                                     <div class="point">
-                                        <h4>Example 1: Rectangle 3km 200m by 2km 500m</h4>
+                                        <h4>Example 1: Simple bearing</h4>
                                         <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>3km 200m = (3 × 1000) + 200 = 3200m</p>
-                                            <p>2km 500m = (2 × 1000) + 500 = 2500m</p>
-                                            <p>Perimeter = 2 × (length + width)</p>
-                                            <p>= 2 × (3200 + 2500) = 2 × 5700 = 11,400m</p>
+                                            <img src="../../images/bearing-protractor.png" alt="Protractor measuring bearing" style="max-width: 300px;">
+                                            <p>The bearing of B from A is 060°</p>
                                         </div>
                                     </div>
                                     
                                     <div class="point">
-                                        <h4>Example 2: Triangle 0.5km 300m, 0.8km 150m, 1km 50m</h4>
+                                        <h4>Example 2: Larger angle</h4>
                                         <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>0.5km 300m = (0.5 × 1000) + 300 = 800m</p>
-                                            <p>0.8km 150m = (0.8 × 1000) + 150 = 950m</p>
-                                            <p>1km 50m = (1 × 1000) + 50 = 1050m</p>
-                                            <p>Perimeter = 800 + 950 + 1050 = 2800m</p>
+                                            <img src="../../images/bearing-large-angle.png" alt="Large angle bearing" style="max-width: 300px;">
+                                            <p>The bearing of C from A is 210°</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                        
-                        <!-- m and cm Section -->
-                        <section id="m-cm" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-ruler"></i> m and cm
-                            </h2>
                             
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-divide"></i> Converting cm to m (Decimal)
+                                    <i class="fas fa-exchange-alt"></i> Back Bearings
                                 </h3>
                                 <p>
-                                    To convert centimeters to meters as a decimal:
+                                    The bearing from point B back to point A is called the back bearing. To find it:
                                 </p>
-                                <ol>
-                                    <li>Remember that 1m = 100cm</li>
-                                    <li>Divide cm by 100 to get decimal meters</li>
-                                    <li>Add to the existing meters</li>
-                                </ol>
                                 <div class="math-example">
-                                    <p>Example 1: 1m 75cm = 1m + (75 ÷ 100)m = 1.75m</p>
-                                    <p>Example 2: 2m 5cm = 2m + (5 ÷ 100)m = 2.05m</p>
-                                </div>
-                            </div>
-                            
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-shapes"></i> Calculating Perimeter
-                                </h3>
-                                <div class="math-example">
-                                    <h4>Example: Rectangle 4m 25cm by 3m 80cm</h4>
-                                    <p>Method 1: Convert all to meters</p>
-                                    <p>4m 25cm = 4.25m</p>
-                                    <p>3m 80cm = 3.80m</p>
-                                    <p>Perimeter = 2 × (4.25 + 3.80) = 2 × 8.05 = 16.10m</p>
-                                    
-                                    <h4>Same example using cm:</h4>
-                                    <p>4m 25cm = 425cm</p>
-                                    <p>3m 80cm = 380cm</p>
-                                    <p>Perimeter = 2 × (425 + 380) = 2 × 805 = 1610cm</p>
+                                    \[ \text{Back bearing} = \text{Original bearing} \pm 180° \]
+                                    <p>Example: If bearing of B from A is 060°, then bearing of A from B is 240° (060° + 180°)</p>
                                 </div>
                             </div>
                         </section>
 
-                        <!-- cm and mm Section -->
-                        <section id="cm-mm" class="lesson-section">
+                        <!-- Vectors Section -->
+                        <section id="vectors" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-ruler-vertical"></i> cm and mm
+                                <i class="fas fa-arrow-up"></i> Vectors and Bearings
                             </h2>
                             
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-exchange-alt"></i> Converting mm to cm (Decimal)
+                                    <i class="fas fa-draw-polygon"></i> Expressing Vectors Graphically
                                 </h3>
                                 <p>
-                                    To convert millimeters to centimeters as a decimal:
+                                    Vectors can be represented with both magnitude and direction (bearing):
                                 </p>
-                                <ol>
-                                    <li>Remember that 1cm = 10mm</li>
-                                    <li>Divide mm by 10 to get decimal cm</li>
-                                    <li>Add to the existing cm</li>
-                                </ol>
-                                <div class="math-example">
-                                    <p>Example 1: 7cm 5mm = 7cm + (5 ÷ 10)cm = 7.5cm</p>
-                                    <p>Example 2: 12cm 8mm = 12cm + (8 ÷ 10)cm = 12.8cm</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Drawing Vectors</h4>
+                                        <p>To draw a vector with a given bearing:</p>
+                                        <ol>
+                                            <li>Draw the starting point</li>
+                                            <li>Draw a North line</li>
+                                            <li>Measure the bearing angle clockwise from North</li>
+                                            <li>Draw the vector at this angle</li>
+                                        </ol>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example Vector</h4>
+                                        <div class="math-example">
+                                            <img src="../../images/vector-bearing.png" alt="Vector with bearing" style="max-width: 300px;">
+                                            <p>A vector of length 5cm at bearing 120°</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-calculator"></i> Calculating Perimeter
+                                    <i class="fas fa-ruler-combined"></i> Measuring Vector Angles
                                 </h3>
+                                <p>
+                                    To measure the bearing of a drawn vector:
+                                </p>
+                                <ol>
+                                    <li>Identify the starting point of the vector</li>
+                                    <li>Draw a North line at this point</li>
+                                    <li>Use a protractor to measure the clockwise angle from North to the vector</li>
+                                    <li>Record as a three-digit bearing</li>
+                                </ol>
                                 <div class="math-example">
-                                    <h4>Example: Triangle with sides 5cm 4mm, 8cm 7mm, 6cm 9mm</h4>
-                                    <p>Convert all to cm:</p>
-                                    <p>5cm 4mm = 5.4cm</p>
-                                    <p>8cm 7mm = 8.7cm</p>
-                                    <p>6cm 9mm = 6.9cm</p>
-                                    <p>Perimeter = 5.4 + 8.7 + 6.9 = 21.0cm</p>
-                                    
-                                    <h4>Same example using mm:</h4>
-                                    <p>5cm 4mm = 54mm</p>
-                                    <p>8cm 7mm = 87mm</p>
-                                    <p>6cm 9mm = 69mm</p>
-                                    <p>Perimeter = 54 + 87 + 69 = 210mm</p>
+                                    <p>Practice: Measure the bearing of this vector:</p>
+                                    <img src="../../images/vector-measure.png" alt="Vector to measure" style="max-width: 300px;">
                                 </div>
                             </div>
                         </section>
@@ -329,48 +308,39 @@
                         <!-- Applications Section -->
                         <section id="applications" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-calculator"></i> Applications
+                                <i class="fas fa-map-marked-alt"></i> Applications of Bearings
                             </h2>
                             
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                    <i class="fas fa-compass"></i> Real-World Uses
                                 </h3>
                                 <p>
-                                    Calculating perimeter with mixed units is useful in many real-world situations:
+                                    Bearings are used in many practical situations:
                                 </p>
                                 
                                 <div class="key-points">
                                     <div class="point">
-                                        <h4>Fencing a Field</h4>
-                                        <p>A field measures 150m 75cm by 200m 50cm. How much fencing is needed?</p>
+                                        <h4>Navigation</h4>
+                                        <p>Ships and aircraft use bearings to plot courses:</p>
                                         <div class="math-example">
-                                            <p>Convert all to cm:</p>
-                                            <p>150m 75cm = 15,075cm</p>
-                                            <p>200m 50cm = 20,050cm</p>
-                                            <p>Perimeter = 2 × (15,075 + 20,050) = 70,250cm (or 702.5m)</p>
+                                            <p>"Fly at bearing 075° for 200km"</p>
                                         </div>
                                     </div>
                                     
                                     <div class="point">
-                                        <h4>Picture Frame</h4>
-                                        <p>A picture frame has sides 45cm 5mm and 30cm 8mm. What's the total length of framing material?</p>
+                                        <h4>Surveying</h4>
+                                        <p>Surveyors use bearings to map land boundaries:</p>
                                         <div class="math-example">
-                                            <p>Convert all to mm:</p>
-                                            <p>45cm 5mm = 455mm</p>
-                                            <p>30cm 8mm = 308mm</p>
-                                            <p>Perimeter = 2 × (455 + 308) = 1,526mm (or 152.6cm)</p>
+                                            <p>"The property line runs at bearing 315° for 50 meters"</p>
                                         </div>
                                     </div>
                                     
                                     <div class="point">
-                                        <h4>Running Track</h4>
-                                        <p>A rectangular track is 0.5km 250m long and 0.3km 175m wide. What distance is one lap?</p>
+                                        <h4>Search and Rescue</h4>
+                                        <p>Rescuers use bearings to locate people:</p>
                                         <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>0.5km 250m = 750m</p>
-                                            <p>0.3km 175m = 475m</p>
-                                            <p>Perimeter = 2 × (750 + 475) = 2,450m (or 2.45km)</p>
+                                            <p>"The distress signal is at bearing 210° from our position"</p>
                                         </div>
                                     </div>
                                 </div>
@@ -387,73 +357,56 @@
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
-                                    <p>Find the perimeter of a rectangle with sides 2km 300m and 1km 750m (give answer in meters)</p>
+                                    <p>What is the three-digit bearing for a direction exactly East?</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>2km 300m = 2,300m</p>
-                                        <p>1km 750m = 1,750m</p>
-                                        <p>Perimeter = 2 × (2,300 + 1,750) = 8,100m</p>
+                                        <p>East is 090°</p>
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 2</h3>
-                                    <p>Calculate the perimeter of a triangle with sides 1m 25cm, 2m 50cm, and 1m 75cm (give answer in meters)</p>
+                                    <p>If the bearing of B from A is 120°, what is the bearing of A from B?</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>1m 25cm = 1.25m</p>
-                                        <p>2m 50cm = 2.50m</p>
-                                        <p>1m 75cm = 1.75m</p>
-                                        <p>Perimeter = 1.25 + 2.50 + 1.75 = 5.50m</p>
+                                        <p>Back bearing = 120° + 180° = 300°</p>
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 3</h3>
-                                    <p>A square has sides of 15cm 8mm. What is its perimeter in centimeters?</p>
+                                    <p>Measure the bearing of point P from point O in this diagram:</p>
+                                    <img src="../../images/bearing-practice1.png" alt="Bearing practice diagram" style="max-width: 200px;">
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to cm:</p>
-                                        <p>15cm 8mm = 15.8cm</p>
-                                        <p>Perimeter = 4 × 15.8 = 63.2cm</p>
+                                        <p>The bearing is 075° (measured clockwise from North)</p>
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 4</h3>
-                                    <p>Find the perimeter of a rectangle 3.5km 250m by 2km 750m (answer in km)</p>
+                                    <p>Draw a vector 6cm long at bearing 225°</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to km:</p>
-                                        <p>3.5km 250m = 3.5 + 0.250 = 3.750km</p>
-                                        <p>2km 750m = 2 + 0.750 = 2.750km</p>
-                                        <p>Perimeter = 2 × (3.750 + 2.750) = 13.000km</p>
+                                        <img src="../../images/bearing-solution4.png" alt="Solution for question 4" style="max-width: 200px;">
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 5</h3>
-                                    <p>A pentagon has sides measuring 25cm 4mm each. What is its perimeter in millimeters?</p>
+                                    <p>A ship sails on bearing 150° for 30km. What direction is this compass direction?</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to mm:</p>
-                                        <p>25cm 4mm = 254mm</p>
-                                        <p>Perimeter = 5 × 254 = 1,270mm</p>
+                                        <p>150° is South-East (30° east of south)</p>
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 6</h3>
-                                    <p>A triangular garden has sides 4m 50cm, 3m 75cm, and 5m 25cm. How much fencing is needed (answer in meters)?</p>
+                                    <p>From a point X, Y is at bearing 300° and Z is at bearing 040°. Which point is more northerly?</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>4m 50cm = 4.50m</p>
-                                        <p>3m 75cm = 3.75m</p>
-                                        <p>5m 25cm = 5.25m</p>
-                                        <p>Perimeter = 4.50 + 3.75 + 5.25 = 13.50m</p>
+                                        <p>Z is more northerly (040° is closer to North than 300°)</p>
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +431,7 @@
                                     <h4>
                                         <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
                                     </h4>
-                                    <p class="game-description">Test your skills with perimeter calculations using mixed units</p>
+                                    <p class="game-description">Test your skills with bearings and angle measurement</p>
                                 </div>
                                 
                                 <div class="game-card">
@@ -551,7 +504,7 @@
         </footer>
 
         <!-- Scripts -->
-         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../js/math-challenge-fractions.js"></script>
         <script src="../../../../js/mathjhs-lesson.js"></script>
         <script src="../../js/fractions.js"></script>
         <script>

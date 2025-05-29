@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO and Social Meta Tags -->
-        <title>Perimeter with Mixed Units | JHS Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Learn how to calculate perimeter when dimensions are given in different units like km and m, m and cm, or cm and mm.">
+        <title>Vector Conversion | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to convert vectors between column (component) form and magnitude-bearing form.">
         
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
@@ -15,10 +15,10 @@
         <link rel="manifest" href="../../../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Perimeter with Mixed Units | JHS Mathematics">
-        <meta property="og:description" content="Learn to calculate perimeter when dimensions are in different units.">
+        <meta property="og:title" content="Vector Conversion | JHS Mathematics">
+        <meta property="og:description" content="Learn to convert vectors between component form and magnitude-bearing form.">
         <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/perimeter">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/vectors">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -85,7 +85,7 @@
                         </a>
                     </div>
                     
-                    <h1 class="lesson-title">Perimeter with Mixed Units</h1>
+                    <h1 class="lesson-title">Vector Conversion</h1>
                     
                     <nav class="main-nav">
                         <ul class="nav-list">
@@ -112,16 +112,15 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">JHS: Measurement</h3>
+                            <h3 class="sidebar-title">JHS: Vectors</h3>
                             <div class="current-topic">
-                                <i class="fas fa-ruler-combined"></i>
-                                <span>Perimeter with Mixed Units</span>
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Vector Conversion</span>
                             </div>
                             <ul class="topic-menu">
                                 <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
-                                <li><a href="#km-m"><i class="fas fa-chevron-right"></i> km and m</a></li>
-                                <li><a href="#m-cm"><i class="fas fa-chevron-right"></i> m and cm</a></li>
-                                <li><a href="#cm-mm"><i class="fas fa-chevron-right"></i> cm and mm</a></li>
+                                <li><a href="#component-to-magnitude"><i class="fas fa-chevron-right"></i> Component to Magnitude-Bearing</a></li>
+                                <li><a href="#magnitude-to-component"><i class="fas fa-chevron-right"></i> Magnitude-Bearing to Component</a></li>
                                 <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
                             </ul>
                             
@@ -153,7 +152,7 @@
                             <i class="fas fa-chevron-right"></i>
                             <a href="../../../../math-jhs">JHS</a>
                             <i class="fas fa-chevron-right"></i>
-                            <span>Perimeter_Mixed_Units</span>
+                            <span>Vector_Conversion</span>
                         </nav>
 
                         <!-- Introduction Section -->
@@ -164,164 +163,203 @@
                             
                             <div class="concept-box">
                                 <p>
-                                    Perimeter is the total distance around a shape. When calculating perimeter, all sides must be in the same unit. This lesson will teach you how to handle shapes with sides measured in different units.
+                                    Vectors can be represented in two main forms: column (component) form and magnitude-bearing form. Understanding how to convert between these forms is essential for solving vector problems.
                                 </p>
                                 
                                 <div class="math-example">
-                                    \[ \text{Perimeter} = \text{Sum of all sides of the shape} \]
+                                    \[ \text{Column form: } \begin{pmatrix} x \\ y \end{pmatrix} \]
+                                    \[ \text{Magnitude-bearing form: } r \text{ at } \theta^\circ \]
                                 </div>
                             </div>
                             
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-asterisk"></i> Key Concepts
+                                    <i class="fas fa-asterisk"></i> Understanding Vectors
                                 </h3>
                                 <p>
-                                    There are two main approaches when dealing with mixed units:
+                                    A vector has both magnitude (size) and direction:
                                 </p>
                                 <ul>
-                                    <li><strong>Convert to smaller unit</strong>: Change all measurements to the smaller unit before adding</li>
-                                    <li><strong>Convert to decimal</strong>: Change the smaller unit to a decimal fraction of the larger unit</li>
+                                    <li><strong>Column form</strong>: Shows horizontal (x) and vertical (y) components</li>
+                                    <li><strong>Magnitude-bearing form</strong>: Shows length (r) and angle from North (θ)</li>
                                 </ul>
                                 <div class="math-example">
-                                    <p>Example: 2m 50cm can be:</p>
-                                    <ul>
-                                        <li>200cm + 50cm = 250cm (smaller unit)</li>
-                                        <li>2m + 0.5m = 2.5m (decimal fraction)</li>
-                                    </ul>
+                                    <p>Example: \(\begin{pmatrix} 3 \\ 4 \end{pmatrix}\) means 3 units east and 4 units north</p>
                                 </div>
                             </div>
                         </section>
                         
-                        <!-- km and m Section -->
-                        <section id="km-m" class="lesson-section">
+                        <!-- Component to Magnitude-Bearing Section -->
+                        <section id="component-to-magnitude" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-road"></i> km and m
+                                <i class="fas fa-exchange-alt"></i> Component to Magnitude-Bearing
                             </h2>
 
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-exchange-alt"></i> Converting km to m
+                                    <i class="fas fa-ruler"></i> Finding the Magnitude
                                 </h3>
                                 <p>
-                                    To convert kilometers to meters:
+                                    To find the magnitude (length) of a vector from its components:
                                 </p>
                                 <ol>
-                                    <li>Remember that 1 km = 1000 m</li>
-                                    <li>Multiply the km value by 1000</li>
-                                    <li>Add the remaining meters</li>
+                                    <li>Square both components</li>
+                                    <li>Add them together</li>
+                                    <li>Take the square root</li>
                                 </ol>
                                 
                                 <div class="key-points">
                                     <div class="point">
-                                        <h4>Example 1: Rectangle 3km 200m by 2km 500m</h4>
+                                        <h4>Example 1: Find magnitude of \(\begin{pmatrix} 3 \\ 4 \end{pmatrix}\)</h4>
                                         <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>3km 200m = (3 × 1000) + 200 = 3200m</p>
-                                            <p>2km 500m = (2 × 1000) + 500 = 2500m</p>
-                                            <p>Perimeter = 2 × (length + width)</p>
-                                            <p>= 2 × (3200 + 2500) = 2 × 5700 = 11,400m</p>
+                                            \[ \text{Magnitude} = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5 \]
                                         </div>
                                     </div>
                                     
                                     <div class="point">
-                                        <h4>Example 2: Triangle 0.5km 300m, 0.8km 150m, 1km 50m</h4>
+                                        <h4>Example 2: Find magnitude of \(\begin{pmatrix} -6 \\ 8 \end{pmatrix}\)</h4>
                                         <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>0.5km 300m = (0.5 × 1000) + 300 = 800m</p>
-                                            <p>0.8km 150m = (0.8 × 1000) + 150 = 950m</p>
-                                            <p>1km 50m = (1 × 1000) + 50 = 1050m</p>
-                                            <p>Perimeter = 800 + 950 + 1050 = 2800m</p>
+                                            \[ \text{Magnitude} = \sqrt{(-6)^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10 \]
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                        
-                        <!-- m and cm Section -->
-                        <section id="m-cm" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-ruler"></i> m and cm
-                            </h2>
                             
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-divide"></i> Converting cm to m (Decimal)
+                                    <i class="fas fa-compass"></i> Finding the Bearing
                                 </h3>
                                 <p>
-                                    To convert centimeters to meters as a decimal:
+                                    To find the bearing (direction) of a vector from its components:
                                 </p>
                                 <ol>
-                                    <li>Remember that 1m = 100cm</li>
-                                    <li>Divide cm by 100 to get decimal meters</li>
-                                    <li>Add to the existing meters</li>
+                                    <li>Find the angle θ using tanθ = opposite/adjacent</li>
+                                    <li>Adjust for the quadrant (direction) of the vector</li>
+                                    <li>Express as an angle from North (0° to 360°)</li>
                                 </ol>
                                 <div class="math-example">
-                                    <p>Example 1: 1m 75cm = 1m + (75 ÷ 100)m = 1.75m</p>
-                                    <p>Example 2: 2m 5cm = 2m + (5 ÷ 100)m = 2.05m</p>
+                                    <p>Example: Find bearing of \(\begin{pmatrix} 3 \\ 4 \end{pmatrix}\):</p>
+                                    \[ \tanθ = \frac{3}{4} \Rightarrow θ \approx 36.87^\circ \]
+                                    <p>This is 36.87° east of north, so bearing = 036.87°</p>
                                 </div>
                             </div>
                             
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-shapes"></i> Calculating Perimeter
+                                    <i class="fas fa-table"></i> Conversion Steps Summary
                                 </h3>
                                 <div class="math-example">
-                                    <h4>Example: Rectangle 4m 25cm by 3m 80cm</h4>
-                                    <p>Method 1: Convert all to meters</p>
-                                    <p>4m 25cm = 4.25m</p>
-                                    <p>3m 80cm = 3.80m</p>
-                                    <p>Perimeter = 2 × (4.25 + 3.80) = 2 × 8.05 = 16.10m</p>
-                                    
-                                    <h4>Same example using cm:</h4>
-                                    <p>4m 25cm = 425cm</p>
-                                    <p>3m 80cm = 380cm</p>
-                                    <p>Perimeter = 2 × (425 + 380) = 2 × 805 = 1610cm</p>
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Step</th>
+                                            <th>Action</th>
+                                            <th>Example</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Identify x and y components</td>
+                                            <td>\(\begin{pmatrix} 5 \\ -12 \end{pmatrix}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Calculate magnitude: \(\sqrt{x^2 + y^2}\)</td>
+                                            <td>\(\sqrt{25 + 144} = 13\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>Find reference angle: \(\tan^{-1}(|y/x|)\)</td>
+                                            <td>\(\tan^{-1}(12/5) ≈ 67.38^\circ\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>Determine actual bearing based on quadrant</td>
+                                            <td>South-east: 180° - 67.38° = 112.62°</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>Express as magnitude and bearing</td>
+                                            <td>13 at 112.62°</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </section>
 
-                        <!-- cm and mm Section -->
-                        <section id="cm-mm" class="lesson-section">
+                        <!-- Magnitude-Bearing to Component Section -->
+                        <section id="magnitude-to-component" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-ruler-vertical"></i> cm and mm
+                                <i class="fas fa-balance-scale"></i> Magnitude-Bearing to Component
                             </h2>
                             
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-exchange-alt"></i> Converting mm to cm (Decimal)
+                                    <i class="fas fa-arrows-alt"></i> Converting to Components
                                 </h3>
                                 <p>
-                                    To convert millimeters to centimeters as a decimal:
+                                    To convert from magnitude-bearing form to component form:
                                 </p>
-                                <ol>
-                                    <li>Remember that 1cm = 10mm</li>
-                                    <li>Divide mm by 10 to get decimal cm</li>
-                                    <li>Add to the existing cm</li>
-                                </ol>
-                                <div class="math-example">
-                                    <p>Example 1: 7cm 5mm = 7cm + (5 ÷ 10)cm = 7.5cm</p>
-                                    <p>Example 2: 12cm 8mm = 12cm + (8 ÷ 10)cm = 12.8cm</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Step 1: Understand the bearing</h4>
+                                        <p>Bearings are measured clockwise from North:</p>
+                                        <div class="math-example">
+                                            <p>North = 0°, East = 90°, South = 180°, West = 270°</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 2: Find reference angle</h4>
+                                        <p>Determine the angle from the nearest North-South line:</p>
+                                        <div class="math-example">
+                                            <p>For 120° bearing: 120° - 90° = 30° from East towards South</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Step 3: Calculate components</h4>
+                                        <p>Use trigonometry to find x and y components:</p>
+                                        <div class="math-example">
+                                            <p>For vector 10 at 120°:</p>
+                                            \[ x = 10 \sin(120°) ≈ 8.66 \]
+                                            \[ y = 10 \cos(120°) = -5 \]
+                                            \[ \text{Component form: } \begin{pmatrix} 8.66 \\ -5 \end{pmatrix} \]
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-calculator"></i> Calculating Perimeter
+                                    <i class="fas fa-sort-amount-up"></i> Quadrant Considerations
                                 </h3>
+                                <p>
+                                    The signs of components depend on the bearing quadrant:
+                                </p>
+                                <ol>
+                                    <li><strong>0°-90°</strong>: +x (east), +y (north)</li>
+                                    <li><strong>90°-180°</strong>: +x (east), -y (south)</li>
+                                    <li><strong>180°-270°</strong>: -x (west), -y (south)</li>
+                                    <li><strong>270°-360°</strong>: -x (west), +y (north)</li>
+                                </ol>
                                 <div class="math-example">
-                                    <h4>Example: Triangle with sides 5cm 4mm, 8cm 7mm, 6cm 9mm</h4>
-                                    <p>Convert all to cm:</p>
-                                    <p>5cm 4mm = 5.4cm</p>
-                                    <p>8cm 7mm = 8.7cm</p>
-                                    <p>6cm 9mm = 6.9cm</p>
-                                    <p>Perimeter = 5.4 + 8.7 + 6.9 = 21.0cm</p>
-                                    
-                                    <h4>Same example using mm:</h4>
-                                    <p>5cm 4mm = 54mm</p>
-                                    <p>8cm 7mm = 87mm</p>
-                                    <p>6cm 9mm = 69mm</p>
-                                    <p>Perimeter = 54 + 87 + 69 = 210mm</p>
+                                    <p>Example: 200° bearing is in 3rd quadrant (both negative)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-cut"></i> Practical Conversion
+                                </h3>
+                                <p>
+                                    Complete example of conversion from magnitude-bearing to components:
+                                </p>
+                                <div class="math-example">
+                                    <p>Convert 15 at 300° to component form:</p>
+                                    <p>300° is in 4th quadrant (west and north):</p>
+                                    \[ x = 15 \sin(300°) = 15 \times (-\frac{\sqrt{3}}{2}) ≈ -12.99 \]
+                                    \[ y = 15 \cos(300°) = 15 \times \frac{1}{2} = 7.5 \]
+                                    \[ \text{Component form: } \begin{pmatrix} -12.99 \\ 7.5 \end{pmatrix} \]
                                 </div>
                             </div>
                         </section>
@@ -337,40 +375,34 @@
                                     <i class="fas fa-lightbulb"></i> Practical Examples
                                 </h3>
                                 <p>
-                                    Calculating perimeter with mixed units is useful in many real-world situations:
+                                    Vector conversion is useful in many real-world situations:
                                 </p>
                                 
                                 <div class="key-points">
                                     <div class="point">
-                                        <h4>Fencing a Field</h4>
-                                        <p>A field measures 150m 75cm by 200m 50cm. How much fencing is needed?</p>
+                                        <h4>Navigation</h4>
+                                        <p>A ship sails 20 km at bearing 050°. Find its east and north displacement:</p>
                                         <div class="math-example">
-                                            <p>Convert all to cm:</p>
-                                            <p>150m 75cm = 15,075cm</p>
-                                            <p>200m 50cm = 20,050cm</p>
-                                            <p>Perimeter = 2 × (15,075 + 20,050) = 70,250cm (or 702.5m)</p>
+                                            \[ x = 20 \sin(50°) ≈ 15.32 \text{ km east} \]
+                                            \[ y = 20 \cos(50°) ≈ 12.86 \text{ km north} \]
                                         </div>
                                     </div>
                                     
                                     <div class="point">
-                                        <h4>Picture Frame</h4>
-                                        <p>A picture frame has sides 45cm 5mm and 30cm 8mm. What's the total length of framing material?</p>
+                                        <h4>Physics Problems</h4>
+                                        <p>A force of 100 N acts at 30° to the horizontal. Find horizontal and vertical components:</p>
                                         <div class="math-example">
-                                            <p>Convert all to mm:</p>
-                                            <p>45cm 5mm = 455mm</p>
-                                            <p>30cm 8mm = 308mm</p>
-                                            <p>Perimeter = 2 × (455 + 308) = 1,526mm (or 152.6cm)</p>
+                                            \[ F_x = 100 \cos(30°) ≈ 86.60 \text{ N} \]
+                                            \[ F_y = 100 \sin(30°) = 50 \text{ N} \]
                                         </div>
                                     </div>
                                     
                                     <div class="point">
-                                        <h4>Running Track</h4>
-                                        <p>A rectangular track is 0.5km 250m long and 0.3km 175m wide. What distance is one lap?</p>
+                                        <h4>Wind Velocity</h4>
+                                        <p>Wind is blowing 25 km/h from the southwest (bearing 225°). Find components:</p>
                                         <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>0.5km 250m = 750m</p>
-                                            <p>0.3km 175m = 475m</p>
-                                            <p>Perimeter = 2 × (750 + 475) = 2,450m (or 2.45km)</p>
+                                            \[ x = 25 \cos(225°) ≈ -17.68 \text{ km/h} \]
+                                            \[ y = 25 \sin(225°) ≈ -17.68 \text{ km/h} \]
                                         </div>
                                     </div>
                                 </div>
@@ -387,73 +419,65 @@
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
-                                    <p>Find the perimeter of a rectangle with sides 2km 300m and 1km 750m (give answer in meters)</p>
+                                    <p>Convert \(\begin{pmatrix} 5 \\ 12 \end{pmatrix}\) to magnitude-bearing form</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>2km 300m = 2,300m</p>
-                                        <p>1km 750m = 1,750m</p>
-                                        <p>Perimeter = 2 × (2,300 + 1,750) = 8,100m</p>
+                                        \[ \text{Magnitude} = \sqrt{5^2 + 12^2} = 13 \]
+                                        \[ \text{Bearing} = \tan^{-1}(5/12) ≈ 22.62^\circ \]
+                                        \[ \text{Answer: } 13 \text{ at } 022.62^\circ \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 2</h3>
-                                    <p>Calculate the perimeter of a triangle with sides 1m 25cm, 2m 50cm, and 1m 75cm (give answer in meters)</p>
+                                    <p>Convert 10 at 150° to component form</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>1m 25cm = 1.25m</p>
-                                        <p>2m 50cm = 2.50m</p>
-                                        <p>1m 75cm = 1.75m</p>
-                                        <p>Perimeter = 1.25 + 2.50 + 1.75 = 5.50m</p>
+                                        \[ x = 10 \sin(150°) = 5 \]
+                                        \[ y = 10 \cos(150°) ≈ -8.66 \]
+                                        \[ \text{Answer: } \begin{pmatrix} 5 \\ -8.66 \end{pmatrix} \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 3</h3>
-                                    <p>A square has sides of 15cm 8mm. What is its perimeter in centimeters?</p>
+                                    <p>Find the magnitude of \(\begin{pmatrix} -8 \\ -6 \end{pmatrix}\)</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to cm:</p>
-                                        <p>15cm 8mm = 15.8cm</p>
-                                        <p>Perimeter = 4 × 15.8 = 63.2cm</p>
+                                        \[ \text{Magnitude} = \sqrt{(-8)^2 + (-6)^2} = \sqrt{64 + 36} = 10 \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 4</h3>
-                                    <p>Find the perimeter of a rectangle 3.5km 250m by 2km 750m (answer in km)</p>
+                                    <p>Convert \(\begin{pmatrix} -4 \\ 7 \end{pmatrix}\) to magnitude-bearing form</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to km:</p>
-                                        <p>3.5km 250m = 3.5 + 0.250 = 3.750km</p>
-                                        <p>2km 750m = 2 + 0.750 = 2.750km</p>
-                                        <p>Perimeter = 2 × (3.750 + 2.750) = 13.000km</p>
+                                        \[ \text{Magnitude} = \sqrt{(-4)^2 + 7^2} ≈ 8.06 \]
+                                        \[ \text{Reference angle} = \tan^{-1}(4/7) ≈ 29.74^\circ \]
+                                        \[ \text{Bearing} = 360° - 29.74° ≈ 330.26° \]
+                                        \[ \text{Answer: } 8.06 \text{ at } 330.26^\circ \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 5</h3>
-                                    <p>A pentagon has sides measuring 25cm 4mm each. What is its perimeter in millimeters?</p>
+                                    <p>Convert 15 at 240° to component form</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to mm:</p>
-                                        <p>25cm 4mm = 254mm</p>
-                                        <p>Perimeter = 5 × 254 = 1,270mm</p>
+                                        \[ x = 15 \sin(240°) ≈ -12.99 \]
+                                        \[ y = 15 \cos(240°) = -7.5 \]
+                                        \[ \text{Answer: } \begin{pmatrix} -12.99 \\ -7.5 \end{pmatrix} \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 6</h3>
-                                    <p>A triangular garden has sides 4m 50cm, 3m 75cm, and 5m 25cm. How much fencing is needed (answer in meters)?</p>
+                                    <p>A plane flies 200 km at bearing 320°. Find its west and north components.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>4m 50cm = 4.50m</p>
-                                        <p>3m 75cm = 3.75m</p>
-                                        <p>5m 25cm = 5.25m</p>
-                                        <p>Perimeter = 4.50 + 3.75 + 5.25 = 13.50m</p>
+                                        \[ x = 200 \sin(320°) ≈ -128.56 \text{ km (west)} \]
+                                        \[ y = 200 \cos(320°) ≈ 153.21 \text{ km (north)} \]
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +502,7 @@
                                     <h4>
                                         <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
                                     </h4>
-                                    <p class="game-description">Test your skills with perimeter calculations using mixed units</p>
+                                    <p class="game-description">Test your skills with vector conversions</p>
                                 </div>
                                 
                                 <div class="game-card">

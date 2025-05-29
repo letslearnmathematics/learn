@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO and Social Meta Tags -->
-        <title>Perimeter with Mixed Units | JHS Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Learn how to calculate perimeter when dimensions are given in different units like km and m, m and cm, or cm and mm.">
+        <title>Area of Triangles | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to derive the area formula for triangles using relationships with rectangles and parallelograms.">
         
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
@@ -15,10 +15,10 @@
         <link rel="manifest" href="../../../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Perimeter with Mixed Units | JHS Mathematics">
-        <meta property="og:description" content="Learn to calculate perimeter when dimensions are in different units.">
+        <meta property="og:title" content="Area of Triangles | JHS Mathematics">
+        <meta property="og:description" content="Learn to derive the area formula for triangles using relationships with rectangles and parallelograms.">
         <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/perimeter">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/fractions">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -85,7 +85,7 @@
                         </a>
                     </div>
                     
-                    <h1 class="lesson-title">Perimeter with Mixed Units</h1>
+                    <h1 class="lesson-title">Area of Triangles</h1>
                     
                     <nav class="main-nav">
                         <ul class="nav-list">
@@ -112,17 +112,17 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">JHS: Measurement</h3>
+                            <h3 class="sidebar-title">JHS: Geometry</h3>
                             <div class="current-topic">
-                                <i class="fas fa-ruler-combined"></i>
-                                <span>Perimeter with Mixed Units</span>
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Area of Triangles</span>
                             </div>
                             <ul class="topic-menu">
                                 <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
-                                <li><a href="#km-m"><i class="fas fa-chevron-right"></i> km and m</a></li>
-                                <li><a href="#m-cm"><i class="fas fa-chevron-right"></i> m and cm</a></li>
-                                <li><a href="#cm-mm"><i class="fas fa-chevron-right"></i> cm and mm</a></li>
-                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                                <li><a href="#unit-squares"><i class="fas fa-chevron-right"></i> Counting Unit Squares</a></li>
+                                <li><a href="#rectangle-relation"><i class="fas fa-chevron-right"></i> Triangle-Rectangle Relationship</a></li>
+                                <li><a href="#parallelogram-relation"><i class="fas fa-chevron-right"></i> Triangle-Parallelogram Relationship</a></li>
+                                <li><a href="#formula"><i class="fas fa-chevron-right"></i> Area Formula</a></li>
                             </ul>
                             
                             <div class="level-buttons">
@@ -153,7 +153,7 @@
                             <i class="fas fa-chevron-right"></i>
                             <a href="../../../../math-jhs">JHS</a>
                             <i class="fas fa-chevron-right"></i>
-                            <span>Perimeter_Mixed_Units</span>
+                            <span>Area_of_Triangles</span>
                         </nav>
 
                         <!-- Introduction Section -->
@@ -164,213 +164,234 @@
                             
                             <div class="concept-box">
                                 <p>
-                                    Perimeter is the total distance around a shape. When calculating perimeter, all sides must be in the same unit. This lesson will teach you how to handle shapes with sides measured in different units.
+                                    A triangle is a three-sided polygon. To find its area, we can use its relationship with rectangles and parallelograms. The area of a triangle is always half the area of a rectangle or parallelogram with the same base and height.
                                 </p>
                                 
                                 <div class="math-example">
-                                    \[ \text{Perimeter} = \text{Sum of all sides of the shape} \]
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Triangle_area_animation.gif/220px-Triangle_area_animation.gif" alt="Triangle area animation" style="max-width:100%; height:auto;">
+                                    <p>Animation showing how a triangle's area relates to a rectangle</p>
                                 </div>
                             </div>
                             
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-asterisk"></i> Key Concepts
+                                    <i class="fas fa-asterisk"></i> Key Terms
+                                </h3>
+                                <ul>
+                                    <li><strong>Base</strong>: Any side of the triangle (usually the bottom side when drawn)</li>
+                                    <li><strong>Height</strong>: The perpendicular distance from the base to the opposite vertex</li>
+                                    <li><strong>Unit Square</strong>: A square with sides of 1 unit length, used to measure area</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Unit Squares Section -->
+                        <section id="unit-squares" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-th"></i> Counting Unit Squares
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-square"></i> Determining Area by Counting
                                 </h3>
                                 <p>
-                                    There are two main approaches when dealing with mixed units:
+                                    We can estimate a triangle's area by counting how many unit squares fit inside it:
+                                </p>
+                                <ol>
+                                    <li>Draw the triangle on grid paper</li>
+                                    <li>Count the number of complete unit squares inside the triangle</li>
+                                    <li>For partial squares, combine them to make whole squares</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Right Triangle</h4>
+                                        <div class="math-example">
+                                            <img src="https://www.math-only-math.com/images/area-of-a-right-angled-triangle.png" alt="Right triangle on grid" style="max-width:300px; height:auto;">
+                                            <p>This right triangle covers 4 complete squares and 4 half squares, totaling 6 unit squares.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Acute Triangle</h4>
+                                        <div class="math-example">
+                                            <img src="https://www.math-only-math.com/images/area-of-triangle-on-squared-paper.png" alt="Acute triangle on grid" style="max-width:300px; height:auto;">
+                                            <p>This triangle covers 5 complete squares and 6 partial squares that combine to make 3 more, totaling 8 unit squares.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Rectangle Relationship Section -->
+                        <section id="rectangle-relation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-vector-square"></i> Triangle-Rectangle Relationship
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-border-style"></i> Enclosing Rectangle
+                                </h3>
+                                <p>
+                                    Every triangle can be enclosed in a rectangle. The area of the triangle is exactly half the area of this rectangle when the triangle has its base on one side of the rectangle and its opposite vertex on the opposite side.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Right Triangle</h4>
+                                        <div class="math-example">
+                                            <img src="https://www.mathsisfun.com/geometry/images/triangle-area-1.gif" alt="Right triangle in rectangle" style="max-width:300px; height:auto;">
+                                            <p>A right triangle forms half of a rectangle. The area is \(\frac{1}{2} \times \text{base} \times \text{height}\).</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Acute Triangle</h4>
+                                        <div class="math-example">
+                                            <img src="https://www.mathsisfun.com/geometry/images/triangle-area-2.gif" alt="Acute triangle in rectangle" style="max-width:300px; height:auto;">
+                                            <p>An acute triangle divides its enclosing rectangle into the triangle itself and three right triangles.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Obtuse Triangle</h4>
+                                        <div class="math-example">
+                                            <img src="https://www.mathsisfun.com/geometry/images/triangle-area-3.gif" alt="Obtuse triangle in rectangle" style="max-width:300px; height:auto;">
+                                            <p>An obtuse triangle extends beyond its base rectangle but still maintains the area relationship.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Deriving the Formula
+                                </h3>
+                                <p>
+                                    From the rectangle relationship:
+                                </p>
+                                <ol>
+                                    <li>Area of rectangle = base × height</li>
+                                    <li>Triangle covers exactly half the rectangle</li>
+                                    <li>Therefore, Area of triangle = \(\frac{1}{2}\) × base × height</li>
+                                </ol>
+                                <div class="math-example">
+                                    \[ \text{Area} = \frac{1}{2} \times b \times h \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Parallelogram Relationship Section -->
+                        <section id="parallelogram-relation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Triangle-Parallelogram Relationship
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-vector-square"></i> Forming Parallelograms
+                                </h3>
+                                <p>
+                                    Two identical triangles can be combined to form a parallelogram:
+                                </p>
+                                <ol>
+                                    <li>Take two copies of the same triangle</li>
+                                    <li>Rotate one 180 degrees</li>
+                                    <li>Combine them along corresponding sides</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <img src="https://www.math-only-math.com/images/area-of-a-parallelogram.png" alt="Two triangles forming a parallelogram" style="max-width:400px; height:auto;">
+                                    <p>Two congruent triangles form a parallelogram with the same base and height.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Area Relationship
+                                </h3>
+                                <p>
+                                    Since two identical triangles make one parallelogram:
                                 </p>
                                 <ul>
-                                    <li><strong>Convert to smaller unit</strong>: Change all measurements to the smaller unit before adding</li>
-                                    <li><strong>Convert to decimal</strong>: Change the smaller unit to a decimal fraction of the larger unit</li>
+                                    <li>Area of parallelogram = base × height</li>
+                                    <li>Therefore, Area of one triangle = \(\frac{1}{2}\) × base × height</li>
                                 </ul>
                                 <div class="math-example">
-                                    <p>Example: 2m 50cm can be:</p>
-                                    <ul>
-                                        <li>200cm + 50cm = 250cm (smaller unit)</li>
-                                        <li>2m + 0.5m = 2.5m (decimal fraction)</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- km and m Section -->
-                        <section id="km-m" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-road"></i> km and m
-                            </h2>
-
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-exchange-alt"></i> Converting km to m
-                                </h3>
-                                <p>
-                                    To convert kilometers to meters:
-                                </p>
-                                <ol>
-                                    <li>Remember that 1 km = 1000 m</li>
-                                    <li>Multiply the km value by 1000</li>
-                                    <li>Add the remaining meters</li>
-                                </ol>
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Example 1: Rectangle 3km 200m by 2km 500m</h4>
-                                        <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>3km 200m = (3 × 1000) + 200 = 3200m</p>
-                                            <p>2km 500m = (2 × 1000) + 500 = 2500m</p>
-                                            <p>Perimeter = 2 × (length + width)</p>
-                                            <p>= 2 × (3200 + 2500) = 2 × 5700 = 11,400m</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="point">
-                                        <h4>Example 2: Triangle 0.5km 300m, 0.8km 150m, 1km 50m</h4>
-                                        <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>0.5km 300m = (0.5 × 1000) + 300 = 800m</p>
-                                            <p>0.8km 150m = (0.8 × 1000) + 150 = 950m</p>
-                                            <p>1km 50m = (1 × 1000) + 50 = 1050m</p>
-                                            <p>Perimeter = 800 + 950 + 1050 = 2800m</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- m and cm Section -->
-                        <section id="m-cm" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-ruler"></i> m and cm
-                            </h2>
-                            
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-divide"></i> Converting cm to m (Decimal)
-                                </h3>
-                                <p>
-                                    To convert centimeters to meters as a decimal:
-                                </p>
-                                <ol>
-                                    <li>Remember that 1m = 100cm</li>
-                                    <li>Divide cm by 100 to get decimal meters</li>
-                                    <li>Add to the existing meters</li>
-                                </ol>
-                                <div class="math-example">
-                                    <p>Example 1: 1m 75cm = 1m + (75 ÷ 100)m = 1.75m</p>
-                                    <p>Example 2: 2m 5cm = 2m + (5 ÷ 100)m = 2.05m</p>
+                                    \[ \text{Area of triangle} = \frac{\text{Area of parallelogram}}{2} = \frac{1}{2} \times b \times h \]
                                 </div>
                             </div>
                             
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-shapes"></i> Calculating Perimeter
+                                    <i class="fas fa-cut"></i> Cutting a Parallelogram
                                 </h3>
+                                <p>
+                                    A parallelogram can be divided into two congruent triangles by drawing a diagonal:
+                                </p>
                                 <div class="math-example">
-                                    <h4>Example: Rectangle 4m 25cm by 3m 80cm</h4>
-                                    <p>Method 1: Convert all to meters</p>
-                                    <p>4m 25cm = 4.25m</p>
-                                    <p>3m 80cm = 3.80m</p>
-                                    <p>Perimeter = 2 × (4.25 + 3.80) = 2 × 8.05 = 16.10m</p>
-                                    
-                                    <h4>Same example using cm:</h4>
-                                    <p>4m 25cm = 425cm</p>
-                                    <p>3m 80cm = 380cm</p>
-                                    <p>Perimeter = 2 × (425 + 380) = 2 × 805 = 1610cm</p>
+                                    <img src="https://www.math-only-math.com/images/diagonal-of-parallelogram-divides-it-into-two-congruent-triangles.png" alt="Parallelogram divided into two triangles" style="max-width:300px; height:auto;">
+                                    <p>The diagonal divides the parallelogram into two identical triangles, each with half the area.</p>
                                 </div>
                             </div>
                         </section>
 
-                        <!-- cm and mm Section -->
-                        <section id="cm-mm" class="lesson-section">
+                        <!-- Formula Section -->
+                        <section id="formula" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-ruler-vertical"></i> cm and mm
+                                <i class="fas fa-square-root-alt"></i> Area Formula
                             </h2>
                             
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-exchange-alt"></i> Converting mm to cm (Decimal)
+                                    <i class="fas fa-calculator"></i> The Standard Formula
                                 </h3>
                                 <p>
-                                    To convert millimeters to centimeters as a decimal:
+                                    From both relationships, we derive the standard formula for a triangle's area:
                                 </p>
-                                <ol>
-                                    <li>Remember that 1cm = 10mm</li>
-                                    <li>Divide mm by 10 to get decimal cm</li>
-                                    <li>Add to the existing cm</li>
-                                </ol>
                                 <div class="math-example">
-                                    <p>Example 1: 7cm 5mm = 7cm + (5 ÷ 10)cm = 7.5cm</p>
-                                    <p>Example 2: 12cm 8mm = 12cm + (8 ÷ 10)cm = 12.8cm</p>
+                                    \[ \text{Area} = \frac{1}{2} \times \text{base} \times \text{height} \]
+                                    \[ A = \frac{1}{2}bh \]
                                 </div>
+                                <p>Where:</p>
+                                <ul>
+                                    <li><strong>b</strong> = length of any side (base)</li>
+                                    <li><strong>h</strong> = perpendicular height from that base to the opposite vertex</li>
+                                </ul>
                             </div>
                             
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-calculator"></i> Calculating Perimeter
-                                </h3>
-                                <div class="math-example">
-                                    <h4>Example: Triangle with sides 5cm 4mm, 8cm 7mm, 6cm 9mm</h4>
-                                    <p>Convert all to cm:</p>
-                                    <p>5cm 4mm = 5.4cm</p>
-                                    <p>8cm 7mm = 8.7cm</p>
-                                    <p>6cm 9mm = 6.9cm</p>
-                                    <p>Perimeter = 5.4 + 8.7 + 6.9 = 21.0cm</p>
-                                    
-                                    <h4>Same example using mm:</h4>
-                                    <p>5cm 4mm = 54mm</p>
-                                    <p>8cm 7mm = 87mm</p>
-                                    <p>6cm 9mm = 69mm</p>
-                                    <p>Perimeter = 54 + 87 + 69 = 210mm</p>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Applications Section -->
-                        <section id="applications" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-calculator"></i> Applications
-                            </h2>
-                            
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                    <i class="fas fa-ruler"></i> Applying the Formula
                                 </h3>
                                 <p>
-                                    Calculating perimeter with mixed units is useful in many real-world situations:
+                                    Examples of using the formula with different triangles:
                                 </p>
                                 
                                 <div class="key-points">
                                     <div class="point">
-                                        <h4>Fencing a Field</h4>
-                                        <p>A field measures 150m 75cm by 200m 50cm. How much fencing is needed?</p>
+                                        <h4>Right Triangle</h4>
                                         <div class="math-example">
-                                            <p>Convert all to cm:</p>
-                                            <p>150m 75cm = 15,075cm</p>
-                                            <p>200m 50cm = 20,050cm</p>
-                                            <p>Perimeter = 2 × (15,075 + 20,050) = 70,250cm (or 702.5m)</p>
+                                            <p>Base = 6 units, Height = 4 units</p>
+                                            \[ A = \frac{1}{2} \times 6 \times 4 = 12 \text{ units}^2 \]
                                         </div>
                                     </div>
                                     
                                     <div class="point">
-                                        <h4>Picture Frame</h4>
-                                        <p>A picture frame has sides 45cm 5mm and 30cm 8mm. What's the total length of framing material?</p>
+                                        <h4>Acute Triangle</h4>
                                         <div class="math-example">
-                                            <p>Convert all to mm:</p>
-                                            <p>45cm 5mm = 455mm</p>
-                                            <p>30cm 8mm = 308mm</p>
-                                            <p>Perimeter = 2 × (455 + 308) = 1,526mm (or 152.6cm)</p>
+                                            <p>Base = 8 units, Height = 5 units</p>
+                                            \[ A = \frac{1}{2} \times 8 \times 5 = 20 \text{ units}^2 \]
                                         </div>
                                     </div>
                                     
                                     <div class="point">
-                                        <h4>Running Track</h4>
-                                        <p>A rectangular track is 0.5km 250m long and 0.3km 175m wide. What distance is one lap?</p>
+                                        <h4>Obtuse Triangle</h4>
                                         <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>0.5km 250m = 750m</p>
-                                            <p>0.3km 175m = 475m</p>
-                                            <p>Perimeter = 2 × (750 + 475) = 2,450m (or 2.45km)</p>
+                                            <p>Base = 10 units, Height = 3 units</p>
+                                            \[ A = \frac{1}{2} \times 10 \times 3 = 15 \text{ units}^2 \]
                                         </div>
                                     </div>
                                 </div>
@@ -387,73 +408,56 @@
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
-                                    <p>Find the perimeter of a rectangle with sides 2km 300m and 1km 750m (give answer in meters)</p>
+                                    <p>How many unit squares are in a right triangle that fits exactly in a 4×3 rectangle?</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>2km 300m = 2,300m</p>
-                                        <p>1km 750m = 1,750m</p>
-                                        <p>Perimeter = 2 × (2,300 + 1,750) = 8,100m</p>
+                                        <p>The rectangle has 12 unit squares (4×3). The triangle covers half: 6 unit squares.</p>
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 2</h3>
-                                    <p>Calculate the perimeter of a triangle with sides 1m 25cm, 2m 50cm, and 1m 75cm (give answer in meters)</p>
+                                    <p>Find the area of a triangle with base 10cm and height 8cm.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>1m 25cm = 1.25m</p>
-                                        <p>2m 50cm = 2.50m</p>
-                                        <p>1m 75cm = 1.75m</p>
-                                        <p>Perimeter = 1.25 + 2.50 + 1.75 = 5.50m</p>
+                                        \[ A = \frac{1}{2} \times 10 \times 8 = 40 \text{ cm}^2 \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 3</h3>
-                                    <p>A square has sides of 15cm 8mm. What is its perimeter in centimeters?</p>
+                                    <p>If a parallelogram has area 24m², what's the area of one of its triangular halves?</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to cm:</p>
-                                        <p>15cm 8mm = 15.8cm</p>
-                                        <p>Perimeter = 4 × 15.8 = 63.2cm</p>
+                                        \[ \text{Area of triangle} = \frac{24}{2} = 12 \text{ m}^2 \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 4</h3>
-                                    <p>Find the perimeter of a rectangle 3.5km 250m by 2km 750m (answer in km)</p>
+                                    <p>A triangle has the same base and height as a 7×5 rectangle. Find its area.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to km:</p>
-                                        <p>3.5km 250m = 3.5 + 0.250 = 3.750km</p>
-                                        <p>2km 750m = 2 + 0.750 = 2.750km</p>
-                                        <p>Perimeter = 2 × (3.750 + 2.750) = 13.000km</p>
+                                        <p>Rectangle area = 7×5 = 35. Triangle area = 35/2 = 17.5 units²</p>
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 5</h3>
-                                    <p>A pentagon has sides measuring 25cm 4mm each. What is its perimeter in millimeters?</p>
+                                    <p>Draw a right triangle with legs 3 and 4 units. How many unit squares does it contain?</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to mm:</p>
-                                        <p>25cm 4mm = 254mm</p>
-                                        <p>Perimeter = 5 × 254 = 1,270mm</p>
+                                        <p>The triangle forms half of a 3×4 rectangle. It contains 6 unit squares.</p>
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 6</h3>
-                                    <p>A triangular garden has sides 4m 50cm, 3m 75cm, and 5m 25cm. How much fencing is needed (answer in meters)?</p>
+                                    <p>What's the base of a triangle with area 18cm² and height 6cm?</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>4m 50cm = 4.50m</p>
-                                        <p>3m 75cm = 3.75m</p>
-                                        <p>5m 25cm = 5.25m</p>
-                                        <p>Perimeter = 4.50 + 3.75 + 5.25 = 13.50m</p>
+                                        \[ 18 = \frac{1}{2} \times b \times 6 \]
+                                        \[ b = \frac{18 \times 2}{6} = 6 \text{ cm} \]
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +482,7 @@
                                     <h4>
                                         <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
                                     </h4>
-                                    <p class="game-description">Test your skills with perimeter calculations using mixed units</p>
+                                    <p class="game-description">Test your skills with triangle areas and relationships</p>
                                 </div>
                                 
                                 <div class="game-card">

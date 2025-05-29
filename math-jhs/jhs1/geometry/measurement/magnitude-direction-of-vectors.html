@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO and Social Meta Tags -->
-        <title>Perimeter with Mixed Units | JHS Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Learn how to calculate perimeter when dimensions are given in different units like km and m, m and cm, or cm and mm.">
+        <title>Vectors in Component Form | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to represent vectors in column (component) form and determine their magnitude and direction.">
         
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
@@ -15,10 +15,10 @@
         <link rel="manifest" href="../../../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Perimeter with Mixed Units | JHS Mathematics">
-        <meta property="og:description" content="Learn to calculate perimeter when dimensions are in different units.">
+        <meta property="og:title" content="Vectors in Component Form | JHS Mathematics">
+        <meta property="og:description" content="Learn to represent vectors in column form and calculate magnitude and direction.">
         <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/perimeter">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/vectors">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -85,7 +85,7 @@
                         </a>
                     </div>
                     
-                    <h1 class="lesson-title">Perimeter with Mixed Units</h1>
+                    <h1 class="lesson-title">Vectors in Component Form</h1>
                     
                     <nav class="main-nav">
                         <ul class="nav-list">
@@ -112,17 +112,16 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">JHS: Measurement</h3>
+                            <h3 class="sidebar-title">JHS: Vectors</h3>
                             <div class="current-topic">
-                                <i class="fas fa-ruler-combined"></i>
-                                <span>Perimeter with Mixed Units</span>
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Component Form</span>
                             </div>
                             <ul class="topic-menu">
                                 <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
-                                <li><a href="#km-m"><i class="fas fa-chevron-right"></i> km and m</a></li>
-                                <li><a href="#m-cm"><i class="fas fa-chevron-right"></i> m and cm</a></li>
-                                <li><a href="#cm-mm"><i class="fas fa-chevron-right"></i> cm and mm</a></li>
-                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                                <li><a href="#component-form"><i class="fas fa-chevron-right"></i> Component Form</a></li>
+                                <li><a href="#magnitude"><i class="fas fa-chevron-right"></i> Magnitude</a></li>
+                                <li><a href="#direction"><i class="fas fa-chevron-right"></i> Direction</a></li>
                             </ul>
                             
                             <div class="level-buttons">
@@ -153,227 +152,200 @@
                             <i class="fas fa-chevron-right"></i>
                             <a href="../../../../math-jhs">JHS</a>
                             <i class="fas fa-chevron-right"></i>
-                            <span>Perimeter_Mixed_Units</span>
+                            <span>Vectors</span>
                         </nav>
 
                         <!-- Introduction Section -->
                         <section id="introduction" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-book-open"></i> Introduction
+                                <i class="fas fa-book-open"></i> Introduction to Vectors
                             </h2>
                             
                             <div class="concept-box">
                                 <p>
-                                    Perimeter is the total distance around a shape. When calculating perimeter, all sides must be in the same unit. This lesson will teach you how to handle shapes with sides measured in different units.
+                                    A vector is a quantity that has both magnitude (size) and direction. Unlike scalars which only have magnitude, vectors tell us both how much and which way.
                                 </p>
                                 
                                 <div class="math-example">
-                                    \[ \text{Perimeter} = \text{Sum of all sides of the shape} \]
-                                </div>
-                            </div>
-                            
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-asterisk"></i> Key Concepts
-                                </h3>
-                                <p>
-                                    There are two main approaches when dealing with mixed units:
-                                </p>
-                                <ul>
-                                    <li><strong>Convert to smaller unit</strong>: Change all measurements to the smaller unit before adding</li>
-                                    <li><strong>Convert to decimal</strong>: Change the smaller unit to a decimal fraction of the larger unit</li>
-                                </ul>
-                                <div class="math-example">
-                                    <p>Example: 2m 50cm can be:</p>
+                                    <p>Examples of vector quantities:</p>
                                     <ul>
-                                        <li>200cm + 50cm = 250cm (smaller unit)</li>
-                                        <li>2m + 0.5m = 2.5m (decimal fraction)</li>
+                                        <li>Displacement (5 km northeast)</li>
+                                        <li>Velocity (60 km/h due west)</li>
+                                        <li>Force (10 N at 30° above horizontal)</li>
                                     </ul>
                                 </div>
                             </div>
-                        </section>
-                        
-                        <!-- km and m Section -->
-                        <section id="km-m" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-road"></i> km and m
-                            </h2>
-
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-exchange-alt"></i> Converting km to m
-                                </h3>
-                                <p>
-                                    To convert kilometers to meters:
-                                </p>
-                                <ol>
-                                    <li>Remember that 1 km = 1000 m</li>
-                                    <li>Multiply the km value by 1000</li>
-                                    <li>Add the remaining meters</li>
-                                </ol>
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Example 1: Rectangle 3km 200m by 2km 500m</h4>
-                                        <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>3km 200m = (3 × 1000) + 200 = 3200m</p>
-                                            <p>2km 500m = (2 × 1000) + 500 = 2500m</p>
-                                            <p>Perimeter = 2 × (length + width)</p>
-                                            <p>= 2 × (3200 + 2500) = 2 × 5700 = 11,400m</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="point">
-                                        <h4>Example 2: Triangle 0.5km 300m, 0.8km 150m, 1km 50m</h4>
-                                        <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>0.5km 300m = (0.5 × 1000) + 300 = 800m</p>
-                                            <p>0.8km 150m = (0.8 × 1000) + 150 = 950m</p>
-                                            <p>1km 50m = (1 × 1000) + 50 = 1050m</p>
-                                            <p>Perimeter = 800 + 950 + 1050 = 2800m</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- m and cm Section -->
-                        <section id="m-cm" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-ruler"></i> m and cm
-                            </h2>
                             
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-divide"></i> Converting cm to m (Decimal)
+                                    <i class="fas fa-asterisk"></i> Representing Vectors
                                 </h3>
                                 <p>
-                                    To convert centimeters to meters as a decimal:
+                                    Vectors can be represented in several ways:
                                 </p>
                                 <ol>
-                                    <li>Remember that 1m = 100cm</li>
-                                    <li>Divide cm by 100 to get decimal meters</li>
-                                    <li>Add to the existing meters</li>
+                                    <li><strong>Graphically</strong>: As an arrow where length represents magnitude and direction is shown by the arrow</li>
+                                    <li><strong>In words</strong>: "5 units at 30 degrees from the x-axis"</li>
+                                    <li><strong>Component form</strong>: \(\begin{pmatrix} x \\ y \end{pmatrix}\) where x and y are horizontal and vertical components</li>
                                 </ol>
                                 <div class="math-example">
-                                    <p>Example 1: 1m 75cm = 1m + (75 ÷ 100)m = 1.75m</p>
-                                    <p>Example 2: 2m 5cm = 2m + (5 ÷ 100)m = 2.05m</p>
-                                </div>
-                            </div>
-                            
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-shapes"></i> Calculating Perimeter
-                                </h3>
-                                <div class="math-example">
-                                    <h4>Example: Rectangle 4m 25cm by 3m 80cm</h4>
-                                    <p>Method 1: Convert all to meters</p>
-                                    <p>4m 25cm = 4.25m</p>
-                                    <p>3m 80cm = 3.80m</p>
-                                    <p>Perimeter = 2 × (4.25 + 3.80) = 2 × 8.05 = 16.10m</p>
-                                    
-                                    <h4>Same example using cm:</h4>
-                                    <p>4m 25cm = 425cm</p>
-                                    <p>3m 80cm = 380cm</p>
-                                    <p>Perimeter = 2 × (425 + 380) = 2 × 805 = 1610cm</p>
+                                    <p>Example: A vector with horizontal component 3 and vertical component 4:</p>
+                                    \[ \vec{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix} \]
                                 </div>
                             </div>
                         </section>
-
-                        <!-- cm and mm Section -->
-                        <section id="cm-mm" class="lesson-section">
+                        
+                        <!-- Component Form Section -->
+                        <section id="component-form" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-ruler-vertical"></i> cm and mm
+                                <i class="fas fa-exchange-alt"></i> Component Form of Vectors
                             </h2>
-                            
+
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-exchange-alt"></i> Converting mm to cm (Decimal)
+                                    <i class="fas fa-percentage"></i> Column Vector Representation
                                 </h3>
                                 <p>
-                                    To convert millimeters to centimeters as a decimal:
+                                    The component form represents a vector as a column of numbers showing its horizontal (x) and vertical (y) components:
                                 </p>
-                                <ol>
-                                    <li>Remember that 1cm = 10mm</li>
-                                    <li>Divide mm by 10 to get decimal cm</li>
-                                    <li>Add to the existing cm</li>
-                                </ol>
                                 <div class="math-example">
-                                    <p>Example 1: 7cm 5mm = 7cm + (5 ÷ 10)cm = 7.5cm</p>
-                                    <p>Example 2: 12cm 8mm = 12cm + (8 ÷ 10)cm = 12.8cm</p>
+                                    \[ \vec{v} = \begin{pmatrix} x \\ y \end{pmatrix} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: \(\begin{pmatrix} 2 \\ 3 \end{pmatrix}\)</h4>
+                                        <p>This vector moves 2 units right (positive x) and 3 units up (positive y)</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: \(\begin{pmatrix} -1 \\ 4 \end{pmatrix}\)</h4>
+                                        <p>This vector moves 1 unit left (negative x) and 4 units up (positive y)</p>
+                                    </div>
                                 </div>
                             </div>
                             
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-calculator"></i> Calculating Perimeter
+                                    <i class="fas fa-divide"></i> Drawing Vectors from Components
                                 </h3>
+                                <p>
+                                    To draw a vector given in component form:
+                                </p>
+                                <ol>
+                                    <li>Start at the origin (0,0)</li>
+                                    <li>Move horizontally by the x-component</li>
+                                    <li>From there, move vertically by the y-component</li>
+                                    <li>Draw an arrow from origin to the final point</li>
+                                </ol>
                                 <div class="math-example">
-                                    <h4>Example: Triangle with sides 5cm 4mm, 8cm 7mm, 6cm 9mm</h4>
-                                    <p>Convert all to cm:</p>
-                                    <p>5cm 4mm = 5.4cm</p>
-                                    <p>8cm 7mm = 8.7cm</p>
-                                    <p>6cm 9mm = 6.9cm</p>
-                                    <p>Perimeter = 5.4 + 8.7 + 6.9 = 21.0cm</p>
-                                    
-                                    <h4>Same example using mm:</h4>
-                                    <p>5cm 4mm = 54mm</p>
-                                    <p>8cm 7mm = 87mm</p>
-                                    <p>6cm 9mm = 69mm</p>
-                                    <p>Perimeter = 54 + 87 + 69 = 210mm</p>
+                                    <p>Example: Drawing \(\begin{pmatrix} 3 \\ -2 \end{pmatrix}\):</p>
+                                    <ol>
+                                        <li>Start at (0,0)</li>
+                                        <li>Move 3 units right</li>
+                                        <li>From there, move 2 units down</li>
+                                        <li>Draw arrow from (0,0) to (3,-2)</li>
+                                    </ol>
                                 </div>
                             </div>
                         </section>
 
-                        <!-- Applications Section -->
-                        <section id="applications" class="lesson-section">
+                        <!-- Magnitude Section -->
+                        <section id="magnitude" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-calculator"></i> Applications
+                                <i class="fas fa-ruler"></i> Magnitude of Vectors
                             </h2>
                             
                             <div class="concept-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                    <i class="fas fa-ruler"></i> Calculating Magnitude
                                 </h3>
                                 <p>
-                                    Calculating perimeter with mixed units is useful in many real-world situations:
+                                    The magnitude (length) of a vector \(\begin{pmatrix} x \\ y \end{pmatrix}\) is calculated using the Pythagorean theorem:
                                 </p>
+                                <div class="math-example">
+                                    \[ \text{Magnitude} = \sqrt{x^2 + y^2} \]
+                                </div>
                                 
                                 <div class="key-points">
                                     <div class="point">
-                                        <h4>Fencing a Field</h4>
-                                        <p>A field measures 150m 75cm by 200m 50cm. How much fencing is needed?</p>
+                                        <h4>Example 1: Find magnitude of \(\begin{pmatrix} 3 \\ 4 \end{pmatrix}\)</h4>
                                         <div class="math-example">
-                                            <p>Convert all to cm:</p>
-                                            <p>150m 75cm = 15,075cm</p>
-                                            <p>200m 50cm = 20,050cm</p>
-                                            <p>Perimeter = 2 × (15,075 + 20,050) = 70,250cm (or 702.5m)</p>
+                                            \[ \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5 \]
                                         </div>
                                     </div>
                                     
                                     <div class="point">
-                                        <h4>Picture Frame</h4>
-                                        <p>A picture frame has sides 45cm 5mm and 30cm 8mm. What's the total length of framing material?</p>
+                                        <h4>Example 2: Find magnitude of \(\begin{pmatrix} -6 \\ 8 \end{pmatrix}\)</h4>
                                         <div class="math-example">
-                                            <p>Convert all to mm:</p>
-                                            <p>45cm 5mm = 455mm</p>
-                                            <p>30cm 8mm = 308mm</p>
-                                            <p>Perimeter = 2 × (455 + 308) = 1,526mm (or 152.6cm)</p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="point">
-                                        <h4>Running Track</h4>
-                                        <p>A rectangular track is 0.5km 250m long and 0.3km 175m wide. What distance is one lap?</p>
-                                        <div class="math-example">
-                                            <p>Convert all to meters:</p>
-                                            <p>0.5km 250m = 750m</p>
-                                            <p>0.3km 175m = 475m</p>
-                                            <p>Perimeter = 2 × (750 + 475) = 2,450m (or 2.45km)</p>
+                                            \[ \sqrt{(-6)^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10 \]
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-sort-amount-up"></i> Properties of Magnitude
+                                </h3>
+                                <ul>
+                                    <li>Magnitude is always positive or zero</li>
+                                    <li>The zero vector \(\begin{pmatrix} 0 \\ 0 \end{pmatrix}\) has magnitude 0</li>
+                                    <li>Multiplying a vector by a scalar k multiplies its magnitude by |k|</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Direction Section -->
+                        <section id="direction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-compass"></i> Direction of Vectors
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-angle-right"></i> Calculating Direction Angle
+                                </h3>
+                                <p>
+                                    The direction of a vector is the angle θ it makes with the positive x-axis, measured counterclockwise:
+                                </p>
+                                <div class="math-example">
+                                    \[ \theta = \tan^{-1}\left(\frac{y}{x}\right) \]
+                                </div>
+                                <p>Note: You must consider the signs of x and y to determine the correct quadrant.</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Find direction of \(\begin{pmatrix} 1 \\ 1 \end{pmatrix}\)</h4>
+                                        <div class="math-example">
+                                            \[ \theta = \tan^{-1}\left(\frac{1}{1}\right) = 45° \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Find direction of \(\begin{pmatrix} -1 \\ \sqrt{3} \end{pmatrix}\)</h4>
+                                        <div class="math-example">
+                                            <p>First find reference angle: \(\tan^{-1}\left(\frac{\sqrt{3}}{1}\right) = 60°\)</p>
+                                            <p>Since x is negative and y is positive, the angle is in Quadrant II:</p>
+                                            \[ \theta = 180° - 60° = 120° \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-cut"></i> Direction in Different Quadrants
+                                </h3>
+                                <p>
+                                    The direction angle depends on the quadrant:
+                                </p>
+                                <ul>
+                                    <li><strong>Quadrant I</strong> (x>0, y>0): θ = tan⁻¹(y/x)</li>
+                                    <li><strong>Quadrant II</strong> (x<0, y>0): θ = 180° - reference angle</li>
+                                    <li><strong>Quadrant III</strong> (x<0, y<0): θ = 180° + reference angle</li>
+                                    <li><strong>Quadrant IV</strong> (x>0, y<0): θ = 360° - reference angle</li>
+                                </ul>
                             </div>
                         </section>
 
@@ -387,73 +359,62 @@
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
-                                    <p>Find the perimeter of a rectangle with sides 2km 300m and 1km 750m (give answer in meters)</p>
+                                    <p>Represent the vector with horizontal component 5 and vertical component -2 in column form</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>2km 300m = 2,300m</p>
-                                        <p>1km 750m = 1,750m</p>
-                                        <p>Perimeter = 2 × (2,300 + 1,750) = 8,100m</p>
+                                        \[ \begin{pmatrix} 5 \\ -2 \end{pmatrix} \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 2</h3>
-                                    <p>Calculate the perimeter of a triangle with sides 1m 25cm, 2m 50cm, and 1m 75cm (give answer in meters)</p>
+                                    <p>Find the magnitude of \(\begin{pmatrix} -3 \\ -4 \end{pmatrix}\)</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>1m 25cm = 1.25m</p>
-                                        <p>2m 50cm = 2.50m</p>
-                                        <p>1m 75cm = 1.75m</p>
-                                        <p>Perimeter = 1.25 + 2.50 + 1.75 = 5.50m</p>
+                                        \[ \sqrt{(-3)^2 + (-4)^2} = \sqrt{9 + 16} = \sqrt{25} = 5 \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 3</h3>
-                                    <p>A square has sides of 15cm 8mm. What is its perimeter in centimeters?</p>
+                                    <p>Find the direction of \(\begin{pmatrix} 0 \\ 5 \end{pmatrix}\)</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to cm:</p>
-                                        <p>15cm 8mm = 15.8cm</p>
-                                        <p>Perimeter = 4 × 15.8 = 63.2cm</p>
+                                        <p>This points straight up along the y-axis:</p>
+                                        \[ 90° \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 4</h3>
-                                    <p>Find the perimeter of a rectangle 3.5km 250m by 2km 750m (answer in km)</p>
+                                    <p>A vector has magnitude 10 and direction 30° from the x-axis. Find its x and y components</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to km:</p>
-                                        <p>3.5km 250m = 3.5 + 0.250 = 3.750km</p>
-                                        <p>2km 750m = 2 + 0.750 = 2.750km</p>
-                                        <p>Perimeter = 2 × (3.750 + 2.750) = 13.000km</p>
+                                        \[ x = 10\cos(30°) \approx 8.66 \]
+                                        \[ y = 10\sin(30°) = 5 \]
+                                        \[ \begin{pmatrix} 8.66 \\ 5 \end{pmatrix} \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 5</h3>
-                                    <p>A pentagon has sides measuring 25cm 4mm each. What is its perimeter in millimeters?</p>
+                                    <p>Find the magnitude and direction of \(\begin{pmatrix} -2 \\ 2\sqrt{3} \end{pmatrix}\)</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to mm:</p>
-                                        <p>25cm 4mm = 254mm</p>
-                                        <p>Perimeter = 5 × 254 = 1,270mm</p>
+                                        <p>Magnitude:</p>
+                                        \[ \sqrt{(-2)^2 + (2\sqrt{3})^2} = \sqrt{4 + 12} = \sqrt{16} = 4 \]
+                                        <p>Direction (Quadrant II):</p>
+                                        \[ \theta = 180° - \tan^{-1}\left(\frac{2\sqrt{3}}{2}\right) = 180° - 60° = 120° \]
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Question 6</h3>
-                                    <p>A triangular garden has sides 4m 50cm, 3m 75cm, and 5m 25cm. How much fencing is needed (answer in meters)?</p>
+                                    <p>If vector \(\vec{a} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}\) and \(\vec{b} = \begin{pmatrix} -1 \\ 2 \end{pmatrix}\), find \(2\vec{a} - \vec{b}\)</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Convert to meters:</p>
-                                        <p>4m 50cm = 4.50m</p>
-                                        <p>3m 75cm = 3.75m</p>
-                                        <p>5m 25cm = 5.25m</p>
-                                        <p>Perimeter = 4.50 + 3.75 + 5.25 = 13.50m</p>
+                                        \[ 2\vec{a} = \begin{pmatrix} 6 \\ 8 \end{pmatrix} \]
+                                        \[ 2\vec{a} - \vec{b} = \begin{pmatrix} 6 - (-1) \\ 8 - 2 \end{pmatrix} = \begin{pmatrix} 7 \\ 6 \end{pmatrix} \]
                                     </div>
                                 </div>
                             </div>
@@ -478,7 +439,7 @@
                                     <h4>
                                         <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
                                     </h4>
-                                    <p class="game-description">Test your skills with perimeter calculations using mixed units</p>
+                                    <p class="game-description">Test your skills with vectors in component form, magnitude, and direction</p>
                                 </div>
                                 
                                 <div class="game-card">
