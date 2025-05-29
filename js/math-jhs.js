@@ -438,14 +438,14 @@ document.addEventListener("DOMContentLoaded", function() {
             ],
             "Position and Transformation": [
                 { name: "Reflectional Symmetry", url: "./math-jhs/jhs1/geometry/position-and-transformation/reflectional-symmetry" },
-                { name: "Reflection In A Given Line", url: "./math-jhs/jhs1/geometry/position-and-transformation/reflection-in-a-given-line.html" },
-                { name: "Translation By A Given Vector", url: "./math-jhs/jhs1/geometry/position-and-transformation/translation-by-a-vector.html" },
-                { name: "Congruent And Similar Shapes", url: "./math-jhs/jhs1/geometry/position-and-transformation/congruence.html" }
+                { name: "Reflection In A Given Line", url: "./math-jhs/jhs1/geometry/position-and-transformation/reflection-in-a-given-line" },
+                { name: "Translation By A Given Vector", url: "./math-jhs/jhs1/geometry/position-and-transformation/translation-by-a-vector" },
+                { name: "Congruent And Similar Shapes", url: "./math-jhs/jhs1/geometry/position-and-transformation/congruence" }
             ],
             "Data": [
-                { name: "Methods Of Collecting Data", url: "./math-jhs/jhs1/handling-data/data/method-of-collecting-data.html" },
-                { name: "Designing Question Forms", url: "./math-jhs/jhs1/handling-data/data/designing-question-forms.html" },
-                { name: "Organising And Presenting Data", url: "./math-jhs/jhs1/handling-data/data/organising-and-presenting-data.html" },
+                { name: "Methods Of Collecting Data", url: "./math-jhs/jhs1/handling-data/data/method-of-collecting-data" },
+                { name: "Designing Question Forms", url: "./math-jhs/jhs1/handling-data/data/designing-question-forms" },
+                { name: "Organising And Presenting Data", url: "./math-jhs/jhs1/handling-data/data/organising-and-presenting-data" },
                 { name: "Mean Of Ungrouped Data", url: "./math-jhs/jhs1/handling-data/data/mean-of-ungrouped-data.html" },
                 { name: "Median Of Ungrouped Data", url: "./math-jhs/jhs1/handling-data/data/median-of-ungrouped-data.html" }
             ],

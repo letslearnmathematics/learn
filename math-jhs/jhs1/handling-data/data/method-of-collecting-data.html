@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Data Collection Methods | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to select and justify methods for collecting quantitative and qualitative data.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Data Collection Methods | JHS Mathematics">
+        <meta property="og:description" content="Learn to select and justify methods for collecting data.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/data-collection">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!--Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Data Collection Methods</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Statistics</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Data Collection</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#group-discussion"><i class="fas fa-chevron-right"></i> Group Discussion</a></li>
+                                <li><a href="#methods"><i class="fas fa-chevron-right"></i> Collection Methods</a></li>
+                                <li><a href="#practice"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Data_Collection</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Data collection is the process of gathering information to answer questions or solve problems. There are two main types of data:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Quantitative Data</h4>
+                                        <p>Numerical data that can be measured or counted.</p>
+                                        <div class="math-example">
+                                            Examples: Height, weight, test scores, number of students
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Qualitative Data</h4>
+                                        <p>Descriptive data about qualities or characteristics.</p>
+                                        <div class="math-example">
+                                            Examples: Favorite color, opinions, feelings, preferences
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Why Data Collection Matters
+                                </h3>
+                                <p>
+                                    Collecting good data helps us:
+                                </p>
+                                <ul>
+                                    <li>Make informed decisions</li>
+                                    <li>Solve problems effectively</li>
+                                    <li>Understand patterns and trends</li>
+                                    <li>Support arguments with evidence</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Group Discussion Section -->
+                        <section id="group-discussion" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-users"></i> Group Discussion Activity
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Discussion Scenarios
+                                </h3>
+                                <p>
+                                    In small groups, discuss and write down how you would make decisions in these situations, what facts you would consider, and how you would collect these facts:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>1. The type of drinks to buy for a class party</h4>
+                                        <p>Consider: Popular preferences, budget, quantity needed</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>2. The make of football boots to buy for the school team</h4>
+                                        <p>Consider: Player preferences, durability, cost, brand reputation</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>3. Do people who eat more fufu develop pot belly?</h4>
+                                        <p>Consider: Dietary habits, exercise routines, body measurements</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>4. The number of desks in each classroom</h4>
+                                        <p>Consider: Class sizes, room dimensions, current inventory</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>5. The amount of money B6 students spend on bus fare to school every month</h4>
+                                        <p>Consider: Distance traveled, fare rates, frequency of travel</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>6. Buying a mobile phone from an online shop</h4>
+                                        <p>Consider: Features needed, budget, customer reviews, return policies</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Methods Section -->
+                        <section id="methods" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-bar"></i> Data Collection Methods
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question-circle"></i> Common Methods
+                                </h3>
+                                <p>
+                                    Different situations require different data collection methods. Here are the main methods:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Questionnaires</h4>
+                                        <p>Written questions for many people to answer.</p>
+                                        <div class="math-example">
+                                            Best for: Gathering opinions from many people quickly
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Interviews</h4>
+                                        <p>Face-to-face or phone conversations with people.</p>
+                                        <div class="math-example">
+                                            Best for: Detailed personal information
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Observation</h4>
+                                        <p>Watching and recording what happens.</p>
+                                        <div class="math-example">
+                                            Best for: Studying behavior in natural settings
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Experiments</h4>
+                                        <p>Testing ideas under controlled conditions.</p>
+                                        <div class="math-example">
+                                            Best for: Determining cause-and-effect relationships
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Surveys</h4>
+                                        <p>Combination of questionnaires and interviews.</p>
+                                        <div class="math-example">
+                                            Best for: Gathering both quantitative and qualitative data
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Databases</h4>
+                                        <p>Using existing records and information.</p>
+                                        <div class="math-example">
+                                            Best for: Historical or large-scale data
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Electronic Media/Internet</h4>
+                                        <p>Using online sources and digital tools.</p>
+                                        <div class="math-example">
+                                            Best for: Quick access to wide-ranging information
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-check-circle"></i> Matching Methods to Scenarios
+                                </h3>
+                                <p>
+                                    Now let's match the best data collection method to each of our earlier scenarios:
+                                </p>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Scenario</th>
+                                            <th>Best Method(s)</th>
+                                            <th>Reason</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Type of drinks for party</td>
+                                            <td>Questionnaire/Survey</td>
+                                            <td>Quickly gather preferences from many classmates</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Football boots for team</td>
+                                            <td>Interview/Observation</td>
+                                            <td>Get detailed input from players and observe current boots</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fufu and pot belly</td>
+                                            <td>Experiment/Survey</td>
+                                            <td>Need to measure eating habits and body changes</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of desks</td>
+                                            <td>Observation/Database</td>
+                                            <td>Count existing desks and check school records</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Bus fare spending</td>
+                                            <td>Questionnaire/Database</td>
+                                            <td>Survey students and check transport company records</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Buying mobile phone</td>
+                                            <td>Electronic Media</td>
+                                            <td>Research online reviews and specifications</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Choosing the Right Method
+                                </h3>
+                                <p>
+                                    When selecting a data collection method, consider:
+                                </p>
+                                <ol>
+                                    <li><strong>Purpose</strong>: What question are you trying to answer?</li>
+                                    <li><strong>Resources</strong>: What time, money, and tools do you have?</li>
+                                    <li><strong>Accuracy</strong>: How precise does the data need to be?</li>
+                                    <li><strong>Subjects</strong>: Who or what are you collecting data about?</li>
+                                    <li><strong>Ethics</strong>: Is the method respectful and fair?</li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section id="practice" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-pen-fancy"></i> Practice Exercise
+                            </h2>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Your school wants to know students' favorite subjects. Which data collection method would be most appropriate?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Questionnaire or survey - can efficiently gather preferences from many students.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A scientist wants to test if a new fertilizer helps plants grow faster. Which method should they use?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Experiment - need to control conditions and measure growth differences.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>You want to know how many cars pass your school between 7-8am each morning. What method would work best?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Observation - need to directly count the cars during that time period.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A company wants detailed feedback about their new product from customers. Which method should they choose?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Interviews - allow for in-depth, personalized responses.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>You need to find the average rainfall in your region over the past 10 years. Where would you get this data?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Database - meteorological records would have this historical data.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>For each scenario below, identify whether quantitative or qualitative data would be more appropriate:</p>
+                                    <ol type="a">
+                                        <li>Measuring student heights</li>
+                                        <li>Recording favorite music genres</li>
+                                        <li>Counting absent students each day</li>
+                                        <li>Describing classroom atmosphere</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <ol type="a">
+                                            <li>Quantitative (numerical measurements)</li>
+                                            <li>Qualitative (categories/preferences)</li>
+                                            <li>Quantitative (countable numbers)</li>
+                                            <li>Qualitative (descriptive qualities)</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Data Collection Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 3 Levels
+                                    </h4>
+                                    <p class="game-description">Test your knowledge of data collection methods</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 10 questions. Need 8 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+            
+            // Simple game logic for data collection challenge
+            document.addEventListener('DOMContentLoaded', function() {
+                const gameContainer = document.getElementById('game-container');
+                
+                if (gameContainer) {
+                    // Sample questions for the game
+                    const questions = [
+                        {
+                            question: "Which method would you use to find out students' favorite lunch food?",
+                            options: ["Experiment", "Questionnaire", "Observation", "Database"],
+                            answer: 1
+                        },
+                        {
+                            question: "What type of data is 'student height measurements'?",
+                            options: ["Qualitative", "Quantitative", "Both", "Neither"],
+                            answer: 1
+                        },
+                        {
+                            question: "To test if a new teaching method improves test scores, you would use:",
+                            options: ["Survey", "Interview", "Experiment", "Observation"],
+                            answer: 2
+                        },
+                        {
+                            question: "Which is NOT a quantitative data collection method?",
+                            options: ["Counting", "Measuring", "Describing feelings", "Calculating averages"],
+                            answer: 2
+                        },
+                        {
+                            question: "To learn about historical weather patterns, you would use:",
+                            options: ["Database", "Questionnaire", "Interview", "Experiment"],
+                            answer: 0
+                        }
+                    ];
+                    
+                    // Simple game implementation
+                    let currentQuestion = 0;
+                    let score = 0;
+                    
+                    function showQuestion() {
+                        if (currentQuestion >= questions.length) {
+                            gameContainer.innerHTML = `
+                                <div class="game-screen">
+                                    <h3>Game Complete!</h3>
+                                    <p>Your score: ${score}/${questions.length}</p>
+                                    <button onclick="location.reload()">Play Again</button>
+                                </div>
+                            `;
+                            return;
+                        }
+                        
+                        const q = questions[currentQuestion];
+                        gameContainer.innerHTML = `
+                            <div class="game-screen">
+                                <h3>Question ${currentQuestion + 1}</h3>
+                                <p>${q.question}</p>
+                                <div class="game-options">
+                                    ${q.options.map((opt, index) => `
+                                        <button onclick="checkAnswer(${index})">${opt}</button>
+                                    `).join('')}
+                                </div>
+                                <p>Score: ${score}</p>
+                            </div>
+                        `;
+                    }
+                    
+                    window.checkAnswer = function(selected) {
+                        if (selected === questions[currentQuestion].answer) {
+                            score++;
+                        }
+                        currentQuestion++;
+                        showQuestion();
+                    }
+                    
+                    showQuestion();
+                }
+            });
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Congruent and Similar Shapes | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to identify and verify congruent and similar shapes in the coordinate plane and real-world situations.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Congruent and Similar Shapes | JHS Mathematics">
+        <meta property="og:description" content="Learn to identify and verify congruent and similar shapes in coordinate geometry and real-world applications.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/geometry/congruent-similar-shapes">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Congruent and Similar Shapes</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Congruent & Similar Shapes</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#congruent"><i class="fas fa-chevron-right"></i> Congruent Shapes</a></li>
+                                <li><a href="#similar"><i class="fas fa-chevron-right"></i> Similar Shapes</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Real-life Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Congruent_Similar_Shapes</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    In geometry, shapes can be congruent or similar. These concepts help us understand how shapes relate to each other in size and shape.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Congruent shapes</strong> are identical in size and shape.</p>
+                                    <p><strong>Similar shapes</strong> have the same shape but different sizes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Key Differences
+                                </h3>
+                                <table class="fraction-table">
+                                    <tr>
+                                        <th>Property</th>
+                                        <th>Congruent Shapes</th>
+                                        <th>Similar Shapes</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Size</td>
+                                        <td>Same</td>
+                                        <td>Different</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shape</td>
+                                        <td>Same</td>
+                                        <td>Same</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Angles</td>
+                                        <td>Equal</td>
+                                        <td>Equal</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Sides</td>
+                                        <td>Equal length</td>
+                                        <td>Proportional length</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+                        
+                        <!-- Congruent Shapes Section -->
+                        <section id="congruent" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Congruent Shapes
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-equals"></i> Properties of Congruent Shapes
+                                </h3>
+                                <p>
+                                    Two shapes are congruent if:
+                                </p>
+                                <ol>
+                                    <li>All corresponding sides are equal in length</li>
+                                    <li>All corresponding angles are equal in measure</li>
+                                    <li>They have exactly the same size and shape</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Triangles</h4>
+                                        <div class="math-example">
+                                            <p>Triangle ABC ≅ Triangle DEF means:</p>
+                                            <ul>
+                                                <li>AB = DE, BC = EF, AC = DF</li>
+                                                <li>∠A = ∠D, ∠B = ∠E, ∠C = ∠F</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Rectangles</h4>
+                                        <div class="math-example">
+                                            <p>Rectangle PQRS ≅ Rectangle WXYZ means:</p>
+                                            <ul>
+                                                <li>PQ = WX, QR = XY, RS = YZ, SP = ZW</li>
+                                                <li>All angles are 90° in both</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-check-circle"></i> Verifying Congruence
+                                </h3>
+                                <p>
+                                    To verify if shapes are congruent in the coordinate plane:
+                                </p>
+                                <ol>
+                                    <li>Calculate lengths of all sides using distance formula</li>
+                                    <li>Measure all angles (or verify they match based on side lengths)</li>
+                                    <li>Check if corresponding parts are equal</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p><strong>Distance Formula:</strong> \( d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2} \)</p>
+                                    <p><strong>Example:</strong> Verify if triangles with vertices A(1,2), B(4,2), C(1,5) and D(3,6), E(3,3), F(6,6) are congruent.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Similar Shapes Section -->
+                        <section id="similar" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-expand"></i> Similar Shapes
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Properties of Similar Shapes
+                                </h3>
+                                <p>
+                                    Two shapes are similar if:
+                                </p>
+                                <ol>
+                                    <li>All corresponding angles are equal</li>
+                                    <li>All corresponding sides are proportional</li>
+                                    <li>They have the same shape but different sizes</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Triangles</h4>
+                                        <div class="math-example">
+                                            <p>Triangle ABC ~ Triangle DEF means:</p>
+                                            <ul>
+                                                <li>∠A = ∠D, ∠B = ∠E, ∠C = ∠F</li>
+                                                <li>AB/DE = BC/EF = AC/DF</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Polygons</h4>
+                                        <div class="math-example">
+                                            <p>For similar polygons:</p>
+                                            <ul>
+                                                <li>All angles match</li>
+                                                <li>Side lengths have constant ratio</li>
+                                                <li>Area ratio is square of length ratio</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-search"></i> Verifying Similarity
+                                </h3>
+                                <p>
+                                    To verify similarity in the coordinate plane:
+                                </p>
+                                <ol>
+                                    <li>Check if corresponding angles are equal</li>
+                                    <li>Calculate side lengths and find ratios</li>
+                                    <li>Verify all corresponding sides have the same ratio</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Verify if rectangles with vertices A(1,1), B(5,1), C(5,3), D(1,3) and E(2,4), F(6,4), G(6,8), H(2,8) are similar.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-globe"></i> Real-life Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-home"></i> Everyday Examples
+                                </h3>
+                                <p>
+                                    Congruent and similar shapes appear in many real-world situations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Carpet Designs</h4>
+                                        <p>Repeating patterns often use congruent shapes:</p>
+                                        <ul>
+                                            <li>Identical motif shapes repeated</li>
+                                            <li>May be rotated or reflected but same size</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Fabric Patterns</h4>
+                                        <p>Similar shapes in textile designs:</p>
+                                        <ul>
+                                            <li>Same flower pattern in different sizes</li>
+                                            <li>Proportional scaling maintains shape</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Architecture</h4>
+                                        <p>Building designs use both concepts:</p>
+                                        <ul>
+                                            <li>Identical windows (congruent)</li>
+                                            <li>Scaled versions of decorative elements (similar)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-cubes"></i> Practical Verification
+                                </h3>
+                                <p>
+                                    How to verify congruence/similarity in real objects:
+                                </p>
+                                <ol>
+                                    <li><strong>Measurement:</strong> Use rulers/protractors to check lengths and angles</li>
+                                    <li><strong>Comparison:</strong> Overlay shapes to check matching</li>
+                                    <li><strong>Scaling:</strong> Check if one is proportional enlargement of the other</li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Which shapes are congruent in this set? (Provide image reference)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Shapes A and C are congruent because all corresponding sides and angles are equal.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Are these two triangles similar? Triangle 1: sides 3,4,5; Triangle 2: sides 6,8,10</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Yes, they are similar because all corresponding sides have ratio 1:2 and angles are equal.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Verify if rectangles with vertices at (1,1), (4,1), (4,3), (1,3) and (2,2), (8,2), (8,6), (2,6) are similar.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First rectangle: width=3, height=2. Second rectangle: width=6, height=4. Ratio is 1:2 for both dimensions, so they are similar.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Find real-world examples of (a) congruent shapes and (b) similar shapes in your classroom.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible answers:</p>
+                                        <p>(a) Congruent: identical floor tiles, same-sized windows</p>
+                                        <p>(b) Similar: different-sized circles on wall clock, scaled posters</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Are all congruent shapes similar? Are all similar shapes congruent? Explain.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>All congruent shapes are similar (same shape AND size implies same shape).</p>
+                                        <p>Not all similar shapes are congruent (they may be different sizes).</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>In a carpet design with repeating octagons, are the octagons congruent or similar?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>If they are identical in size and shape, they are congruent. If they vary in size but keep the same shape, they are similar.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills identifying congruent and similar shapes</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

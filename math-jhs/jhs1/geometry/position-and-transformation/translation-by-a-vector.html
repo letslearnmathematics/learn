@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Translations on Coordinate Plane | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to plot points and shapes on a coordinate plane and translate them using vectors.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Translations on Coordinate Plane | JHS Mathematics">
+        <meta property="og:description" content="Learn to plot and translate points and shapes on a coordinate plane.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/geometry/transformations">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Translations on Coordinate Plane</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Transformations</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Translations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#plotting"><i class="fas fa-chevron-right"></i> Plotting Points & Shapes</a></li>
+                                <li><a href="#vectors"><i class="fas fa-chevron-right"></i> Translation Vectors</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Coordinate_Translations</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    Translation is a type of transformation that moves every point of a shape the same distance in the same direction. It's like sliding an object without rotating or flipping it.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Real-world example: When people go down a slide, their position changes through translation.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Coordinates
+                                </h3>
+                                <p>
+                                    A coordinate plane has two axes:
+                                </p>
+                                <ul>
+                                    <li><strong>x-axis</strong>: The horizontal axis (left-right)</li>
+                                    <li><strong>y-axis</strong>: The vertical axis (up-down)</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Points are written as (x, y). Example: (3, 2) means 3 units right and 2 units up.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Plotting Section -->
+                        <section id="plotting" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-map-marker-alt"></i> Plotting Points & Shapes
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-dot-circle"></i> Plotting Points
+                                </h3>
+                                <p>
+                                    To plot a point on the coordinate plane:
+                                </p>
+                                <ol>
+                                    <li>Start at the origin (0,0)</li>
+                                    <li>Move horizontally according to the x-coordinate</li>
+                                    <li>Move vertically according to the y-coordinate</li>
+                                    <li>Mark the point</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Plot (2, 3)</h4>
+                                        <div class="math-example">
+                                            <p>From (0,0), move 2 units right and 3 units up</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Plot (-1, 4)</h4>
+                                        <div class="math-example">
+                                            <p>From (0,0), move 1 unit left and 4 units up</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-shapes"></i> Plotting Shapes
+                                </h3>
+                                <p>
+                                    To plot a shape:
+                                </p>
+                                <ol>
+                                    <li>Plot all the vertices (corners) of the shape</li>
+                                    <li>Connect the points in order</li>
+                                    <li>Close the shape by connecting back to the first point</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: Plot triangle ABC with vertices A(1,1), B(3,1), C(2,3)</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Vectors Section -->
+                        <section id="vectors" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-arrows-alt"></i> Translation Vectors
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-vector-square"></i> Understanding Vectors
+                                </h3>
+                                <p>
+                                    A translation vector tells us how far and in what direction to move a shape. It's written as \(\begin{pmatrix} x \\ y \end{pmatrix}\) where:
+                                </p>
+                                <ul>
+                                    <li>x = horizontal movement (right if positive, left if negative)</li>
+                                    <li>y = vertical movement (up if positive, down if negative)</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: \(\begin{pmatrix} 3 \\ -2 \end{pmatrix}\) means move 3 units right and 2 units down</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Translating Points
+                                </h3>
+                                <p>
+                                    To translate a point using a vector:
+                                </p>
+                                <ol>
+                                    <li>Add the x-component of the vector to the x-coordinate</li>
+                                    <li>Add the y-component of the vector to the y-coordinate</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: Translate point (2,5) by vector \(\begin{pmatrix} -1 \\ 3 \end{pmatrix}\):</p>
+                                    \[ (2 + (-1), 5 + 3) = (1, 8) \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-object-group"></i> Translating Shapes
+                                </h3>
+                                <p>
+                                    To translate a shape, translate all its vertices by the same vector:
+                                </p>
+                                <div class="math-example">
+                                    <p>Example: Translate triangle ABC with vertices A(1,1), B(3,1), C(2,3) by \(\begin{pmatrix} 2 \\ -1 \end{pmatrix}\):</p>
+                                    <p>New vertices:</p>
+                                    <ul>
+                                        <li>A' = (1+2, 1-1) = (3,0)</li>
+                                        <li>B' = (3+2, 1-1) = (5,0)</li>
+                                        <li>C' = (2+2, 3-1) = (4,2)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Applications
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                </h3>
+                                <p>
+                                    Translations are used in many real-world situations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Slide Movement</h4>
+                                        <p>As people go down a slide, their position changes through translation.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Computer Graphics</h4>
+                                        <p>Moving objects in video games uses translation vectors.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Architecture</h4>
+                                        <p>Copying design elements to different positions in a blueprint.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Plot the point (4, -2) on a coordinate plane.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>From (0,0), move 4 units right and 2 units down.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Translate point (3, 5) by vector \(\begin{pmatrix} -2 \\ 4 \end{pmatrix}\). What is the new point?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>New point: (3 + (-2), (5 + 4) = (1, 9)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A triangle has vertices at (1,1), (2,4), and (3,1). Translate it by \(\begin{pmatrix} 3 \\ -2 \end{pmatrix}\). Find the new vertices.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>New vertices:</p>
+                                        <ul>
+                                            <li>(1+3, 1-2) = (4, -1)</li>
+                                            <li>(2+3, 4-2) = (5, 2)</li>
+                                            <li>(3+3, 1-2) = (6, -1)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Describe the translation vector that moves (2,3) to (5,0).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Vector: \(\begin{pmatrix} 5-2 \\ 0-3 \end{pmatrix} = \begin{pmatrix} 3 \\ -3 \end{pmatrix}\)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Plot a square with vertices (1,1), (3,1), (3,3), (1,3). Then translate it by \(\begin{pmatrix} -2 \\ 1 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>New vertices:</p>
+                                        <ul>
+                                            <li>(1-2, 1+1) = (-1, 2)</li>
+                                            <li>(3-2, 1+1) = (1, 2)</li>
+                                            <li>(3-2, 3+1) = (1, 4)</li>
+                                            <li>(1-2, 3+1) = (-1, 4)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>If a point moves from (4,2) to (1,5), what is the translation vector?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Vector: \(\begin{pmatrix} 1-4 \\ 5-2 \end{pmatrix} = \begin{pmatrix} -3 \\ 3 \end{pmatrix}\)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with plotting points and translations</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
