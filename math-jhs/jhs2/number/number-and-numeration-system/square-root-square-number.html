@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Perfect Squares and Square Roots | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Perfect Squares and Square Roots for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Perfect Squares and Square Roots | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Identify Perfect Squares and Determine Square Roots Using Sets Concepts">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/perfect-squares">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Perfect Squares and Square Roots</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Perfect Squares</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#perfect-squares"><i class="fas fa-chevron-right"></i> Identifying Perfect Squares</a></li>
+                                <li><a href="#square-roots"><i class="fas fa-chevron-right"></i> Determining Square Roots</a></li>
+                                <li><a href="#problem-solving"><i class="fas fa-chevron-right"></i> Problem Solving</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Perfect Squares</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A <strong>perfect square</strong> is a number that can be expressed as the product of an integer with itself. 
+                                    In other words, it's the square of an integer. We can use the concept of sets to identify perfect squares 
+                                    and determine their square roots.
+                                </p>
+                                <p>
+                                    In this lesson, we will:
+                                </p>
+                                <ol>
+                                    <li>Identify perfect squares from sets of numbers</li>
+                                    <li>Determine square roots using knowledge of odd numbers</li>
+                                    <li>Solve problems involving perfect squares and square roots</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Examples of perfect squares:</p>
+                                    \[ \{1, 4, 9, 16, 25, 36, 49, 64, 81, 100, \ldots\} \]
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Perfect Squares Section -->
+                        <section id="perfect-squares" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-square"></i> Identifying Perfect Squares
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example1" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on identifying perfect squares with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list"></i> Listing Multiples and Identifying Perfect Squares
+                                </h3>
+                                <p>
+                                    We can identify perfect squares by listing sets of multiples and examining their properties:
+                                </p>
+                                <ol>
+                                    <li>List the multiples of numbers (e.g., multiples of 1, 2, 3, etc.)</li>
+                                    <li>Identify numbers that appear in the intersection of a set with itself</li>
+                                    <li>These numbers are perfect squares</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-th-list"></i>
+                                        <h3>Example: Identifying Perfect Squares from Multiples</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Consider the set of multiples of numbers from 1 to 5:</p>
+                                        <div class="math-example">
+                                            \[
+                                                \begin{align*}
+                                                    \text{Multiples of 1} &= \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, \ldots\} \\
+                                                    \text{Multiples of 2} &= \{2, 4, 6, 8, 10, 12, 14, 16, 18, 20, \ldots\} \\
+                                                    \text{Multiples of 3} &= \{3, 6, 9, 12, 15, 18, 21, 24, 27, 30, \ldots\} \\
+                                                    \text{Multiples of 4} &= \{4, 8, 12, 16, 20, 24, 28, 32, 36, 40, \ldots\} \\
+                                                    \text{Multiples of 5} &= \{5, 10, 15, 20, 25, 30, 35, 40, 45, 50, \ldots\}
+                                                \end{align*}
+                                            \]
+                                            <p>The numbers that appear in the intersection of a set with itself (when multiplied by the same number) are perfect squares:</p>
+                                            \[ \{1, 4, 9, 16, 25, \ldots\} \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Alternative Method: Using Factors</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Perfect squares have an odd number of factors. We can use this property to identify them:</p>
+                                        <div class="math-example">
+                                            <p>Consider the number 16:</p>
+                                            \[ \text{Factors of 16} = \{1, 2, 4, 8, 16\} \]
+                                            <p>Number of factors = 5 (odd) → 16 is a perfect square</p>
+                                            
+                                            <p>Consider the number 18:</p>
+                                            \[ \text{Factors of 18} = \{1, 2, 3, 6, 9, 18\} \]
+                                            <p>Number of factors = 6 (even) → 18 is not a perfect square</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>From the set {12, 16, 25, 30, 36, 49}, identify all perfect squares.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>The perfect squares are: 16 (4×4), 25 (5×5), 36 (6×6), and 49 (7×7).</p>
+                                        <p>12 and 30 are not perfect squares.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>List the first 10 perfect squares.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>The first 10 perfect squares are:</p>
+                                        \[ \{1, 4, 9, 16, 25, 36, 49, 64, 81, 100\} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Using the factor method, verify that 144 is a perfect square.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factors of 144:</p>
+                                        \[ \{1, 2, 3, 4, 6, 8, 9, 12, 16, 18, 24, 36, 48, 72, 144\} \]
+                                        <p>Number of factors = 15 (odd) → 144 is a perfect square (12×12)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Square Roots Section -->
+                        <section id="square-roots" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-square-root-alt"></i> Determining Square Roots
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example2" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on determining square roots with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-magic"></i> Using Odd Numbers to Find Square Roots
+                                </h3>
+                                <p>
+                                    We can use the property that the sum of consecutive odd numbers equals a perfect square:
+                                </p>
+                                \[ 1 = 1 \]
+                                \[ 1 + 3 = 4 \]
+                                \[ 1 + 3 + 5 = 9 \]
+                                \[ 1 + 3 + 5 + 7 = 16 \]
+                                \[ \text{and so on...} \]
+                                <p>
+                                    The number of odd numbers added equals the square root of the resulting perfect square.
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Example: Finding Square Roots</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>To find √36:</p>
+                                        <ol>
+                                            <li>Start adding consecutive odd numbers: 1 + 3 + 5 + 7 + 9 + 11 = 36</li>
+                                            <li>Count the number of odd numbers added: 6</li>
+                                            <li>Therefore, √36 = 6</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <p>Similarly for √81:</p>
+                                            \[ 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 = 81 \]
+                                            <p>Number of terms = 9 → √81 = 9</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-th"></i>
+                                        <h3>Alternative Method: Using Prime Factorization</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>We can also find square roots by prime factorization:</p>
+                                        <div class="math-example">
+                                            <p>Find √144:</p>
+                                            \[ 144 = 2 \times 2 \times 2 \times 2 \times 3 \times 3 \]
+                                            <p>Pair the factors:</p>
+                                            \[ (2 \times 2) \times (2 \times 2) \times (3 \times 3) \]
+                                            <p>Take one from each pair:</p>
+                                            \[ 2 \times 2 \times 3 = 12 \]
+                                            <p>Therefore, √144 = 12</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Use the odd number method to find √64.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Adding consecutive odd numbers:</p>
+                                        \[ 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 = 64 \]
+                                        <p>Number of terms = 8 → √64 = 8</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Use prime factorization to find √225.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Prime factors of 225:</p>
+                                        \[ 225 = 3 \times 3 \times 5 \times 5 \]
+                                        <p>Take one from each pair:</p>
+                                        \[ 3 \times 5 = 15 \]
+                                        <p>Therefore, √225 = 15</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Which perfect square is obtained by adding the first 10 odd numbers? What is its square root?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Sum of first 10 odd numbers:</p>
+                                        \[ 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 = 100 \]
+                                        <p>Number of terms = 10 → √100 = 10</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Problem Solving Section -->
+                        <section id="problem-solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-puzzle-piece"></i> Problem Solving
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example3" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on solving problems with perfect squares.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Applying Perfect Squares to Problems
+                                </h3>
+                                <p>
+                                    We can solve various mathematical problems using our knowledge of perfect squares and square roots:
+                                </p>
+                                <ul>
+                                    <li>Finding missing numbers in sequences</li>
+                                    <li>Solving area problems involving squares</li>
+                                    <li>Working with Pythagorean triples</li>
+                                    <li>Simplifying algebraic expressions</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-question"></i>
+                                        <h3>Example: Finding Missing Numbers</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Find the smallest number by which 180 must be multiplied to make it a perfect square.</p>
+                                        <div class="math-example">
+                                            <p>Solution:</p>
+                                            <ol>
+                                                <li>Find prime factors of 180:</li>
+                                                \[ 180 = 2 \times 2 \times 3 \times 3 \times 5 \]
+                                                <li>Identify unpaired factors: 5</li>
+                                                <li>Multiply by the unpaired factor: 180 × 5 = 900</li>
+                                                <li>900 is a perfect square (30×30)</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-ruler-combined"></i>
+                                        <h3>Example: Area Problems</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>A square garden has an area of 625 m². What is the length of one side?</p>
+                                        <div class="math-example">
+                                            <p>Solution:</p>
+                                            <ol>
+                                                <li>Area of square = side × side</li>
+                                                <li>Find √625:</li>
+                                                \[ 625 = 5 \times 5 \times 5 \times 5 \]
+                                                <li>Take one from each pair: 5 × 5 = 25</li>
+                                                <li>Therefore, side length = 25 m</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the smallest number by which 72 must be multiplied to make it a perfect square.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Prime factors of 72:</p>
+                                        \[ 72 = 2 \times 2 \times 2 \times 3 \times 3 \]
+                                        <p>Unpaired factor: 2</p>
+                                        <p>Multiply by 2: 72 × 2 = 144 (12×12)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A square tile has an area of 1,024 cm². What is the perimeter of the tile?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Find √1024:</p>
+                                        \[ 1024 = 2^{10} = (2^5)^2 = 32^2 \]
+                                        <p>Side length = 32 cm</p>
+                                        <p>Perimeter = 4 × 32 = 128 cm</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>The sum of two consecutive perfect squares is 145. What are these numbers?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let the smaller square be n², then the next is (n+1)²</p>
+                                        \[ n^2 + (n+1)^2 = 145 \]
+                                        \[ n^2 + n^2 + 2n + 1 = 145 \]
+                                        \[ 2n^2 + 2n - 144 = 0 \]
+                                        \[ n^2 + n - 72 = 0 \]
+                                        \[ (n + 9)(n - 8) = 0 \]
+                                        <p>n = 8 (positive solution)</p>
+                                        <p>The perfect squares are 64 (8²) and 81 (9²)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

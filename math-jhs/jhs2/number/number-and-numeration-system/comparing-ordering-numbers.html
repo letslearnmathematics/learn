@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Comparing Numbers | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Comparing Numbers for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Comparing Numbers | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Compare and Order Whole Numbers Using >, <, and =">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/comparing-numbers">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Compare and Order Whole Numbers</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Compare & Order Numbers</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#compare-numbers"><i class="fas fa-chevron-right"></i> Comparing Numbers</a></li>
+                                <li><a href="#ordering-numbers"><i class="fas fa-chevron-right"></i> Ordering Numbers</a></li>
+                                <li><a href="#more-less"><i class="fas fa-chevron-right"></i> 100,000 More or Less</a></li>
+                                <!--<li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>-->
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Comparing Numbers</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Comparing numbers</strong> involves determining which of two numbers is greater, 
+                                    smaller, or if they are equal. We use the symbols > (greater than), < (less than), 
+                                    and = (equal to) to show these relationships.
+                                </p>
+                                <p>
+                                    To compare large numbers effectively, we need to understand place values and 
+                                    how each digit's position affects the number's overall value. This lesson will 
+                                    teach you how to compare and order whole numbers up to 9 digits.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Comparing Numbers Section -->
+                        <section id="compare-numbers" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Comparing Numbers
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on comparing numbers with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Steps to Compare Numbers
+                                </h3>
+                                <p>Follow these steps to compare two numbers:</p>
+                                <ol>
+                                    <li>Write the numbers vertically, aligning them by place value</li>
+                                    <li>Compare the digits from left to right (starting with the highest place value)</li>
+                                    <li>When you find digits that differ, the number with the larger digit is greater</li>
+                                    <li>If all digits are the same, the numbers are equal</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <!-- Relations --> 
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Examples</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <div class="math-example">
+                                            <p><strong>Example 1:</strong> Compare 45,678,921 and 45,678,912</p>
+                                            <p>Let's align the numbers:</p>
+                                            <pre>
+                                                45,678,921
+                                                45,678,912
+                                            </pre>
+                                            <p>Compare digit by digit from left:</p>
+                                            <ul>
+                                                <li>Millions place: 5 = 5</li>
+                                                <li>Hundred-thousands place: 6 = 6</li>
+                                                <li>Ten-thousands place: 7 = 7</li>
+                                                <li>Thousands place: 8 = 8</li>
+                                                <li>Hundreds place: 9 = 9</li>
+                                                <li>Tens place: 2 > 1</li>
+                                            </ul>
+                                            <p>Since 2 > 1 in the tens place, we conclude:</p>
+                                            \[ 45,678,921 > 45,678,912 \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <h3>Key Points</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <div class="key-points">
+                                            <div class="point">
+                                                <h4>Symbol Meanings:</h4>
+                                                <ul>
+                                                    <li>> means "greater than" (e.g., 5 > 3)</li>
+                                                    <li>< means "less than" (e.g., 3 < 5)</li>
+                                                    <li>= means "equal to" (e.g., 5 = 5)</li>
+                                                </ul>
+                                            </div>
+                                            <div class="point">
+                                                <h4>Remember:</h4>
+                                                <p>The "mouth" of the symbol always opens toward the larger number.</p>
+                                                <p>Think of it as a hungry alligator that always wants to eat the bigger number!</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Compare 123,456,789 and 123,456,798 using >, <, or =</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let's compare digit by digit:</p>
+                                        <pre>
+  123,456,789
+  123,456,798
+                                        </pre>
+                                        <p>They differ in the tens place: 8 < 9</p>
+                                        <p>Therefore:</p>
+                                        \[ 123,456,789 < 123,456,798 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Compare 987,654,321 and 987,564,321 using >, <, or =</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let's compare digit by digit:</p>
+                                        <pre>
+  987,654,321
+  987,564,321
+                                        </pre>
+                                        <p>They differ in the hundred-thousands place: 6 > 5</p>
+                                        <p>Therefore:</p>
+                                        \[ 987,654,321 > 987,564,321 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Compare 500,500,500 and 500,500,500 using >, <, or =</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let's compare digit by digit:</p>
+                                        <pre>
+  500,500,500
+  500,500,500
+                                        </pre>
+                                        <p>All digits are identical</p>
+                                        <p>Therefore:</p>
+                                        \[ 500,500,500 = 500,500,500 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Ordering Numbers Section -->
+                        <section id="ordering-numbers" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-sort-amount-down"></i> Ordering Numbers
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on ordering numbers with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> How to Order Numbers
+                                </h3>
+                                <p>To order a list of numbers from smallest to largest (ascending order) or largest to smallest (descending order):</p>
+                                <ol>
+                                    <li>Compare the numbers two at a time using the comparison method</li>
+                                    <li>For ascending order, arrange them from smallest to largest</li>
+                                    <li>For descending order, arrange them from largest to smallest</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <!-- Relations --> 
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Example: Ascending Order</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Example:</strong> Arrange these numbers in ascending order: 45,678,921; 45,678,912; 45,679,000</p>
+                                        <p>Let's compare them:</p>
+                                        <ol>
+                                            <li>45,678,912 < 45,678,921 (from earlier example)</li>
+                                            <li>45,678,921 < 45,679,000 (compare thousands place: 8 < 9)</li>
+                                        </ol>
+                                        <p>Therefore, the ascending order is:</p>
+                                        \[ 45,678,912;\ 45,678,921;\ 45,679,000 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <h3>Example: Descending Order</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Example:</strong> Arrange these numbers in descending order: 123,456,789; 123,456,798; 123,465,789</p>
+                                        <p>Let's compare them:</p>
+                                        <ol>
+                                            <li>123,465,789 > 123,456,798 (ten-thousands place: 6 > 5)</li>
+                                            <li>123,456,798 > 123,456,789 (tens place: 9 > 8)</li>
+                                        </ol>
+                                        <p>Therefore, the descending order is:</p>
+                                        \[ 123,465,789;\ 123,456,798;\ 123,456,789 \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Arrange these numbers in ascending order: 987,654,321; 987,564,321; 987,654,312</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Compare them:</p>
+                                        <ol>
+                                            <li>987,564,321 < 987,654,312 (hundred-thousands place: 5 < 6)</li>
+                                            <li>987,654,312 < 987,654,321 (units place: 2 < 1)</li>
+                                        </ol>
+                                        <p>Ascending order:</p>
+                                        \[ 987,564,321;\ 987,654,312;\ 987,654,321 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Arrange these numbers in descending order: 500,500,500; 500,505,000; 500,500,050</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Compare them:</p>
+                                        <ol>
+                                            <li>500,505,000 > 500,500,500 (thousands place: 5 > 0)</li>
+                                            <li>500,500,500 > 500,500,050 (tens place: 0 > 5)</li>
+                                        </ol>
+                                        <p>Descending order:</p>
+                                        \[ 500,505,000;\ 500,500,500;\ 500,500,050 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Arrange these numbers in ascending order: 100,000,000; 99,999,999; 100,000,001</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Compare them:</p>
+                                        <ol>
+                                            <li>99,999,999 < 100,000,000 (99 million < 100 million)</li>
+                                            <li>100,000,000 < 100,000,001 (units place: 0 < 1)</li>
+                                        </ol>
+                                        <p>Ascending order:</p>
+                                        \[ 99,999,999;\ 100,000,000;\ 100,000,001 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- 100,000 More or Less Section -->
+                        <section id="more-less" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-plus-minus"></i> 100,000 More or Less
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on finding numbers that are 100,000 more or less than given numbers.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Finding Numbers 100,000 More or Less
+                                </h3>
+                                <p>To find a number that is 100,000 more or less than a given number:</p>
+                                <ol>
+                                    <li>Identify the hundred-thousands place in the number</li>
+                                    <li>To add 100,000, increase the hundred-thousands digit by 1</li>
+                                    <li>To subtract 100,000, decrease the hundred-thousands digit by 1</li>
+                                    <li>Adjust other digits if necessary (when crossing a millions boundary)</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <!-- Relations --> 
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Example: 100,000 More</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Example 1:</strong> What is 100,000 more than 45,678,921?</p>
+                                        <p>Let's identify the hundred-thousands place (6):</p>
+                                        <pre>
+  45,678,921
+      ↑
+  6 is in the hundred-thousands place
+                                        </pre>
+                                        <p>Add 1 to the hundred-thousands digit:</p>
+                                        <p>6 (hundred-thousands) + 1 = 7</p>
+                                        <p>New number: 45,778,921</p>
+                                        <p>Therefore:</p>
+                                        \[ 45,678,921 + 100,000 = 45,778,921 \]
+                                        
+                                        <p><strong>Example 2:</strong> What is 100,000 more than 99,999,999?</p>
+                                        <p>Adding 100,000 would make it 100,099,999</p>
+                                        <p>Note how we had to increase the millions digit as well</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-lightbulb"></i>
+                                        <h3>Example: 100,000 Less</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Example 1:</strong> What is 100,000 less than 45,678,921?</p>
+                                        <p>Let's identify the hundred-thousands place (6):</p>
+                                        <pre>
+  45,678,921
+      ↑
+  6 is in the hundred-thousands place
+                                        </pre>
+                                        <p>Subtract 1 from the hundred-thousands digit:</p>
+                                        <p>6 (hundred-thousands) - 1 = 5</p>
+                                        <p>New number: 45,578,921</p>
+                                        <p>Therefore:</p>
+                                        \[ 45,678,921 - 100,000 = 45,578,921 \]
+                                        
+                                        <p><strong>Example 2:</strong> What is 100,000 less than 100,000,000?</p>
+                                        <p>Subtracting 100,000 would make it 99,900,000</p>
+                                        <p>Note how we had to decrease the millions digit as well</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Extending to 500,000
+                                </h3>
+                                <p>The same principle applies when finding numbers that are 500,000 more or less:</p>
+                                <ul>
+                                    <li>For 500,000 more: Add 5 to the hundred-thousands digit</li>
+                                    <li>For 500,000 less: Subtract 5 from the hundred-thousands digit</li>
+                                    <li>Adjust higher place values if necessary</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> What is 500,000 more than 45,678,921?</p>
+                                    <p>6 (hundred-thousands) + 5 = 11</p>
+                                    <p>This means we need to:</p>
+                                    <ul>
+                                        <li>Write 1 in the hundred-thousands place</li>
+                                        <li>Add 1 to the millions place: 5 + 1 = 6</li>
+                                    </ul>
+                                    <p>New number: 46,178,921</p>
+                                    \[ 45,678,921 + 500,000 = 46,178,921 \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>What is 100,000 more than 123,456,789?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Identify the hundred-thousands place (4):</p>
+                                        <pre>
+  123,456,789
+      ↑
+  4 is in the hundred-thousands place
+                                        </pre>
+                                        <p>Add 1 to the hundred-thousands digit: 4 + 1 = 5</p>
+                                        <p>New number: 123,556,789</p>
+                                        \[ 123,456,789 + 100,000 = 123,556,789 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>What is 100,000 less than 987,654,321?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Identify the hundred-thousands place (6):</p>
+                                        <pre>
+  987,654,321
+      ↑
+  6 is in the hundred-thousands place
+                                        </pre>
+                                        <p>Subtract 1 from the hundred-thousands digit: 6 - 1 = 5</p>
+                                        <p>New number: 987,554,321</p>
+                                        \[ 987,654,321 - 100,000 = 987,554,321 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>What is 500,000 more than 100,000,000?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Identify the hundred-thousands place (0):</p>
+                                        <pre>
+  100,000,000
+      ↑
+  0 is in the hundred-thousands place
+                                        </pre>
+                                        <p>Add 5 to the hundred-thousands digit: 0 + 5 = 5</p>
+                                        <p>New number: 100,500,000</p>
+                                        \[ 100,000,000 + 500,000 = 100,500,000 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>What is 500,000 less than 500,000,000?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Identify the hundred-thousands place (0):</p>
+                                        <pre>
+  500,000,000
+      ↑
+  0 is in the hundred-thousands place
+                                        </pre>
+                                        <p>We need to subtract 5 from 0, which requires borrowing:</p>
+                                        <ol>
+                                            <li>Decrease the millions digit by 1 (500 → 499)</li>
+                                            <li>Set hundred-thousands digit to 5 (0 → 5 when borrowing)</li>
+                                        </ol>
+                                        <p>New number: 499,500,000</p>
+                                        \[ 500,000,000 - 500,000 = 499,500,000 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

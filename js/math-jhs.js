@@ -446,37 +446,37 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Methods Of Collecting Data", url: "./math-jhs/jhs1/handling-data/data/method-of-collecting-data" },
                 { name: "Designing Question Forms", url: "./math-jhs/jhs1/handling-data/data/designing-question-forms" },
                 { name: "Organising And Presenting Data", url: "./math-jhs/jhs1/handling-data/data/organising-and-presenting-data" },
-                { name: "Mean Of Ungrouped Data", url: "./math-jhs/jhs1/handling-data/data/mean-of-ungrouped-data.html" },
-                { name: "Median Of Ungrouped Data", url: "./math-jhs/jhs1/handling-data/data/median-of-ungrouped-data.html" }
+                { name: "Mean Of Ungrouped Data", url: "./math-jhs/jhs1/handling-data/data/mean-of-ungrouped-data" },
+                { name: "Median Of Ungrouped Data", url: "./math-jhs/jhs1/handling-data/data/median-of-ungrouped-data" }
             ],
             "Chance or Probability": [
-                { name: "The Likelihood of an Event", url: "./math-jhs/jhs1/handling-data/chance-or-probability/likelihood-of-an-event.html" },
-                { name: "The Likelihood of a Single Outcome", url: "./math-jhs/jhs1/handling-data/chance-or-probability/likelihood-of-single-outcomes.html" },
-                { name: "Probability as Fractions & Percentages", url: "./math-jhs/jhs1/handling-data/chance-or-probability/probability-as-fractions-percentages.html" }
+                { name: "The Likelihood of an Event", url: "./math-jhs/jhs1/handling-data/chance-or-probability/likelihood-of-an-event" },
+                { name: "The Likelihood of a Single Outcome", url: "./math-jhs/jhs1/handling-data/chance-or-probability/likelihood-of-single-outcomes" },
+                { name: "Probability as Fractions & Percentages", url: "./math-jhs/jhs1/handling-data/chance-or-probability/probability-as-fractions-percentages" }
             ]
         },
         "jhs2": {
             "Number & Numeration System": [
-                { name: "Read & Write Numbers", url: "b8-1-1-1-1lesson1" },
-                { name: "Skip Counting", url: "b8-1-1-1-2lesson1" },
-                { name: "Comparing & Ordering Numbers", url: "b8-1-1-1-3lesson1" },
-                { name: "Standard Form", url: "b8-1-1-1-4lesson1" },
-                { name: "Significant Figures & Decimal Places", url: "b8-1-1-1-5lesson1" },
-                { name: "Place Value (Word Problems)", url: "b8-1-1-1-6lesson1" },
-                { name: "Square Roots & Square Numbers", url: "b8-1-1-2-1lesson1" },
-                { name: "Factors", url: "b8-1-1-2-2lesson1" }
+                { name: "Read & Write Numbers", url: "./math-jhs/jhs2/number/number-and-numeration-system/read-write-numbers" },
+                { name: "Skip Counting", url: "./math-jhs/jhs2/number/number-and-numeration-system/skip-counting" },
+                { name: "Comparing & Ordering Numbers", url: "./math-jhs/jhs2/number/number-and-numeration-system/comparing-ordering-numbers" },
+                { name: "Standard Form", url: "./math-jhs/jhs2/number/number-and-numeration-system/standard-form" },
+                { name: "Significant Figures & Decimal Places", url: "./math-jhs/jhs2/number/number-and-numeration-system/significant-decimal" },
+                { name: "Place Value (Word Problems)", url: "./math-jhs/jhs2/number/number-and-numeration-system/place-value-word-problems" },
+                { name: "Square Roots & Square Numbers", url: "./math-jhs/jhs2/number/number-and-numeration-system/square-root-square-number" },
+                { name: "Factors", url: "./math-jhs/jhs2/number/number-and-numeration-system/factors" }
             ],
             "Number Operations": [
-                { name: "Multiply & Divide By Powers of 10", url: "b8-1-2-1-1lesson1" },
-                { name: "Halving & Doubling Technique", url: "b8-1-2-1-2lesson1" },
-                { name: "Products (Word Problems)", url: "b8-1-2-1-3lesson1" },
-                { name: "Addition & Subtraction", url: "b8-1-2-2-1lesson1" },
-                { name: "Multiplication & Division", url: "b8-1-2-2-2lesson1" },
-                { name: "Operations (Word Problems)", url: "b8-1-2-2-3lesson1" },
-                { name: "Laws of Indices", url: "b8-1-2-3-1lesson1" },
-                { name: "Application (Indices)", url: "b8-1-2-3-2lesson1" },
-                { name: "Exponential Equations", url: "b8-1-2-3-3lesson1" },
-                { name: "Word Problems (Indices)", url: "b8-1-2-3-4lesson1" }
+                { name: "Multiply & Divide By Powers of 10", url: "./math-jhs/jhs2/number/number-operations/multiply-and-divide-by-powers-of-10.html" },
+                { name: "Halving & Doubling Technique", url: "./math-jhs/jhs2/number/number-operations/halving-and-doubling.html" },
+                { name: "Products (Word Problems)", url: "./math-jhs/jhs2/number/number-operations/products-word-problems.html" },
+                { name: "Addition & Subtraction", url: "./math-jhs/jhs2/number/number-operations/addition-and-subtraction.html" },
+                { name: "Multiplication & Division", url: "./math-jhs/jhs2/number/number-operations/multiplication-and-division.html" },
+                { name: "Operations (Word Problems)", url: "./math-jhs/jhs2/number/number-operations/operations-word-problems.html" },
+                { name: "Laws of Indices", url: "./math-jhs/jhs2/number/number-operations/laws-of-indices.html" },
+                { name: "Application (Indices)", url: "./math-jhs/jhs2/number/number-operations/application-indices.html" },
+                { name: "Exponential Equations", url: "./math-jhs/jhs2/number/number-operations/exponential-equations.html" },
+                { name: "Word Problems (Indices)", url: "./math-jhs/jhs2/number/number-operations/word-problems-indices.html" }
             ],
             "Fractions, Decimals & Percentages": [
                 { name: "Operations on Fractions", url: "b8-1-3-1-1lesson1" },

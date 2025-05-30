@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Calculating the Mean | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to calculate the mean for ungrouped data and use it to solve problems.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Calculating the Mean | JHS Mathematics">
+        <meta property="og:description" content="Learn to calculate the mean for ungrouped data and use it to solve problems.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/mean">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Calculating the Mean</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Statistics</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Calculating the Mean</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#basic-mean"><i class="fas fa-chevron-right"></i> Basic Mean Calculation</a></li>
+                                <li><a href="#frequency-table"><i class="fas fa-chevron-right"></i> Mean from Frequency Table</a></li>
+                                <li><a href="#problem-solving"><i class="fas fa-chevron-right"></i> Problem Solving</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Calculating_the_Mean</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    The mean, often called the average, is one of the most important measures of central tendency in statistics. It represents the central value of a data set.
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ \text{Mean} = \frac{\text{Sum of all values}}{\text{Number of values}} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding the Mean
+                                </h3>
+                                <p>
+                                    The mean gives us a single value that summarizes an entire data set. It's useful for:
+                                </p>
+                                <ul>
+                                    <li>Comparing different data sets</li>
+                                    <li>Finding a typical value in a data set</li>
+                                    <li>Making predictions based on data</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: If 5 students scored 70, 80, 85, 90, and 95 on a test, their mean score is:</p>
+                                    \[ \frac{70 + 80 + 85 + 90 + 95}{5} = \frac{420}{5} = 84 \]
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Basic Mean Calculation Section -->
+                        <section id="basic-mean" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Basic Mean Calculation
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-circle"></i> Calculating Mean for Simple Data Sets
+                                </h3>
+                                <p>
+                                    To find the mean of a simple data set:
+                                </p>
+                                <ol>
+                                    <li>Add up all the values in the data set</li>
+                                    <li>Count how many values there are</li>
+                                    <li>Divide the sum by the count</li>
+                                </ol>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1: Test Scores</h4>
+                                        <p>Find the mean of these test scores: 85, 90, 78, 92, 88</p>
+                                        <div class="math-example">
+                                            \[ \text{Sum} = 85 + 90 + 78 + 92 + 88 = 433 \]
+                                            \[ \text{Count} = 5 \]
+                                            \[ \text{Mean} = \frac{433}{5} = 86.6 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Example 2: Daily Temperatures</h4>
+                                        <p>Find the mean daily temperature for a week: 28°C, 30°C, 29°C, 31°C, 27°C, 30°C, 29°C</p>
+                                        <div class="math-example">
+                                            \[ \text{Sum} = 28 + 30 + 29 + 31 + 27 + 30 + 29 = 204 \]
+                                            \[ \text{Count} = 7 \]
+                                            \[ \text{Mean} = \frac{204}{7} \approx 29.14°C \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Frequency Table Section -->
+                        <section id="frequency-table" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-table"></i> Mean from Frequency Table
+                            </h2>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Calculating Mean with Frequency Tables
+                                </h3>
+                                <p>
+                                    When data is presented in a frequency table:
+                                </p>
+                                <ol>
+                                    <li>Multiply each value by its frequency</li>
+                                    <li>Add all these products to get the total sum</li>
+                                    <li>Add all frequencies to get the total count</li>
+                                    <li>Divide the total sum by the total count</li>
+                                </ol>
+                                <div class="math-example">
+                                    <p>Example: Calculate the mean from this frequency table:</p>
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Value (x)</th>
+                                            <th>Frequency (f)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>2</td>
+                                        </tr>
+                                    </table>
+                                    <p>Solution:</p>
+                                    \[ \text{Total sum} = (5×3) + (6×5) + (7×4) + (8×2) = 15 + 30 + 28 + 16 = 89 \]
+                                    \[ \text{Total count} = 3 + 5 + 4 + 2 = 14 \]
+                                    \[ \text{Mean} = \frac{89}{14} \approx 6.36 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-bar"></i> Frequency Table Practice
+                                </h3>
+                                <div class="math-example">
+                                    <p>Calculate the mean from this frequency table showing student absences:</p>
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Days Absent (x)</th>
+                                            <th>Number of Students (f)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>2</td>
+                                        </tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Total sum} = (0×12) + (1×8) + (2×5) + (3×3) + (4×2) = 0 + 8 + 10 + 9 + 8 = 35 \]
+                                        \[ \text{Total count} = 12 + 8 + 5 + 3 + 2 = 30 \]
+                                        \[ \text{Mean} = \frac{35}{30} \approx 1.17 \text{ days} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Problem Solving Section -->
+                        <section id="problem-solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-lightbulb"></i> Problem Solving
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question-circle"></i> Solving Problems with Mean
+                                </h3>
+                                <p>
+                                    The mean can be used to solve various real-world problems. Here are some common types:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Finding Missing Values</h4>
+                                        <p>If the mean of 5 numbers is 20, and four numbers are 18, 22, 19, and 21, find the fifth number.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Let the fifth number be x:</p>
+                                            \[ \frac{18 + 22 + 19 + 21 + x}{5} = 20 \]
+                                            \[ \frac{80 + x}{5} = 20 \]
+                                            \[ 80 + x = 100 \]
+                                            \[ x = 20 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Combined Means</h4>
+                                        <p>Class A has 30 students with mean score of 75. Class B has 20 students with mean score of 80. What is the combined mean?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Total for Class A = 30 × 75 = 2250</p>
+                                            <p>Total for Class B = 20 × 80 = 1600</p>
+                                            <p>Combined total = 2250 + 1600 = 3850</p>
+                                            <p>Total students = 30 + 20 = 50</p>
+                                            \[ \text{Combined mean} = \frac{3850}{50} = 77 \]
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Practical Application</h4>
+                                        <p>A shopkeeper wants the mean daily sales for 6 days to be at least ₵500. In the first 5 days, sales were ₵480, ₵520, ₵490, ₵510, and ₵530. What must sales be on the 6th day?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Let x be the 6th day sales:</p>
+                                            \[ \frac{480 + 520 + 490 + 510 + 530 + x}{6} \geq 500 \]
+                                            \[ \frac{2530 + x}{6} \geq 500 \]
+                                            \[ 2530 + x \geq 3000 \]
+                                            \[ x \geq 470 \]
+                                            <p>The shopkeeper must make at least ₵470 on the 6th day.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Calculate the mean of these numbers: 12, 15, 18, 21, 24</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Sum} = 12 + 15 + 18 + 21 + 24 = 90 \]
+                                        \[ \text{Count} = 5 \]
+                                        \[ \text{Mean} = \frac{90}{5} = 18 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the mean from this frequency table:</p>
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Value (x)</th>
+                                            <th>Frequency (f)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>6</td>
+                                        </tr>
+                                        <tr>
+                                            <td>20</td>
+                                            <td>5</td>
+                                        </tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Total sum} = (10×4) + (15×6) + (20×5) = 40 + 90 + 100 = 230 \]
+                                        \[ \text{Total count} = 4 + 6 + 5 = 15 \]
+                                        \[ \text{Mean} = \frac{230}{15} \approx 15.33 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>The mean of four numbers is 25. Three numbers are 20, 30, and 25. Find the fourth number.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let x be the fourth number:</p>
+                                        \[ \frac{20 + 30 + 25 + x}{4} = 25 \]
+                                        \[ \frac{75 + x}{4} = 25 \]
+                                        \[ 75 + x = 100 \]
+                                        \[ x = 25 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A class has 20 students with mean height of 150cm. Another class has 30 students with mean height of 155cm. Find the combined mean height.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Total height first class = 20 × 150 = 3000cm</p>
+                                        <p>Total height second class = 30 × 155 = 4650cm</p>
+                                        <p>Combined total = 3000 + 4650 = 7650cm</p>
+                                        <p>Total students = 20 + 30 = 50</p>
+                                        \[ \text{Combined mean} = \frac{7650}{50} = 153\text{cm} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>The mean of five numbers is 12. If one number is removed, the mean becomes 11. What number was removed?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Total of five numbers = 5 × 12 = 60</p>
+                                        <p>Total of four numbers = 4 × 11 = 44</p>
+                                        <p>Number removed = 60 - 44 = 16</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Calculate the mean of these temperatures: 22°C, 24°C, 21°C, 23°C, 25°C, 22°C, 20°C</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Sum} = 22 + 24 + 21 + 23 + 25 + 22 + 20 = 157 \]
+                                        \[ \text{Count} = 7 \]
+                                        \[ \text{Mean} = \frac{157}{7} \approx 22.43°C \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills with calculating the mean for different data sets</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+         <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

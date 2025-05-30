@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Probability Outcomes | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn to classify the likelihood of outcomes in probability experiments as impossible, possible, or certain.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Probability Outcomes | JHS Mathematics">
+        <meta property="og:description" content="Learn to classify outcomes as impossible, possible, or certain in probability experiments.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/probability-outcomes">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/fractions.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Probability Outcomes</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS: Probability</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Classifying Outcomes</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#single-die"><i class="fas fa-chevron-right"></i> Single Die Outcomes</a></li>
+                                <li><a href="#two-dice"><i class="fas fa-chevron-right"></i> Two Dice Outcomes</a></li>
+                                <li><a href="#practice"><i class="fas fa-chevron-right"></i> Practice</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../passco" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Probability_Outcomes</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    In probability, we can classify how likely an outcome is to occur using three main terms: <strong>impossible</strong>, <strong>possible</strong>, and <strong>certain</strong>.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Term</th>
+                                            <th>Meaning</th>
+                                            <th>Example</th>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Impossible</strong></td>
+                                            <td>Will never happen</td>
+                                            <td>Getting a 7 when rolling a die</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Possible</strong></td>
+                                            <td>Might happen</td>
+                                            <td>Getting a 3 when rolling a die</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Certain</strong></td>
+                                            <td>Will always happen</td>
+                                            <td>Getting a number between 1-6 when rolling a die</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Probability Terms
+                                </h3>
+                                <p>
+                                    Let's understand these terms better:
+                                </p>
+                                <ul>
+                                    <li><strong>Impossible</strong>: An outcome that cannot occur in any situation (probability = 0)</li>
+                                    <li><strong>Possible</strong>: An outcome that has a chance of occurring (probability between 0 and 1)</li>
+                                    <li><strong>Certain</strong>: An outcome that is guaranteed to happen (probability = 1)</li>
+                                </ul>
+                                <div class="math-example">
+                                    <p>Example: When flipping a coin:</p>
+                                    <ul>
+                                        <li>Getting "heads" is <strong>possible</strong></li>
+                                        <li>Getting "tails" is <strong>possible</strong></li>
+                                        <li>Getting "neither heads nor tails" is <strong>impossible</strong></li>
+                                        <li>Getting "either heads or tails" is <strong>certain</strong></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Single Die Section -->
+                        <section id="single-die" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-dice-one"></i> Single Die Outcomes
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question"></i> Outcomes of Throwing One Die
+                                </h3>
+                                <p>
+                                    A standard die has 6 faces numbered 1 through 6. Let's classify some outcomes:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>A. Obtaining the number 1</h4>
+                                        <div class="math-example">
+                                            <p>This is <strong>possible</strong> because the die has a face with number 1.</p>
+                                            <p>Probability: \(\frac{1}{6}\) (1 chance out of 6 possible outcomes)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>B. Obtaining the number 7</h4>
+                                        <div class="math-example">
+                                            <p>This is <strong>impossible</strong> because a standard die only has numbers 1 through 6.</p>
+                                            <p>Probability: 0 (no chance of occurring)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>C. Obtaining the number 4</h4>
+                                        <div class="math-example">
+                                            <p>This is <strong>possible</strong> because the die has a face with number 4.</p>
+                                            <p>Probability: \(\frac{1}{6}\) (1 chance out of 6 possible outcomes)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Points to Remember
+                                </h3>
+                                <ol>
+                                    <li>For a standard die, numbers 1 through 6 are all <strong>possible</strong> outcomes</li>
+                                    <li>Any number outside 1-6 is <strong>impossible</strong></li>
+                                    <li>Getting <em>some number</em> between 1-6 is <strong>certain</strong> (it must happen)</li>
+                                    <li>All numbers 1-6 have equal probability (\(\frac{1}{6}\))</li>
+                                </ol>
+                            </div>
+                        </section>
+                        
+                        <!-- Two Dice Section -->
+                        <section id="two-dice" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-dice"></i> Two Dice Outcomes
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question-circle"></i> Outcomes of Throwing Two Dice
+                                </h3>
+                                <p>
+                                    When throwing two dice, the possible totals range from 2 to 12. Let's classify some outcomes:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>A. Obtaining a total of 12</h4>
+                                        <div class="math-example">
+                                            <p>This is <strong>possible</strong> but rare (only one combination: 6+6).</p>
+                                            <p>Probability: \(\frac{1}{36}\) (1 chance out of 36 possible outcomes)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>B. Obtaining a total of 2</h4>
+                                        <div class="math-example">
+                                            <p>This is <strong>possible</strong> but rare (only one combination: 1+1).</p>
+                                            <p>Probability: \(\frac{1}{36}\) (1 chance out of 36 possible outcomes)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>C. Obtaining a total of 13</h4>
+                                        <div class="math-example">
+                                            <p>This is <strong>impossible</strong> because the maximum total with two dice is 12 (6+6).</p>
+                                            <p>Probability: 0 (no chance of occurring)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-table"></i> Possible Totals with Two Dice
+                                </h3>
+                                <p>
+                                    Here are all possible totals when throwing two standard dice:
+                                </p>
+                                <div class="math-example">
+                                    <table class="fraction-table">
+                                        <tr>
+                                            <th>Total</th>
+                                            <th>Possible Combinations</th>
+                                            <th>Probability</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>1+1</td>
+                                            <td>\(\frac{1}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>1+2, 2+1</td>
+                                            <td>\(\frac{2}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>1+3, 2+2, 3+1</td>
+                                            <td>\(\frac{3}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>1+4, 2+3, 3+2, 4+1</td>
+                                            <td>\(\frac{4}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>1+5, 2+4, 3+3, 4+2, 5+1</td>
+                                            <td>\(\frac{5}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td>1+6, 2+5, 3+4, 4+3, 5+2, 6+1</td>
+                                            <td>\(\frac{6}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>8</td>
+                                            <td>2+6, 3+5, 4+4, 5+3, 6+2</td>
+                                            <td>\(\frac{5}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>9</td>
+                                            <td>3+6, 4+5, 5+4, 6+3</td>
+                                            <td>\(\frac{4}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>10</td>
+                                            <td>4+6, 5+5, 6+4</td>
+                                            <td>\(\frac{3}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td>5+6, 6+5</td>
+                                            <td>\(\frac{2}{36}\)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>6+6</td>
+                                            <td>\(\frac{1}{36}\)</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section id="practice" class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Classify the outcome: Getting a 5 when rolling a single die.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This is <strong>possible</strong> (probability = \(\frac{1}{6}\))</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Classify the outcome: Getting a total of 1 when rolling two dice.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This is <strong>impossible</strong> (minimum total is 2)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Classify the outcome: Getting an even number when rolling a single die.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This is <strong>possible</strong> (can get 2, 4, or 6; probability = \(\frac{3}{6} = \frac{1}{2}\))</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Classify the outcome: Getting a total between 2 and 12 when rolling two dice.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This is <strong>certain</strong> (all possible totals fall in this range)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Classify the outcome: Getting a total of 7 when rolling two dice.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This is <strong>possible</strong> (probability = \(\frac{6}{36} = \frac{1}{6}\))</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Classify the outcome: Getting a number greater than 6 when rolling a single die.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This is <strong>impossible</strong> (maximum number is 6)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 3 Levels
+                                    </h4>
+                                    <p class="game-description">Test your skills in classifying probability outcomes</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 10 questions. Need 8 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-fractions.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/fractions.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
