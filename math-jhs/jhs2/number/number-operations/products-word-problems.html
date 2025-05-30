@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Mental Math Strategies | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn mental math strategies to solve word problems quickly and efficiently.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Mental Math Strategies | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to apply mental math strategies to solve word problems efficiently">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/mental-math-strategies">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Mental Math Strategies</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Mental Math Strategies</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#strategies"><i class="fas fa-chevron-right"></i> Mental Math Strategies</a></li>
+                                <li><a href="#word-games"><i class="fas fa-chevron-right"></i> Word Problem Games</a></li>
+                                <li><a href="#short-methods"><i class="fas fa-chevron-right"></i> Shortcut Methods</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Mental Math</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Mental mathematics</strong> refers to solving math problems in your head without using paper, calculators, or other tools. Developing strong mental math skills helps you solve problems faster and more efficiently, especially word problems that require quick calculations.
+                                </p>
+                                <p>
+                                    In this lesson, we'll explore various strategies to solve word problems mentally, play mental math games to build fluency, and learn shortcut methods to make calculations easier.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Strategies Section -->
+                        <section id="strategies" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-brain"></i> Mental Math Strategies
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Strategies
+                                </h3>
+                                <p>Here are some powerful mental math strategies:</p>
+                                <ol>
+                                    <li><strong>Break numbers apart:</strong> Split numbers into easier-to-manage parts (e.g., 37 + 48 = (30 + 40) + (7 + 8))</li>
+                                    <li><strong>Use complements:</strong> Find numbers that add up to 10, 100, etc. (e.g., 76 + 24 = 100)</li>
+                                    <li><strong>Round and adjust:</strong> Round numbers to make calculations easier, then adjust (e.g., 298 × 5 = 300 × 5 - 10)</li>
+                                    <li><strong>Look for patterns:</strong> Recognize multiplication patterns (e.g., 5 × any even number ends with 0)</li>
+                                    <li><strong>Use known facts:</strong> Memorize basic math facts to build on (times tables, squares, etc.)</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Breakdown Method</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Break numbers into tens and ones for easier addition:</p>
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> 47 + 56</p>
+                                            <p>Step 1: Break into tens and ones: (40 + 50) + (7 + 6)</p>
+                                            <p>Step 2: Add tens: 40 + 50 = 90</p>
+                                            <p>Step 3: Add ones: 7 + 6 = 13</p>
+                                            <p>Step 4: Combine: 90 + 13 = 103</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-bolt"></i>
+                                        <h3>Compensation Method</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Adjust numbers to make calculations easier, then compensate:</p>
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> 203 - 98</p>
+                                            <p>Step 1: Subtract 100 instead of 98: 203 - 100 = 103</p>
+                                            <p>Step 2: Add back the extra 2 you subtracted: 103 + 2 = 105</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Word Games Section -->
+                        <section id="word-games" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-gamepad"></i> Word Problem Games
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-puzzle-piece"></i> Mental Math Word Games
+                                </h3>
+                                <p>Playing word problem games helps develop fluency in mental calculations. Here are some engaging games:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>1. Number Chain</h4>
+                                        <p>Start with a number. Each student applies an operation (add, subtract, multiply, divide) based on a word problem prompt. The chain continues until someone makes a mistake.</p>
+                                        <p><strong>Example:</strong> Start with 50. "Add the number of days in a week." (50 + 7 = 57) Next: "Subtract the number of sides on a triangle." (57 - 3 = 54), etc.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>2. Story Problem Race</h4>
+                                        <p>Present a word problem. Students race to solve it mentally and shout the answer. First correct answer wins a point.</p>
+                                        <p><strong>Example:</strong> "If a box contains 24 oranges and you remove 7, how many remain?"</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>3. Mental Math Bingo</h4>
+                                        <p>Create bingo cards with answers to word problems. Read problems aloud, students solve mentally and mark answers.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!--
+                            <div class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-dice"></i>
+                                    <h3>Game Time: Number Chain Challenge</h3>
+                                </div>
+                                
+                                <div class="game-instructions">
+                                    <p>Let's play a number chain game together! Start with the number 100. I'll give you word problems to solve mentally. Type your answer after each step:</p>
+                                    
+                                    <div class="game-steps">
+                                        <div class="game-step">
+                                            <p>1. Start with 100. Subtract the number of sides on a pentagon.</p>
+                                            <input type="number" class="game-input" placeholder="Your answer">
+                                        </div>
+                                        <div class="game-step">
+                                            <p>2. Multiply by the number of zeros in one thousand.</p>
+                                            <input type="number" class="game-input" placeholder="Your answer">
+                                        </div>
+                                        <div class="game-step">
+                                            <p>3. Add the number of days in two weeks.</p>
+                                            <input type="number" class="game-input" placeholder="Your answer">
+                                        </div>
+                                        <button class="check-answers">Check Answers</button>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+
+                        </section>
+
+                        <!-- Shortcut Methods Section -->
+                        <section id="short-methods" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-magic"></i> Shortcut Methods
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tachometer-alt"></i> Quick Calculation Techniques
+                                </h3>
+                                <p>Learn these shortcut methods to solve problems faster:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Multiplying by 5</h4>
+                                        <p>Multiply by 10 and halve the result: 24 × 5 = (24 × 10) ÷ 2 = 240 ÷ 2 = 120</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Multiplying by 11 (for 2-digit numbers)</h4>
+                                        <p>Add the digits and put the sum in the middle: 35 × 11 = 3 (3+5) 5 = 385</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Squaring numbers ending with 5</h4>
+                                        <p>Multiply the first digit by (itself + 1), then add 25: 65² = (6 × 7) = 42, then add 25 → 4225</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Percentage shortcuts</h4>
+                                        <p>10% = divide by 10; 20% = divide by 5; 25% = divide by 4; 50% = divide by 2</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-stopwatch"></i>
+                                    <h3>Speed Drill</h3>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Use the 11-method to calculate: 42 × 11</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>4 (4+2) 2 = 462</p>
+                                        </div>
+                                    </div>
+                                    <div class="problem-card">
+                                        <h3>Question 2</h3>
+                                        <p>Calculate 45 × 5 using the shortcut method</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>45 × 10 = 450; 450 ÷ 2 = 225</p>
+                                        </div>
+                                    </div>
+                                    <div class="problem-card">
+                                        <h3>Question 3</h3>
+                                        <p>What is 25% of 840 using the percentage shortcut?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>840 ÷ 4 = 210</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Word Problem Practice</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Problem 1</h3>
+                                    <p>A school has 12 classrooms with 28 students each. How many students are there in total?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Mental strategy:</strong> Break 28 into 30 - 2</p>
+                                        <p>12 × 30 = 360</p>
+                                        <p>12 × 2 = 24</p>
+                                        <p>360 - 24 = 336 students</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Problem 2</h3>
+                                    <p>If a book costs Gh₵75 and you buy 8 books, how much do you spend?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Mental strategy:</strong> Use the 8-times table shortcut (8 × 70 + 8 × 5)</p>
+                                        <p>8 × 70 = 560</p>
+                                        <p>8 × 5 = 40</p>
+                                        <p>560 + 40 = Gh₵600</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Problem 3</h3>
+                                    <p>A farmer harvested 365 oranges on Monday and 238 on Tuesday. How many oranges were harvested in total?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Mental strategy:</strong> Round and adjust</p>
+                                        <p>365 + 240 = 605</p>
+                                        <p>605 - 2 = 603 oranges</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Timed Test
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Word Problem Challenge
+                                    </h4>
+                                    <p class="game-description">Solve these word problems using mental math strategies as quickly as you can!</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                        <div class="word-problem-game">
+                                            <div class="problem-display">
+                                                <p class="problem-text">A box contains 24 pencils. If you take out 9 pencils, how many remain?</p>
+                                                <input type="number" class="answer-input" placeholder="Your answer">
+                                                <button class="submit-answer">Submit</button>
+                                            </div>
+                                            <div class="timer-score">
+                                                <p>Time: <span class="timer">60</span>s</p>
+                                                <p>Score: <span class="score">0</span></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> You have 60 seconds to solve as many problems as you can!</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // Simple game functionality for the word problem challenge
+            document.addEventListener('DOMContentLoaded', function() {
+                const problems = [
+                    {
+                        question: "A box contains 24 pencils. If you take out 9 pencils, how many remain?",
+                        answer: 15
+                    },
+                    {
+                        question: "If 5 oranges cost Gh₵3.50, how much do 10 oranges cost?",
+                        answer: 7
+                    },
+                    {
+                        question: "A classroom has 8 rows with 6 desks each. How many desks are there?",
+                        answer: 48
+                    },
+                    {
+                        question: "What is 25% of 200?",
+                        answer: 50
+                    },
+                    {
+                        question: "If a train travels 60 km in 1 hour, how far will it travel in 3 hours?",
+                        answer: 180
+                    }
+                ];
+
+                let currentProblem = 0;
+                let score = 0;
+                let timeLeft = 60;
+                let timer;
+
+                const problemText = document.querySelector('.problem-text');
+                const answerInput = document.querySelector('.answer-input');
+                const submitBtn = document.querySelector('.submit-answer');
+                const scoreDisplay = document.querySelector('.score');
+                const timerDisplay = document.querySelector('.timer');
+
+                function loadProblem() {
+                    if (currentProblem < problems.length) {
+                        problemText.textContent = problems[currentProblem].question;
+                        answerInput.value = '';
+                        answerInput.focus();
+                    } else {
+                        endGame();
+                    }
+                }
+
+                function startTimer() {
+                    timer = setInterval(function() {
+                        timeLeft--;
+                        timerDisplay.textContent = timeLeft;
+                        
+                        if (timeLeft <= 0) {
+                            endGame();
+                        }
+                    }, 1000);
+                }
+
+                function endGame() {
+                    clearInterval(timer);
+                    document.querySelector('.problem-display').innerHTML = `
+                        <h3>Game Over!</h3>
+                        <p>Your score: ${score} out of ${problems.length}</p>
+                        <button class="restart-game">Play Again</button>
+                    `;
+                    
+                    document.querySelector('.restart-game').addEventListener('click', function() {
+                        currentProblem = 0;
+                        score = 0;
+                        timeLeft = 60;
+                        scoreDisplay.textContent = score;
+                        timerDisplay.textContent = timeLeft;
+                        document.querySelector('.problem-display').innerHTML = `
+                            <p class="problem-text">${problems[0].question}</p>
+                            <input type="number" class="answer-input" placeholder="Your answer">
+                            <button class="submit-answer">Submit</button>
+                        `;
+                        loadProblem();
+                        startTimer();
+                    });
+                }
+
+                submitBtn.addEventListener('click', function() {
+                    const userAnswer = parseInt(answerInput.value);
+                    if (userAnswer === problems[currentProblem].answer) {
+                        score++;
+                        scoreDisplay.textContent = score;
+                    }
+                    currentProblem++;
+                    loadProblem();
+                });
+
+                // Start the game
+                loadProblem();
+                startTimer();
+            });
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

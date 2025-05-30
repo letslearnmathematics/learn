@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Mental Math Strategies | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn mental math strategies for JHS2 Mathematics including halving and doubling techniques.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Mental Math Strategies | JHS2 Mathematics">
+        <meta property="og:description" content="Learn mental math strategies including halving and doubling techniques for quick calculations.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/mental-math-strategies">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Mental Math Strategies</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Mental Math Strategies</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#halving-doubling"><i class="fas fa-chevron-right"></i> Halving & Doubling</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Practical Applications</a></li>
+                                <li><a href="#advanced"><i class="fas fa-chevron-right"></i> Advanced Techniques</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Mental Math</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Mental math strategies</strong> are techniques that allow us to perform calculations quickly and efficiently in our heads, without the need for paper, calculators, or other tools. These strategies leverage number properties and mathematical relationships to simplify complex problems.
+                                </p>
+                                <p>
+                                    In this lesson, we'll focus specifically on the <strong>halving and doubling</strong> strategy, which is particularly useful for multiplication problems. This technique takes advantage of the fact that sometimes it's easier to work with numbers that are half or double the original numbers in a calculation.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Halving and Doubling Section -->
+                        <section id="halving-doubling" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-divide"></i> Halving and Doubling Strategy
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of the halving and doubling strategy with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> The Basic Idea
+                                </h3>
+                                <p>
+                                    The halving and doubling strategy works because of the fundamental property of multiplication:
+                                </p>
+                                \[
+                                    (a \times b) = \left(\frac{a}{2} \times 2b\right) = \left(2a \times \frac{b}{2}\right)
+                                \]
+                                <p>
+                                    When one number is halved and the other is doubled, the product remains the same. We can use this to simplify multiplication problems by converting them into easier calculations.
+                                </p>
+                            </div>
+                            
+                            <!-- Method Cards -->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-step-forward"></i>
+                                        <h3>Step-by-Step Process</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Identify if one of the numbers can be easily halved (even numbers work best)</li>
+                                            <li>Halve one number while doubling the other</li>
+                                            <li>Repeat the process if it makes the calculation simpler</li>
+                                            <li>Multiply the resulting numbers</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-check-circle"></i>
+                                        <h3>When to Use</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>This strategy is particularly useful when:</p>
+                                        <ul>
+                                            <li>One number is even and can be easily halved</li>
+                                            <li>One number ends with 5 or 0</li>
+                                            <li>You're multiplying by numbers like 4, 8, 16, etc. (powers of 2)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Examples
+                                </h3>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1: 14 × 5</h4>
+                                    <p>
+                                        \[
+                                            \begin{align*}
+                                                14 \times 5 &= (14 \div 2) \times (5 \times 2) \\
+                                                &= 7 \times 10 \\
+                                                &= 70
+                                            \end{align*}
+                                        \]
+                                    </p>
+                                    <p>Halving 14 gives 7, doubling 5 gives 10, and 7 × 10 is much easier to calculate mentally.</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2: 16 × 25</h4>
+                                    <p>
+                                        \[
+                                            \begin{align*}
+                                                16 \times 25 &= (16 \div 2) \times (25 \times 2) \\
+                                                &= 8 \times 50 \quad \text{(we can simplify further)} \\
+                                                &= (8 \div 2) \times (50 \times 2) \\
+                                                &= 4 \times 100 \\
+                                                &= 400
+                                            \end{align*}
+                                        \]
+                                    </p>
+                                    <p>We applied the halving/doubling strategy twice to arrive at a simple multiplication by 100.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Use the halving and doubling strategy to calculate 18 × 15.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                                \begin{align*}
+                                                    18 \times 15 &= (18 \div 2) \times (15 \times 2) \\
+                                                    &= 9 \times 30 \\
+                                                    &= 270
+                                                \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Calculate 24 × 50 using the halving and doubling method.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                                \begin{align*}
+                                                    24 \times 50 &= (24 \div 2) \times (50 \times 2) \\
+                                                    &= 12 \times 100 \\
+                                                    &= 1,200
+                                                \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Find the product of 45 × 8 using mental math strategies.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                                \begin{align*}
+                                                    45 \times 8 &= (45 \times 2) \times (8 \div 2) \\
+                                                    &= 90 \times 4 \quad \text{(can simplify further)} \\
+                                                    &= (90 \times 2) \times (4 \div 2) \\
+                                                    &= 180 \times 2 \\
+                                                    &= 360
+                                                \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Use halving and doubling to calculate 125 × 16.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                                \begin{align*}
+                                                    125 \times 16 &= (125 \times 2) \times (16 \div 2) \\
+                                                    &= 250 \times 8 \quad \text{(simplify further)} \\
+                                                    &= (250 \times 2) \times (8 \div 2) \\
+                                                    &= 500 \times 4 \quad \text{(simplify again)} \\
+                                                    &= (500 \times 2) \times (4 \div 2) \\
+                                                    &= 1,000 \times 2 \\
+                                                    &= 2,000
+                                                \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Calculate 35 × 12 using mental math strategies.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                                \begin{align*}
+                                                    35 \times 12 &= (35 \times 2) \times (12 \div 2) \\
+                                                    &= 70 \times 6 \\
+                                                    &= 420
+                                                \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Practical Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shopping-cart"></i> Practical Applications
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-coins"></i> Real-World Uses
+                                </h3>
+                                <p>
+                                    The halving and doubling strategy is particularly useful in everyday situations like shopping, cooking, and budgeting. Here are some practical examples:
+                                </p>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1: Shopping Discounts</h4>
+                                    <p>If an item costs ₵35 each and is on sale for "buy 1 get 1 half off", what's the cost for 4 items?</p>
+                                    <p>
+                                        \[
+                                            \begin{align*}
+                                                \text{First pair:} & \quad 35 + (35 \div 2) = 35 + 17.50 = 52.50 \\
+                                                \text{Second pair:} & \quad \text{Same as first pair} = 52.50 \\
+                                                \text{Total:} & \quad 52.50 \times 2 = (50 \times 2) + (2.50 \times 2) = 100 + 5 = 105
+                                            \end{align*}
+                                        \]
+                                    </p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2: Recipe Adjustments</h4>
+                                    <p>A recipe calls for 250g of flour for 8 servings. How much flour for 12 servings?</p>
+                                    <p>
+                                        \[
+                                            \begin{align*}
+                                                \text{For 4 servings:} & \quad 250g \div 2 = 125g \\
+                                                \text{For 12 servings:} & \quad 250g + 125g = 375g
+                                            \end{align*}
+                                        \]
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Advanced Techniques Section -->
+                        <section id="advanced" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-brain"></i> Advanced Techniques
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chess"></i> Combining Strategies
+                                </h3>
+                                <p>
+                                    The halving and doubling strategy can be combined with other mental math techniques for even more powerful calculations:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>With Distributive Property</h4>
+                                        <p>Break numbers into parts that are easier to work with:</p>
+                                        \[
+                                            24 \times 25 = (20 \times 25) + (4 \times 25) = 500 + 100 = 600
+                                        \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>With Rounding</h4>
+                                        <p>Adjust numbers to make them easier to halve/double:</p>
+                                        \[
+                                            19 \times 25 \approx 20 \times 25 - 25 = 500 - 25 = 475
+                                        \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-magic"></i> Special Cases
+                                </h3>
+                                <p>
+                                    Some number combinations are particularly well-suited for halving/doubling:
+                                </p>
+                                <ul>
+                                    <li>Multiplying by 5: Halve the other number and multiply by 10</li>
+                                    <li>Multiplying by 25: Halve twice and multiply by 100</li>
+                                    <li>Multiplying by 125: Halve three times and multiply by 1000</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <h4>Example: 48 × 125</h4>
+                                    <p>
+                                        \[
+                                            \begin{align*}
+                                                48 \times 125 &= (48 \div 2) \times (125 \times 2) \\
+                                                &= 24 \times 250 \quad \text{(halve/double again)} \\
+                                                &= 12 \times 500 \quad \text{(halve/double once more)} \\
+                                                &= 6 \times 1,000 \\
+                                                &= 6,000
+                                            \end{align*}
+                                        \]
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Final Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Advanced Practice</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Calculate 64 × 125 using halving and doubling.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                                \begin{align*}
+                                                    64 \times 125 &= (64 \div 2) \times (125 \times 2) \\
+                                                    &= 32 \times 250 \\
+                                                    &= 16 \times 500 \\
+                                                    &= 8 \times 1,000 \\
+                                                    &= 8,000
+                                                \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find 22 × 45 using combined mental math strategies.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                                \begin{align*}
+                                                    22 \times 45 &= (20 \times 45) + (2 \times 45) \\
+                                                    &= 900 + 90 \\
+                                                    &= 990
+                                                \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A shop sells pencils at ₵12 each. What's the cost for 25 pencils?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                                \begin{align*}
+                                                    12 \times 25 &= (12 \div 2) \times (25 \times 2) \\
+                                                    &= 6 \times 50 \\
+                                                    &= 300 \text{ cedis}
+                                                \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your mental math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

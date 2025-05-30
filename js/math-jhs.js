@@ -467,9 +467,9 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Factors", url: "./math-jhs/jhs2/number/number-and-numeration-system/factors" }
             ],
             "Number Operations": [
-                { name: "Multiply & Divide By Powers of 10", url: "./math-jhs/jhs2/number/number-operations/multiply-and-divide-by-powers-of-10.html" },
-                { name: "Halving & Doubling Technique", url: "./math-jhs/jhs2/number/number-operations/halving-and-doubling.html" },
-                { name: "Products (Word Problems)", url: "./math-jhs/jhs2/number/number-operations/products-word-problems.html" },
+                { name: "Multiply & Divide By Powers of 10", url: "./math-jhs/jhs2/number/number-operations/multiply-and-divide-by-powers-of-10" },
+                { name: "Halving & Doubling Technique", url: "./math-jhs/jhs2/number/number-operations/halving-and-doubling" },
+                { name: "Products (Word Problems)", url: "./math-jhs/jhs2/number/number-operations/products-word-problems" },
                 { name: "Addition & Subtraction", url: "./math-jhs/jhs2/number/number-operations/addition-and-subtraction.html" },
                 { name: "Multiplication & Division", url: "./math-jhs/jhs2/number/number-operations/multiplication-and-division.html" },
                 { name: "Operations (Word Problems)", url: "./math-jhs/jhs2/number/number-operations/operations-word-problems.html" },
