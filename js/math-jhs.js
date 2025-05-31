@@ -485,58 +485,58 @@ document.addEventListener("DOMContentLoaded", function() {
             ],
             "Ratios and Proportion": [
                 { name: "Conversion of Measurement Units", url: "./math-jhs/jhs2/number/ratios-and-proportion/conversion-measurement-units" },
-                { name: "Unit Rate", url: "./math-jhs/jhs2/number/ratios-and-proportion/unit-rate.html" },
-                { name: "Distance-Time Graph (Travel Graph)", url: "./math-jhs/jhs2/number/ratios-and-proportion/distance-time-graph.html" },
-                { name: "Proportional Relations", url: "./math-jhs/jhs2/number/ratios-and-proportion/proportional-relations.html" },
-                { name: "Constant of Proportionality", url: "./math-jhs/jhs2/number/ratios-and-proportion/constant-of-proportionality.html" }
+                { name: "Unit Rate", url: "./math-jhs/jhs2/number/ratios-and-proportion/unit-rate" },
+                { name: "Distance-Time Graph (Travel Graph)", url: "./math-jhs/jhs2/number/ratios-and-proportion/distance-time-graph" },
+                { name: "Proportional Relations", url: "./math-jhs/jhs2/number/ratios-and-proportion/proportional-relations" },
+                { name: "Constant of Proportionality", url: "./math-jhs/jhs2/number/ratios-and-proportion/constant-of-proportionality" }
             ],
             "Patterns and Relations": [
-                { name: "Gradient & Equation Of A Line", url: "b8-2-1-1-1lesson1" },
-                { name: "Graphs Of Linear Relations ", url: "b8-2-1-1-2lesson1" },
-                { name: "Word Problems (Graphs)", url: "b8-2-1-1-3lesson1" }
+                { name: "Gradient & Equation Of A Line", url: "./math-jhs/jhs2/algebra/patterns-and-relations/gradient-and-equation-of-line.html" },
+                { name: "Graphs Of Linear Relations ", url: "./math-jhs/jhs2/algebra/patterns-and-relations/graphs-linear-relations.html" },
+                { name: "Word Problems (Graphs)", url: "./math-jhs/jhs2/algebra/patterns-and-relations/word-problems-graphs.html" }
             ],
             "Algebraic Expressions": [
-                { name: "Distributive Property", url: "b8-2-2-1-1lesson1" },
-                { name: "Operations on Algebraic Expressions", url: "b8-2-2-1-2lesson1" },
-                { name: "Substitution Of Values", url: "b8-2-2-1-3lesson1" },
-                { name: "Factorisation", url: "b8-2-2-1-4lesson1" }
+                { name: "Distributive Property", url: "./math-jhs/jhs2/algebra/algebraic-expressions/distributive-property.html" },
+                { name: "Operations on Algebraic Expressions", url: "./math-jhs/jhs2/algebra/algebraic-expressions/operations-on-algebra.html" },
+                { name: "Substitution Of Values", url: "./math-jhs/jhs2/algebra/algebraic-expressions/substitution-of-values.html" },
+                { name: "Factorisation", url: "./math-jhs/jhs2/algebra/algebraic-expressions/factorisation.html" }
             ],
             "Variables and Equations": [
-                { name: "Word Problems & Linear Inequalities", url: "b8-2-3-1-1lesson1" },
-                { name: "Simple Linear Inequalities", url: "b8-2-3-1-2lesson1" },
-                { name: "Solution Set of Linear Inequalities", url: "b8-2-3-1-3lesson1" }
+                { name: "Word Problems & Linear Inequalities", url: "./math-jhs/jhs2/algebra/variables-and-equations/word-problems-linear-inequalities.html" },
+                { name: "Simple Linear Inequalities", url: "./math-jhs/jhs2/algebra/variables-and-equations/simple-linear-inequalities.html" },
+                { name: "Solution Set of Linear Inequalities", url: "./math-jhs/jhs2/algebra/variables-and-equations/solution-set.html" }
             ],
             "Shapes and Space": [
-                { name: "Alternate & Corresponding Angles", url: "b8-3-1-1-1lesson1" },
-                { name: "Total Angles in a Triangle ", url: "b8-3-1-1-2lesson1" },
-                { name: "Construction & Bisection 120&deg;, 105&deg;, 135&deg; and 150&deg;", url: "b8-3-1-2-1lesson1" },
-                { name: "Construct Triangles", url: "b8-3-1-2-2lesson1" },
-                { name: "Loci", url: "b8-3-1-2-3lesson1" }
+                { name: "Alternate & Corresponding Angles", url: "./math-jhs/jhs2/geometry/shapes-and-space/alternate-corresponding-angles.html" },
+                { name: "Total Angles in a Triangle ", url: "./math-jhs/jhs2/geometry/shapes-and-space/total-angles-triangles.html" },
+                { name: "Construction & Bisection 120&deg;, 105&deg;, 135&deg; and 150&deg;", url: "./math-jhs/jhs2/geometry/shapes-and-space/construct-bisect-angles" },
+                { name: "Construct Triangles", url: "./math-jhs/jhs2/geometry/shapes-and-space/construction-triangles.html" },
+                { name: "Loci", url: "./math-jhs/jhs2/geometry/shapes-and-space/loci.html" }
             ],
             "Measurements": [
-                { name: "Area of Circles", url: "b8-3-2-1-1lesson1" },
-                { name: "Right-Angled Triangles", url: "b8-3-2-1-2lesson1" },
-                { name: "The Pythagoras Theorem", url: "b8-3-2-1-3lesson1" },
-                { name: "Word Problems (Pythagoras Theorem)", url: "b8-3-2-1-4lesson1" },
-                { name: "Trigonometric Ratios (sine, cosine tangent)", url: "b8-3-2-1-5lesson1" },
-                { name: "Vectors", url: "b8-3-2-2-1lesson1" },
-                { name: "Vector Equality", url: "b8-3-2-2-2lesson1" }
+                { name: "Area of Circles", url: "./math-jhs/jhs2/geometry/measurement/area-circles.html" },
+                { name: "Right-Angled Triangles", url: "./math-jhs/jhs2/geometry/measurement/right-angled-triangles.html" },
+                { name: "The Pythagoras Theorem", url: "./math-jhs/jhs2/geometry/measurement/the-pythagora-theorem.html" },
+                { name: "Word Problems (Pythagoras Theorem)", url: "./math-jhs/jhs2/geometry/measurement/word-problems-pythagoras-theorem.html" },
+                { name: "Trigonometric Ratios (sine, cosine tangent)", url: "./math-jhs/jhs2/geometry/measurement/trigonometric-ratios.html" },
+                { name: "Vectors", url: "./math-jhs/jhs2/geometry/measurement/vectors.html" },
+                { name: "Vector Equality", url: "./math-jhs/jhs2/geometry/measurement/vector-equality.html" }
             ],
             "Position and Transformation": [
-                { name: "Rotation", url: "b8-3-3-1-1lesson1" },
-                { name: "Rotations in a Coordinate Plane", url: "b8-3-3-1-2lesson1" },
-                { name: "Congruent Shapes", url: "b8-3-3-1-3lesson1" }
+                { name: "Rotation", url: "./math-jhs/jhs2/geometry/position-and-transformation/rotation.html" },
+                { name: "Rotations in a Coordinate Plane", url: "./math-jhs/jhs2/geometry/position-and-transformation/rotation-coordinate-plane.html" },
+                { name: "Congruent Shapes", url: "./math-jhs/jhs2/geometry/position-and-transformation/congruent-shapes.html" }
             ],
             "Data": [
-                { name: "Types of Data", url: "b8-4-1-1-1lesson1" },
-                { name: "Methods of Collecting Data", url: "b8-4-1-1-2lesson1" },
-                { name: "Organising And Analysing Data", url: "b8-4-1-1-3lesson1" },
-                { name: "Measures of Central Tendency", url: "b8-4-1-2-1lesson1" },
-                { name: "Justification of a Chosen Measure of Central Tendency", url: "b8-4-1-2-2lesson1" }
+                { name: "Types of Data", url: "./math-jhs/jhs2/handling-data/data/types-of-data.html" },
+                { name: "Methods of Collecting Data", url: "./math-jhs/jhs2/handling-data/data/methods-of-collecting-data.html" },
+                { name: "Organising And Analysing Data", url: "./math-jhs/jhs2/handling-data/data/organising-and-analysing-data.html" },
+                { name: "Measures of Central Tendency", url: "./math-jhs/jhs2/handling-data/data/measures-of-central-tendency.html" },
+                { name: "Justification of a Chosen Measure of Central Tendency", url: "./math-jhs/jhs2/handling-data/data/justification.html" }
             ],
             "Chance or Probability": [
-                { name: "Independent Events", url: "b8-4-2-1-1lesson1" },
-                { name: "Probability as Fractions, Decimals & Percentages", url: "b8-4-2-1-2lesson1" }
+                { name: "Independent Events", url: "./math-jhs/jhs2/handling-data/chance-or-probability/independent-events.html" },
+                { name: "Probability as Fractions, Decimals & Percentages", url: "./math-jhs/jhs2/handling-data/chance-or-probability/probability-as-fractions-percentages.html" }
             ]
         },
         "jhs3": {
