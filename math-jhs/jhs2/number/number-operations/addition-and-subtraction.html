@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Add and Subtract Large Numbers | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Adding and Subtracting Large Numbers for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Add and Subtract Large Numbers | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Add and Subtract Large Numbers Using Partitioning and Place Value System">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/add-subtract-large-numbers">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Add and Subtract Large Numbers</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Add & Subtract Large Numbers</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#partitioning"><i class="fas fa-chevron-right"></i> Partitioning Method</a></li>
+                                <li><a href="#place-value"><i class="fas fa-chevron-right"></i> Place Value System</a></li>
+                                <li><a href="#decimal-numbers"><i class="fas fa-chevron-right"></i> Decimal Numbers</a></li>
+                                <!--<li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>-->
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Large Numbers</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Adding and subtracting large numbers</strong> (more than four digits) requires 
+                                    a solid understanding of place value and systematic methods. In this lesson, we'll 
+                                    explore two powerful techniques: <strong>partitioning</strong> (expanded form) and 
+                                    the <strong>place value system</strong>.
+                                </p>
+                                <p>
+                                    These methods work for both whole numbers and decimal numbers, helping you break 
+                                    down complex calculations into simpler, more manageable steps.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Partitioning Method Section -->
+                        <section id="partitioning" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Partitioning Method
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of the partitioning method with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> What is Partitioning?
+                                </h3>
+                                <p>
+                                    Partitioning means breaking down a number into its constituent parts based on place value. 
+                                    This is also known as writing a number in <strong>expanded form</strong>.
+                                </p>
+                                <div class="math-example">
+                                    <p>For example, the number 45,678 can be partitioned as:</p>
+                                    \[ 45,678 = 40,000 + 5,000 + 600 + 70 + 8 \]
+                                </div>
+                            </div>
+                            
+                            <!-- Adding with Partitioning -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-circle"></i> Adding Using Partitioning
+                                </h3>
+                                <p>To add large numbers using partitioning:</p>
+                                <ol>
+                                    <li>Write each number in expanded form</li>
+                                    <li>Add the corresponding place values</li>
+                                    <li>Combine the results</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Add 23,456 and 12,345</p>
+                                    \[ 
+                                    \begin{align*}
+                                    23,456 &= 20,000 + 3,000 + 400 + 50 + 6 \\
+                                    12,345 &= 10,000 + 2,000 + 300 + 40 + 5 \\
+                                    \hline
+                                    \text{Sum} &= 30,000 + 5,000 + 700 + 90 + 11 \\
+                                    &= 30,000 + 5,000 + 700 + 100 + 1 \quad (\text{regrouping}) \\
+                                    &= 30,000 + 5,000 + 800 + 1 \\
+                                    &= 35,801
+                                    \end{align*}
+                                    \]
+                                </div>
+                            </div>
+                            
+                            <!-- Subtracting with Partitioning -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-minus-circle"></i> Subtracting Using Partitioning
+                                </h3>
+                                <p>To subtract large numbers using partitioning:</p>
+                                <ol>
+                                    <li>Write each number in expanded form</li>
+                                    <li>Subtract the corresponding place values</li>
+                                    <li>Combine the results (adjusting if needed)</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Subtract 12,345 from 23,456</p>
+                                    \[ 
+                                    \begin{align*}
+                                    23,456 &= 20,000 + 3,000 + 400 + 50 + 6 \\
+                                    12,345 &= 10,000 + 2,000 + 300 + 40 + 5 \\
+                                    \hline
+                                    \text{Difference} &= (20,000-10,000) + (3,000-2,000) + (400-300) + (50-40) + (6-5) \\
+                                    &= 10,000 + 1,000 + 100 + 10 + 1 \\
+                                    &= 11,111
+                                    \end{align*}
+                                    \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Use partitioning to add: 34,567 + 12,345</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[ 
+                                            \begin{align*}
+                                            34,567 &= 30,000 + 4,000 + 500 + 60 + 7 \\
+                                            12,345 &= 10,000 + 2,000 + 300 + 40 + 5 \\
+                                            \hline
+                                            \text{Sum} &= 40,000 + 6,000 + 800 + 100 + 12 \\
+                                            &= 40,000 + 6,000 + 800 + 100 + 12 \\
+                                            &= 40,000 + 6,000 + 900 + 12 \\
+                                            &= 46,912
+                                            \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Use partitioning to subtract: 45,678 - 23,456</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[ 
+                                            \begin{align*}
+                                            45,678 &= 40,000 + 5,000 + 600 + 70 + 8 \\
+                                            23,456 &= 20,000 + 3,000 + 400 + 50 + 6 \\
+                                            \hline
+                                            \text{Difference} &= 20,000 + 2,000 + 200 + 20 + 2 \\
+                                            &= 22,222
+                                            \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Use partitioning to add: 123,456 + 78,901</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[ 
+                                            \begin{align*}
+                                            123,456 &= 100,000 + 20,000 + 3,000 + 400 + 50 + 6 \\
+                                            78,901 &= 70,000 + 8,000 + 900 + 0 + 1 \\
+                                            \hline
+                                            \text{Sum} &= 170,000 + 28,000 + 3,900 + 400 + 50 + 7 \\
+                                            &= 170,000 + 28,000 + 3,900 + 400 + 50 + 7 \\
+                                            &= 198,000 + 4,300 + 57 \\
+                                            &= 202,357
+                                            \end{align*}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Place Value System Section -->
+                        <section id="place-value" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Place Value System
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of place value system with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Understanding Place Value
+                                </h3>
+                                <p>
+                                    The place value system organizes numbers based on the position of each digit. 
+                                    Each position represents a power of 10, making it easier to perform calculations.
+                                </p>
+                                <div class="math-example">
+                                    <p>For the number 45,678:</p>
+                                    <table class="place-value-table">
+                                        <tr>
+                                            <th>Ten Thousands</th>
+                                            <th>Thousands</th>
+                                            <th>Hundreds</th>
+                                            <th>Tens</th>
+                                            <th>Units</th>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <!-- Adding with Place Value -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-circle"></i> Adding Using Place Value
+                                </h3>
+                                <p>To add large numbers using place value:</p>
+                                <ol>
+                                    <li>Write numbers vertically aligned by place value</li>
+                                    <li>Add from right to left (units first)</li>
+                                    <li>Carry over when sums exceed 9</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Add 23,456 and 12,345</p>
+                                    \[
+                                    \begin{array}{r}
+                                    \phantom{1}23,456 \\
+                                    +\phantom{2}12,345 \\
+                                    \hline
+                                    \phantom{1}35,801 \\
+                                    \end{array}
+                                    \]
+                                    <p>Step-by-step:</p>
+                                    <ol>
+                                        <li>Units: 6 + 5 = 11 (write 1, carry 1)</li>
+                                        <li>Tens: 5 + 4 + 1 (carry) = 10 (write 0, carry 1)</li>
+                                        <li>Hundreds: 4 + 3 + 1 (carry) = 8</li>
+                                        <li>Thousands: 3 + 2 = 5</li>
+                                        <li>Ten Thousands: 2 + 1 = 3</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <!-- Subtracting with Place Value -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-minus-circle"></i> Subtracting Using Place Value
+                                </h3>
+                                <p>To subtract large numbers using place value:</p>
+                                <ol>
+                                    <li>Write numbers vertically aligned by place value</li>
+                                    <li>Subtract from right to left (units first)</li>
+                                    <li>Borrow when needed</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Subtract 12,345 from 23,456</p>
+                                    \[
+                                    \begin{array}{r}
+                                    23,456 \\
+                                    -\phantom{2}12,345 \\
+                                    \hline
+                                    \phantom{1}11,111 \\
+                                    \end{array}
+                                    \]
+                                    <p>Step-by-step:</p>
+                                    <ol>
+                                        <li>Units: 6 - 5 = 1</li>
+                                        <li>Tens: 5 - 4 = 1</li>
+                                        <li>Hundreds: 4 - 3 = 1</li>
+                                        <li>Thousands: 3 - 2 = 1</li>
+                                        <li>Ten Thousands: 2 - 1 = 1</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Use place value to add: 56,789 + 34,567</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                            \begin{array}{r}
+                                            \phantom{1}56,789 \\
+                                            +\phantom{5}34,567 \\
+                                            \hline
+                                            \phantom{1}91,356 \\
+                                            \end{array}
+                                            \]
+                                        </p>
+                                        <p>Step-by-step:</p>
+                                        <ol>
+                                            <li>Units: 9 + 7 = 16 (write 6, carry 1)</li>
+                                            <li>Tens: 8 + 6 + 1 = 15 (write 5, carry 1)</li>
+                                            <li>Hundreds: 7 + 5 + 1 = 13 (write 3, carry 1)</li>
+                                            <li>Thousands: 6 + 4 + 1 = 11 (write 1, carry 1)</li>
+                                            <li>Ten Thousands: 5 + 3 + 1 = 9</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Use place value to subtract: 78,901 - 56,789</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                            \begin{array}{r}
+                                            78,901 \\
+                                            -\phantom{7}56,789 \\
+                                            \hline
+                                            \phantom{1}22,112 \\
+                                            \end{array}
+                                            \]
+                                        </p>
+                                        <p>Step-by-step:</p>
+                                        <ol>
+                                            <li>Units: 1 - 9 (need to borrow)</li>
+                                            <li>Tens: 0 - 1 (after borrow) = 9 - 8 = 1</li>
+                                            <li>Hundreds: 8 - 1 (after borrow) = 7 - 7 = 0</li>
+                                            <li>Thousands: 7 - 1 (after borrow) = 6 - 6 = 0</li>
+                                            <li>Ten Thousands: 7 - 5 = 2</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Use place value to add: 123,456 + 456,789</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                            \begin{array}{r}
+                                            123,456 \\
+                                            +456,789 \\
+                                            \hline
+                                            580,245 \\
+                                            \end{array}
+                                            \]
+                                        </p>
+                                        <p>Step-by-step:</p>
+                                        <ol>
+                                            <li>Units: 6 + 9 = 15 (write 5, carry 1)</li>
+                                            <li>Tens: 5 + 8 + 1 = 14 (write 4, carry 1)</li>
+                                            <li>Hundreds: 4 + 7 + 1 = 12 (write 2, carry 1)</li>
+                                            <li>Thousands: 3 + 6 + 1 = 10 (write 0, carry 1)</li>
+                                            <li>Ten Thousands: 2 + 5 + 1 = 8</li>
+                                            <li>Hundred Thousands: 1 + 4 = 5</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Decimal Numbers Section -->
+                        <section id="decimal-numbers" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Decimal Numbers
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of decimal operations with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Decimal Place Value
+                                </h3>
+                                <p>
+                                    Decimal numbers extend the place value system to the right of the decimal point. 
+                                    Each position represents a negative power of 10.
+                                </p>
+                                <div class="math-example">
+                                    <p>For the number 45.678:</p>
+                                    <table class="place-value-table">
+                                        <tr>
+                                            <th>Tens</th>
+                                            <th>Units</th>
+                                            <th>Decimal Point</th>
+                                            <th>Tenths</th>
+                                            <th>Hundredths</th>
+                                            <th>Thousandths</th>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>5</td>
+                                            <td>.</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>8</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <!-- Adding Decimals -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-circle"></i> Adding Decimals
+                                </h3>
+                                <p>To add decimal numbers:</p>
+                                <ol>
+                                    <li>Align the decimal points vertically</li>
+                                    <li>Add zeros to make numbers the same length</li>
+                                    <li>Add as with whole numbers</li>
+                                    <li>Place the decimal point in the answer directly below the others</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Add 23.456 and 12.345</p>
+                                    \[
+                                    \begin{array}{r}
+                                    \phantom{1}23.456 \\
+                                    +\phantom{2}12.345 \\
+                                    \hline
+                                    \phantom{1}35.801 \\
+                                    \end{array}
+                                    \]
+                                </div>
+                            </div>
+                            
+                            <!-- Subtracting Decimals -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-minus-circle"></i> Subtracting Decimals
+                                </h3>
+                                <p>To subtract decimal numbers:</p>
+                                <ol>
+                                    <li>Align the decimal points vertically</li>
+                                    <li>Add zeros to make numbers the same length</li>
+                                    <li>Subtract as with whole numbers</li>
+                                    <li>Place the decimal point in the answer directly below the others</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Subtract 12.345 from 23.456</p>
+                                    \[
+                                    \begin{array}{r}
+                                    23.456 \\
+                                    -\phantom{2}12.345 \\
+                                    \hline
+                                    \phantom{1}11.111 \\
+                                    \end{array}
+                                    \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Add: 34.567 + 12.345</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                            \begin{array}{r}
+                                            34.567 \\
+                                            +\phantom{3}12.345 \\
+                                            \hline
+                                            46.912 \\
+                                            \end{array}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Subtract: 45.678 - 23.456</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                            \begin{array}{r}
+                                            45.678 \\
+                                            -\phantom{4}23.456 \\
+                                            \hline
+                                            22.222 \\
+                                            \end{array}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Add: 123.456 + 78.901</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            \[
+                                            \begin{array}{r}
+                                            123.456 \\
+                                            +\phantom{12}78.901 \\
+                                            \hline
+                                            202.357 \\
+                                            \end{array}
+                                            \]
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

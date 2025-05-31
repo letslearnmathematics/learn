@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Powers of Natural Numbers | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on solving real life problems involving powers of natural numbers for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Powers of Natural Numbers | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to solve real life problems involving powers of natural numbers (indices)">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/powers-of-natural-numbers">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Powers of Natural Numbers</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Powers of Natural Numbers</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#laws-of-indices"><i class="fas fa-chevron-right"></i> Laws of Indices</a></li>
+                                <li><a href="#simple-problems"><i class="fas fa-chevron-right"></i> Simple Problems</a></li>
+                                <li><a href="#real-life-applications"><i class="fas fa-chevron-right"></i> Real Life Applications</a></li>
+                                <li><a href="#advanced-problems"><i class="fas fa-chevron-right"></i> Advanced Problems</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Powers of Natural Numbers</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Powers of natural numbers</strong> (also called indices) are a way to express repeated multiplication of the same number. 
+                                    They are written as a small number (the exponent) to the upper right of a base number.
+                                </p>
+                                <p>
+                                    For example, \( 5^3 \) means \( 5 \times 5 \times 5 \), which equals 125. Here, 5 is the base and 3 is the exponent.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Examples of powers:</p>
+                                    \[ 
+                                    \begin{align*}
+                                        2^4 &= 2 \times 2 \times 2 \times 2 = 16 \\
+                                        3^2 &= 3 \times 3 = 9 \\
+                                        10^3 &= 10 \times 10 \times 10 = 1000
+                                    \end{align*}
+                                    \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Base and Exponent:</h4>
+                                        <p>In \( a^n \):</p>
+                                        <ul>
+                                            <li>\( a \) is called the <strong>base</strong></li>
+                                            <li>\( n \) is called the <strong>exponent</strong> or <strong>index</strong></li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Special Cases:</h4>
+                                        <p>Any number to the power of 1 is itself: \( a^1 = a \)</p>
+                                        <p>Any number to the power of 0 is 1: \( a^0 = 1 \) (where \( a \neq 0 \))</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Laws of Indices Section -->
+                        <section id="laws-of-indices" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Laws of Indices
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of the laws of indices with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> The Laws
+                                </h3>
+                                <p>There are several important laws that govern how indices work:</p>      
+                            </div>
+                            
+                            <!-- Laws -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Remember These Rules
+                                </h3>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Multiplication Rule</h4>
+                                        \[ a^m \times a^n = a^{m+n} \]
+                                        <p>When multiplying powers with the same base, add the exponents.</p>
+                                        <div class="math-example">
+                                            \[ 2^3 \times 2^4 = 2^{3+4} = 2^7 = 128 \]
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Division Rule</h4>
+                                        \[ \frac{a^m}{a^n} = a^{m-n} \]
+                                        <p>When dividing powers with the same base, subtract the exponents.</p>
+                                        <div class="math-example">
+                                            \[ \frac{5^6}{5^2} = 5^{6-2} = 5^4 = 625 \]
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Power of a Power</h4>
+                                        \[ (a^m)^n = a^{m \times n} \]
+                                        <p>When raising a power to another power, multiply the exponents.</p>
+                                        <div class="math-example">
+                                            \[ (3^2)^3 = 3^{2 \times 3} = 3^6 = 729 \]
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Power of a Product</h4>
+                                        \[ (ab)^n = a^n \times b^n \]
+                                        <p>When raising a product to a power, raise each factor to that power.</p>
+                                        <div class="math-example">
+                                            \[ (2 \times 5)^3 = 2^3 \times 5^3 = 8 \times 125 = 1000 \]
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Power of a Quotient</h4>
+                                        \[ \left(\frac{a}{b}\right)^n = \frac{a^n}{b^n} \]
+                                        <p>When raising a fraction to a power, raise both numerator and denominator to that power.</p>
+                                        <div class="math-example">
+                                            \[ \left(\frac{4}{3}\right)^2 = \frac{4^2}{3^2} = \frac{16}{9} \]
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Negative Exponents</h4>
+                                        \[ a^{-n} = \frac{1}{a^n} \]
+                                        <p>A negative exponent means the reciprocal of the positive exponent.</p>
+                                        <div class="math-example">
+                                            \[ 2^{-3} = \frac{1}{2^3} = \frac{1}{8} \]
+                                        </div>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Fractional Exponents</h4>
+                                        \[ a^{\frac{1}{n}} = \sqrt[n]{a} \]
+                                        <p>A fractional exponent with numerator 1 represents a root.</p>
+                                        <div class="math-example">
+                                            \[ 8^{\frac{1}{3}} = \sqrt[3]{8} = 2 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Simplify \( 3^4 \times 3^5 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the multiplication rule:</p>
+                                        \[ 3^4 \times 3^5 = 3^{4+5} = 3^9 = 19683 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Simplify \( \frac{7^8}{7^3} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the division rule:</p>
+                                        \[ \frac{7^8}{7^3} = 7^{8-3} = 7^5 = 16807 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Simplify \( (2^3)^4 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the power of a power rule:</p>
+                                        \[ (2^3)^4 = 2^{3 \times 4} = 2^{12} = 4096 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Simplify \( 5^{-2} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the negative exponent rule:</p>
+                                        \[ 5^{-2} = \frac{1}{5^2} = \frac{1}{25} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Simplify \( 16^{\frac{1}{2}} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the fractional exponent rule:</p>
+                                        \[ 16^{\frac{1}{2}} = \sqrt{16} = 4 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Simple Problems Section -->
+                        <section id="simple-problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Simple Problems
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Basic Applications
+                                </h3>
+                                <p>
+                                    Let's apply the laws of indices to solve some basic problems. These will help build your understanding before we move to more complex real-life applications.
+                                </p>
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Combining Rules</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Often problems require using multiple rules together:</p>
+                                        <div class="math-example">
+                                            <p>Simplify \( \frac{(2^3 \times 2^4)^2}{2^5} \)</p>
+                                            <p><strong>Solution:</strong></p>
+                                            \[
+                                            \begin{align*}
+                                                \frac{(2^3 \times 2^4)^2}{2^5} &= \frac{(2^{3+4})^2}{2^5} \quad \text{(Multiplication rule)} \\
+                                                &= \frac{(2^7)^2}{2^5} \\
+                                                &= \frac{2^{7 \times 2}}{2^5} \quad \text{(Power of a power)} \\
+                                                &= \frac{2^{14}}{2^5} \\
+                                                &= 2^{14-5} \quad \text{(Division rule)} \\
+                                                &= 2^9 \\
+                                                &= 512
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Equations with Indices</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Solve for \( x \) in equations involving indices:</p>
+                                        <div class="math-example">
+                                            <p>Solve \( 3^{x+2} = 81 \)</p>
+                                            <p><strong>Solution:</strong></p>
+                                            \[
+                                            \begin{align*}
+                                                3^{x+2} &= 81 \\
+                                                3^{x+2} &= 3^4 \quad \text{(Express 81 as power of 3)} \\
+                                                x + 2 &= 4 \quad \text{(Since bases are equal, exponents must be equal)} \\
+                                                x &= 4 - 2 \\
+                                                x &= 2
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Simplify \( \frac{(3^2 \times 3^5)^2}{3^6} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                            \frac{(3^2 \times 3^5)^2}{3^6} &= \frac{(3^{2+5})^2}{3^6} \\
+                                            &= \frac{(3^7)^2}{3^6} \\
+                                            &= \frac{3^{14}}{3^6} \\
+                                            &= 3^{14-6} \\
+                                            &= 3^8 \\
+                                            &= 6561
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve for \( x \) in \( 2^{x-1} = 16 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                            2^{x-1} &= 16 \\
+                                            2^{x-1} &= 2^4 \\
+                                            x - 1 &= 4 \\
+                                            x &= 5
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Simplify \( \left(\frac{5^3 \times 5^{-2}}{5^4}\right)^2 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                            \left(\frac{5^3 \times 5^{-2}}{5^4}\right)^2 &= \left(\frac{5^{3+(-2)}}{5^4}\right)^2 \\
+                                            &= \left(\frac{5^1}{5^4}\right)^2 \\
+                                            &= \left(5^{1-4}\right)^2 \\
+                                            &= \left(5^{-3}\right)^2 \\
+                                            &= 5^{-6} \\
+                                            &= \frac{1}{5^6} \\
+                                            &= \frac{1}{15625}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Real Life Applications Section -->
+                        <section id="real-life-applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Real Life Applications
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Practical Uses
+                                </h3>
+                                <p>
+                                    Powers of natural numbers are used in many real-world situations. Here are some common applications:
+                                </p>
+                            </div>
+                            
+                            <!-- Applications-->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Population Growth</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Population often grows exponentially, which can be modeled using indices:</p>
+                                        <div class="math-example">
+                                            <p>A bacteria population doubles every hour. If there are initially 100 bacteria, how many will there be after 6 hours?</p>
+                                            <p><strong>Solution:</strong></p>
+                                            \[
+                                            \begin{align*}
+                                                \text{Final population} &= \text{Initial} \times 2^{\text{hours}} \\
+                                                &= 100 \times 2^6 \\
+                                                &= 100 \times 64 \\
+                                                &= 6400 \text{ bacteria}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Compound Interest</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Money invested grows exponentially with compound interest:</p>
+                                        <div class="math-example">
+                                            <p>If you invest Gh₵1000 at 5% annual interest compounded yearly, what will be the value after 3 years?</p>
+                                            <p><strong>Solution:</strong></p>
+                                            \[
+                                            \begin{align*}
+                                                A &= P(1 + r)^n \\
+                                                &= 1000(1 + 0.05)^3 \\
+                                                &= 1000(1.05)^3 \\
+                                                &= 1000 \times 1.157625 \\
+                                                &= \text{Gh₵}1157.63
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Computer Memory</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Computer memory sizes use powers of 2:</p>
+                                        <div class="math-example">
+                                            <p>How many bytes are in 4 kilobytes (KB) if 1KB = 2<sup>10</sup> bytes?</p>
+                                            <p><strong>Solution:</strong></p>
+                                            \[
+                                            \begin{align*}
+                                                4 \text{KB} &= 4 \times 2^{10} \text{ bytes} \\
+                                                &= 2^2 \times 2^{10} \\
+                                                &= 2^{12} \\
+                                                &= 4096 \text{ bytes}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A town's population grows at 10% per year. If the current population is 20,000, what will it be in 5 years?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                            \text{Future population} &= 20000 \times (1 + 0.10)^5 \\
+                                            &= 20000 \times (1.10)^5 \\
+                                            &= 20000 \times 1.61051 \\
+                                            &= 32210 \text{ people}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A computer has 8GB of RAM. How many bytes is this if 1GB = 2<sup>30</sup> bytes?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                            8 \text{GB} &= 8 \times 2^{30} \text{ bytes} \\
+                                            &= 2^3 \times 2^{30} \\
+                                            &= 2^{33} \\
+                                            &= 8,589,934,592 \text{ bytes}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A radioactive substance halves every 3 hours. If you start with 512g, how much remains after 15 hours?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                            \text{Number of half-lives} &= \frac{15}{3} = 5 \\
+                                            \text{Remaining amount} &= 512 \times \left(\frac{1}{2}\right)^5 \\
+                                            &= 512 \times \frac{1}{32} \\
+                                            &= 16 \text{g}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Advanced Problems Section -->
+                        <section id="advanced-problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Advanced Problems
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Challenging Applications
+                                </h3>
+                                <p>
+                                    Now let's tackle some more complex problems that combine multiple concepts and require deeper thinking.
+                                </p>
+                            </div>
+                            
+                            <!-- Advanced Problems-->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Combined Growth</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <div class="math-example">
+                                            <p>A bank offers two investment options:</p>
+                                            <p>Option A: 8% interest compounded annually</p>
+                                            <p>Option B: 2% interest compounded quarterly</p>
+                                            <p>Which is better for a 2-year investment of Gh₵10,000?</p>
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Option A:</p>
+                                            \[
+                                            \begin{align*}
+                                                A &= 10000(1 + 0.08)^2 \\
+                                                &= 10000 \times 1.1664 \\
+                                                &= \text{Gh₵}11,664
+                                            \end{align*}
+                                            \]
+                                            <p>Option B (quarterly means n=4):</p>
+                                            \[
+                                            \begin{align*}
+                                                A &= 10000\left(1 + \frac{0.02}{4}\right)^{4 \times 2} \\
+                                                &= 10000(1.005)^8 \\
+                                                &= 10000 \times 1.0407 \\
+                                                &= \text{Gh₵}10,407
+                                            \end{align*}
+                                            \]
+                                            <p>Option A is better.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Scientific Notation</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <div class="math-example">
+                                            <p>Light travels at approximately \( 3 \times 10^8 \) m/s. How far does it travel in one day?</p>
+                                            <p><strong>Solution:</strong></p>
+                                            \[
+                                            \begin{align*}
+                                                \text{Distance} &= \text{Speed} \times \text{Time} \\
+                                                &= 3 \times 10^8 \times (24 \times 60 \times 60) \\
+                                                &= 3 \times 10^8 \times 86400 \\
+                                                &= 3 \times 10^8 \times 8.64 \times 10^4 \\
+                                                &= 25.92 \times 10^{8+4} \\
+                                                &= 2.592 \times 10^{13} \text{ meters}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A computer's processing speed doubles every 18 months (Moore's Law). If a computer today processes 1 billion operations per second, how many operations will it process in 6 years?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                            \text{Number of periods} &= \frac{6 \times 12}{18} = 4 \\
+                                            \text{Operations} &= 1 \times 10^9 \times 2^4 \\
+                                            &= 16 \times 10^9 \\
+                                            &= 16 \text{ billion operations/second}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>The area of Ghana is approximately \( 2.39 \times 10^5 \) km². If the population is 30 million, what is the population density (people per km²)?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                            \text{Density} &= \frac{30 \times 10^6}{2.39 \times 10^5} \\
+                                            &= \frac{30}{2.39} \times 10^{6-5} \\
+                                            &\approx 12.55 \times 10^1 \\
+                                            &\approx 125.5 \text{ people/km²}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A smartphone app's user base grows by 50% every month. If it has 10,000 users now, how many users will it have in 6 months?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                            \text{Users} &= 10000 \times (1 + 0.5)^6 \\
+                                            &= 10000 \times (1.5)^6 \\
+                                            &= 10000 \times 11.390625 \\
+                                            &= 113,906 \text{ users}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

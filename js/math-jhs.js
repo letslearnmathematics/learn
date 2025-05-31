@@ -470,25 +470,25 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Multiply & Divide By Powers of 10", url: "./math-jhs/jhs2/number/number-operations/multiply-and-divide-by-powers-of-10" },
                 { name: "Halving & Doubling Technique", url: "./math-jhs/jhs2/number/number-operations/halving-and-doubling" },
                 { name: "Products (Word Problems)", url: "./math-jhs/jhs2/number/number-operations/products-word-problems" },
-                { name: "Addition & Subtraction", url: "./math-jhs/jhs2/number/number-operations/addition-and-subtraction.html" },
-                { name: "Multiplication & Division", url: "./math-jhs/jhs2/number/number-operations/multiplication-and-division.html" },
-                { name: "Operations (Word Problems)", url: "./math-jhs/jhs2/number/number-operations/operations-word-problems.html" },
-                { name: "Laws of Indices", url: "./math-jhs/jhs2/number/number-operations/laws-of-indices.html" },
-                { name: "Application (Indices)", url: "./math-jhs/jhs2/number/number-operations/application-indices.html" },
-                { name: "Exponential Equations", url: "./math-jhs/jhs2/number/number-operations/exponential-equations.html" },
-                { name: "Word Problems (Indices)", url: "./math-jhs/jhs2/number/number-operations/word-problems-indices.html" }
+                { name: "Addition & Subtraction", url: "./math-jhs/jhs2/number/number-operations/addition-and-subtraction" },
+                { name: "Multiplication & Division", url: "./math-jhs/jhs2/number/number-operations/multiplication-and-division" },
+                { name: "Operations (Word Problems)", url: "./math-jhs/jhs2/number/number-operations/operations-word-problems" },
+                { name: "Laws of Indices", url: "./math-jhs/jhs2/number/number-operations/laws-of-indices" },
+                { name: "Application (Indices)", url: "./math-jhs/jhs2/number/number-operations/application-indices" },
+                { name: "Exponential Equations", url: "./math-jhs/jhs2/number/number-operations/exponential-equations" },
+                { name: "Word Problems (Indices)", url: "./math-jhs/jhs2/number/number-operations/word-problems-indices" }
             ],
             "Fractions, Decimals & Percentages": [
-                { name: "Operations on Fractions", url: "b8-1-3-1-1lesson1" },
-                { name: "BODMAS on Fractions", url: "b8-1-3-1-2lesson1" },
-                { name: "Word Problems on Fractions", url: "b8-1-3-1-3lesson1" }
+                { name: "Operations on Fractions", url: "./math-jhs/jhs2/number/fractions-decimals-and-percentages/operations-on-fractions" },
+                { name: "BODMAS on Fractions", url: "./math-jhs/jhs2/number/fractions-decimals-and-percentages/bodmas-fractions" },
+                { name: "Word Problems on Fractions", url: "./math-jhs/jhs2/number/fractions-decimals-and-percentages/word-problems-on-fraction" }
             ],
             "Ratios and Proportion": [
-                { name: "Conversion of Measurement Units", url: "b8-1-4-1-1lesson1" },
-                { name: "Unit Rate", url: "b8-1-4-1-2lesson1" },
-                { name: "Distance-Time Graph (Travel Graph)", url: "b8-1-4-1-3lesson1" },
-                { name: "Proportional Relations", url: "b8-1-4-1-4lesson1" },
-                { name: "Constant of Proportionality", url: "b8-1-4-1-5lesson1" }
+                { name: "Conversion of Measurement Units", url: "./math-jhs/jhs2/number/ratios-and-proportion/conversion-measurement-units" },
+                { name: "Unit Rate", url: "./math-jhs/jhs2/number/ratios-and-proportion/unit-rate.html" },
+                { name: "Distance-Time Graph (Travel Graph)", url: "./math-jhs/jhs2/number/ratios-and-proportion/distance-time-graph.html" },
+                { name: "Proportional Relations", url: "./math-jhs/jhs2/number/ratios-and-proportion/proportional-relations.html" },
+                { name: "Constant of Proportionality", url: "./math-jhs/jhs2/number/ratios-and-proportion/constant-of-proportionality.html" }
             ],
             "Patterns and Relations": [
                 { name: "Gradient & Equation Of A Line", url: "b8-2-1-1-1lesson1" },

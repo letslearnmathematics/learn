@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Decimal Word Problems | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on solving decimal word problems for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Decimal Word Problems | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Create and Solve Story Problems Involving Decimals on the Four Basic Operations">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/decimal-word-problems">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Decimal Word Problems</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Decimal Word Problems</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#basic-operations"><i class="fas fa-chevron-right"></i> Basic Operations</a></li>
+                                <li><a href="#word-problems"><i class="fas fa-chevron-right"></i> Solving Word Problems</a></li>
+                                <li><a href="#table-problems"><i class="fas fa-chevron-right"></i> Problems with Tables</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Decimal Word Problems</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Decimal word problems</strong> involve real-life situations where we need to perform calculations with decimal numbers. 
+                                    These problems often require us to use addition, subtraction, multiplication, or division to find solutions.
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to solve various types of word problems involving decimals. We'll start with basic operations 
+                                    and then move to more complex problems involving multiple steps and data presented in tables.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Basic Operations Section -->
+                        <section id="basic-operations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Basic Operations with Decimals
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-circle"></i> Addition and Subtraction
+                                </h3>
+                                <p>When adding or subtracting decimals:</p>
+                                <ol>
+                                    <li>Align the decimal points vertically</li>
+                                    <li>Add zeros if needed to make all numbers have the same number of decimal places</li>
+                                    <li>Perform the operation as with whole numbers</li>
+                                    <li>Place the decimal point in the answer directly below the other decimal points</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> 12.45 + 3.6</p>
+                                    <p>Solution:</p>
+                                    \[
+                                    \begin{array}{r}
+                                        \phantom{0}12.45 \\
+                                        +\phantom{12}3.60 \\ \hline
+                                        \phantom{+}16.05 \\ \hline
+                                    \end{array}
+                                    \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-times-circle"></i> Multiplication and Division
+                                </h3>
+                                <p><strong>Multiplication:</strong></p>
+                                <ol>
+                                    <li>Multiply as with whole numbers</li>
+                                    <li>Count the total number of decimal places in the factors</li>
+                                    <li>Place the decimal point in the product so it has that many decimal places</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> 2.5 × 1.3</p>
+                                    <p>Solution:</p>
+                                    \[
+                                    25 \times 13 = 325 \quad \text{(2 decimal places total)} \\
+                                    2.5 \times 1.3 = 3.25
+                                    \]
+                                </div>
+                                
+                                <p><strong>Division:</strong></p>
+                                <ol>
+                                    <li>If the divisor is a decimal, multiply both numbers by 10, 100, etc. to make it a whole number</li>
+                                    <li>Divide as with whole numbers</li>
+                                    <li>Place the decimal point in the quotient directly above its position in the dividend</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> 6.4 ÷ 0.4</p>
+                                    <p>Solution:</p>
+                                    \[
+                                    6.4 ÷ 0.4 = (6.4 \times 10) ÷ (0.4 \times 10) = 64 ÷ 4 = 16
+                                    \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Word Problems Section -->
+                        <section id="word-problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-question-circle"></i> Solving Word Problems
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Problem-Solving Steps
+                                </h3>
+                                <ol>
+                                    <li><strong>Read</strong> the problem carefully</li>
+                                    <li><strong>Identify</strong> what is being asked</li>
+                                    <li><strong>Determine</strong> the operation(s) needed</li>
+                                    <li><strong>Solve</strong> the problem</li>
+                                    <li><strong>Check</strong> your answer for reasonableness</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Practice Problems -->
+                            <div class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Problems</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Problem (i)</h3>
+                                        <p>Kofi bought 8 notebooks at GHȻ 12.00 each. Ama bought 12 pens at GHȻ 5.00 each. How much altogether did they spend on the items?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Kofi's notebooks: 8 × GHȻ 12.00 = GHȻ 96.00</p>
+                                            <p>Ama's pens: 12 × GHȻ 5.00 = GHȻ 60.00</p>
+                                            <p>Total spent: GHȻ 96.00 + GHȻ 60.00 = GHȻ 156.00</p>
+                                            <p><strong>Answer:</strong> They spent GHȻ 156.00 altogether.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="problem-card">
+                                        <h3>Problem (ii)</h3>
+                                        <p>A man gave an amount of GHȻ 2477.25 to be shared equally among his three children. How much did each receive?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Total amount: GHȻ 2477.25</p>
+                                            <p>Number of children: 3</p>
+                                            <p>Each child's share: GHȻ 2477.25 ÷ 3 = GHȻ 825.75</p>
+                                            <p><strong>Answer:</strong> Each child received GHȻ 825.75.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="problem-card">
+                                        <h3>Problem (iii)</h3>
+                                        <p>On Adwoa's birthday, her father bought her a pack of chocolate containing 250 bars. If Adwoa took 90 bars of the chocolates and gave the rest to her four friends to share equally, how many bars of chocolates did each receive?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Total chocolates: 250 bars</p>
+                                            <p>Adwoa took: 90 bars</p>
+                                            <p>Remaining chocolates: 250 - 90 = 160 bars</p>
+                                            <p>Number of friends: 4</p>
+                                            <p>Each friend's share: 160 ÷ 4 = 40 bars</p>
+                                            <p><strong>Answer:</strong> Each friend received 40 bars.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="problem-card">
+                                        <h3>Problem (iv)</h3>
+                                        <p>Mrs Yaboi bought 25.25 metres of cloth for her five children. If they share the material equally, how many metres of cloth did each receive?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Total cloth: 25.25 metres</p>
+                                            <p>Number of children: 5</p>
+                                            <p>Each child's share: 25.25 ÷ 5 = 5.05 metres</p>
+                                            <p><strong>Answer:</strong> Each child received 5.05 metres of cloth.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Table Problems Section -->
+                        <section id="table-problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-table"></i> Solving Word Problems with Tables
+                            </h2>
+
+                            <div class="concept-box">
+                                <p>Many real-world problems present data in tables. To solve these:</p>
+                                <ol>
+                                    <li>Carefully read the table and understand what each column represents</li>
+                                    <li>Identify the data needed to solve the problem</li>
+                                    <li>Perform the necessary calculations</li>
+                                    <li>Check if your answer makes sense in the context of the problem</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example Table:</strong></p>
+                                    <table class="math-table">
+                                        <tr>
+                                            <th>Item</th>
+                                            <th>Price per unit (GHȻ)</th>
+                                            <th>Quantity</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Notebook</td>
+                                            <td>12.50</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pen</td>
+                                            <td>3.75</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Pencil</td>
+                                            <td>1.25</td>
+                                            <td>12</td>
+                                        </tr>
+                                    </table>
+                                    
+                                    <p><strong>Question:</strong> What is the total cost of all items in the table?</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Notebooks: 5 × GHȻ 12.50 = GHȻ 62.50</p>
+                                    <p>Pens: 8 × GHȻ 3.75 = GHȻ 30.00</p>
+                                    <p>Pencils: 12 × GHȻ 1.25 = GHȻ 15.00</p>
+                                    <p>Total: GHȻ 62.50 + GHȻ 30.00 + GHȻ 15.00 = GHȻ 107.50</p>
+                                </div>
+                            </div>
+                            
+                            <div class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Problem with Table</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Problem</h3>
+                                        <p>The table below shows items bought by a student:</p>
+                                        <table class="math-table">
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Unit Price (GHȻ)</th>
+                                                <th>Quantity</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Exercise Book</td>
+                                                <td>8.50</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Textbook</td>
+                                                <td>35.75</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Calculator</td>
+                                                <td>120.00</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <p>Questions:</p>
+                                        <ol>
+                                            <li>What is the total cost of all items?</li>
+                                            <li>If the student pays with GHȻ 300.00, how much change will he receive?</li>
+                                        </ol>
+                                        
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution 1:</strong></p>
+                                            <p>Exercise Books: 4 × GHȻ 8.50 = GHȻ 34.00</p>
+                                            <p>Textbooks: 2 × GHȻ 35.75 = GHȻ 71.50</p>
+                                            <p>Calculator: 1 × GHȻ 120.00 = GHȻ 120.00</p>
+                                            <p>Total: GHȻ 34.00 + GHȻ 71.50 + GHȻ 120.00 = GHȻ 225.50</p>
+                                            
+                                            <p><strong>Solution 2:</strong></p>
+                                            <p>Amount paid: GHȻ 300.00</p>
+                                            <p>Total cost: GHȻ 225.50</p>
+                                            <p>Change: GHȻ 300.00 - GHȻ 225.50 = GHȻ 74.50</p>
+                                            
+                                            <p><strong>Answers:</strong></p>
+                                            <ol>
+                                                <li>Total cost is GHȻ 225.50</li>
+                                                <li>Change received is GHȻ 74.50</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Math Challenge Section -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your decimal problem-solving skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

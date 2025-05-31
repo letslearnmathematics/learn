@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Multiplication & Division | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on multiplying and dividing multi-digit numbers for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Multiplication & Division | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Multiply and Divide Multi-Digit Numbers Using Various Methods">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/multiplication-division">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Multiply & Divide Multi-Digit Numbers</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Multiplication & Division</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#area-model"><i class="fas fa-chevron-right"></i> Area Model Method</a></li>
+                                <li><a href="#vertical-method"><i class="fas fa-chevron-right"></i> Vertical Place Value</a></li>
+                                <li><a href="#lattice-method"><i class="fas fa-chevron-right"></i> Lattice Method</a></li>
+                                <li><a href="#distributive"><i class="fas fa-chevron-right"></i> Distributive Property</a></li>
+                                <li><a href="#divisibility"><i class="fas fa-chevron-right"></i> Divisibility Tests</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Multiplication & Division</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Multiplication</strong> and <strong>division</strong> of multi-digit numbers are fundamental skills in mathematics. 
+                                    In this lesson, we'll explore several methods to multiply and divide large numbers efficiently.
+                                </p>
+                                <p>
+                                    Being able to multiply and divide large numbers quickly and accurately is essential for solving 
+                                    real-world problems in business, science, and everyday life. We'll learn multiple methods so 
+                                    you can choose the one that works best for you.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Area Model Section -->
+                        <section id="area-model" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-square"></i> Area Model Method
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of the Area Model method with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> What is the Area Model?
+                                </h3>
+                                <p>
+                                    The area model breaks down multiplication into simpler partial products by representing 
+                                    the problem as the area of a rectangle. This method is also called the "box method" or 
+                                    "expand and box method".
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Steps for Area Model</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Break down each number into its place values (expand)</li>
+                                            <li>Draw a rectangle and divide it into sections based on the place values</li>
+                                            <li>Multiply the place values across the rows and columns</li>
+                                            <li>Add all the partial products to get the final answer</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <h4>Example: 24 × 36</h4>
+                                            <p>Break down: 20 + 4 and 30 + 6</p>
+                                            <table class="area-model-table">
+                                                <tr>
+                                                    <td></td>
+                                                    <td>30</td>
+                                                    <td>6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>20</td>
+                                                    <td>20×30=600</td>
+                                                    <td>20×6=120</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>4</td>
+                                                    <td>4×30=120</td>
+                                                    <td>4×6=24</td>
+                                                </tr>
+                                            </table>
+                                            <p>Add partial products: 600 + 120 + 120 + 24 = 864</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Use the area model to multiply 45 × 28</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Break down: 40 + 5 and 20 + 8</p>
+                                        <table class="area-model-table">
+                                            <tr>
+                                                <td></td>
+                                                <td>20</td>
+                                                <td>8</td>
+                                            </tr>
+                                            <tr>
+                                                <td>40</td>
+                                                <td>800</td>
+                                                <td>320</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>100</td>
+                                                <td>40</td>
+                                            </tr>
+                                        </table>
+                                        <p>800 + 320 + 100 + 40 = 1,260</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Use the area model to multiply 123 × 45</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Break down: 100 + 20 + 3 and 40 + 5</p>
+                                        <table class="area-model-table">
+                                            <tr>
+                                                <td></td>
+                                                <td>40</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>100</td>
+                                                <td>4,000</td>
+                                                <td>500</td>
+                                            </tr>
+                                            <tr>
+                                                <td>20</td>
+                                                <td>800</td>
+                                                <td>100</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>120</td>
+                                                <td>15</td>
+                                            </tr>
+                                        </table>
+                                        <p>4,000 + 500 + 800 + 100 + 120 + 15 = 5,535</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Vertical Place Value Section -->
+                        <section id="vertical-method" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-sort-numeric-up"></i> Vertical Place Value Method
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of the vertical multiplication method.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Traditional Multiplication
+                                </h3>
+                                <p>
+                                    The vertical place value method is the standard algorithm for multiplication that 
+                                    you're probably familiar with. It involves multiplying each digit and carefully 
+                                    keeping track of place values through proper alignment.
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-list-ol"></i>
+                                        <h3>Steps for Vertical Method</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Write the numbers vertically with the larger number on top</li>
+                                            <li>Multiply the top number by each digit of the bottom number, starting from the right</li>
+                                            <li>Write each partial product, shifting left with each new line</li>
+                                            <li>Add all the partial products to get the final answer</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <h4>Example: 657 × 27</h4>
+                                            <pre>
+      657
+    ×  27
+    -----
+     4599   (657 × 7)
+    1314    (657 × 20, shifted one place left)
+    -----
+    17,739
+                                            </pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Use the vertical method to multiply 384 × 56</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <pre>
+      384
+    ×  56
+    -----
+     2304   (384 × 6)
+    1920    (384 × 50, shifted one place left)
+    -----
+    21,504
+                                        </pre>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Use the vertical method to multiply 729 × 143</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <pre>
+      729
+    × 143
+    -----
+     2187   (729 × 3)
+     2916    (729 × 40, shifted one place left)
+    729      (729 × 100, shifted two places left)
+    -----
+    104,247
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Lattice Method Section -->
+                        <section id="lattice-method" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-border-all"></i> Lattice Method
+                            </h2>
+
+                            <!-- Lesson Video embed
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of the lattice multiplication method.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Visual Multiplication
+                                </h3>
+                                <p>
+                                    The lattice method uses a grid structure to organize multiplication. This ancient 
+                                    method is particularly useful for multiplying large numbers as it keeps all partial 
+                                    products organized in a visual way.
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-th"></i>
+                                        <h3>Steps for Lattice Method</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Draw a grid with rows equal to digits in first number and columns equal to digits in second number</li>
+                                            <li>Divide each cell diagonally</li>
+                                            <li>Multiply each digit pair and write the product in the corresponding cell (tens above diagonal, units below)</li>
+                                            <li>Add along the diagonals to get the final product</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <h4>Example: 46 × 37</h4>
+                                            <img src="../../../../images/lattice-example.png" alt="Lattice multiplication example" class="place">
+                                            <p>Adding diagonally: 1, 6+2+8=16 (write 6, carry 1), 1+1+2+1=5, 2 → 1,702</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Use the lattice method to multiply 58 × 63</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <img src="../../../../images/lattice-practice1.png" alt="Lattice solution for 58 × 63" class="place">
+                                        <p>Adding diagonally: 3, 6+4+0=10 (write 0, carry 1), 1+3+0+2=6, 3 → 3,654</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Use the lattice method to multiply 127 × 45</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <img src="../../../../images/lattice-practice2.png" alt="Lattice solution for 127 × 45" class="place">
+                                        <p>Adding diagonally: 5, 1+8+3=12 (write 2, carry 1), 1+0+4+1=6, 0+0=0, 0 → 5,715</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Distributive Property Section -->
+                        <section id="distributive" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-share-alt"></i> Distributive Property
+                            </h2>
+
+                            <!--Embed video
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of using the distributive property for multiplication.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Breaking Down Multiplication
+                                </h3>
+                                <p>
+                                    The distributive property states that a × (b + c) = a × b + a × c. We can use this 
+                                    property to break down complex multiplications into simpler ones that are easier to 
+                                    compute mentally.
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Using Distributive Property</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Break down one of the numbers into a sum of simpler numbers</li>
+                                            <li>Multiply the other number by each part of the sum</li>
+                                            <li>Add all the partial products together</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <h4>Example: 325 × 15</h4>
+                                            <p>Break down 15 into 10 + 5:</p>
+                                            <p>325 × 15 = 325 × (10 + 5) = (325 × 10) + (325 × 5)</p>
+                                            <p>= 3,250 + 1,625 = 4,875</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Use the distributive property to multiply 248 × 12</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Break down 12 into 10 + 2:</p>
+                                        <p>248 × 12 = 248 × (10 + 2) = (248 × 10) + (248 × 2)</p>
+                                        <p>= 2,480 + 496 = 2,976</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Use the distributive property to multiply 175 × 24</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Break down 24 into 20 + 4:</p>
+                                        <p>175 × 24 = 175 × (20 + 4) = (175 × 20) + (175 × 4)</p>
+                                        <p>= 3,500 + 700 = 4,200</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Divisibility Tests Section -->
+                        <section id="divisibility" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-divide"></i> Divisibility Tests
+                            </h2>
+
+                            <!-- Lesson Video embed
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of divisibility tests for various numbers.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Quick Division Checks
+                                </h3>
+                                <p>
+                                    Divisibility tests are shortcuts to determine if one number divides evenly into another 
+                                    without performing the actual division. These tests are useful for simplifying fractions, 
+                                    factoring numbers, and solving various mathematical problems.
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-check-double"></i>
+                                        <h3>Common Divisibility Tests</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <table class="divisibility-table">
+                                            <tr>
+                                                <th>Divisor</th>
+                                                <th>Test</th>
+                                                <th>Example</th>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>Last digit is even (0,2,4,6,8)</td>
+                                                <td>358 (divisible), 357 (not)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>Sum of digits divisible by 3</td>
+                                                <td>123: 1+2+3=6 (divisible)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>Last two digits divisible by 4</td>
+                                                <td>1,324: 24÷4=6 (divisible)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>Last digit is 0 or 5</td>
+                                                <td>350 (divisible), 352 (not)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>Divisible by both 2 and 3</td>
+                                                <td>114: even and 1+1+4=6 (divisible)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>Sum of digits divisible by 9</td>
+                                                <td>288: 2+8+8=18 (divisible)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>10</td>
+                                                <td>Last digit is 0</td>
+                                                <td>450 (divisible), 455 (not)</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Determine if 4,725 is divisible by 3, 5, and 9</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Divisible by 3:</strong> 4+7+2+5=18, 18÷3=6 → Yes</p>
+                                        <p><strong>Divisible by 5:</strong> Ends with 5 → Yes</p>
+                                        <p><strong>Divisible by 9:</strong> 4+7+2+5=18, 18÷9=2 → Yes</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Determine if 6,312 is divisible by 4, 6, and 8</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Divisible by 4:</strong> Last two digits 12, 12÷4=3 → Yes</p>
+                                        <p><strong>Divisible by 6:</strong> Even (divisible by 2) and 6+3+1+2=12 (divisible by 3) → Yes</p>
+                                        <p><strong>Divisible by 8:</strong> Last three digits 312, 312÷8=39 → Yes</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

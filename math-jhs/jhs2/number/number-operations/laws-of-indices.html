@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Laws of Indices | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Laws of Indices for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Laws of Indices | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Identify and Explain the Laws of Indices">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/laws-of-indices">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Laws of Indices</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Laws of Indices</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#multiplication-law"><i class="fas fa-chevron-right"></i> Multiplication Law</a></li>
+                                <li><a href="#division-law"><i class="fas fa-chevron-right"></i> Division Law</a></li>
+                                <li><a href="#power-law"><i class="fas fa-chevron-right"></i> Power Law</a></li>
+                                <li><a href="#zero-law"><i class="fas fa-chevron-right"></i> Zero Index Law</a></li>
+                                <li><a href="#negative-law"><i class="fas fa-chevron-right"></i> Negative Index Law</a></li>
+                                <li><a href="#fractional-law"><i class="fas fa-chevron-right"></i> Fractional Index Law</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Laws of Indices</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Indices</strong> (singular: index) are a shorthand way of writing repeated multiplication of the same number. 
+                                    They are also called exponents or powers. The laws of indices are rules that help us simplify expressions involving indices.
+                                </p>
+                                <p>
+                                    In an expression like \( a^n \), <em>a</em> is called the <strong>base</strong> and <em>n</em> is called the <strong>index</strong> or exponent.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>For example:</p>
+                                    \[ 5^4 = 5 \times 5 \times 5 \times 5 \]
+                                    <p>Here, 5 is the base and 4 is the index.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Multiplication Law Section -->
+                        <section id="multiplication-law" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-times"></i> Multiplication Law
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> The Law
+                                </h3>
+                                <p>When multiplying numbers with the same base, we add their indices:</p>
+                                \[ a^m \times a^n = a^{m+n} \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong></p>
+                                    \[ 2^3 \times 2^4 = 2^{3+4} = 2^7 \]
+                                    
+                                    <p><strong>Example 2:</strong></p>
+                                    \[ 5^2 \times 5^7 = 5^{2+7} = 5^9 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Why This Works
+                                </h3>
+                                <p>Let's see why this law makes sense:</p>
+                                \[ 2^3 \times 2^4 = (2 \times 2 \times 2) \times (2 \times 2 \times 2 \times 2) = 2^7 \]
+                                <p>We can see there are 7 twos multiplied together in total.</p>
+                            </div>
+                        </section>
+                        
+                        <!-- Division Law Section -->
+                        <section id="division-law" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-divide"></i> Division Law
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> The Law
+                                </h3>
+                                <p>When dividing numbers with the same base, we subtract their indices:</p>
+                                \[ \frac{a^m}{a^n} = a^{m-n} \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong></p>
+                                    \[ \frac{3^5}{3^2} = 3^{5-2} = 3^3 \]
+                                    
+                                    <p><strong>Example 2:</strong></p>
+                                    \[ \frac{7^8}{7^5} = 7^{8-5} = 7^3 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Why This Works
+                                </h3>
+                                <p>Let's see why this law makes sense:</p>
+                                \[ \frac{5^4}{5^2} = \frac{5 \times 5 \times 5 \times 5}{5 \times 5} = 5 \times 5 = 5^2 \]
+                                <p>Two fives cancel out in the denominator, leaving two in the numerator.</p>
+                            </div>
+                        </section>
+                        
+                        <!-- Power Law Section -->
+                        <section id="power-law" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-superscript"></i> Power Law
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> The Law
+                                </h3>
+                                <p>When raising a power to another power, we multiply the indices:</p>
+                                \[ (a^m)^n = a^{m \times n} \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong></p>
+                                    \[ (2^3)^4 = 2^{3 \times 4} = 2^{12} \]
+                                    
+                                    <p><strong>Example 2:</strong></p>
+                                    \[ (5^2)^3 = 5^{2 \times 3} = 5^6 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Why This Works
+                                </h3>
+                                <p>Let's see why this law makes sense:</p>
+                                \[ (3^2)^3 = 3^2 \times 3^2 \times 3^2 = 3^{2+2+2} = 3^6 \]
+                                <p>We're multiplying three copies of \( 3^2 \), which is the same as \( 3^{2 \times 3} \).</p>
+                            </div>
+                        </section>
+                        
+                        <!-- Zero Index Law Section -->
+                        <section id="zero-law" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-power-off"></i> Zero Index Law
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> The Law
+                                </h3>
+                                <p>Any non-zero number raised to the power of 0 is 1:</p>
+                                \[ a^0 = 1 \quad (a \neq 0) \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong></p>
+                                    \[ 5^0 = 1 \]
+                                    
+                                    <p><strong>Example 2:</strong></p>
+                                    \[ (100)^0 = 1 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Why This Works
+                                </h3>
+                                <p>Let's see why this law makes sense using the division law:</p>
+                                \[ \frac{a^m}{a^m} = a^{m-m} = a^0 \]
+                                <p>But we also know that any number divided by itself is 1:</p>
+                                \[ \frac{a^m}{a^m} = 1 \]
+                                <p>Therefore, \( a^0 = 1 \).</p>
+                            </div>
+                        </section>
+                        
+                        <!-- Negative Index Law Section -->
+                        <section id="negative-law" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-minus-circle"></i> Negative Index Law
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> The Law
+                                </h3>
+                                <p>A negative index means the reciprocal of the positive power:</p>
+                                \[ a^{-n} = \frac{1}{a^n} \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong></p>
+                                    \[ 2^{-3} = \frac{1}{2^3} = \frac{1}{8} \]
+                                    
+                                    <p><strong>Example 2:</strong></p>
+                                    \[ 5^{-2} = \frac{1}{5^2} = \frac{1}{25} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Why This Works
+                                </h3>
+                                <p>Let's see why this law makes sense using the division law:</p>
+                                \[ \frac{a^m}{a^n} = a^{m-n} \]
+                                <p>When m < n, we get negative indices:</p>
+                                \[ \frac{a^2}{a^5} = a^{2-5} = a^{-3} \]
+                                <p>But we also know:</p>
+                                \[ \frac{a^2}{a^5} = \frac{1}{a^3} \]
+                                <p>Therefore, \( a^{-3} = \frac{1}{a^3} \).</p>
+                            </div>
+                        </section>
+                        
+                        <!-- Fractional Index Law Section -->
+                        <section id="fractional-law" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-divide"></i> Fractional Index Law
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> The Law
+                                </h3>
+                                <p>A fractional index represents a root:</p>
+                                \[ a^{\frac{1}{n}} = \sqrt[n]{a} \]
+                                <p>And more generally:</p>
+                                \[ a^{\frac{m}{n}} = (\sqrt[n]{a})^m \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong></p>
+                                    \[ 8^{\frac{1}{3}} = \sqrt[3]{8} = 2 \]
+                                    
+                                    <p><strong>Example 2:</strong></p>
+                                    \[ 16^{\frac{3}{4}} = (\sqrt[4]{16})^3 = 2^3 = 8 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Why This Works
+                                </h3>
+                                <p>Let's see why this law makes sense using the power law:</p>
+                                \[ (a^{\frac{1}{n}})^n = a^{\frac{1}{n} \times n} = a^1 = a \]
+                                <p>But \( (\sqrt[n]{a})^n = a \) by definition of roots.</p>
+                                <p>Therefore, \( a^{\frac{1}{n}} \) must be equal to \( \sqrt[n]{a} \).</p>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Simplify \( 3^4 \times 3^5 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the multiplication law:</p>
+                                        \[ 3^4 \times 3^5 = 3^{4+5} = 3^9 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Simplify \( \frac{7^8}{7^3} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the division law:</p>
+                                        \[ \frac{7^8}{7^3} = 7^{8-3} = 7^5 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Simplify \( (2^3)^4 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the power law:</p>
+                                        \[ (2^3)^4 = 2^{3 \times 4} = 2^{12} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Evaluate \( 5^0 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the zero index law:</p>
+                                        \[ 5^0 = 1 \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Evaluate \( 3^{-2} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the negative index law:</p>
+                                        \[ 3^{-2} = \frac{1}{3^2} = \frac{1}{9} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Evaluate \( 16^{\frac{1}{2}} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the fractional index law:</p>
+                                        \[ 16^{\frac{1}{2}} = \sqrt{16} = 4 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
