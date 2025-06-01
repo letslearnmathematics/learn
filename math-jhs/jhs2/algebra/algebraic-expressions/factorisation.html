@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Factoring Expressions | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Factoring Expressions for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Factoring Expressions | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Factor Expressions Using Common Factors and Grouping Method">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/algebra/factoring-expressions">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Factoring Expressions</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Factoring Expressions</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#common-factors"><i class="fas fa-chevron-right"></i> Common Factors</a></li>
+                                <li><a href="#grouping-method"><i class="fas fa-chevron-right"></i> Grouping Method</a></li>
+                                <li><a href="#problems"><i class="fas fa-chevron-right"></i> Word Problems</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Algebra</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Factoring
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Factoring</strong> is the process of breaking down an expression into simpler parts (factors) that when multiplied together give the original expression. It's like "un-multiplying" an expression.
+                                </p>
+                                <p>
+                                    Factoring is very useful in algebra for simplifying expressions, solving equations, and finding roots of polynomials. In this lesson, we'll learn two main factoring methods:
+                                </p>
+                                <ol>
+                                    <li>Factoring using Common Factors</li>
+                                    <li>Factoring by Grouping</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example of a factored expression:</p>
+                                    \[ 3x + 6 = 3(x + 2) \]
+                                    <p>Here, 3 is the common factor of both terms.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Common Factors Section -->
+                        <section id="common-factors" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Factoring Using Common Factors
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on factoring using common factors.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> What is a Common Factor?
+                                </h3>
+                                <p>
+                                    A <strong>common factor</strong> is a term that divides exactly into each term of an expression. To factor using common factors:
+                                </p>
+                                <ol>
+                                    <li>Identify the greatest common factor (GCF) of all terms</li>
+                                    <li>Divide each term by the GCF</li>
+                                    <li>Write the expression as GCF × (result from division)</li>
+                                </ol>      
+                            </div>
+                            
+                            <!-- Method Steps -->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-list-ol"></i>
+                                        <h3>Step-by-Step Examples</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <div class="math-example">
+                                            <p><strong>Example 1:</strong> Factor \( 4x + 8 \)</p>
+                                            <p>Step 1: GCF of 4x and 8 is 4</p>
+                                            <p>Step 2: Divide each term by 4 → \( \frac{4x}{4} = x \) and \( \frac{8}{4} = 2 \)</p>
+                                            <p>Step 3: Write as \( 4(x + 2) \)</p>
+                                            \[ \boxed{4x + 8 = 4(x + 2)} \]
+                                        </div>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example 2:</strong> Factor \( 6a^2b - 9ab^2 \)</p>
+                                            <p>Step 1: GCF of coefficients is 3, GCF of variables is ab</p>
+                                            <p>Step 2: Divide each term by 3ab → \( \frac{6a^2b}{3ab} = 2a \) and \( \frac{-9ab^2}{3ab} = -3b \)</p>
+                                            <p>Step 3: Write as \( 3ab(2a - 3b) \)</p>
+                                            \[ \boxed{6a^2b - 9ab^2 = 3ab(2a - 3b)} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Factor completely: \( 5x + 15 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>GCF is 5</p>
+                                        <p>\( 5x ÷ 5 = x \)</p>
+                                        <p>\( 15 ÷ 5 = 3 \)</p>
+                                        <p>\(\boxed{5(x + 3)}\)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Factor completely: \( 12y^2 - 18y \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>GCF is 6y</p>
+                                        <p>\( 12y^2 ÷ 6y = 2y \)</p>
+                                        <p>\( -18y ÷ 6y = -3 \)</p>
+                                        <p>\(\boxed{6y(2y - 3)}\)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Factor completely: \( 7a^3b^2 + 14a^2b^3 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>GCF is 7a²b²</p>
+                                        <p>\( 7a^3b^2 ÷ 7a^2b^2 = a \)</p>
+                                        <p>\( 14a^2b^3 ÷ 7a^2b^2 = 2b \)</p>
+                                        <p>\(\boxed{7a^2b^2(a + 2b)}\)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Grouping Method Section -->
+                        <section id="grouping-method" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Factoring by Grouping
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on factoring by grouping.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> When to Use Grouping
+                                </h3>
+                                <p>
+                                    The <strong>grouping method</strong> is used when an expression has four or more terms with no common factor in all terms. The steps are:
+                                </p>
+                                <ol>
+                                    <li>Group terms that have common factors</li>
+                                    <li>Factor out the GCF from each group</li>
+                                    <li>If the remaining binomials match, factor them out</li>
+                                </ol>      
+                            </div>
+                            
+                            <!-- Method Steps -->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-list-ol"></i>
+                                        <h3>Step-by-Step Examples</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <div class="math-example">
+                                            <p><strong>Example 1:</strong> Factor \( ax + ay + bx + by \)</p>
+                                            <p>Step 1: Group terms: \( (ax + ay) + (bx + by) \)</p>
+                                            <p>Step 2: Factor each group: \( a(x + y) + b(x + y) \)</p>
+                                            <p>Step 3: Factor out common binomial: \( (x + y)(a + b) \)</p>
+                                            \[ \boxed{ax + ay + bx + by = (x + y)(a + b)} \]
+                                        </div>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example 2:</strong> Factor \( 2x^2 + 4x + 3x + 6 \)</p>
+                                            <p>Step 1: Group terms: \( (2x^2 + 4x) + (3x + 6) \)</p>
+                                            <p>Step 2: Factor each group: \( 2x(x + 2) + 3(x + 2) \)</p>
+                                            <p>Step 3: Factor out common binomial: \( (x + 2)(2x + 3) \)</p>
+                                            \[ \boxed{2x^2 + 4x + 3x + 6 = (x + 2)(2x + 3)} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Factor completely: \( mn + mp + n^2 + np \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Group: \( (mn + mp) + (n^2 + np) \)</p>
+                                        <p>Factor groups: \( m(n + p) + n(n + p) \)</p>
+                                        <p>Factor binomial: \( \boxed{(n + p)(m + n)} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Factor completely: \( 3x^2 + 6x + 4x + 8 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Group: \( (3x^2 + 6x) + (4x + 8) \)</p>
+                                        <p>Factor groups: \( 3x(x + 2) + 4(x + 2) \)</p>
+                                        <p>Factor binomial: \( \boxed{(x + 2)(3x + 4)} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Factor completely: \( ab + ac - b - c \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Group: \( (ab + ac) + (-b - c) \)</p>
+                                        <p>Factor groups: \( a(b + c) -1(b + c) \)</p>
+                                        <p>Factor binomial: \( \boxed{(b + c)(a - 1)} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Word Problems Section -->
+                        <section id="problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Applying Factoring to Word Problems
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Real-World Applications
+                                </h3>
+                                <p>
+                                    Factoring helps solve problems involving area, perimeter, and other real-world scenarios. Here's how to approach them:
+                                </p>
+                                <ol>
+                                    <li>Read the problem carefully and identify what's given and what's needed</li>
+                                    <li>Write an algebraic expression representing the situation</li>
+                                    <li>Factor the expression to simplify it</li>
+                                    <li>Solve for the unknown if needed</li>
+                                </ol>      
+                            </div>
+                            
+                            <!-- Method Steps -->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-list-ol"></i>
+                                        <h3>Problem Examples</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <div class="math-example">
+                                            <p><strong>Example 1:</strong> The area of a rectangle is \( 3x^2 + 6x \). Find expressions for its length and width.</p>
+                                            <p>Solution: Factor the area expression</p>
+                                            <p>\( 3x^2 + 6x = 3x(x + 2) \)</p>
+                                            <p>Possible dimensions: \( \boxed{3x} \) and \( \boxed{x + 2} \)</p>
+                                        </div>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example 2:</strong> A garden has length \( x + 5 \) and area \( 2x^2 + 10x \). Find its width.</p>
+                                            <p>Solution: Area = length × width, so width = Area ÷ length</p>
+                                            <p>Factor numerator: \( 2x^2 + 10x = 2x(x + 5) \)</p>
+                                            <p>Width = \( \frac{2x(x + 5)}{x + 5} = \boxed{2x} \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>The area of a rectangle is \( 5x^2 + 15x \). If its width is 5x, find its length.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factor area: \( 5x^2 + 15x = 5x(x + 3) \)</p>
+                                        <p>Length = Area ÷ Width = \( \frac{5x(x + 3)}{5x} = \boxed{x + 3} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>The perimeter of a square is \( 12x + 20 \). Find an expression for its side length.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Perimeter = 4 × side, so side = Perimeter ÷ 4</p>
+                                        <p>Factor numerator: \( 12x + 20 = 4(3x + 5) \)</p>
+                                        <p>Side length = \( \frac{4(3x + 5)}{4} = \boxed{3x + 5} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A box has volume \( x^3 + 2x^2 \). If its height is x and width is x, find its length.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Volume = length × width × height</p>
+                                        <p>Factor volume: \( x^3 + 2x^2 = x^2(x + 2) \)</p>
+                                        <p>Length = \( \frac{x^2(x + 2)}{x \times x} = \boxed{x + 2} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your factoring skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

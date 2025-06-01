@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Constructing Triangles | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on constructing various types of triangles for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Constructing Triangles | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to construct various types of triangles using compass and ruler">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/geometry/constructing-triangles">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Constructing Triangles</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Constructing Triangles</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#equilateral-given-side"><i class="fas fa-chevron-right"></i> Equilateral (Given Side)</a></li>
+                                <li><a href="#equilateral-given-point"><i class="fas fa-chevron-right"></i> Equilateral (Given Point)</a></li>
+                                <li><a href="#isosceles-right"><i class="fas fa-chevron-right"></i> Isosceles Right-Angled</a></li>
+                                <li><a href="#isosceles-given-sides"><i class="fas fa-chevron-right"></i> Isosceles (Given Sides)</a></li>
+                                <li><a href="#isosceles-given-angles"><i class="fas fa-chevron-right"></i> Isosceles (Given Angles)</a></li>
+                                <li><a href="#acute-obtuse-right"><i class="fas fa-chevron-right"></i> Acute/Obtuse/Right Triangles</a></li>
+                                <li><a href="#given-sides"><i class="fas fa-chevron-right"></i> Given All Sides</a></li>
+                                <li><a href="#given-sides-angle"><i class="fas fa-chevron-right"></i> Given Two Sides & Angle</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Constructing Triangles</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Triangle construction</strong> is a fundamental skill in geometry that involves creating precise 
+                                    triangles using specific given conditions. In this lesson, we'll learn how to construct various 
+                                    types of triangles using only a compass and ruler.
+                                </p>
+                                <p>
+                                    We'll cover different triangle types including equilateral, isosceles, scalene, acute-angled, 
+                                    obtuse-angled, and right-angled triangles under various given conditions.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Essential Tools:</h4>
+                                        <ul>
+                                            <li>Compass (for drawing arcs and circles)</li>
+                                            <li>Ruler (for measuring and drawing straight lines)</li>
+                                            <li>Protractor (for measuring angles when needed)</li>
+                                            <li>Pencil (for making construction marks)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Key Concepts:</h4>
+                                        <ul>
+                                            <li>An equilateral triangle has all sides equal and all angles equal to 60°</li>
+                                            <li>An isosceles triangle has two equal sides and two equal angles</li>
+                                            <li>A scalene triangle has all sides and angles different</li>
+                                            <li>Triangles can also be classified by their angles: acute, right, or obtuse</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Equilateral Triangle (Given Side) -->
+                        <section id="equilateral-given-side" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Constructing Equilateral Triangle (Given Side)
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Method
+                                </h3>
+                                <p>When one side length is given, follow these steps:</p>
+                                
+                                <div class="method-steps">
+                                    <div class="step">
+                                        <h4>Step 1:</h4>
+                                        <p>Draw the given side AB using a ruler</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 2:</h4>
+                                        <p>With A as center and AB as radius, draw an arc above AB</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 3:</h4>
+                                        <p>With B as center and BA as radius, draw another arc intersecting the first arc at C</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 4:</h4>
+                                        <p>Join A to C and B to C to complete the equilateral triangle ABC</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="justification">
+                                    <h4>Justification:</h4>
+                                    <p>All sides are equal (AB = BC = CA) because they were drawn with the same radius. 
+                                    All angles are 60° because the sum of angles in a triangle is 180°, divided equally.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Equilateral Triangle (Given Point) -->
+                        <section id="equilateral-given-point" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Constructing Equilateral Triangle (Given Point)
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Method
+                                </h3>
+                                <p>When starting from a given point A and line AX:</p>
+                                
+                                <div class="method-steps">
+                                    <div class="step">
+                                        <h4>Step 1:</h4>
+                                        <p>Draw point A and line AX</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 2:</h4>
+                                        <p>With A as center, draw an arc intersecting AX at B</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 3:</h4>
+                                        <p>With same radius, place compass at B and draw an arc intersecting first arc at C</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 4:</h4>
+                                        <p>Join A to C and B to C to complete the equilateral triangle ABC</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="justification">
+                                    <h4>Justification:</h4>
+                                    <p>This creates a 60° angle at A. Since all construction arcs used the same radius, 
+                                    all sides are equal, making it equilateral.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Isosceles Right-Angled Triangle -->
+                        <section id="isosceles-right" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Constructing Isosceles Right-Angled Triangle
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Method
+                                </h3>
+                                <p>When the base line is given:</p>
+                                
+                                <div class="method-steps">
+                                    <div class="step">
+                                        <h4>Step 1:</h4>
+                                        <p>Draw the given base line AB</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 2:</h4>
+                                        <p>At point A, construct a perpendicular line using compass or protractor</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 3:</h4>
+                                        <p>Measure length AB along the perpendicular to locate point C</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 4:</h4>
+                                        <p>Join B to C to complete the isosceles right-angled triangle ABC</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="justification">
+                                    <h4>Justification:</h4>
+                                    <p>The triangle has one right angle (90°) at A, with sides AB = AC (isosceles), 
+                                    and the hypotenuse BC completes the right triangle.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Isosceles Triangle (Given Sides) -->
+                        <section id="isosceles-given-sides" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Constructing Isosceles Triangle (Given Sides)
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Method
+                                </h3>
+                                <p>When all side lengths are given (two equal sides and a base):</p>
+                                
+                                <div class="method-steps">
+                                    <div class="step">
+                                        <h4>Step 1:</h4>
+                                        <p>Draw the base line AB using the given base length</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 2:</h4>
+                                        <p>With A as center and equal side length as radius, draw an arc above AB</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 3:</h4>
+                                        <p>With B as center and same equal side length as radius, draw another arc intersecting the first at C</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 4:</h4>
+                                        <p>Join A to C and B to C to complete the isosceles triangle ABC</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="justification">
+                                    <h4>Justification:</h4>
+                                    <p>The two equal sides (AC = BC) were constructed with equal radii, while the base AB 
+                                    maintains the given length, satisfying the isosceles condition.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Isosceles Triangle (Given Angles) -->
+                        <section id="isosceles-given-angles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Constructing Isosceles Triangle (Given Angles)
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Method
+                                </h3>
+                                <p>When base angles and base side are known:</p>
+                                
+                                <div class="method-steps">
+                                    <div class="step">
+                                        <h4>Step 1:</h4>
+                                        <p>Draw the given base line AB</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 2:</h4>
+                                        <p>At point A, construct the given base angle using a protractor</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 3:</h4>
+                                        <p>At point B, construct the same base angle (since it's isosceles)</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 4:</h4>
+                                        <p>Extend the angle lines until they meet at point C</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="justification">
+                                    <h4>Justification:</h4>
+                                    <p>The two equal base angles guarantee that the sides opposite them (AC and BC) must be equal, 
+                                    making the triangle isosceles with the given base AB.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Acute/Obtuse/Right Triangles -->
+                        <section id="acute-obtuse-right" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Constructing Acute/Obtuse/Right Triangles
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Method
+                                </h3>
+                                <p>When a side and two angles are given:</p>
+                                
+                                <div class="method-steps">
+                                    <div class="step">
+                                        <h4>Step 1:</h4>
+                                        <p>Draw the given side AB</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 2:</h4>
+                                        <p>At point A, construct the first given angle</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 3:</h4>
+                                        <p>At point B, construct the second given angle</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 4:</h4>
+                                        <p>Extend the angle lines until they meet at point C</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="justification">
+                                    <h4>Justification:</h4>
+                                    <p>The sum of the three angles must be 180°. The triangle will be:
+                                    <ul>
+                                        <li>Acute if all angles &lt; 90°</li>
+                                        <li>Right if one angle = 90°</li>
+                                        <li>Obtuse if one angle &gt; 90°</li>
+                                    </ul>
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Given All Sides -->
+                        <section id="given-sides" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Constructing Triangle (Given All Sides)
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Method
+                                </h3>
+                                <p>When lengths of all three sides are given:</p>
+                                
+                                <div class="method-steps">
+                                    <div class="step">
+                                        <h4>Step 1:</h4>
+                                        <p>Draw the longest side AB (for stability)</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 2:</h4>
+                                        <p>With A as center and length AC as radius, draw an arc above AB</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 3:</h4>
+                                        <p>With B as center and length BC as radius, draw another arc intersecting the first at C</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 4:</h4>
+                                        <p>Join A to C and B to C to complete triangle ABC</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="justification">
+                                    <h4>Justification:</h4>
+                                    <p>This construction ensures all sides have exactly the given lengths. 
+                                    The triangle inequality theorem must be satisfied (sum of any two sides > third side).</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Given Two Sides and Angle -->
+                        <section id="given-sides-angle" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Constructing Triangle (Given Two Sides & Angle)
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Method
+                                </h3>
+                                <p>When two side lengths and the included angle are given:</p>
+                                
+                                <div class="method-steps">
+                                    <div class="step">
+                                        <h4>Step 1:</h4>
+                                        <p>Draw one of the given sides AB</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 2:</h4>
+                                        <p>At point A, construct the given angle</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 3:</h4>
+                                        <p>Measure the second given side length along the angle line to locate point C</p>
+                                    </div>
+                                    <div class="step">
+                                        <h4>Step 4:</h4>
+                                        <p>Join B to C to complete triangle ABC</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="justification">
+                                    <h4>Justification:</h4>
+                                    <p>The construction ensures the two sides have exactly the given lengths and the included angle 
+                                    between them is precisely the given angle. The third side is determined by these conditions.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Construct an equilateral triangle with sides 6cm long.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Follow the steps for constructing an equilateral triangle with given side length.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Construct an isosceles triangle with base 5cm and equal sides 7cm each.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Use the method for constructing isosceles triangle when all sides are given.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Construct a right-angled triangle with sides 6cm and 8cm adjacent to the right angle.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Use the method for constructing triangle when two sides and included angle (90°) are given.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Construct a triangle with sides 7cm, 5cm, and 4cm.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Use the method for constructing triangle when all three sides are given.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Construct a triangle with sides 6cm and 8cm and included angle 45°.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Use the method for constructing triangle when two sides and included angle are given.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your triangle construction knowledge through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Gradient and Equation of a Line | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on calculating gradient and writing equations of lines for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Gradient and Equation of a Line | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to calculate gradient and write equations of lines in slope-intercept and point-slope forms">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/algebra/gradient-and-equation-of-line">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Gradient and Equation of a Line</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Gradient & Equations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#gradient-concept"><i class="fas fa-chevron-right"></i> Gradient Concept</a></li>
+                                <li><a href="#gradient-formula"><i class="fas fa-chevron-right"></i> Gradient Formula</a></li>
+                                <li><a href="#gradient-from-coordinates"><i class="fas fa-chevron-right"></i> Gradient from Coordinates</a></li>
+                                <li><a href="#gradient-from-equation"><i class="fas fa-chevron-right"></i> Gradient from Equation</a></li>
+                                <li><a href="#gradient-from-graph"><i class="fas fa-chevron-right"></i> Gradient from Graph</a></li>
+                                <li><a href="#slope-intercept"><i class="fas fa-chevron-right"></i> Slope-Intercept Form</a></li>
+                                <li><a href="#point-slope"><i class="fas fa-chevron-right"></i> Point-Slope Form</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Gradient & Equations</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Gradient</strong> (also called slope) measures how steep a line is. It's a fundamental concept 
+                                    in coordinate geometry that helps us describe and analyze linear relationships. 
+                                </p>
+                                <p>
+                                    In this lesson, we'll learn how to calculate gradient in different situations and use it to write 
+                                    equations of straight lines in both slope-intercept form (y = mx + c) and point-slope form.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Applications:</h4>
+                                        <ul>
+                                            <li>Determining steepness of roads or ramps</li>
+                                            <li>Analyzing trends in data</li>
+                                            <li>Solving problems in physics (like velocity)</li>
+                                            <li>Creating linear models in economics</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Gradient Concept Section -->
+                        <section id="gradient-concept" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-mountain"></i> Gradient Concept
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Understanding Gradient
+                                </h3>
+                                <p>
+                                    The gradient (or slope) of a line describes its steepness and direction:
+                                </p>
+                                <ul>
+                                    <li><strong>Positive gradient:</strong> Line rises from left to right</li>
+                                    <li><strong>Negative gradient:</strong> Line falls from left to right</li>
+                                    <li><strong>Zero gradient:</strong> Horizontal line (no steepness)</li>
+                                    <li><strong>Undefined gradient:</strong> Vertical line (infinite steepness)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-road"></i> Real-Life Examples
+                                </h3>
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Road Inclines</h4>
+                                        <p>A 10% gradient means the road rises 10m vertically for every 100m horizontally.</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Roof Pitch</h4>
+                                        <p>A roof with a steep gradient sheds water more effectively.</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Hiking Trails</h4>
+                                        <p>Trail difficulty is often determined by its average gradient.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Gradient Formula Section -->
+                        <section id="gradient-formula" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Gradient Formula
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-square-root-alt"></i> The Gradient Formula
+                                </h3>
+                                <p>
+                                    The gradient (m) between two points \((x_1, y_1)\) and \((x_2, y_2)\) is calculated as:
+                                </p>
+                                \[ m = \frac{y_2 - y_1}{x_2 - x_1} = \frac{\text{Change in y}}{\text{Change in x}} = \frac{\text{Rise}}{\text{Run}} \]
+                                <p>
+                                    This represents the ratio of vertical change to horizontal change between two points on the line.
+                                </p>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-circle"></i> Important Notes
+                                </h3>
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Consistency</h4>
+                                        <p>Always subtract coordinates in the same order (point 2 - point 1) for both x and y.</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Undefined Gradient</h4>
+                                        <p>If \(x_2 - x_1 = 0\) (vertical line), the gradient is undefined.</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Zero Gradient</h4>
+                                        <p>If \(y_2 - y_1 = 0\) (horizontal line), the gradient is 0.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Gradient from Coordinates Section -->
+                        <section id="gradient-from-coordinates" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-map-marker-alt"></i> Gradient from Coordinates
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-map-pin"></i> Calculating Gradient Between Two Points
+                                </h3>
+                                <p>
+                                    Given any two points on a line, we can calculate the gradient using the formula:
+                                </p>
+                                \[ m = \frac{y_2 - y_1}{x_2 - x_1} \]
+                                
+                                <div class="math-example">
+                                    <h4>Example 1:</h4>
+                                    <p>Find the gradient of the line passing through (2, 3) and (5, 11).</p>
+                                    <p><strong>Solution:</strong></p>
+                                    \[ m = \frac{11 - 3}{5 - 2} = \frac{8}{3} \]
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2:</h4>
+                                    <p>Find the gradient of the line through (-1, 4) and (3, -2).</p>
+                                    <p><strong>Solution:</strong></p>
+                                    \[ m = \frac{-2 - 4}{3 - (-1)} = \frac{-6}{4} = -\frac{3}{2} \]
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Gradient from Equation Section -->
+                        <section id="gradient-from-equation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-equals"></i> Gradient from Equation
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-square-root-alt"></i> Finding Gradient from y = mx + c
+                                </h3>
+                                <p>
+                                    When the equation of a line is in the <strong>slope-intercept form</strong>:
+                                </p>
+                                \[ y = mx + c \]
+                                <p>
+                                    The coefficient of x (m) is the gradient, and c is the y-intercept.
+                                </p>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Examples
+                                </h3>
+                                <div class="math-example">
+                                    <h4>Example 1:</h4>
+                                    <p>Find the gradient of the line \( y = 3x - 5 \).</p>
+                                    <p><strong>Solution:</strong> Gradient (m) = 3</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2:</h4>
+                                    <p>Find the gradient of \( 2y = 8x + 3 \).</p>
+                                    <p><strong>Solution:</strong> First rewrite in y = mx + c form:</p>
+                                    \[ y = 4x + \frac{3}{2} \]
+                                    <p>Gradient (m) = 4</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 3:</h4>
+                                    <p>Find the gradient of \( 3x + 4y = 12 \).</p>
+                                    <p><strong>Solution:</strong> Rearrange to slope-intercept form:</p>
+                                    \[ 4y = -3x + 12 \]
+                                    \[ y = -\frac{3}{4}x + 3 \]
+                                    <p>Gradient (m) = -¾</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Gradient from Graph Section -->
+                        <section id="gradient-from-graph" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line"></i> Gradient from Graph
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Determining Gradient Visually
+                                </h3>
+                                <p>
+                                    To find gradient from a graph:
+                                </p>
+                                <ol>
+                                    <li>Identify two clear points on the line</li>
+                                    <li>Calculate the vertical change (rise) between them</li>
+                                    <li>Calculate the horizontal change (run) between them</li>
+                                    <li>Divide rise by run to get gradient</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <h4>Example:</h4>
+                                    <p>A line passes through (1, 1) and (4, 3) on a graph. Find its gradient.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    \[ \text{Rise} = 3 - 1 = 2 \]
+                                    \[ \text{Run} = 4 - 1 = 3 \]
+                                    \[ m = \frac{2}{3} \]
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Slope-Intercept Form Section -->
+                        <section id="slope-intercept" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-sliders-h"></i> Slope-Intercept Form
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-sliders-h"></i> y = mx + c Form
+                                </h3>
+                                <p>
+                                    The slope-intercept form is the most common way to express a linear equation:
+                                </p>
+                                \[ y = mx + c \]
+                                <p>
+                                    Where:
+                                </p>
+                                <ul>
+                                    <li><strong>m</strong> is the gradient (slope)</li>
+                                    <li><strong>c</strong> is the y-intercept (where the line crosses the y-axis)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Writing Equations
+                                </h3>
+                                <p>
+                                    To write the equation when given gradient and y-intercept:
+                                </p>
+                                <ol>
+                                    <li>Identify the gradient (m)</li>
+                                    <li>Identify the y-intercept (c)</li>
+                                    <li>Substitute into y = mx + c</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1:</h4>
+                                    <p>Write the equation of a line with gradient 2 and y-intercept -3.</p>
+                                    <p><strong>Solution:</strong> \( y = 2x - 3 \)</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2:</h4>
+                                    <p>A line has gradient -½ and passes through (0, 4). Write its equation.</p>
+                                    <p><strong>Solution:</strong> The y-intercept is 4, so \( y = -\frac{1}{2}x + 4 \)</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Point-Slope Form Section -->
+                        <section id="point-slope" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-sliders-h"></i> Point-Slope Form
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-map-pin"></i> y - y₁ = m(x - x₁) Form
+                                </h3>
+                                <p>
+                                    The point-slope form is useful when you know:
+                                </p>
+                                <ul>
+                                    <li>The gradient (m)</li>
+                                    <li>Any point \((x_1, y_1)\) on the line</li>
+                                </ul>
+                                \[ y - y_1 = m(x - x_1) \]
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Writing Equations
+                                </h3>
+                                <p>
+                                    To write the equation using point-slope form:
+                                </p>
+                                <ol>
+                                    <li>Identify the gradient (m)</li>
+                                    <li>Identify a point \((x_1, y_1)\) on the line</li>
+                                    <li>Substitute into the point-slope formula</li>
+                                    <li>Simplify to slope-intercept form if needed</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1:</h4>
+                                    <p>Find the equation of a line with gradient 3 passing through (2, 5).</p>
+                                    <p><strong>Solution:</strong></p>
+                                    \[ y - 5 = 3(x - 2) \]
+                                    \[ y - 5 = 3x - 6 \]
+                                    \[ y = 3x - 1 \]
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2:</h4>
+                                    <p>A line has gradient -2 and passes through (-1, 4). Write its equation.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    \[ y - 4 = -2(x - (-1)) \]
+                                    \[ y - 4 = -2(x + 1) \]
+                                    \[ y - 4 = -2x - 2 \]
+                                    \[ y = -2x + 2 \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the gradient of the line passing through (3, 7) and (5, 13).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using the gradient formula:</p>
+                                        \[ m = \frac{13 - 7}{5 - 3} = \frac{6}{2} = 3 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Determine the gradient of the line with equation \( 4x + 2y = 6 \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First rewrite in slope-intercept form:</p>
+                                        \[ 2y = -4x + 6 \]
+                                        \[ y = -2x + 3 \]
+                                        <p>Gradient (m) = -2</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Write the equation of a line with gradient -3 and y-intercept 5.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using slope-intercept form:</p>
+                                        \[ y = -3x + 5 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Find the equation of the line passing through (1, 2) with gradient 4.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using point-slope form:</p>
+                                        \[ y - 2 = 4(x - 1) \]
+                                        \[ y - 2 = 4x - 4 \]
+                                        \[ y = 4x - 2 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>A line passes through (0, 3) and (2, 7). Write its equation in slope-intercept form.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First find gradient:</p>
+                                        \[ m = \frac{7 - 3}{2 - 0} = \frac{4}{2} = 2 \]
+                                        <p>y-intercept is 3 (from point (0,3))</p>
+                                        <p>Equation: \( y = 2x + 3 \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

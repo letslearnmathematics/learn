@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Constructing Loci | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Constructing Loci for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Constructing Loci | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to construct loci under various given conditions">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/geometry/constructing-loci">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Constructing Loci</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Constructing Loci</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#locus-from-fixed-point"><i class="fas fa-chevron-right"></i> Locus from Fixed Point</a></li>
+                                <li><a href="#equidistant-two-points"><i class="fas fa-chevron-right"></i> Equidistant from Two Points</a></li>
+                                <li><a href="#equidistant-intersecting-lines"><i class="fas fa-chevron-right"></i> Equidistant from Intersecting Lines</a></li>
+                                <li><a href="#equidistant-parallel-lines"><i class="fas fa-chevron-right"></i> Equidistant from Parallel Lines</a></li>
+                                <li><a href="#circle-center"><i class="fas fa-chevron-right"></i> Locating Circle Center</a></li>
+                                <li><a href="#regular-hexagon"><i class="fas fa-chevron-right"></i> Regular Hexagon Construction</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Constructing Loci</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Loci
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Locus</strong> (plural: loci) is the path traced by a moving point that satisfies certain given conditions. 
+                                    In geometry, we construct loci to visualize all possible positions that satisfy specific rules.
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to construct various types of loci under different conditions, 
+                                    including points at fixed distances, equidistant points, and relationships with lines.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Locus from Fixed Point -->
+                        <section id="locus-from-fixed-point" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-dot-circle"></i> Locus from a Fixed Point
+                            </h2>
+
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_1" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this demonstration of constructing the locus of points at a fixed distance from a point.</p>
+                                </div>
+                            </div>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> Construction Steps
+                                </h3>
+                                <p>
+                                    The locus of points at a fixed distance <em>r</em> from a fixed point <em>O</em> is a circle with center <em>O</em> and radius <em>r</em>.
+                                </p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-compass"></i>
+                                            <h3>Steps to Construct</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ol>
+                                                <li>Mark the fixed point O on your paper</li>
+                                                <li>Set your compass to the required distance r</li>
+                                                <li>With center at O, draw a complete circle</li>
+                                                <li>All points on this circle are exactly distance r from O</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Why This Works:</h4>
+                                        <p>By definition, all points on a circle are equidistant from its center. Therefore, any point P moving while maintaining a constant distance r from O must lie on this circle.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Equidistant from Two Points -->
+                        <section id="equidistant-two-points" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-equals"></i> Locus Equidistant from Two Fixed Points
+                            </h2>
+
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_2" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Learn how to construct the perpendicular bisector as a locus of points equidistant from two points.</p>
+                                </div>
+                            </div>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Perpendicular Bisector Construction
+                                </h3>
+                                <p>
+                                    The locus of points equidistant from two fixed points A and B is the perpendicular bisector of the line segment AB.
+                                </p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-drafting-compass"></i>
+                                            <h3>Construction Steps</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ol>
+                                                <li>Draw line segment AB connecting the two points</li>
+                                                <li>With A as center, draw an arc with radius > ½AB</li>
+                                                <li>With B as center, draw another arc with same radius</li>
+                                                <li>The arcs intersect at points above and below AB</li>
+                                                <li>Connect these intersection points to form the perpendicular bisector</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Proof:</h4>
+                                        <p>Any point on the perpendicular bisector is equidistant from A and B because:</p>
+                                        <ul>
+                                            <li>It forms two congruent right triangles with A and B</li>
+                                            <li>The common side (bisector) and equal halves of AB make the hypotenuses equal</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Equidistant from Intersecting Lines -->
+                        <section id="equidistant-intersecting-lines" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-angle-up"></i> Locus Equidistant from Two Intersecting Lines
+                            </h2>
+
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_3" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>See how to construct angle bisectors as loci of points equidistant from two intersecting lines.</p>
+                                </div>
+                            </div>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-cut"></i> Angle Bisector Construction
+                                </h3>
+                                <p>
+                                    The locus of points equidistant from two intersecting straight lines is the angle bisector of the angle formed by the lines.
+                                </p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-drafting-compass"></i>
+                                            <h3>Construction Steps</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ol>
+                                                <li>Draw the two intersecting lines (AB and AC)</li>
+                                                <li>From the point of intersection A, mark equal lengths on both lines</li>
+                                                <li>From these points, draw arcs that intersect</li>
+                                                <li>Draw a line from A through this intersection point - this is the angle bisector</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Why It Works:</h4>
+                                        <p>The angle bisector is the set of all points equidistant from both lines because:</p>
+                                        <ul>
+                                            <li>It divides the angle into two equal parts</li>
+                                            <li>Any point on it forms congruent right triangles with the lines</li>
+                                            <li>The distances (perpendicular) to both lines must be equal</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Equidistant from Parallel Lines -->
+                        <section id="equidistant-parallel-lines" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-arrows-alt-h"></i> Locus Equidistant from Two Parallel Lines
+                            </h2>
+
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_4" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Learn how to construct the midline between parallel lines as a locus of equidistant points.</p>
+                                </div>
+                            </div>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-border-style"></i> Parallel Line Construction
+                                </h3>
+                                <p>
+                                    The locus of points equidistant from two parallel lines is another line parallel to both and midway between them.
+                                </p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-ruler"></i>
+                                            <h3>Construction Steps</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ol>
+                                                <li>Draw the two parallel lines (AB and CD)</li>
+                                                <li>Construct a perpendicular line connecting AB and CD</li>
+                                                <li>Mark the midpoint of this perpendicular line</li>
+                                                <li>Through this midpoint, draw a line parallel to AB and CD</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Verification:</h4>
+                                        <p>To prove two lines are parallel using locus:</p>
+                                        <ol>
+                                            <li>Construct equal distance markers from both lines</li>
+                                            <li>Connect these markers to form the midline</li>
+                                            <li>Measure angles to confirm parallelism (corresponding angles equal)</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Locating Circle Center -->
+                        <section id="circle-center" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-bullseye"></i> Locating the Center of a Circle
+                            </h2>
+
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_5" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>See how to find the center of a circle using perpendicular bisectors of chords.</p>
+                                </div>
+                            </div>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-crosshairs"></i> Center Construction Method
+                                </h3>
+                                <p>
+                                    The center of a circle can be found by constructing perpendicular bisectors of any two chords.
+                                </p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-compass-drafting"></i>
+                                            <h3>Construction Steps</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ol>
+                                                <li>Draw any two chords on the circle (not parallel)</li>
+                                                <li>Construct the perpendicular bisector of each chord</li>
+                                                <li>The point where these bisectors intersect is the center</li>
+                                                <li>Verify by measuring equal distances to multiple points on the circle</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Why This Works:</h4>
+                                        <p>The perpendicular bisector of a chord always passes through the center of the circle, so the intersection of two such bisectors must be the center.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Regular Hexagon Construction -->
+                        <section id="regular-hexagon" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-hexagon"></i> Constructing a Regular Hexagon
+                            </h2>
+
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_6" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Learn two methods to construct a perfect regular hexagon within a circle.</p>
+                                </div>
+                            </div>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-shapes"></i> Hexagon Construction Methods
+                                </h3>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-pencil-ruler"></i>
+                                            <h3>Method 1: Within a Circle</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ol>
+                                                <li>Draw a circle with given radius</li>
+                                                <li>Without changing compass width, mark a point on the circumference</li>
+                                                <li>From this point, draw an arc intersecting the circumference</li>
+                                                <li>Repeat until six equally spaced points are marked</li>
+                                                <li>Connect these points to form the hexagon</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-project-diagram"></i>
+                                            <h3>Method 2: Using Intersecting Circles</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ol>
+                                                <li>Draw a circle with given side length as radius</li>
+                                                <li>Mark any point on circumference as first vertex</li>
+                                                <li>Using same radius, draw arc from this point to intersect circle</li>
+                                                <li>Repeat process around the circle</li>
+                                                <li>Connect intersection points to form hexagon</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Properties:</h4>
+                                        <p>A regular hexagon has:</p>
+                                        <ul>
+                                            <li>All sides equal (same as circle radius)</li>
+                                            <li>All internal angles equal to 120°</li>
+                                            <li>Six lines of symmetry</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Construct the locus of points 4cm from a fixed point P.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This will be a circle with radius 4cm centered at point P.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Construct the locus of points equidistant from points A and B that are 6cm apart.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This will be the perpendicular bisector of line segment AB.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Construct the locus of points equidistant from two lines intersecting at 60°.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This will be the angle bisector, dividing the 60° angle into two 30° angles.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Construct the locus of points equidistant from two parallel lines 8cm apart.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>This will be a line parallel to both and exactly midway (4cm) between them.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Given a circle with two chords, construct its center using perpendicular bisectors.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>The intersection point of the perpendicular bisectors of any two chords is the center.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>Construct a regular hexagon with side length 5cm using the circle method.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Draw a circle with radius 5cm and mark six points around the circumference spaced at 60° intervals.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Math Challenge Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your loci construction skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

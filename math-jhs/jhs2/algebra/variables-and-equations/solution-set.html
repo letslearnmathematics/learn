@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Linear Inequalities | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Linear Inequalities for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Linear Inequalities | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Determine Solution Sets of Simple Linear Inequalities in Given Domains">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/algebra/linear-inequalities">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Linear Inequalities</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Linear Inequalities</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#solving"><i class="fas fa-chevron-right"></i> Solving Linear Inequalities</a></li>
+                                <li><a href="#solution-sets"><i class="fas fa-chevron-right"></i> Solution Sets</a></li>
+                                <li><a href="#domains"><i class="fas fa-chevron-right"></i> Given Domains</a></li>
+                                <!--<li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>-->
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Linear Inequalities</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Linear inequalities</strong> are mathematical expressions that show the relationship between two quantities where one is not necessarily equal to the other. They use inequality symbols:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Inequality Symbols:</h4>
+                                        <ul>
+                                            <li>\( < \) (less than)</li>
+                                            <li>\( > \) (greater than)</li>
+                                            <li>\( \leq \) (less than or equal to)</li>
+                                            <li>\( \geq \) (greater than or equal to)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Examples:</h4>
+                                        <ul>
+                                            <li>\( x + 3 > 7 \)</li>
+                                            <li>\( 2y - 5 \leq 10 \)</li>
+                                            <li>\( \frac{z}{4} < 3 \)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Concept
+                                </h3>
+                                <p>
+                                    Unlike equations which have specific solutions, inequalities typically have a <strong>range of solutions</strong> that satisfy the condition. We represent these solutions as <strong>solution sets</strong>.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Solving Linear Inequalities Section -->
+                        <section id="solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Solving Linear Inequalities
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on solving linear inequalities with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Solving Process
+                                </h3>
+                                <p>
+                                    Solving linear inequalities follows similar steps to solving equations, with one important exception:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Basic Steps:</h4>
+                                        <ol>
+                                            <li>Isolate the variable term on one side</li>
+                                            <li>Simplify both sides as needed</li>
+                                            <li>Divide or multiply to solve for the variable</li>
+                                        </ol>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Important Rule:</h4>
+                                        <p>
+                                            When you <strong>multiply or divide both sides by a negative number</strong>, 
+                                            you must <strong>reverse the inequality sign</strong>.
+                                        </p>
+                                        <div class="math-example">
+                                            \[ \text{Example: } -2x > 6 \implies x < -3 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <h3>Example 1</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Solve: \( 3x + 5 < 17 \)</p>
+                                        <div class="math-example">
+                                            \[
+                                            \begin{align*}
+                                            3x + 5 &< 17 \\
+                                            3x &< 17 - 5 \\
+                                            3x &< 12 \\
+                                            x &< \frac{12}{3} \\
+                                            x &< 4
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                        <p>Solution: All real numbers less than 4.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <h3>Example 2</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Solve: \( -4y + 7 \geq 19 \)</p>
+                                        <div class="math-example">
+                                            \[
+                                            \begin{align*}
+                                            -4y + 7 &\geq 19 \\
+                                            -4y &\geq 19 - 7 \\
+                                            -4y &\geq 12 \\
+                                            y &\leq \frac{12}{-4} \quad \text{(Sign reversed)} \\
+                                            y &\leq -3
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                        <p>Solution: All real numbers less than or equal to -3.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Solution Sets Section -->
+                        <section id="solution-sets" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-list-ol"></i> Solution Sets
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Understanding Solution Sets
+                                </h3>
+                                <p>
+                                    The <strong>solution set</strong> of an inequality is the collection of all values that satisfy the inequality. We can represent solution sets in different ways:
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-chevron-right"></i>
+                                        <h3>1. Inequality Notation</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Express the range of solutions using inequality symbols:</p>
+                                        <div class="math-example">
+                                            <p>For \( x > 2 \):</p>
+                                            \[ \{x \mid x > 2\} \]
+                                            <p>Read as "the set of all x such that x is greater than 2"</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-chevron-right"></i>
+                                        <h3>2. Number Line</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Visual representation on a number line:</p>
+                                        <div class="math-example">
+                                            <p>For \( x \leq 5 \):</p>
+                                            <p>(Picture of number line with closed circle at 5 and shading to the left)</p>
+                                            <p>Closed circle includes the endpoint, open circle excludes it.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-chevron-right"></i>
+                                        <h3>3. Set Notation</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>List all possible solutions when domain is limited:</p>
+                                        <div class="math-example">
+                                            <p>For \( x < 4 \) where \( x \in \{1, 2, 3, 4, 5\} \):</p>
+                                            \[ \{1, 2, 3\} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Solve the inequality: \( 2x - 3 < 7 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="math-example">
+                                            \[
+                                            \begin{align*}
+                                            2x - 3 &< 7 \\
+                                            2x &< 7 + 3 \\
+                                            2x &< 10 \\
+                                            x &< 5
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                        <p>Solution: \( \{x \mid x < 5\} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve the inequality: \( 5 - 3y \geq 11 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="math-example">
+                                            \[
+                                            \begin{align*}
+                                            5 - 3y &\geq 11 \\
+                                            -3y &\geq 11 - 5 \\
+                                            -3y &\geq 6 \\
+                                            y &\leq -2 \quad \text{(Sign reversed)}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                        <p>Solution: \( \{y \mid y \leq -2\} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Find the solution set of \( \frac{x}{4} + 2 > 3 \) for \( x \in \{0, 1, 2, 3, 4, 5, 6, 7, 8\} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="math-example">
+                                            \[
+                                            \begin{align*}
+                                            \frac{x}{4} + 2 &> 3 \\
+                                            \frac{x}{4} &> 1 \\
+                                            x &> 4
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                        <p>Solution: \( \{5, 6, 7, 8\} \)</p>
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Given Domains Section -->
+                        <section id="domains" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Solution Sets in Given Domains
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on finding solution sets in given domains.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Working with Domains
+                                </h3>
+                                <p>
+                                    Often, we need to find solutions to inequalities within specific domains (given sets of numbers). This involves:
+                                </p>
+                                <ol>
+                                    <li>Solving the inequality generally</li>
+                                    <li>Identifying which numbers in the domain satisfy the inequality</li>
+                                    <li>Listing these numbers as the solution set</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <h3>Example 1</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Find all integer solutions to \( 2x + 1 \leq 7 \) where \( x \in \{-2, -1, 0, 1, 2, 3, 4\} \)</p>
+                                        <div class="math-example">
+                                            \[
+                                            \begin{align*}
+                                            2x + 1 &\leq 7 \\
+                                            2x &\leq 6 \\
+                                            x &\leq 3
+                                            \end{align*}
+                                            \]
+                                            <p>From the domain \(\{-2, -1, 0, 1, 2, 3, 4\}\), the numbers satisfying \( x \leq 3 \) are:</p>
+                                            \[ \{-2, -1, 0, 1, 2, 3\} \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-exclamation-circle"></i>
+                                        <h3>Example 2</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Find all whole number solutions to \( 3 < x \leq 6 \) where \( x \in \{1, 2, 3, 4, 5, 6, 7\} \)</p>
+                                        <div class="math-example">
+                                            <p>The inequality \( 3 < x \leq 6 \) means x is greater than 3 and less than or equal to 6.</p>
+                                            <p>From the domain \(\{1, 2, 3, 4, 5, 6, 7\}\), the numbers satisfying this are:</p>
+                                            \[ \{4, 5, 6\} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the solution set of \( 5 - 2x > 1 \) for \( x \in \{0, 1, 2, 3, 4\} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="math-example">
+                                            \[
+                                            \begin{align*}
+                                            5 - 2x &> 1 \\
+                                            -2x &> -4 \\
+                                            x &< 2 \quad \text{(Sign reversed)}
+                                            \end{align*}
+                                            \]
+                                            <p>From the domain, numbers less than 2: \( \{0, 1\} \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find all integer solutions to \( 3 \leq x < 7 \) where \( x \in \{1, 2, 3, 4, 5, 6, 7, 8\} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Numbers greater than or equal to 3 and less than 7:</p>
+                                        \[ \{3, 4, 5, 6\} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Solve \( \frac{x+1}{2} \geq 2 \) for \( x \in \{1, 2, 3, 4, 5\} \) and list the solution set</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <div class="math-example">
+                                            \[
+                                            \begin{align*}
+                                            \frac{x+1}{2} &\geq 2 \\
+                                            x + 1 &\geq 4 \\
+                                            x &\geq 3
+                                            \end{align*}
+                                            \]
+                                            <p>From the domain: \( \{3, 4, 5\} \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

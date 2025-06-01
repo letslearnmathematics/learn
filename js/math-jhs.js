@@ -491,52 +491,52 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Constant of Proportionality", url: "./math-jhs/jhs2/number/ratios-and-proportion/constant-of-proportionality" }
             ],
             "Patterns and Relations": [
-                { name: "Gradient & Equation Of A Line", url: "./math-jhs/jhs2/algebra/patterns-and-relations/gradient-and-equation-of-line.html" },
-                { name: "Graphs Of Linear Relations ", url: "./math-jhs/jhs2/algebra/patterns-and-relations/graphs-linear-relations.html" },
-                { name: "Word Problems (Graphs)", url: "./math-jhs/jhs2/algebra/patterns-and-relations/word-problems-graphs.html" }
+                { name: "Gradient & Equation Of A Line", url: "./math-jhs/jhs2/algebra/patterns-and-relations/gradient-and-equation-of-line" },
+                { name: "Graphs Of Linear Relations ", url: "./math-jhs/jhs2/algebra/patterns-and-relations/graphs-linear-relations" },
+                { name: "Word Problems (Graphs)", url: "./math-jhs/jhs2/algebra/patterns-and-relations/word-problems-graphs" }
             ],
             "Algebraic Expressions": [
-                { name: "Distributive Property", url: "./math-jhs/jhs2/algebra/algebraic-expressions/distributive-property.html" },
-                { name: "Operations on Algebraic Expressions", url: "./math-jhs/jhs2/algebra/algebraic-expressions/operations-on-algebra.html" },
-                { name: "Substitution Of Values", url: "./math-jhs/jhs2/algebra/algebraic-expressions/substitution-of-values.html" },
-                { name: "Factorisation", url: "./math-jhs/jhs2/algebra/algebraic-expressions/factorisation.html" }
+                { name: "Distributive Property", url: "./math-jhs/jhs2/algebra/algebraic-expressions/distributive-property" },
+                { name: "Operations on Algebraic Expressions", url: "./math-jhs/jhs2/algebra/algebraic-expressions/operations-on-algebra" },
+                { name: "Substitution Of Values", url: "./math-jhs/jhs2/algebra/algebraic-expressions/substitution-of-values" },
+                { name: "Factorisation", url: "./math-jhs/jhs2/algebra/algebraic-expressions/factorisation" }
             ],
             "Variables and Equations": [
-                { name: "Word Problems & Linear Inequalities", url: "./math-jhs/jhs2/algebra/variables-and-equations/word-problems-linear-inequalities.html" },
-                { name: "Simple Linear Inequalities", url: "./math-jhs/jhs2/algebra/variables-and-equations/simple-linear-inequalities.html" },
-                { name: "Solution Set of Linear Inequalities", url: "./math-jhs/jhs2/algebra/variables-and-equations/solution-set.html" }
+                { name: "Word Problems & Linear Inequalities", url: "./math-jhs/jhs2/algebra/variables-and-equations/word-problems-linear-inequalities" },
+                { name: "Simple Linear Inequalities", url: "./math-jhs/jhs2/algebra/variables-and-equations/simple-linear-inequalities" },
+                { name: "Solution Set of Linear Inequalities", url: "./math-jhs/jhs2/algebra/variables-and-equations/solution-set" }
             ],
             "Shapes and Space": [
-                { name: "Alternate & Corresponding Angles", url: "./math-jhs/jhs2/geometry/shapes-and-space/alternate-corresponding-angles.html" },
-                { name: "Total Angles in a Triangle ", url: "./math-jhs/jhs2/geometry/shapes-and-space/total-angles-triangles.html" },
+                { name: "Alternate & Corresponding Angles", url: "./math-jhs/jhs2/geometry/shapes-and-space/alternate-corresponding-angles" },
+                { name: "Total Angles in a Triangle ", url: "./math-jhs/jhs2/geometry/shapes-and-space/total-angles-triangles" },
                 { name: "Construction & Bisection 120&deg;, 105&deg;, 135&deg; and 150&deg;", url: "./math-jhs/jhs2/geometry/shapes-and-space/construct-bisect-angles" },
-                { name: "Construct Triangles", url: "./math-jhs/jhs2/geometry/shapes-and-space/construction-triangles.html" },
-                { name: "Loci", url: "./math-jhs/jhs2/geometry/shapes-and-space/loci.html" }
+                { name: "Construct Triangles", url: "./math-jhs/jhs2/geometry/shapes-and-space/construction-triangles" },
+                { name: "Loci", url: "./math-jhs/jhs2/geometry/shapes-and-space/loci" }
             ],
             "Measurements": [
-                { name: "Area of Circles", url: "./math-jhs/jhs2/geometry/measurement/area-circles.html" },
-                { name: "Right-Angled Triangles", url: "./math-jhs/jhs2/geometry/measurement/right-angled-triangles.html" },
-                { name: "The Pythagoras Theorem", url: "./math-jhs/jhs2/geometry/measurement/the-pythagora-theorem.html" },
-                { name: "Word Problems (Pythagoras Theorem)", url: "./math-jhs/jhs2/geometry/measurement/word-problems-pythagoras-theorem.html" },
-                { name: "Trigonometric Ratios (sine, cosine tangent)", url: "./math-jhs/jhs2/geometry/measurement/trigonometric-ratios.html" },
-                { name: "Vectors", url: "./math-jhs/jhs2/geometry/measurement/vectors.html" },
-                { name: "Vector Equality", url: "./math-jhs/jhs2/geometry/measurement/vector-equality.html" }
+                { name: "Area of Circles", url: "./math-jhs/jhs2/geometry/measurement/area-circles" },
+                { name: "Right-Angled Triangles", url: "./math-jhs/jhs2/geometry/measurement/right-angled-triangles" },
+                { name: "The Pythagoras Theorem", url: "./math-jhs/jhs2/geometry/measurement/the-pythagoras-theorem" },
+                { name: "Word Problems (Pythagoras Theorem)", url: "./math-jhs/jhs2/geometry/measurement/word-problems-pythagoras-theorem" },
+                { name: "Trigonometric Ratios (sine, cosine tangent)", url: "./math-jhs/jhs2/geometry/measurement/trigonometric-ratios" },
+                { name: "Vectors", url: "./math-jhs/jhs2/geometry/measurement/vectors" },
+                { name: "Vector Equality", url: "./math-jhs/jhs2/geometry/measurement/vector-equality" }
             ],
             "Position and Transformation": [
-                { name: "Rotation", url: "./math-jhs/jhs2/geometry/position-and-transformation/rotation.html" },
-                { name: "Rotations in a Coordinate Plane", url: "./math-jhs/jhs2/geometry/position-and-transformation/rotation-coordinate-plane.html" },
-                { name: "Congruent Shapes", url: "./math-jhs/jhs2/geometry/position-and-transformation/congruent-shapes.html" }
+                { name: "Rotation", url: "./math-jhs/jhs2/geometry/position-and-transformation/rotation" },
+                { name: "Rotations in a Coordinate Plane", url: "./math-jhs/jhs2/geometry/position-and-transformation/rotation-coordinate-plane" },
+                { name: "Congruent Shapes", url: "./math-jhs/jhs2/geometry/position-and-transformation/congruent-shapes" }
             ],
             "Data": [
-                { name: "Types of Data", url: "./math-jhs/jhs2/handling-data/data/types-of-data.html" },
-                { name: "Methods of Collecting Data", url: "./math-jhs/jhs2/handling-data/data/methods-of-collecting-data.html" },
-                { name: "Organising And Analysing Data", url: "./math-jhs/jhs2/handling-data/data/organising-and-analysing-data.html" },
-                { name: "Measures of Central Tendency", url: "./math-jhs/jhs2/handling-data/data/measures-of-central-tendency.html" },
-                { name: "Justification of a Chosen Measure of Central Tendency", url: "./math-jhs/jhs2/handling-data/data/justification.html" }
+                { name: "Types of Data", url: "./math-jhs/jhs2/handling-data/data/types-of-data" },
+                { name: "Methods of Collecting Data", url: "./math-jhs/jhs2/handling-data/data/methods-of-collecting-data" },
+                { name: "Organising And Analysing Data", url: "./math-jhs/jhs2/handling-data/data/organising-and-analysing-data" },
+                { name: "Measures of Central Tendency", url: "./math-jhs/jhs2/handling-data/data/measures-of-central-tendency" },
+                { name: "Justification of a Chosen Measure of Central Tendency", url: "./math-jhs/jhs2/handling-data/data/justification" }
             ],
             "Chance or Probability": [
-                { name: "Independent Events", url: "./math-jhs/jhs2/handling-data/chance-or-probability/independent-events.html" },
-                { name: "Probability as Fractions, Decimals & Percentages", url: "./math-jhs/jhs2/handling-data/chance-or-probability/probability-as-fractions-percentages.html" }
+                { name: "Independent Events", url: "./math-jhs/jhs2/handling-data/chance-or-probability/independent-events" },
+                { name: "Probability as Fractions, Decimals & Percentages", url: "./math-jhs/jhs2/handling-data/chance-or-probability/probability-as-fractions-percentages" }
             ]
         },
         "jhs3": {

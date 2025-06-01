@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Types of Data | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Lesson on identifying types of data for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Types of Data | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to identify numerical, categorical, grouped and ungrouped data">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/data/types-of-data">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Types of Data</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Data Handling</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Types of Data</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#numeric-data"><i class="fas fa-chevron-right"></i> Numeric Data</a></li>
+                                <li><a href="#non-numeric"><i class="fas fa-chevron-right"></i> Non-Numeric Data</a></li>
+                                <li><a href="#grouped-data"><i class="fas fa-chevron-right"></i> Grouped vs Ungrouped</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Data Handling</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Data</strong> refers to raw facts and figures collected during investigations or observations. 
+                                    Before we can analyze data, we need to understand what type of data we're working with.
+                                </p>
+                                <p>
+                                    In this lesson, we'll learn to identify different types of data including numerical, categorical, 
+                                    grouped and ungrouped data. Understanding these classifications helps us choose the right methods 
+                                    for organizing and analyzing our data.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Numeric Data Section -->
+                        <section id="numeric-data" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Numeric Data
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> What is Numeric Data?
+                                </h3>
+                                <p>
+                                    Numeric data consists of numbers that can be measured or counted. This type of data can be 
+                                    further divided into two main categories:
+                                </p>
+                            </div>
+                            
+                            <!-- Discrete vs Continuous -->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-list-ol"></i>
+                                        <h3>Discrete Data</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Countable numbers with distinct, separate values:</p>
+                                        <div class="math-example">
+                                            <ul>
+                                                <li>The number of Nissan cars sold by Japan Motors, Ghana in a year</li>
+                                                <li>The number of children in a family</li>
+                                                <li>The number of learners in B8 class</li>
+                                            </ul>
+                                        </div>
+                                        <p class="key-point">
+                                            <i class="fas fa-lightbulb"></i> <strong>Key Point:</strong> Discrete data can only take certain values (usually whole numbers).
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-chart-line"></i>
+                                        <h3>Continuous Data</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Measured numbers that can take any value within a range:</p>
+                                        <div class="math-example">
+                                            <ul>
+                                                <li>The weights of babies in a crèche (e.g. 4.5kg)</li>
+                                                <li>Heights of students</li>
+                                                <li>Temperature readings</li>
+                                            </ul>
+                                        </div>
+                                        <p class="key-point">
+                                            <i class="fas fa-lightbulb"></i> <strong>Key Point:</strong> Continuous data can take any value (including fractions/decimals) within a range.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Group Activity -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-users"></i> Group Discussion Activity
+                                </h3>
+                                <p>
+                                    <strong>Task:</strong> In small groups, discuss and list 5 more examples of numeric data that 
+                                    could be collected during investigations. Identify each as discrete or continuous.
+                                </p>
+                                <div class="activity-example">
+                                    <p><strong>Example:</strong> </p>
+                                    <ul>
+                                        <li>Discrete: Number of cars passing a toll booth each hour</li>
+                                        <li>Continuous: Time taken to complete a race (in seconds)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Non-Numeric Data Section -->
+                        <section id="non-numeric" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-tags"></i> Non-Numeric (Categorical) Data
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> What is Categorical Data?
+                                </h3>
+                                <p>
+                                    Categorical data consists of characteristics or attributes that can't be measured numerically. 
+                                    This type of data describes qualities or categories.
+                                </p>
+                            </div>
+                            
+                            <!-- Types of Categorical Data -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list"></i> Examples of Categorical Data
+                                </h3>
+                                <div class="math-example">
+                                    <ul>
+                                        <li>Sex (male or female)</li>
+                                        <li>Income group (low, middle, high)</li>
+                                        <li>Movie type (action, comedy, drama)</li>
+                                        <li>Age group (child, teen, adult)</li>
+                                        <li>Marital status (single, married, divorced)</li>
+                                        <li>Boxers' weight class (featherweight, lightweight, etc.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <!-- Ordinal vs Nominal -->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-sort-amount-up"></i>
+                                        <h3>Ordinal Data</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Categories with a meaningful order or ranking:</p>
+                                        <div class="math-example">
+                                            <ul>
+                                                <li>Boxers' weight class (ordered from light to heavy)</li>
+                                                <li>Age group (child, teen, adult)</li>
+                                                <li>Education level (primary, secondary, tertiary)</li>
+                                            </ul>
+                                        </div>
+                                        <p class="key-point">
+                                            <i class="fas fa-lightbulb"></i> <strong>Key Point:</strong> The order matters in ordinal data, but the intervals between categories may not be equal.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-tags"></i>
+                                        <h3>Nominal Data</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Categories without any inherent order:</p>
+                                        <div class="math-example">
+                                            <ul>
+                                                <li>Sex (male or female)</li>
+                                                <li>Marital status</li>
+                                                <li>Movie genres</li>
+                                            </ul>
+                                        </div>
+                                        <p class="key-point">
+                                            <i class="fas fa-lightbulb"></i> <strong>Key Point:</strong> Nominal data has no numerical or ordered relationship between categories.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Group Activity -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-users"></i> Group Discussion Activity
+                                </h3>
+                                <p>
+                                    <strong>Task:</strong> In small groups, sort the following non-numeric data into ordinal and nominal categories:
+                                </p>
+                                <div class="activity-example">
+                                    <p>Eye color, T-shirt size (S, M, L), Car brands, Restaurant ratings (1-5 stars), Blood type</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Ordinal:</strong> T-shirt size, Restaurant ratings</p>
+                                        <p><strong>Nominal:</strong> Eye color, Car brands, Blood type</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Grouped vs Ungrouped Section -->
+                        <section id="grouped-data" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-object-group"></i> Grouped vs Ungrouped Data
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Understanding the Difference
+                                </h3>
+                                <p>
+                                    Data can also be classified based on how it's organized - either as individual values or grouped into categories/ranges.
+                                </p>
+                            </div>
+                            
+                            <!-- Types -->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-list-ul"></i>
+                                        <h3>Ungrouped Data</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Individual, raw data points not organized into groups:</p>
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> The scores for 11 learners in a class test:</p>
+                                            <p>25, 30, 35, 40, 45, 26, 29, 50, 45, 37, 47</p>
+                                        </div>
+                                        <p class="key-point">
+                                            <i class="fas fa-lightbulb"></i> <strong>Key Point:</strong> Each individual value is visible in ungrouped data.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-th-large"></i>
+                                        <h3>Grouped Data</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Data organized into categories or ranges:</p>
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> The same test scores grouped into ranges:</p>
+                                            <ul>
+                                                <li>25-35: 5 learners (25, 30, 26, 29, 35)</li>
+                                                <li>36-50: 6 learners (40, 45, 50, 45, 37, 47)</li>
+                                            </ul>
+                                        </div>
+                                        <p class="key-point">
+                                            <i class="fas fa-lightbulb"></i> <strong>Key Point:</strong> Grouped data shows how many values fall within each range, but hides individual values.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pencil-alt"></i> Practice Exercise
+                                </h3>
+                                <p>
+                                    <strong>Task:</strong> The ages of 15 students are: 12, 13, 14, 12, 15, 13, 14, 16, 12, 13, 15, 14, 13, 12, 15
+                                </p>
+                                <p>Group this data into the ranges 12-13 and 14-16 and count how many students fall into each group.</p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>12-13:</strong> 8 students (12, 13, 12, 13, 12, 13, 13, 12)</p>
+                                    <p><strong>14-16:</strong> 7 students (14, 14, 15, 16, 15, 14, 15)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Classify each of the following as numeric (discrete/continuous) or categorical (ordinal/nominal) data:</p>
+                                    <ol type="a">
+                                        <li>Number of books in a library</li>
+                                        <li>Types of vehicles in a parking lot</li>
+                                        <li>Temperature readings throughout the day</li>
+                                        <li>Customer satisfaction ratings (Very satisfied, Satisfied, Neutral, Dissatisfied)</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>a.</strong> Numeric (discrete) - Countable whole numbers</p>
+                                        <p><strong>b.</strong> Categorical (nominal) - No inherent order</p>
+                                        <p><strong>c.</strong> Numeric (continuous) - Can take any value in a range</p>
+                                        <p><strong>d.</strong> Categorical (ordinal) - Ordered categories</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>The following are weights (in kg) of 20 students: 
+                                        45, 52, 48, 55, 50, 49, 53, 51, 47, 54, 
+                                        46, 52, 50, 49, 51, 53, 48, 50, 52, 49</p>
+                                    <p>Group this data into intervals of 45-49, 50-54 and state the frequency for each group.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>45-49 kg:</strong> 6 students (45, 48, 49, 47, 46, 48, 49)</p>
+                                        <p><strong>50-54 kg:</strong> 14 students (52, 55, 50, 53, 51, 54, 52, 50, 51, 53, 50, 52, 49)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>For each scenario, identify whether the data would be:</p>
+                                    <ol type="i">
+                                        <li>Numeric or categorical</li>
+                                        <li>If numeric, discrete or continuous</li>
+                                        <li>If categorical, ordinal or nominal</li>
+                                    </ol>
+                                    <p>Scenarios:</p>
+                                    <ol type="a">
+                                        <li>A survey asking for people's favorite color</li>
+                                        <li>Recording the time it takes runners to complete a race</li>
+                                        <li>Counting the number of defective products in a factory each day</li>
+                                        <li>A questionnaire about pain level (None, Mild, Moderate, Severe)</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>a.</strong> Categorical (nominal) - Colors have no order</p>
+                                        <p><strong>b.</strong> Numeric (continuous) - Time can be measured precisely</p>
+                                        <p><strong>c.</strong> Numeric (discrete) - Count of defective items</p>
+                                        <p><strong>d.</strong> Categorical (ordinal) - Ordered pain levels</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Congruent Shapes | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Congruent Shapes for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Congruent Shapes | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Investigate Congruent Shapes Using Rotation on Coordinate Planes">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/geometry/congruent-shapes">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Congruent Shapes</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Congruent Shapes</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#properties"><i class="fas fa-chevron-right"></i> Properties</a></li>
+                                <li><a href="#rotation"><i class="fas fa-chevron-right"></i> Rotation on Coordinate Plane</a></li>
+                                <li><a href="#verification"><i class="fas fa-chevron-right"></i> Verification</a></li>
+                                <!--<li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>-->
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Geometry</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Congruent Shapes
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Congruent shapes</strong> are geometric figures that have exactly the same size and shape, 
+                                    regardless of their position or orientation. When two shapes are congruent, one can be transformed 
+                                    into the other through a combination of rotations, reflections, and translations.
+                                </p>
+                                <p>
+                                    To determine if two shapes are congruent, we can compare their corresponding sides and angles. 
+                                    If all corresponding sides are equal in length and all corresponding angles are equal in measure, 
+                                    then the shapes are congruent.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Examples of congruent shapes:</p>
+                                    <img src="../../../../images/congruent-examples.png" alt="Examples of congruent shapes" class="place">
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Characteristics
+                                </h3>
+                                <ul>
+                                    <li>Same shape and size</li>
+                                    <li>Corresponding sides are equal</li>
+                                    <li>Corresponding angles are equal</li>
+                                    <li>Can be transformed into each other through rotation, reflection, or translation</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Properties Section -->
+                        <section id="properties" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Properties of Congruent Shapes
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on the properties of congruent shapes with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Side and Angle Relationships
+                                </h3>
+                                <p>
+                                    For two shapes to be congruent, their corresponding parts must be equal. This means:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Corresponding Sides</h4>
+                                        <p>All matching sides must be equal in length.</p>
+                                        <p>If shape A ≅ shape B, then:</p>
+                                        <p>AB = A'B', BC = B'C', etc.</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Corresponding Angles</h4>
+                                        <p>All matching angles must be equal in measure.</p>
+                                        <p>If shape A ≅ shape B, then:</p>
+                                        <p>∠A = ∠A', ∠B = ∠B', etc.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-arrows-alt"></i> Transformations Preserving Congruence
+                                </h3>
+                                <p>
+                                    The following transformations preserve congruence (they don't change size or shape):
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Translation (Slide)</h4>
+                                        <p>Moving a shape without rotating or flipping it</p>
+                                        <img src="../../../../images/translation-example.png" alt="Translation example" class="place-small">
+                                    </div>
+                                    <div class="point">
+                                        <h4>Rotation (Turn)</h4>
+                                        <p>Turning a shape around a fixed point</p>
+                                        <img src="../../../../images/rotation-example.png" alt="Rotation example" class="place-small">
+                                    </div>
+                                    <div class="point">
+                                        <h4>Reflection (Flip)</h4>
+                                        <p>Creating a mirror image across a line</p>
+                                        <img src="../../../../images/reflection-example.png" alt="Reflection example" class="place-small">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Rotation on Coordinate Plane Section -->
+                        <section id="rotation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-sync-alt"></i> Rotation on Coordinate Plane
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Understanding Rotation
+                                </h3>
+                                <p>
+                                    Rotation is a transformation that turns a figure around a fixed point called the center of rotation. 
+                                    On a coordinate plane, we can precisely describe rotations using coordinates and angles.
+                                </p>
+                                <img src="../../../../images/coordinate-rotation.png" alt="Rotation on coordinate plane" class="place">
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-redo"></i>
+                                        <h3>Rotation Rules</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>The general rules for rotating a point (x, y) about the origin (0,0):</p>
+                                        <div class="math-example">
+                                            <p>
+                                                \[
+                                                \begin{array}{|c|c|}
+                                                \hline
+                                                \text{Rotation} & \text{New Coordinates} \\
+                                                \hline
+                                                90^\circ \text{ counterclockwise} & (-y, x) \\
+                                                180^\circ & (-x, -y) \\
+                                                270^\circ \text{ counterclockwise} & (y, -x) \\
+                                                360^\circ & (x, y) \\
+                                                \hline
+                                                \end{array}
+                                                \]
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-shapes"></i>
+                                        <h3>Rotating Shapes</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>To rotate an entire shape, apply the rotation rules to each vertex:</p>
+                                        <ol>
+                                            <li>Identify all vertices of the shape</li>
+                                            <li>Apply the rotation transformation to each vertex</li>
+                                            <li>Plot the new vertices to create the rotated shape</li>
+                                        </ol>
+                                        <img src="../../../../images/shape-rotation-example.png" alt="Shape rotation example" class="place-small">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Rotate triangle ABC with vertices A(2,3), B(5,3), C(3,6) 90° counterclockwise about the origin. What are the new coordinates?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Applying the 90° rotation rule (x,y) → (-y,x):</p>
+                                            <p>A(2,3) → A'(-3,2)</p>
+                                            <p>B(5,3) → B'(-3,5)</p>
+                                            <p>C(3,6) → C'(-6,3)</p>
+                                            <img src="../../../../images/rotation-solution1.png" alt="Rotation solution" class="place-small">
+                                        </div>
+                                    </div>
+                                    <div class="problem-card">
+                                        <h3>Question 2</h3>
+                                        <p>A rectangle has vertices at (1,1), (4,1), (4,3), and (1,3). Rotate it 180° about the origin. What are the new coordinates?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Applying the 180° rotation rule (x,y) → (-x,-y):</p>
+                                            <p>(1,1) → (-1,-1)</p>
+                                            <p>(4,1) → (-4,-1)</p>
+                                            <p>(4,3) → (-4,-3)</p>
+                                            <p>(1,3) → (-1,-3)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+
+                        <!-- Verification Section -->
+                        <section id="verification" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-check-double"></i> Verifying Congruence Through Rotation
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-search"></i> Verification Process
+                                </h3>
+                                <p>
+                                    To verify if two shapes are congruent through rotation:
+                                </p>
+                                <ol>
+                                    <li>Identify corresponding vertices between the two shapes</li>
+                                    <li>Calculate the angle of rotation needed to align them</li>
+                                    <li>Apply the rotation to one shape and check if it matches the other</li>
+                                    <li>Verify that all corresponding sides and angles are equal</li>
+                                </ol>
+                                <img src="../../../../images/congruence-verification.png" alt="Congruence verification process" class="place">
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-project-diagram"></i> Multiple Examples
+                                </h3>
+                                <p>
+                                    Let's examine several examples of shapes and their rotated versions to verify congruence:
+                                </p>
+                                
+                                <div class="example-cards">
+                                    <div class="example-card">
+                                        <h4>Example 1: Triangles</h4>
+                                        <img src="../../../../images/congruent-triangles.png" alt="Congruent triangles" class="place-small">
+                                        <p>Triangle ABC can be rotated 90° to match triangle DEF. All corresponding sides and angles are equal.</p>
+                                    </div>
+                                    
+                                    <div class="example-card">
+                                        <h4>Example 2: Quadrilaterals</h4>
+                                        <img src="../../../../images/congruent-quads.png" alt="Congruent quadrilaterals" class="place-small">
+                                        <p>Quadrilateral PQRS is a 180° rotation of quadrilateral WXYZ. They are congruent.</p>
+                                    </div>
+                                    
+                                    <div class="example-card">
+                                        <h4>Example 3: Complex Shapes</h4>
+                                        <img src="../../../../images/congruent-complex.png" alt="Congruent complex shapes" class="place-small">
+                                        <p>These irregular shapes are congruent through a combination of rotation and translation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Are these two shapes congruent? If so, describe the rotation that would make them match.</p>
+                                        <img src="../../../../images/verification-problem1.png" alt="Verification problem 1" class="place-small">
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Yes, they are congruent. Shape B is a 90° clockwise rotation of Shape A.</p>
+                                            <img src="../../../../images/verification-solution1.png" alt="Verification solution 1" class="place-small">
+                                        </div>
+                                    </div>
+                                    <div class="problem-card">
+                                        <h3>Question 2</h3>
+                                        <p>Verify if these triangles are congruent through rotation:</p>
+                                        <img src="../../../../images/verification-problem2.png" alt="Verification problem 2" class="place-small">
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>They are not congruent. While they appear similar, the side lengths don't match exactly.</p>
+                                        </div>
+                                    </div>
+                                    <div class="problem-card">
+                                        <h3>Question 3</h3>
+                                        <p>Determine if these quadrilaterals are congruent and describe the transformation:</p>
+                                        <img src="../../../../images/verification-problem3.png" alt="Verification problem 3" class="place-small">
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>They are congruent. Quadrilateral EFGH is a 270° counterclockwise rotation of ABCD.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="cta-box">
+                                    <p>Ready for more challenges?</p>
+                                    <a href="#quick-test" class="cta-button">
+                                        <i class="fas fa-arrow-right"></i> Full Practice Set
+                                    </a>
+                                </div>
+                            </section>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your understanding of congruent shapes through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Angles in Triangles and Polygons | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on angles in triangles and polygons for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Angles in Triangles and Polygons | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to calculate angles in triangles and polygons using interior angle sums">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/geometry/angles-triangles-polygons">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Angles in Triangles and Polygons</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Angles in Triangles</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#triangle-angles" class="active"><i class="fas fa-chevron-right"></i> Triangle Angles</a></li>
+                                <li><a href="#polygon-angles"><i class="fas fa-chevron-right"></i> Polygon Angles</a></li>
+                                <li><a href="#regular-polygons"><i class="fas fa-chevron-right"></i> Regular Polygons</a></li>
+                                <li><a href="#problem-solving"><i class="fas fa-chevron-right"></i> Problem Solving</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Geometry</span>
+                        </nav>
+
+                        <!-- Triangle Angles Section -->
+                        <section id="triangle-angles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Angles in Triangles
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Sum of Interior Angles
+                                </h3>
+                                <p>
+                                    The sum of the interior angles in any triangle is always 180°. This property allows us to find unknown angles when two angles are known.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong> Find the missing angle in a triangle with angles 45° and 60°.</p>
+                                    \[ \text{Let the missing angle be } x \]
+                                    \[ 45° + 60° + x = 180° \]
+                                    \[ 105° + x = 180° \]
+                                    \[ x = 180° - 105° = 75° \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Types of Triangles by Angles:</h4>
+                                        <ul>
+                                            <li><strong>Acute:</strong> All angles &lt; 90°</li>
+                                            <li><strong>Right:</strong> One angle = 90°</li>
+                                            <li><strong>Obtuse:</strong> One angle &gt; 90°</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Special Cases:</h4>
+                                        <ul>
+                                            <li>Equilateral triangle: All angles = 60°</li>
+                                            <li>Isosceles triangle: Two equal angles</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Exterior Angle Theorem
+                                </h3>
+                                <p>The exterior angle of a triangle is equal to the sum of the two opposite interior angles.</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 2:</strong> Find angle x if angles A and B are 50° and 70° respectively.</p>
+                                    \[ x = 50° + 70° = 120° \]
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Polygon Angles Section -->
+                        <section id="polygon-angles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Angles in Polygons
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Sum of Interior Angles
+                                </h3>
+                                <p>
+                                    The sum of the interior angles of an n-sided polygon is given by:
+                                    \[ S = (n - 2) \times 180° \]
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 3:</strong> Find the sum of interior angles of a pentagon (5 sides).</p>
+                                    \[ S = (5 - 2) \times 180° = 3 \times 180° = 540° \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Derivation:</h4>
+                                        <p>Any n-sided polygon can be divided into (n-2) triangles. Since each triangle sums to 180°, the total is (n-2)×180°.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Finding Individual Angles
+                                </h3>
+                                <p>
+                                    For regular polygons (where all sides and angles are equal), each interior angle is:
+                                    \[ \text{Each angle} = \frac{(n - 2) \times 180°}{n} \]
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 4:</strong> Find one interior angle of a regular hexagon.</p>
+                                    \[ \text{Each angle} = \frac{(6 - 2) \times 180°}{6} = \frac{720°}{6} = 120° \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Regular Polygons Section -->
+                        <section id="regular-polygons" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-star"></i> Regular Polygons
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Properties
+                                </h3>
+                                <p>
+                                    Regular polygons have equal sides and equal angles. This makes calculating their angles simpler.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 5:</strong> Find the value of x in this regular hexagon.</p>
+                                    <p>First calculate the sum of interior angles:</p>
+                                    \[ S = (6 - 2) \times 180° = 720° \]
+                                    <p>Since all angles are equal:</p>
+                                    \[ x = \frac{720°}{6} = 120° \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Exterior Angles:</h4>
+                                        <p>The sum of exterior angles for any polygon is always 360°. For regular polygons:</p>
+                                        \[ \text{Each exterior angle} = \frac{360°}{n} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the missing angle in a triangle with angles 35° and 75°.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Sum of angles = 180°</p>
+                                        \[ 35° + 75° + x = 180° \]
+                                        \[ 110° + x = 180° \]
+                                        \[ x = 180° - 110° = 70° \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Calculate the sum of interior angles of a nonagon (9-sided polygon).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ S = (n - 2) \times 180° \]
+                                        \[ S = (9 - 2) \times 180° = 7 \times 180° = 1260° \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Find one interior angle of a regular octagon.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First find sum of angles:</p>
+                                        \[ S = (8 - 2) \times 180° = 1080° \]
+                                        <p>Then divide by number of angles:</p>
+                                        \[ \text{Each angle} = \frac{1080°}{8} = 135° \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>In triangle ABC, angle A = 40° and angle B = angle C. Find angle B.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let angle B = angle C = x</p>
+                                        \[ 40° + x + x = 180° \]
+                                        \[ 2x = 140° \]
+                                        \[ x = 70° \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Find the value of x in the hexagon with angles: 110°, 120°, 130°, x, 115°, 125°.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First find sum of angles:</p>
+                                        \[ S = (6 - 2) \times 180° = 720° \]
+                                        <p>Then set up equation:</p>
+                                        \[ 110° + 120° + 130° + x + 115° + 125° = 720° \]
+                                        \[ 600° + x = 720° \]
+                                        \[ x = 120° \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Problem Solving Section -->
+                        <section id="problem-solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-lightbulb"></i> Problem Solving
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-puzzle-piece"></i> Complex Problems
+                                </h3>
+                                <p>
+                                    Let's apply our knowledge to solve more complex problems involving multiple concepts.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 6:</strong> Find angles x and y in the following diagram (assuming a regular pentagon and an equilateral triangle).</p>
+                                    <p>First calculate interior angle of pentagon:</p>
+                                    \[ \text{Each angle} = \frac{(5 - 2) \times 180°}{5} = 108° \]
+                                    <p>For the equilateral triangle, all angles = 60°</p>
+                                    <p>At point where they meet:</p>
+                                    \[ x = 360° - 108° - 60° = 192° \]
+                                    <p>For angle y, consider the straight line:</p>
+                                    \[ y = 180° - 60° = 120° \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-circle"></i> Common Mistakes
+                                </h3>
+                                <ul>
+                                    <li>Forgetting that the sum of angles in a triangle is always 180°</li>
+                                    <li>Using the wrong formula for polygon angle sums</li>
+                                    <li>Assuming all polygons are regular when they're not</li>
+                                    <li>Miscounting the number of sides in a polygon</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

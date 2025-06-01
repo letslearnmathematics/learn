@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Data Organization | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Data Organization for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Data Organization | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to organize data using frequency tables, graphs and other representations">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/data-handling/data-organization">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Organizing Data</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Data Handling</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Organizing Data</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#frequency-table"><i class="fas fa-chevron-right"></i> Frequency Tables</a></li>
+                                <li><a href="#bar-pie-charts"><i class="fas fa-chevron-right"></i> Bar & Pie Charts</a></li>
+                                <li><a href="#waffle-chart"><i class="fas fa-chevron-right"></i> Waffle Chart</a></li>
+                                <li><a href="#stem-leaf"><i class="fas fa-chevron-right"></i> Stem & Leaf Plot</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Data Handling</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Data organization</strong> is the process of arranging collected data in a meaningful way to make it easier to understand, analyze, and interpret. Properly organized data helps us identify patterns, trends, and relationships.
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to organize both grouped and ungrouped data using various representations including frequency tables, bar graphs, pie charts, waffle diagrams, and stem-and-leaf plots.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Grouped Data:</h4>
+                                        <p>Data organized into classes or intervals (e.g., 10-19, 20-29)</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Ungrouped Data:</h4>
+                                        <p>Raw data showing individual values (e.g., 12, 15, 18, 21)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Frequency Table Section -->
+                        <section id="frequency-table" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-table"></i> Frequency Tables
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Indicator 1: Complete the Frequency Table
+                                </h3>
+                                <p>Given the following data set of test scores (out of 20):</p>
+                                <p>12, 15, 18, 12, 14, 16, 15, 13, 17, 19, 15, 14, 16, 13, 12, 15, 16, 18, 14, 15</p>
+                                
+                                <div class="math-example">
+                                    <p>Complete the frequency distribution table below:</p>
+                                    <table class="data-table">
+                                        <tr>
+                                            <th>Score (x)</th>
+                                            <th>Tally</th>
+                                            <th>Frequency (f)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>Completed frequency table:</p>
+                                    <table class="data-table">
+                                        <tr>
+                                            <th>Score (x)</th>
+                                            <th>Tally</th>
+                                            <th>Frequency (f)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>12</td>
+                                            <td>III</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>13</td>
+                                            <td>II</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>14</td>
+                                            <td>III</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>15</td>
+                                            <td>IIII</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>16</td>
+                                            <td>III</td>
+                                            <td>3</td>
+                                        </tr>
+                                        <tr>
+                                            <td>17</td>
+                                            <td>I</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>18</td>
+                                            <td>II</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>19</td>
+                                            <td>I</td>
+                                            <td>1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total</td>
+                                            <td></td>
+                                            <td>20</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Bar and Pie Charts Section -->
+                        <section id="bar-pie-charts" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-bar"></i> Bar and Pie Charts
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-pie"></i> Indicator 2: Draw Bar and Pie Charts
+                                </h3>
+                                <p>Using the completed frequency table from Indicator 1:</p>
+                                
+                                <div class="math-example">
+                                    <p>(a) Draw a bar chart to represent the data</p>
+                                    <p>(b) Draw a pie chart to represent the data</p>
+                                </div>
+                                
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>(a) Bar chart representation:</p>
+                                    <img src="../../../../images/placeholder-bar-chart.jpg" alt="Bar chart of test scores" class="place">
+                                    
+                                    <p>(b) Pie chart representation:</p>
+                                    <img src="../../../../images/placeholder-pie-chart.jpg" alt="Pie chart of test scores" class="place">
+                                    
+                                    <p>Steps to create pie chart:</p>
+                                    <ol>
+                                        <li>Calculate angle for each score: Angle = (Frequency ÷ Total) × 360°</li>
+                                        <li>12: (3/20)×360° = 54°</li>
+                                        <li>13: (2/20)×360° = 36°</li>
+                                        <li>14: (3/20)×360° = 54°</li>
+                                        <li>15: (5/20)×360° = 90°</li>
+                                        <li>16: (3/20)×360° = 54°</li>
+                                        <li>17: (1/20)×360° = 18°</li>
+                                        <li>18: (2/20)×360° = 36°</li>
+                                        <li>19: (1/20)×360° = 18°</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Waffle Chart Section -->
+                        <section id="waffle-chart" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-th"></i> Waffle Chart
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-square"></i> Indicator 3: The Waffle Chart
+                                </h3>
+                                <p>A waffle chart is a square grid that shows proportions of a whole, where each small square represents a portion of the total.</p>
+                                
+                                <div class="math-example">
+                                    <p>Create a waffle chart to represent the frequency of scores 15 and 16 from our data set (total of 8 occurrences out of 20).</p>
+                                </div>
+                                
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>Waffle chart representation (assuming 100 squares = 20 scores):</p>
+                                    <img src="../../../../images/placeholder-waffle-chart.jpg" alt="Waffle chart of test scores" class="place">
+                                    
+                                    <p>Calculation:</p>
+                                    <ul>
+                                        <li>Each square represents 0.2 scores (20 scores ÷ 100 squares)</li>
+                                        <li>Score 15 (5 scores) = 25 squares</li>
+                                        <li>Score 16 (3 scores) = 15 squares</li>
+                                        <li>Remaining scores = 60 squares</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Stem and Leaf Plot Section -->
+                        <section id="stem-leaf" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-leaf"></i> Stem and Leaf Plot
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-project-diagram"></i> Indicator 4: Stem and Leaf Plot
+                                </h3>
+                                <p>A stem-and-leaf plot displays quantitative data by splitting each value into a "stem" (first digit(s)) and a "leaf" (last digit).</p>
+                                
+                                <div class="math-example">
+                                    <p>Create a stem-and-leaf plot for the following data set (ages of participants in a study):</p>
+                                    <p>12, 15, 18, 21, 22, 24, 25, 25, 27, 28, 31, 32, 33, 35, 36, 38, 41, 42, 45, 47</p>
+                                </div>
+                                
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>Stem-and-leaf plot:</p>
+                                    <table class="data-table">
+                                        <tr>
+                                            <th>Stem (Tens)</th>
+                                            <th>Leaves (Units)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2 5 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>1 2 4 5 5 7 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>1 2 3 5 6 8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>1 2 5 7</td>
+                                        </tr>
+                                    </table>
+                                    <p>Key: 1|2 means 12 years</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>The following data shows the number of books read by 20 students in a month:</p>
+                                    <p>3, 5, 2, 4, 1, 3, 6, 2, 4, 5, 3, 2, 1, 4, 5, 6, 3, 2, 4, 5</p>
+                                    <p>Create a frequency table for this data.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <table class="data-table">
+                                            <tr>
+                                                <th>Books (x)</th>
+                                                <th>Tally</th>
+                                                <th>Frequency (f)</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>II</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>IIII</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>IIII</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>IIII</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>5</td>
+                                                <td>IIII</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>II</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Total</td>
+                                                <td></td>
+                                                <td>20</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Using the data from Question 1, draw a bar chart and pie chart.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Bar chart:</p>
+                                        <img src="../../../../images/placeholder-bar-chart2.jpg" alt="Bar chart of books read" class="place">
+                                        
+                                        <p>Pie chart angles:</p>
+                                        <ul>
+                                            <li>1 book: (2/20)×360° = 36°</li>
+                                            <li>2 books: (4/20)×360° = 72°</li>
+                                            <li>3 books: (4/20)×360° = 72°</li>
+                                            <li>4 books: (4/20)×360° = 72°</li>
+                                            <li>5 books: (4/20)×360° = 72°</li>
+                                            <li>6 books: (2/20)×360° = 36°</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Create a stem-and-leaf plot for the following test scores:</p>
+                                    <p>62, 65, 68, 71, 72, 74, 75, 75, 77, 78, 81, 82, 83, 85, 86, 88, 91, 92, 95, 97</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <table class="data-table">
+                                            <tr>
+                                                <th>Stem (Tens)</th>
+                                                <th>Leaves (Units)</th>
+                                            </tr>
+                                            <tr>
+                                                <td>6</td>
+                                                <td>2 5 8</td>
+                                            </tr>
+                                            <tr>
+                                                <td>7</td>
+                                                <td>1 2 4 5 5 7 8</td>
+                                            </tr>
+                                            <tr>
+                                                <td>8</td>
+                                                <td>1 2 3 5 6 8</td>
+                                            </tr>
+                                            <tr>
+                                                <td>9</td>
+                                                <td>1 2 5 7</td>
+                                            </tr>
+                                        </table>
+                                        <p>Key: 6|2 means 62%</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

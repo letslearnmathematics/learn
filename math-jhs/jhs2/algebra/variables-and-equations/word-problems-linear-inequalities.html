@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Linear Inequalities | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Linear Inequalities for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Linear Inequalities | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Translate Word Problems into Linear Inequalities in One Variable">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/algebra/linear-inequalities">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Linear Inequalities</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Linear Inequalities</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#word-to-inequality"><i class="fas fa-chevron-right"></i> Word Problems to Inequalities</a></li>
+                                <li><a href="#inequality-to-word"><i class="fas fa-chevron-right"></i> Inequalities to Word Problems</a></li>
+                                <li><a href="#real-life"><i class="fas fa-chevron-right"></i> Real-life Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Linear Inequalities</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Linear inequalities</strong> are mathematical expressions that show the relationship between two quantities where one is not necessarily equal to the other. They use inequality symbols like <strong>&lt;</strong> (less than), <strong>&gt;</strong> (greater than), <strong>&le;</strong> (less than or equal to), and <strong>&ge;</strong> (greater than or equal to).
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to translate word problems into linear inequalities in one variable, and vice versa. This skill is essential for solving real-world problems where exact equality may not be possible or necessary.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Examples of linear inequalities:</p>
+                                    \[ x + 3 > 7 \]
+                                    \[ 2y - 5 \leq 10 \]
+                                    \[ \frac{z}{4} < 12 \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Inequality Symbols:</h4>
+                                        <ul>
+                                            <li><strong>&lt;</strong> : Less than</li>
+                                            <li><strong>&gt;</strong> : Greater than</li>
+                                            <li><strong>&le;</strong> : Less than or equal to</li>
+                                            <li><strong>&ge;</strong> : Greater than or equal to</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Variable Representation:</h4>
+                                        <p>We typically use letters like x, y, or z to represent unknown quantities in inequalities.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Word Problems to Inequalities Section -->
+                        <section id="word-to-inequality" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Translating Word Problems to Inequalities
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example1" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on translating word problems to inequalities.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Step-by-Step Process
+                                </h3>
+                                <p>To translate a word problem into a linear inequality:</p>
+                                <ol>
+                                    <li>Identify the unknown quantity and assign it a variable (usually x).</li>
+                                    <li>Look for key phrases that indicate inequality relationships.</li>
+                                    <li>Write the mathematical expression based on the relationship.</li>
+                                    <li>Simplify the inequality if necessary.</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <!-- Example 1 --> 
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Example 1</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Problem:</strong> A number increased by 5 is at least 12.</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <ol>
+                                                <li>Let the number be \( x \)</li>
+                                                <li>"Increased by 5" translates to \( x + 5 \)</li>
+                                                <li>"At least" means \( \geq \)</li>
+                                                <li>Final inequality: \( x + 5 \geq 12 \)</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Example 2 -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Example 2</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Problem:</strong> Twice a number is less than 20.</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <ol>
+                                                <li>Let the number be \( y \)</li>
+                                                <li>"Twice a number" translates to \( 2y \)</li>
+                                                <li>"Less than" means \( < \)</li>
+                                                <li>Final inequality: \( 2y < 20 \)</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Example 3 -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Example 3</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Problem:</strong> The product of 3 and a number is at most 15.</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <ol>
+                                                <li>Let the number be \( z \)</li>
+                                                <li>"Product of 3 and a number" translates to \( 3z \)</li>
+                                                <li>"At most" means \( \leq \)</li>
+                                                <li>Final inequality: \( 3z \leq 15 \)</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Phrases and Their Mathematical Meanings
+                                </h3>
+                                <table class="math-table">
+                                    <tr>
+                                        <th>Word Phrase</th>
+                                        <th>Inequality Symbol</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Less than</td>
+                                        <td>&lt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Greater than</td>
+                                        <td>&gt;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>At least</td>
+                                        <td>&ge;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>At most</td>
+                                        <td>&le;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>No more than</td>
+                                        <td>&le;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>No less than</td>
+                                        <td>&ge;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Maximum of</td>
+                                        <td>&le;</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Minimum of</td>
+                                        <td>&ge;</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Translate to an inequality: Five more than a number is less than 8.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let the number be \( x \)</p>
+                                        <p>"Five more than a number" translates to \( x + 5 \)</p>
+                                        <p>"Less than" means \( < \)</p>
+                                        <p>Final inequality: \( x + 5 < 8 \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Translate to an inequality: Three times a number is at least 21.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let the number be \( y \)</p>
+                                        <p>"Three times a number" translates to \( 3y \)</p>
+                                        <p>"At least" means \( \geq \)</p>
+                                        <p>Final inequality: \( 3y \geq 21 \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Translate to an inequality: The sum of a number and 7 is no more than 15.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let the number be \( z \)</p>
+                                        <p>"Sum of a number and 7" translates to \( z + 7 \)</p>
+                                        <p>"No more than" means \( \leq \)</p>
+                                        <p>Final inequality: \( z + 7 \leq 15 \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Translate to an inequality: Half of a number is greater than 10.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let the number be \( a \)</p>
+                                        <p>"Half of a number" translates to \( \frac{a}{2} \)</p>
+                                        <p>"Greater than" means \( > \)</p>
+                                        <p>Final inequality: \( \frac{a}{2} > 10 \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Translate to an inequality: The difference between a number and 4 is at least 9.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let the number be \( b \)</p>
+                                        <p>"Difference between a number and 4" translates to \( b - 4 \)</p>
+                                        <p>"At least" means \( \geq \)</p>
+                                        <p>Final inequality: \( b - 4 \geq 9 \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Inequalities to Word Problems Section -->
+                        <section id="inequality-to-word" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Translating Inequalities to Word Problems
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example2" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on translating inequalities to word problems.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Step-by-Step Process
+                                </h3>
+                                <p>To translate a linear inequality into a word problem:</p>
+                                <ol>
+                                    <li>Identify the variable and what it represents.</li>
+                                    <li>Translate the mathematical operations into words.</li>
+                                    <li>Use appropriate phrases for the inequality symbol.</li>
+                                    <li>Combine all parts into a coherent statement.</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <!-- Example 1 --> 
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Example 1</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Inequality:</strong> \( x - 3 \leq 7 \)</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <ol>
+                                                <li>Let \( x \) represent a number</li>
+                                                <li>"\( x - 3 \)" translates to "3 less than a number"</li>
+                                                <li>"\( \leq \)" means "is at most" or "is no more than"</li>
+                                                <li>Word problem: "Three less than a number is no more than 7."</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Example 2 -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Example 2</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Inequality:</strong> \( 2y > 14 \)</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <ol>
+                                                <li>Let \( y \) represent a number</li>
+                                                <li>"\( 2y \)" translates to "twice a number"</li>
+                                                <li>"\( > \)" means "is greater than"</li>
+                                                <li>Word problem: "Twice a number is greater than 14."</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Example 3 -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Example 3</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Inequality:</strong> \( \frac{z}{4} \geq 5 \)</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <ol>
+                                                <li>Let \( z \) represent a number</li>
+                                                <li>"\( \frac{z}{4} \)" translates to "a number divided by 4" or "one-fourth of a number"</li>
+                                                <li>"\( \geq \)" means "is at least"</li>
+                                                <li>Word problem: "One-fourth of a number is at least 5."</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Translate to a word problem: \( x + 8 > 12 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible word problem:</p>
+                                        <p>"Eight more than a number is greater than 12."</p>
+                                        <p>or</p>
+                                        <p>"The sum of a number and 8 exceeds 12."</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Translate to a word problem: \( 5y \leq 30 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible word problem:</p>
+                                        <p>"Five times a number is at most 30."</p>
+                                        <p>or</p>
+                                        <p>"The product of 5 and a number is no more than 30."</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Translate to a word problem: \( \frac{a}{3} < 9 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible word problem:</p>
+                                        <p>"One-third of a number is less than 9."</p>
+                                        <p>or</p>
+                                        <p>"A number divided by 3 is below 9."</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Translate to a word problem: \( b - 7 \geq 15 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible word problem:</p>
+                                        <p>"Seven less than a number is at least 15."</p>
+                                        <p>or</p>
+                                        <p>"A number decreased by 7 is no less than 15."</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Translate to a word problem: \( 2x + 5 \leq 19 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible word problem:</p>
+                                        <p>"Twice a number increased by 5 is at most 19."</p>
+                                        <p>or</p>
+                                        <p>"The sum of double a number and 5 is no more than 19."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Real-life Applications Section -->
+                        <section id="real-life" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Real-life Applications
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example3" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on real-life applications of inequalities.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Practical Examples
+                                </h3>
+                                <p>Linear inequalities are used in many real-world situations. Here are some examples:</p>
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <!-- Example 1 --> 
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Budgeting</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Scenario:</strong> You have Gh₵500 to spend on books and stationery. Books cost Gh₵80 each and stationery costs Gh₵20 per set. You want to buy at least 2 books.</p>
+                                        <div class="math-example">
+                                            <p><strong>Inequality:</strong></p>
+                                            <p>Let \( x \) = number of books, \( y \) = number of stationery sets</p>
+                                            <p>\( 80x + 20y \leq 500 \) with \( x \geq 2 \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Example 2 -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Age Restrictions</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Scenario:</strong> To ride a roller coaster, you must be at least 12 years old and less than 65 years old.</p>
+                                        <div class="math-example">
+                                            <p><strong>Inequality:</strong></p>
+                                            <p>Let \( a \) = age of rider</p>
+                                            <p>\( 12 \leq a < 65 \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <!-- Example 3 -->
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Speed Limits</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p><strong>Scenario:</strong> The speed limit on a highway is between 50 km/h (minimum) and 100 km/h (maximum).</p>
+                                        <div class="math-example">
+                                            <p><strong>Inequality:</strong></p>
+                                            <p>Let \( s \) = speed of vehicle</p>
+                                            <p>\( 50 \leq s \leq 100 \)</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>You need to score at least 50 points to pass a test. Write an inequality to represent this situation.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( p \) = test score</p>
+                                        <p>Inequality: \( p \geq 50 \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A mobile phone plan gives you 500 free minutes per month. Additional minutes cost Gh₵0.50 each. If you want to spend no more than Gh₵100 on calls this month, write an inequality to represent this situation.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( m \) = additional minutes used</p>
+                                        <p>Cost for additional minutes: \( 0.5m \)</p>
+                                        <p>Inequality: \( 0.5m \leq 100 \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A rectangle has a length that is 5 cm more than its width. The perimeter must be less than 50 cm. Write an inequality to represent this situation.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( w \) = width, then length = \( w + 5 \)</p>
+                                        <p>Perimeter = \( 2(w + (w + 5)) = 2(2w + 5) = 4w + 10 \)</p>
+                                        <p>Inequality: \( 4w + 10 < 50 \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>To qualify for a scholarship, a student's average in 5 subjects must be at least 80. The student has scored 85, 78, 92, and 88 in four subjects. Write an inequality to find the minimum score needed in the fifth subject.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( x \) = fifth subject score</p>
+                                        <p>Average = \( \frac{85 + 78 + 92 + 88 + x}{5} \)</p>
+                                        <p>Inequality: \( \frac{343 + x}{5} \geq 80 \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>A shop sells two types of pens: Type A costs Gh₵3 and Type B costs Gh₵5. You want to buy at least 5 pens but spend no more than Gh₵30. Write a system of inequalities to represent this situation.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( a \) = number of Type A pens, \( b \) = number of Type B pens</p>
+                                        <p>Total pens: \( a + b \geq 5 \)</p>
+                                        <p>Total cost: \( 3a + 5b \leq 30 \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

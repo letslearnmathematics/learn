@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Measures of Central Tendency | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn when to use mean, median or mode as the most appropriate measure of central tendency.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Measures of Central Tendency | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to justify when to use mean, median or mode as the most appropriate measure of central tendency.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/statistics/measures-of-central-tendency">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Measures of Central Tendency</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Statistics</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Measures of Central Tendency</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#mean"><i class="fas fa-chevron-right"></i> When to Use Mean</a></li>
+                                <li><a href="#median"><i class="fas fa-chevron-right"></i> When to Use Median </a></li>
+                                <li><a href="#mode"><i class="fas fa-chevron-right"></i> When to Use Mode </a></li>
+                                <li><a href="#comparison"><i class="fas fa-chevron-right"></i> Comparing Measures </a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Statistics</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Measures of central tendency</strong> are statistical values that represent the center or typical value of a dataset. The three main measures are:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Mean (Average):</h4>
+                                        <p>The sum of all values divided by the number of values.</p>
+                                        \[ \text{Mean} = \frac{\sum x}{n} \]
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Median:</h4>
+                                        <p>The middle value when data is ordered from smallest to largest.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Mode:</h4>
+                                        <p>The most frequently occurring value in the dataset.</p>
+                                    </div>
+                                </div>
+                                
+                                <p>
+                                    Choosing the most appropriate measure depends on the nature of your data and what you want to communicate. Each measure has strengths and weaknesses in different contexts.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Mean Section -->
+                        <section id="mean" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> When to Use the Mean
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of when to use the mean with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-check-circle"></i> Appropriate Uses of the Mean
+                                </h3>
+                                <p>The mean is most appropriate when:</p>
+                                <ol>
+                                    <li>The data is <strong>numerical</strong> and <strong>continuous</strong> (e.g., heights, weights, test scores)</li>
+                                    <li>The distribution is <strong>approximately symmetrical</strong> (not skewed)</li>
+                                    <li>There are <strong>no extreme outliers</strong> that would distort the average</li>
+                                    <li>You need to include <strong>all values</strong> in your calculation</li>
+                                    <li>You plan to do <strong>further statistical analysis</strong> (like calculating standard deviation)</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Examples -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Real-World Examples
+                                </h3>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1: Test Scores</h4>
+                                    <p>Calculating the average score for a class test where most students scored between 60-80%, with a few slightly higher or lower.</p>
+                                    <p><strong>Why mean?</strong> The data is numerical, continuous, and relatively symmetric.</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2: Monthly Rainfall</h4>
+                                    <p>Finding the average monthly rainfall over a year to understand typical weather patterns.</p>
+                                    <p><strong>Why mean?</strong> We want to account for all rainfall measurements equally.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Limitations -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-triangle"></i> When Not to Use the Mean
+                                </h3>
+                                <p>The mean can be misleading when:</p>
+                                <ul>
+                                    <li>Data has <strong>extreme outliers</strong> (e.g., one billionaire in a neighborhood income survey)</li>
+                                    <li>The distribution is <strong>highly skewed</strong></li>
+                                    <li>Data is <strong>categorical</strong> (e.g., favorite colors)</li>
+                                    <li>There are <strong>open-ended ranges</strong> (e.g., "50+ years old")</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Median Section -->
+                        <section id="median" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-sort-numeric-down"></i> When to Use the Median
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of when to use the median with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-check-circle"></i> Appropriate Uses of the Median
+                                </h3>
+                                <p>The median is most appropriate when:</p>
+                                <ol>
+                                    <li>The data has <strong>extreme values or outliers</strong></li>
+                                    <li>The distribution is <strong>skewed</strong> (not symmetrical)</li>
+                                    <li>Data includes <strong>ordinal measurements</strong> (rankings where distances between values aren't equal)</li>
+                                    <li>There are <strong>open-ended ranges</strong> in the data</li>
+                                    <li>You want to find the <strong>typical value</strong> unaffected by extremes</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Examples -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Real-World Examples
+                                </h3>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1: Household Income</h4>
+                                    <p>Reporting income in a community where most earn $20,000-$50,000 but a few earn over $1,000,000.</p>
+                                    <p><strong>Why median?</strong> The few high earners would distort the mean, but median shows the typical income.</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2: House Prices</h4>
+                                    <p>Comparing housing markets where most homes cost $100,000-$300,000 but a few mansions cost millions.</p>
+                                    <p><strong>Why median?</strong> Gives a better sense of what most buyers would pay.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Limitations -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-triangle"></i> When Not to Use the Median
+                                </h3>
+                                <p>The median may not be ideal when:</p>
+                                <ul>
+                                    <li>You need to account for <strong>all values</strong> in your analysis</li>
+                                    <li>The data is <strong>symmetrical</strong> with no outliers</li>
+                                    <li>You plan to do <strong>further statistical calculations</strong> that require the mean</li>
+                                    <li>The dataset is <strong>very small</strong> (median might not represent the data well)</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Mode Section -->
+                        <section id="mode" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-bar"></i> When to Use the Mode
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of when to use the mode with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-check-circle"></i> Appropriate Uses of the Mode
+                                </h3>
+                                <p>The mode is most appropriate when:</p>
+                                <ol>
+                                    <li>Data is <strong>categorical</strong> (non-numerical categories)</li>
+                                    <li>You want to know the <strong>most common</strong> or <strong>most popular</strong> item</li>
+                                    <li>Working with <strong>discrete data</strong> with repeated values</li>
+                                    <li>Looking for <strong>peaks</strong> in a distribution</li>
+                                    <li>Dealing with <strong>nominal data</strong> (data that can't be ordered)</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Examples -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Real-World Examples
+                                </h3>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1: Favorite Colors</h4>
+                                    <p>Surveying a class to find the most popular color among students.</p>
+                                    <p><strong>Why mode?</strong> Colors are categorical data - can't calculate mean or median.</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2: Shoe Sizes</h4>
+                                    <p>A shoe store wants to know which size they should stock the most of.</p>
+                                    <p><strong>Why mode?</strong> Identifies the size that occurs most frequently among customers.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Limitations -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-triangle"></i> When Not to Use the Mode
+                                </h3>
+                                <p>The mode may not be ideal when:</p>
+                                <ul>
+                                    <li>There is <strong>no repetition</strong> in the data (all values are unique)</li>
+                                    <li>There are <strong>multiple modes</strong> of similar frequency</li>
+                                    <li>You need to account for <strong>all values</strong> in the dataset</li>
+                                    <li>Data is <strong>continuous numerical</strong> with many possible values</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Comparison Section -->
+                        <section id="comparison" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-balance-scale"></i> Comparing Measures of Central Tendency
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-table"></i> Decision Guide
+                                </h3>
+                                <table class="comparison-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Situation</th>
+                                            <th>Best Measure</th>
+                                            <th>Reason</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Data is numerical and symmetrical</td>
+                                            <td>Mean</td>
+                                            <td>Uses all data points equally</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data has extreme outliers</td>
+                                            <td>Median</td>
+                                            <td>Not affected by extreme values</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Categorical data (colors, brands)</td>
+                                            <td>Mode</td>
+                                            <td>Only measure that works for categories</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ordinal data (rankings, ratings)</td>
+                                            <td>Median</td>
+                                            <td>Maintains order but not affected by distance between ranks</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Need to identify most common value</td>
+                                            <td>Mode</td>
+                                            <td>Directly shows highest frequency</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-line"></i> Visual Comparison
+                                </h3>
+                                <p>Consider these three datasets and how each measure behaves:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Symmetrical Data</h4>
+                                        <p>2, 3, 3, 4, 5, 5, 6</p>
+                                        <p>Mean = Median = Mode ≈ 4</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Right-Skewed Data</h4>
+                                        <p>2, 3, 3, 4, 5, 5, 15</p>
+                                        <p>Mean (5.29) > Median (4) > Mode (3 and 5)</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Left-Skewed Data</h4>
+                                        <p>1, 5, 5, 6, 7, 7, 7</p>
+                                        <p>Mean (5.43) < Median (6) < Mode (7)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A teacher records the following test scores: 85, 90, 78, 92, 88, 95, 100, 85, 82, 90. Which measure of central tendency would best represent the class performance if she wants to calculate the average score?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Answer:</strong> The mean would be most appropriate here.</p>
+                                        <p><strong>Reason:</strong> The data is numerical, symmetrical with no extreme outliers, and we want to account for all scores equally.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A real estate agent has the following house prices (in thousands): 150, 175, 200, 225, 250, 300, 350, 400, 2000. Which measure should she use to describe the "typical" house price to potential buyers?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Answer:</strong> The median would be most appropriate here.</p>
+                                        <p><strong>Reason:</strong> There's an extreme outlier ($2,000,000) that would distort the mean. The median gives a better sense of what most houses cost.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A shoe store owner wants to know which size to order the most of. She has sales data showing sizes sold last month: 7, 7, 8, 8, 8, 8, 9, 9, 10, 10, 11. Which measure should she use?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Answer:</strong> The mode would be most appropriate here.</p>
+                                        <p><strong>Reason:</strong> She wants to know the most frequently sold size, which is exactly what the mode identifies (size 8).</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A survey asks people to rate a movie on a scale of 1-5 stars: 1, 3, 3, 4, 4, 4, 4, 5, 5, 5. Which measure would best summarize the overall reception?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Answer:</strong> Either the median or mode could be appropriate here.</p>
+                                        <p><strong>Reason:</strong> For ordinal data like ratings, the median (4) gives the middle rating, while the mode (4) shows the most common rating. The mean could be used but assumes equal distance between ratings.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>A company reports employee salaries: $30k, $32k, $35k, $38k, $40k, $42k, $45k, $50k, $300k. Which measure should they use in their annual report to represent "typical" employee earnings?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Answer:</strong> The median would be most appropriate here.</p>
+                                        <p><strong>Reason:</strong> The CEO's high salary ($300k) is an extreme outlier that would make the mean much higher than what most employees earn. The median isn't affected by this outlier.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

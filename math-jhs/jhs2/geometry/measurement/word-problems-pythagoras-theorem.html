@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Pythagoras Theorem | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Pythagoras Theorem for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Pythagoras Theorem | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to use Pythagoras Theorem to calculate the area of triangles in real-life problems">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/geometry/pythagoras-theorem">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Pythagoras Theorem</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Pythagoras Theorem</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#theorem-statement"><i class="fas fa-chevron-right"></i> Theorem Statement</a></li>
+                                <li><a href="#area-calculation"><i class="fas fa-chevron-right"></i> Area Calculation</a></li>
+                                <li><a href="#real-life-applications"><i class="fas fa-chevron-right"></i> Real-life Applications</a></li>
+                                <!--<li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>-->
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Pythagoras Theorem</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    The <strong>Pythagoras Theorem</strong> is a fundamental principle in geometry that relates the sides of a right-angled triangle. 
+                                    It states that in a right-angled triangle, the square of the hypotenuse (the side opposite the right angle) is equal to 
+                                    the sum of the squares of the other two sides.
+                                </p>
+                                <p>
+                                    This theorem has numerous practical applications in real life, from construction and navigation to art and design. 
+                                    In this lesson, we'll learn how to use the Pythagoras theorem to calculate distances and areas in various real-world scenarios.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Theorem Statement Section -->
+                        <section id="theorem-statement" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Theorem Statement
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of the Pythagoras theorem with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> The Theorem
+                                </h3>
+                                <p>
+                                    For any right-angled triangle with sides <em>a</em> and <em>b</em>, and hypotenuse <em>c</em>:
+                                </p>
+                                \[ c^2 = a^2 + b^2 \]
+                                <p>This can be rearranged to find any side:</p>
+                                \[ c = \sqrt{a^2 + b^2} \]
+                                \[ a = \sqrt{c^2 - b^2} \]
+                                \[ b = \sqrt{c^2 - a^2} \]
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Key Points</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>The theorem only applies to right-angled triangles</li>
+                                            <li>The hypotenuse is always the longest side</li>
+                                            <li>The theorem can be used to find missing side lengths</li>
+                                            <li>It can also be used to verify if a triangle is right-angled</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the hypotenuse of a right-angled triangle with other sides 3cm and 4cm.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using Pythagoras theorem:</p>
+                                        \[ c^2 = a^2 + b^2 \]
+                                        \[ c^2 = 3^2 + 4^2 = 9 + 16 = 25 \]
+                                        \[ c = \sqrt{25} = 5 \text{cm} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>One side of a right-angled triangle is 5cm and the hypotenuse is 13cm. Find the other side.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using Pythagoras theorem:</p>
+                                        \[ b^2 = c^2 - a^2 \]
+                                        \[ b^2 = 13^2 - 5^2 = 169 - 25 = 144 \]
+                                        \[ b = \sqrt{144} = 12 \text{cm} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Area Calculation Section -->
+                        <section id="area-calculation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Area Calculation
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on calculating area using Pythagoras theorem.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Calculating Area
+                                </h3>
+                                <p>
+                                    Once we've used the Pythagoras theorem to find all sides of a right-angled triangle, 
+                                    we can calculate its area using the standard formula:
+                                </p>
+                                \[ \text{Area} = \frac{1}{2} \times \text{base} \times \text{height} \]
+                                <p>
+                                    For non-right-angled triangles, we may need to first divide them into right-angled triangles 
+                                    to apply the theorem before calculating the total area.
+                                </p>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Steps to Find Area
+                                </h3>
+                                <ol>
+                                    <li>Identify if the triangle is right-angled or can be divided into right-angled triangles</li>
+                                    <li>Use Pythagoras theorem to find any missing sides</li>
+                                    <li>Apply the area formula using the perpendicular sides (for right-angled triangles)</li>
+                                    <li>For other triangles, calculate areas of component right-angled triangles and sum them</li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A right-angled triangle has sides of 6cm and 8cm. Find its area.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First verify these are the perpendicular sides (not hypotenuse):</p>
+                                        \[ \text{Area} = \frac{1}{2} \times 6 \times 8 = 24 \text{cm}^2 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the area of an equilateral triangle with side length 12cm.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Divide the equilateral triangle into two right-angled triangles:</p>
+                                        \[ \text{Height} = \sqrt{12^2 - 6^2} = \sqrt{144 - 36} = \sqrt{108} \approx 10.39 \text{cm} \]
+                                        \[ \text{Area} = \frac{1}{2} \times 12 \times 10.39 \approx 62.35 \text{cm}^2 \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Real-life Applications Section -->
+                        <section id="real-life-applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-globe-africa"></i> Real-life Applications
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on real-life applications of Pythagoras theorem.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Practical Examples
+                                </h3>
+                                <p>
+                                    The Pythagoras theorem is widely used in various real-world situations. Here are some examples 
+                                    we'll work through:
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-ship"></i>
+                                        <h3>Example 1: Boat Navigation</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>A boat travels 2m South and then 9m East. How far is the boat from its starting point?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>The boat's path forms a right-angled triangle:</p>
+                                            \[ \text{Distance} = \sqrt{2^2 + 9^2} = \sqrt{4 + 81} = \sqrt{85} \approx 9.22 \text{m} \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-image"></i>
+                                        <h3>Example 2: Picture Frame</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Yeboah hangs a picture frame of width 15cm on the wall. The distance from the nail to the edge of the picture frame is 10cm.</p>
+                                        <ol type="i">
+                                            <li>Find the length of the wire used to hang the picture frame</li>
+                                            <li>Find the area of the triangle formed</li>
+                                        </ol>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>i) The wire forms two right-angled triangles:</p>
+                                            \[ \text{Wire length} = 2 \times \sqrt{7.5^2 + 10^2} = 2 \times \sqrt{56.25 + 100} = 2 \times \sqrt{156.25} = 2 \times 12.5 = 25 \text{cm} \]
+                                            <p>ii) Area of one triangle:</p>
+                                            \[ \text{Area} = \frac{1}{2} \times 7.5 \times 10 = 37.5 \text{cm}^2 \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-ladder"></i>
+                                        <h3>Example 3: Ladder Problem</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>A ladder leans against a vertical wall of height 13m. If the foot of the ladder is 6m away from the wall, calculate the length of the ladder.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            \[ \text{Ladder length} = \sqrt{13^2 + 6^2} = \sqrt{169 + 36} = \sqrt{205} \approx 14.32 \text{m} \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-shapes"></i>
+                                        <h3>Example 4: Equilateral Triangle</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>The length of a side of an equilateral triangle is 12cm. Find:</p>
+                                        <ol type="i">
+                                            <li>The height of the triangle</li>
+                                            <li>The area of the triangle</li>
+                                            <li>The perimeter of the triangle</li>
+                                        </ol>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>i) Height:</p>
+                                            \[ h = \sqrt{12^2 - 6^2} = \sqrt{144 - 36} = \sqrt{108} \approx 10.39 \text{cm} \]
+                                            <p>ii) Area:</p>
+                                            \[ A = \frac{1}{2} \times 12 \times 10.39 \approx 62.35 \text{cm}^2 \]
+                                            <p>iii) Perimeter:</p>
+                                            \[ P = 3 \times 12 = 36 \text{cm} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A rectangular field is 50m long and 30m wide. What is the length of the diagonal path across the field?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Diagonal} = \sqrt{50^2 + 30^2} = \sqrt{2500 + 900} = \sqrt{3400} \approx 58.31 \text{m} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A television screen is advertised as 40 inches (measured diagonally). If the screen is 24 inches tall, how wide is it?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Width} = \sqrt{40^2 - 24^2} = \sqrt{1600 - 576} = \sqrt{1024} = 32 \text{inches} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A kite is flying with 25m of string let out. If the kite is 15m above the ground, how far horizontally is the kite from the person holding the string?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \text{Distance} = \sqrt{25^2 - 15^2} = \sqrt{625 - 225} = \sqrt{400} = 20 \text{m} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Rotation in Coordinate Plane | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Rotation in Coordinate Plane for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Rotation in Coordinate Plane | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to rotate shapes in coordinate plane and determine angles of rotation">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/geometry/rotation-in-coordinate-plane">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Rotation in Coordinate Plane</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Rotation in Coordinate Plane</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#rotation-rules"><i class="fas fa-chevron-right"></i> Rotation Rules</a></li>
+                                <li><a href="#draw-rotation"><i class="fas fa-chevron-right"></i> Drawing Rotations</a></li>
+                                <li><a href="#determine-angle"><i class="fas fa-chevron-right"></i> Determine Angle of Rotation</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Rotation</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Rotation</strong> is a transformation that turns a shape around a fixed point called the 
+                                    <strong>center of rotation</strong>. The amount of turn is measured in degrees and can be 
+                                    clockwise or counterclockwise (anti-clockwise).
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to rotate shapes in the coordinate plane about the origin 
+                                    (0,0) through angles of 90°, 180°, and 270°, both clockwise and counterclockwise. We will 
+                                    also learn how to determine the angle of rotation when given an object and its image.
+                                </p>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Key Terms
+                                </h3>
+                                <p>
+                                    <strong>Object:</strong> The original shape before rotation.<br>
+                                    <strong>Image:</strong> The shape after rotation.<br>
+                                    <strong>Center of rotation:</strong> The fixed point about which the rotation occurs.<br>
+                                    <strong>Angle of rotation:</strong> The degree measure of the turn (90°, 180°, 270°).<br>
+                                    <strong>Direction:</strong> Clockwise or counterclockwise.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Rotation Rules Section -->
+                        <section id="rotation-rules" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Rotation Rules
+                            </h2>
+
+                            <!-- Video Lesson 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of rotation rules with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Rotation Rules About the Origin
+                                </h3>
+                                <p>
+                                    When rotating points about the origin (0,0), we can use these rules:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>90° Counterclockwise (or 270° Clockwise)</h4>
+                                        \[ (x, y) \rightarrow (-y, x) \]
+                                        <p>Switch x and y coordinates, then change the sign of the new x-coordinate.</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>180° (Both Directions)</h4>
+                                        \[ (x, y) \rightarrow (-x, -y) \]
+                                        <p>Change the signs of both coordinates.</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>270° Counterclockwise (or 90° Clockwise)</h4>
+                                        \[ (x, y) \rightarrow (y, -x) \]
+                                        <p>Switch x and y coordinates, then change the sign of the new y-coordinate.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Remember
+                                </h3>
+                                <p>
+                                    Clockwise rotation means turning in the same direction as clock hands move.<br>
+                                    Counterclockwise (anti-clockwise) means turning in the opposite direction.<br>
+                                    Positive angles typically indicate counterclockwise rotation.<br>
+                                    Negative angles typically indicate clockwise rotation.
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- Drawing Rotations Section -->
+                        <section id="draw-rotation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Drawing Rotations
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pencil-ruler"></i> Steps to Draw Rotations
+                                </h3>
+                                <ol>
+                                    <li>Plot the original shape (object) on the coordinate plane.</li>
+                                    <li>Identify the center of rotation (usually the origin (0,0)).</li>
+                                    <li>Apply the rotation rules to each vertex of the shape.</li>
+                                    <li>Plot the new points (image) and connect them to form the rotated shape.</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-sync-alt"></i>
+                                        <h3>Example: 90° Counterclockwise Rotation</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Rotate triangle ABC with vertices A(2,1), B(4,1), C(4,3) 90° counterclockwise about the origin.</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Using the rule (x,y) → (-y,x):</p>
+                                            <p>A(2,1) → A'(-1,2)</p>
+                                            <p>B(4,1) → B'(-1,4)</p>
+                                            <p>C(4,3) → C'(-3,4)</p>
+                                            <p>Plot both the original and rotated triangles.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-redo"></i>
+                                        <h3>Example: 180° Rotation</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Rotate rectangle PQRS with vertices P(1,1), Q(3,1), R(3,2), S(1,2) 180° about the origin.</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Using the rule (x,y) → (-x,-y):</p>
+                                            <p>P(1,1) → P'(-1,-1)</p>
+                                            <p>Q(3,1) → Q'(-3,-1)</p>
+                                            <p>R(3,2) → R'(-3,-2)</p>
+                                            <p>S(1,2) → S'(-1,-2)</p>
+                                            <p>Plot both the original and rotated rectangles.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Rotate triangle DEF with vertices D(1,3), E(3,3), F(2,5) 90° clockwise about the origin. State the coordinates of the image points.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>90° clockwise is equivalent to 270° counterclockwise. Using the rule (x,y) → (y,-x):</p>
+                                        <p>D(1,3) → D'(3,-1)</p>
+                                        <p>E(3,3) → E'(3,-3)</p>
+                                        <p>F(2,5) → F'(5,-2)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Rotate quadrilateral GHIJ with vertices G(2,2), H(4,2), I(4,4), J(2,4) 270° counterclockwise about the origin. Draw both the object and image.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Using the rule (x,y) → (y,-x):</p>
+                                        <p>G(2,2) → G'(2,-2)</p>
+                                        <p>H(4,2) → H'(2,-4)</p>
+                                        <p>I(4,4) → I'(4,-4)</p>
+                                        <p>J(2,4) → J'(4,-2)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A triangle has vertices at K(1,1), L(1,4), M(3,1). Find the coordinates of its image after a 180° rotation about the origin.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Using the rule (x,y) → (-x,-y):</p>
+                                        <p>K(1,1) → K'(-1,-1)</p>
+                                        <p>L(1,4) → L'(-1,-4)</p>
+                                        <p>M(3,1) → M'(-3,-1)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Determine Angle of Rotation Section -->
+                        <section id="determine-angle" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-angle-double-right"></i> Determine Angle of Rotation
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-search"></i> Steps to Determine Angle of Rotation
+                                </h3>
+                                <ol>
+                                    <li>Identify corresponding points on the object and image.</li>
+                                    <li>Calculate the angle between lines connecting these points to the center of rotation.</li>
+                                    <li>Determine if the rotation is clockwise or counterclockwise.</li>
+                                    <li>Verify with other corresponding points to ensure consistency.</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-question-circle"></i>
+                                        <h3>Example 1</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Triangle ABC with vertices A(2,3), B(4,3), C(4,5) is rotated to A'(-3,2), B'(-3,4), C'(-5,4). Determine the angle and direction of rotation.</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Looking at point A(2,3) → A'(-3,2):</p>
+                                            <p>This matches the rule (x,y) → (-y,x), which is 90° counterclockwise.</p>
+                                            <p>Verifying with point B(4,3) → B'(-3,4) confirms the same rotation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-question-circle"></i>
+                                        <h3>Example 2</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Rectangle PQRS with vertices P(1,2), Q(3,2), R(3,4), S(1,4) is rotated to P'(-1,-2), Q'(-3,-2), R'(-3,-4), S'(-1,-4). Determine the rotation.</p>
+                                        <div class="math-example">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Looking at point P(1,2) → P'(-1,-2):</p>
+                                            <p>This matches the rule (x,y) → (-x,-y), which is 180° rotation (direction doesn't matter for 180°).</p>
+                                            <p>All other points confirm this rotation.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Point A(3,1) is rotated to A'(1,-3). Determine the angle and direction of rotation about the origin.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>A(3,1) → A'(1,-3) matches (x,y) → (y,-x), which is 270° counterclockwise or 90° clockwise.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Triangle B(2,2), C(4,2), D(3,4) is rotated to B'(-2,2), C'(-2,4), D'(-4,3). Find the angle and direction of rotation.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Looking at B(2,2) → B'(-2,2): This is reflection over y-axis, not a pure rotation.</p>
+                                        <p>Looking at C(4,2) → C'(-2,4): This doesn't match standard rotation rules.</p>
+                                        <p>This appears to be a combination of transformations, not a simple rotation.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Point E(5,0) is rotated to E'(0,5). Determine the angle and direction of rotation about the origin.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>E(5,0) → E'(0,5) matches (x,y) → (-y,x), which is 90° counterclockwise.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

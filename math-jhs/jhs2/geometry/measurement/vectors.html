@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Vectors Operations | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Vector Operations for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Vector Operations | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Add, Subtract and Find Scalar Multiplication of Vectors in Component Form">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/vector/vector-operations">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Vector Operations</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Vectors</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Vector Operations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#graphical-method"><i class="fas fa-chevron-right"></i> Graphical Addition</a></li>
+                                <li><a href="#component-form"><i class="fas fa-chevron-right"></i> Component Form Operations</a></li>
+                                <li><a href="#scalar-multiplication"><i class="fas fa-chevron-right"></i> Scalar Multiplication</a></li>
+                                <li><a href="#operations"><i class="fas fa-chevron-right"></i> Combined Operations</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Vectors</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Vectors
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A <strong>vector</strong> is a quantity that has both magnitude (size) and direction. 
+                                    Unlike scalars which only have magnitude, vectors are represented by arrows where:
+                                </p>
+                                <ul>
+                                    <li>The length represents the magnitude</li>
+                                    <li>The arrowhead shows the direction</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <p>Vectors can be written in component form:</p>
+                                    \[ \vec{v} = \begin{pmatrix} x \\ y \end{pmatrix} \]
+                                    <p>Where <em>x</em> is the horizontal component and <em>y</em> is the vertical component.</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Notation:</h4>
+                                        <p>Vectors can be written as:</p>
+                                        <ul>
+                                            <li>\(\vec{v}\) (with an arrow)</li>
+                                            <li>\(\mathbf{v}\) (boldface)</li>
+                                            <li>\(v\) (with an underline)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Examples:</h4>
+                                        <p>Some vector quantities include:</p>
+                                        <ul>
+                                            <li>Displacement</li>
+                                            <li>Velocity</li>
+                                            <li>Force</li>
+                                            <li>Acceleration</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Graphical Addition Section -->
+                        <section id="graphical-method" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-project-diagram"></i> Adding Vectors Graphically
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of vector addition using the graphical method.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-arrow-alt-circle-right"></i> The Triangle Method
+                                </h3>
+                                <p>To add two vectors \(\vec{A}\) and \(\vec{B}\) graphically:</p>
+                                <ol>
+                                    <li>Draw vector \(\vec{A}\) to scale</li>
+                                    <li>From the head of \(\vec{A}\), draw vector \(\vec{B}\) to scale</li>
+                                    <li>The resultant vector \(\vec{R}\) is drawn from the tail of \(\vec{A}\) to the head of \(\vec{B}\)</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: Adding \(\vec{A} = \begin{pmatrix} 3 \\ 1 \end{pmatrix}\) and \(\vec{B} = \begin{pmatrix} 1 \\ 2 \end{pmatrix}\):</p>
+                                    <img src="../../../../images/vector-addition-graphical.png" alt="Graphical vector addition" class="place">
+                                    <p>The resultant \(\vec{R} = \vec{A} + \vec{B}\)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> The Parallelogram Method
+                                </h3>
+                                <p>An alternative graphical method:</p>
+                                <ol>
+                                    <li>Draw both vectors \(\vec{A}\) and \(\vec{B}\) from the same origin point</li>
+                                    <li>Complete the parallelogram using these vectors as adjacent sides</li>
+                                    <li>The resultant \(\vec{R}\) is the diagonal from the origin</li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Add the vectors \(\vec{A} = \begin{pmatrix} 2 \\ 3 \end{pmatrix}\) and \(\vec{B} = \begin{pmatrix} -1 \\ 2 \end{pmatrix}\) using the graphical method.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <img src="../../../../images/vector-addition-example1.png" alt="Solution to Question 1" class="place">
+                                        <p>The resultant vector goes from the tail of \(\vec{A}\) to the head of \(\vec{B}\).</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Using the parallelogram method, add \(\vec{C} = \begin{pmatrix} 4 \\ 1 \end{pmatrix}\) and \(\vec{D} = \begin{pmatrix} 2 \\ -3 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <img src="../../../../images/vector-addition-example2.png" alt="Solution to Question 2" class="place">
+                                        <p>The resultant is the diagonal of the parallelogram formed by \(\vec{C}\) and \(\vec{D}\).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Component Form Operations Section -->
+                        <section id="component-form" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Adding and Subtracting Vectors in Component Form
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-circle"></i> Vector Addition
+                                </h3>
+                                <p>To add vectors in component form, simply add their corresponding components:</p>
+                                
+                                <div class="math-example">
+                                    <p>For vectors \(\vec{A} = \begin{pmatrix} a_x \\ a_y \end{pmatrix}\) and \(\vec{B} = \begin{pmatrix} b_x \\ b_y \end{pmatrix}\):</p>
+                                    \[ \vec{A} + \vec{B} = \begin{pmatrix} a_x + b_x \\ a_y + b_y \end{pmatrix} \]
+                                    
+                                    <p>Example:</p>
+                                    \[ \begin{pmatrix} 3 \\ -2 \end{pmatrix} + \begin{pmatrix} -1 \\ 5 \end{pmatrix} = \begin{pmatrix} 3 + (-1) \\ -2 + 5 \end{pmatrix} = \begin{pmatrix} 2 \\ 3 \end{pmatrix} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-minus-circle"></i> Vector Subtraction
+                                </h3>
+                                <p>To subtract vectors, subtract their corresponding components:</p>
+                                
+                                <div class="math-example">
+                                    <p>For vectors \(\vec{A} = \begin{pmatrix} a_x \\ a_y \end{pmatrix}\) and \(\vec{B} = \begin{pmatrix} b_x \\ b_y \end{pmatrix}\):</p>
+                                    \[ \vec{A} - \vec{B} = \begin{pmatrix} a_x - b_x \\ a_y - b_y \end{pmatrix} \]
+                                    
+                                    <p>Example:</p>
+                                    \[ \begin{pmatrix} 5 \\ 1 \end{pmatrix} - \begin{pmatrix} 2 \\ 4 \end{pmatrix} = \begin{pmatrix} 5 - 2 \\ 1 - 4 \end{pmatrix} = \begin{pmatrix} 3 \\ -3 \end{pmatrix} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find \(\vec{A} + \vec{B}\) where \(\vec{A} = \begin{pmatrix} -2 \\ 5 \end{pmatrix}\) and \(\vec{B} = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Add corresponding components:</p>
+                                        \[ \begin{pmatrix} -2 + 3 \\ 5 + (-1) \end{pmatrix} = \begin{pmatrix} 1 \\ 4 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Calculate \(\vec{C} - \vec{D}\) for \(\vec{C} = \begin{pmatrix} 0 \\ -4 \end{pmatrix}\) and \(\vec{D} = \begin{pmatrix} -3 \\ 2 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Subtract corresponding components:</p>
+                                        \[ \begin{pmatrix} 0 - (-3) \\ -4 - 2 \end{pmatrix} = \begin{pmatrix} 3 \\ -6 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Given \(\vec{P} = \begin{pmatrix} 1.5 \\ -2 \end{pmatrix}\) and \(\vec{Q} = \begin{pmatrix} -0.5 \\ 3 \end{pmatrix}\), find \(2\vec{P} - \vec{Q}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First multiply, then subtract:</p>
+                                        \[ 2\vec{P} = \begin{pmatrix} 3 \\ -4 \end{pmatrix} \]
+                                        \[ 2\vec{P} - \vec{Q} = \begin{pmatrix} 3 - (-0.5) \\ -4 - 3 \end{pmatrix} = \begin{pmatrix} 3.5 \\ -7 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Scalar Multiplication Section -->
+                        <section id="scalar-multiplication" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-arrows-alt-v"></i> Scalar Multiplication of Vectors
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-times-circle"></i> Multiplying a Vector by a Scalar
+                                </h3>
+                                <p>A scalar is a real number. When we multiply a vector by a scalar, we multiply each component by that number:</p>
+                                
+                                <div class="math-example">
+                                    <p>For vector \(\vec{v} = \begin{pmatrix} x \\ y \end{pmatrix}\) and scalar \(k\):</p>
+                                    \[ k\vec{v} = \begin{pmatrix} kx \\ ky \end{pmatrix} \]
+                                    
+                                    <p>Example:</p>
+                                    \[ 3 \begin{pmatrix} 2 \\ -1 \end{pmatrix} = \begin{pmatrix} 6 \\ -3 \end{pmatrix} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Effect on Magnitude:</h4>
+                                        <p>The magnitude of the vector is scaled by the absolute value of \(k\):</p>
+                                        \[ |k\vec{v}| = |k| \cdot |\vec{v}| \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>Effect on Direction:</h4>
+                                        <p>If \(k > 0\), direction remains the same</p>
+                                        <p>If \(k < 0\), direction is reversed</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find \(-2\vec{A}\) where \(\vec{A} = \begin{pmatrix} 1.5 \\ -3 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Multiply each component by -2:</p>
+                                        \[ -2 \begin{pmatrix} 1.5 \\ -3 \end{pmatrix} = \begin{pmatrix} -3 \\ 6 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Given \(\vec{B} = \begin{pmatrix} 4 \\ 0 \end{pmatrix}\), find \(\frac{1}{2}\vec{B}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Multiply each component by 0.5:</p>
+                                        \[ \frac{1}{2} \begin{pmatrix} 4 \\ 0 \end{pmatrix} = \begin{pmatrix} 2 \\ 0 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Calculate \(3\vec{C} - 2\vec{D}\) where \(\vec{C} = \begin{pmatrix} -1 \\ 2 \end{pmatrix}\) and \(\vec{D} = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First multiply, then subtract:</p>
+                                        \[ 3\vec{C} = \begin{pmatrix} -3 \\ 6 \end{pmatrix}, \quad 2\vec{D} = \begin{pmatrix} 6 \\ -2 \end{pmatrix} \]
+                                        \[ 3\vec{C} - 2\vec{D} = \begin{pmatrix} -3 - 6 \\ 6 - (-2) \end{pmatrix} = \begin{pmatrix} -9 \\ 8 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Combined Operations Section -->
+                        <section id="operations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-random"></i> Combined Vector Operations
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-cogs"></i> Performing Multiple Operations
+                                </h3>
+                                <p>We can combine addition, subtraction, and scalar multiplication in various ways:</p>
+                                
+                                <div class="math-example">
+                                    <p>Example: Find \(2\vec{A} + 3\vec{B} - \vec{C}\) where:</p>
+                                    \[ \vec{A} = \begin{pmatrix} 1 \\ -2 \end{pmatrix}, \quad \vec{B} = \begin{pmatrix} 3 \\ 0 \end{pmatrix}, \quad \vec{C} = \begin{pmatrix} -1 \\ 4 \end{pmatrix} \]
+                                    
+                                    <p>Solution:</p>
+                                    \[ 2\vec{A} = \begin{pmatrix} 2 \\ -4 \end{pmatrix}, \quad 3\vec{B} = \begin{pmatrix} 9 \\ 0 \end{pmatrix} \]
+                                    \[ 2\vec{A} + 3\vec{B} = \begin{pmatrix} 11 \\ -4 \end{pmatrix} \]
+                                    \[ 2\vec{A} + 3\vec{B} - \vec{C} = \begin{pmatrix} 11 - (-1) \\ -4 - 4 \end{pmatrix} = \begin{pmatrix} 12 \\ -8 \end{pmatrix} \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Properties of Vector Operations
+                                </h3>
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Commutative Property:</h4>
+                                        \[ \vec{A} + \vec{B} = \vec{B} + \vec{A} \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>Associative Property:</h4>
+                                        \[ (\vec{A} + \vec{B}) + \vec{C} = \vec{A} + (\vec{B} + \vec{C}) \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>Distributive Property:</h4>
+                                        \[ k(\vec{A} + \vec{B}) = k\vec{A} + k\vec{B} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find \(3\vec{P} - 2\vec{Q}\) where \(\vec{P} = \begin{pmatrix} 2 \\ -1 \end{pmatrix}\) and \(\vec{Q} = \begin{pmatrix} -3 \\ 2 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Perform the operations step by step:</p>
+                                        \[ 3\vec{P} = \begin{pmatrix} 6 \\ -3 \end{pmatrix}, \quad 2\vec{Q} = \begin{pmatrix} -6 \\ 4 \end{pmatrix} \]
+                                        \[ 3\vec{P} - 2\vec{Q} = \begin{pmatrix} 6 - (-6) \\ -3 - 4 \end{pmatrix} = \begin{pmatrix} 12 \\ -7 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Calculate \(\frac{1}{2}(\vec{A} + \vec{B})\) for \(\vec{A} = \begin{pmatrix} 4 \\ -2 \end{pmatrix}\) and \(\vec{B} = \begin{pmatrix} -2 \\ 6 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First add, then multiply by 0.5:</p>
+                                        \[ \vec{A} + \vec{B} = \begin{pmatrix} 2 \\ 4 \end{pmatrix} \]
+                                        \[ \frac{1}{2}(\vec{A} + \vec{B}) = \begin{pmatrix} 1 \\ 2 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Given \(\vec{X} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}\), \(\vec{Y} = \begin{pmatrix} -1 \\ 2 \end{pmatrix}\), and \(\vec{Z} = \begin{pmatrix} 3 \\ -1 \end{pmatrix}\), find \(2\vec{X} + \vec{Y} - 3\vec{Z}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Perform each operation:</p>
+                                        \[ 2\vec{X} = \begin{pmatrix} 2 \\ 0 \end{pmatrix}, \quad 3\vec{Z} = \begin{pmatrix} 9 \\ -3 \end{pmatrix} \]
+                                        \[ 2\vec{X} + \vec{Y} = \begin{pmatrix} 1 \\ 2 \end{pmatrix} \]
+                                        \[ 2\vec{X} + \vec{Y} - 3\vec{Z} = \begin{pmatrix} 1 - 9 \\ 2 - (-3) \end{pmatrix} = \begin{pmatrix} -8 \\ 5 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your vector operation skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

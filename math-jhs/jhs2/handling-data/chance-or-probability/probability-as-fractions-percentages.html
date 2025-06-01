@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Probability Representations | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Probability Representations for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Probability Representations | JHS2 Mathematics">
+        <meta property="og:description" content="Learn to Express Probabilities as Fractions, Decimals, Percentages and Ratios">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/probability/probability-representations">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Probability Representations</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Probability</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Probability Representations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#fractions"><i class="fas fa-chevron-right"></i> Probability as Fractions</a></li>
+                                <li><a href="#decimals"><i class="fas fa-chevron-right"></i> Probability as Decimals</a></li>
+                                <li><a href="#percentages"><i class="fas fa-chevron-right"></i> Probability as Percentages</a></li>
+                                <li><a href="#ratios"><i class="fas fa-chevron-right"></i> Probability as Ratios</a></li>
+                                <li><a href="#tree-diagrams"><i class="fas fa-chevron-right"></i> Using Tree Diagrams</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Probability</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Probability
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Probability</strong> is a measure of how likely an event is to occur. It can be expressed in different ways:
+                                    as fractions, decimals, percentages, or ratios. In this lesson, we'll learn how to represent probabilities in all these forms.
+                                </p>
+                                <p>
+                                    The probability of an event ranges from 0 (impossible) to 1 (certain). We can calculate probability using the formula:
+                                </p>
+                                
+                                <div class="math-example">
+                                    \[ P(\text{Event}) = \frac{\text{Number of favorable outcomes}}{\text{Total number of possible outcomes}} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Concepts:</h4>
+                                        <ul>
+                                            <li>Probability of 0 means the event will never happen</li>
+                                            <li>Probability of 1 means the event will certainly happen</li>
+                                            <li>Probabilities between 0 and 1 indicate varying likelihoods</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Fractions Section -->
+                        <section id="fractions" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-fraction"></i> Probability as Fractions
+                            </h2>
+
+                            <div class="concept-box">
+                                <p>
+                                    Fractions are the most natural way to represent probability because the probability formula 
+                                    itself is a fraction (favorable outcomes over total outcomes).
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong> What is the probability of rolling a 3 on a standard die?</p>
+                                    <p>Number of favorable outcomes (rolling a 3) = 1</p>
+                                    <p>Total possible outcomes = 6 (numbers 1 through 6)</p>
+                                    \[ P(3) = \frac{1}{6} \]
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 2:</strong> A bag contains 4 red marbles and 6 blue marbles. What is the probability of drawing a red marble?</p>
+                                    <p>Favorable outcomes (red marbles) = 4</p>
+                                    <p>Total marbles = 4 + 6 = 10</p>
+                                    \[ P(\text{Red}) = \frac{4}{10} = \frac{2}{5} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A spinner has 8 equal sections numbered 1-8. What is the probability of landing on an even number as a fraction?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Even numbers: 2, 4, 6, 8 (4 outcomes)</p>
+                                        <p>Total sections: 8</p>
+                                        \[ P(\text{Even}) = \frac{4}{8} = \frac{1}{2} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A deck of cards has 52 cards with 13 hearts. What is the probability of drawing a heart as a fraction?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Number of hearts: 13</p>
+                                        <p>Total cards: 52</p>
+                                        \[ P(\text{Heart}) = \frac{13}{52} = \frac{1}{4} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Decimals Section -->
+                        <section id="decimals" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-divide"></i> Probability as Decimals
+                            </h2>
+
+                            <div class="concept-box">
+                                <p>
+                                    Decimal probabilities are simply fraction probabilities converted to decimal form by dividing the numerator by the denominator.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong> Convert the probability of rolling a 3 (\(\frac{1}{6}\)) to decimal form.</p>
+                                    \[ \frac{1}{6} \approx 0.1667 \]
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 2:</strong> A weather forecast says there's a \(\frac{3}{10}\) chance of rain. Express this as a decimal.</p>
+                                    \[ \frac{3}{10} = 0.3 \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Remember:</h4>
+                                        <ul>
+                                            <li>Decimal probabilities range from 0.0 to 1.0</li>
+                                            <li>0.5 represents a 50% chance (equal probability)</li>
+                                            <li>You can convert fractions to decimals by division</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Convert the probability \(\frac{3}{4}\) to decimal form.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{3}{4} = 0.75 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>If the probability of an event is \(\frac{2}{5}\), what is its decimal equivalent?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \frac{2}{5} = 0.4 \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Percentages Section -->
+                        <section id="percentages" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-percent"></i> Probability as Percentages
+                            </h2>
+
+                            <div class="concept-box">
+                                <p>
+                                    Percentages are another common way to express probability. To convert a decimal probability to a percentage, multiply by 100.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong> Convert the probability 0.25 to a percentage.</p>
+                                    \[ 0.25 \times 100 = 25\% \]
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 2:</strong> A survey shows \(\frac{7}{20}\) of students walk to school. Express this as a percentage.</p>
+                                    <p>First convert to decimal: \(\frac{7}{20} = 0.35\)</p>
+                                    <p>Then to percentage: \(0.35 \times 100 = 35\%\)</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Points:</h4>
+                                        <ul>
+                                            <li>0% means impossible</li>
+                                            <li>100% means certain</li>
+                                            <li>50% means equally likely to happen or not happen</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Express the probability \(\frac{3}{8}\) as a percentage.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First convert to decimal: \(\frac{3}{8} = 0.375\)</p>
+                                        <p>Then to percentage: \(0.375 \times 100 = 37.5\%\)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Convert the decimal probability 0.08 to a percentage.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 0.08 \times 100 = 8\% \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Ratios Section -->
+                        <section id="ratios" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-colon"></i> Probability as Ratios
+                            </h2>
+
+                            <div class="concept-box">
+                                <p>
+                                    Probability can also be expressed as a ratio of favorable outcomes to unfavorable outcomes.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong> The probability of rolling a 2 on a die is \(\frac{1}{6}\). Express this as a ratio.</p>
+                                    <p>Favorable outcomes: 1 (rolling a 2)</p>
+                                    <p>Unfavorable outcomes: 5 (rolling 1,3,4,5,6)</p>
+                                    <p>Ratio = 1:5</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 2:</strong> A bag has 3 red marbles and 7 blue marbles. What is the ratio probability of drawing a red marble?</p>
+                                    <p>Favorable: 3 red</p>
+                                    <p>Unfavorable: 7 blue</p>
+                                    <p>Ratio = 3:7</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A class has 12 boys and 18 girls. Express the probability of selecting a boy as a ratio.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Favorable: 12 boys</p>
+                                        <p>Unfavorable: 18 girls</p>
+                                        <p>Ratio = 12:18 = 2:3 (simplified)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>In a deck of cards, what is the ratio of drawing a face card (12 face cards in 52-card deck)?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Favorable: 12 face cards</p>
+                                        <p>Unfavorable: 40 non-face cards (52-12)</p>
+                                        <p>Ratio = 12:40 = 3:10 (simplified)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Tree Diagrams Section -->
+                        <section id="tree-diagrams" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-project-diagram"></i> Using Tree Diagrams
+                            </h2>
+
+                            <div class="concept-box">
+                                <p>
+                                    Tree diagrams help visualize probabilities, especially for compound events (events with multiple stages).
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> A coin is flipped twice. Create a tree diagram and find the probability of getting one head and one tail (in any order).</p>
+                                    <img src="../../../../images/coin-tree-diagram.png" alt="Coin flip tree diagram" class="place">
+                                    <p>From the tree diagram, there are 4 possible outcomes:</p>
+                                    <ol>
+                                        <li>Head then Head (HH)</li>
+                                        <li>Head then Tail (HT)</li>
+                                        <li>Tail then Head (TH)</li>
+                                        <li>Tail then Tail (TT)</li>
+                                    </ol>
+                                    <p>Favorable outcomes for one head and one tail: HT and TH (2 outcomes)</p>
+                                    <p>Total outcomes: 4</p>
+                                    \[ P(\text{One head and one tail}) = \frac{2}{4} = \frac{1}{2} \]
+                                    <p>This can be expressed as:</p>
+                                    <ul>
+                                        <li>Fraction: \(\frac{1}{2}\)</li>
+                                        <li>Decimal: 0.5</li>
+                                        <li>Percentage: 50%</li>
+                                        <li>Ratio: 1:1</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A spinner has equal red, blue and green sections. It's spun twice. Draw a tree diagram and find the probability of getting the same color both times, expressed as a fraction, decimal, percentage, and ratio.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <img src="../../../../images/spinner-tree-diagram.png" alt="Spinner tree diagram" class="place">
+                                        <p>Possible same-color outcomes: RR, BB, GG (3 outcomes)</p>
+                                        <p>Total outcomes: 9 (3 choices first spin × 3 choices second spin)</p>
+                                        <p>Fraction: \(\frac{3}{9} = \frac{1}{3}\)</p>
+                                        <p>Decimal: ≈ 0.333</p>
+                                        <p>Percentage: ≈ 33.3%</p>
+                                        <p>Ratio: 1:2 (1 favorable to 2 unfavorable)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

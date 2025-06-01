@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Trigonometric Ratios | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Trigonometric Ratios for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Trigonometric Ratios | JHS2 Mathematics">
+        <meta property="og:description" content="Learn about Trigonometric Ratios and solving right-angled triangles">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/geometry/trigonometric-ratios">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Trigonometric Ratios</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Trigonometric Ratios</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#primary-ratios"><i class="fas fa-chevron-right"></i> Primary Trigonometric Ratios</a></li>
+                                <li><a href="#elevation-depression"><i class="fas fa-chevron-right"></i> Angles of Elevation & Depression</a></li>
+                                <li><a href="#problem-solving"><i class="fas fa-chevron-right"></i> Solving Problems</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Trigonometric Ratios</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Trigonometric ratios</strong> are relationships between the sides of a right-angled triangle and its angles. 
+                                    These ratios help us solve problems involving right-angled triangles in mathematics and real-world applications.
+                                </p>
+                                <p>
+                                    In this lesson, we will learn about the three primary trigonometric ratios (sine, cosine, and tangent), 
+                                    understand angles of elevation and depression, and apply these concepts to solve practical problems.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Primary Ratios Section -->
+                        <section id="primary-ratios" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Primary Trigonometric Ratios
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of trigonometric ratios with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> The Three Primary Ratios
+                                </h3>
+                                <p>For any right-angled triangle with angle θ, we define:</p>
+                                <p>1. Sine (sin) - opposite/hypotenuse</p>
+                                <p>2. Cosine (cos) - adjacent/hypotenuse</p>
+                                <p>3. Tangent (tan) - opposite/adjacent</p>        
+                            </div>
+                            
+                            <!-- Relations -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Definitions
+                                </h3>
+                                <p>
+                                    Consider a right-angled triangle ABC with right angle at C. For angle θ at A:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Sine (sinθ)</h4>
+                                        \[ \sinθ = \frac{\text{Opposite side}}{\text{Hypotenuse}} = \frac{BC}{AB} \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>Cosine (cosθ)</h4>
+                                        \[ \cosθ = \frac{\text{Adjacent side}}{\text{Hypotenuse}} = \frac{AC}{AB} \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>Tangent (tanθ)</h4>
+                                        \[ \tanθ = \frac{\text{Opposite side}}{\text{Adjacent side}} = \frac{BC}{AC} \]
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> For a triangle with sides 3, 4, 5 (right-angled at the side between 3 and 4):</p>
+                                    \[ 
+                                    \begin{align*}
+                                    \sinθ &= \frac{4}{5} \\
+                                    \cosθ &= \frac{3}{5} \\
+                                    \tanθ &= \frac{4}{3}
+                                    \end{align*}
+                                    \]
+                                </div>
+                            </div>
+                            
+                            <!-- Mnemonic -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Remember with SOH-CAH-TOA
+                                </h3>
+                                <p>A helpful way to remember the trigonometric ratios:</p>
+                                <div class="math-example">
+                                    <p><strong>SOH:</strong> Sine = Opposite / Hypotenuse</p>
+                                    <p><strong>CAH:</strong> Cosine = Adjacent / Hypotenuse</p>
+                                    <p><strong>TOA:</strong> Tangent = Opposite / Adjacent</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>In a right-angled triangle, the opposite side to angle θ is 5cm and the hypotenuse is 13cm. Find sinθ and cosθ.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First find the adjacent side using Pythagoras theorem:</p>
+                                        \[ \text{Adjacent} = \sqrt{13^2 - 5^2} = \sqrt{169 - 25} = \sqrt{144} = 12\text{cm} \]
+                                        \[ \sinθ = \frac{5}{13}, \quad \cosθ = \frac{12}{13} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>If tanθ = 3/4 and the adjacent side is 8cm, find the length of the opposite side and hypotenuse.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Given tanθ = opposite/adjacent = 3/4:</p>
+                                        \[ \frac{\text{Opposite}}{8} = \frac{3}{4} \Rightarrow \text{Opposite} = 6\text{cm} \]
+                                        \[ \text{Hypotenuse} = \sqrt{6^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10\text{cm} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Find all trigonometric ratios for angle θ in a right-angled triangle where the adjacent side is 5cm and hypotenuse is 13cm.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First find the opposite side:</p>
+                                        \[ \text{Opposite} = \sqrt{13^2 - 5^2} = \sqrt{169 - 25} = \sqrt{144} = 12\text{cm} \]
+                                        \[ \sinθ = \frac{12}{13}, \quad \cosθ = \frac{5}{13}, \quad \tanθ = \frac{12}{5} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Angles of Elevation and Depression Section -->
+                        <section id="elevation-depression" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Angles of Elevation & Depression
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on angles of elevation and depression.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Definitions
+                                </h3>
+                                <p>
+                                    <strong>Angle of Elevation:</strong> The angle between the horizontal and the line of sight when looking upward at an object.
+                                </p>
+                                <p>
+                                    <strong>Angle of Depression:</strong> The angle between the horizontal and the line of sight when looking downward at an object.
+                                </p>
+                            </div>
+                            
+                            <!-- Real-life Applications -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-building"></i> Real-life Applications
+                                </h3>
+                                <p>These concepts are used in various real-world situations:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Architecture</h4>
+                                        <p>Determining heights of buildings or structures</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Aviation</h4>
+                                        <p>Calculating aircraft approach angles</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Navigation</h4>
+                                        <p>Determining positions relative to landmarks</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Surveying</h4>
+                                        <p>Measuring heights and distances</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> If a person standing 20m from a building looks up at 30° to see the top, the building height (h) is:</p>
+                                    \[ \tan30° = \frac{h}{20} \Rightarrow h = 20 \times \tan30° \approx 11.55\text{m} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A ladder leans against a wall at 60° to the ground. If the ladder is 10m long, how high up the wall does it reach?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using sine ratio:</p>
+                                        \[ \sin60° = \frac{\text{Height}}{10} \]
+                                        \[ \text{Height} = 10 \times \sin60° = 10 \times \frac{\sqrt{3}}{2} \approx 8.66\text{m} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>From the top of a 50m tower, the angle of depression to a car on the ground is 25°. How far is the car from the base of the tower?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using tangent ratio:</p>
+                                        \[ \tan25° = \frac{50}{\text{Distance}} \]
+                                        \[ \text{Distance} = \frac{50}{\tan25°} \approx 107.2\text{m} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A plane flying at 5000m spots a ship at an angle of depression of 15°. What is the horizontal distance from the plane to the ship?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Using tangent ratio:</p>
+                                        \[ \tan15° = \frac{5000}{\text{Distance}} \]
+                                        \[ \text{Distance} = \frac{5000}{\tan15°} \approx 18,660\text{m} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Problem Solving Section -->
+                        <section id="problem-solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Solving Problems
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on solving trigonometric problems.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Problem-Solving Approach
+                                </h3>
+                                <p>When solving trigonometric problems:</p>
+                                <p>1. Draw a clear diagram of the situation</p>
+                                <p>2. Identify the right-angled triangle(s)</p>
+                                <p>3. Label known sides and angles</p>
+                                <p>4. Choose the appropriate trigonometric ratio</p>
+                                <p>5. Set up and solve the equation</p>
+                            </div>
+                            
+                            <!-- Combined Problems -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Combined Problems
+                                </h3>
+                                <p>Some problems require using both trigonometric ratios and Pythagoras' theorem.</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> A flagpole is anchored by a 10m wire making 50° with the ground. How tall is the flagpole, and how far is the anchor from the base?</p>
+                                    <p><strong>Solution:</strong></p>
+                                    \[ \text{Height} = 10 \times \sin50° \approx 7.66\text{m} \]
+                                    \[ \text{Distance} = 10 \times \cos50° \approx 6.43\text{m} \]
+                                    <p>Verify with Pythagoras:</p>
+                                    \[ \sqrt{7.66^2 + 6.43^2} \approx \sqrt{58.68 + 41.34} \approx \sqrt{100.02} \approx 10\text{m} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A 5m ladder reaches 4.5m up a wall. What angle does it make with the ground, and how far is the base from the wall?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First find the angle using sine:</p>
+                                        \[ \sinθ = \frac{4.5}{5} = 0.9 \]
+                                        \[ θ \approx \sin^{-1}(0.9) \approx 64.16° \]
+                                        <p>Then find base distance using Pythagoras:</p>
+                                        \[ \text{Distance} = \sqrt{5^2 - 4.5^2} = \sqrt{25 - 20.25} = \sqrt{4.75} \approx 2.18\text{m} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>From a point 100m from a tower, the angle of elevation to the top is 30°. Find the height of the tower. If a bird flies from this point directly to the top of the tower, how far does it fly?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Height calculation:</p>
+                                        \[ \tan30° = \frac{h}{100} \Rightarrow h = 100 \times \tan30° \approx 57.74\text{m} \]
+                                        <p>Direct distance (hypotenuse):</p>
+                                        \[ \text{Distance} = \sqrt{100^2 + 57.74^2} \approx \sqrt{10,000 + 3,333.9} \approx \sqrt{13,333.9} \approx 115.47\text{m} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A ship observes a lighthouse at an angle of elevation of 15°. After sailing 500m towards the lighthouse, the angle is now 30°. Find the height of the lighthouse and the original distance from the ship.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let h be height, x be original distance:</p>
+                                        \[ \tan15° = \frac{h}{x} \]
+                                        \[ \tan30° = \frac{h}{x - 500} \]
+                                        <p>From first equation: h = x tan15°</p>
+                                        <p>Substitute into second equation:</p>
+                                        \[ \tan30° = \frac{x \tan15°}{x - 500} \]
+                                        <p>Solving gives x ≈ 1299m, h ≈ 348.2m</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

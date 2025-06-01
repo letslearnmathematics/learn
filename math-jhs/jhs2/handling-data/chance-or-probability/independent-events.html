@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Probability of Independent Events | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Probability of Independent Events for JHS2 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Probability of Independent Events | JHS2 Mathematics">
+        <meta property="og:description" content="Learn about probability experiments with independent events and sample spaces">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/probability/independent-events">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Probability of Independent Events</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 2: Probability</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Independent Events</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#sample-space"><i class="fas fa-chevron-right"></i> Sample Space</a></li>
+                                <li><a href="#independent-events"><i class="fas fa-chevron-right"></i> Independent Events</a></li>
+                                <li><a href="#probability-calculation"><i class="fas fa-chevron-right"></i> Probability Calculation</a></li>
+                                <li><a href="#real-world-examples"><i class="fas fa-chevron-right"></i> Real World Examples</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS2</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Probability</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Probability</strong> is the measure of how likely an event is to occur. When dealing with 
+                                    multiple events, we need to understand whether they are independent or dependent. 
+                                    <strong>Independent events</strong> are those where the outcome of one event does not affect 
+                                    the outcome of another event.
+                                </p>
+                                <p>
+                                    In this lesson, we will explore probability experiments involving two independent events, 
+                                    such as drawing colored bottle tops from a bag with replacement, and learn how to list 
+                                    the elements of the sample space.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Sample Space Section -->
+                        <section id="sample-space" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-list-alt"></i> Sample Space
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-asterisk"></i> Understanding Sample Space
+                                </h3>
+                                <p>The <strong>sample space</strong> of an experiment is the set of all possible outcomes of that experiment.</p>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1</h4>
+                                    <p>In an experiment, Emmanuel was asked to pick one bottle top from a bag, three times, which contains 3 red, 2 green and 1 pink bottle tops.</p>
+                                    <p>i. List the elements of the sample space of the events.</p>
+                                    <p>ii. The sample space of the event of picking a red bottle top, R, with replacement is?</p>
+                                    <p>iii. The probability of picking a red bottle top is ........</p>
+                                    
+                                    <div class="solution">
+                                        <h5>Solution:</h5>
+                                        <p>i. The sample space for one draw is {Red, Green, Pink}. For three draws with replacement, the sample space consists of all possible ordered triples:</p>
+                                        <p>{ (R,R,R), (R,R,G), (R,R,P), (R,G,R), (R,G,G), (R,G,P), (R,P,R), (R,P,G), (R,P,P),<br>
+                                           (G,R,R), (G,R,G), (G,R,P), (G,G,R), (G,G,G), (G,G,P), (G,P,R), (G,P,G), (G,P,P),<br>
+                                           (P,R,R), (P,R,G), (P,R,P), (P,G,R), (P,G,G), (P,G,P), (P,P,R), (P,P,G), (P,P,P) }</p>
+                                           
+                                        <p>ii. When focusing only on red bottle tops with replacement, the sample space remains the same for each draw: {Red, Not Red}</p>
+                                        
+                                        <p>iii. Probability of picking a red bottle top:</p>
+                                        <p>Total bottle tops = 3 (Red) + 2 (Green) + 1 (Pink) = 6</p>
+                                        <p>P(Red) = Number of red tops / Total tops = 3/6 = 1/2 or 0.5</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Independent Events Section -->
+                        <section id="independent-events" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-unlink"></i> Independent Events
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-link"></i> Characteristics of Independent Events
+                                </h3>
+                                <p>Two events are independent if the occurrence of one does not affect the probability of the other occurring.</p>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2</h4>
+                                    <p>Consider the following two events: (a) throwing of a fair six-sided die and (b) tossing a fair coin.</p>
+                                    <p>i. What is the sample space for (a) and for (b)?</p>
+                                    <p>ii. Does the occurrence of event (a) affect the occurrence of event (b)?</p>
+                                    <p>iii. What is the probability of an even number showing up in (a)? What is the probability of a head showing up in (b)?</p>
+                                    <p>iv. What is the relationship between the two events?</p>
+                                    
+                                    <div class="solution">
+                                        <h5>Solution:</h5>
+                                        <p>i. Sample spaces:</p>
+                                        <p>For the die: {1, 2, 3, 4, 5, 6}</p>
+                                        <p>For the coin: {Head, Tail}</p>
+                                        
+                                        <p>ii. No, the outcome of the die throw does not affect the outcome of the coin toss.</p>
+                                        
+                                        <p>iii. Probabilities:</p>
+                                        <p>Even numbers on die: 2, 4, 6 → P(Even) = 3/6 = 1/2</p>
+                                        <p>Head on coin: P(Head) = 1/2</p>
+                                        
+                                        <p>iv. The two events are independent because the outcome of one does not influence the outcome of the other.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Probability Calculation Section -->
+                        <section id="probability-calculation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Probability Calculation
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-percentage"></i> Calculating Probabilities of Independent Events
+                                </h3>
+                                <p>For independent events A and B, the probability of both occurring is:</p>
+                                <p>\[ P(A \text{ and } B) = P(A) \times P(B) \]</p>
+                                
+                                <div class="math-example">
+                                    <h4>Example 3</h4>
+                                    <p>Ampofo and Serwa are two learners from a school. Ampofo walks to school daily and Serwa travels to school on a bus daily.</p>
+                                    <p>i. Does the event of Ampofo walking to school affect that of Serwa traveling by bus?</p>
+                                    <p>ii. Can the two events occur together?</p>
+                                    
+                                    <div class="solution">
+                                        <h5>Solution:</h5>
+                                        <p>i. No, Ampofo's method of getting to school does not affect Serwa's method of transportation.</p>
+                                        
+                                        <p>ii. Yes, the two events can occur together (Ampofo walks while Serwa takes the bus) because they are independent.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Real World Examples Section -->
+                        <section id="real-world-examples" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-globe"></i> Real World Examples
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Applying Probability Concepts
+                                </h3>
+                                <p>Independent events are common in everyday situations. Here are some examples:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Weather and Commute</h4>
+                                        <p>Whether it rains today and whether your friend is late to school are typically independent events.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Games of Chance</h4>
+                                        <p>In a game where you spin a wheel and draw a card, these are independent events because the wheel outcome doesn't affect the card drawn.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Manufacturing</h4>
+                                        <p>If two machines in a factory produce items, and one breaks down, it typically doesn't affect the other machine's operation (assuming they're separate systems).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A bag contains 4 blue marbles and 6 red marbles. A marble is drawn at random, its color noted, and then replaced. This is done twice. What is the probability that both marbles drawn are blue?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>P(Blue) = 4/10 = 2/5</p>
+                                        <p>Since the draws are independent with replacement:</p>
+                                        <p>P(Both Blue) = (2/5) × (2/5) = 4/25</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A fair coin is tossed and a fair six-sided die is rolled. What is the probability of getting a head on the coin and an even number on the die?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>P(Head) = 1/2</p>
+                                        <p>P(Even on die) = 3/6 = 1/2</p>
+                                        <p>Since these are independent events:</p>
+                                        <p>P(Head and Even) = (1/2) × (1/2) = 1/4</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>In a school, 60% of students walk to school and 30% bring their lunch. Assuming these events are independent, what is the probability that a randomly selected student both walks to school and brings their lunch?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>P(Walk) = 0.6</p>
+                                        <p>P(Brings Lunch) = 0.3</p>
+                                        <p>P(Walk and Brings Lunch) = 0.6 × 0.3 = 0.18 or 18%</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A box contains 5 white balls and 7 black balls. Two balls are drawn successively with replacement. What is the probability that both balls are white?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>P(White) = 5/12</p>
+                                        <p>Since the draws are independent with replacement:</p>
+                                        <p>P(Both White) = (5/12) × (5/12) = 25/144</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>In a game, you spin a spinner with equal sections labeled 1-4 and roll a die. What is the probability of spinning a 3 and rolling a number greater than 4?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>P(Spin 3) = 1/4</p>
+                                        <p>P(Die > 4) = P(5 or 6) = 2/6 = 1/3</p>
+                                        <p>Since these are independent events:</p>
+                                        <p>P(3 and >4) = (1/4) × (1/3) = 1/12</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
