@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Simplify Given Surds | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Simplifying Surds for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Simplify Given Surds | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to Simplify Surds with Step-by-Step Examples">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/surds/simplify-given-surds">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Simplify Given Surds</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Surds</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Simplify Given Surds</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#basic-simplification"><i class="fas fa-chevron-right"></i> Basic Simplification</a></li>
+                                <li><a href="#addition-subtraction"><i class="fas fa-chevron-right"></i> Addition & Subtraction</a></li>
+                                <li><a href="#multiplication-division"><i class="fas fa-chevron-right"></i> Multiplication & Division</a></li>
+                                <li><a href="#rationalizing"><i class="fas fa-chevron-right"></i> Rationalizing Denominators</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Surds</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Surds
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Surds</strong> are irrational numbers that cannot be simplified to remove a square root (or cube root etc). They are roots of numbers that produce non-terminating, non-repeating decimals.
+                                </p>
+                                <p>
+                                    Examples of surds include √2, √3, √5, etc. These cannot be simplified to exact fractions or decimals.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Examples of surds:</p>
+                                    \[ \sqrt{2} \approx 1.414213... \]
+                                    \[ \sqrt{3} \approx 1.732050... \]
+                                    \[ \sqrt{5} \approx 2.236067... \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Not Surds:</h4>
+                                        <p>These are <em>not</em> surds because they can be simplified to exact values:</p>
+                                        \[ \sqrt{4} = 2 \]
+                                        \[ \sqrt{9} = 3 \]
+                                        \[ \sqrt{16} = 4 \]
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Exact Form:</h4>
+                                        <p>Surds are often left in exact form rather than as decimal approximations to maintain precision in calculations.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Basic Simplification Section -->
+                        <section id="basic-simplification" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Basic Simplification of Surds
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on simplifying surds with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Simplification Rule
+                                </h3>
+                                <p>
+                                    To simplify a surd, we look for perfect square factors of the number under the root:
+                                </p>
+                                \[ \sqrt{a \times b} = \sqrt{a} \times \sqrt{b} \]
+                                <p>Where <em>a</em> is the largest perfect square factor of the number.</p>        
+                            </div>
+                            
+                            <!-- Method -->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Step-by-Step Simplification</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Find the largest perfect square that divides the number under the root</li>
+                                            <li>Rewrite the surd as product of two roots</li>
+                                            <li>Simplify the perfect square root</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example 1:</strong> Simplify √12</p>
+                                            \[ 
+                                            \begin{align*}
+                                            \sqrt{12} &= \sqrt{4 \times 3} \\
+                                            &= \sqrt{4} \times \sqrt{3} \\
+                                            &= 2\sqrt{3}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example 2:</strong> Simplify √50</p>
+                                            \[ 
+                                            \begin{align*}
+                                            \sqrt{50} &= \sqrt{25 \times 2} \\
+                                            &= \sqrt{25} \times \sqrt{2} \\
+                                            &= 5\sqrt{2}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Simplify √18</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \sqrt{18} &= \sqrt{9 \times 2} \\
+                                        &= \sqrt{9} \times \sqrt{2} \\
+                                        &= 3\sqrt{2}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Simplify √72</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \sqrt{72} &= \sqrt{36 \times 2} \\
+                                        &= \sqrt{36} \times \sqrt{2} \\
+                                        &= 6\sqrt{2}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Simplify √98</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \sqrt{98} &= \sqrt{49 \times 2} \\
+                                        &= \sqrt{49} \times \sqrt{2} \\
+                                        &= 7\sqrt{2}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Simplify √200</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \sqrt{200} &= \sqrt{100 \times 2} \\
+                                        &= \sqrt{100} \times \sqrt{2} \\
+                                        &= 10\sqrt{2}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Simplify √32</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \sqrt{32} &= \sqrt{16 \times 2} \\
+                                        &= \sqrt{16} \times \sqrt{2} \\
+                                        &= 4\sqrt{2}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Addition and Subtraction Section -->
+                        <section id="addition-subtraction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-plus-minus"></i> Addition & Subtraction of Surds
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Key Rule
+                                </h3>
+                                <p>
+                                    Surds can only be added or subtracted when they have the same radical part (like terms):
+                                </p>
+                                \[ a\sqrt{b} + c\sqrt{b} = (a + c)\sqrt{b} \]
+                                \[ a\sqrt{b} - c\sqrt{b} = (a - c)\sqrt{b} \]
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Steps for Addition/Subtraction</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Simplify each surd completely</li>
+                                            <li>Identify like terms (same radical part)</li>
+                                            <li>Add/subtract the coefficients</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example 1:</strong> Simplify √12 + √27</p>
+                                            \[ 
+                                            \begin{align*}
+                                            \sqrt{12} + \sqrt{27} &= 2\sqrt{3} + 3\sqrt{3} \\
+                                            &= (2 + 3)\sqrt{3} \\
+                                            &= 5\sqrt{3}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example 2:</strong> Simplify 3√8 - √50</p>
+                                            \[ 
+                                            \begin{align*}
+                                            3\sqrt{8} - \sqrt{50} &= 3 \times 2\sqrt{2} - 5\sqrt{2} \\
+                                            &= 6\sqrt{2} - 5\sqrt{2} \\
+                                            &= (6 - 5)\sqrt{2} \\
+                                            &= \sqrt{2}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Simplify √18 + √32</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \sqrt{18} + \sqrt{32} &= 3\sqrt{2} + 4\sqrt{2} \\
+                                        &= (3 + 4)\sqrt{2} \\
+                                        &= 7\sqrt{2}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Simplify 2√27 - √75</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        2\sqrt{27} - \sqrt{75} &= 2 \times 3\sqrt{3} - 5\sqrt{3} \\
+                                        &= 6\sqrt{3} - 5\sqrt{3} \\
+                                        &= (6 - 5)\sqrt{3} \\
+                                        &= \sqrt{3}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Simplify 3√50 + 2√8 - √98</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        3\sqrt{50} + 2\sqrt{8} - \sqrt{98} &= 3 \times 5\sqrt{2} + 2 \times 2\sqrt{2} - 7\sqrt{2} \\
+                                        &= 15\sqrt{2} + 4\sqrt{2} - 7\sqrt{2} \\
+                                        &= (15 + 4 - 7)\sqrt{2} \\
+                                        &= 12\sqrt{2}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Multiplication and Division Section -->
+                        <section id="multiplication-division" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-times-divide"></i> Multiplication & Division of Surds
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Key Rules
+                                </h3>
+                                <p>
+                                    <strong>Multiplication:</strong> √a × √b = √(a×b)
+                                </p>
+                                <p>
+                                    <strong>Division:</strong> √a ÷ √b = √(a÷b) (where b ≠ 0)
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Steps for Multiplication</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Multiply the coefficients</li>
+                                            <li>Multiply the radicands (numbers under the roots)</li>
+                                            <li>Simplify the resulting surd</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example 1:</strong> Simplify √6 × √10</p>
+                                            \[ 
+                                            \begin{align*}
+                                            \sqrt{6} \times \sqrt{10} &= \sqrt{6 \times 10} \\
+                                            &= \sqrt{60} \\
+                                            &= \sqrt{4 \times 15} \\
+                                            &= 2\sqrt{15}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example 2:</strong> Simplify 2√3 × 5√6</p>
+                                            \[ 
+                                            \begin{align*}
+                                            2\sqrt{3} \times 5\sqrt{6} &= (2 \times 5) \times (\sqrt{3} \times \sqrt{6}) \\
+                                            &= 10 \times \sqrt{18} \\
+                                            &= 10 \times 3\sqrt{2} \\
+                                            &= 30\sqrt{2}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Steps for Division</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Divide the coefficients</li>
+                                            <li>Divide the radicands</li>
+                                            <li>Simplify the resulting surd</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> Simplify √50 ÷ √2</p>
+                                            \[ 
+                                            \begin{align*}
+                                            \sqrt{50} \div \sqrt{2} &= \sqrt{50 \div 2} \\
+                                            &= \sqrt{25} \\
+                                            &= 5
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Simplify √8 × √6</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \sqrt{8} \times \sqrt{6} &= \sqrt{48} \\
+                                        &= \sqrt{16 \times 3} \\
+                                        &= 4\sqrt{3}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Simplify 3√5 × 2√10</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        3\sqrt{5} \times 2\sqrt{10} &= 6\sqrt{50} \\
+                                        &= 6 \times 5\sqrt{2} \\
+                                        &= 30\sqrt{2}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Simplify √72 ÷ √2</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \sqrt{72} \div \sqrt{2} &= \sqrt{36} \\
+                                        &= 6
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Rationalizing Denominators Section -->
+                        <section id="rationalizing" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-square-root-alt"></i> Rationalizing Denominators
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> What is Rationalizing?
+                                </h3>
+                                <p>
+                                    Rationalizing means eliminating surds from the denominator of a fraction by multiplying both numerator and denominator by an appropriate surd.
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Simple Denominators (√a)</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Multiply numerator and denominator by the surd in the denominator:</p>
+                                        \[ \frac{b}{\sqrt{a}} = \frac{b \times \sqrt{a}}{\sqrt{a} \times \sqrt{a}} = \frac{b\sqrt{a}}{a} \]
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> Rationalize \(\frac{3}{\sqrt{5}}\)</p>
+                                            \[ 
+                                            \begin{align*}
+                                            \frac{3}{\sqrt{5}} &= \frac{3 \times \sqrt{5}}{\sqrt{5} \times \sqrt{5}} \\
+                                            &= \frac{3\sqrt{5}}{5}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Binomial Denominators (a±√b)</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Multiply numerator and denominator by the conjugate of the denominator:</p>
+                                        <p>The conjugate of (a + √b) is (a - √b), and vice versa.</p>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> Rationalize \(\frac{2}{3 + \sqrt{5}}\)</p>
+                                            \[ 
+                                            \begin{align*}
+                                            \frac{2}{3 + \sqrt{5}} &= \frac{2 \times (3 - \sqrt{5})}{(3 + \sqrt{5})(3 - \sqrt{5})} \\
+                                            &= \frac{6 - 2\sqrt{5}}{9 - 5} \\
+                                            &= \frac{6 - 2\sqrt{5}}{4} \\
+                                            &= \frac{3 - \sqrt{5}}{2}
+                                            \end{align*}
+                                            \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Rationalize \(\frac{4}{\sqrt{7}}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \frac{4}{\sqrt{7}} &= \frac{4 \times \sqrt{7}}{\sqrt{7} \times \sqrt{7}} \\
+                                        &= \frac{4\sqrt{7}}{7}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Rationalize \(\frac{5}{2 - \sqrt{3}}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \frac{5}{2 - \sqrt{3}} &= \frac{5 \times (2 + \sqrt{3})}{(2 - \sqrt{3})(2 + \sqrt{3})} \\
+                                        &= \frac{10 + 5\sqrt{3}}{4 - 3} \\
+                                        &= 10 + 5\sqrt{3}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Rationalize \(\frac{\sqrt{2}}{\sqrt{5} - \sqrt{3}}\)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 
+                                        \begin{align*}
+                                        \frac{\sqrt{2}}{\sqrt{5} - \sqrt{3}} &= \frac{\sqrt{2} \times (\sqrt{5} + \sqrt{3})}{(\sqrt{5} - \sqrt{3})(\sqrt{5} + \sqrt{3})} \\
+                                        &= \frac{\sqrt{10} + \sqrt{6}}{5 - 3} \\
+                                        &= \frac{\sqrt{10} + \sqrt{6}}{2}
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

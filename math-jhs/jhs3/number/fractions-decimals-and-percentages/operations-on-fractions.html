@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Fractions Review | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Review of fractions and basic operations for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Fractions Review | JHS3 Mathematics">
+        <meta property="og:description" content="Review fractions and solve problems involving basic operations on fractions">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/fractions-review">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Fractions Review</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Fractions Review</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#concept"><i class="fas fa-chevron-right"></i> Fraction Concepts</a></li>
+                                <li><a href="#operations"><i class="fas fa-chevron-right"></i> Basic Operations</a></li>
+                                <li><a href="#problems"><i class="fas fa-chevron-right"></i> Word Problems</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Fractions</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Fractions</strong> represent parts of a whole or a collection. A fraction has two parts:
+                                </p>
+                                <div class="math-example">
+                                    \[ \frac{\text{Numerator}}{\text{Denominator}} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Numerator:</h4>
+                                        <p>The number above the fraction bar that represents the parts being considered.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Denominator:</h4>
+                                        <p>The number below the fraction bar that represents the total number of equal parts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Types of Fractions
+                                </h3>
+                                <p>Fractions can be classified into different types:</p>
+                                <ul>
+                                    <li><strong>Proper fractions:</strong> Numerator is less than denominator (e.g., ½)</li>
+                                    <li><strong>Improper fractions:</strong> Numerator is greater than or equal to denominator (e.g., 5/2)</li>
+                                    <li><strong>Mixed numbers:</strong> Combination of a whole number and a proper fraction (e.g., 1½)</li>
+                                    <li><strong>Equivalent fractions:</strong> Different fractions that represent the same value (e.g., ½ = 2/4)</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Fraction Concepts Section -->
+                        <section id="concept" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Fraction Concepts
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example1" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of fraction concepts with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Visualizing Fractions
+                                </h3>
+                                <p>
+                                    Fractions can be represented visually using shapes divided into equal parts. The denominator shows how many equal parts the whole is divided into, and the numerator shows how many parts are being considered.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example 1:</h4>
+                                        <p>The fraction ¾ means 3 parts out of 4 equal parts:</p>
+                                        <img src="../../../../images/fraction-3-4.png" alt="Visual representation of 3/4" class="place">
+                                    </div>
+                                    <div class="point">
+                                        <h4>Example 2:</h4>
+                                        <p>The fraction ⅔ means 2 parts out of 3 equal parts:</p>
+                                        <img src="../../../../images/fraction-2-3.png" alt="Visual representation of 2/3" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Converting Between Fraction Types
+                                </h3>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-random"></i>
+                                            <h3>Improper to Mixed</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>To convert an improper fraction to a mixed number:</p>
+                                            <div class="math-example">
+                                                <p>Convert \( \frac{7}{3} \) to a mixed number:</p>
+                                                <p>1. Divide numerator by denominator: \( 7 ÷ 3 = 2 \) with remainder 1</p>
+                                                <p>2. Write as: \( 2\frac{1}{3} \)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-random"></i>
+                                            <h3>Mixed to Improper</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>To convert a mixed number to an improper fraction:</p>
+                                            <div class="math-example">
+                                                <p>Convert \( 2\frac{1}{3} \) to an improper fraction:</p>
+                                                <p>1. Multiply whole number by denominator: \( 2 × 3 = 6 \)</p>
+                                                <p>2. Add numerator: \( 6 + 1 = 7 \)</p>
+                                                <p>3. Write as: \( \frac{7}{3} \)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Represent the fraction \( \frac{5}{8} \) visually.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <img src="../../../../images/fraction-5-8.png" alt="Visual representation of 5/8" class="place">
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Convert \( \frac{11}{4} \) to a mixed number.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Divide numerator by denominator: \( 11 ÷ 4 = 2 \) with remainder 3</p>
+                                        <p>2. Write as: \( 2\frac{3}{4} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Convert \( 3\frac{2}{5} \) to an improper fraction.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Multiply whole number by denominator: \( 3 × 5 = 15 \)</p>
+                                        <p>2. Add numerator: \( 15 + 2 = 17 \)</p>
+                                        <p>3. Write as: \( \frac{17}{5} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Basic Operations Section -->
+                        <section id="operations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Basic Operations on Fractions
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example2" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of fraction operations with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-plus-circle"></i> Addition and Subtraction
+                                </h3>
+                                <p>To add or subtract fractions:</p>
+                                <ol>
+                                    <li>Find a common denominator (preferably the Least Common Denominator - LCD)</li>
+                                    <li>Convert each fraction to an equivalent fraction with the common denominator</li>
+                                    <li>Add or subtract the numerators</li>
+                                    <li>Keep the denominator the same</li>
+                                    <li>Simplify the result if possible</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: \( \frac{1}{4} + \frac{2}{5} \)</p>
+                                    <p>1. LCD of 4 and 5 is 20</p>
+                                    <p>2. Convert: \( \frac{1}{4} = \frac{5}{20} \) and \( \frac{2}{5} = \frac{8}{20} \)</p>
+                                    <p>3. Add: \( \frac{5}{20} + \frac{8}{20} = \frac{13}{20} \)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-times-circle"></i> Multiplication
+                                </h3>
+                                <p>To multiply fractions:</p>
+                                <ol>
+                                    <li>Multiply the numerators together</li>
+                                    <li>Multiply the denominators together</li>
+                                    <li>Simplify the result if possible</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: \( \frac{2}{3} × \frac{3}{5} \)</p>
+                                    <p>1. Multiply numerators: \( 2 × 3 = 6 \)</p>
+                                    <p>2. Multiply denominators: \( 3 × 5 = 15 \)</p>
+                                    <p>3. Result: \( \frac{6}{15} \) which simplifies to \( \frac{2}{5} \)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-divide"></i> Division
+                                </h3>
+                                <p>To divide fractions:</p>
+                                <ol>
+                                    <li>Multiply by the reciprocal of the second fraction (flip the numerator and denominator)</li>
+                                    <li>Follow the rules for multiplication</li>
+                                    <li>Simplify the result if possible</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: \( \frac{3}{4} ÷ \frac{2}{5} \)</p>
+                                    <p>1. Reciprocal of \( \frac{2}{5} \) is \( \frac{5}{2} \)</p>
+                                    <p>2. Multiply: \( \frac{3}{4} × \frac{5}{2} = \frac{15}{8} \)</p>
+                                    <p>3. Convert to mixed number: \( 1\frac{7}{8} \)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Calculate \( \frac{2}{3} + \frac{1}{6} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. LCD of 3 and 6 is 6</p>
+                                        <p>2. Convert: \( \frac{2}{3} = \frac{4}{6} \)</p>
+                                        <p>3. Add: \( \frac{4}{6} + \frac{1}{6} = \frac{5}{6} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Calculate \( \frac{5}{8} - \frac{1}{4} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. LCD of 8 and 4 is 8</p>
+                                        <p>2. Convert: \( \frac{1}{4} = \frac{2}{8} \)</p>
+                                        <p>3. Subtract: \( \frac{5}{8} - \frac{2}{8} = \frac{3}{8} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Calculate \( \frac{3}{5} × \frac{10}{9} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Multiply numerators: \( 3 × 10 = 30 \)</p>
+                                        <p>2. Multiply denominators: \( 5 × 9 = 45 \)</p>
+                                        <p>3. Result: \( \frac{30}{45} \) which simplifies to \( \frac{2}{3} \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Calculate \( \frac{7}{8} ÷ \frac{2}{3} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Reciprocal of \( \frac{2}{3} \) is \( \frac{3}{2} \)</p>
+                                        <p>2. Multiply: \( \frac{7}{8} × \frac{3}{2} = \frac{21}{16} \)</p>
+                                        <p>3. Convert to mixed number: \( 1\frac{5}{16} \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Word Problems Section -->
+                        <section id="problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-question-circle"></i> Word Problems with Fractions
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example3" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of solving word problems with fractions.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Problem-Solving Strategy
+                                </h3>
+                                <p>When solving fraction word problems:</p>
+                                <ol>
+                                    <li>Read the problem carefully and identify what is being asked</li>
+                                    <li>Determine which operation(s) to use (addition, subtraction, multiplication, division)</li>
+                                    <li>Convert mixed numbers to improper fractions if needed</li>
+                                    <li>Perform the calculations</li>
+                                    <li>Simplify your answer and convert back to mixed numbers if appropriate</li>
+                                    <li>Check that your answer makes sense in the context of the problem</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Example Problems
+                                </h3>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-plus"></i>
+                                            <h3>Addition Problem</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>John ate \( \frac{1}{4} \) of a pizza and Mary ate \( \frac{1}{3} \) of the same pizza. What fraction of the pizza did they eat together?</p>
+                                            <div class="math-example">
+                                                <p>Solution:</p>
+                                                <p>1. LCD of 4 and 3 is 12</p>
+                                                <p>2. Convert: \( \frac{1}{4} = \frac{3}{12} \) and \( \frac{1}{3} = \frac{4}{12} \)</p>
+                                                <p>3. Add: \( \frac{3}{12} + \frac{4}{12} = \frac{7}{12} \)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-times"></i>
+                                            <h3>Multiplication Problem</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>A recipe calls for \( \frac{3}{4} \) cup of flour. If you want to make \( 2\frac{1}{2} \) times the recipe, how much flour will you need?</p>
+                                            <div class="math-example">
+                                                <p>Solution:</p>
+                                                <p>1. Convert \( 2\frac{1}{2} \) to improper fraction: \( \frac{5}{2} \)</p>
+                                                <p>2. Multiply: \( \frac{3}{4} × \frac{5}{2} = \frac{15}{8} \)</p>
+                                                <p>3. Convert to mixed number: \( 1\frac{7}{8} \) cups</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A tank contains \( 12\frac{1}{2} \) liters of water. If \( 7\frac{3}{4} \) liters are used, how much water remains in the tank?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Convert to improper fractions:</p>
+                                        <p>\( 12\frac{1}{2} = \frac{25}{2} \) and \( 7\frac{3}{4} = \frac{31}{4} \)</p>
+                                        <p>2. LCD of 2 and 4 is 4</p>
+                                        <p>3. Convert \( \frac{25}{2} = \frac{50}{4} \)</p>
+                                        <p>4. Subtract: \( \frac{50}{4} - \frac{31}{4} = \frac{19}{4} \)</p>
+                                        <p>5. Convert to mixed number: \( 4\frac{3}{4} \) liters</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>If \( \frac{2}{5} \) of a number is 24, what is \( \frac{3}{4} \) of the same number?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Let the number be \( x \): \( \frac{2}{5}x = 24 \)</p>
+                                        <p>2. Solve for \( x \): \( x = 24 × \frac{5}{2} = 60 \)</p>
+                                        <p>3. Find \( \frac{3}{4} \) of 60: \( \frac{3}{4} × 60 = 45 \)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A piece of wood is \( 8\frac{1}{2} \) meters long. How many \( \frac{3}{4} \) meter pieces can be cut from it?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Convert \( 8\frac{1}{2} \) to improper fraction: \( \frac{17}{2} \)</p>
+                                        <p>2. Divide: \( \frac{17}{2} ÷ \frac{3}{4} = \frac{17}{2} × \frac{4}{3} = \frac{68}{6} = \frac{34}{3} \)</p>
+                                        <p>3. Convert to mixed number: \( 11\frac{1}{3} \)</p>
+                                        <p>4. Interpretation: 11 full pieces can be cut with \( \frac{1}{3} \) meter remaining</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your fraction skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

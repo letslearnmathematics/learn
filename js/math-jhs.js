@@ -541,80 +541,80 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         "jhs3": {
             "Number & Numeration System": [
-                { name: "Significant Figures and Decimal Places", url: "b9-1-1-1-1lesson1" },
-                { name: "Place Value (Word Problems)", url: "b9-1-1-1-2lesson1" },
-                { name: "Union & Intersection of Sets (Venn Diagram)", url: "b9-1-1-1-3lesson1" },
-                { name: "Two Set Problems", url: "b9-1-1-1-4lesson1" }
+                { name: "Significant Figures and Decimal Places", url: "./math-jhs/jhs3/number/number-and-numeration-system/significant-decimal-places" },
+                { name: "Place Value (Word Problems)", url: "./math-jhs/jhs3/number/number-and-numeration-system/place-value-word-problems" },
+                { name: "Union & Intersection of Sets (Venn Diagram)", url: "./math-jhs/jhs3/number/number-and-numeration-system/union-intersection-sets" },
+                { name: "Two Set Problems", url: "./math-jhs/jhs3/number/number-and-numeration-system/two-set-problems" }
             ],
             "Number Operations": [
-                { name: "Multiply & Divide By Powers of 10", url: "b9-1-2-1-1lesson1" },
-                { name: "Commutative Property", url: "b9-1-2-1-2lesson1" },
-                { name: "Associative Property", url: "b9-1-2-1-3lesson1" },
-                { name: "Distributive Property", url: "b9-1-2-1-4lesson1" },
-                { name: "Number Operations (Word Problems)", url: "b9-1-2-2-1lesson1" },
-                { name: "Rounding Solutions to Word Problems", url: "b9-1-2-2-2lesson1" },
-                { name: "Surds", url: "b9-1-2-3-1lesson1" },
-                { name: "Rules of Surds", url: "b9-1-2-3-2lesson1" },
-                { name: "Simplifying Surds", url: "b9-1-2-3-3lesson1" },
-                { name: "Approximating Square Roots of Non-Perfect Squares", url: "b9-1-2-3-4lesson1" }
+                { name: "Multiply & Divide By Powers of 10", url: "./math-jhs/jhs3/number/number-operations/multiply-and-divide-by-powers-of-10" },
+                { name: "Commutative Property", url: "./math-jhs/jhs3/number/number-operations/commutative-property" },
+                { name: "Associative Property", url: "./math-jhs/jhs3/number/number-operations/associative-property" },
+                { name: "Distributive Property", url: "./math-jhs/jhs3/number/number-operations/distributive-property" },
+                { name: "Number Operations (Word Problems)", url: "./math-jhs/jhs3/number/number-operations/number-operations-word-problems" },
+                { name: "Rounding Solutions to Word Problems", url: "./math-jhs/jhs3/number/number-operations/rounding-solutions-word-problems" },
+                { name: "Surds", url: "./math-jhs/jhs3/number/number-operations/surds" },
+                { name: "Rules of Surds", url: "./math-jhs/jhs3/number/number-operations/rules-of-surds" },
+                { name: "Simplifying Surds", url: "./math-jhs/jhs3/number/number-operations/simplifying-surds" },
+                { name: "Approximating Square Roots of Non-Perfect Squares", url: "./math-jhs/jhs3/number/number-operations/approximating-square-roots" }
             ],
             "Fractions, Decimals & Percentages": [
-                { name: "Operations on Fractions", url: "b9-1-3-1-1lesson1" },
-                { name: "Applying BODMAS & PEDMAS", url: "b9-1-3-1-2lesson1" },
-                { name: "Word Problems on Fractions", url: "b9-1-3-1-3lesson1" }
+                { name: "Operations on Fractions", url: "./math-jhs/jhs3/number/fractions-decimals-and-percentages/operations-on-fractions" },
+                { name: "Applying BODMAS & PEDMAS", url: "./math-jhs/jhs3/number/fractions-decimals-and-percentages/bodmas-and-pedmas-fractions" },
+                { name: "Word Problems on Fractions", url: "./math-jhs/jhs3/number/fractions-decimals-and-percentages/word-problems-on-fraction" }
             ],
             "Ratios and Proportion": [
-                { name: "Proportional Relations", url: "b9-1-4-1-1lesson1" },
-                { name: "Interest, Discount, VAT, NHIL, Depreciation & Insurance", url: "b9-1-4-1-2lesson1" },
-                { name: "SSNIT Benefits & Contributions ", url: "b9-1-4-1-3lesson1" },
-                { name: "Graph of Proportional Relations", url: "b9-1-4-1-4lesson1" }
+                { name: "Proportional Relations", url: "./math-jhs/jhs3/number/ratios-and-proportion/proportional-relations" },
+                { name: "Interest, Discount, VAT, NHIL, Depreciation & Insurance", url: "./math-jhs/jhs3/number/ratios-and-proportion/interest-discounts" },
+                { name: "SSNIT Benefits & Contributions ", url: "./math-jhs/jhs3/number/ratios-and-proportion/ssnit" },
+                { name: "Graph of Proportional Relations", url: "./math-jhs/jhs3/number/ratios-and-proportion/graph-proportion" }
             ],
             "Patterns and Relations": [
-                { name: "Table & Graph of Two Linear Relations", url: "b9-2-1-1-1lesson1" },
-                { name: "Using Graphs to Determine Missing Elements in Ordered Pairs", url: "b9-2-1-1-2lesson1" },
-                { name: "Using Graphs to Solve Two Linear Equations", url: "b9-2-1-1-3lesson1" }
+                { name: "Table & Graph of Two Linear Relations", url: "./math-jhs/jhs3/algebra/patterns-and-relations/two-linear-relations" },
+                { name: "Using Graphs to Determine Missing Elements in Ordered Pairs", url: "./math-jhs/jhs3/algebra/patterns-and-relations/extrapolation" },
+                { name: "Using Graphs to Solve Two Linear Equations", url: "./math-jhs/jhs3/algebra/patterns-and-relations/using-graph-two-linear-equations" }
             ],
             "Algebraic Expressions": [
-                { name: "Change of Subject", url: "b9-2-2-1-1lesson1" },
-                { name: "Substitution Of Values", url: "b9-2-2-1-2lesson1" },
-                { name: "Factorisation", url: "b9-2-2-1-3lesson1" },
-                { name: "Word Problems on Factorisation", url: "b9-2-2-1-4lesson1" }
+                { name: "Change of Subject", url: "./math-jhs/jhs3/algebra/algebraic-expressions/change-of-subject.html" },
+                { name: "Substitution Of Values", url: "./math-jhs/jhs3/algebra/algebraic-expressions/substitution-of-values.html" },
+                { name: "Factorisation", url: "./math-jhs/jhs3/algebra/algebraic-expressions/factorisation.html" },
+                { name: "Word Problems on Factorisation", url: "./math-jhs/jhs3/algebra/algebraic-expressions/word-problems-factorisation.html" }
             ],
             "Variables and Equations": [
-                { name: "Single Variable Linear Inequalities", url: "b9-2-3-1-1lesson1" },
-                { name: "Solution Set of Linear Inequalities", url: "b9-2-3-1-2lesson1" },
-                { name: "Word Problems on Linear Inequalities", url: "b9-2-3-1-3lesson1" }
+                { name: "Single Variable Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/single-variable-linear-inequalities.html" },
+                { name: "Solution Set of Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/solution-set.html" },
+                { name: "Word Problems on Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/word-problems-linear-inequalities.html" }
             ],
             "Shapes and Space": [
-                { name: "Sum of Angles in a Polygon", url: "b9-3-1-1-1lesson1" },
-                { name: "Similar and Congruent Triangles ", url: "b9-3-1-1-2lesson1" },
-                { name: "Inscribed & Circumscribed Circles of Triangles", url: "b9-3-1-2-1lesson1" },
-                { name: "Constructions of Parallelograms", url: "b9-3-1-2-2lesson1" }
+                { name: "Sum of Angles in a Polygon", url: "./math-jhs/jhs3/geometry/shapes-and-space/sum-of-angles-polygon.html" },
+                { name: "Similar and Congruent Triangles ", url: "./math-jhs/jhs3/geometry/shapes-and-space/similar-congruent-triangles.html" },
+                { name: "Inscribed & Circumscribed Circles of Triangles", url: "./math-jhs/jhs3/geometry/shapes-and-space/inscribed-circumscribed.html" },
+                { name: "Constructions of Parallelograms", url: "./math-jhs/jhs3/geometry/shapes-and-space/construction-parallelogram.html" }
             ],
             "Measurements": [
-                { name: "Nets of Cuboids & Triangular Prisms", url: "b9-3-2-1-1lesson1" },
-                { name: "Surface Area of Cuboids", url: "b9-3-2-1-2lesson1" },
-                { name: "Surface Area of Triangular Prisms", url: "b9-3-2-1-3lesson1" },
-                { name: "Expressing Points as Position Vectors", url: "b9-3-2-1-3lesson1" },
-                { name: "Parallel Vectors & Perpendicular Vectors", url: "b9-3-2-2-1lesson1" },
-                { name: "Resolution of Vectors", url: "b9-3-2-2-2lesson1" }
+                { name: "Nets of Cuboids & Triangular Prisms", url: "./math-jhs/jhs3/geometry/measurement/nets-cuboids-triangular-prisms.html" },
+                { name: "Surface Area of Cuboids", url: "./math-jhs/jhs3/geometry/measurement/surface-area-cuboids.html" },
+                { name: "Surface Area of Triangular Prisms", url: "./math-jhs/jhs3/geometry/measurement/surface-area-triangular-prisms.html" },
+                { name: "Expressing Points as Position Vectors", url: "./math-jhs/jhs3/geometry/measurement/points-as-position-vectors.html" },
+                { name: "Parallel Vectors & Perpendicular Vectors", url: "./math-jhs/jhs3/geometry/measurement/parallel-perpendicular-vectors.html" },
+                { name: "Resolution of Vectors", url: "./math-jhs/jhs3/geometry/measurement/resolution-of-vectors.html" }
             ],
             "Position and Transformation": [
-                { name: "Enlargement", url: "b9-3-3-1-1lesson1" },
-                { name: "Enlargement & Identifying Real Life Situations", url: "b9-3-3-1-2lesson1" },
-                { name: "Congruent & Similar Shapes", url: "b9-3-3-1-3lesson1" }
+                { name: "Enlargement", url: "./math-jhs/jhs3/geometry/position-and-transformation/enlargement.html" },
+                { name: "Enlargement & Identifying Real Life Situations", url: "./math-jhs/jhs3/geometry/position-and-transformation/enlargement-real-life.html" },
+                { name: "Congruent & Similar Shapes", url: "./math-jhs/jhs3/geometry/position-and-transformation/congruent-similar-shapes.html" }
             ],
             "Data": [
-                { name: "Methods of Collecting Data", url: "b9-4-1-1-1lesson1" },
-                { name: "Organising Data", url: "b9-4-1-1-2lesson1" },
-                { name: "Histogram", url: "b9-4-1-1-3lesson1" },
-                { name: "Data & Bias", url: "b9-4-1-2-1lesson1" },
-                { name: "Using Descriptive Statistics", url: "b9-4-1-2-2lesson1" },
-                { name: "Mean, Median and Mode & Extreme Data in Data Set", url: "b9-4-1-2-3lesson1" }
+                { name: "Methods of Collecting Data", url: "./math-jhs/jhs3/handling-data/data/methods-of-collecting-data.html" },
+                { name: "Organising Data", url: "./math-jhs/jhs3/handling-data/data/organising-data.html" },
+                { name: "Histogram", url: "./math-jhs/jhs3/handling-data/data/histogram.html" },
+                { name: "Data & Bias", url: "./math-jhs/jhs3/handling-data/data/data-and-bias.html" },
+                { name: "Using Descriptive Statistics", url: "./math-jhs/jhs3/handling-data/data/using-descriptive-statistics.html" },
+                { name: "Mean, Median and Mode & Extreme Data in Data Set", url: "./math-jhs/jhs3/handling-data/data/measures-and-extreme-data.html" }
             ],
             "Chance or Probability": [
-                { name: "Two Dependent Events", url: "b9-4-2-1-1lesson1" },
-                { name: "Probability as Fractions, Percentages &/or Ratios", url: "b9-4-2-1-2lesson1" }
+                { name: "Two Dependent Events", url: "./math-jhs/jhs3/handling-data/chance-or-probability/two-dependent-events.html" },
+                { name: "Probability as Fractions, Percentages &/or Ratios", url: "./math-jhs/jhs3/handling-data/chance-or-probability/probability-as-fractions-percentages.html" }
             ]
         }
     };

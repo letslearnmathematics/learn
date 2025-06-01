@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Proportional Relationships | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Proportional Relationships for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Proportional Relationships | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to solve multistep ratio and percent problems including simple interest, tax, discount, commissions, NHIL, depreciation, and insurance">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/proportional-relationships">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Proportional Relationships</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Proportional Relationships</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#simple-interest"><i class="fas fa-chevron-right"></i> Simple Interest</a></li>
+                                <li><a href="#tax"><i class="fas fa-chevron-right"></i> Tax (VAT)</a></li>
+                                <li><a href="#discount"><i class="fas fa-chevron-right"></i> Discount</a></li>
+                                <li><a href="#commission"><i class="fas fa-chevron-right"></i> Commission</a></li>
+                                <li><a href="#depreciation"><i class="fas fa-chevron-right"></i> Depreciation</a></li>
+                                <li><a href="#nhil"><i class="fas fa-chevron-right"></i> NHIL</a></li>
+                                <li><a href="#insurance"><i class="fas fa-chevron-right"></i> Insurance</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Proportional Relationships</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Proportional relationships</strong> are mathematical relationships where two quantities maintain a constant ratio. 
+                                    These relationships are fundamental in solving various real-world problems involving ratios, percentages, 
+                                    and proportional changes.
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to apply proportional relationships to solve multistep problems involving:
+                                </p>
+                                <ul>
+                                    <li>Simple interest calculations</li>
+                                    <li>Value Added Tax (VAT)</li>
+                                    <li>Discounts on purchases</li>
+                                    <li>Commissions on sales</li>
+                                    <li>Depreciation of assets</li>
+                                    <li>National Health Insurance Levy (NHIL)</li>
+                                    <li>Insurance premiums</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Simple Interest Section -->
+                        <section id="simple-interest" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-percentage"></i> Simple Interest
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Simple Interest Formula
+                                </h3>
+                                <p>
+                                    Simple interest is calculated using the formula:
+                                </p>
+                                \[ I = \frac{P \times R \times T}{100} \]
+                                <p>Where:</p>
+                                <ul>
+                                    <li>\( I \) = Simple Interest</li>
+                                    <li>\( P \) = Principal amount (initial amount)</li>
+                                    <li>\( R \) = Rate of interest (in percentage)</li>
+                                    <li>\( T \) = Time period (in years)</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <h4>Example:</h4>
+                                    <p>Calculate the simple interest on GH₵5,000 at 8% per annum for 3 years.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    \[ I = \frac{5000 \times 8 \times 3}{100} = \frac{120,000}{100} = GH₵1,200 \]
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Kwame invested GH₵12,000 at a simple interest rate of 6.5% per annum. Calculate the interest earned after 4 years.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            \[ I = \frac{12000 \times 6.5 \times 4}{100} = \frac{312,000}{100} = GH₵3,120 \]
+                                        </div>
+                                    </div>
+                                    <div class="problem-card">
+                                        <h3>Question 2</h3>
+                                        <p>How long will it take for GH₵8,000 to earn GH₵1,440 in simple interest at 6% per annum?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            \[ T = \frac{I \times 100}{P \times R} = \frac{1440 \times 100}{8000 \times 6} = \frac{144,000}{48,000} = 3 \text{ years} \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        
+                        <!-- Tax (VAT) Section -->
+                        <section id="tax" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-receipt"></i> Tax (VAT)
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> VAT Calculations
+                                </h3>
+                                <p>
+                                    Value Added Tax (VAT) in Ghana is currently 12.5%. When an item's price is VAT inclusive, it means the price already includes the VAT.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <h4>Example:</h4>
+                                    <p>A man bought an item at GH₵4,500.00, VAT inclusive. Calculate:</p>
+                                    <ol type="b">
+                                        <li>The basic cost of the item</li>
+                                        <li>The VAT paid by the man</li>
+                                    </ol>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Let the basic cost be \( x \). Then:</p>
+                                    \[ x + 0.125x = 4500 \]
+                                    \[ 1.125x = 4500 \]
+                                    \[ x = \frac{4500}{1.125} = GH₵4,000 \]
+                                    <p>VAT paid = Total price - Basic cost = GH₵4,500 - GH₵4,000 = GH₵500</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>The VAT inclusive price of a refrigerator is GH₵6,750. Calculate:</p>
+                                        <ol type="a">
+                                            <li>The basic price</li>
+                                            <li>The VAT amount</li>
+                                        </ol>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Let basic price be \( x \):</p>
+                                            \[ x + 0.125x = 6750 \]
+                                            \[ 1.125x = 6750 \]
+                                            \[ x = \frac{6750}{1.125} = GH₵6,000 \]
+                                            <p>VAT amount = GH₵6,750 - GH₵6,000 = GH₵750</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        
+                        <!-- Discount Section -->
+                        <section id="discount" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-tag"></i> Discount
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Discount Calculations
+                                </h3>
+                                <p>
+                                    Discount is a reduction in the original price of an item. It is usually expressed as a percentage of the original price.
+                                </p>
+                                <p>Discount Amount = Original Price × Discount Rate</p>
+                                <p>New Price = Original Price - Discount Amount</p>
+                                
+                                <div class="math-example">
+                                    <h4>Example:</h4>
+                                    <p>If a car costs GH₵80,500.00, what is its new value if there is a discount of 10%?</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Discount Amount = GH₵80,500 × 10% = GH₵8,050</p>
+                                    <p>New Price = GH₵80,500 - GH₵8,050 = GH₵72,450</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>A laptop is priced at GH₵3,200 with a 15% discount. Calculate:</p>
+                                        <ol type="a">
+                                            <li>The discount amount</li>
+                                            <li>The new price after discount</li>
+                                        </ol>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Discount Amount = GH₵3,200 × 15% = GH₵480</p>
+                                            <p>New Price = GH₵3,200 - GH₵480 = GH₵2,720</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        
+                        <!-- Commission Section -->
+                        <section id="commission" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-handshake"></i> Commission
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Commission Calculations
+                                </h3>
+                                <p>
+                                    Commission is a payment made to an agent or employee for transacting a piece of business or performing a service, 
+                                    often calculated as a percentage of the value involved.
+                                </p>
+                                <p>Commission = Sales Amount × Commission Rate</p>
+                                
+                                <div class="math-example">
+                                    <h4>Example:</h4>
+                                    <p>A salesperson earns 7% commission on all sales. If she sells goods worth GH₵25,000, calculate her commission.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Commission = GH₵25,000 × 7% = GH₵1,750</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>An insurance agent receives 12% commission on all premiums collected. If he collects GH₵48,000 in premiums, how much commission does he earn?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Commission = GH₵48,000 × 12% = GH₵5,760</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        
+                        <!-- Depreciation Section -->
+                        <section id="depreciation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line-down"></i> Depreciation
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Depreciation Calculations
+                                </h3>
+                                <p>
+                                    Depreciation is the reduction in the value of an asset over time due to wear and tear, 
+                                    obsolescence, or other factors. It is often calculated as a percentage of the asset's value.
+                                </p>
+                                <p>Annual Depreciation = Original Value × Depreciation Rate</p>
+                                <p>Value After Depreciation = Original Value - Depreciation Amount</p>
+                                
+                                <div class="math-example">
+                                    <h4>Example:</h4>
+                                    <p>A company purchased machinery for GH₵120,000. If it depreciates at 10% per annum, calculate its value after 3 years.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Year 1 Depreciation = GH₵120,000 × 10% = GH₵12,000</p>
+                                    <p>Value after Year 1 = GH₵120,000 - GH₵12,000 = GH₵108,000</p>
+                                    <p>Year 2 Depreciation = GH₵108,000 × 10% = GH₵10,800</p>
+                                    <p>Value after Year 2 = GH₵108,000 - GH₵10,800 = GH₵97,200</p>
+                                    <p>Year 3 Depreciation = GH₵97,200 × 10% = GH₵9,720</p>
+                                    <p>Value after Year 3 = GH₵97,200 - GH₵9,720 = GH₵87,480</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>A vehicle purchased for GH₵65,000 depreciates at 15% per annum. Calculate its value after 2 years.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Year 1 Depreciation = GH₵65,000 × 15% = GH₵9,750</p>
+                                            <p>Value after Year 1 = GH₵65,000 - GH₵9,750 = GH₵55,250</p>
+                                            <p>Year 2 Depreciation = GH₵55,250 × 15% = GH₵8,287.50</p>
+                                            <p>Value after Year 2 = GH₵55,250 - GH₵8,287.50 = GH₵46,962.50</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        
+                        <!-- NHIL Section -->
+                        <section id="nhil" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-file-invoice"></i> NHIL
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> NHIL Calculations
+                                </h3>
+                                <p>
+                                    The National Health Insurance Levy (NHIL) is a 2.5% levy on goods and services in Ghana to fund the National Health Insurance Scheme.
+                                </p>
+                                <p>NHIL Amount = Price × NHIL Rate (2.5%)</p>
+                                <p>NHIL Inclusive Price = Original Price + NHIL Amount</p>
+                                
+                                <div class="math-example">
+                                    <h4>Example:</h4>
+                                    <p>The NHIL inclusive price of a television set is GH₵1,200.00. If the NHIL is charged at a rate of 2.5%, find:</p>
+                                    <ol type="b">
+                                        <li>The cost of the television set (NHIL exclusive)</li>
+                                        <li>The NHIL charged</li>
+                                    </ol>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Let the NHIL exclusive price be \( x \):</p>
+                                    \[ x + 0.025x = 1200 \]
+                                    \[ 1.025x = 1200 \]
+                                    \[ x = \frac{1200}{1.025} \approx GH₵1,170.73 \]
+                                    <p>NHIL charged = GH₵1,200 - GH₵1,170.73 = GH₵29.27</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>The NHIL inclusive price of a refrigerator is GH₵3,280. Calculate:</p>
+                                        <ol type="a">
+                                            <li>The NHIL exclusive price</li>
+                                            <li>The NHIL amount</li>
+                                        </ol>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Let NHIL exclusive price be \( x \):</p>
+                                            \[ x + 0.025x = 3280 \]
+                                            \[ 1.025x = 3280 \]
+                                            \[ x = \frac{3280}{1.025} = GH₵3,200 \]
+                                            <p>NHIL amount = GH₵3,280 - GH₵3,200 = GH₵80</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+                        
+                        <!-- Insurance Section -->
+                        <section id="insurance" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shield-alt"></i> Insurance
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Insurance Calculations
+                                </h3>
+                                <p>
+                                    Insurance premium is the amount paid periodically to the insurer for coverage. 
+                                    It is often calculated as a percentage of the insured value.
+                                </p>
+                                <p>Premium = Insured Value × Premium Rate</p>
+                                
+                                <div class="math-example">
+                                    <h4>Example:</h4>
+                                    <p>Kofi Mereku insured his house and paid a premium of GH₵30,000.00. If the insurance company fixed the rate at 5% of the value of the house, calculate the insured value of the house.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Let the insured value be \( x \):</p>
+                                    \[ 0.05x = 30,000 \]
+                                    \[ x = \frac{30,000}{0.05} = GH₵600,000 \]
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>A business owner paid GH₵18,750 as insurance premium at a rate of 3% of the insured value. What was the insured value?</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Solution:</strong></p>
+                                            <p>Let insured value be \( x \):</p>
+                                            \[ 0.03x = 18,750 \]
+                                            \[ x = \frac{18,750}{0.03} = GH₵625,000 \]
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

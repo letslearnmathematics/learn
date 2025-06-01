@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Rational Number Relationships | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Rational Number Relationships for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Rational Number Relationships | JHS3 Mathematics">
+        <meta property="og:description" content="Learn about relationships between rational numbers using union and intersection of sets">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/number-and-numeration-system/rational-number-relationships">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Rational Number Relationships</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Rational Number Relationships</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#real-numbers"><i class="fas fa-chevron-right"></i> Real Number System</a></li>
+                                <li><a href="#venn-factors"><i class="fas fa-chevron-right"></i> Factors on Venn Diagrams</a></li>
+                                <li><a href="#problems"><i class="fas fa-chevron-right"></i> Problem Solving</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Rational Numbers</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Rational numbers</strong> are numbers that can be expressed as a fraction \(\frac{a}{b}\) where 
+                                    \(a\) and \(b\) are integers and \(b \neq 0\). They include integers, fractions, and terminating or repeating decimals.
+                                </p>
+                                <p>
+                                    In this lesson, we will explore the relationships between different types of rational numbers using 
+                                    set theory concepts of union and intersection. We'll also learn how to represent factors of numbers 
+                                    using Venn diagrams.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Union (\( A \cup B \)):</h4>
+                                        <p>Combines all elements from both sets</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Intersection (\( A \cap B \)):</h4>
+                                        <p>Contains only elements common to both sets</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Real Number System Section -->
+                        <section id="real-numbers" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-diagram-project"></i> Real Number System
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Hierarchy of Real Numbers
+                                </h3>
+                                <p>The real number system can be represented using nested sets to show how different number types relate:</p>
+                                <img src="../../../../images/real-numbers-diagram.png" alt="Real Number System Diagram" class="place">
+                                
+                                <div class="math-example">
+                                    <p>Key relationships:</p>
+                                    <ul>
+                                        <li>Natural numbers (\( \mathbb{N} \)) ⊂ Whole numbers (\( \mathbb{W} \)) ⊂ Integers (\( \mathbb{Z} \)) ⊂ Rational numbers (\( \mathbb{Q} \)) ⊂ Real numbers (\( \mathbb{R} \))</li>
+                                        <li>Irrational numbers (\( \mathbb{P} \)) are separate but also part of real numbers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-project-diagram"></i> Set Operations with Number Types
+                                </h3>
+                                <p>We can use union and intersection to explore relationships between number sets:</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong> Relationship between integers and whole numbers</p>
+                                    \[ \mathbb{W} \cap \mathbb{Z} = \mathbb{W} \]
+                                    <p>This shows whole numbers are a subset of integers</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 2:</strong> Relationship between rational and irrational numbers</p>
+                                    \[ \mathbb{Q} \cap \mathbb{P} = \emptyset \]
+                                    <p>This shows they have no common elements</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Factors on Venn Diagrams Section -->
+                        <section id="venn-factors" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-circle-nodes"></i> Factors on Venn Diagrams
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Representing Factors
+                                </h3>
+                                <p>Venn diagrams can visually represent common factors between numbers:</p>
+                                <img src="../../../../images/factors-venn.png" alt="Factors Venn Diagram Example" class="place">
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-list-ol"></i>
+                                        <h3>Steps to Create Factor Venn Diagrams</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>List all factors of each number</li>
+                                            <li>Identify common factors (intersection)</li>
+                                            <li>Place unique factors in separate circles</li>
+                                            <li>Place common factors in overlapping area</li>
+                                        </ol>
+                                        
+                                        <div class="math-example">
+                                            <p><strong>Example:</strong> Factors of 12 and 18</p>
+                                            <p>Factors of 12: {1, 2, 3, 4, 6, 12}</p>
+                                            <p>Factors of 18: {1, 2, 3, 6, 9, 18}</p>
+                                            <p>Common factors: {1, 2, 3, 6}</p>
+                                            <img src="../../../../images/12-18-factors.png" alt="Factors of 12 and 18" class="place">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Finding HCF Using Venn Diagrams</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>The highest common factor (HCF) is the largest number in the intersection:</p>
+                                        
+                                        <div class="math-example">
+                                            <p>From our example of 12 and 18:</p>
+                                            \[ \text{HCF} = 6 \]
+                                            <p>This is the greatest number in the overlapping section</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Problem Solving Section -->
+                        <section id="problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-puzzle-piece"></i> Problem Solving
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question-circle"></i> Applying Union and Intersection
+                                </h3>
+                                <p>Let's solve problems combining number relationships and set operations:</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Problem 1:</strong> Given:</p>
+                                    <p>\( A = \{x | x \text{ is a factor of 24}\} \)</p>
+                                    <p>\( B = \{x | x \text{ is a factor of 36}\} \)</p>
+                                    <p>Find \( A \cup B \) and \( A \cap B \)</p>
+                                    
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Factors of 24: {1, 2, 3, 4, 6, 8, 12, 24}</p>
+                                        <p>Factors of 36: {1, 2, 3, 4, 6, 9, 12, 18, 36}</p>
+                                        <p>\( A \cup B = \{1, 2, 3, 4, 6, 8, 9, 12, 18, 24, 36\} \)</p>
+                                        <p>\( A \cap B = \{1, 2, 3, 4, 6, 12\} \)</p>
+                                        <img src="../../../../images/24-36-factors.png" alt="Factors of 24 and 36" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Problem 2:</strong> Represent the relationship between:</p>
+                                    <p>Natural numbers (\( \mathbb{N} \)), Whole numbers (\( \mathbb{W} \)), Integers (\( \mathbb{Z} \)), and Rational numbers (\( \mathbb{Q} \))</p>
+                                    
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>This is a nested relationship:</p>
+                                        <p>\( \mathbb{N} \subset \mathbb{W} \subset \mathbb{Z} \subset \mathbb{Q} \)</p>
+                                        <img src="../../../../images/number-system-nested.png" alt="Nested Number System" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Draw a Venn diagram showing the relationship between factors of 15 and factors of 20.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factors of 15: {1, 3, 5, 15}</p>
+                                        <p>Factors of 20: {1, 2, 4, 5, 10, 20}</p>
+                                        <p>Common factors: {1, 5}</p>
+                                        <img src="../../../../images/15-20-factors.png" alt="Factors of 15 and 20" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Using set notation, describe the relationship between even numbers and multiples of 4.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( E \) = even numbers, \( M \) = multiples of 4</p>
+                                        <p>All multiples of 4 are even, but not all evens are multiples of 4</p>
+                                        <p>\( M \subset E \)</p>
+                                        <img src="../../../../images/even-multiples.png" alt="Even and Multiples of 4" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Find \( A \cap B \) where:</p>
+                                    <p>\( A = \{x | x \text{ is a prime number less than 10}\} \)</p>
+                                    <p>\( B = \{x | x \text{ is an odd number less than 10}\} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>\( A = \{2, 3, 5, 7\} \)</p>
+                                        <p>\( B = \{1, 3, 5, 7, 9\} \)</p>
+                                        <p>\( A \cap B = \{3, 5, 7\} \)</p>
+                                        <img src="../../../../images/prime-odd.png" alt="Prime and Odd Numbers" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Represent the factors of 18 and 27 on a Venn diagram and find their HCF.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factors of 18: {1, 2, 3, 6, 9, 18}</p>
+                                        <p>Factors of 27: {1, 3, 9, 27}</p>
+                                        <p>Common factors: {1, 3, 9}</p>
+                                        <p>HCF = 9</p>
+                                        <img src="../../../../images/18-27-factors.png" alt="Factors of 18 and 27" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Show how natural numbers, whole numbers, and integers are related using a Venn diagram.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Natural numbers (\( \mathbb{N} \)) = {1, 2, 3, ...}</p>
+                                        <p>Whole numbers (\( \mathbb{W} \)) = {0, 1, 2, 3, ...}</p>
+                                        <p>Integers (\( \mathbb{Z} \)) = {..., -2, -1, 0, 1, 2, ...}</p>
+                                        <p>\( \mathbb{N} \subset \mathbb{W} \subset \mathbb{Z} \)</p>
+                                        <img src="../../../../images/nested-number-sets.png" alt="Nested Number Sets" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

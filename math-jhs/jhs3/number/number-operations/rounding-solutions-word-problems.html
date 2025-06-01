@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Solving Word Problems | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Lesson on solving word problems involving the four basic operations and rounding answers for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Solving Word Problems | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to solve word problems involving the four basic operations and rounding answers">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/word-problems">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Solving Word Problems</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Word Problems</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#basic-operations"><i class="fas fa-chevron-right"></i> Four Basic Operations</a></li>
+                                <li><a href="#rounding"><i class="fas fa-chevron-right"></i> Rounding Numbers</a></li>
+                                <li><a href="#problem-solving"><i class="fas fa-chevron-right"></i> Problem Solving Steps</a></li>
+                                <li><a href="#examples"><i class="fas fa-chevron-right"></i> Worked Examples</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Word Problems</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Word problems</strong> are mathematical problems presented in everyday language rather than mathematical notation. 
+                                    Solving word problems involves identifying the relevant information, determining which operations to use, 
+                                    performing calculations, and interpreting the results.
+                                </p>
+                                <p>
+                                    In this lesson, we will focus on solving word problems involving the four basic operations (addition, subtraction, 
+                                    multiplication, and division) and rounding answers to specified decimal places or significant figures.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example Problem:</strong></p>
+                                    <p>The price of a jacket is three times that of a shirt. The price of a jacket is GH₵560.65. Mr Mensa bought two of the jackets and four shirts for his twin sons. Calculate the total amount Mr Mensa paid for the items, correct your answer to:</p>
+                                    <p>𝛼) two decimal places</p>
+                                    <p>𝛽) three significant figures</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Basic Operations Section -->
+                        <section id="basic-operations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Four Basic Operations
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Key Operations
+                                </h3>
+                                <p>The four basic operations in mathematics are:</p>
+                                <ol>
+                                    <li><strong>Addition (+)</strong> - Combining numbers to find their total</li>
+                                    <li><strong>Subtraction (-)</strong> - Finding the difference between numbers</li>
+                                    <li><strong>Multiplication (×)</strong> - Repeated addition of the same number</li>
+                                    <li><strong>Division (÷)</strong> - Splitting a number into equal parts</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Operation Relationships
+                                </h3>
+                                <p>
+                                    These operations are related to each other. For example:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Addition and Subtraction</h4>
+                                        <p>Are inverse operations:</p>
+                                        \[ \text{If } a + b = c \text{, then } c - b = a \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>Multiplication and Division</h4>
+                                        <p>Are inverse operations:</p>
+                                        \[ \text{If } a \times b = c \text{, then } c \div b = a \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Rounding Section -->
+                        <section id="rounding" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-exchange-alt"></i> Rounding Numbers
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Rounding to Decimal Places
+                                </h3>
+                                <p>To round a number to a certain number of decimal places:</p>
+                                <ol>
+                                    <li>Identify the digit at the required decimal place</li>
+                                    <li>Look at the digit immediately to its right</li>
+                                    <li>If that digit is 5 or greater, round up the identified digit</li>
+                                    <li>If it's less than 5, leave the identified digit unchanged</li>
+                                    <li>Drop all digits to the right of the required decimal place</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Round 3.14159 to:</p>
+                                    <ul>
+                                        <li>2 decimal places: 3.14</li>
+                                        <li>3 decimal places: 3.142</li>
+                                        <li>4 decimal places: 3.1416</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Significant Figures
+                                </h3>
+                                <p>
+                                    Significant figures are the digits in a number that carry meaning contributing to its precision. Rules for identifying significant figures:
+                                </p>
+                                <ol>
+                                    <li>All non-zero digits are significant</li>
+                                    <li>Zeros between non-zero digits are significant</li>
+                                    <li>Leading zeros are not significant</li>
+                                    <li>Trailing zeros in a decimal number are significant</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Examples:</strong></p>
+                                    <ul>
+                                        <li>123.45 has 5 significant figures</li>
+                                        <li>0.0045 has 2 significant figures</li>
+                                        <li>100.00 has 5 significant figures</li>
+                                        <li>1200 has 2 significant figures (unless written as 1200.0, which has 5)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Problem Solving Steps Section -->
+                        <section id="problem-solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-list-ol"></i> Problem Solving Steps
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Step-by-Step Approach
+                                </h3>
+                                <p>Follow these steps to solve word problems:</p>
+                                <ol>
+                                    <li><strong>Read carefully:</strong> Understand what the problem is asking</li>
+                                    <li><strong>Identify given information:</strong> Extract numbers and relationships</li>
+                                    <li><strong>Determine what's needed:</strong> What quantity are you solving for?</li>
+                                    <li><strong>Choose operations:</strong> Decide which operations to use</li>
+                                    <li><strong>Set up calculations:</strong> Write the mathematical expressions</li>
+                                    <li><strong>Perform calculations:</strong> Solve step by step</li>
+                                    <li><strong>Check reasonableness:</strong> Does the answer make sense?</li>
+                                    <li><strong>Round if required:</strong> Apply rounding rules as specified</li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <!-- Worked Examples Section -->
+                        <section id="examples" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chalkboard-teacher"></i> Worked Examples
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pen"></i> Example 1: Jackets and Shirts
+                                </h3>
+                                <p><strong>Problem:</strong> The price of a jacket is three times that of a shirt. The price of a jacket is GH₵560.65. Mr Mensa bought two of the jackets and four shirts for his twin sons. Calculate the total amount Mr Mensa paid for the items, correct your answer to:</p>
+                                <p>𝛼) two decimal places</p>
+                                <p>𝛽) three significant figures</p>
+                                
+                                <div class="math-solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>1. First, find the price of a shirt:</p>
+                                    <p>Given that jacket price = 3 × shirt price</p>
+                                    \[ \text{Shirt price} = \frac{\text{Jacket price}}{3} = \frac{560.65}{3} = 186.8833... \]
+                                    
+                                    <p>2. Calculate total cost:</p>
+                                    <p>Total for jackets: 2 × 560.65 = 1121.30</p>
+                                    <p>Total for shirts: 4 × 186.8833... ≈ 747.5333...</p>
+                                    <p>Total amount paid: 1121.30 + 747.5333... ≈ 1868.8333...</p>
+                                    
+                                    <p>3. Round the answer:</p>
+                                    <p>𝛼) To two decimal places: GH₵1868.83</p>
+                                    <p>𝛽) To three significant figures: GH₵1870</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pen"></i> Example 2: Grocery Shopping
+                                </h3>
+                                <p><strong>Problem:</strong> Mrs. Akoto bought 3.5 kg of rice at GH₵8.20 per kg, 2 loaves of bread at GH₵5.75 each, and 1.2 kg of tomatoes at GH₵4.80 per kg. She paid with a GH₵50 note. How much change did she receive? Round your answer to the nearest pesewa (2 decimal places).</p>
+                                
+                                <div class="math-solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>1. Calculate cost of each item:</p>
+                                    <p>Rice: 3.5 × 8.20 = 28.70</p>
+                                    <p>Bread: 2 × 5.75 = 11.50</p>
+                                    <p>Tomatoes: 1.2 × 4.80 = 5.76</p>
+                                    
+                                    <p>2. Total cost: 28.70 + 11.50 + 5.76 = 45.96</p>
+                                    
+                                    <p>3. Change received: 50.00 - 45.96 = 4.04</p>
+                                    
+                                    <p>4. Rounded answer: GH₵4.04 (already to 2 decimal places)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pen"></i> Example 3: Paint Calculation
+                                </h3>
+                                <p><strong>Problem:</strong> A painter needs to cover a wall that is 4.25 meters high and 12.6 meters long. One liter of paint covers approximately 8.5 square meters. How many liters of paint are needed to paint the wall? Give your answer to 3 significant figures.</p>
+                                
+                                <div class="math-solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>1. Calculate wall area: height × length</p>
+                                    \[ 4.25 \times 12.6 = 53.55 \text{ m}^2 \]
+                                    
+                                    <p>2. Calculate paint needed: area ÷ coverage per liter</p>
+                                    \[ 53.55 \div 8.5 \approx 6.3 \text{ liters} \]
+                                    
+                                    <p>3. To 3 significant figures: 6.30 liters</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A car travels 245.6 km on 18.5 liters of petrol. Calculate the average distance traveled per liter of petrol, correct to two decimal places.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Distance per liter = Total distance ÷ Petrol used</p>
+                                        \[ 245.6 \div 18.5 \approx 13.27567... \]
+                                        <p>Rounded to 2 decimal places: 13.28 km/l</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>The sum of three numbers is 125.8. The first number is 15.6 more than the second, and the third number is twice the second number. Find all three numbers, rounding each to one decimal place.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Let second number = x</p>
+                                        <p>First number = x + 15.6</p>
+                                        <p>Third number = 2x</p>
+                                        <p>Equation: (x + 15.6) + x + 2x = 125.8</p>
+                                        \[ 4x + 15.6 = 125.8 \]
+                                        \[ 4x = 110.2 \]
+                                        \[ x = 27.55 \]
+                                        <p>First number: 27.55 + 15.6 = 43.15 ≈ 43.2</p>
+                                        <p>Second number: 27.55 ≈ 27.6</p>
+                                        <p>Third number: 2 × 27.55 = 55.1</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A rectangular garden measures 12.75 m by 8.25 m. Calculate its area in square meters, giving your answer to three significant figures.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Area = length × width</p>
+                                        \[ 12.75 \times 8.25 = 105.1875 \text{ m}^2 \]
+                                        <p>To 3 significant figures: 105 m²</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A shopkeeper bought 24 items at GH₵15.50 each and sold them for GH₵18.75 each. Calculate the total profit, rounded to the nearest Ghana cedi.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Total cost price: 24 × 15.50 = 372.00</p>
+                                        <p>Total selling price: 24 × 18.75 = 450.00</p>
+                                        <p>Profit: 450.00 - 372.00 = 78.00</p>
+                                        <p>Rounded to nearest cedi: GH₵78</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>In a school, the ratio of boys to girls is 5:4. If there are 720 students in total, how many girls are there? Round your answer to the nearest ten.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Total parts = 5 (boys) + 4 (girls) = 9 parts</p>
+                                        <p>Number of girls = (4/9) × 720 = 320</p>
+                                        <p>Already rounded to nearest ten: 320 girls</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Significant Figures and Decimal Places | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Significant Figures and Decimal Places for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Significant Figures and Decimal Places | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to Express Numbers to Significant Figures and Decimal Places">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/number-and-numeration-system/significant-figures">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Significant Figures and Decimal Places</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Number & Numeration System</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Significant Figures & Decimal Places</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#significant-figures"><i class="fas fa-chevron-right"></i> Significant Figures</a></li>
+                                <li><a href="#decimal-places"><i class="fas fa-chevron-right"></i> Decimal Places</a></li>
+                                <li><a href="#quick-test"><i class="fas fa-chevron-right"></i> Practice Exercises</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Number & Numeration</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Significant figures</strong> and <strong>decimal places</strong> are important concepts in mathematics 
+                                    that help us express numbers with appropriate precision. They are used in various 
+                                    fields including science, engineering, and finance.
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to:
+                                </p>
+                                <ol>
+                                    <li>Express integers to a specified number of significant figures</li>
+                                    <li>Express decimal numbers to a given number of decimal places</li>
+                                </ol>
+                            </div>
+                        </section>
+                        
+                        <!-- Significant Figures Section -->
+                        <section id="significant-figures" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-hashtag"></i> Significant Figures
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example1" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on significant figures with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-info-circle"></i> What are Significant Figures?
+                                </h3>
+                                <p>
+                                    Significant figures are the digits in a number that carry meaning contributing to its precision. 
+                                    This includes all digits except:
+                                </p>
+                                <ul>
+                                    <li>Leading zeros (zeros before the first non-zero digit)</li>
+                                    <li>Trailing zeros in a number without a decimal point (they may or may not be significant)</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> Rules for Identifying Significant Figures
+                                </h3>
+                                <ol>
+                                    <li>All non-zero digits are significant (1-9)</li>
+                                    <li>Zeros between non-zero digits are significant</li>
+                                    <li>Leading zeros are not significant</li>
+                                    <li>Trailing zeros in a number with a decimal point are significant</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <table class="example-table">
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>Significant Figures</th>
+                                            <th>Explanation</th>
+                                        </tr>
+                                        <tr>
+                                            <td>1234</td>
+                                            <td>4</td>
+                                            <td>All non-zero digits</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1002</td>
+                                            <td>4</td>
+                                            <td>Zeros between non-zero digits are significant</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0045</td>
+                                            <td>2</td>
+                                            <td>Leading zeros are not significant</td>
+                                        </tr>
+                                        <tr>
+                                            <td>150.00</td>
+                                            <td>5</td>
+                                            <td>Trailing zeros after decimal are significant</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Expressing Numbers to Significant Figures
+                                </h3>
+                                <p>To express a number to a given number of significant figures:</p>
+                                <ol>
+                                    <li>Count the number of significant figures needed</li>
+                                    <li>Identify the digit at the position where you'll round</li>
+                                    <li>Look at the next digit (the first non-significant digit)</li>
+                                    <li>If it's 5 or more, round up the last significant digit</li>
+                                    <li>If it's less than 5, keep the last significant digit unchanged</li>
+                                    <li>Replace any remaining digits with zeros if necessary (for numbers without decimal points)</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <h4>Examples:</h4>
+                                    <p>Express 34,567 to 3 significant figures:</p>
+                                    <p>34,567 → 34,600 (The '5' in the hundreds place means we round up the '4' to '5')</p>
+                                    
+                                    <p>Express 0.0045678 to 2 significant figures:</p>
+                                    <p>0.0045678 → 0.0046 (The '6' means we round up the '5' to '6')</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Decimal Places Section -->
+                        <section id="decimal-places" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-decimal-point"></i> Decimal Places
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example2" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on decimal places with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-info-circle"></i> What are Decimal Places?
+                                </h3>
+                                <p>
+                                    Decimal places refer to the number of digits to the right of the decimal point in a number. 
+                                    When we express a number to a certain number of decimal places, we're specifying its precision.
+                                </p>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> Rules for Decimal Places
+                                </h3>
+                                <ol>
+                                    <li>Count the digits after the decimal point</li>
+                                    <li>Identify the digit at the specified decimal place</li>
+                                    <li>Look at the next digit (the first non-included digit)</li>
+                                    <li>If it's 5 or more, round up the last decimal digit</li>
+                                    <li>If it's less than 5, keep the last decimal digit unchanged</li>
+                                    <li>Drop any remaining digits after the specified decimal places</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <h4>Examples:</h4>
+                                    <p>Express 3.14159 to 2 decimal places:</p>
+                                    <p>3.14159 → 3.14 (The next digit '1' is less than 5)</p>
+                                    
+                                    <p>Express 2.71828 to 3 decimal places:</p>
+                                    <p>2.71828 → 2.718 (The next digit '2' is less than 5)</p>
+                                    
+                                    <p>Express 9.80665 to 1 decimal place:</p>
+                                    <p>9.80665 → 9.8 (The next digit '0' is less than 5)</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Relationship Between Significant Figures and Decimal Places
+                                </h3>
+                                <p>While both concepts deal with precision, they serve different purposes:</p>
+                                <ul>
+                                    <li><strong>Significant figures</strong> count all meaningful digits in a number, regardless of decimal point position</li>
+                                    <li><strong>Decimal places</strong> count only digits after the decimal point</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <table class="example-table">
+                                        <tr>
+                                            <th>Number</th>
+                                            <th>3 Significant Figures</th>
+                                            <th>3 Decimal Places</th>
+                                        </tr>
+                                        <tr>
+                                            <td>12345.6789</td>
+                                            <td>12300</td>
+                                            <td>12345.679</td>
+                                        </tr>
+                                        <tr>
+                                            <td>0.0045678</td>
+                                            <td>0.00457</td>
+                                            <td>0.005</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Express 45,678 to 2 significant figures.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>45,678 → 46,000 (The '5' means we round up the '4' to '5')</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Express 0.007654 to 1 significant figure.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>0.007654 → 0.008 (The '6' means we round up the '7' to '8')</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Express 12.3456 to 3 decimal places.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>12.3456 → 12.346 (The '6' means we round up the '5' to '6')</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Express 987.654 to 1 decimal place.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>987.654 → 987.7 (The '5' means we round up the '6' to '7')</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Express 0.00045678 to 3 significant figures.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>0.00045678 → 0.000457 (The '7' means we round up the '6' to '7')</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

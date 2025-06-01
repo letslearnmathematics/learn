@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Solving Word Problems with Basic Operations | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn to solve word problems involving addition, subtraction, multiplication and division for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Solving Word Problems with Basic Operations | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to solve word problems involving addition, subtraction, multiplication and division">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/basic-operations-word-problems">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Solving Word Problems with Basic Operations</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Number & Operations</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Word Problems</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#problem-solving"><i class="fas fa-chevron-right"></i> Problem Solving Steps</a></li>
+                                <li><a href="#addition-subtraction"><i class="fas fa-chevron-right"></i> Addition & Subtraction</a></li>
+                                <li><a href="#multiplication-division"><i class="fas fa-chevron-right"></i> Multiplication & Division</a></li>
+                                <li><a href="#mixed-operations"><i class="fas fa-chevron-right"></i> Mixed Operations</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Word Problems</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Word problems</strong> are mathematical problems presented in the form of a story or real-life situation. 
+                                    To solve them, we need to identify the relevant information, determine which operations to use, 
+                                    and perform calculations to find the solution.
+                                </p>
+                                <p>
+                                    In this lesson, we'll focus on solving word problems that involve a combination of two or more 
+                                    basic operations: addition (+), subtraction (-), multiplication (×), and division (÷).
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example Problem:</strong></p>
+                                    <p>A trader sells oranges from two baskets, A and B. Basket A contained 85 oranges and she sold 48. 
+                                    She sold 59 oranges from basket B and was left with the same number of oranges as in Basket A. 
+                                    How many oranges were originally in Basket B?</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Problem Solving Steps Section -->
+                        <section id="problem-solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-list-ol"></i> Problem Solving Steps
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example1" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of problem solving steps with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> The 4-Step Approach
+                                </h3>
+                                <p>Follow these steps to solve any word problem:</p>
+                                <ol>
+                                    <li><strong>Understand</strong> the problem (read carefully, identify what's given and what's asked)</li>
+                                    <li><strong>Plan</strong> the solution (decide which operations to use and in what order)</li>
+                                    <li><strong>Solve</strong> (perform the calculations step by step)</li>
+                                    <li><strong>Check</strong> (verify if your answer makes sense in the context of the problem)</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question-circle"></i> Key Questions to Ask
+                                </h3>
+                                <p>When solving word problems, ask yourself:</p>
+                                <ul>
+                                    <li>What information is given?</li>
+                                    <li>What am I being asked to find?</li>
+                                    <li>Which operations will help me solve this?</li>
+                                    <li>In what order should I perform these operations?</li>
+                                    <li>Does my final answer make sense?</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Addition and Subtraction Section -->
+                        <section id="addition-subtraction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-plus-minus"></i> Addition & Subtraction Problems
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example2" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch examples of problems combining addition and subtraction.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-example"></i> Example 1
+                                </h3>
+                                <p><strong>Problem:</strong> A school has 785 students. 128 new students enrolled this term, while 95 students transferred to other schools. How many students are in the school now?</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Initial students: 785</p>
+                                    <p>Add new students: 785 + 128 = 913</p>
+                                    <p>Subtract transferred students: 913 - 95 = 818</p>
+                                    <p><strong>Final answer:</strong> The school now has 818 students.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-example"></i> Example 2
+                                </h3>
+                                <p><strong>Problem:</strong> In a bookstore, there were 450 books on Monday. During the week, 175 books were sold and 230 new books arrived. How many books are in the store at the end of the week?</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Initial books: 450</p>
+                                    <p>Subtract books sold: 450 - 175 = 275</p>
+                                    <p>Add new books: 275 + 230 = 505</p>
+                                    <p><strong>Final answer:</strong> There are 505 books in the store.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Multiplication and Division Section -->
+                        <section id="multiplication-division" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-times-divide"></i> Multiplication & Division Problems
+                            </h2>
+
+                            <!-- Lesson Video embed
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example3" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch examples of problems combining multiplication and division.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-example"></i> Example 1
+                                </h3>
+                                <p><strong>Problem:</strong> A factory produces 245 toys each day. The toys are packed into boxes of 15. How many complete boxes can be made each day, and how many toys will be left over?</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Total toys: 245</p>
+                                    <p>Toys per box: 15</p>
+                                    <p>Number of boxes: 245 ÷ 15 = 16 with remainder 5</p>
+                                    <p><strong>Final answer:</strong> 16 complete boxes with 5 toys left over.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-example"></i> Example 2
+                                </h3>
+                                <p><strong>Problem:</strong> A school has 24 classrooms. Each classroom has 35 students. If the school wants to divide all students equally among 8 buses for a field trip, how many students will be on each bus?</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Total students: 24 × 35 = 840</p>
+                                    <p>Number of buses: 8</p>
+                                    <p>Students per bus: 840 ÷ 8 = 105</p>
+                                    <p><strong>Final answer:</strong> Each bus will have 105 students.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Mixed Operations Section -->
+                        <section id="mixed-operations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-random"></i> Mixed Operations Problems
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example4" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch examples of problems combining all four operations.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-example"></i> Example 1 (From Indicator)
+                                </h3>
+                                <p><strong>Problem:</strong> A trader sells oranges from two baskets, A and B. Basket A contained 85 oranges and she sold 48. She sold 59 oranges from basket B and was left with the same number of oranges as in Basket A. How many oranges were originally in Basket B?</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Step 1: Find oranges left in Basket A</p>
+                                    <p>85 (initial) - 48 (sold) = 37 oranges remaining in A</p>
+                                    <p>Step 2: Basket B has same remaining amount after selling 59</p>
+                                    <p>Let x = original oranges in B</p>
+                                    <p>x - 59 = 37</p>
+                                    <p>x = 37 + 59</p>
+                                    <p>x = 96</p>
+                                    <p><strong>Final answer:</strong> Basket B originally had 96 oranges.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-example"></i> Example 2
+                                </h3>
+                                <p><strong>Problem:</strong> A farmer has 150 mangoes. He sells 45 mangoes on Monday and twice as many on Tuesday. He then divides the remaining mangoes equally among his 3 children. How many mangoes does each child get?</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Initial mangoes: 150</p>
+                                    <p>Sold on Monday: 45</p>
+                                    <p>Sold on Tuesday: 2 × 45 = 90</p>
+                                    <p>Total sold: 45 + 90 = 135</p>
+                                    <p>Remaining mangoes: 150 - 135 = 15</p>
+                                    <p>Mangoes per child: 15 ÷ 3 = 5</p>
+                                    <p><strong>Final answer:</strong> Each child gets 5 mangoes.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-example"></i> Example 3
+                                </h3>
+                                <p><strong>Problem:</strong> A school bought 15 packs of notebooks. Each pack contains 12 notebooks. They distributed 5 notebooks to each of 25 students. How many notebooks are left?</p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Total notebooks: 15 × 12 = 180</p>
+                                    <p>Notebooks distributed: 25 × 5 = 125</p>
+                                    <p>Notebooks remaining: 180 - 125 = 55</p>
+                                    <p><strong>Final answer:</strong> There are 55 notebooks left.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A shop had 350 bags of rice. They sold 125 bags on Monday and received a delivery of 80 more bags on Tuesday. How many bags are in the shop now?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Initial bags: 350</p>
+                                        <p>After Monday sale: 350 - 125 = 225</p>
+                                        <p>After Tuesday delivery: 225 + 80 = 305</p>
+                                        <p><strong>Answer:</strong> 305 bags</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A factory produces 48 toys every hour. How many toys will it produce in a 7-hour day, and if packed in boxes of 12, how many full boxes can be made?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Total toys: 48 × 7 = 336</p>
+                                        <p>Boxes: 336 ÷ 12 = 28</p>
+                                        <p><strong>Answer:</strong> 336 toys, 28 boxes</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>In a school, there are 18 classrooms with 35 students each. If the school wants to divide all students equally among 9 buses for a trip, how many students will be on each bus?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Total students: 18 × 35 = 630</p>
+                                        <p>Students per bus: 630 ÷ 9 = 70</p>
+                                        <p><strong>Answer:</strong> 70 students per bus</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A farmer harvested 560 oranges. He sold 120 oranges at the market and packed the rest into bags of 20 oranges each. How many full bags did he make?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>After sale: 560 - 120 = 440</p>
+                                        <p>Number of bags: 440 ÷ 20 = 22</p>
+                                        <p><strong>Answer:</strong> 22 full bags</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>A bookstore had 250 books. They sold 45 books on Monday, 38 on Tuesday, and received a shipment of 120 new books on Wednesday. How many books are in the store now?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Initial books: 250</p>
+                                        <p>After Monday: 250 - 45 = 205</p>
+                                        <p>After Tuesday: 205 - 38 = 167</p>
+                                        <p>After Wednesday: 167 + 120 = 287</p>
+                                        <p><strong>Answer:</strong> 287 books</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

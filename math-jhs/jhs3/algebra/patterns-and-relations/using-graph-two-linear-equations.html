@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Solving Linear Equations with Graphs | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn to solve systems of linear equations using graphical methods for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Solving Linear Equations with Graphs | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to solve systems of linear equations using graphical methods">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/algebra/solving-linear-equations-graphs">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Solving Linear Equations with Graphs</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Linear Equations</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#plotting"><i class="fas fa-chevron-right"></i> Plotting Linear Equations</a></li>
+                                <li><a href="#solving"><i class="fas fa-chevron-right"></i> Solving Simultaneous Equations</a></li>
+                                <li><a href="#types"><i class="fas fa-chevron-right"></i> Types of Solutions</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Real-World Applications</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Linear Equations</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Linear equations</strong> are equations of the first degree, meaning they involve only variables raised to the power of one. When we have two linear equations with the same variables, we can solve them simultaneously to find the values of the variables that satisfy both equations.
+                                </p>
+                                <p>
+                                    One powerful method for solving such systems is the <strong>graphical method</strong>, where we plot both equations on the same coordinate plane and find their point of intersection. This point represents the solution that satisfies both equations simultaneously.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Consider the system of equations:</p>
+                                    \[ 
+                                    \begin{cases}
+                                    y = 2x + 1 \\
+                                    y = -x + 4
+                                    \end{cases}
+                                    \]
+                                    <p>The solution is the point where these two lines intersect on the graph.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Concepts
+                                </h3>
+                                <ul>
+                                    <li>A <strong>linear equation</strong> in two variables forms a straight line when graphed</li>
+                                    <li>The <strong>solution</strong> to a system of two linear equations is the point where their graphs intersect</li>
+                                    <li>Graphical solutions provide a visual representation of the relationship between equations</li>
+                                    <li>This method works best when solutions are integer values that can be precisely plotted</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Plotting Linear Equations Section -->
+                        <section id="plotting" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line"></i> Plotting Linear Equations
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_PLOTTING" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on plotting linear equations with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> Steps for Plotting
+                                </h3>
+                                <p>To graph a linear equation, follow these steps:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>1. Rewrite in Slope-Intercept Form</h4>
+                                        <p>Ensure the equation is in the form \( y = mx + b \), where:</p>
+                                        <ul>
+                                            <li>\( m \) is the slope (steepness)</li>
+                                            <li>\( b \) is the y-intercept (where the line crosses the y-axis)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>2. Plot the Y-Intercept</h4>
+                                        <p>Start by marking point \( (0, b) \) on the y-axis.</p>
+                                        <div class="math-example">
+                                            <p>For \( y = 2x + 1 \):</p>
+                                            <p>Plot point \( (0, 1) \)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>3. Use the Slope to Find Another Point</h4>
+                                        <p>From the y-intercept, use the slope \( m = \frac{rise}{run} \) to find a second point.</p>
+                                        <div class="math-example">
+                                            <p>For \( y = 2x + 1 \) (slope = 2 = \(\frac{2}{1}\)):</p>
+                                            <p>From \( (0,1) \), move up 2 units and right 1 unit to \( (1,3) \)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>4. Draw the Line</h4>
+                                        <p>Connect the points with a straight line extending in both directions.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-triangle"></i> Important Notes
+                                </h3>
+                                <ul>
+                                    <li>For horizontal lines (e.g., \( y = 3 \)): slope \( m = 0 \)</li>
+                                    <li>For vertical lines (e.g., \( x = 2 \)): slope is undefined</li>
+                                    <li>When the equation isn't in slope-intercept form, solve for y first</li>
+                                    <li>Always plot at least two points to ensure accuracy</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Solving Simultaneous Equations Section -->
+                        <section id="solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Solving Simultaneous Equations
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_SOLVING" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this step-by-step guide to solving simultaneous equations graphically.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-search"></i> Finding the Solution
+                                </h3>
+                                <p>To solve a system of two linear equations graphically:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>1. Graph Both Equations</h4>
+                                        <p>Plot each equation on the same coordinate plane using the methods described earlier.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>2. Identify the Intersection Point</h4>
+                                        <p>The point where the two lines cross is the solution to the system.</p>
+                                        <div class="math-example">
+                                            <p>For:</p>
+                                            \[ 
+                                            \begin{cases}
+                                            y = 2x + 1 \\
+                                            y = -x + 4
+                                            \end{cases}
+                                            \]
+                                            <p>The lines intersect at \( (1, 3) \), so \( x = 1 \), \( y = 3 \) is the solution.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>3. Verify the Solution</h4>
+                                        <p>Substitute the solution back into both original equations to ensure it satisfies both.</p>
+                                        <div class="math-example">
+                                            <p>For \( (1, 3) \):</p>
+                                            <p>First equation: \( 3 = 2(1) + 1 \) → \( 3 = 3 \) ✓</p>
+                                            <p>Second equation: \( 3 = -1 + 4 \) → \( 3 = 3 \) ✓</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pencil-alt"></i> Worked Example
+                                </h3>
+                                <p>Solve the following system graphically:</p>
+                                \[ 
+                                \begin{cases}
+                                2x + y = 5 \\
+                                x - y = 1
+                                \end{cases}
+                                \]
+                                
+                                <div class="solution-steps">
+                                    <div class="step">
+                                        <h4>Step 1: Rewrite in Slope-Intercept Form</h4>
+                                        <p>First equation: \( y = -2x + 5 \)</p>
+                                        <p>Second equation: \( y = x - 1 \)</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>Step 2: Plot Both Equations</h4>
+                                        <p>For \( y = -2x + 5 \):</p>
+                                        <ul>
+                                            <li>Y-intercept: \( (0, 5) \)</li>
+                                            <li>Slope: -2 (down 2, right 1) → next point \( (1, 3) \)</li>
+                                        </ul>
+                                        
+                                        <p>For \( y = x - 1 \):</p>
+                                        <ul>
+                                            <li>Y-intercept: \( (0, -1) \)</li>
+                                            <li>Slope: 1 (up 1, right 1) → next point \( (1, 0) \)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>Step 3: Find Intersection</h4>
+                                        <p>The lines intersect at \( (2, 1) \), so the solution is \( x = 2 \), \( y = 1 \).</p>
+                                    </div>
+                                    
+                                    <div class="step">
+                                        <h4>Step 4: Verification</h4>
+                                        <p>First equation: \( 2(2) + 1 = 5 \) → \( 5 = 5 \) ✓</p>
+                                        <p>Second equation: \( 2 - 1 = 1 \) → \( 1 = 1 \) ✓</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Types of Solutions Section -->
+                        <section id="types" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-project-diagram"></i> Types of Solutions
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-random"></i> Possible Outcomes
+                                </h3>
+                                <p>When solving systems of linear equations graphically, there are three possible scenarios:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>1. One Solution (Independent System)</h4>
+                                        <p>The lines intersect at exactly one point, meaning there is one unique solution.</p>
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ 
+                                            \begin{cases}
+                                            y = 2x + 1 \\
+                                            y = -x + 4
+                                            \end{cases}
+                                            \]
+                                            <p>Solution: \( (1, 3) \)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>2. No Solution (Inconsistent System)</h4>
+                                        <p>The lines are parallel and never intersect, meaning there is no solution that satisfies both equations.</p>
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ 
+                                            \begin{cases}
+                                            y = 2x + 1 \\
+                                            y = 2x - 3
+                                            \end{cases}
+                                            \]
+                                            <p>Both have slope 2 but different y-intercepts → parallel lines</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>3. Infinite Solutions (Dependent System)</h4>
+                                        <p>The lines are identical (coincide), meaning all points on the line are solutions.</p>
+                                        <div class="math-example">
+                                            <p>Example:</p>
+                                            \[ 
+                                            \begin{cases}
+                                            y = 2x + 1 \\
+                                            2y = 4x + 2
+                                            \end{cases}
+                                            \]
+                                            <p>Second equation is just the first multiplied by 2 → same line</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Quick Identification
+                                </h3>
+                                <p>You can often determine the type of solution by examining the equations:</p>
+                                <ul>
+                                    <li><strong>One solution:</strong> Different slopes</li>
+                                    <li><strong>No solution:</strong> Same slope, different y-intercepts</li>
+                                    <li><strong>Infinite solutions:</strong> Same slope and same y-intercept (identical equations)</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-globe-africa"></i> Real-World Applications
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-briefcase"></i> Practical Uses
+                                </h3>
+                                <p>Solving systems of linear equations has many real-world applications:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>1. Business and Economics</h4>
+                                        <p>Finding the break-even point where cost equals revenue:</p>
+                                        <div class="math-example">
+                                            <p>Cost equation: \( C = 5x + 1000 \)</p>
+                                            <p>Revenue equation: \( R = 10x \)</p>
+                                            <p>Solution shows how many units \( x \) need to be sold to break even.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>2. Physics</h4>
+                                        <p>Determining when two moving objects will meet:</p>
+                                        <div class="math-example">
+                                            <p>Car A: \( d = 60t \) (60 km/h)</p>
+                                            <p>Car B: \( d = 40t + 50 \) (40 km/h with 50 km head start)</p>
+                                            <p>Solution shows time \( t \) when they meet.</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>3. Chemistry</h4>
+                                        <p>Finding the optimal mixture of two solutions to achieve desired concentration.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>4. Everyday Decisions</h4>
+                                        <p>Comparing two phone plans to determine which is better based on usage:</p>
+                                        <div class="math-example">
+                                            <p>Plan A: \( C = 20 + 0.10m \)</p>
+                                            <p>Plan B: \( C = 30 + 0.05m \)</p>
+                                            <p>Solution shows at what minutes \( m \) the costs are equal.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Solve the following system of equations graphically:</p>
+                                    \[ 
+                                    \begin{cases}
+                                    y = x + 2 \\
+                                    y = -2x + 5
+                                    \end{cases}
+                                    \]
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Step 1: Graph both equations on the same coordinate plane.</p>
+                                        <p>Step 2: The lines intersect at \( (1, 3) \).</p>
+                                        <p>Solution: \( x = 1 \), \( y = 3 \).</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve graphically:</p>
+                                    \[ 
+                                    \begin{cases}
+                                    2x + y = 4 \\
+                                    x - y = 2
+                                    \end{cases}
+                                    \]
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>First rewrite in slope-intercept form:</p>
+                                        <p>\( y = -2x + 4 \) and \( y = x - 2 \)</p>
+                                        <p>The lines intersect at \( (2, 0) \).</p>
+                                        <p>Solution: \( x = 2 \), \( y = 0 \).</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Determine whether the following system has one, none, or infinite solutions:</p>
+                                    \[ 
+                                    \begin{cases}
+                                    y = 3x - 2 \\
+                                    6x - 2y = 4
+                                    \end{cases}
+                                    \]
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Rewrite second equation: \( 2y = 6x - 4 \) → \( y = 3x - 2 \)</p>
+                                        <p>Both equations are identical → infinite solutions.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Two phone plans are available:</p>
+                                    <ul>
+                                        <li>Plan A: Gh₵20 monthly fee + Gh₵0.50 per minute</li>
+                                        <li>Plan B: Gh₵30 monthly fee + Gh₵0.20 per minute</li>
+                                    </ul>
+                                    <p>At what usage level do both plans cost the same?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Equations:</p>
+                                        <p>Plan A: \( C = 20 + 0.5m \)</p>
+                                        <p>Plan B: \( C = 30 + 0.2m \)</p>
+                                        <p>Solution: \( m = 33.\overline{3} \) minutes</p>
+                                        <p>At about 33 minutes 20 seconds, both plans cost Gh₵36.67.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Graphically solve:</p>
+                                    \[ 
+                                    \begin{cases}
+                                    x + y = 5 \\
+                                    2x - y = 1
+                                    \end{cases}
+                                    \]
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Rewrite as:</p>
+                                        <p>\( y = -x + 5 \) and \( y = 2x - 1 \)</p>
+                                        <p>Lines intersect at \( (2, 3) \).</p>
+                                        <p>Solution: \( x = 2 \), \( y = 3 \).</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

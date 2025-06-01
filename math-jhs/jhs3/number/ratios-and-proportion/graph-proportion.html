@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Proportional Relationships | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Proportional Relationships for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Proportional Relationships | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to Recognize and Graph Proportional Relationships, interpreting unit rate as slope">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/algebra/proportional-relationships">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Proportional Relationships</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Proportional Relationships</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#recognizing"><i class="fas fa-chevron-right"></i> Recognizing Proportional Relationships</a></li>
+                                <li><a href="#graphing"><i class="fas fa-chevron-right"></i> Graphing Proportional Relationships</a></li>
+                                <li><a href="#unit-rate"><i class="fas fa-chevron-right"></i> Unit Rate as Slope</a></li>
+                                <li><a href="#solving"><i class="fas fa-chevron-right"></i> Solving Problems</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Proportional Relationships</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A <strong>proportional relationship</strong> between two quantities is one in which the ratio of one quantity to the other is constant. This means that as one quantity changes, the other changes at a constant rate.
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to recognize proportional relationships, graph them, interpret the unit rate as the slope of the graph, and use these concepts to solve real-world problems.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Example of a proportional relationship:</p>
+                                    <p>If a car travels at a constant speed of 60 km/h, the distance it covers is proportional to the time traveled:</p>
+                                    \[ \text{Distance} = 60 \times \text{Time} \]
+                                    <p>This can be written as \( y = kx \), where \( k \) is the constant of proportionality.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Key Characteristics
+                                </h3>
+                                <p>Proportional relationships have these key features:</p>
+                                <ol>
+                                    <li>The graph passes through the origin (0,0)</li>
+                                    <li>The ratio \( \frac{y}{x} \) is constant for all points</li>
+                                    <li>The relationship can be represented by the equation \( y = kx \)</li>
+                                    <li>The graph is a straight line</li>
+                                </ol>
+                            </div>
+                        </section>
+                        
+                        <!-- Recognizing Proportional Relationships Section -->
+                        <section id="recognizing" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-check-circle"></i> Recognizing Proportional Relationships
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example1" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on recognizing proportional relationships with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> How to Recognize
+                                </h3>
+                                <p>There are several ways to determine if a relationship is proportional:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Table Method</h4>
+                                        <p>Check if all ratios \( \frac{y}{x} \) are equal:</p>
+                                        <table class="math-table">
+                                            <tr>
+                                                <th>Time (hours)</th>
+                                                <th>Distance (km)</th>
+                                                <th>Ratio (km/h)</th>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>60</td>
+                                                <td>60</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>120</td>
+                                                <td>60</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>180</td>
+                                                <td>60</td>
+                                            </tr>
+                                        </table>
+                                        <p>Since all ratios are equal (60 km/h), this is a proportional relationship.</p>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Graph Method</h4>
+                                        <p>A proportional relationship will:</p>
+                                        <ul>
+                                            <li>Be a straight line</li>
+                                            <li>Pass through the origin (0,0)</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Equation Method</h4>
+                                        <p>The equation will be of the form:</p>
+                                        \[ y = kx \]
+                                        <p>Where \( k \) is the constant of proportionality (unit rate).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Determine if the following table shows a proportional relationship:</p>
+                                    <table class="math-table">
+                                        <tr>
+                                            <th>Hours Worked</th>
+                                            <th>Pay (GHC)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>30</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>60</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>90</td>
+                                        </tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Calculate the ratios:</p>
+                                        <p>30/2 = 15</p>
+                                        <p>60/4 = 15</p>
+                                        <p>90/6 = 15</p>
+                                        <p>All ratios are equal (15 GHC/hour), so this is a proportional relationship.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Which of these equations represents a proportional relationship?</p>
+                                    <p>a) y = 3x + 2</p>
+                                    <p>b) y = 5x</p>
+                                    <p>c) y = x/4</p>
+                                    <p>d) y = 2x - 1</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Proportional relationships must be of the form y = kx (no added constant).</p>
+                                        <p>Correct answers are b) y = 5x and c) y = x/4.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Graphing Proportional Relationships Section -->
+                        <section id="graphing" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line"></i> Graphing Proportional Relationships
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example2" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on graphing proportional relationships with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Steps to Graph
+                                </h3>
+                                <p>To graph a proportional relationship:</p>
+                                <ol>
+                                    <li>Create a table of values (including (0,0))</li>
+                                    <li>Plot the points on a coordinate plane</li>
+                                    <li>Draw a straight line through the points</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example: Graph y = 2x</p>
+                                    <table class="math-table">
+                                        <tr>
+                                            <th>x</th>
+                                            <th>y</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>4</td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>6</td>
+                                        </tr>
+                                    </table>
+                                    <p>The graph will be a straight line passing through (0,0), (1,2), (2,4), etc.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-circle"></i> Important Notes
+                                </h3>
+                                <ul>
+                                    <li>The graph must pass through the origin (0,0)</li>
+                                    <li>The graph must be a straight line</li>
+                                    <li>The steeper the line, the greater the constant of proportionality</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Graph the proportional relationship y = 3x</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Create a table:</p>
+                                        <table class="math-table">
+                                            <tr>
+                                                <th>x</th>
+                                                <th>y</th>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>0</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>6</td>
+                                            </tr>
+                                        </table>
+                                        <p>Plot these points and draw a straight line through them.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Which of these graphs represents a proportional relationship?</p>
+                                    <p>a) A straight line passing through (0,0) and (1,4)</p>
+                                    <p>b) A straight line passing through (0,2) and (1,5)</p>
+                                    <p>c) A curve passing through (0,0) and (1,1)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Only a) represents a proportional relationship because:</p>
+                                        <ul>
+                                            <li>It's a straight line</li>
+                                            <li>It passes through the origin</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Unit Rate as Slope Section -->
+                        <section id="unit-rate" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-ruler"></i> Unit Rate as Slope
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example3" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on unit rate and slope with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Understanding the Connection
+                                </h3>
+                                <p>In a proportional relationship:</p>
+                                <ul>
+                                    <li>The <strong>unit rate</strong> is the constant of proportionality (k in y = kx)</li>
+                                    <li>The <strong>slope</strong> of the graph is the same as the unit rate</li>
+                                </ul>
+                                
+                                <div class="math-example">
+                                    <p>Example: If a car travels 300 km in 5 hours:</p>
+                                    <p>Unit rate = 300 km / 5 h = 60 km/h</p>
+                                    <p>The slope of the distance-time graph will be 60</p>
+                                    <p>The equation would be: distance = 60 × time</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Calculating Slope
+                                </h3>
+                                <p>To calculate the slope (unit rate) from a graph:</p>
+                                \[ \text{Slope} = \frac{\text{change in y}}{\text{change in x}} = \frac{\Delta y}{\Delta x} \]
+                                <p>Choose any two points on the line and calculate the ratio.</p>
+                                
+                                <div class="math-example">
+                                    <p>For points (1,3) and (2,6) on the line y = 3x:</p>
+                                    \[ \text{Slope} = \frac{6-3}{2-1} = \frac{3}{1} = 3 \]
+                                    <p>This matches the unit rate (coefficient of x in the equation).</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the unit rate and slope for the relationship represented by y = 4x</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>The unit rate is the coefficient of x, which is 4.</p>
+                                        <p>The slope of the graph will also be 4.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A graph passes through (0,0) and (3,9). What is the unit rate?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Calculate the slope:</p>
+                                        \[ \frac{9-0}{3-0} = \frac{9}{3} = 3 \]
+                                        <p>The unit rate is 3.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Solving Problems Section -->
+                        <section id="solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-tasks"></i> Solving Problems
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example4" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on solving problems with proportional relationships.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-question-circle"></i> Problem-Solving Strategies
+                                </h3>
+                                <p>To solve problems involving proportional relationships:</p>
+                                <ol>
+                                    <li>Identify the two quantities that are in proportion</li>
+                                    <li>Determine the constant of proportionality (unit rate)</li>
+                                    <li>Write the equation y = kx</li>
+                                    <li>Use the equation to solve for unknown values</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p>Example problem:</p>
+                                    <p>If 5 notebooks cost GHC 15, how much would 8 notebooks cost?</p>
+                                    <p>Solution:</p>
+                                    <p>1. Find unit price: 15 ÷ 5 = GHC 3 per notebook</p>
+                                    <p>2. Write equation: cost = 3 × number of notebooks</p>
+                                    <p>3. Calculate for 8 notebooks: cost = 3 × 8 = GHC 24</p>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-chart-pie"></i> Real-World Applications
+                                </h3>
+                                <p>Proportional relationships appear in many real-world situations:</p>
+                                <ul>
+                                    <li>Speed, distance, and time</li>
+                                    <li>Cost and quantity of items</li>
+                                    <li>Exchange rates between currencies</li>
+                                    <li>Scale drawings and maps</li>
+                                    <li>Simple interest calculations</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A car travels 240 km in 3 hours. Assuming constant speed, how far will it travel in 7 hours?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Find speed (unit rate): 240 km ÷ 3 h = 80 km/h</p>
+                                        <p>2. Write equation: distance = 80 × time</p>
+                                        <p>3. Calculate for 7 hours: distance = 80 × 7 = 560 km</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>The exchange rate is $1 = GHC 6. How many cedis would you get for $25?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>1. Unit rate is GHC 6 per $1</p>
+                                        <p>2. Equation: cedis = 6 × dollars</p>
+                                        <p>3. Calculate for $25: cedis = 6 × 25 = GHC 150</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

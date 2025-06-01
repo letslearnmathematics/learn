@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Simple and Compound Surds | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Simple and Compound Surds for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Simple and Compound Surds | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to Identify Simple and Compound Surds">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/surds/simple-compound-surds">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Simple and Compound Surds</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Surds</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Simple & Compound Surds</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#simple-surds"><i class="fas fa-chevron-right"></i> Simple Surds</a></li>
+                                <li><a href="#compound-surds"><i class="fas fa-chevron-right"></i> Compound Surds </a></li>
+                                <li><a href="#identifying"><i class="fas fa-chevron-right"></i> Identifying Surds </a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Surds</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Surds</strong> are irrational numbers that cannot be simplified to remove a square root (or cube root etc). 
+                                    They are numbers left in root form (√) to express their exact value.
+                                </p>
+                                <p>
+                                    Surds are commonly used when it's necessary to work with exact values rather than decimal approximations. 
+                                    They appear frequently in geometry, algebra, and trigonometry.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Examples of surds:</p>
+                                    \[ \sqrt{2}, \sqrt{3}, \sqrt{5}, \sqrt[3]{7}, \sqrt{10} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Not Surds:</h4>
+                                        <p>These are not surds because they can be simplified to rational numbers:</p>
+                                        \[ \sqrt{4} = 2, \sqrt{9} = 3, \sqrt[3]{8} = 2 \]
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Irrational Nature:</h4>
+                                        <p>Surds are irrational numbers - they cannot be expressed as exact fractions and their decimal representations never terminate or repeat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Simple Surds Section -->
+                        <section id="simple-surds" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Simple Surds
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on simple surds with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Definition
+                                </h3>
+                                <p>
+                                    A <strong>simple surd</strong> is a single surd term that cannot be broken down into simpler surd terms. 
+                                    It consists of a single irrational root expression.
+                                </p>      
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Characteristics
+                                </h3>
+                                <p>
+                                    Simple surds have the following characteristics:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Single Term</h4>
+                                        <p>Contains only one surd term</p>
+                                        \[ \sqrt{2}, \sqrt[3]{5}, \sqrt{7} \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>No Addition/Subtraction</h4>
+                                        <p>
+                                            Does not involve addition or subtraction with other terms
+                                        </p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Cannot be Simplified</h4>
+                                        <p>
+                                            Cannot be simplified to remove the root or broken into simpler surds
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Examples
+                                </h3>
+                                
+                                <div class="special-set-cards">
+                                    <div class="set-card">
+                                        <h4>Square Roots</h4>
+                                        <p>Examples of simple surds with square roots:</p>
+                                        \[ \sqrt{2}, \sqrt{3}, \sqrt{5}, \sqrt{7}, \sqrt{11} \]
+                                    </div>
+                                    
+                                    <div class="set-card">
+                                        <h4>Higher Roots</h4>
+                                        <p>Examples with cube and higher roots:</p>
+                                        \[ \sqrt[3]{2}, \sqrt[4]{3}, \sqrt[5]{7} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Which of the following are simple surds?</p>
+                                    <p>a) √4</p>
+                                    <p>b) √5</p>
+                                    <p>c) 2 + √3</p>
+                                    <p>d) √7</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Only b) √5 and d) √7 are simple surds.</p>
+                                        <p>a) √4 = 2 (rational number)</p>
+                                        <p>c) 2 + √3 is a compound surd (has addition)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Identify the simple surds from the list:</p>
+                                    <p>a) √9</p>
+                                    <p>b) √13</p>
+                                    <p>c) 1 - √2</p>
+                                    <p>d) ∛5</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>b) √13 and d) ∛5 are simple surds.</p>
+                                        <p>a) √9 = 3 (rational number)</p>
+                                        <p>c) 1 - √2 is a compound surd (has subtraction)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Explain why √8 is not a simple surd.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>√8 can be simplified to 2√2, so it's not in its simplest surd form. A simple surd cannot be simplified further.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Compound Surds Section -->
+                        <section id="compound-surds" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Compound Surds
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on compound surds with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Definition
+                                </h3>
+                                <p>
+                                    A <strong>compound surd</strong> is an expression that contains two or more surd terms combined through addition or subtraction. 
+                                    It can also involve a combination of rational numbers and surds.
+                                </p>      
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Characteristics
+                                </h3>
+                                <p>
+                                    Compound surds have the following characteristics:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Multiple Terms</h4>
+                                        <p>Contains two or more terms with surds</p>
+                                        \[ \sqrt{2} + \sqrt{3}, 5 - \sqrt{7} \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>Addition/Subtraction</h4>
+                                        <p>
+                                            Involves addition or subtraction operations between terms
+                                        </p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Can be Simplified</h4>
+                                        <p>
+                                            Some compound surds can be simplified using algebraic identities
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Examples
+                                </h3>
+                                
+                                <div class="special-set-cards">
+                                    <div class="set-card">
+                                        <h4>Two Surd Terms</h4>
+                                        <p>Examples with two surd terms:</p>
+                                        \[ \sqrt{2} + \sqrt{3} \]
+                                        \[ \sqrt{5} - \sqrt{7} \]
+                                    </div>
+                                    
+                                    <div class="set-card">
+                                        <h4>Rational + Surd</h4>
+                                        <p>Examples with rational numbers and surds:</p>
+                                        \[ 3 + \sqrt{2} \]
+                                        \[ 5 - \sqrt[3]{7} \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Which of the following are compound surds?</p>
+                                    <p>a) √3 + √5</p>
+                                    <p>b) 2√7</p>
+                                    <p>c) 1 - √2</p>
+                                    <p>d) √11</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>a) √3 + √5 and c) 1 - √2 are compound surds.</p>
+                                        <p>b) 2√7 is a simple surd (single term)</p>
+                                        <p>d) √11 is a simple surd (single term)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Identify the compound surds from the list:</p>
+                                    <p>a) √2 + √3 + √5</p>
+                                    <p>b) 3√2</p>
+                                    <p>c) 4 - ∛3</p>
+                                    <p>d) √17</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>a) √2 + √3 + √5 and c) 4 - ∛3 are compound surds.</p>
+                                        <p>b) 3√2 is a simple surd (single term)</p>
+                                        <p>d) √17 is a simple surd (single term)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Explain why (√8 + √2) is a compound surd but can be simplified to a simple surd.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>√8 + √2 = 2√2 + √2 = 3√2</p>
+                                        <p>While it appears as a compound surd initially, it simplifies to a simple surd. This is a special case.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Identifying Surds Section -->
+                        <section id="identifying" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Identifying Surds
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Key Differences
+                                </h3>
+                                <p>
+                                    The main differences between simple and compound surds:
+                                </p>
+                                <table class="concept-table">
+                                    <tr>
+                                        <th>Feature</th>
+                                        <th>Simple Surd</th>
+                                        <th>Compound Surd</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Number of Terms</td>
+                                        <td>Single term</td>
+                                        <td>Two or more terms</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Operations</td>
+                                        <td>No addition/subtraction</td>
+                                        <td>Contains addition/subtraction</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Examples</td>
+                                        <td>√2, √3, ∛5</td>
+                                        <td>√2 + √3, 5 - √7</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-check-circle"></i>
+                                        <h3>Identification Steps</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol class="step-list">
+                                            <li>Look for root (√) symbols in the expression</li>
+                                            <li>Check if the expression under the root is not a perfect square/cube</li>
+                                            <li>Count the number of terms with roots</li>
+                                            <li>Check for addition/subtraction between terms</li>
+                                            <li>Single term = simple surd, multiple terms = compound surd</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                        <h3>Common Mistakes</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ul class="error-list">
+                                            <li>Confusing √4 (rational) with √5 (surd)</li>
+                                            <li>Thinking 2√3 is compound (it's simple)</li>
+                                            <li>Forgetting that multiplication creates simple surds (√2 × √3 = √6)</li>
+                                            <li>Overlooking that some compound surds can simplify to simple surds</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Classify each expression as simple surd, compound surd, or not a surd:</p>
+                                    <p>a) √6</p>
+                                    <p>b) √9</p>
+                                    <p>c) √2 + √5</p>
+                                    <p>d) 3√7</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>a) √6 - simple surd</p>
+                                        <p>b) √9 = 3 - not a surd</p>
+                                        <p>c) √2 + √5 - compound surd</p>
+                                        <p>d) 3√7 - simple surd</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Which of these are compound surds that can be simplified to simple surds?</p>
+                                    <p>a) √12 + √3</p>
+                                    <p>b) √8 + √18</p>
+                                    <p>c) √2 + √3</p>
+                                    <p>d) √50 - √2</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>a) √12 + √3 = 2√3 + √3 = 3√3 (simplifies)</p>
+                                        <p>b) √8 + √18 = 2√2 + 3√2 = 5√2 (simplifies)</p>
+                                        <p>c) √2 + √3 (cannot simplify further)</p>
+                                        <p>d) √50 - √2 = 5√2 - √2 = 4√2 (simplifies)</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Create two examples each of:</p>
+                                    <p>a) Simple surds</p>
+                                    <p>b) Compound surds that remain compound</p>
+                                    <p>c) Compound surds that simplify to simple surds</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Possible answers:</p>
+                                        <p>a) √5, ∛7</p>
+                                        <p>b) √2 + √3, 5 - √7</p>
+                                        <p>c) √18 + √2 = 3√2 + √2 = 4√2</p>
+                                        <p>√27 - √3 = 3√3 - √3 = 2√3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
