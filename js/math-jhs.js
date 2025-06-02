@@ -541,10 +541,10 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         "jhs3": {
             "Number & Numeration System": [
-                { name: "Significant Figures and Decimal Places", url: "./math-jhs/jhs3/number/number-and-numeration-system/significant-decimal-places" },
-                { name: "Place Value (Word Problems)", url: "./math-jhs/jhs3/number/number-and-numeration-system/place-value-word-problems" },
-                { name: "Union & Intersection of Sets (Venn Diagram)", url: "./math-jhs/jhs3/number/number-and-numeration-system/union-intersection-sets" },
-                { name: "Two Set Problems", url: "./math-jhs/jhs3/number/number-and-numeration-system/two-set-problems" }
+                { name: "Significant Figures and Decimal Places", url: "./math-jhs/jhs3/number/number-and-numeration-system/significant-decimal-places.html" },
+                { name: "Place Value (Word Problems)", url: "./math-jhs/jhs3/number/number-and-numeration-system/place-value-word-problems.html" },
+                { name: "Union & Intersection of Sets (Venn Diagram)", url: "./math-jhs/jhs3/number/number-and-numeration-system/union-intersection-sets.html" },
+                { name: "Two Set Problems", url: "./math-jhs/jhs3/number/number-and-numeration-system/two-set-problems.html" }
             ],
             "Number Operations": [
                 { name: "Multiply & Divide By Powers of 10", url: "./math-jhs/jhs3/number/number-operations/multiply-and-divide-by-powers-of-10" },
