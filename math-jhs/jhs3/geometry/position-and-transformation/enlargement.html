@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Vector Addition Laws | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Triangular and Parallelogram Laws of Vector Addition for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Vector Addition Laws | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to Apply Triangular and Parallelogram Laws of Vector Addition">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/vectors/vector-addition-laws">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Triangular and Parallelogram Laws of Vector Addition</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Vectors</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Vector Addition Laws</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#triangle-law"><i class="fas fa-chevron-right"></i> Triangle Law</a></li>
+                                <li><a href="#parallelogram-law"><i class="fas fa-chevron-right"></i> Parallelogram Law</a></li>
+                                <li><a href="#comparison"><i class="fas fa-chevron-right"></i> Comparison</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Vector Addition</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Vector addition</strong> is the process of combining two or more vectors to produce a resultant vector. 
+                                    Unlike scalar quantities that can be added arithmetically, vectors require consideration of both magnitude and direction.
+                                </p>
+                                <p>
+                                    There are two fundamental laws for adding vectors geometrically: the <strong>Triangle Law</strong> and the <strong>Parallelogram Law</strong>. 
+                                    Both methods produce the same resultant vector but use different geometric constructions.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Vector Properties:</h4>
+                                        <ul>
+                                            <li>Have both magnitude (size) and direction</li>
+                                            <li>Represented by arrows (length = magnitude, direction = arrow direction)</li>
+                                            <li>Examples: displacement, velocity, force</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Resultant Vector:</h4>
+                                        <p>The single vector that has the same effect as the original vectors combined.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Triangle Law Section -->
+                        <section id="triangle-law" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Triangle Law of Vector Addition
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/placeholder" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of the Triangle Law with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-puzzle-piece"></i> Deduction of the Triangle Law
+                                </h3>
+                                <p>
+                                    The Triangle Law states that if two vectors are represented as two sides of a triangle taken in order, 
+                                    then the resultant vector is represented by the third side of the triangle taken in the opposite order.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Given vectors <strong>a</strong> and <strong>b</strong>:</p>
+                                    <ol>
+                                        <li>Draw vector <strong>a</strong></li>
+                                        <li>From the head of <strong>a</strong>, draw vector <strong>b</strong></li>
+                                        <li>The resultant <strong>R</strong> = <strong>a</strong> + <strong>b</strong> is the vector from the tail of <strong>a</strong> to the head of <strong>b</strong></li>
+                                    </ol>
+                                    \[ \vec{R} = \vec{a} + \vec{b} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Features:</h4>
+                                        <ul>
+                                            <li>Vectors must be placed head-to-tail</li>
+                                            <li>The order of addition doesn't matter (commutative)</li>
+                                            <li>Works for any number of vectors (polygon law)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Using the Triangle Law, find the resultant of two vectors: 5 units east and 3 units north.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>The resultant vector would be the hypotenuse of a right-angled triangle with sides 5 and 3.</p>
+                                            <p>Magnitude: \( R = \sqrt{5^2 + 3^2} = \sqrt{25 + 9} = \sqrt{34} \approx 5.83 \) units</p>
+                                            <p>Direction: \( \theta = \tan^{-1}(3/5) \approx 30.96^\circ \) north of east</p>
+                                        </div>
+                                    </div>
+                                    <div class="problem-card">
+                                        <h3>Question 2</h3>
+                                        <p>Vector A is 8 units at 30° north of east. Vector B is 6 units west. Find the resultant using the Triangle Law.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>First resolve Vector A into components:</p>
+                                            <p>\( A_x = 8\cos(30°) \approx 6.93 \) units east</p>
+                                            <p>\( A_y = 8\sin(30°) = 4 \) units north</p>
+                                            <p>Vector B is purely west: \( B_x = -6 \) units, \( B_y = 0 \)</p>
+                                            <p>Resultant components: \( R_x = 6.93 - 6 = 0.93 \) units east</p>
+                                            <p>\( R_y = 4 + 0 = 4 \) units north</p>
+                                            <p>Magnitude: \( R = \sqrt{0.93^2 + 4^2} \approx 4.11 \) units</p>
+                                            <p>Direction: \( \theta = \tan^{-1}(4/0.93) \approx 77^\circ \) north of east</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+
+                        <!-- Parallelogram Law Section -->
+                        <section id="parallelogram-law" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Parallelogram Law of Vector Addition
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/placeholder" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this investigation of the Parallelogram Law with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-search"></i> Investigation of the Parallelogram Law
+                                </h3>
+                                <p>
+                                    The Parallelogram Law states that if two vectors are represented as two adjacent sides of a parallelogram, 
+                                    then the resultant vector is represented by the diagonal of the parallelogram starting from the same point.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Given vectors <strong>a</strong> and <strong>b</strong>:</p>
+                                    <ol>
+                                        <li>Draw both vectors from the same origin point</li>
+                                        <li>Complete the parallelogram by drawing equal and parallel sides</li>
+                                        <li>The resultant <strong>R</strong> is the diagonal from the origin</li>
+                                    </ol>
+                                    \[ \vec{R} = \vec{a} + \vec{b} \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Features:</h4>
+                                        <ul>
+                                            <li>Vectors must originate from the same point</li>
+                                            <li>Works best for two vectors at a time</li>
+                                            <li>Particularly useful when vectors have different angles</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Using the Parallelogram Law, find the resultant of two forces: 40 N at 30° and 60 N at 120° from the x-axis.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>First resolve both vectors into components:</p>
+                                            <p>Vector A (40 N at 30°):</p>
+                                            <p>\( A_x = 40\cos(30°) \approx 34.64 \) N</p>
+                                            <p>\( A_y = 40\sin(30°) = 20 \) N</p>
+                                            <p>Vector B (60 N at 120°):</p>
+                                            <p>\( B_x = 60\cos(120°) = -30 \) N</p>
+                                            <p>\( B_y = 60\sin(120°) \approx 51.96 \) N</p>
+                                            <p>Resultant components:</p>
+                                            <p>\( R_x = 34.64 - 30 = 4.64 \) N</p>
+                                            <p>\( R_y = 20 + 51.96 = 71.96 \) N</p>
+                                            <p>Magnitude: \( R = \sqrt{4.64^2 + 71.96^2} \approx 72.11 \) N</p>
+                                            <p>Direction: \( \theta = \tan^{-1}(71.96/4.64) \approx 86.31^\circ \) from x-axis</p>
+                                        </div>
+                                    </div>
+                                    <div class="problem-card">
+                                        <h3>Question 2</h3>
+                                        <p>Two velocity vectors are 20 m/s east and 15 m/s north. Find the resultant using the Parallelogram Law.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Using the Parallelogram Law:</p>
+                                            <p>The resultant is the diagonal of the parallelogram formed by the two vectors.</p>
+                                            <p>Magnitude: \( R = \sqrt{20^2 + 15^2} = \sqrt{400 + 225} = \sqrt{625} = 25 \) m/s</p>
+                                            <p>Direction: \( \theta = \tan^{-1}(15/20) = \tan^{-1}(0.75) \approx 36.87^\circ \) north of east</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+
+                        <!-- Comparison Section -->
+                        <section id="comparison" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-balance-scale"></i> Comparison of Both Laws
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-triangle"></i>
+                                            <h3>Triangle Law</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ul>
+                                                <li>Vectors added head-to-tail</li>
+                                                <li>More intuitive for sequential addition</li>
+                                                <li>Easily extends to multiple vectors (polygon law)</li>
+                                                <li>Better for path-dependent problems</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-vector-square"></i>
+                                            <h3>Parallelogram Law</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ul>
+                                                <li>Vectors originate from same point</li>
+                                                <li>Better visualization of concurrent forces</li>
+                                                <li>Naturally shows symmetry in vector addition</li>
+                                                <li>More suitable for equilibrium problems</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Important Note:</h4>
+                                        <p>Both methods will give exactly the same resultant vector - they are just different geometric approaches to the same mathematical operation.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Section -->
+                            <section class="practice-section">
+                                <div class="practice-header">
+                                    <i class="fas fa-pen-fancy"></i>
+                                    <h2>Practice Exercise</h2>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Solve the same problem using both laws to verify they give the same result: vectors 6 units east and 8 units northeast.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p><strong>Triangle Law Solution:</strong></p>
+                                            <p>1. Draw 6 units east</p>
+                                            <p>2. From head, draw 8 units at 45° (northeast)</p>
+                                            <p>Components of second vector: \( 8\cos(45°) \approx 5.66 \) east, \( 8\sin(45°) \approx 5.66 \) north</p>
+                                            <p>Total east: \( 6 + 5.66 = 11.66 \)</p>
+                                            <p>Total north: \( 5.66 \)</p>
+                                            <p>Resultant: \( \sqrt{11.66^2 + 5.66^2} \approx 12.96 \) units</p>
+                                            <p>Direction: \( \tan^{-1}(5.66/11.66) \approx 25.9^\circ \) north of east</p>
+                                            
+                                            <p><strong>Parallelogram Law Solution:</strong></p>
+                                            <p>1. Draw both vectors from origin</p>
+                                            <p>2. Complete parallelogram</p>
+                                            <p>3. Diagonal will have same components and resultant as above</p>
+                                            <p>Both methods give identical results</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your vector addition skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

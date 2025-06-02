@@ -597,7 +597,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Surface Area of Triangular Prisms", url: "./math-jhs/jhs3/geometry/measurement/surface-area-triangular-prisms" },
                 { name: "Expressing Points as Position Vectors", url: "./math-jhs/jhs3/geometry/measurement/points-as-position-vectors" },
                 { name: "Parallel Vectors & Perpendicular Vectors", url: "./math-jhs/jhs3/geometry/measurement/parallel-perpendicular-vectors" },
-                { name: "Resolution of Vectors", url: "./math-jhs/jhs3/geometry/measurement/resolution-of-vectors.html" }
+                { name: "Resolution of Vectors", url: "./math-jhs/jhs3/geometry/measurement/resolution-of-vectors" }
             ],
             "Position and Transformation": [
                 { name: "Enlargement", url: "./math-jhs/jhs3/geometry/position-and-transformation/enlargement.html" },
