@@ -600,12 +600,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Resolution of Vectors", url: "./math-jhs/jhs3/geometry/measurement/resolution-of-vectors" }
             ],
             "Position and Transformation": [
-                { name: "Enlargement", url: "./math-jhs/jhs3/geometry/position-and-transformation/enlargement.html" },
-                { name: "Enlargement & Identifying Real Life Situations", url: "./math-jhs/jhs3/geometry/position-and-transformation/enlargement-real-life.html" },
-                { name: "Congruent & Similar Shapes", url: "./math-jhs/jhs3/geometry/position-and-transformation/congruent-similar-shapes.html" }
+                { name: "Enlargement", url: "./math-jhs/jhs3/geometry/position-and-transformation/enlargement" },
+                { name: "Enlargement & Identifying Real Life Situations", url: "./math-jhs/jhs3/geometry/position-and-transformation/enlargement-real-life" },
+                { name: "Congruent & Similar Shapes", url: "./math-jhs/jhs3/geometry/position-and-transformation/congruent-similar-shapes" }
             ],
             "Data": [
-                { name: "Methods of Collecting Data", url: "./math-jhs/jhs3/handling-data/data/methods-of-collecting-data.html" },
+                { name: "Methods of Collecting Data", url: "./math-jhs/jhs3/handling-data/data/methods-of-collecting-data" },
                 { name: "Organising Data", url: "./math-jhs/jhs3/handling-data/data/organising-data.html" },
                 { name: "Histogram", url: "./math-jhs/jhs3/handling-data/data/histogram.html" },
                 { name: "Data & Bias", url: "./math-jhs/jhs3/handling-data/data/data-and-bias.html" },
