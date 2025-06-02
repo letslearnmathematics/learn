@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link rel="stylesheet" href="./css/contactus.css">
         <link rel="stylesheet" href="./css/about.css">
+        <link rel="stylesheet" href="./css/bece-tests-general.css">
         
         <title>About Us | The Let's Learn Project</title>
     
@@ -162,6 +163,7 @@
 
         
         <!-- Footer -->
+        <!-- Footer -->
         <footer class="footer">
             <div class="container">
                 <div class="footer-content">
@@ -202,7 +204,11 @@
                         <div class="footer-column">
                             <h4>Resources</h4>
                             <ul>
-                                <li><a href="./q-and-a">Past Questions</a></li>
+                                <li>
+                                    <a href="./math-jhs/passco" data-passco-modal>
+                                        Past Questions
+                                    </a>
+                                </li>
                                 <!--<li><a href="./tutorials">Video Tutorials</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi">Video Tutorials</a></li>
                                 <!--<li><a href="./ebooks">E-books</a></li>
@@ -224,5 +230,22 @@
 
         <script src="./js/script.js"></script>
         <script src="./js/contactus.js"></script>
+
+        <script>
+        // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
     </body>
 </html>
