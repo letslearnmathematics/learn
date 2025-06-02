@@ -541,10 +541,10 @@ document.addEventListener("DOMContentLoaded", function() {
         },
         "jhs3": {
             "Number & Numeration System": [
-                { name: "Significant Figures and Decimal Places", url: "./math-jhs/jhs3/number/number-and-numeration-system/significant-decimal-places.html" },
-                { name: "Place Value (Word Problems)", url: "./math-jhs/jhs3/number/number-and-numeration-system/place-value-word-problems.html" },
-                { name: "Union & Intersection of Sets (Venn Diagram)", url: "./math-jhs/jhs3/number/number-and-numeration-system/union-intersection-sets.html" },
-                { name: "Two Set Problems", url: "./math-jhs/jhs3/number/number-and-numeration-system/two-set-problems.html" }
+                { name: "Significant Figures and Decimal Places", url: "./math-jhs/jhs3/number/number-and-numeration-system/significant-decimal-places" },
+                { name: "Place Value (Word Problems)", url: "./math-jhs/jhs3/number/number-and-numeration-system/place-value-word-problems" },
+                { name: "Union & Intersection of Sets (Venn Diagram)", url: "./math-jhs/jhs3/number/number-and-numeration-system/union-intersection-sets" },
+                { name: "Two Set Problems", url: "./math-jhs/jhs3/number/number-and-numeration-system/two-set-problems" }
             ],
             "Number Operations": [
                 { name: "Multiply & Divide By Powers of 10", url: "./math-jhs/jhs3/number/number-operations/multiply-and-divide-by-powers-of-10" },
@@ -575,10 +575,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Using Graphs to Solve Two Linear Equations", url: "./math-jhs/jhs3/algebra/patterns-and-relations/using-graph-two-linear-equations" }
             ],
             "Algebraic Expressions": [
-                { name: "Change of Subject", url: "./math-jhs/jhs3/algebra/algebraic-expressions/change-of-subject.html" },
-                { name: "Substitution Of Values", url: "./math-jhs/jhs3/algebra/algebraic-expressions/substitution-of-values.html" },
-                { name: "Factorisation", url: "./math-jhs/jhs3/algebra/algebraic-expressions/factorisation.html" },
-                { name: "Word Problems on Factorisation", url: "./math-jhs/jhs3/algebra/algebraic-expressions/word-problems-factorisation.html" }
+                { name: "Change of Subject", url: "./math-jhs/jhs3/algebra/algebraic-expressions/change-of-subject" },
+                { name: "Substitution Of Values", url: "./math-jhs/jhs3/algebra/algebraic-expressions/substitution-of-values" },
+                { name: "Factorisation", url: "./math-jhs/jhs3/algebra/algebraic-expressions/factorisation" },
+                { name: "Word Problems on Factorisation", url: "./math-jhs/jhs3/algebra/algebraic-expressions/word-problems-factorisation" }
             ],
             "Variables and Equations": [
                 { name: "Single Variable Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/single-variable-linear-inequalities.html" },
