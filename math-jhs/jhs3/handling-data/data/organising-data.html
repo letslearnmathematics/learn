@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Organizing Data | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on organizing and presenting data for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Organizing Data | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to organize and present data in frequency tables, graphs, and other visual representations">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/data-handling/organizing-data">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Organizing and Presenting Data</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Data Handling</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Organizing Data</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#frequency-tables"><i class="fas fa-chevron-right"></i> Frequency Tables</a></li>
+                                <li><a href="#bar-graphs"><i class="fas fa-chevron-right"></i> Bar Graphs</a></li>
+                                <li><a href="#pie-charts"><i class="fas fa-chevron-right"></i> Pie Charts</a></li>
+                                <li><a href="#line-graphs"><i class="fas fa-chevron-right"></i> Line Graphs</a></li>
+                                <li><a href="#advanced-representations"><i class="fas fa-chevron-right"></i> Advanced Representations</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Data Handling</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Data organization</strong> is the process of arranging collected data in a meaningful way to make it easier to understand, analyze, and interpret. Proper data organization helps us identify patterns, trends, and relationships in the data.
+                                </p>
+                                <p>
+                                    Data can be either <strong>grouped</strong> (organized into categories or intervals) or <strong>ungrouped</strong> (raw data without any organization). We will learn various methods to present data visually and analyze it to solve problems.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Frequency Tables Section -->
+                        <section id="frequency-tables" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-table"></i> Frequency Tables
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on frequency tables with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Creating Frequency Tables
+                                </h3>
+                                <p>
+                                    A frequency table shows how often each value or category appears in a dataset. It consists of:
+                                </p>
+                                <ul>
+                                    <li>Data values or class intervals</li>
+                                    <li>Tally marks for counting</li>
+                                    <li>Frequency count</li>
+                                </ul>
+                                <img src="../../../../images/frequency-table-example.png" alt="Example of a frequency table" class="place">
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Steps to Create</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>List all possible values or create class intervals</li>
+                                            <li>Use tally marks to count occurrences</li>
+                                            <li>Sum the tally marks for each category</li>
+                                            <li>Present in a clear table format</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Example</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Test scores of 20 students:</p>
+                                        <div class="math-example">
+                                            <p>\[ 65, 72, 68, 85, 90, 72, 65, 78, 85, 65, 72, 90, 85, 78, 65, 72, 85, 90, 78, 85 \]</p>
+                                            <table>
+                                                <tr>
+                                                    <th>Score</th>
+                                                    <th>Tally</th>
+                                                    <th>Frequency</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>65</td>
+                                                    <td>||||</td>
+                                                    <td>4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>68</td>
+                                                    <td>|</td>
+                                                    <td>1</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>72</td>
+                                                    <td>||||</td>
+                                                    <td>4</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>78</td>
+                                                    <td>|||</td>
+                                                    <td>3</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>85</td>
+                                                    <td>|||| |</td>
+                                                    <td>6</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>90</td>
+                                                    <td>||</td>
+                                                    <td>2</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Create a frequency table for the following data representing the number of pets owned by 15 families: 0, 1, 3, 2, 1, 0, 2, 1, 4, 1, 2, 3, 1, 0, 2</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <table>
+                                            <tr>
+                                                <th>Number of Pets</th>
+                                                <th>Tally</th>
+                                                <th>Frequency</th>
+                                            </tr>
+                                            <tr>
+                                                <td>0</td>
+                                                <td>|||</td>
+                                                <td>3</td>
+                                            </tr>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>||||</td>
+                                                <td>5</td>
+                                            </tr>
+                                            <tr>
+                                                <td>2</td>
+                                                <td>||||</td>
+                                                <td>4</td>
+                                            </tr>
+                                            <tr>
+                                                <td>3</td>
+                                                <td>||</td>
+                                                <td>2</td>
+                                            </tr>
+                                            <tr>
+                                                <td>4</td>
+                                                <td>|</td>
+                                                <td>1</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>The ages of 20 students are: 12, 13, 12, 14, 13, 12, 15, 13, 14, 12, 15, 16, 12, 13, 14, 15, 13, 14, 15, 16. Create a grouped frequency table using class intervals 12-13, 14-15, 16-17.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <table>
+                                            <tr>
+                                                <th>Age Group</th>
+                                                <th>Tally</th>
+                                                <th>Frequency</th>
+                                            </tr>
+                                            <tr>
+                                                <td>12-13</td>
+                                                <td>|||| ||||</td>
+                                                <td>9</td>
+                                            </tr>
+                                            <tr>
+                                                <td>14-15</td>
+                                                <td>|||| |||</td>
+                                                <td>8</td>
+                                            </tr>
+                                            <tr>
+                                                <td>16-17</td>
+                                                <td>|||</td>
+                                                <td>3</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Bar Graphs Section -->
+                        <section id="bar-graphs" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-bar"></i> Bar Graphs
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on bar graphs with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Understanding Bar Graphs
+                                </h3>
+                                <p>
+                                    Bar graphs use rectangular bars to represent categorical data. The length of each bar corresponds to the value it represents.
+                                </p>
+                                <img src="../../../../images/bar-graph-example.png" alt="Example of a bar graph" class="place">
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Components</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ul>
+                                            <li><strong>Title:</strong> Describes what the graph represents</li>
+                                            <li><strong>X-axis:</strong> Shows categories being compared</li>
+                                            <li><strong>Y-axis:</strong> Shows the scale of measurement</li>
+                                            <li><strong>Bars:</strong> Represent the quantities</li>
+                                            <li><strong>Legend:</strong> Explains colors/patterns if needed</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Example</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Favorite fruits of a class:</p>
+                                        <img src="../../../../images/fruit-bar-graph.png" alt="Bar graph of favorite fruits" class="place">
+                                        <p>This graph clearly shows that apples are the most popular fruit in this class.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>The table shows the number of books read by students in a month. Draw a bar graph to represent this data.</p>
+                                    <table>
+                                        <tr>
+                                            <th>Number of Books</th>
+                                            <th>Number of Students</th>
+                                        </tr>
+                                        <tr>
+                                            <td>0-1</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2-3</td>
+                                            <td>12</td>
+                                        </tr>
+                                        <tr>
+                                            <td>4-5</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>6+</td>
+                                            <td>3</td>
+                                        </tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <img src="../../../../images/books-bar-graph-solution.png" alt="Solution bar graph" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Pie Charts Section -->
+                        <section id="pie-charts" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-pie"></i> Pie Charts
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on pie charts with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Understanding Pie Charts
+                                </h3>
+                                <p>
+                                    Pie charts show proportions of a whole. Each category is represented by a slice whose size corresponds to its proportion.
+                                </p>
+                                <img src="../../../../images/pie-chart-example.png" alt="Example of a pie chart" class="place">
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Creating Pie Charts</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ol>
+                                            <li>Calculate the total of all values</li>
+                                            <li>For each category, calculate its percentage of the total</li>
+                                            <li>Multiply each percentage by 360° to get the angle</li>
+                                            <li>Draw a circle and divide it according to the angles</li>
+                                            <li>Label each sector with its category and percentage</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Example</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Budget allocation for a school:</p>
+                                        <ul>
+                                            <li>Teachers' salaries: \$50,000</li>
+                                            <li>Facilities: \$30,000</li>
+                                            <li>Supplies: \$15,000</li>
+                                            <li>Other: \$5,000</li>
+                                        </ul>
+                                        <p>Total = \$100,000</p>
+                                        <img src="../../../../images/budget-pie-chart.png" alt="Budget pie chart" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A survey of 120 students showed their preferred sports: Football (45), Basketball (30), Volleyball (25), and Athletics (20). Create a pie chart to represent this data.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Calculations:</p>
+                                        <ul>
+                                            <li>Football: (45/120) × 360° = 135°</li>
+                                            <li>Basketball: (30/120) × 360° = 90°</li>
+                                            <li>Volleyball: (25/120) × 360° = 75°</li>
+                                            <li>Athletics: (20/120) × 360° = 60°</li>
+                                        </ul>
+                                        <img src="../../../../images/sports-pie-chart-solution.png" alt="Sports pie chart solution" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Line Graphs Section -->
+                        <section id="line-graphs" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line"></i> Line Graphs
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on line graphs with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Understanding Line Graphs
+                                </h3>
+                                <p>
+                                    Line graphs show how data changes over time. Points are plotted and connected with straight lines to show trends.
+                                </p>
+                                <img src="../../../../images/line-graph-example.png" alt="Example of a line graph" class="place">
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>When to Use</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <ul>
+                                            <li>Tracking changes over short and long periods</li>
+                                            <li>Comparing changes over same period for multiple groups</li>
+                                            <li>Showing trends clearly</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-calculator"></i>
+                                        <h3>Example</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Monthly temperature data:</p>
+                                        <img src="../../../../images/temperature-line-graph.png" alt="Temperature line graph" class="place">
+                                        <p>This graph shows temperature fluctuations throughout the year.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>The table shows a company's profits over 6 months. Draw a line graph to represent this data.</p>
+                                    <table>
+                                        <tr>
+                                            <th>Month</th>
+                                            <th>Profit (₵)</th>
+                                        </tr>
+                                        <tr>
+                                            <td>Jan</td>
+                                            <td>12,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Feb</td>
+                                            <td>15,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mar</td>
+                                            <td>18,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Apr</td>
+                                            <td>14,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>May</td>
+                                            <td>16,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Jun</td>
+                                            <td>20,000</td>
+                                        </tr>
+                                    </table>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <img src="../../../../images/profit-line-graph-solution.png" alt="Profit line graph solution" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Advanced Representations Section -->
+                        <section id="advanced-representations" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-area"></i> Advanced Representations
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Specialized Data Visualizations
+                                </h3>
+                                <p>
+                                    Beyond basic graphs, there are more specialized ways to represent data that can provide deeper insights.
+                                </p>
+                            </div>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-th-large"></i>
+                                        <h3>Infographics</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Combine visuals and text to present complex information quickly and clearly.</p>
+                                        <img src="../../../../images/infographic-example.png" alt="Infographic example" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-square"></i>
+                                        <h3>Waffle Diagrams</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Show parts of a whole using a grid of small squares where each square represents a percentage.</p>
+                                        <img src="../../../../images/waffle-diagram-example.png" alt="Waffle diagram example" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-box"></i>
+                                        <h3>Box and Whisker Plots</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Display data distribution through quartiles, highlighting median, range, and outliers.</p>
+                                        <img src="../../../../images/box-plot-example.png" alt="Box plot example" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-leaf"></i>
+                                        <h3>Stem and Leaf Plots</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Show quantitative data while preserving individual data points.</p>
+                                        <img src="../../../../images/stem-leaf-example.png" alt="Stem and leaf plot example" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Create a stem-and-leaf plot for the following test scores: 65, 72, 68, 85, 90, 72, 65, 78, 85, 65, 72, 90, 85, 78, 65, 72, 85, 90, 78, 85</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <pre>
+6 | 5 5 5 5 8
+7 | 2 2 2 2 8 8
+8 | 5 5 5 5 5
+9 | 0 0 0
+                                        </pre>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your data organization skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

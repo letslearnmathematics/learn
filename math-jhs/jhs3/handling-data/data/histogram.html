@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Using Histograms to Find Mode | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to use histograms to determine the mode of given data for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Using Histograms to Find Mode | JHS3 Mathematics">
+        <meta property="og:description" content="Learn how to use histograms to determine the mode of given data and solve real-life problems">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/data-handling/histogram-mode">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Using Histograms to Find Mode</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Data Handling</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Histograms & Mode</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#understanding-histograms"><i class="fas fa-chevron-right"></i> Understanding Histograms</a></li>
+                                <li><a href="#finding-mode"><i class="fas fa-chevron-right"></i> Finding Mode from Histograms</a></li>
+                                <li><a href="#real-life-applications"><i class="fas fa-chevron-right"></i> Real-Life Applications</a></li>
+                                <!--<li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>-->
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Histograms & Mode</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Mode</strong> is the value that appears most frequently in a data set. When data is presented in a histogram (a special type of bar chart), we can visually identify the mode by looking for the tallest bar.
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to:
+                                </p>
+                                <ul>
+                                    <li>Interpret histograms to find the mode</li>
+                                    <li>Solve real-life problems using mode from histograms</li>
+                                    <li>Pose questions based on histogram data</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Concept
+                                </h3>
+                                <p>
+                                    The mode represents the most common or popular value in a data set. In a histogram:
+                                </p>
+                                <ul>
+                                    <li>The <strong>class interval</strong> with the highest bar is called the <strong>modal class</strong></li>
+                                    <li>The <strong>mode</strong> is often taken as the midpoint of the modal class</li>
+                                </ul>
+                            </div>
+                        </section>
+                        
+                        <!-- Understanding Histograms Section -->
+                        <section id="understanding-histograms" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-bar"></i> Understanding Histograms
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on histograms and how to interpret them.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-info-circle"></i> What is a Histogram?
+                                </h3>
+                                <p>
+                                    A histogram is a graphical representation of the distribution of numerical data. It differs from a bar chart in that:
+                                </p>
+                                <ul>
+                                    <li>It shows <strong>continuous data</strong> grouped into intervals (bins)</li>
+                                    <li>The bars <strong>touch each other</strong> to show continuity</li>
+                                    <li>The area of each bar represents the frequency</li>
+                                </ul>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Components of a Histogram:</h4>
+                                        <ul>
+                                            <li><strong>X-axis:</strong> Shows the class intervals (e.g., 0-10, 10-20, etc.)</li>
+                                            <li><strong>Y-axis:</strong> Shows the frequency (count) for each interval</li>
+                                            <li><strong>Bars:</strong> Height represents frequency; width represents class interval</li>
+                                        </ul>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Example Histogram:</h4>
+                                        <p>Consider this histogram showing test scores:</p>
+                                        <img src="../../../../images/histogram-example.png" alt="Example histogram showing test scores" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Finding Mode Section -->
+                        <section id="finding-mode" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-search"></i> Finding Mode from Histograms
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Step-by-Step Process
+                                </h3>
+                                <p>Follow these steps to determine the mode from a histogram:</p>
+                                <ol>
+                                    <li><strong>Identify the tallest bar</strong> - This represents the modal class</li>
+                                    <li><strong>Note the class boundaries</strong> - The range of values for the modal class</li>
+                                    <li><strong>Calculate the midpoint</strong> - Often used as the mode estimate</li>
+                                    <li><strong>Interpret the result</strong> - What does this mode tell us about the data?</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <h4>Worked Example:</h4>
+                                    <p>Given the following histogram showing ages of participants in a survey:</p>
+                                    <img src="../../../../images/histogram-age-example.png" alt="Histogram showing ages of participants" class="place">
+                                    <p><strong>Solution:</strong></p>
+                                    <ol>
+                                        <li>The tallest bar is for the class 20-30 years</li>
+                                        <li>This is our modal class</li>
+                                        <li>The midpoint is (20+30)/2 = 25 years</li>
+                                        <li>Interpretation: The most common age group is 20-30 years, with the mode at about 25 years</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exclamation-triangle"></i> Important Notes
+                                </h3>
+                                <ul>
+                                    <li>The mode from a histogram is an <strong>estimate</strong> since we don't see individual data points</li>
+                                    <li>Some datasets may have <strong>multiple modes</strong> (bimodal, multimodal)</li>
+                                    <li>The modal class gives us a range, while the mode is typically a single value</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>The histogram below shows the heights of students in a class. Determine the mode.</p>
+                                    <img src="../../../../images/histogram-height-exercise.png" alt="Histogram of student heights" class="place">
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <ol>
+                                            <li>The tallest bar is for the class 150-160 cm</li>
+                                            <li>This is our modal class</li>
+                                            <li>The midpoint is (150+160)/2 = 155 cm</li>
+                                            <li>The mode is approximately 155 cm</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A shop recorded daily sales (in Gh₵) over a month, shown in the histogram below. Find the modal class and estimate the mode.</p>
+                                    <img src="../../../../images/histogram-sales-exercise.png" alt="Histogram of daily sales" class="place">
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <ol>
+                                            <li>The tallest bar is for the class 200-300 Gh₵</li>
+                                            <li>This is our modal class</li>
+                                            <li>The midpoint is (200+300)/2 = 250 Gh₵</li>
+                                            <li>The mode is approximately 250 Gh₵</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>The histogram shows the distribution of marks in a mathematics test. Identify any special features of this distribution.</p>
+                                    <img src="../../../../images/histogram-marks-exercise.png" alt="Histogram of test marks" class="place">
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <ol>
+                                            <li>There are two peaks (tallest bars) at 40-50 and 70-80</li>
+                                            <li>This is a <strong>bimodal</strong> distribution</li>
+                                            <li>The modes are approximately 45 and 75</li>
+                                            <li>This might suggest two groups of students with different performance levels</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Real-Life Applications Section -->
+                        <section id="real-life-applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-globe-africa"></i> Real-Life Applications
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-briefcase"></i> Practical Uses of Mode from Histograms
+                                </h3>
+                                <p>The mode from histograms is useful in many real-world situations:</p>
+                                <ul>
+                                    <li><strong>Business:</strong> Identifying most common purchase amounts</li>
+                                    <li><strong>Education:</strong> Understanding typical student performance</li>
+                                    <li><strong>Healthcare:</strong> Finding most common patient ages or recovery times</li>
+                                    <li><strong>Government:</strong> Planning based on most common household sizes</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-tasks"></i> Problem-Solving Examples
+                                </h3>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1: Clothing Store Inventory</h4>
+                                    <p>A store manager created this histogram of shirt sizes sold last month:</p>
+                                    <img src="../../../../images/histogram-shirt-sizes.png" alt="Histogram of shirt sizes sold" class="place">
+                                    <p><strong>Questions:</strong></p>
+                                    <ol type="a">
+                                        <li>What is the modal shirt size?</li>
+                                        <li>How should this inform the store's inventory decisions?</li>
+                                    </ol>
+                                    <p><strong>Solution:</strong></p>
+                                    <ol type="a">
+                                        <li>The modal class is Medium (M), so the mode is M</li>
+                                        <li>The store should stock more M-sized shirts as they sell most frequently</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2: Transportation Planning</h4>
+                                    <p>A city planner created this histogram of commute times:</p>
+                                    <img src="../../../../images/histogram-commute-times.png" alt="Histogram of commute times" class="place">
+                                    <p><strong>Questions:</strong></p>
+                                    <ol type="a">
+                                        <li>What is the modal commute time?</li>
+                                        <li>What does this suggest about transportation needs?</li>
+                                    </ol>
+                                    <p><strong>Solution:</strong></p>
+                                    <ol type="a">
+                                        <li>The modal class is 20-30 minutes, so the mode is about 25 minutes</li>
+                                        <li>Most commutes are relatively short, suggesting good local transportation but potential need for improvements in longer commute routes</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Creating Your Own Problems
+                                </h3>
+                                <p>Now that you understand how to interpret histograms, try creating your own real-life scenarios:</p>
+                                <ol>
+                                    <li>Think of a situation where data might be collected (e.g., sports, shopping, school)</li>
+                                    <li>Imagine what the histogram might look like</li>
+                                    <li>Pose questions about the mode and its implications</li>
+                                </ol>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Real-Life Practice</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>A restaurant recorded the number of customers per hour over a week, shown in this histogram:</p>
+                                    <img src="../../../../images/histogram-customers.png" alt="Histogram of customers per hour" class="place">
+                                    <p><strong>Questions:</strong></p>
+                                    <ol type="a">
+                                        <li>What is the modal number of customers per hour?</li>
+                                        <li>When should the restaurant schedule the most staff?</li>
+                                        <li>What might explain the pattern in this data?</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <ol type="a">
+                                            <li>The modal class is 20-30 customers, so the mode is about 25 customers/hour</li>
+                                            <li>They should schedule most staff during the 20-30 customer hours (likely lunch and dinner times)</li>
+                                            <li>The pattern likely shows meal times (peaks) with quieter periods between meals</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A farmer recorded the weights of watermelons harvested, shown in this histogram:</p>
+                                    <img src="../../../../images/histogram-watermelons.png" alt="Histogram of watermelon weights" class="place">
+                                    <p><strong>Questions:</strong></p>
+                                    <ol type="a">
+                                        <li>What is the modal weight range?</li>
+                                        <li>If the farmer wants to advertise "average-sized" watermelons, what weight should they use?</li>
+                                        <li>What might the farmer conclude about their growing methods?</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <ol type="a">
+                                            <li>The modal class is 5-6 kg</li>
+                                            <li>They could advertise 5.5 kg watermelons (midpoint of modal class) as "average-sized"</li>
+                                            <li>The consistent weights suggest effective growing methods producing uniform results</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready to test your understanding?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Take the Challenge
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your histogram interpretation skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

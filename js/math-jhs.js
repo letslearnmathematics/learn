@@ -606,15 +606,15 @@ document.addEventListener("DOMContentLoaded", function() {
             ],
             "Data": [
                 { name: "Methods of Collecting Data", url: "./math-jhs/jhs3/handling-data/data/methods-of-collecting-data" },
-                { name: "Organising Data", url: "./math-jhs/jhs3/handling-data/data/organising-data.html" },
-                { name: "Histogram", url: "./math-jhs/jhs3/handling-data/data/histogram.html" },
-                { name: "Data & Bias", url: "./math-jhs/jhs3/handling-data/data/data-and-bias.html" },
-                { name: "Using Descriptive Statistics", url: "./math-jhs/jhs3/handling-data/data/using-descriptive-statistics.html" },
-                { name: "Mean, Median and Mode & Extreme Data in Data Set", url: "./math-jhs/jhs3/handling-data/data/measures-and-extreme-data.html" }
+                { name: "Organising Data", url: "./math-jhs/jhs3/handling-data/data/organising-data" },
+                { name: "Histogram", url: "./math-jhs/jhs3/handling-data/data/histogram" },
+                { name: "Data & Bias", url: "./math-jhs/jhs3/handling-data/data/data-and-bias" },
+                { name: "Using Descriptive Statistics", url: "./math-jhs/jhs3/handling-data/data/using-descriptive-statistics" },
+                { name: "Mean, Median and Mode & Extreme Data in Data Set", url: "./math-jhs/jhs3/handling-data/data/measures-and-extreme-data" }
             ],
             "Chance or Probability": [
-                { name: "Two Dependent Events", url: "./math-jhs/jhs3/handling-data/chance-or-probability/two-dependent-events.html" },
-                { name: "Probability as Fractions, Percentages &/or Ratios", url: "./math-jhs/jhs3/handling-data/chance-or-probability/probability-as-fractions-percentages.html" }
+                { name: "Two Dependent Events", url: "./math-jhs/jhs3/handling-data/chance-or-probability/two-dependent-events" },
+                { name: "Probability as Fractions, Percentages &/or Ratios", url: "./math-jhs/jhs3/handling-data/chance-or-probability/probability-as-fractions-percentages" }
             ]
         }
     };
