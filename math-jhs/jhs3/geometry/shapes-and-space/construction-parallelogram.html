@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Construct Parallelograms | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on constructing parallelograms for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Construct Parallelograms | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to construct various parallelograms including squares, rectangles, and rhombuses under given conditions">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/geometry/construct-parallelograms">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Construct Parallelograms</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Construct Parallelograms</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#square-side"><i class="fas fa-chevron-right"></i> Square with Given Side</a></li>
+                                <li><a href="#square-diagonal"><i class="fas fa-chevron-right"></i> Square with Given Diagonal</a></li>
+                                <li><a href="#rectangle-side"><i class="fas fa-chevron-right"></i> Rectangle with Given Side</a></li>
+                                <li><a href="#rectangle-side-diagonal"><i class="fas fa-chevron-right"></i> Rectangle with Side & Diagonal</a></li>
+                                <li><a href="#parallelogram"><i class="fas fa-chevron-right"></i> Parallelogram with Sides & Angle</a></li>
+                                <li><a href="#compound-shapes"><i class="fas fa-chevron-right"></i> Compound Plane Shapes</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Construct Parallelograms</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A <strong>parallelogram</strong> is a quadrilateral with both pairs of opposite sides parallel and equal. 
+                                    Special types of parallelograms include squares, rectangles, and rhombuses.
+                                </p>
+                                <p>
+                                    In this lesson, we will learn how to construct various parallelograms under different given conditions 
+                                    using geometric instruments like rulers, protractors, and compasses.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Properties of Parallelograms:</h4>
+                                        <ul>
+                                            <li>Opposite sides are equal and parallel</li>
+                                            <li>Opposite angles are equal</li>
+                                            <li>Consecutive angles are supplementary</li>
+                                            <li>Diagonals bisect each other</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Special Parallelograms:</h4>
+                                        <ul>
+                                            <li><strong>Square:</strong> All sides equal, all angles 90°</li>
+                                            <li><strong>Rectangle:</strong> Opposite sides equal, all angles 90°</li>
+                                            <li><strong>Rhombus:</strong> All sides equal, opposite angles equal</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Square with Given Side Section -->
+                        <section id="square-side" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Square with Given Side
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> Constructing a Square with Given Side Length
+                                </h3>
+                                
+                                <div class="method-steps">
+                                    <h4>Steps to Construct Square ABCD with AB = 6.5cm:</h4>
+                                    <ol>
+                                        <li>Draw side AB = 6.5cm using a ruler</li>
+                                        <li>At point A, construct a 90° angle using a protractor or compass</li>
+                                        <li>From point A, draw AD = 6.5cm along the constructed angle</li>
+                                        <li>At point B, construct another 90° angle</li>
+                                        <li>From point B, draw BC = 6.5cm along this new angle</li>
+                                        <li>Join points C and D to complete the square</li>
+                                        <li>Measure the diagonal AC or BD and record its length</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example: Square ABCD with AB = 6.5cm</h4>
+                                    <p>After construction, the diagonal should measure approximately:</p>
+                                    \[ AC = BD = 6.5\sqrt{2} \approx 9.19 \text{cm} \]
+                                    <p class="note">(Note: You'll provide the actual construction diagram image later)</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Square with Given Diagonal Section -->
+                        <section id="square-diagonal" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Square with Given Diagonal
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Constructing a Square with Given Diagonal
+                                </h3>
+                                
+                                <div class="method-steps">
+                                    <h4>Steps to Construct Square with Diagonal Length d:</h4>
+                                    <ol>
+                                        <li>Draw the diagonal AC of given length (e.g., 8cm)</li>
+                                        <li>Find the midpoint O of diagonal AC using perpendicular bisector</li>
+                                        <li>Construct a perpendicular bisector through point O</li>
+                                        <li>With O as center and radius OA, draw a circle intersecting the bisector at B and D</li>
+                                        <li>Join points A to B, B to C, C to D, and D to A to complete the square</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Properties:</h4>
+                                        <p>The diagonals of a square:</p>
+                                        <ul>
+                                            <li>Are equal in length</li>
+                                            <li>Bisect each other at 90°</li>
+                                            <li>Bisect the angles of the square</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Rectangle with Given Side Section -->
+                        <section id="rectangle-side" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Rectangle with Given Side
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-rectangle-landscape"></i> Constructing a Rectangle with Given Sides
+                                </h3>
+                                
+                                <div class="method-steps">
+                                    <h4>Steps to Construct Rectangle with Length l and Width w:</h4>
+                                    <ol>
+                                        <li>Draw side AB = length (l) using a ruler</li>
+                                        <li>At point A, construct a 90° angle</li>
+                                        <li>From point A, draw AD = width (w) along the constructed angle</li>
+                                        <li>At point B, construct another 90° angle</li>
+                                        <li>From point B, draw BC = width (w) along this new angle</li>
+                                        <li>Join points C and D to complete the rectangle</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example: Rectangle with l = 7cm, w = 4cm</h4>
+                                    <p>The constructed rectangle should have:</p>
+                                    <ul>
+                                        <li>Opposite sides equal (AB = CD = 7cm, AD = BC = 4cm)</li>
+                                        <li>All four angles equal to 90°</li>
+                                        <li>Diagonals AC and BD equal in length</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Rectangle with Side and Diagonal Section -->
+                        <section id="rectangle-side-diagonal" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Rectangle with Side and Diagonal
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-rectangle-landscape"></i> Constructing a Rectangle with Given Side and Diagonal
+                                </h3>
+                                
+                                <div class="method-steps">
+                                    <h4>Steps to Construct Rectangle with Side AB and Diagonal AC:</h4>
+                                    <ol>
+                                        <li>Draw side AB of given length</li>
+                                        <li>At point A, construct a 90° angle</li>
+                                        <li>With point A as center and diagonal length as radius, draw an arc</li>
+                                        <li>From point B, draw a perpendicular to meet the arc at point C</li>
+                                        <li>From point C, draw CD parallel and equal to AB</li>
+                                        <li>Join point D to A to complete the rectangle</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Verification:</h4>
+                                        <p>After construction, verify that:</p>
+                                        <ul>
+                                            <li>Opposite sides are equal and parallel</li>
+                                            <li>All angles are 90°</li>
+                                            <li>The measured diagonal matches the given length</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Parallelogram with Sides and Angle Section -->
+                        <section id="parallelogram" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Parallelogram with Sides and Angle
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-shapes"></i> Constructing a Parallelogram with Given Sides and Angle
+                                </h3>
+                                
+                                <div class="method-steps">
+                                    <h4>Steps to Construct Parallelogram with Sides a, b and Included Angle θ:</h4>
+                                    <ol>
+                                        <li>Draw side AB = length a</li>
+                                        <li>At point A, construct angle θ using a protractor</li>
+                                        <li>From point A, draw AD = length b along the constructed angle</li>
+                                        <li>With point B as center and radius b, draw an arc</li>
+                                        <li>With point D as center and radius a, draw another arc intersecting the first arc at C</li>
+                                        <li>Join points B to C and C to D to complete the parallelogram</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example: Parallelogram with a = 5cm, b = 3cm, θ = 60°</h4>
+                                    <p>The constructed parallelogram should have:</p>
+                                    <ul>
+                                        <li>AB = CD = 5cm</li>
+                                        <li>AD = BC = 3cm</li>
+                                        <li>∠A = ∠C = 60°</li>
+                                        <li>∠B = ∠D = 120° (consecutive angles supplementary)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Compound Plane Shapes Section -->
+                        <section id="compound-shapes" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-drafting-compass"></i> Regular Compound Plane Shapes
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-shapes"></i> Constructing Regular Compound Plane Shapes
+                                </h3>
+                                
+                                <div class="method-steps">
+                                    <h4>Steps to Construct Compound Shapes:</h4>
+                                    <ol>
+                                        <li>Analyze the compound shape to identify basic components (squares, rectangles, etc.)</li>
+                                        <li>Construct the base shape first using appropriate methods</li>
+                                        <li>Add adjacent shapes by sharing sides or angles as specified</li>
+                                        <li>Ensure all given dimensions and angles are accurately represented</li>
+                                        <li>Verify all sides and angles meet the given conditions</li>
+                                    </ol>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Example Compound Shapes:</h4>
+                                        <ul>
+                                            <li>Two squares sharing a common side</li>
+                                            <li>Rectangle with an equilateral triangle on one side</li>
+                                            <li>Combination of parallelograms forming a larger shape</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Construct a square PQRS with PQ = 5cm. Measure and record the length of its diagonal PR.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Steps:</p>
+                                        <ol>
+                                            <li>Draw PQ = 5cm</li>
+                                            <li>At P, construct 90° and draw PS = 5cm</li>
+                                            <li>At Q, construct 90° and draw QR = 5cm</li>
+                                            <li>Join R to S</li>
+                                            <li>Measure diagonal PR ≈ 7.07cm</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Construct a square with diagonal 10cm. Measure and record the length of its sides.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Steps:</p>
+                                        <ol>
+                                            <li>Draw diagonal AC = 10cm</li>
+                                            <li>Find midpoint O</li>
+                                            <li>Construct perpendicular bisector through O</li>
+                                            <li>With radius OA, draw circle intersecting bisector at B and D</li>
+                                            <li>Join points to form square ABCD</li>
+                                            <li>Measure sides ≈ 7.07cm each</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Construct rectangle ABCD with AB = 8cm and BC = 5cm. Measure its diagonals.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Steps:</p>
+                                        <ol>
+                                            <li>Draw AB = 8cm</li>
+                                            <li>At B, construct 90° and draw BC = 5cm</li>
+                                            <li>At A, construct 90° and draw AD = 5cm</li>
+                                            <li>Join D to C</li>
+                                            <li>Measure diagonals ≈ 9.43cm each</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Construct a parallelogram EFGH with EF = 6cm, FG = 4cm, and ∠EFG = 75°.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Steps:</p>
+                                        <ol>
+                                            <li>Draw EF = 6cm</li>
+                                            <li>At F, construct 75° and draw FG = 4cm</li>
+                                            <li>With E as center, radius 4cm draw arc</li>
+                                            <li>With G as center, radius 6cm draw arc intersecting at H</li>
+                                            <li>Join H to E and G</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Construct a compound shape consisting of a square (4cm side) adjacent to a rectangle (4cm × 6cm) sharing one full side.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Steps:</p>
+                                        <ol>
+                                            <li>Construct square ABCD with AB = 4cm</li>
+                                            <li>Extend side BC to E where CE = 2cm (total BE = 6cm)</li>
+                                            <li>At E, construct 90° and draw EF = 4cm</li>
+                                            <li>Join F to D</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your geometry construction skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -589,14 +589,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Sum of Angles in a Polygon", url: "./math-jhs/jhs3/geometry/shapes-and-space/sum-of-angles-polygon" },
                 { name: "Similar and Congruent Triangles ", url: "./math-jhs/jhs3/geometry/shapes-and-space/similar-congruent-triangles" },
                 { name: "Inscribed & Circumscribed Circles of Triangles", url: "./math-jhs/jhs3/geometry/shapes-and-space/inscribed-circumscribed" },
-                { name: "Constructions of Parallelograms", url: "./math-jhs/jhs3/geometry/shapes-and-space/construction-parallelogram.html" }
+                { name: "Constructions of Parallelograms", url: "./math-jhs/jhs3/geometry/shapes-and-space/construction-parallelogram" }
             ],
             "Measurements": [
-                { name: "Nets of Cuboids & Triangular Prisms", url: "./math-jhs/jhs3/geometry/measurement/nets-cuboids-triangular-prisms.html" },
-                { name: "Surface Area of Cuboids", url: "./math-jhs/jhs3/geometry/measurement/surface-area-cuboids.html" },
-                { name: "Surface Area of Triangular Prisms", url: "./math-jhs/jhs3/geometry/measurement/surface-area-triangular-prisms.html" },
-                { name: "Expressing Points as Position Vectors", url: "./math-jhs/jhs3/geometry/measurement/points-as-position-vectors.html" },
-                { name: "Parallel Vectors & Perpendicular Vectors", url: "./math-jhs/jhs3/geometry/measurement/parallel-perpendicular-vectors.html" },
+                { name: "Nets of Cuboids & Triangular Prisms", url: "./math-jhs/jhs3/geometry/measurement/nets-cuboids-triangular-prisms" },
+                { name: "Surface Area of Cuboids", url: "./math-jhs/jhs3/geometry/measurement/surface-area-cuboids" },
+                { name: "Surface Area of Triangular Prisms", url: "./math-jhs/jhs3/geometry/measurement/surface-area-triangular-prisms" },
+                { name: "Expressing Points as Position Vectors", url: "./math-jhs/jhs3/geometry/measurement/points-as-position-vectors" },
+                { name: "Parallel Vectors & Perpendicular Vectors", url: "./math-jhs/jhs3/geometry/measurement/parallel-perpendicular-vectors" },
                 { name: "Resolution of Vectors", url: "./math-jhs/jhs3/geometry/measurement/resolution-of-vectors.html" }
             ],
             "Position and Transformation": [

@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO and Social Meta Tags -->
-        <title>Inscribed and Circumscribed Circles | JHS Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Comprehensive lesson on constructing inscribed and circumscribed circles for triangles for JHS3 Mathematics.">
+        <title>Position Vectors | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Position Vectors for JHS3 Mathematics.">
         
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
@@ -15,10 +15,10 @@
         <link rel="manifest" href="../../../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Inscribed and Circumscribed Circles | JHS3 Mathematics">
-        <meta property="og:description" content="Learn to construct inscribed and circumscribed circles for triangles using compass and ruler">
+        <meta property="og:title" content="Position Vectors | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to Express Points in the Cartesian Plane as Position Vectors">
         <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/geometry/inscribed-circumscribed-circles">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/vectors/position-vectors">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -85,7 +85,7 @@
                         </a>
                     </div>
                     
-                    <h1 class="lesson-title">Inscribed and Circumscribed Circles</h1>
+                    <h1 class="lesson-title">Position Vectors</h1>
                     
                     <nav class="main-nav">
                         <ul class="nav-list">
@@ -112,17 +112,17 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">JHS 3: Geometry</h3>
+                            <h3 class="sidebar-title">JHS 3: Vectors</h3>
                             <div class="current-topic">
                                 <i class="fas fa-project-diagram"></i>
-                                <span>Inscribed & Circumscribed Circles</span>
+                                <span>Position Vectors</span>
                             </div>
                             <ul class="topic-menu">
                                 <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
-                                <li><a href="#incentre"><i class="fas fa-chevron-right"></i> Finding the Incentre</a></li>
-                                <li><a href="#incircle"><i class="fas fa-chevron-right"></i> Drawing the Incircle</a></li>
-                                <li><a href="#circumcentre"><i class="fas fa-chevron-right"></i> Finding the Circumcentre</a></li>
-                                <li><a href="#circumcircle"><i class="fas fa-chevron-right"></i> Drawing the Circumcircle</a></li>
+                                <li><a href="#position-vectors"><i class="fas fa-chevron-right"></i> Position Vectors</a></li>
+                                <li><a href="#notation"><i class="fas fa-chevron-right"></i> Vector Notation</a></li>
+                                <li><a href="#magnitude"><i class="fas fa-chevron-right"></i> Magnitude of Vectors</a></li>
+                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Real-world Applications</a></li>
                             </ul>
                             
                             <div class="level-buttons">
@@ -153,170 +153,116 @@
                             <i class="fas fa-chevron-right"></i>
                             <a href="../../../../math-jhs">JHS3</a>
                             <i class="fas fa-chevron-right"></i>
-                            <span>Geometry</span>
+                            <span>Vectors</span>
                         </nav>
 
                         <!-- Definition Section -->
                         <section id="definition" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-book-open"></i> Introduction
+                                <i class="fas fa-book-open"></i> Introduction to Vectors
                             </h2>
                             
                             <div class="concept-box">
                                 <p>
-                                    <strong>Inscribed and circumscribed circles</strong> are special circles related to triangles. 
-                                    An <strong>incircle</strong> is a circle drawn inside a triangle that touches all three sides, 
-                                    while a <strong>circumcircle</strong> is a circle drawn outside the triangle that passes through all three vertices.
+                                    A <strong>vector</strong> is a quantity that has both magnitude (size) and direction. 
+                                    Unlike scalars which only have magnitude, vectors tell us not just how much but also 
+                                    which way.
                                 </p>
                                 <p>
-                                    To construct these circles, we need to find special points called the <strong>incentre</strong> 
-                                    (for the incircle) and <strong>circumcentre</strong> (for the circumcircle). These points are found 
-                                    using angle bisectors and perpendicular bisectors respectively.
+                                    In the Cartesian plane (the x-y coordinate system), we can represent points as position vectors. 
+                                    This means we can describe the exact location of any point using both its horizontal (x) and 
+                                    vertical (y) components.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>For example, the point P(3,4) can be represented as a vector:</p>
+                                    \[ \vec{OP} = \begin{pmatrix} 3 \\ 4 \end{pmatrix} \]
+                                    <p>where O is the origin (0,0).</p>
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Key Characteristics:</h4>
+                                        <ul>
+                                            <li>Vectors have both magnitude and direction</li>
+                                            <li>Position vectors start from the origin (0,0)</li>
+                                            <li>Vectors can be represented in component form (x,y)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Position Vectors Section -->
+                        <section id="position-vectors" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-map-marker-alt"></i> Position Vectors
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on position vectors with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Understanding Position Vectors
+                                </h3>
+                                <p>
+                                    A position vector describes the location of a point relative to the origin (0,0) in the 
+                                    Cartesian plane. It's represented by an arrow starting at the origin and ending at the point.
+                                </p>
+                                <p>
+                                    The components of the vector correspond to the x and y coordinates of the point.
                                 </p>
                             </div>
-                        </section>
-                        
-                        <!-- Finding the Incentre Section -->
-                        <section id="incentre" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-drafting-compass"></i> Finding the Incentre
-                            </h2>
-
-                            <!-- Video Embed Section 
-                            <div class="video-embed">
-                                <h4>
-                                    <i class="fas fa-video"></i> Video Lesson
-                                </h4>
-                                <div class="video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/VIDEO_ID" 
-                                        title="YouTube video player" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                                <div class="video-description">
-                                    <p>Watch this demonstration of finding the incentre of a triangle.</p>
-                                </div>
-                            </div>
-                            -->
-
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-ruler-combined"></i> Steps to Find the Incentre
-                                </h3>
-                                <ol class="steps-list">
-                                    <li>Construct triangle ABC using a ruler and compass under given conditions</li>
-                                    <li>Bisect at least two angles of the triangle (angle A and angle C)</li>
-                                    <li>Extend the angle bisectors until they intersect at point L (the incentre)</li>
-                                    <li>Measure the perpendicular distance from L to each side (AB, AC, BC)</li>
-                                </ol>
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Observation:</h4>
-                                        <p>The distances from the incentre to all three sides of the triangle are equal.</p>
-                                        <p>This equal distance is the radius of the incircle.</p>
+                            
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-code"></i>
+                                        <h3>Representing Points as Vectors</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>Any point P(a,b) in the plane can be written as a position vector:</p>
+                                        <div class="math-example">
+                                            \[ \vec{OP} = \begin{pmatrix} a \\ b \end{pmatrix} \]
+                                        </div>
+                                        <p>This means:</p>
+                                        <ul>
+                                            <li>Move 'a' units along the x-axis</li>
+                                            <li>Move 'b' units along the y-axis</li>
+                                        </ul>
                                     </div>
                                 </div>
-                            </div>
-                        </section>
-                        
-                        <!-- Drawing the Incircle Section -->
-                        <section id="incircle" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-drafting-compass"></i> Drawing the Incircle
-                            </h2>
-
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-ruler-combined"></i> Steps to Draw the Incircle
-                                </h3>
-                                <ol class="steps-list">
-                                    <li>After finding the incentre (L) as described above</li>
-                                    <li>Measure the perpendicular distance from L to any side (this is the radius)</li>
-                                    <li>Place your compass at point L and draw a circle with the measured radius</li>
-                                    <li>The circle should touch all three sides of the triangle</li>
-                                </ol>
                                 
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Note:</h4>
-                                        <p>The incircle is the largest circle that fits inside the triangle and touches all three sides.</p>
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-arrows-alt"></i>
+                                        <h3>Drawing Position Vectors</h3>
                                     </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- Finding the Circumcentre Section -->
-                        <section id="circumcentre" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-drafting-compass"></i> Finding the Circumcentre
-                            </h2>
-
-                            <!-- Video Embed Section 
-                            <div class="video-embed">
-                                <h4>
-                                    <i class="fas fa-video"></i> Video Lesson
-                                </h4>
-                                <div class="video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/VIDEO_ID" 
-                                        title="YouTube video player" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                                <div class="video-description">
-                                    <p>Watch this demonstration of finding the circumcentre of a triangle.</p>
-                                </div>
-                            </div>
-                            -->
-
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-ruler-combined"></i> Steps to Find the Circumcentre
-                                </h3>
-                                <ol class="steps-list">
-                                    <li>Construct triangle ABC using a ruler and compass under given conditions</li>
-                                    <li>Find the perpendicular bisector of at least two sides (AB and BC)</li>
-                                    <li>Extend the perpendicular bisectors until they intersect at point S (the circumcentre)</li>
-                                    <li>Measure the distance from S to each vertex (A, B, C)</li>
-                                </ol>
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Observation:</h4>
-                                        <p>The distances from the circumcentre to all three vertices of the triangle are equal.</p>
-                                        <p>This equal distance is the radius of the circumcircle.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <!-- Drawing the Circumcircle Section -->
-                        <section id="circumcircle" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-drafting-compass"></i> Drawing the Circumcircle
-                            </h2>
-
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-ruler-combined"></i> Steps to Draw the Circumcircle
-                                </h3>
-                                <ol class="steps-list">
-                                    <li>After finding the circumcentre (S) as described above</li>
-                                    <li>Measure the distance from S to any vertex (this is the radius)</li>
-                                    <li>Place your compass at point S and draw a circle with the measured radius</li>
-                                    <li>The circle should pass through all three vertices of the triangle</li>
-                                </ol>
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Note:</h4>
-                                        <p>The circumcircle is the smallest circle that fits around the triangle and passes through all three vertices.</p>
+                                    <div class="method-body">
+                                        <p>To draw a position vector for point P(a,b):</p>
+                                        <ol>
+                                            <li>Start at the origin O(0,0)</li>
+                                            <li>Draw an arrow to point P(a,b)</li>
+                                            <li>Label the vector as \(\vec{OP}\)</li>
+                                        </ol>
                                     </div>
                                 </div>
                             </div>
@@ -332,60 +278,32 @@
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
-                                    <p>Construct an equilateral triangle ABC with sides 6cm. Find its incentre and draw its incircle.</p>
+                                    <p>Represent the point A(2,5) as a position vector.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Steps:</p>
-                                        <ol>
-                                            <li>Draw triangle ABC with AB = BC = CA = 6cm</li>
-                                            <li>Bisect angles A and B to find the incentre</li>
-                                            <li>Measure the perpendicular distance from incentre to any side</li>
-                                            <li>Draw the incircle with this radius</li>
-                                        </ol>
+                                        <p>The position vector for point A(2,5) is:</p>
+                                        \[ \vec{OA} = \begin{pmatrix} 2 \\ 5 \end{pmatrix} \]
                                     </div>
                                 </div>
-                                
                                 <div class="problem-card">
                                     <h3>Question 2</h3>
-                                    <p>Construct a right-angled triangle ABC with AB = 4cm, BC = 3cm and angle B = 90°. Find its circumcentre and draw its circumcircle.</p>
+                                    <p>Write the position vector for point B(-3,4).</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Steps:</p>
-                                        <ol>
-                                            <li>Draw triangle ABC with right angle at B</li>
-                                            <li>Find perpendicular bisectors of AB and BC</li>
-                                            <li>Their intersection is the circumcentre</li>
-                                            <li>Measure distance to any vertex and draw the circumcircle</li>
-                                        </ol>
+                                        <p>The position vector for point B(-3,4) is:</p>
+                                        \[ \vec{OB} = \begin{pmatrix} -3 \\ 4 \end{pmatrix} \]
                                     </div>
                                 </div>
-                                
                                 <div class="problem-card">
                                     <h3>Question 3</h3>
-                                    <p>Construct a scalene triangle ABC with AB = 5cm, BC = 6cm and AC = 7cm. Find both its incentre and circumcentre.</p>
+                                    <p>Draw the position vector for point C(1,-2).</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Steps:</p>
+                                        <p>To draw the position vector for C(1,-2):</p>
                                         <ol>
-                                            <li>Draw triangle ABC with given sides</li>
-                                            <li>For incentre: Bisect angles A and C</li>
-                                            <li>For circumcentre: Find perpendicular bisectors of AB and BC</li>
-                                            <li>Note their different positions</li>
-                                        </ol>
-                                    </div>
-                                </div>
-                                
-                                <div class="problem-card">
-                                    <h3>Question 4</h3>
-                                    <p>Construct an isosceles triangle ABC with AB = AC = 5cm and BC = 6cm. Draw both its incircle and circumcircle.</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <p>Steps:</p>
-                                        <ol>
-                                            <li>Draw triangle ABC with AB = AC = 5cm, BC = 6cm</li>
-                                            <li>Find incentre by bisecting angles A and B</li>
-                                            <li>Find circumcentre by bisecting sides AB and BC</li>
-                                            <li>Draw both circles with appropriate radii</li>
+                                            <li>Start at origin O(0,0)</li>
+                                            <li>Draw arrow to point (1,-2)</li>
+                                            <li>Label as \(\vec{OC}\)</li>
                                         </ol>
                                     </div>
                                 </div>
@@ -399,6 +317,164 @@
                             </div>
                         </section>
 
+                        <!-- Vector Notation Section -->
+                        <section id="notation" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-pen"></i> Vector Notation
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Different Ways to Represent Vectors
+                                </h3>
+                                <p>
+                                    Vectors can be represented in several equivalent ways. The most common notations are:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Column Vector Form:</h4>
+                                        \[ \vec{v} = \begin{pmatrix} x \\ y \end{pmatrix} \]
+                                    </div>
+                                    <div class="point">
+                                        <h4>Unit Vector Form:</h4>
+                                        \[ \vec{v} = x\mathbf{i} + y\mathbf{j} \]
+                                        <p>where \(\mathbf{i}\) and \(\mathbf{j}\) are unit vectors in the x and y directions</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4>Ordered Pair Form:</h4>
+                                        \[ \vec{v} = (x, y) \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-exchange-alt"></i> Converting Between Notations
+                                </h3>
+                                <p>All these forms represent the same vector and can be converted between each other:</p>
+                                <div class="math-example">
+                                    <p>Example: Convert \(\begin{pmatrix} 3 \\ -1 \end{pmatrix}\) to unit vector form</p>
+                                    \[ \begin{pmatrix} 3 \\ -1 \end{pmatrix} = 3\mathbf{i} - \mathbf{j} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Magnitude Section -->
+                        <section id="magnitude" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-ruler"></i> Magnitude of Vectors
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Calculating Magnitude
+                                </h3>
+                                <p>
+                                    The magnitude (length) of a vector \(\vec{v} = \begin{pmatrix} x \\ y \end{pmatrix}\) is calculated using the Pythagorean theorem:
+                                </p>
+                                \[ |\vec{v}| = \sqrt{x^2 + y^2} \]
+                                
+                                <div class="math-example">
+                                    <p>Example: Find the magnitude of \(\vec{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}\)</p>
+                                    \[ |\vec{v}| = \sqrt{3^2 + 4^2} = \sqrt{9 + 16} = \sqrt{25} = 5 \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-compass"></i> Direction of Vectors
+                                </h3>
+                                <p>
+                                    The direction of a vector can be described by the angle it makes with the positive x-axis, calculated as:
+                                </p>
+                                \[ \theta = \tan^{-1}\left(\frac{y}{x}\right) \]
+                                
+                                <div class="math-example">
+                                    <p>Example: Find the direction of \(\vec{v} = \begin{pmatrix} 1 \\ 1 \end{pmatrix}\)</p>
+                                    \[ \theta = \tan^{-1}\left(\frac{1}{1}\right) = 45^\circ \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the magnitude of the vector \(\begin{pmatrix} 6 \\ 8 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ |\vec{v}| = \sqrt{6^2 + 8^2} = \sqrt{36 + 64} = \sqrt{100} = 10 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Convert the vector \(2\mathbf{i} - 5\mathbf{j}\) to column vector form.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ 2\mathbf{i} - 5\mathbf{j} = \begin{pmatrix} 2 \\ -5 \end{pmatrix} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Find the direction (angle) of the vector \(\begin{pmatrix} \sqrt{3} \\ 1 \end{pmatrix}\).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[ \theta = \tan^{-1}\left(\frac{1}{\sqrt{3}}\right) = 30^\circ \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Applications Section -->
+                        <section id="applications" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-rocket"></i> Real-world Applications
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Where Vectors Are Used
+                                </h3>
+                                <p>
+                                    Position vectors have many practical applications in science and engineering:
+                                </p>
+                                <ul>
+                                    <li><strong>Physics:</strong> Describing forces, velocity, and acceleration</li>
+                                    <li><strong>Navigation:</strong> GPS systems use vectors to determine position</li>
+                                    <li><strong>Computer Graphics:</strong> Positioning objects in 2D and 3D space</li>
+                                    <li><strong>Robotics:</strong> Controlling movement and positioning of robotic arms</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-map-marked-alt"></i> Navigation Example
+                                </h3>
+                                <p>
+                                    If a ship is at position (3,4) relative to port (0,0), its position vector is:
+                                </p>
+                                \[ \vec{v} = \begin{pmatrix} 3 \\ 4 \end{pmatrix} \]
+                                <p>
+                                    The magnitude \(|\vec{v}| = 5\) km tells how far the ship is from port, and the 
+                                    direction \(\theta \approx 53.13^\circ\) tells its bearing from the port.
+                                </p>
+                            </div>
+                        </section>
+
                         <!-- Speed Test Game -->
                         <section id="quick-test" class="lesson-section">
                             <h2 class="section-title">
@@ -409,7 +485,7 @@
                                     <h4>
                                         <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
                                     </h4>
-                                    <p class="game-description">Test your geometry skills through progressively challenging levels</p>
+                                    <p class="game-description">Test your vector skills through progressively challenging levels</p>
                                 </div>
                                 
                                 <div class="game-card">

@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>3D Shapes and Surface Area | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on identifying cuboids and triangular prisms, drawing nets, and calculating surface area for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="3D Shapes and Surface Area | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to identify cuboids and triangular prisms, draw their nets, and calculate surface area">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/geometry/3d-shapes-and-surface-area">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">3D Shapes and Surface Area</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>3D Shapes & Surface Area</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#identify-shapes"><i class="fas fa-chevron-right"></i> Identify Shapes</a></li>
+                                <li><a href="#drawing-nets"><i class="fas fa-chevron-right"></i> Drawing Nets</a></li>
+                                <li><a href="#calculate-area"><i class="fas fa-chevron-right"></i> Calculate Surface Area</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>3D Shapes</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Three-dimensional (3D) shapes</strong> are solid objects that have length, width, and height. 
+                                    In this lesson, we will focus on two important 3D shapes: cuboids and triangular prisms.
+                                </p>
+                                <p>
+                                    Understanding these shapes involves being able to identify them, visualize their nets (2D layouts that can be folded to form the 3D shape), 
+                                    and calculate their surface areas by adding up the areas of all their faces.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Identify Shapes Section -->
+                        <section id="identify-shapes" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Identify Shapes
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Cuboids and Triangular Prisms
+                                </h3>
+                                <p>Let's learn to identify these two important 3D shapes:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Cuboid</h4>
+                                        <p>A box-shaped object with six rectangular faces. All angles are right angles.</p>
+                                        <p><strong>Examples:</strong> Books, bricks, cereal boxes</p>
+                                        <p><strong>Key Features:</strong></p>
+                                        <ul>
+                                            <li>6 rectangular faces</li>
+                                            <li>12 edges</li>
+                                            <li>8 vertices (corners)</li>
+                                            <li>Opposite faces are identical</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Triangular Prism</h4>
+                                        <p>A prism with two triangular bases and three rectangular faces.</p>
+                                        <p><strong>Examples:</strong> Toblerone package, roof structures</p>
+                                        <p><strong>Key Features:</strong></p>
+                                        <ul>
+                                            <li>2 triangular bases</li>
+                                            <li>3 rectangular lateral faces</li>
+                                            <li>9 edges</li>
+                                            <li>6 vertices</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Practice Identifying Shapes -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-check-circle"></i> Practice Identifying Shapes
+                                </h3>
+                                <p>Look at these objects and identify which are cuboids and which are triangular prisms:</p>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Identify the following shapes (cuboid or triangular prism):</p>
+                                        <ol type="a">
+                                            <li>A shoebox</li>
+                                            <li>A pyramid (square base)</li>
+                                            <li>A wedge of cheese</li>
+                                            <li>A rectangular aquarium</li>
+                                            <li>A tent with triangular ends</li>
+                                        </ol>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Answers:</p>
+                                            <ol type="a">
+                                                <li><strong>Cuboid</strong> - It has six rectangular faces</li>
+                                                <li><strong>Not a triangular prism</strong> - This is a pyramid</li>
+                                                <li><strong>Triangular prism</strong> - Often wedge-shaped with triangular faces</li>
+                                                <li><strong>Cuboid</strong> - Rectangular faces all around</li>
+                                                <li><strong>Triangular prism</strong> - Has triangular ends and rectangular sides</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Drawing Nets Section -->
+                        <section id="drawing-nets" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-pencil-ruler"></i> Drawing Nets
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-drafting-compass"></i> Understanding Nets
+                                </h3>
+                                <p>
+                                    A <strong>net</strong> is a 2D pattern that can be folded to form a 3D shape. 
+                                    It shows all the faces of the shape laid out flat.
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Cuboid Net</h4>
+                                        <p>A cuboid net consists of six rectangles arranged in a cross or other configuration where:</p>
+                                        <ul>
+                                            <li>Opposite faces are identical</li>
+                                            <li>Each rectangle represents one face of the cuboid</li>
+                                            <li>Adjacent rectangles share edges</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Triangular Prism Net</h4>
+                                        <p>A triangular prism net consists of:</p>
+                                        <ul>
+                                            <li>Two identical triangles (the bases)</li>
+                                            <li>Three rectangles (the lateral faces)</li>
+                                            <li>The rectangles connect to the sides of the triangles</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Drawing Practice -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pencil-alt"></i> Drawing Practice
+                                </h3>
+                                <p>Follow these steps to draw nets for cuboids and triangular prisms:</p>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-cube"></i>
+                                            <h3>Drawing a Cuboid Net</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ol>
+                                                <li>Draw a central rectangle (this will be the front face)</li>
+                                                <li>Attach identical rectangles to the top, bottom, left and right</li>
+                                                <li>Add one more rectangle to either the right or left of this arrangement</li>
+                                                <li>Ensure all rectangles are properly aligned and sized</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-mountain"></i>
+                                            <h3>Drawing a Triangular Prism Net</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <ol>
+                                                <li>Draw a triangle (this will be one base)</li>
+                                                <li>From each side of the triangle, draw a rectangle outward</li>
+                                                <li>The three rectangles should be of equal length</li>
+                                                <li>At the end of the rectangles, draw another identical triangle</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Draw the net of a cuboid with dimensions 4cm × 3cm × 2cm.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Steps:</p>
+                                            <ol>
+                                                <li>Draw a central rectangle 4cm × 3cm (front face)</li>
+                                                <li>Above it, draw a 4cm × 2cm rectangle (top face)</li>
+                                                <li>Below it, draw another 4cm × 2cm rectangle (bottom face)</li>
+                                                <li>To the left, draw a 3cm × 2cm rectangle (left side face)</li>
+                                                <li>To the right of the central rectangle, draw another 3cm × 2cm rectangle (right side face)</li>
+                                                <li>To the right of that, draw a final 4cm × 3cm rectangle (back face)</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="problem-card">
+                                        <h3>Question 2</h3>
+                                        <p>Draw the net of a triangular prism where the triangular bases are equilateral triangles with 3cm sides, and the length of the prism is 5cm.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Steps:</p>
+                                            <ol>
+                                                <li>Draw an equilateral triangle with 3cm sides (one base)</li>
+                                                <li>From each side of the triangle, draw a rectangle 5cm long (lateral faces)</li>
+                                                <li>At the ends of these rectangles, draw another identical equilateral triangle</li>
+                                                <li>This creates a net with 2 triangles and 3 rectangles</li>
+                                            </ol>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Calculate Surface Area Section -->
+                        <section id="calculate-area" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Calculate Surface Area
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler-combined"></i> Surface Area Concept
+                                </h3>
+                                <p>
+                                    The <strong>surface area</strong> of a 3D shape is the total area of all its faces. 
+                                    Using nets makes it easier to calculate surface area because we can see all the faces at once.
+                                </p>
+                                <p>General steps:</p>
+                                <ol>
+                                    <li>Draw or visualize the net of the shape</li>
+                                    <li>Identify all the individual faces</li>
+                                    <li>Calculate the area of each face</li>
+                                    <li>Add all the areas together</li>
+                                </ol>
+                            </div>
+                            
+                            <!-- Calculation Methods -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Calculation Methods
+                                </h3>
+                                
+                                <div class="method-cards">
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-cube"></i>
+                                            <h3>Cuboid Surface Area</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>For a cuboid with length (l), width (w), and height (h):</p>
+                                            <p>There are three pairs of identical faces:</p>
+                                            <ul>
+                                                <li>Front and back: l × h</li>
+                                                <li>Top and bottom: l × w</li>
+                                                <li>Left and right sides: w × h</li>
+                                            </ul>
+                                            <p>Total Surface Area = 2(lw + lh + wh)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="method-card">
+                                        <div class="method-header">
+                                            <i class="fas fa-mountain"></i>
+                                            <h3>Triangular Prism Surface Area</h3>
+                                        </div>
+                                        <div class="method-body">
+                                            <p>For a triangular prism with:</p>
+                                            <ul>
+                                                <li>Base of triangle (b)</li>
+                                                <li>Height of triangle (h)</li>
+                                                <li>Length of prism (l)</li>
+                                            </ul>
+                                            <p>Surface Area = 2 × (Area of triangular base) + (Perimeter of base × length)</p>
+                                            <p>Or more specifically:</p>
+                                            <p>= 2 × (½bh) + (a + b + c) × l</p>
+                                            <p>Where a, b, c are the sides of the triangular base</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Surface Area Practice -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-pen-fancy"></i> Practice Problems
+                                </h3>
+                                
+                                <div class="practice-problems">
+                                    <div class="problem-card">
+                                        <h3>Question 1</h3>
+                                        <p>Calculate the surface area of a cuboid with dimensions 5cm × 4cm × 3cm.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Using the formula: 2(lw + lh + wh)</p>
+                                            <p>= 2[(5×4) + (5×3) + (4×3)]</p>
+                                            <p>= 2[20 + 15 + 12]</p>
+                                            <p>= 2[47]</p>
+                                            <p>= 94 cm²</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="problem-card">
+                                        <h3>Question 2</h3>
+                                        <p>A triangular prism has a triangular base with sides 3cm, 4cm, 5cm and height 2.4cm (for the 4cm base). The length of the prism is 6cm. Calculate its surface area.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>First, calculate the area of the triangular base:</p>
+                                            <p>Area = ½ × base × height = ½ × 4 × 2.4 = 4.8 cm²</p>
+                                            <p>There are two bases: 2 × 4.8 = 9.6 cm²</p>
+                                            <p>Now calculate the lateral (rectangular) faces:</p>
+                                            <p>Three rectangles with lengths 3cm, 4cm, 5cm and height 6cm:</p>
+                                            <p>Areas = 3×6 = 18 cm², 4×6 = 24 cm², 5×6 = 30 cm²</p>
+                                            <p>Total lateral area = 18 + 24 + 30 = 72 cm²</p>
+                                            <p>Total surface area = 9.6 + 72 = 81.6 cm²</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="problem-card">
+                                        <h3>Question 3</h3>
+                                        <p>From the net shown below (imagine a cuboid net), calculate the surface area if the rectangles have dimensions: two 6cm×4cm, two 6cm×2cm, and two 4cm×2cm.</p>
+                                        <button class="solution-toggle">Show Solution</button>
+                                        <div class="solution">
+                                            <p>Surface Area = sum of all rectangular areas</p>
+                                            <p>= 2×(6×4) + 2×(6×2) + 2×(4×2)</p>
+                                            <p>= 2×24 + 2×12 + 2×8</p>
+                                            <p>= 48 + 24 + 16</p>
+                                            <p>= 88 cm²</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Comprehensive Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Comprehensive Practice</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Problem 1</h3>
+                                    <p>A cereal box has dimensions 20cm × 10cm × 30cm.</p>
+                                    <ol type="a">
+                                        <li>Identify the shape of the cereal box</li>
+                                        <li>Draw its net</li>
+                                        <li>Calculate its surface area</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>a) The cereal box is a <strong>cuboid</strong>.</p>
+                                        <p>b) Net would consist of six rectangles: two 20×10 (top/bottom), two 20×30 (front/back), and two 10×30 (sides).</p>
+                                        <p>c) Surface Area = 2[(20×10) + (20×30) + (10×30)] = 2[200 + 600 + 300] = 2[1100] = 2200 cm²</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Problem 2</h3>
+                                    <p>A triangular prism has an equilateral triangular base with 6cm sides and a length of 10cm.</p>
+                                    <ol type="a">
+                                        <li>Draw its net</li>
+                                        <li>Calculate the height of the triangular base</li>
+                                        <li>Find the total surface area</li>
+                                    </ol>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>a) Net consists of two equilateral triangles and three 6cm×10cm rectangles.</p>
+                                        <p>b) Height of equilateral triangle = (√3/2) × side = (1.732/2) × 6 ≈ 5.196 cm</p>
+                                        <p>c) Surface Area:</p>
+                                        <p>Area of two triangles = 2 × (½ × 6 × 5.196) ≈ 31.176 cm²</p>
+                                        <p>Area of three rectangles = 3 × (6 × 10) = 180 cm²</p>
+                                        <p>Total ≈ 31.176 + 180 = 211.176 cm²</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Timed Test
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
