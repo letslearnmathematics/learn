@@ -581,14 +581,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Word Problems on Factorisation", url: "./math-jhs/jhs3/algebra/algebraic-expressions/word-problems-factorisation" }
             ],
             "Variables and Equations": [
-                { name: "Single Variable Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/single-variable-linear-inequalities.html" },
-                { name: "Solution Set of Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/solution-set.html" },
-                { name: "Word Problems on Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/word-problems-linear-inequalities.html" }
+                { name: "Single Variable Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/single-variable-linear-inequalities" },
+                { name: "Solution Set of Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/solution-set" },
+                { name: "Word Problems on Linear Inequalities", url: "./math-jhs/jhs3/algebra/variables-and-equations/word-problems-linear-inequalities" }
             ],
             "Shapes and Space": [
-                { name: "Sum of Angles in a Polygon", url: "./math-jhs/jhs3/geometry/shapes-and-space/sum-of-angles-polygon.html" },
-                { name: "Similar and Congruent Triangles ", url: "./math-jhs/jhs3/geometry/shapes-and-space/similar-congruent-triangles.html" },
-                { name: "Inscribed & Circumscribed Circles of Triangles", url: "./math-jhs/jhs3/geometry/shapes-and-space/inscribed-circumscribed.html" },
+                { name: "Sum of Angles in a Polygon", url: "./math-jhs/jhs3/geometry/shapes-and-space/sum-of-angles-polygon" },
+                { name: "Similar and Congruent Triangles ", url: "./math-jhs/jhs3/geometry/shapes-and-space/similar-congruent-triangles" },
+                { name: "Inscribed & Circumscribed Circles of Triangles", url: "./math-jhs/jhs3/geometry/shapes-and-space/inscribed-circumscribed" },
                 { name: "Constructions of Parallelograms", url: "./math-jhs/jhs3/geometry/shapes-and-space/construction-parallelogram.html" }
             ],
             "Measurements": [

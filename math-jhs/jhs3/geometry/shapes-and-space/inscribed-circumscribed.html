@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Sum of Angles in Polygons | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on calculating the sum of angles in polygons for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Sum of Angles in Polygons | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to calculate the sum of angles in polygons and find missing angles">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/geometry/sum-of-angles-in-polygons">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Sum of Angles in Polygons</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Sum of Angles in Polygons</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#triangle-angles"><i class="fas fa-chevron-right"></i> Angles in Triangles</a></li>
+                                <li><a href="#quadrilateral-angles"><i class="fas fa-chevron-right"></i> Angles in Quadrilaterals</a></li>
+                                <li><a href="#polygon-angles"><i class="fas fa-chevron-right"></i> Angles in Polygons</a></li>
+                                <li><a href="#missing-angles"><i class="fas fa-chevron-right"></i> Finding Missing Angles</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Geometry</span>
+                        </nav>
+
+                        <!-- Introduction Section -->
+                        <section id="introduction" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction to Polygons
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A <strong>polygon</strong> is a closed two-dimensional shape with straight sides. Polygons are named according to the number of sides they have:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Common Polygons:</h4>
+                                        <ul>
+                                            <li><strong>Triangle:</strong> 3 sides</li>
+                                            <li><strong>Quadrilateral:</strong> 4 sides</li>
+                                            <li><strong>Pentagon:</strong> 5 sides</li>
+                                            <li><strong>Hexagon:</strong> 6 sides</li>
+                                            <li><strong>Heptagon:</strong> 7 sides</li>
+                                            <li><strong>Octagon:</strong> 8 sides</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Regular vs Irregular:</h4>
+                                        <p>A <strong>regular polygon</strong> has all sides and all angles equal. An <strong>irregular polygon</strong> has sides and/or angles that are not equal.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p>The sum of interior angles in any polygon can be calculated using the formula:</p>
+                                    \[ \text{Sum of interior angles} = (n - 2) \times 180° \]
+                                    <p>where \( n \) is the number of sides.</p>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Angles in Triangles Section -->
+                        <section id="triangle-angles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Angles in Triangles
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_TRIANGLES" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of calculating angles in triangles with examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Sum of Angles in a Triangle
+                                </h3>
+                                <p>
+                                    For a triangle (\( n = 3 \)):
+                                </p>
+                                \[
+                                \begin{align*}
+                                \text{Sum of angles} &= (3 - 2) \times 180° \\
+                                &= 1 \times 180° \\
+                                &= 180°
+                                \end{align*}
+                                \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1:</strong> Find the missing angle \( x \) in the triangle below:</p>
+                                    <p>Given angles: 50° and 60°</p>
+                                    \[
+                                    \begin{align*}
+                                    50° + 60° + x &= 180° \\
+                                    110° + x &= 180° \\
+                                    x &= 180° - 110° \\
+                                    x &= 70°
+                                    \end{align*}
+                                    \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Concept
+                                </h3>
+                                <p>
+                                    The sum of interior angles in any triangle is always 180°. This property can be used to find missing angles when two angles are known.
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- Angles in Quadrilaterals Section -->
+                        <section id="quadrilateral-angles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Angles in Quadrilaterals
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_QUADRILATERALS" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of calculating angles in quadrilaterals with examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Sum of Angles in a Quadrilateral
+                                </h3>
+                                <p>
+                                    For a quadrilateral (\( n = 4 \)):
+                                </p>
+                                \[
+                                \begin{align*}
+                                \text{Sum of angles} &= (4 - 2) \times 180° \\
+                                &= 2 \times 180° \\
+                                &= 360°
+                                \end{align*}
+                                \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 2:</strong> Find the missing angle \( x \) in the quadrilateral below:</p>
+                                    <p>Given angles: 80°, 95°, and 110°</p>
+                                    \[
+                                    \begin{align*}
+                                    80° + 95° + 110° + x &= 360° \\
+                                    285° + x &= 360° \\
+                                    x &= 360° - 285° \\
+                                    x &= 75°
+                                    \end{align*}
+                                    \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Concept
+                                </h3>
+                                <p>
+                                    The sum of interior angles in any quadrilateral is always 360°. This property can be used to find missing angles when three angles are known.
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- Angles in Polygons Section -->
+                        <section id="polygon-angles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Angles in Polygons
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_POLYGONS" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of calculating angles in polygons with examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> General Formula for Polygons
+                                </h3>
+                                <p>
+                                    The sum of interior angles for any polygon with \( n \) sides is given by:
+                                </p>
+                                \[
+                                \text{Sum of interior angles} = (n - 2) \times 180°
+                                \]
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 3:</strong> Find the sum of interior angles in a pentagon (\( n = 5 \)):</p>
+                                    \[
+                                    \begin{align*}
+                                    \text{Sum of angles} &= (5 - 2) \times 180° \\
+                                    &= 3 \times 180° \\
+                                    &= 540°
+                                    \end{align*}
+                                    \]
+                                    
+                                    <p><strong>Example 4:</strong> Find the sum of interior angles in a hexagon (\( n = 6 \)):</p>
+                                    \[
+                                    \begin{align*}
+                                    \text{Sum of angles} &= (6 - 2) \times 180° \\
+                                    &= 4 \times 180° \\
+                                    &= 720°
+                                    \end{align*}
+                                    \]
+                                </div>
+                            </div>
+                            
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-lightbulb"></i> Key Concept
+                                </h3>
+                                <p>
+                                    The formula \((n - 2) \times 180°\) works for any polygon, whether regular or irregular. For regular polygons, each interior angle can be found by dividing the sum by \( n \).
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- Finding Missing Angles Section -->
+                        <section id="missing-angles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-question-circle"></i> Finding Missing Angles
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID_MISSING_ANGLES" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this explanation of finding missing angles in polygons with examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-calculator"></i> Solving for Missing Angles
+                                </h3>
+                                <p>
+                                    To find a missing angle in a polygon:
+                                </p>
+                                <ol>
+                                    <li>Calculate the sum of interior angles using \((n - 2) \times 180°\)</li>
+                                    <li>Add up all the known angles</li>
+                                    <li>Subtract the sum of known angles from the total sum</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 5:</strong> Find the missing angle \( x \) in a pentagon with angles 100°, 110°, 120°, and 130°:</p>
+                                    \[
+                                    \begin{align*}
+                                    \text{Total sum} &= (5 - 2) \times 180° = 540° \\
+                                    \text{Sum of known angles} &= 100° + 110° + 120° + 130° = 460° \\
+                                    x &= 540° - 460° = 80°
+                                    \end{align*}
+                                    \]
+                                    
+                                    <p><strong>Example 6:</strong> Find two missing angles \( x \) and \( y \) in a hexagon with angles 120°, 115°, 130°, and 125° (given \( x = y \)):</p>
+                                    \[
+                                    \begin{align*}
+                                    \text{Total sum} &= (6 - 2) \times 180° = 720° \\
+                                    \text{Sum of known angles} &= 120° + 115° + 130° + 125° = 490° \\
+                                    x + y &= 720° - 490° = 230° \\
+                                    \text{Since } x = y, \quad 2x &= 230° \\
+                                    x &= 115°, \quad y = 115°
+                                    \end{align*}
+                                    \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the sum of interior angles in a heptagon (7-sided polygon).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                        \text{Sum} &= (7 - 2) \times 180° \\
+                                        &= 5 \times 180° \\
+                                        &= 900°
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A triangle has angles measuring 45° and 60°. Find the measure of the third angle.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                        45° + 60° + x &= 180° \\
+                                        105° + x &= 180° \\
+                                        x &= 180° - 105° \\
+                                        x &= 75°
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>A quadrilateral has angles measuring 80°, 95°, and 110°. Find the measure of the fourth angle.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                        80° + 95° + 110° + x &= 360° \\
+                                        285° + x &= 360° \\
+                                        x &= 360° - 285° \\
+                                        x &= 75°
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A regular pentagon has five equal angles. Calculate the measure of each interior angle.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                        \text{Total sum} &= (5 - 2) \times 180° = 540° \\
+                                        \text{Each angle} &= 540° ÷ 5 = 108°
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>An irregular hexagon has angles measuring 120°, 130°, 140°, 110°, and 115°. Find the measure of the sixth angle.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        \[
+                                        \begin{align*}
+                                        \text{Total sum} &= (6 - 2) \times 180° = 720° \\
+                                        \text{Sum of known angles} &= 120° + 130° + 140° + 110° + 115° = 615° \\
+                                        x &= 720° - 615° = 105°
+                                        \end{align*}
+                                        \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

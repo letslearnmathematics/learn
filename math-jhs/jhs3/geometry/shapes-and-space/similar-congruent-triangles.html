@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Similar and Congruent Triangles | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Similar and Congruent Triangles for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Similar and Congruent Triangles | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to Identify Similar and Congruent Triangles and Solve Related Problems">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/geometry/similar-congruent-triangles">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Similar and Congruent Triangles</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Geometry</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Similar & Congruent Triangles</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#similar-triangles"><i class="fas fa-chevron-right"></i> Similar Triangles</a></li>
+                                <li><a href="#congruent-triangles"><i class="fas fa-chevron-right"></i> Congruent Triangles</a></li>
+                                <li><a href="#solve-for-x"><i class="fas fa-chevron-right"></i> Solving for Variables</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Geometry</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    <strong>Triangles</strong> are fundamental shapes in geometry with three sides and three angles. 
+                                    Understanding the relationships between triangles helps us solve complex geometric problems.
+                                </p>
+                                <p>
+                                    In this lesson, we'll explore two important relationships between triangles:
+                                </p>
+                                <ol>
+                                    <li><strong>Similar Triangles</strong> - Triangles that have the same shape but may differ in size</li>
+                                    <li><strong>Congruent Triangles</strong> - Triangles that are identical in both shape and size</li>
+                                </ol>
+                            </div>
+                        </section>
+                        
+                        <!-- Similar Triangles Section -->
+                        <section id="similar-triangles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-shapes"></i> Similar Triangles
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example1" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of similar triangles with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Properties of Similar Triangles
+                                </h3>
+                                <p>Two triangles are similar if:</p>
+                                <ol>
+                                    <li>Their corresponding angles are equal (AAA)</li>
+                                    <li>Their corresponding sides are proportional (SSS)</li>
+                                    <li>Two sides are proportional and the included angles are equal (SAS)</li>
+                                </ol>
+                                <p>The symbol for similarity is ∼ (e.g., △ABC ∼ △DEF)</p>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Solving Problems with Similar Triangles
+                                </h3>
+                                <p>
+                                    When triangles are similar, we can set up proportions between corresponding sides to find unknown values.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Given △ABC ∼ △DEF, with AB = 4cm, BC = 6cm, and DE = 8cm, find EF.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Since the triangles are similar, corresponding sides are proportional:</p>
+                                    \[ \frac{AB}{DE} = \frac{BC}{EF} \]
+                                    \[ \frac{4}{8} = \frac{6}{EF} \]
+                                    \[ \frac{1}{2} = \frac{6}{EF} \]
+                                    \[ EF = 12 \text{ cm} \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>△PQR ∼ △XYZ. If PQ = 5cm, QR = 7cm, and XY = 15cm, find the length of YZ.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>The triangles are similar, so corresponding sides are proportional:</p>
+                                        \[ \frac{PQ}{XY} = \frac{QR}{YZ} \]
+                                        \[ \frac{5}{15} = \frac{7}{YZ} \]
+                                        \[ \frac{1}{3} = \frac{7}{YZ} \]
+                                        \[ YZ = 21 \text{ cm} \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>In the diagram below, DE ∥ BC. Find the length of AD if AB = 12cm, AE = 4cm, and EC = 6cm.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Since DE ∥ BC, △ADE ∼ △ABC by AA similarity.</p>
+                                        \[ \frac{AD}{AB} = \frac{AE}{AC} \]
+                                        \[ \frac{AD}{12} = \frac{4}{10} \]
+                                        \[ AD = \frac{4 \times 12}{10} = 4.8 \text{ cm} \]
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Congruent Triangles Section -->
+                        <section id="congruent-triangles" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-equals"></i> Congruent Triangles
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example2" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of congruent triangles with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Properties of Congruent Triangles
+                                </h3>
+                                <p>Two triangles are congruent if:</p>
+                                <ol>
+                                    <li>All three sides are equal (SSS)</li>
+                                    <li>Two sides and the included angle are equal (SAS)</li>
+                                    <li>Two angles and the included side are equal (ASA)</li>
+                                    <li>Two angles and a non-included side are equal (AAS)</li>
+                                    <li>Right angle, hypotenuse and one side are equal (RHS)</li>
+                                </ol>
+                                <p>The symbol for congruence is ≅ (e.g., △ABC ≅ △DEF)</p>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Solving Problems with Congruent Triangles
+                                </h3>
+                                <p>
+                                    When triangles are congruent, all corresponding sides and angles are equal. This allows us to find unknown values.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> △ABC ≅ △DEF. If AB = 5cm, ∠B = 50°, and ∠C = 70°, find DE and ∠F.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Since the triangles are congruent:</p>
+                                    <p>DE = AB = 5cm (corresponding sides)</p>
+                                    <p>∠F = ∠C = 70° (corresponding angles)</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>△PQR ≅ △XYZ. If PQ = 8cm, QR = 10cm, and PR = 12cm, find the perimeter of △XYZ.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Since the triangles are congruent, all corresponding sides are equal:</p>
+                                        <p>XY = PQ = 8cm</p>
+                                        <p>YZ = QR = 10cm</p>
+                                        <p>XZ = PR = 12cm</p>
+                                        <p>Perimeter = 8 + 10 + 12 = 30cm</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>In the diagram, AB = CD and AD = BC. Prove that △ABD ≅ △CDB.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Given:</p>
+                                        <p>AB = CD (given)</p>
+                                        <p>AD = BC (given)</p>
+                                        <p>BD is common to both triangles</p>
+                                        <p>Therefore, △ABD ≅ △CDB by SSS congruence.</p>
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Solving for Variables Section -->
+                        <section id="solve-for-x" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Solving for Variables
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/example3" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on solving for variables using similarity and congruency.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Strategy for Solving
+                                </h3>
+                                <p>To find unknown variables (like x) in triangle problems:</p>
+                                <ol>
+                                    <li>Determine if the triangles are similar or congruent</li>
+                                    <li>Identify corresponding sides and angles</li>
+                                    <li>Set up appropriate equations based on the relationship</li>
+                                    <li>Solve for the unknown variable</li>
+                                </ol>
+                            </div>
+                            
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Example Problems
+                                </h3>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 1 (Similar Triangles):</strong> Find x in the similar triangles below where AB = 6, DE = 9, BC = x, EF = 12.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    \[ \frac{AB}{DE} = \frac{BC}{EF} \]
+                                    \[ \frac{6}{9} = \frac{x}{12} \]
+                                    \[ \frac{2}{3} = \frac{x}{12} \]
+                                    \[ x = \frac{2 \times 12}{3} = 8 \]
+                                </div>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example 2 (Congruent Triangles):</strong> Given △ABC ≅ △DEF, with AB = 2x + 3 and DE = 11, find x.</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Since the triangles are congruent, AB = DE:</p>
+                                    \[ 2x + 3 = 11 \]
+                                    \[ 2x = 8 \]
+                                    \[ x = 4 \]
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>△ABC ∼ △DEF. If AB = 4, BC = x, DE = 6, and EF = 9, find the value of x.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        \[ \frac{AB}{DE} = \frac{BC}{EF} \]
+                                        \[ \frac{4}{6} = \frac{x}{9} \]
+                                        \[ \frac{2}{3} = \frac{x}{9} \]
+                                        \[ x = \frac{2 \times 9}{3} = 6 \]
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>△PQR ≅ △XYZ. If PQ = 3x - 2 and XY = 10, find the value of x.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Since the triangles are congruent, PQ = XY:</p>
+                                        \[ 3x - 2 = 10 \]
+                                        \[ 3x = 12 \]
+                                        \[ x = 4 \]
+                                    </div>
+                                </div>
+                                <!-- More problems... -->
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

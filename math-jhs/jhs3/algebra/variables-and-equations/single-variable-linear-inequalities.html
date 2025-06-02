@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- SEO and Social Meta Tags -->
+        <title>Linear Inequalities | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on solving linear inequalities for JHS3 Mathematics.">
+        
+        <!-- Favicons -->
+        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../../../site.webmanifest">
+        
+        <!-- Open Graph / Social Media -->
+        <meta property="og:title" content="Linear Inequalities | JHS3 Mathematics">
+        <meta property="og:description" content="Learn to Solve Single Variable Linear Inequalities with Rational Coefficients">
+        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/algebra/linear-inequalities">
+        <meta property="og:type" content="website">
+    
+        <!-- Fonts and Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- CSS -->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+    
+        <!-- MathJax Configuration -->
+        <script>
+            MathJax = {
+                tex: {
+                    inlineMath: [['\\(', '\\)']],
+                    displayMath: [['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                startup: {
+                    ready: () => {
+                        MathJax.startup.defaultReady();
+                        // Add handler to process dynamic content
+                        MathJax.startup.promise.then(() => {
+                            console.log('MathJax ready for dynamic content');
+                            if (window.gameInitialized) {
+                                MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                }
+            };
+        </script>
+        
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+    
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
+            crossorigin="anonymous"></script>
+
+        <!-- Add this to your existing head section -->
+        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+
+        <!--Passco-->
+        <link rel="stylesheet" href="../../css/for-passco.css">
+    </head>
+    <body>
+        <!-- Header Navigation -->
+        <header class="lesson-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="branding">
+                        <a href="../../../../" class="logo-link">
+                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                            <div class="brand-name">
+                                <span class="main-name">Let's Learn</span>
+                                <span class="sub-name">Mathematics</span>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <h1 class="lesson-title">Linear Inequalities</h1>
+                    
+                    <nav class="main-nav">
+                        <ul class="nav-list">
+                            <li><a href="../../../../" class="nav-link">Home</a></li>
+                            <li><a href="../../../../about" class="nav-link">About</a></li>
+                            <li><a href="../../../../blog" class="nav-link">Blog</a></li>
+                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <div class="hamburger">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Lesson Content -->
+        <main class="lesson-container">
+            <div class="container">
+                <div class="lesson-grid">
+                    <!-- Sidebar Navigation -->
+                    <aside class="lesson-sidebar">
+                        <div class="sidebar-card">
+                            <h3 class="sidebar-title">JHS 3: Algebra</h3>
+                            <div class="current-topic">
+                                <i class="fas fa-project-diagram"></i>
+                                <span>Linear Inequalities</span>
+                            </div>
+                            <ul class="topic-menu">
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
+                                <li><a href="#properties"><i class="fas fa-chevron-right"></i> Inequality Properties</a></li>
+                                <li><a href="#solving"><i class="fas fa-chevron-right"></i> Solving Inequalities</a></li>
+                                <li><a href="#word-problems"><i class="fas fa-chevron-right"></i> Word Problems</a></li>
+                                <li><a href="#graphing"><i class="fas fa-chevron-right"></i> Graphing Solutions</a></li>
+                            </ul>
+                            
+                            <div class="level-buttons">
+                                <a href="../../../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                            </div>
+                        </div>
+                        
+                        <div class="quick-links">
+                            <h4>Quick Links</h4>
+                            <a href="#quick-test" class="quick-link">
+                                <i class="fas fa-pen-fancy"></i> Quick Test
+                            </a>
+                            <a href="../../../../passco-jhs" class="quick-link">
+                                <i class="fas fa-file-pdf"></i> PASSCO
+                            </a>
+                        </div>
+                    </aside>
+                    
+                    <!-- Main Content -->
+                    <article class="lesson-content">
+                        <!-- Breadcrumb -->
+                        <nav class="breadcrumb">
+                            <a href="../../../../">Home</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../maths">Mathematics</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <a href="../../../../math-jhs">JHS3</a>
+                            <i class="fas fa-chevron-right"></i>
+                            <span>Linear Inequalities</span>
+                        </nav>
+
+                        <!-- Definition Section -->
+                        <section id="definition" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Introduction
+                            </h2>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    A <strong>linear inequality</strong> is similar to a linear equation but uses inequality signs 
+                                    (&lt;, &gt;, ≤, ≥) instead of an equals sign. It describes a range of possible solutions 
+                                    rather than a single solution.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p>Examples of linear inequalities:</p>
+                                    \[ 3x + 2 > 8 \]
+                                    \[ \frac{1}{2}y - 4 \leq 7 \]
+                                    \[ -2x + 5 \geq 3x - 1 \]
+                                </div>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Inequality Symbols:</h4>
+                                        <ul>
+                                            <li>&lt; : less than</li>
+                                            <li>&gt; : greater than</li>
+                                            <li>≤ : less than or equal to</li>
+                                            <li>≥ : greater than or equal to</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Solution Set:</h4>
+                                        <p>All real numbers that make the inequality true when substituted for the variable.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        
+                        <!-- Properties Section -->
+                        <section id="properties" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-edit"></i> Inequality Properties
+                            </h2>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation of inequality properties with worked examples.</p>
+                                </div>
+                            </div>
+                            -->
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Key Properties
+                                </h3>
+                                <p>When solving inequalities, these properties help maintain the inequality's truth:</p>
+                            </div>
+                            
+                            <!-- Methods-->
+                            <div class="method-cards">
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-plus-circle"></i>
+                                        <h3>Addition Property</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>You can add the same number to both sides without changing the inequality.</p>
+                                        <div class="math-example">
+                                            <p>If \( a > b \), then \( a + c > b + c \)</p>
+                                            <p>Example: \( x - 3 < 5 \) becomes \( x < 8 \) after adding 3 to both sides</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-minus-circle"></i>
+                                        <h3>Subtraction Property</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>You can subtract the same number from both sides without changing the inequality.</p>
+                                        <div class="math-example">
+                                            <p>If \( a \geq b \), then \( a - c \geq b - c \)</p>
+                                            <p>Example: \( x + 4 \geq 9 \) becomes \( x \geq 5 \) after subtracting 4 from both sides</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-times-circle"></i>
+                                        <h3>Multiplication Property</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>When multiplying both sides by a <strong>positive</strong> number, the inequality remains the same.</p>
+                                        <div class="math-example">
+                                            <p>If \( a < b \) and \( c > 0 \), then \( ac < bc \)</p>
+                                            <p>Example: \( \frac{x}{2} > 3 \) becomes \( x > 6 \) after multiplying both sides by 2</p>
+                                        </div>
+                                        <p class="warning">When multiplying by a <strong>negative</strong> number, you must reverse the inequality sign.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-divide"></i>
+                                        <h3>Division Property</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>When dividing both sides by a <strong>positive</strong> number, the inequality remains the same.</p>
+                                        <div class="math-example">
+                                            <p>If \( a \leq b \) and \( c > 0 \), then \( \frac{a}{c} \leq \frac{b}{c} \)</p>
+                                            <p>Example: \( 4x \leq 12 \) becomes \( x \leq 3 \) after dividing both sides by 4</p>
+                                        </div>
+                                        <p class="warning">When dividing by a <strong>negative</strong> number, you must reverse the inequality sign.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Solving Section -->
+                        <section id="solving" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-calculator"></i> Solving Inequalities
+                            </h2>
+
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Step-by-Step Process
+                                </h3>
+                                <ol class="step-list">
+                                    <li><strong>Simplify both sides:</strong> Clear parentheses and combine like terms</li>
+                                    <li><strong>Isolate the variable term:</strong> Use addition/subtraction to get variable terms on one side and constants on the other</li>
+                                    <li><strong>Solve for the variable:</strong> Use multiplication/division to get the variable by itself</li>
+                                    <li><strong>Check your solution:</strong> Verify by substituting back into the original inequality</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1: Solve \( 2x + 5 < 13 \)</h4>
+                                    <p>Step 1: Subtract 5 from both sides</p>
+                                    \[ 2x < 8 \]
+                                    <p>Step 2: Divide both sides by 2</p>
+                                    \[ x < 4 \]
+                                    <p>Solution: All real numbers less than 4</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2: Solve \( -3x + 7 \geq 16 \)</h4>
+                                    <p>Step 1: Subtract 7 from both sides</p>
+                                    \[ -3x \geq 9 \]
+                                    <p>Step 2: Divide both sides by -3 (remember to reverse the inequality!)</p>
+                                    \[ x \leq -3 \]
+                                    <p>Solution: All real numbers less than or equal to -3</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Solve the inequality: \( 5x - 3 \leq 12 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Step 1: Add 3 to both sides</p>
+                                        \[ 5x \leq 15 \]
+                                        <p>Step 2: Divide both sides by 5</p>
+                                        \[ x \leq 3 \]
+                                        <p>Solution: All real numbers less than or equal to 3</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Solve the inequality: \( \frac{2}{3}x + 4 > 10 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Step 1: Subtract 4 from both sides</p>
+                                        \[ \frac{2}{3}x > 6 \]
+                                        <p>Step 2: Multiply both sides by 3/2</p>
+                                        \[ x > 9 \]
+                                        <p>Solution: All real numbers greater than 9</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Solve the inequality: \( -4x + 7 < 23 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Step 1: Subtract 7 from both sides</p>
+                                        \[ -4x < 16 \]
+                                        <p>Step 2: Divide both sides by -4 (remember to reverse the inequality!)</p>
+                                        \[ x > -4 \]
+                                        <p>Solution: All real numbers greater than -4</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Solve the inequality: \( 3(x - 2) \geq 5x + 4 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Step 1: Expand the left side</p>
+                                        \[ 3x - 6 \geq 5x + 4 \]
+                                        <p>Step 2: Subtract 3x from both sides</p>
+                                        \[ -6 \geq 2x + 4 \]
+                                        <p>Step 3: Subtract 4 from both sides</p>
+                                        \[ -10 \geq 2x \]
+                                        <p>Step 4: Divide both sides by 2</p>
+                                        \[ -5 \geq x \]
+                                        <p>Solution: All real numbers less than or equal to -5 (can also be written as \( x \leq -5 \))</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Solve the inequality: \( \frac{x+3}{2} - \frac{x-1}{4} \leq 1 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Step 1: Find common denominator (4) and combine terms</p>
+                                        \[ \frac{2(x+3)}{4} - \frac{x-1}{4} \leq 1 \]
+                                        \[ \frac{2x+6 - x + 1}{4} \leq 1 \]
+                                        \[ \frac{x + 7}{4} \leq 1 \]
+                                        <p>Step 2: Multiply both sides by 4</p>
+                                        \[ x + 7 \leq 4 \]
+                                        <p>Step 3: Subtract 7 from both sides</p>
+                                        \[ x \leq -3 \]
+                                        <p>Solution: All real numbers less than or equal to -3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <!-- Word Problems Section -->
+                        <section id="word-problems" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-question-circle"></i> Word Problems
+                            </h2>
+
+                            <div class="concept-box">
+                                <p>Many real-world situations can be modeled with inequalities. The key steps are:</p>
+                                <ol>
+                                    <li>Identify what the variable represents</li>
+                                    <li>Translate the words into an inequality</li>
+                                    <li>Solve the inequality</li>
+                                    <li>Interpret the solution in the original context</li>
+                                </ol>
+                                
+                                <div class="math-example">
+                                    <h4>Example 1: Budget Constraint</h4>
+                                    <p>Kwame wants to buy some notebooks that cost ¢12 each and pens that cost ¢5 each. He has at most ¢50 to spend. If he buys 3 notebooks, how many pens can he buy?</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Let \( p \) = number of pens</p>
+                                    <p>Cost of notebooks: \( 3 \times 12 = 36 \) cedis</p>
+                                    <p>Cost of pens: \( 5p \) cedis</p>
+                                    <p>Total cost must be ≤ 50 cedis:</p>
+                                    \[ 36 + 5p \leq 50 \]
+                                    <p>Subtract 36 from both sides:</p>
+                                    \[ 5p \leq 14 \]
+                                    <p>Divide both sides by 5:</p>
+                                    \[ p \leq 2.8 \]
+                                    <p>Since Kwame can't buy a fraction of a pen, he can buy at most 2 pens.</p>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Example 2: Grade Requirement</h4>
+                                    <p>Ama needs an average of at least 80% on her five tests to get a B. Her first four test scores are 78, 85, 75, and 82. What score does she need on her fifth test?</p>
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Let \( x \) = fifth test score</p>
+                                    <p>Average must be ≥ 80:</p>
+                                    \[ \frac{78 + 85 + 75 + 82 + x}{5} \geq 80 \]
+                                    <p>Combine like terms:</p>
+                                    \[ \frac{320 + x}{5} \geq 80 \]
+                                    <p>Multiply both sides by 5:</p>
+                                    \[ 320 + x \geq 400 \]
+                                    <p>Subtract 320 from both sides:</p>
+                                    \[ x \geq 80 \]
+                                    <p>Ama needs at least 80% on her fifth test.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Graphing Section -->
+                        <section id="graphing" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-line"></i> Graphing Solutions
+                            </h2>
+
+                            <div class="concept-box">
+                                <p>The solutions to inequalities can be represented on a number line:</p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Open Circle (○)</h4>
+                                        <p>Used for &lt; or &gt; inequalities (not including the endpoint)</p>
+                                        <p>Example: \( x > 2 \)</p>
+                                        <img src="../../../../images/graph-greater-than.png" alt="x > 2 graph" class="place">
+                                    </div>
+                                    
+                                    <div class="point">
+                                        <h4>Closed Circle (●)</h4>
+                                        <p>Used for ≤ or ≥ inequalities (including the endpoint)</p>
+                                        <p>Example: \( x \leq -1 \)</p>
+                                        <img src="../../../../images/graph-less-equal.png" alt="x ≤ -1 graph" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="math-example">
+                                    <h4>Compound Inequalities</h4>
+                                    <p>When a variable is between two values:</p>
+                                    <p>Example: \( -3 \leq x < 2 \)</p>
+                                    <img src="../../../../images/graph-compound.png" alt="-3 ≤ x < 2 graph" class="place">
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Final Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Final Practice</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Solve and graph: \( 2x - 5 < 3 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Step 1: Add 5 to both sides</p>
+                                        \[ 2x < 8 \]
+                                        <p>Step 2: Divide both sides by 2</p>
+                                        \[ x < 4 \]
+                                        <p>Graph: Open circle at 4 with arrow to the left</p>
+                                        <img src="../../../../images/graph-less-than.png" alt="x < 4 graph" class="place">
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>A phone plan charges ¢50 per month plus ¢0.25 per text message. If you want to spend no more than ¢100 per month, how many texts can you send?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( t \) = number of text messages</p>
+                                        <p>Monthly cost must be ≤ 100:</p>
+                                        \[ 50 + 0.25t \leq 100 \]
+                                        <p>Subtract 50 from both sides:</p>
+                                        \[ 0.25t \leq 50 \]
+                                        <p>Divide both sides by 0.25:</p>
+                                        \[ t \leq 200 \]
+                                        <p>You can send at most 200 text messages per month.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Solve and graph: \( -2 \leq \frac{x+1}{3} < 4 \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Break into two inequalities:</p>
+                                        <p>Part 1: \( -2 \leq \frac{x+1}{3} \)</p>
+                                        <p>Multiply both sides by 3:</p>
+                                        \[ -6 \leq x + 1 \]
+                                        <p>Subtract 1 from both sides:</p>
+                                        \[ -7 \leq x \]
+                                        
+                                        <p>Part 2: \( \frac{x+1}{3} < 4 \)</p>
+                                        <p>Multiply both sides by 3:</p>
+                                        \[ x + 1 < 12 \]
+                                        <p>Subtract 1 from both sides:</p>
+                                        \[ x < 11 \]
+                                        
+                                        <p>Combined solution: \( -7 \leq x < 11 \)</p>
+                                        <p>Graph: Closed circle at -7, open circle at 11, shaded between</p>
+                                        <img src="../../../../images/graph-compound2.png" alt="-7 ≤ x < 11 graph" class="place">
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Speed Test Game -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-trophy"></i> Math Challenge
+                            </h2>
+                            <div class="speed-game">
+                                <div class="game-header">
+                                    <h4>
+                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
+                                    </h4>
+                                    <p class="game-description">Test your inequality solving skills through progressively challenging levels</p>
+                                </div>
+                                
+                                <div class="game-card">
+                                    <div id="game-container">
+                                        <!-- Game screens will be inserted here by JavaScript -->
+                                    </div>
+                                </div>
+                                
+                                <div class="game-footer">
+                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                </div>
+                            </div>
+                        </section>
+                    </article>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="lesson-footer">
+            <div class="container">
+                <div class="site-links">
+                    <div class="site-links-container">
+                        <div class="site-links-column">
+                            <h3>Quick Links</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Subjects</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Resources</h3>
+                            <ul class="site-links-list">
+                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="site-links-column">
+                            <h3>Connect</h3>
+                            <ul class="site-links-list">
+                                <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
+                                <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="site-policies">
+                        <a href="privacy-policy">Privacy Policy</a><br>
+                        <a href="terms-and-conditions">Terms and Conditions</a>
+                    </div>
+                    
+                    <div class="site-links-bottom">
+                        <p>The Let's Learn Project &copy; <span id="year">2025</span>. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+         <!-- Scripts -->
+         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <script src="../../../../js/mathjhs-lesson.js"></script>
+        <script src="../../js/read-write-numbers.js"></script>
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+
+        <!-- Year Selection Modal -->
+        <div id="yearModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
+                <p>Choose a year to view its past questions:</p>
+                <div class="year-grid">
+                    <!-- Years will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
