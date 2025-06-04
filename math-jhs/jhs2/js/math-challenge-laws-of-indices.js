@@ -585,7 +585,7 @@ const allQuestions = {
             correctIndex: 1,
             videoSolution: ""
         }
-    ],
+],
     2:[
     {
         text: "Simplify $(3^2 \\times 3^4) \\div 3^3$",
