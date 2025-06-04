@@ -586,750 +586,741 @@ const allQuestions = {
             videoSolution: ""
         }
     ],
-    2: [
-        // Level 2 questions would go here
-        // Follow same format as level 1
-        {
-            text: "How many cubes are in 7 rods + 2 cubes?",
-            answers: ["27", "72", "702", "720"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is the value of 1 flat + 0 rods + 5 cubes?",
-            answers: ["15", "105", "150", "1,005"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many rods make 5 flats?",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Subtract: 3 flats - 4 rods. Result in cubes?",
-            answers: ["26", "260", "296", "2,600"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If you have 15 rods, how many cubes is that?",
-            answers: ["15", "150", "1,500", "15,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many full rods can you make from 84 cubes?",
-            answers: ["8", "84", "840", "8,400"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A store has 5 blocks of inventory. It sells 2 blocks + 3 flats + 4 rods on Monday. How much remains?",
-            answers: ["2,660", "2,340", "4,340", "1,640"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Convert 9 rods + 9 cubes to total cubes.",
-            answers: ["18", "99", "909", "999"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many cubes are in half a flat?",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 10 flats, how many cubes are in 0.5 blocks?",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Add: 1 rod + 1 flat + 1 block. Total cubes?",
-            answers: ["111", "1,110", "11,100", "111,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many flats are in 2 blocks + 5 flats?",
-            answers: ["7", "25", "250", "2,500"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 3 rods $\\times$ 4 in cubes?",
-            answers: ["12", "120", "1,200", "12,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Divide: 1 block $\\div$ 2 rods. Result?",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If you have 250 cubes, how many full flats can you make?",
-            answers: ["2", "25", "250", "2,500"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many cubes are in 0.1 blocks?",
-            answers: ["1", "10", "100", "1,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Combine: 4 flats + 9 rods + 6 cubes. Total cubes?",
-            answers: ["4.096", "469", "496", "964"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 1 flat - 1 rod - 1 cube, in cubes?",
-            answers: ["89", "98", "109", "189"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 20 rods = _____ cubes, the missing value is:",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many cubes are in 0.25 flats?",
-            answers: ["25", "250", "2.5", "2,500"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        }
-    ],
+    2:[
+    {
+        text: "Simplify $(3^2 \\times 3^4) \\div 3^3$",
+        answers: ["$3^2$", "$3^3$", "$3^4$", "$3^5$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is $(5^3)^2 \\div 5^4$ simplified?",
+        answers: ["$5^1$", "$5^2$", "$5^6$", "$5^{10}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\frac{2^5 \\times 2^3}{2^4 \\times 2^2}$",
+        answers: ["$2^0$", "$2^1$", "$2^2$", "$2^3$"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "What is $(4^{-2})^{-1}$ equal to?",
+        answers: ["$4^{-2}$", "$4^0$", "$4^2$", "$4^{-1}$"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $8^{\\frac{2}{3}}$",
+        answers: ["2", "4", "8", "16"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is $\\frac{3^{-2} \\times 3^5}{3^2}$ simplified?",
+        answers: ["$3^{-4}$", "$3^1$", "$3^2$", "$3^3$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $(x^4 y^3)^2 \\div (x^2 y)^3$",
+        answers: ["$x^2 y^3$", "$x^4 y^6$", "$x^8 y^9$", "$x^{10} y^3$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "What is $16^{-\\frac{1}{2}}$ equal to?",
+        answers: ["-4", "$\\frac{1}{4}$", "$\\frac{1}{8}$", "-$\\frac{1}{16}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{2^3}{2^{-2}}\\right)^2$",
+        answers: ["$2^2$", "$2^5$", "$2^{10}$", "$2^{12}$"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "What is $\\sqrt[4]{81}$ expressed with fractional indices?",
+        answers: ["$81^2$", "$81^{\\frac{1}{4}}$", "$81^{-4}$", "$81^{\\frac{1}{2}}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $(a^{-3}b^2)^{-2} \\times (a^2 b^{-1})^3$",
+        answers: ["$a^{10}b^{-7}$", "$a^2b^1$", "$a^{-6}b^{-4}$", "$a^{-10}b^7$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "What is $125^{\\frac{2}{3}}$ equal to?",
+        answers: ["5", "25", "50", "250"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\frac{(3x^2 y)^3}{(9xy^2)^2}$",
+        answers: ["$3x^4 y^{-1}$", "$x^4 y^{-1}$", "$3x^4 y^7$", "$\\frac{x^4}{y}$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "What is $(2^{-1} + 3^0)^{-1}$ equal to?",
+        answers: ["$\\frac{1}{2}$", "$\\frac{2}{3}$", "$\\frac{3}{2}$", "2"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\sqrt{32^{\\frac{2}{5}}}$",
+        answers: ["2", "4", "8", "16"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is $\\left(\\frac{x^{-2}}{y^3}\\right)^{-3}$ simplified?",
+        answers: ["$x^{-6}y^{-9}$", "$x^6y^{-9}$", "$x^{-5}y^0$", "$x^6y^9$"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $(0.25)^{-\\frac{1}{2}}$",
+        answers: ["0.5", "2", "4", "16"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is $\\frac{5^{n+2} - 5^{n+1}}{5^n}$ equal to?",
+        answers: ["1", "4", "5", "$5^n$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{8}{27}\\right)^{-\\frac{2}{3}}$",
+        answers: ["$\\frac{4}{9}$", "$\\frac{9}{4}$", "$\\frac{2}{3}$", "$\\frac{3}{2}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is $(2^a \\times 4^b \\times 8^c)^{\\frac{1}{3}}$ simplified?",
+        answers: ["$2^{a+b+c}$", "$2^{\\frac{a+2b+3c}{3}}$", "$8^{\\frac{a+b+c}{3}}$", "$2^{3a+6b+9c}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    }
+],
     3: [
-        // Level 3 questions would go here
-        // Follow same format as level 1
-        {
-            text: "Add: 3 rods + 5 rods. Total cubes?",
-            answers: ["8", "80", "800", "8,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Subtract: 1 flat - 2 rods. Remaining cubes?",
-            answers: ["8", "80", "98", "800"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 4 rods $\\times$ 3. Total cubes?",
-            answers: ["12", "120", "1,200", "12,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Divide: 1 block $\\div$ 5 rods. Result?",
-            answers: ["2", "20", "200", "2,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 2 flats + 7 rods + 4 cubes?",
-            answers: ["2,074", "247", "274", "724"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If you have 5 rods $\\times$ 4, how many cubes total?",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Solve: 1 block - 3 flats + 2 rods.",
-            answers: ["720", "702", "270", "1,320"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many cubes are in 0.5 flats + 2 rods?",
-            answers: ["25", "45", "70", "700"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 3 rods $\\times$ 2 rods?",
-            answers: ["6 cubes", "60 cubes", "600 cubes", "6,000 cubes"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Divide: 2 blocks $\\div$ 4 flats. Result?",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Subtract: 10 rods - 25 cubes.",
-            answers: ["7.5 cubes", "75 cubes", "750 cubes", "7,500 cubes"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Add: 0.3 blocks + 4 rods. Total cubes?",
-            answers: ["34", "340", "430", "3,040"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 1 flat $\\times$ 1 rod.",
-            answers: ["10 cubes", "100 cubes", "1,000 cubes", "10,000 cubes"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, what is 7 rods ÷ 2?",
-            answers: ["3.5 cubes", "35 cubes", "350 cubes", "3,500 cubes"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Solve: 5 flats - 3 rods + 1 block.",
-            answers: ["1,270", "1,470", "1,700", "15,300"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many cubes are in 0.2 blocks + 0.5 flats?",
-            answers: ["25", "250", "2,500", "25,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 12 rods $\\times$ 5?",
-            answers: ["60 cubes", "600 cubes", "6,000 cubes", "60,000 cubes"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Divide: 3 blocks $\\div$ 6 rods.",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Add: 0.7 flats + 8 cubes.",
-            answers: ["15", "78", "708", "780"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Subtract: 1 block - 0.5 blocks.",
-            answers: ["5 cubes", "50 cubes", "500 cubes", "5,000 cubes"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        }
-    ], 
+    {
+        text: "Simplify $\\left(\\frac{8x^6 y^{-3}}{27x^{-9} y^6}\\right)^{-\\frac{1}{3}}$",
+        answers: ["$\\frac{3x^5}{2y^3}$", "$\\frac{2y^3}{3x^5}$", "$\\frac{9x^5}{4y^3}$", "$\\frac{3x^{-5}}{2y^{-3}}$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "If $2^x = 8^{y+1}$ and $3^y = 27^{x-1}$, what is $x+y$?",
+        answers: ["$\\frac{9}{5}$", "$\\frac{12}{7}$", "$\\frac{15}{8}$", "$\\frac{21}{11}$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\frac{(2^{n+3} - 2^{n+1})}{2^{n-1}}$ to its simplest form",
+        answers: ["6", "8", "12", "14"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Solve for x: $9^{x-1} = \\left(\\frac{1}{27}\\right)^{2x-3}$",
+        answers: ["$\\frac{7}{8}$", "$\\frac{5}{6}$", "$\\frac{11}{12}$", "$\\frac{9}{10}$"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Express $\\sqrt[5]{\\frac{x^{10}}{y^{-15}}}$ in simplified index form",
+        answers: ["$x^2 y^3$", "$x^5 y^{15}$", "$x^{-2} y^{-3}$", "$x^{\\frac{1}{2}} y^{\\frac{1}{3}}$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "If $5^{2x} \\times 25^{3x-1} = 125^{x+2}$, find x",
+        answers: ["1", "$\\frac{5}{4}$", "$\\frac{7}{5}$", "2"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{a^{-\\frac{3}{2}} b^{\\frac{1}{4}}}{a^{\\frac{1}{2}} b^{-\\frac{3}{4}}}\\right)^{-4}$",
+        answers: ["$a^8 b^4$", "$a^{-8} b^{-4}$", "$a^4 b^8$", "$\\frac{a^4}{b^8}$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "What is the value of $\\frac{4^{x+3} - 4^{x+1}}{4^{x-1}}$ when simplified?",
+        answers: ["15", "30", "60", "120"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "If $\\sqrt[x]{8} = 2^y$ and $\\sqrt[y]{81} = 3^x$, find $x+y$",
+        answers: ["5", "6", "7", "8"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{x^{-2} y^3 z^{-1}}{x^3 y^{-2} z}\\right)^{-2} \\times \\left(\\frac{x y^{-1}}{z^2}\\right)^3$",
+        answers: ["$x^{13} y^{-12} z^{-1}$", "$x^5 y^{-4} z^7$", "$x^{-5} y^4 z^{-7}$", "$x^{-13} y^{12} z^1$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Find x if $\\frac{16^{x}}{8^{x-1}} = 4^{x+2}$",
+        answers: ["$\\frac{3}{2}$", "$\\frac{5}{3}$", "$\\frac{7}{4}$", "$\\frac{9}{5}$"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\frac{(3a^2 b^{-3})^{-2} \\times (2a^{-1} b^2)^3}{(6a^{-2} b)^2}$",
+        answers: ["$\\frac{8a^4}{27b^{14}}$", "$\\frac{27b^{14}}{8a^4}$", "$\\frac{8b^{14}}{27a^4}$", "$\\frac{27a^4}{8b^{14}}$"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "If $2^{x} = 3^{y} = 6^{-z}$, express $\\frac{1}{x} + \\frac{1}{y}$ in terms of z",
+        answers: ["z", "-z", "$\\frac{1}{z}$", "$-\\frac{1}{z}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{8^{0.5} \\times 16^{-\\frac{1}{4}}}{32^{\\frac{1}{5}}}\\right)^{10}$",
+        answers: ["$\\frac{1}{4}$", "$\\frac{1}{2}$", "2", "4"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Find the value of $\\frac{5^{n+2} - 6 \\times 5^{n+1}}{9 \\times 5^n - 5^{n+1}}$",
+        answers: ["1", "5", "-5", "$\\frac{5}{4}$"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "If $x = 2^{\\frac{1}{3}} + 2^{-\\frac{1}{3}}$, what is $2x^3 - 6x$?",
+        answers: ["3", "4", "5", "6"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\frac{(a^{2n+1} \\times a^{3-2n})^3}{(a^{n-2} \\times a^{5-n})^2}$",
+        answers: ["$a^8$", "$a^{10}$", "$a^{12}$", "$a^{14}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Solve the equation $9 \\times 3^{x} = 4^{x} + 10 \\times 2^{x}$ for x",
+        answers: ["0", "1", "2", "3"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "If $5^{2x-y} = 100$ and $2^{x+y} = 32$, find $x^2 + y^2$",
+        answers: ["5", "10", "13", "17"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{x^{a+b}}{x^{a-b}}\\right)^{\\frac{1}{2a}}} \\times \\left(\\frac{x^{2b}}{x^{-2a}}\\right)^{\\frac{1}{2b}}}$",
+        answers: ["$x^{1+\\frac{a}{b}}$", "$x^{2}$", "$x^{1+\\frac{b}{a}}$", "$x^{\\frac{a+b}{ab}}$"],
+        correctIndex: 0,
+        videoSolution: ""
+    }
+], 
     4: [
-        // Level 4 questions would go here
-        // Follow same format as level 1
-        {
-            text: "Solve: (2 flats $\\times$ 3) + (5 rods $\\times$ 4).",
-            answers: ["800", "1,100", "1,600", "2,000"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, what is 1 flat $\\div$ 2 rods?",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.4 blocks + 3 flats - 2 rods?",
-            answers: ["420", "480", "4,200", "4,800"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 0.5 blocks $\\times$ 10 rods.",
-            answers: ["50 cubes", "500 cubes", "5,000 cubes", "50,000 cubes"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "1,000 cubes ÷ 25 cubes",
-            answers: ["2 rods", "4 rods", "40 rods", "400 rods"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A builder uses 3 flats + 8 rods of material. How many cubes is this?",
-            answers: ["38", "308", "380", "3,080"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Subtract: 1.5 blocks - 7 flats. Result in cubes?",
-            answers: ["80", "800", "8,000", "80,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 6 rods $\\times$ 0.5 flats. (Hint: 0.5 flat = 50 cubes)",
-            answers: ["30 cubes", "300 cubes", "3,000 cubes", "30,000 cubes"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A shop sells 2 rods + 5 cubes of ribbon per customer. How much ribbon for 4 customers?",
-            answers: ["25 cubes", "100 cubes", "250 cubes", "1,000 cubes"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Divide: 9 flats $\\div$ 3 rods.",
-            answers: ["3", "30", "300", "3,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Solve: (1 block - 2 rods) + (3 flats $\\times$ 2).",
-            answers: ["1,160", "1,600", "2,600", "3,000"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, what is $\\frac{1}{4}$ block + $\\frac{1}{2}$ flat?",
-            answers: ["250 cubes", "300 cubes", "350 cubes", "400 cubes"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A recipe requires 2 rods + 7 cubes of sugar. Double the recipe.",
-            answers: ["27 cubes", "54 cubes", "270 cubes", "540 cubes"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many full rods can you make from 365 cubes?",
-            answers: ["3", "36", "360", "3,650"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.2 blocks + 30 rods - 1 flat?",
-            answers: ["10 cubes", "100 cubes", "1,000 cubes", "10,000 cubes"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A classroom has 4 blocks + 5 flats of paper. How many sheets if 1 cube = 1 sheet?",
-            answers: ["45", "450", "4,500", "45,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 5 rods = 50 cubes, what is 5 rods $\\times$ 5 rods?",
-            answers: ["25 cubes", "250 cubes", "2,500 cubes", "25,000 cubes"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank has 2 blocks - 5 flats of water. How many cubes remain?",
-            answers: ["500", "1,500", "2,500", "5,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Combine: 0.3 flats + 4 rods + 0.7 blocks.",
-            answers: ["740 cubes", "804 cubes", "840 cubes", "8,040 cubes"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 1 block + 2 flats daily. Weekly production?",
-            answers: ["1,200 cubes", "8,400 cubes", "12,000 cubes", "84,000 cubes"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        }
-    ], 
+    {
+        text: "Simplify $\\frac{(3^{x+2} - 3^x)}{8 \\times 3^{x-1}}$ to its simplest form",
+        answers: ["1", "$\\frac{3}{4}$", "$\\frac{9}{8}$", "3"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "If $2^{2x} - 3 \\times 2^{x+1} + 8 = 0$, find the value of x",
+        answers: ["1", "2", "3", "4"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{16x^8 y^{-4}}{81x^{-6} y^{12}}\\right)^{-\\frac{1}{4}}$",
+        answers: ["$\\frac{3y^4}{2x^{\\frac{7}{2}}}$", "$\\frac{2x^{\\frac{7}{2}}}{3y^4}$", "$\\frac{9y^8}{4x^7}$", "$\\frac{3x^{-\\frac{7}{2}}}{2y^{-4}}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is the value of $\\frac{5^{n} + 5^{n+1} + 5^{n+2}}{31 \\times 5^{n-1}}$?",
+        answers: ["5", "10", "25", "125"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Solve for x: $8^{x-1} = 16^{2x+1}$",
+        answers: ["-$\\frac{7}{5}$", "-$\\frac{5}{7}$", "$\\frac{3}{5}$", "$\\frac{5}{3}$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\frac{(a^{2n+3} \\times a^{4-3n})^2}{(a^{n-1} \\times a^{7-2n})^3}$",
+        answers: ["$a^{-5}$", "$a^{-3}$", "$a^3$", "$a^5$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "If $4^{x} = 8^{y}$, express y in terms of x",
+        answers: ["$y = \\frac{2x}{3}$", "$y = \\frac{3x}{2}$", "$y = \\frac{x}{2}$", "$y = 2x$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "What is $\\frac{2^{x+3} + 2^{x+2} + 2^{x+1}}{2^{x-1}}$ simplified?",
+        answers: ["7", "14", "28", "56"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{x^{-\\frac{1}{2}} y^{\\frac{2}{3}}}{x^{\\frac{1}{3}} y^{-\\frac{1}{4}}}\\right)^{12}$",
+        answers: ["$x^{-14} y^{11}$", "$x^{14} y^{-11}$", "$x^{-10} y^7$", "$x^{10} y^{-7}$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Find x if $9 \\times 3^x = 27^{x-1}$",
+        answers: ["$\\frac{3}{2}$", "$\\frac{5}{2}$", "3", "5"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\frac{(2a^3 b^{-2})^{-3} \\times (3a^{-1} b)^2}{(6a^{-2} b^3)^{-1}}$",
+        answers: ["$\\frac{3a^5}{8b^{11}}$", "$\\frac{8b^{11}}{3a^5}$", "$\\frac{3b^{11}}{8a^5}$", "$\\frac{8a^5}{3b^{11}}$"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "If $5^{2x} = 10$, find the value of $5^{-x}$",
+        answers: ["$\\frac{1}{\\sqrt{10}}$", "$\\sqrt{10}$", "$\\frac{1}{10}$", "10"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "What is $\\frac{3^{x+2} + 3^{x+1} + 3^x}{13 \\times 3^{x-1}}$ simplified?",
+        answers: ["1", "3", "9", "13"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{27^{\\frac{1}{3}} \\times 16^{-\\frac{1}{4}}}{81^{\\frac{1}{4}}}\\right)^6$",
+        answers: ["$\\frac{1}{9}$", "$\\frac{1}{3}$", "3", "9"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Find x if $\\frac{8^x}{2^{x+1}} = 16^{x-1}$",
+        answers: ["$\\frac{3}{2}$", "$\\frac{5}{3}$", "$\\frac{7}{4}$", "$\\frac{9}{5}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\frac{(x^{2a+b} \\times x^{a-2b})^3}{(x^{a-b} \\times x^{2a+b})^2}$",
+        answers: ["$x^{a-4b}$", "$x^{2a-3b}$", "$x^{3a-8b}$", "$x^{5a-7b}$"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "If $2^x = 3^y = 6^z$, prove that $\\frac{1}{z} = \\frac{1}{x} + \\frac{1}{y}$",
+        answers: ["$xy = z(x+y)$", "$xz = y(x+z)$", "$yz = x(y+z)$", "$x+y+z=1$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "What is $\\frac{4^{x+1} - 2^{2x-1}}{3 \\times 2^{2x}}$ simplified?",
+        answers: ["$\\frac{1}{2}$", "1", "$\\frac{3}{2}$", "2"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Simplify $\\left(\\frac{a^{\\frac{3}{2}} b^{-\\frac{1}{3}}}{a^{-\\frac{1}{4}} b^{\\frac{2}{3}}}\\right)^4 \\times \\left(\\frac{a^{-1} b}{a^2 b^{-2}}\\right)^{-1}$",
+        answers: ["$a^7 b^{-6}$", "$a^{-7} b^6$", "$a^5 b^{-4}$", "$a^{-5} b^4$"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Find the value of $x$ if $\\frac{9^{x}}{27^{x-1}} = \\frac{1}{3}$",
+        answers: ["$\\frac{1}{2}$", "$\\frac{3}{4}$", "$\\frac{5}{6}$", "$\\frac{7}{8}$"],
+        correctIndex: 1,
+        videoSolution: ""
+    }
+], 
     5: [
-        // Level 5 questions would go here
-        // Follow same format as level 1
-        {
-            text: "Emma buys a toy for 2 flats + 3 rods + 5 cubes. How much does she spend (in cubes)?",
-            answers: ["235", "253", "352", "325"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A book costs 1 block - 2 flats. What's the price in cubes?",
-            answers: ["800", "1,200", "8,000", "12,000"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = Gh₵10.00, how much is 5 flats + 4 rods?",
-            answers: ["Gh₵54.00", "Gh₵540.00", "Gh₵5,400.00", "Gh₵54,000.00"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A wall is built with 3 blocks + 5 flats of bricks. How many bricks are used?",
-            answers: ["305", "3,050", "3,500", "35,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A rope is 4 rods + 7 cubes long. How many cubes is that?",
-            answers: ["407", "470", "4,007", "47"],
-            correctIndex: 3,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank holds 2 blocks of water. If you remove 5 flats, how much remains?",
-            answers: ["500", "1,500", "2,500", "5,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A machine makes 1 flat of widgets every hour. How many widgets does it make in 8 hours?",
-            answers: ["8", "80", "800", "8,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A worker packs 2 rods of boxes daily. How many cubes does he pack in 5 days?",
-            answers: ["10", "100", "500", "1,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Half a block + a quarter flat = ___ cubes.",
-            answers: ["250", "525", "600", "1,025"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "0.3 blocks + 0.7 flats = ___ cubes.",
-            answers: ["37", "3,070", "3,700", "370"],
-            correctIndex: 3,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A store has 5 blocks of stock. It sells 3 flats + 2 rods daily. How many cubes remain after 2 days?",
-            answers: ["4,360", "4,600", "4,960", "5,000"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "You have 2 blocks. You give away 1 flat + 5 rods + 3 cubes. How much is left?",
-            answers: ["847", "1,847", "2,153", "2,847"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A pizza is cut into 1 flat + 2 rods slices. How many slices is that?",
-            answers: ["12", "102", "120", "1,020"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A school orders 4 blocks + 5 rods of pencils. How many pencils is that?",
-            answers: ["405", "4,500", "45,000", "4,050"],
-            correctIndex: 3,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A car travels 1 rod km per minute. How far in 1 flat minutes?",
-            answers: ["10 km", "100 km", "0.1 km", "1,000 km"],
-            correctIndex: 3,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Combine: 0.5 blocks + 25 rods - 3 flats.",
-            answers: ["0 cubes", "200 cubes", "450 cubes", "700 cubes"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 1,000 marbles, how many marbles are in 2.5 blocks?",
-            answers: ["25", "250", "2,500", "25,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A box weighs 1 block - 5 rods. What's its weight in cubes?",
-            answers: ["50", "500", "950", "995"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A recipe needs 3 rods + 2 cubes of flour. What is triple the recipe.",
-            answers: ["96", "15", "9", "32"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A garden has 2 blocks of plants. If 1 flat + 2 rods die, how many survive?",
-            answers: ["1,880", "1,808", "1,280", "1,082"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        }
-    ], 
+    {
+        "text": "Simplify $\\frac{(2^{x+3} \\cdot 4^{x})}{8^{x-2}}$",
+        "answers": ["$2^5$", "$2^7$", "$2^{4x+9}$", "$2^{3x+5}$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Evaluate $\\left(\\frac{9a^{-4}}{27a^{-1}}\\right)^{-2}$",
+        "answers": ["$3a^{6}$", "$9a^{4}$", "$9a^{-4}$", "$3a^{-6}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $3^{x} = 81$, what is the value of $3^{x-2}$?",
+        "answers": ["3", "9", "27", "81"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{x^{1/2}}{x^{-1/3}}\\right)^6$",
+        "answers": ["$x^{5}$", "$x^{1}$", "$x^{4}$", "$x^{6}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is $\\left(\\frac{81x^8}{16y^{-4}}\\right)^{\\frac{1}{4}}$?",
+        "answers": ["$\\frac{3x^2}{2y}$", "$\\frac{3x^2y}{2}$", "$\\frac{3x^2}{2y^2}$", "$\\frac{3x^2y^2}{2}$"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Solve for $x$ if $2^{2x} = 32$",
+        "answers": ["2.5", "3", "4", "5"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{a^{-1}b^2}{a^2b^{-3}}\\right)^{-2}$",
+        "answers": ["$a^6b^{-10}$", "$a^{-6}b^{10}$", "$a^4b^{-2}$", "$a^{-4}b^{2}$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is $\\left(16^{3/4}\\right) \\div \\left(4^{1/2}\\right)$?",
+        "answers": ["2", "4", "8", "16"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\frac{(x^{-2}y^3)^3}{(x^{-1}y)^2}$",
+        "answers": ["$x^{-4}y^7$", "$x^{-5}y^8$", "$x^{-3}y^6$", "$x^{-4}y^6$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $5^x = 25$, find the value of $5^{x+1}$",
+        "answers": ["125", "625", "100", "50"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{1}{x^{-3}y^2}\\right)^2$",
+        "answers": ["$x^6y^4$", "$x^{-6}y^4$", "$x^3y^2$", "$x^{-3}y^{-2}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Find $x$ if $\\frac{2^x}{8^{x+1}} = 1$",
+        "answers": ["-1", "0", "1", "2"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Evaluate $\\left(27x^6\\right)^{1/3}$",
+        "answers": ["$3x^2$", "$9x^3$", "$3x^3$", "$6x^2$"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{a^{3/2}}{b^{1/4}}\\right)^4$",
+        "answers": ["$a^6b^{-1}$", "$a^5b^{-1}$", "$a^4b^{-1}$", "$a^6b^{-2}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is $\\left(\\frac{64a^{-6}}{81b^4}\\right)^{\\frac{1}{2}}$?",
+        "answers": ["$\\frac{8a^{-3}}{9b^2}$", "$\\frac{8a^3}{9b^2}$", "$\\frac{8a^{-3}}{9b}$", "$\\frac{8a^3}{9b}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Solve: $9^{x+1} = 3^{2x+4}$",
+        "answers": ["1", "2", "3", "4"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{x^2y^{-1}}{x^{-3}y^4}\\right)^3$",
+        "answers": ["$x^{15}y^{-15}$", "$x^{6}y^{-15}$", "$x^{6}y^{-3}$", "$x^{15}y^{-3}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $4^x = 8$, find $2^{2x}$",
+        "answers": ["4", "8", "16", "32"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{3x^{-2}}{6x^3}\\right)^{-2}$",
+        "answers": ["$4x^{10}$", "$2x^{10}$", "$4x^{-10}$", "$2x^{-10}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Find the value of $x$ if $\\left(\\frac{1}{4}\\right)^x = 8$",
+        "answers": ["$-3/2$", "$-5/2$", "$-2$", "$-3$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    }
+]
+, 
     6: [
-        // Level 6 questions would go here
-        // Follow same format as level 1
-        {
-            text: "A store has 3 blocks + 7 flats of product. They sell 1 block + 2 flats + 5 rods in a day. How much inventory remains?",
-            answers: ["1,450 cubes", "2,450 cubes", "1,550 cubes", "2,550 cubes"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 4 rods + 3 cubes of goods every hour. How many cubes are made in an 8-hour shift?",
-            answers: ["344 cubes", "434 cubes", "3,440 cubes", "4,340 cubes"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Sarah saves 2 flats + 5 rods weekly. How many cubes does she save in 4 weeks?",
-            answers: ["100", "250", "1,000", "10,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A wall is 0.5 blocks + 2 flats tall. How many cubes is the height?",
-            answers: ["520", "700", "1,200", "7,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A Gh₵1,000.00 phone is discounted by 3 rods + 2 cubes. What's the new price in cubes?",
-            answers: ["Gh₵968.00", "Gh₵986.00", "Gh₵698.00", "Gh₵896.00"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A farmer harvests 5 blocks + 4 flats of corn. If 1 flat spoils, how much remains?",
-            answers: ["5,500", "530", "5,400", "5,300"],
-            correctIndex: 3,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A truck carries 2 blocks + 5 rods of sand per trip. How many cubes can it transport in 3 trips?",
-            answers: ["2,500", "2,050", "615", "6,150"],
-            correctIndex: 3,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Water boils at 1 flat °C. If it cools by 3 rods °C, what's the new temperature?",
-            answers: ["30°C", "70°C", "130°C", "170°C"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A runner completes 1 block + 2 flats meters in a race. How many meters is that?",
-            answers: ["1,002", "1,020", "1,200", "12,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A cake requires 3 rods + 4 cubes of flour. How much flour is needed for 5 cakes?",
-            answers: ["170", "107", "1,700", "17,000"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 3 blocks + $x$ rods = 3,200 cubes, find the value of $x$?",
-            answers: ["2", "20", "200", "2,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is $\\dfrac{1}{2}$ block + $\\dfrac{1}{4}$ flat in cubes?",
-            answers: ["525", "600", "1,025", "1,250"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If $x$ rods = 1 flat, what is $x$?",
-            answers: ["15", "5", "20", "10"],
-            correctIndex: 3,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A store has 5 blocks of inventory. It sells 2 blocks + 3 flats + 4 rods on Monday. How much remains?",
-            answers: ["2,660", "2,340", "4,340", "1,640"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which is greater: 0.6 blocks or 7 flats?",
-            answers: ["0.6 blocks", "7 flats", "They are equal", "Not enough information"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, how many flats are in 50 rods?",
-            answers: ["0.5", "5", "50", "500"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank has 4,500 cubes of water. How many full blocks + flats is this?",
-            answers: ["4 blocks + 5 flats", "5 blocks + 4 flats", "3 blocks + 15 flats", "2 blocks + 25 flats"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.3 blocks - 15 rods?",
-            answers: ["150", "15", "1,500", "0"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 10 flats, and 1 flat = 10 rods, how many rods are in 2 blocks?",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A construction project needs 12,000 cubes of concrete. How many full blocks are required?",
-            answers: ["12", "120", "1,200", "1.2"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        }
-    ], 
+    {
+        "text": "Simplify $\\frac{2^{x+3} + 2^{x+2}}{2^{x-1}}$",
+        "answers": ["28", "20", "24", "16"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $a^{x+1} = a^2 \\cdot a^{3x-4}$, find x",
+        "answers": ["1", "2", "3", "4"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{a^2 b^{-3}}{a^{-1} b^2}\\right)^{-2}$",
+        "answers": ["$a^{-6}b^{10}$", "$a^{6}b^{-10}$", "$a^{3}b^{-1}$", "$a^{-3}b^1$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Evaluate $\\left(\\frac{8x^6y^{-9}}{27x^3y^3}\\right)^{-\\frac{2}{3}}$",
+        "answers": ["$\\frac{9x^2}{4y^8}$", "$\\frac{4y^8}{9x^2}$", "$\\frac{4x^2}{9y^8}$", "$\\frac{9y^8}{4x^2}$"],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "Find the value of x if $\\frac{5^{x+1}}{25^{x}} = 1$",
+        "answers": ["0", "1", "2", "3"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{4x^{-2}y^3}{8x^3y^{-2}}\\right)^2$",
+        "answers": ["$\\frac{y^{10}}{4x^{10}}$", "$\\frac{y^{8}}{4x^{10}}$", "$\\frac{y^{10}}{16x^{10}}$", "$\\frac{y^8}{16x^8}$"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $3^x = 81$ and $3^y = 27$, find $3^{x-y}$",
+        "answers": ["1", "3", "9", "27"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{16a^{-4}}{81b^2}\\right)^{\\frac{3}{4}}$",
+        "answers": ["$\\frac{8a^{-3}}{27b^{3/2}}$", "$\\frac{8a^{-3}}{27b^{3}}$", "$\\frac{8a^{-3}}{9b^{3}}$", "$\\frac{8a^3}{27b^{3}}$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $2^x = 4^{x+1}$, find x",
+        "answers": ["1", "0", "-1", "2"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{x^{-2}y^3}{x^4y^{-1}}\\right)^{-3}$",
+        "answers": ["$x^{18}y^{-12}$", "$x^{-18}y^{12}$", "$x^{6}y^{-12}$", "$x^{-6}y^{12}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is $\\left(\\frac{81x^{-8}}{16y^4}\\right)^{1/4}$?",
+        "answers": ["$\\frac{3x^{-2}}{2y}$", "$\\frac{3x^2}{2y}$", "$\\frac{3x^{-2}}{2y^2}$", "$\\frac{3x^2}{2y^2}$"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $x^{a+b} = x^3 \\cdot x^{-1}$, find $a + b$",
+        "answers": ["1", "2", "3", "4"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{27x^3}{64y^6}\\right)^{-\\frac{2}{3}}$",
+        "answers": ["$\\frac{16y^4}{9x^2}$", "$\\frac{16y^6}{9x^2}$", "$\\frac{9x^2}{16y^4}$", "$\\frac{4x^2}{3y^2}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $3^{2x-1} = 27$, find $x$",
+        "answers": ["1", "2", "3", "4"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Evaluate $\\left(\\frac{x^{-\\frac{3}{4}}y^{\\frac{1}{2}}}{x^{\\frac{1}{4}}y^{-\\frac{1}{4}}}\\right)^2$",
+        "answers": ["$x^{-2}y^{1.5}$", "$x^{-2}y^{3/2}$", "$x^{-2}y^3$", "$x^2y^{-3/2}$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{a^2b^{-1}}{a^{-3}b^2}\\right)^{-2}$",
+        "answers": ["$a^{-10}b^{6}$", "$a^{10}b^{-6}$", "$a^{-5}b^1$", "$a^5b^{-1}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is $\\frac{(2^{x+2} + 2^{x})}{2^{x-2}}$ simplified?",
+        "answers": ["20", "24", "28", "32"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Solve: $\\left(\\frac{1}{9}\\right)^{x} = 27$",
+        "answers": ["-1", "-1.5", "-2", "-3"],
+        "correctIndex": 3,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $a^{3x} = a^9$, what is $x$?",
+        "answers": ["1", "2", "3", "4"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{x^{-2}y^5}{x^3y^{-1}}\\right)^{2}$",
+        "answers": ["$x^{-10}y^{12}$", "$x^5y^{6}$", "$x^{-5}y^{12}$", "$x^5y^{-6}$"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    }
+]
+, 
     7: [
-        // Level 7 questions would go here
-        // Follow same format as level 1
-        {
-            text: "If 5 rods + $x$ cubes = 1 flat, what is the value of $x$?",
-            answers: ["40", "50", "60", "100"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is $\\dfrac{3}{4}$ block - 2 rods in cubes?",
-            answers: ["550", "650", "730", "800"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A truck carries 2 blocks + 3 flats of sand. It drops off 5 rods + 7 cubes. How much sand remains?",
-            answers: ["2,243", "2,343", "2,443", "2,543"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which is greater: 0.7 blocks or 6 flats + 5 rods?",
-            answers: ["0.7 blocks", "6 flats + 5 rods", "Equal", "Not comparable"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 150 rods = _____ blocks, what fills the blank?",
-            answers: ["0.15", "1.5", "15", "150"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A box weighs 3,050 cubes. How many full blocks + flats + rods is this?",
-            answers: ["3 blocks + 0 flats + 5 rods", "3 blocks + 5 flats + 0 rods", "30 blocks + 5 rods", "305 flats"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 5 flats, 1 flat = 2 rods, and 1 rod = 10 cubes, how many cubes are in 2 blocks?",
-            answers: ["100", "200", "1,000", "2,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A bakery uses 2 flats + 8 rods of flour daily. How much flour is used in 5 days?",
-            answers: ["1,400", "2,800", "14,000", "28,000"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.4 blocks $\\times$ 5 rods? (Assume rod = 10 cubes)",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If A = $\\dfrac{1}{4}$ block, B = 3 rods, and C = 0.2 flats, which is smallest?",
-            answers: ["A", "B", "C", "All equal"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A container holds 2.5 blocks of water. How many flats is this equivalent to?",
-            answers: ["2.5", "25", "250", "2,500"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = $x$ rods, what is the value of $x$?",
-            answers: ["10", "100", "1,000", "10,000"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 3 blocks + 5 flats of goods daily. How many cubes are produced in 4 days?",
-            answers: ["1,400", "3,500", "14,000", "35,000"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is $\\dfrac{3}{4}$ block + $\\dfrac{1}{5}$ flat in cubes?",
-            answers: ["755", "770", "800", "850"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which quantity is largest?",
-            answers: ["0.6 blocks", "7 flats", "65 rods", "600 cubes"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A machine makes 2 rods + 5 cubes every minute. How much does it produce in 30 minutes?",
-            answers: ["75", "250", "750", "7500"],
-            correctIndex: 2,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 cube = 1 gram, how many kilograms is 1 block?",
-            answers: ["1", "10", "100", "1,000"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A shipment contains 4,200 cubes. How many full blocks and flats is this?",
-            answers: ["4 blocks + 2 flats", "2 blocks + 4 flats", "42 flats", "420 rods"],
-            correctIndex: 0,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "35% of a block equals how many rods?",
-            answers: ["3.5", "35", "350", "3,500"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Boxes hold 1 flat (100 cubes) each. How many boxes are needed for 3 blocks + 2 rods?",
-            answers: ["30", "31", "32", "40"],
-            correctIndex: 1,
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        }
-    ]
+    {
+        "text": "Simplify $\\frac{3^{2x} + 3^{x+1}}{3^{x}}$",
+        "answers": ["$3^{x} + 3$", "$3^{x+1} + 1$", "$3^{x} + 3^{2}$", "$3^{x+1} + 3$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $2^x = 3^y = 6^z$, prove that $\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{z}$. What is $z$ in terms of $x$ and $y$?",
+        "answers": ["$z = \\frac{xy}{x+y}$", "$z = x + y$", "$z = \\frac{x+y}{xy}$", "$z = \\frac{x}{y}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Evaluate $\\left(\\frac{x^{-\\frac{3}{2}} y^{\\frac{5}{3}}}{x^{\\frac{2}{3}} y^{-\\frac{1}{4}}}\\right)^6$",
+        "answers": ["$x^{-13} y^{10.5}$", "$x^{-13} y^{31/2}$", "$x^{-13} y^{21/2}$", "$x^{-13} y^{11/2}$"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $3^{x+2} + 3^{x+1} + 3^x = 39 \\times 3^x$, find the value of x",
+        "answers": ["any x", "1", "2", "3"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{27^{1/3} \\cdot 16^{-1/4}}{81^{1/4}}\\right)^6$",
+        "answers": ["$\\frac{1}{9}$", "$\\frac{1}{3}$", "$3$", "$\\frac{1}{27}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $5^{2x} = 125$, what is $5^{x-1}$?",
+        "answers": ["$\\frac{1}{5}$", "$\\sqrt{5}$", "$5$", "$25$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{4a^{-3}b^{2}}{16a^{2}b^{-1}}\\right)^{-3/2}$",
+        "answers": ["$2a^{7.5}b^{-4.5}$", "$8a^{7.5}b^{-4.5}$", "$8a^{-7.5}b^{4.5}$", "$2a^{-7.5}b^{4.5}$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $x = \\log_2 81$, find the value of $2^{x/2}$",
+        "answers": ["9", "81", "3", "√81"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Evaluate $\\left(\\frac{x^{-2}y^3}{x^5y^{-2}}\\right)^{-2}$",
+        "answers": ["$x^{14}y^{-10}$", "$x^{-14}y^{10}$", "$x^6y^{-5}$", "$x^{-6}y^{5}$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{2^{2x+1}}{4^x}\\right)^2$",
+        "answers": ["$2^2$", "$2^x$", "$2^{2x}$", "$2^4$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $2^x = 3$, express $8^{x+1}$ in terms of powers of 3",
+        "answers": ["$3^6$", "$3^5$", "$9^x$", "$3^{3x+3}$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "Solve: $\\left(\\frac{1}{2}\\right)^x = 16$",
+        "answers": ["4", "-4", "5", "-5"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $a^{2x+1} = a^3 \\cdot a^{4x-2}$, find x",
+        "answers": ["1", "2", "3", "4"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{x^{-\\frac{1}{3}}y^{\\frac{3}{4}}}{x^{\\frac{5}{6}}y^{-\\frac{1}{2}}}\\right)^6$",
+        "answers": ["$x^{-7}y^{7.5}$", "$x^{-7}y^{7/2}$", "$x^{-2}y^{6}$", "$x^2y^{-6}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "What is $\\left(\\frac{a^3 b^{-2}}{a^{-2} b^5}\\right)^{-1/5}$?",
+        "answers": ["$a^{-1}b^{1.4}$", "$a^{-1}b^{-1.4}$", "$a^1b^{1.4}$", "$a^1b^{-1.4}$"],
+        "correctIndex": 1,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $2^x = 5$ and $2^y = 25$, find $2^{x - 0.5y}$",
+        "answers": ["1", "5", "√5", "25"],
+        "correctIndex": 2,
+        "videoSolution": ""
+    },
+    {
+        "text": "Evaluate $\\left(\\frac{1}{x^2y^{-3}}\\right)^3 \\cdot (x^3y)^2$",
+        "answers": ["$x^0y^0$", "$x^{-1}y^5$", "$x^0y^5$", "$x^0y^2$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $9^x = 3$, find $x$",
+        "answers": ["1/2", "1/3", "2", "3"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "Simplify $\\left(\\frac{a^{-1/2}b^2}{a^{1/2}b^{-1}}\\right)^4$",
+        "answers": ["$a^{-4}b^{12}$", "$a^4b^{12}$", "$a^{-4}b^{-12}$", "$a^4b^{-12}$"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    },
+    {
+        "text": "If $x = \\log_4 8$, find $4^x$",
+        "answers": ["8", "16", "√8", "2"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    }
+]
+
 };
 
 // Start the game when the page loads
