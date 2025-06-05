@@ -27,14 +27,14 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
-        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+        <link rel="stylesheet" href="../../css/place-value-word-problems.css">
     
         <!-- MathJax Configuration -->
         <script>
             MathJax = {
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +42,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -65,7 +56,7 @@
             crossorigin="anonymous"></script>
 
         <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
+        <link rel="stylesheet" href="../../css/math-challenge-place-value-word-problems.css">
 
         <!--Passco-->
         <link rel="stylesheet" href="../../css/for-passco.css">
@@ -409,9 +400,9 @@
         </footer>
 
          <!-- Scripts -->
-         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+         <script src="../../js/math-challenge-place-value-word-problems.js"></script>
         <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/read-write-numbers.js"></script>
+        <script src="../../js/place-value-word-problems.js"></script>
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
