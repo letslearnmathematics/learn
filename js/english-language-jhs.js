@@ -354,7 +354,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }; */
 
-    /*In case I want to test a functionality */
+    /*In case I want to test a functionality 
     const subtopicsData = {
         "jhs": {
             "Grammar": [
@@ -391,6 +391,46 @@ document.addEventListener("DOMContentLoaded", function() {
                 { name: "Stress and Intonation", url: "./english-jhs/jhs/orals/stress-intonation.html" },
                 { name: "Oral Presentation", url: "./english-jhs/jhs/orals/oral-presentation.html" },
                 { name: "Debate", url: "./english-jhs/jhs/orals/debate.html" }
+            ]
+        }
+    };*/
+
+    const subtopicsData = {
+        "jhs": {
+            "Grammar": [
+                { name: "Parts of Speech", url: "#" },
+                { name: "Tenses", url: "#" },
+                { name: "Subject-Verb Agreement", url: "#" },
+                { name: "Active and Passive Voice", url: "#" },
+                { name: "Direct and Indirect Speech", url: "#" },
+                { name: "Punctuation", url: "#" }
+            ],
+            "Essays": [
+                { name: "Descriptive Essay", url: "#" },
+                { name: "Narrative Essay", url: "#" },
+                { name: "Argumentative Essay", url: "#" },
+                { name: "Expository Essay", url: "#" },
+                { name: "Letter Writing", url: "#" },
+                { name: "Speech Writing", url: "#" },
+                { name: "Article Writing", url: "#" },
+                { name: "Report Writing", url: "#" },
+                { name: "Story Writing", url: "#" },
+                { name: "Assessment Task", url: "#" }
+            ],
+            "Reading": [
+                { name: "Comprehension", url: "#" },
+                { name: "Summary", url: "#" },
+                { name: "Literature", url: "#" },
+                { name: "Poetry", url: "#" },
+                { name: "Drama", url: "#" },
+                { name: "Prose", url: "#" }
+            ],
+            "Orals": [
+                { name: "Listening Comprehension", url: "#" },
+                { name: "Phonetics", url: "#" },
+                { name: "Stress and Intonation", url: "#" },
+                { name: "Oral Presentation", url: "#" },
+                { name: "Debate", url: "#" }
             ]
         }
     };
