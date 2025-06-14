@@ -353,6 +353,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     // Define your test links by year
     const testLinks = {
+        "2025": { url: "./math-jhs/passco/bece-2025", type: "web" },
         "2024": { url: "./math-jhs/passco/bece-2024", type: "web" },
         "2023": { url: "./math-jhs/passco/bece-2023", type: "web" },
         "2022": { url: "./math-jhs/passco/bece-2022", type: "web" },

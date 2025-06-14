@@ -109,6 +109,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Define your test links by year
     const testLinks = {
+        "2025": { url: "../../math-jhs/passco/bece-2025", type: "web" },
         "2024": { url: "../../math-jhs/passco/bece-2024", type: "web" },
         "2023": { url: "../../math-jhs/passco/bece-2023", type: "web" },
         "2022": { url: "../../math-jhs/passco/bece-2022", type: "web" },
@@ -131,8 +132,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "2005": { url: "../../math-jhs/passco/bece-2005", type: "web" },
         "2004": { url: "../../math-jhs/passco/bece-2004", type: "web" },
         "2003": { url: "../../math-jhs/passco/bece-2003", type: "web" },
-        "2002b": { url: "../../math-jhs/passco/bece-2002b", type: "web" },
-        "2002a": { url: "../../math-jhs/passco/bece-2002a", type: "web" },
+        "2002 B": { url: "../../math-jhs/passco/bece-2002b", type: "web" },
+        "2002 A": { url: "../../math-jhs/passco/bece-2002a", type: "web" },
         "2001": { url: "../../math-jhs/passco/bece-2001", type: "web" },
         "2000": { url: "../../math-jhs/passco/bece-2000", type: "web" },
         "1999": { url: "../../math-jhs/passco/bece-1999", type: "web" },
