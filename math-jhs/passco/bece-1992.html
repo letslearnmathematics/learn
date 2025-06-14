@@ -6,36 +6,46 @@
         
         <!-- SEO and Social Meta Tags -->
         <title>BECE 1992 | JHS Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Comprehensive lesson on BECE 1992 Mathematics past questions. Solve problems, view solutions, and improve your skills.">
+        <meta name="description" content="Try your hands on the BECE 1992 Mathematics past questions.">
         
         <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
-        <link rel="manifest" href="../../../../site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="BECE 1992 | JHS Mathematics">
-        <meta property="og:description" content="Comprehensive lesson on BECE 1992 Mathematics past questions. Solve problems, view solutions, and improve your skills.">
+        <meta property="og:description" content="Try your hands on the BECE 1992 Mathematics past questions.">
         <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/passco/bece-1992">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/passco/bece-2025">
         <meta property="og:type" content="website">
-    
+
         <!-- Fonts and Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         
         <!-- CSS -->
-        <link rel="stylesheet" href="../passco/css/bece-tests-general.css">
-        <link rel="stylesheet" href="../passco/css/jhslessons.css">
         <link rel="stylesheet" href="../passco/css/bece2024.css">
+        <link rel="stylesheet" href="../passco/css/bece-tests-general.css">
 
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -43,28 +53,18 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
         
+        <!-- MathJax with combined TeX and MathML input, HTML output -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-    
+
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
             crossorigin="anonymous"></script>
-
-        <link rel="stylesheet" href="../passco/css/math-challenge-bece2024.css">
     </head>
     <body>
         <header class="lesson-header">
@@ -114,8 +114,9 @@
                             </div>
                             <ul class="topic-menu">
                                 <li><a href="#instructions" class="active"><i class="fas fa-chevron-right"></i> Guide</a></li>
+                                <li><a href="#section-a-timed"><i class="fas fa-chevron-right"></i> Section A</a></li>
                                 <li><a href="#section-b"><i class="fas fa-chevron-right"></i> Section B</a></li>
-                                <li><a href="#section-a-timed"><i class="fas fa-chevron-right"></i> Section A (Timed)</a></li>
+                                
                             </ul>
                             
                             <div class="level-buttons">
@@ -144,7 +145,7 @@
                             <span>BECE_1992</span>
                         </nav>
 
-                        <!-- Definition Section -->
+                        <!-- Test Instructions -->
                         <section id="instructions" class="lesson-section">
                             <h2 class="section-title">
                                 <i class="fas fa-book-open"></i> GUIDE (BECE - 1992)
@@ -152,9 +153,8 @@
                             
                             <div class="concept-box">
                                 <p>
-                                    Try to solve each question within 15 minutes. Time yourself and see how well you can do.
-                                    After you are done solving the section B, try the timed section A, multiple choice questions at the 
-                                    bottom of the page.
+                                    You have 60 minutes for each section. Try to work on your speed as you prepare
+                                    towards the final exam.
                                 </p>
                                 <p>
                                     Good luck and remember to check your answers with the solutions provided.
@@ -162,6 +162,108 @@
                                 </p>
                             </div>
                         </section>
+
+                        <!-- Test Instructions Section -->
+
+                        <!-- Test Instructions -->
+                        <section id="section-a-timed" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Section A - Multiple Choice Questions</h2>
+                            
+                            <!--
+                            <div class="concept-box">
+                                <p>
+                                    This timed test consists of 40 multiple-choice questions to be completed in 60 minutes.
+                                    Read each question carefully and select the best answer.
+                                </p>
+                                <p>
+                                    After completing the test, your answers will be automatically submitted. You can review
+                                    your performance and see correct answers afterward.
+                                </p>
+                            </div>
+                            -->
+                            <div class="test-instructions">
+                                <p>You have 60 minutes to complete this test. The timer will start when you begin.</p>
+                                <div class="timer-container">
+                                    <span id="timer-display">60:00</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                </div>
+                                <div id="test-warning" class="test-warning">
+                                    <i class="fas fa-exclamation-triangle"></i> Timer is running! Don't navigate away.
+                                </div>
+                            </div>
+                            
+                            <!-- Google Form Container -->
+                            <div id="google-form-container" style="display: none;">
+                                <iframe id="google-form-iframe" src="" frameborder="0" style="width: 100%; height: 1500px;"></iframe>
+                            </div>
+                            
+                            <div class="test-controls">
+                                <button id="start-timed-test" class="control-btn">Start Test</button>
+                                <div id="form-submit-message" style="display: none; margin-top: 1rem;">
+                                    <p>When finished, make sure to click the submit button in the Google Form above.</p>
+                                </div>
+                            </div>
+
+                        </section>   
+
+                        <!-- Results Section (Initially Hidden) -->
+                        <section id="test-results" class="lesson-section" style="display: none;">
+                            <h2 class="section-title">
+                                <i class="fas fa-chart-bar"></i> Test Results
+                            </h2>
+                            <div class="results-container">
+                                <div class="score-card">
+                                    <h3>Your Score</h3>
+                                    <div class="score-display">
+                                        <span id="score-value">0</span>/40
+                                    </div>
+                                    <div class="score-percentage" id="score-percentage">0%</div>
+                                </div>
+                                
+                                <div class="results-details">
+                                    <h3>Performance Breakdown</h3>
+                                    <div class="results-grid">
+                                        <div class="result-category correct">
+                                            <span class="result-count" id="correct-count">0</span>
+                                            <span class="result-label">Correct</span>
+                                        </div>
+                                        <div class="result-category incorrect">
+                                            <span class="result-count" id="incorrect-count">0</span>
+                                            <span class="result-label">Incorrect</span>
+                                        </div>
+                                        <div class="result-category unanswered">
+                                            <span class="result-count" id="unanswered-count">0</span>
+                                            <span class="result-label">Unanswered</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="time-summary">
+                                        <p>Time taken: <span id="time-taken">00:00</span></p>
+                                        <p>Time per question: <span id="time-per-question">0s</span></p>
+                                    </div>
+                                </div>
+                                
+                                <div class="answers-review">
+                                    <h3>Review Answers</h3>
+                                    <div id="answers-list">
+                                        <!-- Answers will be populated here -->
+                                    </div>
+                                </div>
+                                
+                                <div class="results-actions">
+                                    <button id="retake-test" class="control-btn">
+                                        <i class="fas fa-redo"></i> Retake Test
+                                    </button>
+                                    <button id="view-solutions" class="control-btn">
+                                        <i class="fas fa-book-open"></i> View Solutions
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+
+                        <br><br>
                         
                         <div id="section-b" class="groups">
                             <div class="practice-header">
@@ -340,31 +442,31 @@
                                                 \(\Rightarrow \dfrac{15}{100} \times\) ₵ 240,000.00 
                                             </p>
                                             <p>
-                                                \(\Rightarrow 15 \times ₵ 2400\)
+                                                \(\Rightarrow 15 \times\) ₵ $2400$
                                             </p>
                                             <p>
-                                                \(\Rightarrow ₵ 36,000.00\)
+                                                \(\Rightarrow\) ₵ 36,000.00
                                             </p>
                                             <p>
                                                 Amount spent on property tax
                                             </p>
                                             <p>
-                                                \(\Rightarrow 25\% \ \ of \ \ ₵ 240,000.00 \)
+                                                \(\Rightarrow 25\% \) of ₵ 240,000.00 
                                             </p>
                                             <p>
-                                                \(\Rightarrow \dfrac{25}{100} \times ₵ 240,000.00 \)
+                                                \(\Rightarrow \dfrac{25}{100} \times\) ₵ 240,000.00 
                                             </p>
                                             <p>
-                                                \(\Rightarrow 25 \times ₵ 2400\)
+                                                \(\Rightarrow 25 \times\) ₵ 2400
                                             </p>
                                             <p>
-                                                \(\Rightarrow ₵ 60,000.00\)
+                                                \(\Rightarrow\) ₵ 60,000.00
                                             </p>
                                             <p>
                                                 Amount spent on repairs
                                             </p>
                                             <p>
-                                                \(\Rightarrow ₵ 10,000.00\)
+                                                \(\Rightarrow\) ₵ 10,000.00
                                             </p>
                                             <p>
                                                 Total expense = income tax + property tax + repairs
@@ -373,13 +475,13 @@
                                                 Hence, Total expense 
                                             </p>
                                             <p>
-                                                \(\Rightarrow\)\(₵ 36,000.00 +\)\( ₵ 60,000.00 + \)\(₵ 10,000.00\)
+                                                \(\Rightarrow\) ₵ \( 36,000.00 +\) ₵ 60,000.00 \(+ \) ₵\( 10,000.00\)
                                             </p>
                                             <p>
-                                                \(\Rightarrow\)\(₵ 106,000.00\)
+                                                \(\Rightarrow\) ₵ \(106,000.00\)
                                             </p>
                                             <p>
-                                                \(\therefore\) the landlady's total expense was \(₵ 106,000.00\)
+                                                \(\therefore\) the landlady's total expense was ₵ \(106,000.00\)
                                             </p>
                                         </div>
                                     </li>
@@ -392,22 +494,22 @@
                                         <div class="solution">
                                             <p><u>Question 2\(b\)</u></p>
                                             <p>
-                                                Amount gotten \(= ₵ 240,000.00\)
+                                                Amount gotten \(=\) ₵ 240,000.00
                                             </p>
                                             <p>
-                                                Total expense \(= ₵ 106,000.00\)
+                                                Total expense \(=\) ₵ 106,000.00
                                             </p>
                                             <p>
                                                 Remaining amount \(=\) Amount gotten \(-\) total expense
                                             </p>
                                             <p>
-                                                Hence, Remaining amount \(= ₵ 240,000.00 -\)\(₵ 106,000.00\)
+                                                Hence, Remaining amount \(=\) ₵ 240,000.00 \(-\)₵ 106,000.00
                                             </p>
                                             <p>
-                                                \(\Rightarrow\) Remaining amount \(= ₵ 134,000.00\)
+                                                \(\Rightarrow\) Remaining amount \(=\) ₵ 134,000.00
                                             </p>
                                             <p>
-                                                \(\therefore\) she had \(₵ 134,000.00\) remaining after her expenses.
+                                                \(\therefore\) she had ₵ 134,000.00 remaining after her expenses.
                                             </p>
                                         </div>
                                     </li>
@@ -426,7 +528,7 @@
                                                 \(\Rightarrow \dfrac{amount \ on \ repairs}{amount \ gotten} \times 100\%\)
                                             </p>
                                             <p>
-                                                \(\Rightarrow \dfrac{₵10,000}{₵240,000} \times 100\%\)
+                                                \(\Rightarrow \dfrac{\text{₵10,000}}{\text{₵240,000}} \times 100\%\)
                                             </p>
                                             <p>
                                                 \(\Rightarrow \dfrac{1}{24} \times 100\%\)
@@ -532,19 +634,19 @@
                                                 Pupils who obtained 7 marks = 8 <br>
                                             </p>
                                             <p>
-                                                Probability = successful outcomes/total outcomes
+                                                Probability = $\dfrac{\text{successful outcomes}}{\text{total outcomes}}$
                                             </p>
                                             <p>
                                                 Prob.(obtaining 7 marks): 
                                             </p>
                                             <p>
-                                                ⇒ 8/64 
+                                                $\Rightarrow \dfrac{8}{64}$ 
                                             </p>
                                             <p>
-                                                ⇒ 1/8 
+                                                $\Rightarrow \dfrac{1}{8}$  
                                             </p>
                                             <p>
-                                                ∴ the probability of choosing a pupil who obtained 7 marks is 1/8.
+                                                $\Rightarrow$ the probability of choosing a pupil who obtained 7 marks is $\frac{1}{8}$.
                                             </p>
                                         </div>
                                     </li>
@@ -589,117 +691,6 @@
                                     </p>
                                 </div>
                             </div>
-
-
-                            <br><br>
-
-                            <!-- Test Instructions Section -->
-
-                            <!-- Test Instructions -->
-                            <section id="section-a-timed" class="lesson-section">
-                                <h2 class="section-title">
-                                    <i class="fas fa-book-open"></i> Section A
-                                </h2>
-                                
-                                <div class="concept-box">
-                                    <p>
-                                        This timed test consists of 40 multiple-choice questions to be completed in 60 minutes.
-                                        Read each question carefully and select the best answer.
-                                    </p>
-                                    <p>
-                                        After completing the test, your answers will be automatically submitted. You can review
-                                        your performance and see correct answers afterward.
-                                    </p>
-                                </div>
-                            </section>    
-
-                            <!-- Timed Test Section -->
-                            <section  class="practice-section">
-                                <div class="practice-header">
-                                    <i class="fas fa-clock"></i>
-                                    <h2>Section A (60 minutes)</h2>
-                                </div>
-                                
-                                <div class="test-instructions">
-                                    <p>You have 60 minutes to complete this test. The timer will start when you begin.</p>
-                                    <div class="timer-container">
-                                        <span id="timer-display">60:00</span>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill"></div>
-                                        </div>
-                                    </div>
-                                    <div id="test-warning" class="test-warning">
-                                        <i class="fas fa-exclamation-triangle"></i> Timer is running! Don't navigate away.
-                                    </div>
-                                </div>
-                                
-                                <!-- Google Form Container -->
-                                <div id="google-form-container" style="display: none;">
-                                    <iframe id="google-form-iframe" src="" frameborder="0" style="width: 100%; height: 1500px;"></iframe>
-                                </div>
-                                
-                                <div class="test-controls">
-                                    <button id="start-timed-test" class="control-btn">Start Test</button>
-                                    <div id="form-submit-message" style="display: none; margin-top: 1rem;">
-                                        <p>When finished, make sure to click the submit button in the Google Form above.</p>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- Results Section (Initially Hidden) -->
-                            <section id="test-results" class="lesson-section" style="display: none;">
-                                <h2 class="section-title">
-                                    <i class="fas fa-chart-bar"></i> Test Results
-                                </h2>
-                                <div class="results-container">
-                                    <div class="score-card">
-                                        <h3>Your Score</h3>
-                                        <div class="score-display">
-                                            <span id="score-value">0</span>/40
-                                        </div>
-                                        <div class="score-percentage" id="score-percentage">0%</div>
-                                    </div>
-                                    
-                                    <div class="results-details">
-                                        <h3>Performance Breakdown</h3>
-                                        <div class="results-grid">
-                                            <div class="result-category correct">
-                                                <span class="result-count" id="correct-count">0</span>
-                                                <span class="result-label">Correct</span>
-                                            </div>
-                                            <div class="result-category incorrect">
-                                                <span class="result-count" id="incorrect-count">0</span>
-                                                <span class="result-label">Incorrect</span>
-                                            </div>
-                                            <div class="result-category unanswered">
-                                                <span class="result-count" id="unanswered-count">0</span>
-                                                <span class="result-label">Unanswered</span>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="time-summary">
-                                            <p>Time taken: <span id="time-taken">00:00</span></p>
-                                            <p>Time per question: <span id="time-per-question">0s</span></p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="answers-review">
-                                        <h3>Review Answers</h3>
-                                        <div id="answers-list">
-                                            <!-- Answers will be populated here -->
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="results-actions">
-                                        <button id="retake-test" class="control-btn">
-                                            <i class="fas fa-redo"></i> Retake Test
-                                        </button>
-                                        <button id="view-solutions" class="control-btn">
-                                            <i class="fas fa-book-open"></i> View Solutions
-                                        </button>
-                                    </div>
-                                </div>
-                            </section>
 
                             <br><br>
                             
@@ -763,7 +754,6 @@
         </footer>
 
     <!-- Scripts -->
-    <script src="../passco/js/math-challenge-bece2024.js"></script>
     <script src="../passco/js/bece-tests-general.js"></script>
     <script src="../passco/js/1990test.js"></script>
     <script>
