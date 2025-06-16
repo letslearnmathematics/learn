@@ -358,8 +358,8 @@ document.addEventListener("DOMContentLoaded", function() {
     const subtopicsData = {
         "jhs": {
             "Environment & Issues": [
-                { name: "Meaning & Scope of Environment", url: "./social-studies/environment-and-issues/meaning-of-environment.html" },
-                { name: "Environmental Degradation", url: "" },
+                { name: "Meaning & Scope of Environment", url: "./social-studies/environment-and-issues/meaning-of-environment" },
+                { name: "Environmental Degradation", url: "./social-studies/environment-and-issues/environmental-degradation" },
                 { name: "Resources", url: "" },
                 { name: "Our Natural World", url: "" },
                 { name: "Mapping Our Environment", url: "" },
