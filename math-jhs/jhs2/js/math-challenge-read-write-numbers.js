@@ -461,871 +461,919 @@ function initGame() {
 // Make sure allQuestions is defined before the game starts
 const allQuestions = {
     1: [
-      {
-        text: "If 1 rod = 10 cubes, how many cubes are in 3 rods?",
-        answers: ["3", "30", "300", "3,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods make 1 flat?",
-        answers: ["1", "10", "100", "1,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is the value of 2 flats + 5 rods + 7 cubes?",
-        answers: ["275", "2,057", "257", "2570"],
+    {
+        text: "What is the place value of 5 in 3,502,417,896?",
+        answers: ["Ones", "Tens", "Hundred millions", "Billions"],
         correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 1 block?",
-        answers: ["10", "100", "1,000", "10,000"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 6 blocks, how many flats is that?",
-        answers: ["6", "60", "600", "6,000"],
+        videoSolution: ""
+    },
+    {
+        text: "Write 4,000,300,020 in words",
+        answers: [
+        "Four billion three hundred thousand and twenty",
+        "Four billion three million and twenty",
+        "Four billion three hundred million and twenty",
+        "Four million three hundred thousand and twenty"
+        ],
         correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Convert 8 rods + 9 cubes to total cubes.",
-        answers: ["17", "69", "89", "98"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods are in 2 flats?",
-        answers: ["2", "20", "200", "2,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is 1 block - 3 flats in cubes?",
-        answers: ["7", "70", "700", "7,000"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 60 cubes, how many rods can you make?",
-        answers: ["6", "60", "600", "6,000"],
+        videoSolution: ""
+    },
+    {
+        text: "Which digit is in the billions place in 7,045,678,921?",
+        answers: ["7", "0", "4", "5"],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 1 flat + 2 rods?",
-        answers: ["12", "102", "120", "1,200"],
+        videoSolution: ""
+    },
+    {
+        text: "Write 'Two billion fifty million' in figures",
+        answers: ["2,050,000", "2,050,000,000", "2,500,000,000", "2,005,000,000"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is the place value of 8 in 1,208,456,709?",
+        answers: ["Millions", "Ten millions", "Hundred millions", "Billions"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Write 9,080,000,015 in words",
+        answers: [
+        "Nine billion eight hundred million and fifteen",
+        "Nine billion eighty million and fifteen",
+        "Nine billion eight million and fifteen",
+        "Nine billion eight hundred thousand and fifteen"
+        ],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Identify the digit in the hundred millions place for 6,128,475,360",
+        answers: ["6", "1", "2", "8"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Write 'Seven billion two hundred and one million' in figures",
+        answers: ["7,201,000", "7,201,000,000", "7,210,000,000", "7,200,100,000"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is the place value of 0 in 3,040,000,107?",
+        answers: ["Ten millions", "Hundred millions", "Billions", "Millions"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Write 1,000,500,300 in words",
+        answers: [
+        "One billion five hundred thousand and three hundred",
+        "One million five hundred thousand and three hundred",
+        "One billion five million and three hundred",
+        "One billion fifty thousand and three hundred"
+        ],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Which digit is in the ten millions place in 5,842,136,709?",
+        answers: ["8", "4", "2", "1"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Write 'Thirty billion forty million' in figures",
+        answers: ["30,040,000", "30,400,000,000", "30,040,000,000", "3,040,000,000"],
         correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Which equals 250 cubes?",
-        answers: ["2 flats + 5 rods", "2 rods + 5 flats", "2 blocks + 5 cubes", "2 blocks + 5 rods"],
+        videoSolution: ""
+    },
+    {
+        text: "What is the place value of 3 in 12,006,450,318?",
+        answers: ["Hundreds", "Tens", "Thousands", "Ten thousands"],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Subtract: 1 flat - 4 rods. Result in cubes?",
-        answers: ["6", "60", "96", "600"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many full flats can you make from 325 cubes?",
-        answers: ["3", "32", "325", "3,250"],
+        videoSolution: ""
+    },
+    {
+        text: "Write 42,017,000,200 in words",
+        answers: [
+        "Forty-two billion seventeen million two hundred",
+        "Forty-two million seventeen thousand two hundred",
+        "Four billion two hundred seventeen million two hundred",
+        "Forty-two billion one hundred and seven million two hundred"
+        ],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Add: 3 rods + 7 rods. Total cubes?",
-        answers: ["10", "37", "100", "370"],
+        videoSolution: ""
+    },
+    {
+        text: "Identify the digit in the millions place for 9,128,475,360",
+        answers: ["1", "2", "8", "4"],
         correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If 1 block = 10 flats, how many flats are in 5 blocks?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 4 rods + 9 cubes?",
-        answers: ["49", "409", "94", "490"],
+        videoSolution: ""
+    },
+    {
+        text: "Write 'Fifteen billion eighty million' in figures",
+        answers: ["15,080,000,000", "15,800,000,000", "1,580,000,000", "15,008,000,000"],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you combine 2 flats + 0 rods + 3 cubes, what is the total?",
-        answers: ["23", "203", "230", "2,003"],
+        videoSolution: ""
+    },
+    {
+        text: "What is the place value of 7 in 3,098,067,907?",
+        answers: ["Hundreds", "Thousands", "Ten thousands", "Millions"],
         correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods are needed to make 1 block?",
-        answers: ["10", "100", "1,000", "10,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is 5 flats - 2 rods in cubes?",
-        answers: ["3", "48", "480", "498"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 120 cubes, how many flats can you make?",
-        answers: ["1", "12", "120", "1,200"],
+        videoSolution: ""
+    },
+    {
+        text: "Write the numeric part of serial number GH20348765 in words",
+        answers: [
+        "Twenty million three hundred and forty-eight thousand seven hundred and sixty-five",
+        "Two million thirty-four thousand eight hundred and sixty-five",
+        "Two hundred and three million forty-eight thousand seven hundred and sixty-five",
+        "Twenty-three million forty-eight thousand seven hundred and sixty-five"
+        ],
         correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      }
-    ],
+        videoSolution: ""
+    },
+    {
+        text: "Which digit is in the hundred thousands place in 5,842,136,709?",
+        answers: ["1", "3", "6", "7"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Write 'One billion eighty-six thousand' in figures",
+        answers: ["1,086,000", "1,000,086,000", "1,000,860,000", "1,086,000,000"],
+        correctIndex: 1,
+        videoSolution: ""
+    }
+],
     2: [
-      // Level 2 questions would go here
-      // Follow same format as level 1
-      {
-        text: "How many cubes are in 7 rods + 2 cubes?",
-        answers: ["27", "72", "702", "720"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+    {
+        "text": "What is the place value of 7 in 12,345,678,912?",
+        "answers": ["Hundred millions", "Ten millions", "Millions", "Hundred thousands"],
+        "correctIndex": 2,
+        "videoSolution": ""
     },
     {
-        text: "What is the value of 1 flat + 0 rods + 5 cubes?",
-        answers: ["15", "105", "150", "1,005"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 5,060,700,080 in words",
+        "answers": [
+            "Five billion, sixty million, seven hundred thousand and eighty",
+            "Five billion, six million, seven hundred thousand and eighty",
+            "Five billion, sixty-seven million and eighty",
+            "Five billion, sixty million, seventy thousand and eighty"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "How many rods make 5 flats?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which digit is in the hundred millions place in 9,876,543,210?",
+        "answers": ["8", "7", "6", "9"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Subtract: 3 flats - 4 rods. Result in cubes?",
-        answers: ["26", "260", "296", "2,600"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 'Seven billion, two hundred and one million, thirty-four thousand, five hundred and six' in figures",
+        "answers": ["7,201,034,506", "7,210,345,006", "7,201,345,060", "7,021,034,506"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "If you have 15 rods, how many cubes is that?",
-        answers: ["15", "150", "1,500", "15,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is the place value of 0 in 4,050,600,300?",
+        "answers": ["Hundred millions", "Ten millions", "Millions", "Hundred thousands"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "How many full rods can you make from 84 cubes?",
-        answers: ["8", "84", "840", "8,400"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 12,006,450,318 in words",
+        "answers": [
+            "Twelve billion, six million, four hundred and fifty thousand, three hundred and eighteen",
+            "Twelve billion, sixty million, four hundred and fifty thousand, three hundred and eighteen",
+            "Twelve billion, six million, forty-five thousand, three hundred and eighteen",
+            "Twelve billion, six million, four hundred and five thousand, three hundred and eighteen"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "What is 1 block + 2 flats + 3 rods + 4 cubes?",
-        answers: ["123", "1,234", "12,340", "123,400"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Identify the digit in the ten millions place for 3,128,475,360",
+        "answers": ["1", "2", "8", "4"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "Convert 9 rods + 9 cubes to total cubes.",
-        answers: ["18", "99", "909", "999"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 'Twenty-three billion, four hundred and five million, six thousand, seven hundred and eight' in figures",
+        "answers": ["23,405,006,708", "23,450,600,708", "23,405,060,708", "23,045,006,708"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "How many cubes are in half a flat?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is the place value of 3 in 1,203,456,789?",
+        "answers": ["Millions", "Ten millions", "Hundred thousands", "Hundred millions"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "If 1 block = 10 flats, how many cubes are in 0.5 blocks?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 30,040,000,107 in words",
+        "answers": [
+            "Thirty billion, forty million, one hundred and seven",
+            "Thirty billion, four million, one hundred and seven",
+            "Three billion, forty million, one hundred and seven",
+            "Thirty billion and forty million, one hundred and seven"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Add: 1 rod + 1 flat + 1 block. Total cubes?",
-        answers: ["111", "1,110", "11,100", "111,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which digit is in the billions place in 15,842,136,709?",
+        "answers": ["1", "5", "8", "4"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "How many flats are in 2 blocks + 5 flats?",
-        answers: ["7", "25", "250", "2,500"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 'One hundred and two billion, seven million, fifty thousand, nine hundred and one' in figures",
+        "answers": ["102,007,050,901", "102,070,050,901", "100,207,050,901", "120,007,050,901"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "What is 3 rods \\(\\times\\) 4 in cubes?",
-        answers: ["12", "120", "1,200", "12,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is the place value of 9 in 6,129,087,543?",
+        "answers": ["Hundred thousands", "Millions", "Ten thousands", "Hundred millions"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "Divide: 1 block \\(\\div\\) 2 rods. Result?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 7,503,618,942 in words",
+        "answers": [
+            "Seven billion, five hundred and three million, six hundred and eighteen thousand, nine hundred and forty-two",
+            "Seven billion, five hundred and three million, six hundred and eighty-one thousand, nine hundred and forty-two",
+            "Seven billion, fifty-three million, six hundred and eighteen thousand, nine hundred and forty-two",
+            "Seven billion, five hundred and three million, sixteen thousand, nine hundred and forty-two"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "If you have 250 cubes, how many full flats can you make?",
-        answers: ["2", "25", "250", "2,500"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Identify the digit in the hundred thousands place for 5,842,136,709",
+        "answers": ["1", "3", "6", "7"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "How many cubes are in 0.1 blocks?",
-        answers: ["1", "10", "100", "1,000"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 'Sixty billion, four hundred and twenty million, three thousand and eight' in figures",
+        "answers": ["60,420,003,008", "60,402,003,008", "60,420,030,008", "6,420,003,008"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Combine: 4 flats + 9 rods + 6 cubes. Total cubes?",
-        answers: ["4.096", "469", "496", "964"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is the place value of 2 in 3,098,067,907?",
+        "answers": ["Hundreds", "Thousands", "Ten thousands", "Millions"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "What is 1 flat - 1 rod - 1 cube, in cubes?",
-        answers: ["89", "98", "109", "189"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write the numeric part of serial number GH20348765 in words",
+        "answers": [
+            "Twenty million, three hundred and forty-eight thousand, seven hundred and sixty-five",
+            "Two million, thirty-four thousand, eight hundred and sixty-five",
+            "Two hundred and three million, forty-eight thousand, seven hundred and sixty-five",
+            "Twenty-three million, forty-eight thousand, seven hundred and sixty-five"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "If 20 rods = _____ cubes, the missing value is:",
-        answers: ["20", "200", "2,000", "20,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which digit is in the ten thousands place in 5,842,136,709?",
+        "answers": ["1", "3", "6", "7"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "How many cubes are in 0.25 flats?",
-        answers: ["25", "250", "2.5", "2,500"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    ],
-    3: [
-      // Level 3 questions would go here
-      // Follow same format as level 1
+        "text": "Write 'One billion, eighty-six thousand and nineteen' in figures",
+        "answers": ["1,000,086,019", "1,086,000,019", "1,000,860,019", "1,086,019"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    }
+],
+    3:[
     {
-        text: "Add: 3 rods + 5 rods. Total cubes?",
-        answers: ["8", "80", "800", "8,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        text: "What is the place value of the underlined digit in 12,<u>0</u>45,600,000?",
+        answers: ["Ten millions", "Hundred millions", "Billions", "Hundred thousands"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        text: "Subtract: 1 flat - 2 rods. Remaining cubes?",
-        answers: ["8", "80", "98", "800"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 'A billion, twenty-three million, four hundred and five thousand and six' in figures.",
+        "answers": [
+            "1,023,405,006",
+            "1,023,450,006",
+            "1,230,405,006",
+            "1,023,405,060"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Multiply: 4 rods \\(\\times\\) 3. Total cubes?",
-        answers: ["12", "120", "1,200", "12,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which digit is in the *hundred thousands* place in 7,<u>0</u>50,<u>0</u>00,309?",
+        "answers": ["0", "5", "3", "9"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Divide: 1 block \\(\\div\\) 5 rods. Result?",
-        answers: ["2", "20", "200", "2,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 9,007,000,500 in words.",
+        "answers": [
+            "Nine billion, seven million, five hundred",
+            "Nine billion and seven million, five hundred",
+            "Nine billion, seven hundred thousand, five hundred",
+            "Nine billion, seven million and five hundred"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "What is 2 flats + 7 rods + 4 cubes?",
-        answers: ["2,074", "247", "274", "724"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is the correct numeral for 'Three hundred and six billion, eighty million, nine thousand and one'?",
+        "answers": [
+            "306,080,009,001",
+            "306,800,009,001",
+            "360,080,009,001",
+            "306,080,090,001"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "If you have 5 rods \\(\\times\\) 4, how many cubes total?",
-        answers: ["20", "200", "2,000", "20,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write the numeric part of currency serial number <strong>NG502<u>1</u>8743</strong> in words.",
+        "answers": [
+            "Five million, twenty-one thousand, eight hundred and forty-three",
+            "Fifty million, twenty-one thousand, eight hundred and forty-three",
+            "Five hundred and two million, one hundred and eighty-seven thousand, four hundred and thirty",
+            "Five million, two hundred and eighteen thousand, seven hundred and forty-three"
+        ],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "Solve: 1 block - 3 flats + 2 rods.",
-        answers: ["720", "702", "270", "1,320"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which statement about 6,<u>0</u>00,450,300 is *false*?",
+        "answers": [
+            "The digit '6' represents six hundred million",
+            "The '5' is in the ten thousands place",
+            "The number has three zeros in the millions period",
+            "The '3' is in the hundreds place"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "How many cubes are in 0.5 flats + 2 rods?",
-        answers: ["25", "45", "70", "700"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 'Four billion and five hundred thousand' in figures.",
+        "answers": [
+            "4,000,500,000",
+            "4,500,000,000",
+            "4,000,050,000",
+            "4,000,005,000"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "What is 3 rods \\(\\times\\) 2 rods?",
-        answers: ["6 cubes", "60 cubes", "600 cubes", "6,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Identify the *incorrect* number-word pair:",
+        "answers": [
+            "8,002,000,600 → Eight billion, two million, six hundred",
+            "3,040,000,107 → Three billion, forty million, one hundred and seven",
+            "1,000,086,019 → One billion, eighty-six thousand and nineteen",
+            "7,503,618,942 → Seven billion, five hundred and three million, six hundred and eighteen thousand, nine hundred and forty-two"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Divide: 2 blocks \\(\\div\\) 4 flats. Result?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "The population of a country is 'Two billion, one hundred and five million, two thousand and eight'. How is this written in figures?",
+        "answers": [
+            "2,105,002,008",
+            "2,150,002,008",
+            "2,105,200,008",
+            "2,105,020,008"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Subtract: 10 rods - 25 cubes.",
-        answers: ["7.5 cubes", "75 cubes", "750 cubes", "7,500 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "What is the place value of the *first* '0' in 10,<u>0</u>50,600,000?",
+        "answers": ["Hundred millions", "Ten millions", "Millions", "Billions"],
+        "correctIndex": 1,
+        "videoSolution": ""
     },
     {
-        text: "Add: 0.3 blocks + 4 rods. Total cubes?",
-        answers: ["34", "340", "430", "3,040"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 1,000,000,001 in words.",
+        "answers": [
+            "One billion and one",
+            "A billion, one",
+            "One billion, one million and one",
+            "One billion, one thousand and one"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Multiply: 1 flat \\(\\times\\) 1 rod.",
-        answers: ["10 cubes", "100 cubes", "1,000 cubes", "10,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which digit is in the *millions* place in 9,<u>0</u>87,<u>6</u>54,321?",
+        "answers": ["0", "6", "8", "7"],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "If 1 rod = 10 cubes, what is 7 rods ÷ 2?",
-        answers: ["3.5 cubes", "35 cubes", "350 cubes", "3,500 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 'Thirty-three billion, seven hundred and five' in figures.",
+        "answers": [
+            "33,000,000,705",
+            "33,000,705,000",
+            "33,700,000,005",
+            "33,000,007,050"
+        ],
+        "correctIndex": 0,
+        "videoSolution": ""
     },
     {
-        text: "Solve: 5 flats - 3 rods + 1 block.",
-        answers: ["1,270", "1,470", "1,700", "15,300"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "A banknote’s serial number is <strong>ZA3<u>0</u>210874</strong>. What is the place value of the underlined digit?",
+        "answers": ["Millions", "Hundred thousands", "Ten thousands", "Thousands"],
+        "correctIndex": 0,
+        "videoSolution": ""
+    }
+], 
+    4:[
+    {
+        "text": "Which of these is *not* equivalent to 4.56 billion?",
+        "answers": [
+            "4,560,000,000",
+            "Four billion, five hundred and sixty million",
+            "4,560 × 10⁶",
+            "4,560 million"
+        ],
+        "correctIndex": 2,
+        "videoSolution": "",
+        "hint": "Convert all options to the same format (figures or words). Note: 4,560 × 10⁶ = 4,560,000,000, but 4.56 billion is 4,560,000,000."
     },
     {
-        text: "How many cubes are in 0.2 blocks + 0.5 flats?",
-        answers: ["25", "250", "2,500", "25,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Write 'Seven trillion, eighty billion, four hundred and two thousand and fifteen' in figures.",
+        "answers": [
+            "7,080,402,015",
+            "7,080,402,015,000",
+            "7,080,000,402,015",
+            "7,800,402,015"
+        ],
+        "correctIndex": 2,
+        "videoSolution": "",
+        "hint": "Trillions are 12 zeros (1,000,000,000,000). Check the placement of 'eighty billion' and 'four hundred and two thousand'."
     },
     {
-        text: "What is 12 rods \\(\\times\\) 5?",
-        answers: ["60 cubes", "600 cubes", "6,000 cubes", "60,000 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "The distance to a star is 1.302 × 10¹² miles. How is this written in words?",
+        "answers": [
+            "One trillion, three hundred and two billion miles",
+            "One trillion, three hundred and two million miles",
+            "One billion, three hundred and two million miles",
+            "One trillion, thirty-two billion miles"
+        ],
+        "correctIndex": 1,
+        "videoSolution": "",
+        "hint": "10¹² = 1 trillion. 1.302 × 10¹² = 1,302,000,000,000."
     },
     {
-        text: "Divide: 3 blocks \\(\\div\\) 6 rods.",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Identify the error in this number: *'Three billion, fifty-six million, four thousand, two hundred and nine'* (written as 3,560,400,209).",
+        "answers": [
+            "Missing 'and' before 'two hundred'",
+            "Incorrect comma placement",
+            "'Four thousand' should be 'forty thousand'",
+            "No error; it is correct"
+        ],
+        "correctIndex": 2,
+        "videoSolution": "",
+        "hint": "Compare the words to the numeral: 3,560,004,209 vs. 3,560,400,209."
     },
     {
-        text: "Add: 0.7 flats + 8 cubes.",
-        answers: ["15", "78", "708", "780"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "A country's GDP is £9.0072 × 10¹¹. How is this written in words?",
+        "answers": [
+            "Nine hundred billion, seven hundred and twenty million pounds",
+            "Nine hundred billion and seventy-two million pounds",
+            "Nine billion, seven hundred and twenty thousand pounds",
+            "Nine hundred and seven billion, two hundred million pounds"
+        ],
+        "correctIndex": 1,
+        "videoSolution": "",
+        "hint": "10¹¹ = 100 billion. 9.0072 × 10¹¹ = 900,720,000,000."
     },
     {
-        text: "Subtract: 1 block - 0.5 blocks.",
-        answers: ["5 cubes", "50 cubes", "500 cubes", "5,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
+        "text": "Which number is the *smallest*?",
+        "answers": [
+            "Four billion, five hundred and six million",
+            "4,560,000,000",
+            "4.506 × 10⁹",
+            "4,506 million"
+        ],
+        "correctIndex": 2,
+        "videoSolution": "",
+        "hint": "Convert all to figures: A) 4,506,000,000; B) 4,560,000,000; C) 4,506,000,000; D) 4,506,000,000. Check for subtle differences."
     },
-    ], 
-    4: [
-        // Level 4 questions would go here
-      // Follow same format as level 1
-        {
-            text: "Solve: (2 flats \\(\\times\\) 3) + (5 rods \\(\\times\\) 4).",
-            answers: ["800", "1,100", "1,600", "2,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, what is 1 flat \\(\\div\\) 2 rods?",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.4 blocks + 3 flats - 2 rods?",
-            answers: ["420", "480", "4,200", "4,800"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 0.5 blocks \\(\\times\\) 10 rods.",
-            answers: ["50 cubes", "500 cubes", "5,000 cubes", "50,000 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "1,000 cubes ÷ 25 cubes",
-            answers: ["2 rods", "4 rods", "40 rods", "400 rods"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A builder uses 3 flats + 8 rods of material. How many cubes is this?",
-            answers: ["38", "308", "380", "3,080"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Subtract: 1.5 blocks - 7 flats. Result in cubes?",
-            answers: ["80", "800", "8,000", "80,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 6 rods \\(\\times\\) 0.5 flats. (Hint: 0.5 flat = 50 cubes)",
-            answers: ["30 cubes", "300 cubes", "3,000 cubes", "30,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A shop sells 2 rods + 5 cubes of ribbon per customer. How much ribbon for 4 customers?",
-            answers: ["25 cubes", "100 cubes", "250 cubes", "1,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Divide: 9 flats \\(\\div\\) 3 rods.",
-            answers: ["3", "30", "300", "3,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Solve: (1 block - 2 rods) + (3 flats \\(\\times\\) 2).",
-            answers: ["1,160", "1,600", "2,600", "3,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, what is \\frac{1}{4} block + \\frac{1}{2} flat?",
-            answers: ["250 cubes", "300 cubes", "350 cubes", "400 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A recipe requires 2 rods + 7 cubes of sugar. Double the recipe.",
-            answers: ["27 cubes", "54 cubes", "270 cubes", "540 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many full rods can you make from 365 cubes?",
-            answers: ["3", "36", "360", "3,650"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.2 blocks + 30 rods - 1 flat?",
-            answers: ["10 cubes", "100 cubes", "1,000 cubes", "10,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A classroom has 4 blocks + 5 flats of paper. How many sheets if 1 cube = 1 sheet?",
-            answers: ["45", "450", "4,500", "45,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 5 rods = 50 cubes, what is 5 rods \\(\\times\\) 5 rods?",
-            answers: ["25 cubes", "250 cubes", "2,500 cubes", "25,000 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank has 2 blocks - 5 flats of water. How many cubes remain?",
-            answers: ["500", "1,500", "2,500", "5,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Combine: 0.3 flats + 4 rods + 0.7 blocks.",
-            answers: ["740 cubes", "804 cubes", "840 cubes", "8,040 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 1 block + 2 flats daily. Weekly production?",
-            answers: ["1,200 cubes", "8,400 cubes", "12,000 cubes", "84,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ], 
+    {
+        "text": "Write the serial number <strong>XE120<u>3</u>4509</strong> in words, focusing on the numeric part.",
+        "answers": [
+            "One hundred and twenty million, three hundred and forty-five thousand and nine",
+            "Twelve million, thirty-four thousand, five hundred and nine",
+            "One hundred and two million, three hundred and forty-five thousand and ninety",
+            "Twelve million, three hundred and forty-five thousand and nine"
+        ],
+        "correctIndex": 3,
+        "videoSolution": "",
+        "hint": "Ignore the letters. The numeric part is 12,034,509."
+    },
+    {
+        "text": "What is the place value of the *second* '7' in 7,<u>7</u>07,077,070?",
+        "answers": [
+            "Hundred millions",
+            "Ten millions",
+            "Millions",
+            "Hundred thousands"
+        ],
+        "correctIndex": 2,
+        "videoSolution": "",
+        "hint": "Break down the number: 7,707,077,070. The second '7' is in the millions place."
+    },
+    {
+        "text": "The population of a city is 'Four million, two hundred and six thousand, five hundred and nine'. Which numeral is *incorrect*?",
+        "answers": [
+            "4,260,509",
+            "4,206,509",
+            "4,200,000 + 6,000 + 500 + 9",
+            "4,206,500 + 9"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "The correct figure is 4,206,509. Option A swaps 'six thousand' and 'two hundred thousand'."
+    },
+    {
+        "text": "If 2.4 billion = 2,400,000,000, what is 0.006 billion in figures?",
+        "answers": [
+            "6,000,000",
+            "600,000",
+            "60,000,000",
+            "6,000"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "0.006 billion = 0.006 × 1,000,000,000 = 6,000,000."
+    }
+], 
     5: [
-        // Level 5 questions would go here
-      // Follow same format as level 1
-        {
-            text: "Emma buys a toy for 2 flats + 3 rods + 5 cubes. How much does she spend (in cubes)?",
-            answers: ["235", "253", "352", "325"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A book costs 1 block - 2 flats. What's the price in cubes?",
-            answers: ["800", "1,200", "8,000", "12,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = Gh₵10.00, how much is 5 flats + 4 rods?",
-            answers: ["Gh₵54.00", "Gh₵540.00", "Gh₵5,400.00", "Gh₵54,000.00"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A wall is built with 3 blocks + 5 flats of bricks. How many bricks are used?",
-            answers: ["305", "3,050", "3,500", "35,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A rope is 4 rods + 7 cubes long. How many cubes is that?",
-            answers: ["407", "470", "4,007", "47"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank holds 2 blocks of water. If you remove 5 flats, how much remains?",
-            answers: ["500", "1,500", "2,500", "5,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A machine makes 1 flat of widgets every hour. How many widgets does it make in 8 hours?",
-            answers: ["8", "80", "800", "8,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A worker packs 2 rods of boxes daily. How many cubes does he pack in 5 days?",
-            answers: ["10", "100", "500", "1,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Half a block + a quarter flat = ___ cubes.",
-            answers: ["250", "525", "600", "1,025"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "0.3 blocks + 0.7 flats = ___ cubes.",
-            answers: ["37", "3,070", "3,700", "370"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A store has 5 blocks of stock. It sells 3 flats + 2 rods daily. How many cubes remain after 2 days?",
-            answers: ["4,360", "4,600", "4,960", "5,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "You have 2 blocks. You give away 1 flat + 5 rods + 3 cubes. How much is left?",
-            answers: ["847", "1,847", "2,153", "2,847"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A pizza is cut into 1 flat + 2 rods slices. How many slices is that?",
-            answers: ["12", "102", "120", "1,020"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A school orders 4 blocks + 5 rods of pencils. How many pencils is that?",
-            answers: ["405", "4,500", "45,000", "4,050"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A car travels 1 rod km per minute. How far in 1 flat minutes?",
-            answers: ["10 km", "100 km", "0.1 km", "1,000 km"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Combine: 0.5 blocks + 25 rods - 3 flats.",
-            answers: ["0 cubes", "200 cubes", "450 cubes", "700 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 1,000 marbles, how many marbles are in 2.5 blocks?",
-            answers: ["25", "250", "2,500", "25,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A box weighs 1 block - 5 rods. What's its weight in cubes?",
-            answers: ["50", "500", "950", "995"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A recipe needs 3 rods + 2 cubes of flour. What is triple the recipe.",
-            answers: ["96", "15", "9", "32"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A garden has 2 blocks of plants. If 1 flat + 2 rods die, how many survive?",
-            answers: ["1,880", "1,808", "1,280", "1,082"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ], 
+    {
+        "text": "Which is the correct British English wording for 15,003,020,100?",
+        "answers": [
+            "Fifteen billion, three million, twenty thousand, one hundred",
+            "Fifteen billion and three million, twenty thousand and one hundred",
+            "Fifteen billion, three million and twenty thousand, one hundred",
+            "Fifteen billion, three million, twenty thousand and one hundred"
+        ],
+        "correctIndex": 3,
+        "videoSolution": "",
+        "hint": "British English requires 'and' before the last unit (one hundred). Commas separate other groups."
+    },
+    {
+        "text": "Identify the error in this numeral: 'Ten billion, four hundred and two million, thirty thousand and five' written as 10,402,300,005.",
+        "answers": [
+            "Missing comma after 'billion'",
+            "'Thirty thousand' should be 030,000 (three zeros)",
+            "Extra zero in the millions place",
+            "No error"
+        ],
+        "correctIndex": 1,
+        "videoSolution": "",
+        "hint": "The words specify 30,000 (not 300,000), so it should be 10,402,030,005."
+    },
+    {
+        "text": "Write 'Seven billion and eighty-five thousand' in figures.",
+        "answers": [
+            "7,000,085,000",
+            "7,085,000,000",
+            "7,000,850,000",
+            "7,000,080,500"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "'And' appears before the last unit (85,000), implying no millions component."
+    },
+    {
+        "text": "What is the place value of the first '0' in 20,004,500,600?",
+        "answers": [
+            "Hundred millions",
+            "Ten millions",
+            "Millions",
+            "Hundred thousands"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "Breakdown: 20,004,500,600 → 20 (billion), 004 (million), 500 (thousand), 600 (units)."
+    },
+    {
+        "text": "Which numeral matches 'Nine billion, nine hundred and ninety-nine thousand'?",
+        "answers": [
+            "9,000,999,000",
+            "9,900,099,000",
+            "9,000,099,900",
+            "9,000,900,999"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "No millions mentioned, so millions place = 000."
+    },
+    {
+        "text": "The numeric part of serial number GH25040078 is written in words as:",
+        "answers": [
+            "Twenty-five million, forty thousand and seventy-eight",
+            "Two hundred and fifty million, four hundred thousand, seven hundred and eighty",
+            "Two million, five hundred and four thousand and seventy-eight",
+            "Twenty-five million and four thousand, seventy-eight"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "GH25040078 → 25,040,078. British English uses 'and' before the last unit."
+    },
+    {
+        "text": "What is missing in this number: 'Twelve billion, five hundred million __ six hundred thousand, forty-two'?",
+        "answers": [
+            "The word 'and'",
+            "A comma after 'million'",
+            "The millions value (should be 500,006)",
+            "Nothing is missing"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "British English requires 'and' before the last unit (forty-two), even with intermediate groups."
+    },
+    {
+        "text": "Which digit is in the ten thousands place in 15,842,136,709?",
+        "answers": [
+            "1",
+            "3",
+            "6",
+            "7"
+        ],
+        "correctIndex": 1,
+        "videoSolution": "",
+        "hint": "Breakdown: 15,842,136,709 → ...136,709 → '3' is in the ten thousands place."
+    },
+    {
+        "text": "Write 3,000,010,002 in words.",
+        "answers": [
+            "Three billion, ten thousand and two",
+            "Three billion and ten million and two",
+            "Three billion, one hundred thousand and two",
+            "Three billion, ten thousand, two"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "No millions component; 'and' precedes the last unit (two)."
+    },
+    {
+        "text": "Identify the correct numeral for 'A billion, twenty-five million and eight'.",
+        "answers": [
+            "1,025,000,008",
+            "1,250,000,008",
+            "1,025,008,000",
+            "1,000,025,008"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "'A billion' = 1,000,000,000; 'and eight' implies it's the last unit."
+    }
+], 
     6: [
-        // Level 6 questions would go here
-      // Follow same format as level 1
-        {
-            text: "A store has 3 blocks + 7 flats of product. They sell 1 block + 2 flats + 5 rods in a day. How much inventory remains?",
-            answers: ["1,450 cubes", "2,450 cubes", "1,550 cubes", "2,550 cubes"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 4 rods + 3 cubes of goods every hour. How many cubes are made in an 8-hour shift?",
-            answers: ["344 cubes", "434 cubes", "3,440 cubes", "4,340 cubes"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Sarah saves 2 flats + 5 rods weekly. How many cubes does she save in 4 weeks?",
-            answers: ["100", "250", "1,000", "10,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A wall is 0.5 blocks + 2 flats tall. How many cubes is the height?",
-            answers: ["520", "700", "1,200", "7,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A Gh₵1,000.00 phone is discounted by 3 rods + 2 cubes. What's the new price in cubes?",
-            answers: ["Gh₵968.00", "Gh₵986.00", "Gh₵698.00", "Gh₵896.00"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A farmer harvests 5 blocks + 4 flats of corn. If 1 flat spoils, how much remains?",
-            answers: ["5,500", "530", "5,400", "5,300"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A truck carries 2 blocks + 5 rods of sand per trip. How many cubes can it transport in 3 trips?",
-            answers: ["2,500", "2,050", "615", "6,150"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Water boils at 1 flat °C. If it cools by 3 rods °C, what's the new temperature?",
-            answers: ["30°C", "70°C", "130°C", "170°C"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A runner completes 1 block + 2 flats meters in a race. How many meters is that?",
-            answers: ["1,002", "1,020", "1,200", "12,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A cake requires 3 rods + 4 cubes of flour. How much flour is needed for 5 cakes?",
-            answers: ["170", "107", "1,700", "17,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 3 blocks + \\(x\\) rods = 3,200 cubes, find the value of \\(x\\)?",
-            answers: ["2", "20", "200", "2,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is \\(\\dfrac{1}{2}\\) block + \\(\\dfrac{1}{4}\\) flat in cubes?",
-            answers: ["525", "600", "1,025", "1,250"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If \\(x\\) rods = 1 flat, what is \\(x\\)?",
-            answers: ["15", "5", "20", "10"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A store has 5 blocks of inventory. It sells 2 blocks + 3 flats + 4 rods on Monday. How much remains?",
-            answers: ["2,660", "2,340", "4,340", "1,640"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which is greater: 0.6 blocks or 7 flats?",
-            answers: ["0.6 blocks", "7 flats", "They are equal", "Not enough information"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, how many flats are in 50 rods?",
-            answers: ["0.5", "5", "50", "500"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank has 4,500 cubes of water. How many full blocks + flats is this?",
-            answers: ["4 blocks + 5 flats", "5 blocks + 4 flats", "3 blocks + 15 flats", "2 blocks + 25 flats"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.3 blocks - 15 rods?",
-            answers: ["150", "15", "1,500", "0"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 10 flats, and 1 flat = 10 rods, how many rods are in 2 blocks?",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A construction project needs 12,000 cubes of concrete. How many full blocks are required?",
-            answers: ["12", "120", "1,200", "1.2"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ], 
+    {
+        "text": "Which version correctly writes 11,001,100,101 in British English words?",
+        "answers": [
+            "Eleven billion, one million, one hundred thousand, one hundred and one",
+            "Eleven billion and one million, one hundred thousand and one hundred and one",
+            "Eleven billion, one million, one hundred thousand and one hundred and one",
+            "Eleven billion, one million and one hundred thousand, one hundred one"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "British English uses one 'and' only before the last unit (one hundred and one). Commas separate other groups."
+    },
+    {
+        "text": "The number 20,040,030,007 has how many zeros in the millions period?",
+        "answers": ["4", "3", "2", "1"],
+        "correctIndex": 2,
+        "videoSolution": "",
+        "hint": "Breakdown: 20,040,030,007 → 040 (millions) has two zeros (between 4 and 3)."
+    },
+    {
+        "text": "What is the smallest possible number matching '___ billion, ___ million, ___ thousand and ___' where blanks are single-digit words?",
+        "answers": [
+            "1,000,001,001",
+            "1,001,001,001",
+            "1,000,000,001",
+            "1,001,000,001"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "Fill blanks with smallest digits (1): 'one billion, one million, one thousand and one' = 1,001,001,001."
+    },
+    {
+        "text": "Identify the incorrect digit in this numeral based on its words: 'Twelve billion, three hundred and four million, fifty thousand and six' written as 12,340,050,006.",
+        "answers": [
+            "The '4' should be '3'",
+            "The '5' should be '0'",
+            "The '0' before '50' should be '4'",
+            "No error"
+        ],
+        "correctIndex": 2,
+        "videoSolution": "",
+        "hint": "'Three hundred and four million' = 304,000,000 (not 340,000,000). Correct numeral: 12,304,050,006."
+    },
+    {
+        "text": "Write 'Nine billion and nine hundred' in figures.",
+        "answers": [
+            "9,000,000,900",
+            "9,000,900,000",
+            "9,900,000,000",
+            "9,000,009,000"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "'And' before 'nine hundred' implies it's the last unit with no millions/thousands."
+    },
+    {
+        "text": "Which digit in 15,000,600,300 changes if 'fifteen billion, six hundred thousand and three hundred' becomes 'fifteen billion, six million and three hundred'?",
+        "answers": [
+            "The fifth '0' from the left",
+            "The seventh '0' from the left",
+            "The '6'",
+            "No change needed"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "Original: 15,000,600,300 → New: 15,006,000,300. Fifth '0' (in millions place) becomes '6'."
+    },
+    {
+        "text": "A serial number's numeric part (GH25040078) is written as 'Twenty-five million, forty thousand and seventy-eight'. If changed to 'Twenty-five million and forty thousand, seventy-eight', how does the numeral change?",
+        "answers": [
+            "No change (25,040,078)",
+            "Becomes 25,000,040,078",
+            "Becomes 25,400,078",
+            "Loses a comma"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "The 'and' placement doesn't affect the numeral when word order is unchanged."
+    },
+    {
+        "text": "What is the place value of the first '5' in 15,505,505,505?",
+        "answers": [
+            "Hundred millions",
+            "Ten millions",
+            "Millions",
+            "Hundred thousands"
+        ],
+        "correctIndex": 1,
+        "videoSolution": "",
+        "hint": "Breakdown: 15,505,505,505 → The first '5' is in the ten millions place."
+    },
+    {
+        "text": "Which number is written incorrectly in words?",
+        "answers": [
+            "10,100,100,100 → Ten billion, one hundred million, one hundred thousand and one hundred",
+            "7,000,000,007 → Seven billion and seven",
+            "3,030,030,030 → Three billion, thirty million, thirty thousand and thirty",
+            "1,000,100,001 → One billion, one hundred thousand and one"
+        ],
+        "correctIndex": 3,
+        "videoSolution": "",
+        "hint": "Option D misses 'and' before 'one' (last unit). Should be '...and one'."
+    },
+    {
+        "text": "Write the largest possible 10-digit number that can be formed from '___ billion, ___ hundred ___ty ___ million, ___ thousand and ___' (each blank is a single word).",
+        "answers": [
+            "9,999,999,999",
+            "9,900,990,099",
+            "9,999,900,999",
+            "9,999,990,009"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "Fill blanks with maximum values: 'nine billion, nine hundred ninety-nine million, nine hundred ninety-nine thousand and nine' = 9,999,999,999."
+    }
+], 
     7: [
-        // Level 7 questions would go here
-      // Follow same format as level 1
-        {
-            text: "If 5 rods + \\(x\\) cubes = 1 flat, what is the value of \\(x\\)?",
-            answers: ["40", "50", "60", "100"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is \\(\\dfrac{3}{4}\\) block - 2 rods in cubes?",
-            answers: ["550", "650", "730", "800"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A truck carries 2 blocks + 3 flats of sand. It drops off 5 rods + 7 cubes. How much sand remains?",
-            answers: ["2,243", "2,343", "2,443", "2,543"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which is greater: 0.7 blocks or 6 flats + 5 rods?",
-            answers: ["0.7 blocks", "6 flats + 5 rods", "Equal", "Not comparable"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 150 rods = _____ blocks, what fills the blank?",
-            answers: ["0.15", "1.5", "15", "150"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A box weighs 3,050 cubes. How many full blocks + flats + rods is this?",
-            answers: ["3 blocks + 0 flats + 5 rods", "3 blocks + 5 flats + 0 rods", "30 blocks + 5 rods", "305 flats"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 5 flats, 1 flat = 2 rods, and 1 rod = 10 cubes, how many cubes are in 2 blocks?",
-            answers: ["100", "200", "1,000", "2,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A bakery uses 2 flats + 8 rods of flour daily. How much flour is used in 5 days?",
-            answers: ["1,400", "2,800", "14,000", "28,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.4 blocks \\(\\times\\) 5 rods? (Assume rod = 10 cubes)",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If A = \\(\\dfrac{1}{4}\\) block, B = 3 rods, and C = 0.2 flats, which is smallest?",
-            answers: ["A", "B", "C", "All equal"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A container holds 2.5 blocks of water. How many flats is this equivalent to?",
-            answers: ["2.5", "25", "250", "2,500"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = \\(x\\) rods, what is the value of \\(x\\)?",
-            answers: ["10", "100", "1,000", "10,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 3 blocks + 5 flats of goods daily. How many cubes are produced in 4 days?",
-            answers: ["1,400", "3,500", "14,000", "35,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is \\(\\dfrac{3}{4}\\) block + \\(\\dfrac{1}{5}\\) flat in cubes?",
-            answers: ["755", "770", "800", "850"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which quantity is largest?",
-            answers: ["0.6 blocks", "7 flats", "65 rods", "600 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A machine makes 2 rods + 5 cubes every minute. How much does it produce in 30 minutes?",
-            answers: ["75", "250", "750", "7500"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 cube = 1 gram, how many kilograms is 1 block?",
-            answers: ["1", "10", "100", "1,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A shipment contains 4,200 cubes. How many full blocks and flats is this?",
-            answers: ["4 blocks + 2 flats", "2 blocks + 4 flats", "42 flats", "420 rods"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "35% of a block equals how many rods?",
-            answers: ["3.5", "35", "350", "3,500"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Boxes hold 1 flat (100 cubes) each. How many boxes are needed for 3 blocks + 2 rods?",
-            answers: ["30", "31", "32", "40"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ]
+    {
+        "text": "Which phrasing is *incorrect* for 7,000,000,007?",
+        "answers": [
+            "Seven billion and seven",
+            "Seven billion, seven",
+            "Seven billion, zero million, zero thousand and seven",
+            "Seven billion and zero million, zero thousand and seven"
+        ],
+        "correctIndex": 3,
+        "videoSolution": "",
+        "hint": "British English doesn't use 'and' before groups (like million/thousand), only before the last unit."
+    },
+    {
+        "text": "The number 13,030,030,030 is written in words as 'Thirteen billion, thirty million, thirty thousand and thirty'. If you remove all commas from the words, how does the numeral change?",
+        "answers": [
+            "No change (commas in words don't affect the numeral)",
+            "Becomes 1,303,003,003",
+            "Loses its place value structure",
+            "Requires hyphens between number words"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "Commas in British English words are optional for separation; the numeral stays identical."
+    },
+    {
+        "text": "What is the *minimum* number of words needed to correctly express 9,000,900,900 in British English?",
+        "answers": ["7", "9", "11", "13"],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "Optimal phrasing: 'Nine billion, nine hundred thousand, nine hundred' (7 words: nine + billion + nine + hundred + thousand + nine + hundred)."
+    },
+    {
+        "text": "Identify the *correct* numeral for: 'A billion, twenty-three million, four hundred and five thousand, six hundred and seven' *without* using commas in the words.",
+        "answers": [
+            "1,023,405,607",
+            "1,023,450,607",
+            "1,230,405,607",
+            "1,023,405,670"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "Removing commas from words doesn't change the numeral. Verify place values: 'a billion' = 1,000,000,000."
+    },
+    {
+        "text": "Which number has a '3' in the *hundred millions* place when written as 1,234,567,890 but a '0' in the same place when written in words as 'One billion, two hundred and thirty-four million, five hundred and sixty-seven thousand, eight hundred and ninety'?",
+        "answers": [
+            "1,034,567,890",
+            "1,204,567,890",
+            "1,230,567,890",
+            "No such number exists"
+        ],
+        "correctIndex": 3,
+        "videoSolution": "",
+        "hint": "The words explicitly state 'two hundred and thirty-four million' (200,000,000 + 34,000,000), so the hundred millions digit must be 2."
+    },
+    {
+        "text": "Write 'Nine billion, nine hundred and ninety-nine million, nine hundred and ninety-nine thousand, nine hundred and ninety-nine' *without* using the word 'and'.",
+        "answers": [
+            "Nine billion nine hundred ninety-nine million nine hundred ninety-nine thousand nine hundred ninety-nine",
+            "Nine billion, nine ninety-nine million, nine ninety-nine thousand, nine ninety-nine",
+            "Nine billion nine hundred ninety-nine million nine hundred ninety-nine thousand nine ninety-nine",
+            "Invalid (British English requires 'and')"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "British English allows omitting 'and' except before the last unit, but the question specifies complete removal."
+    },
+    {
+        "text": "If you change *one* digit in 12,345,678,900 to make it 'Twelve billion, three hundred and forty-five million, six hundred and seventy-eight thousand and nine', which digit changes?",
+        "answers": [
+            "The last '0' becomes '9'",
+            "The '9' becomes '0'",
+            "The '1' becomes '0'",
+            "No single-digit change works"
+        ],
+        "correctIndex": 1,
+        "videoSolution": "",
+        "hint": "Original: 12,345,678,900 → Target: 12,345,678,009. Only the '9' needs to become '0'."
+    },
+    {
+        "text": "What is unique about the British English wording of 8,888,888,888 compared to other 10-digit numbers?",
+        "answers": [
+            "It uses 'and' eight times",
+            "Every digit is identical",
+            "It requires hyphens in 'eight hundred and eighty-eight'",
+            "It can't be written without repeating words"
+        ],
+        "correctIndex": 1,
+        "videoSolution": "",
+        "hint": "All digits are '8', making it the largest 10-digit number with identical digits."
+    },
+    {
+        "text": "Which number's wording violates British English conventions?",
+        "answers": [
+            "1,000,000,001 → 'One billion and one'",
+            "2,000,200,002 → 'Two billion, two hundred thousand and two'",
+            "3,003,000,300 → 'Three billion and three million and three hundred'",
+            "4,040,040,040 → 'Four billion, forty million, forty thousand and forty'"
+        ],
+        "correctIndex": 2,
+        "videoSolution": "",
+        "hint": "British English uses 'and' only before the last unit, not between groups like 'and three million'."
+    },
+    {
+        "text": "Create the *smallest* 10-digit number possible using the phrase: '___ billion, ___ hundred ___ million, ___ thousand and ___' (each blank is a single word).",
+        "answers": [
+            "1,000,100,001",
+            "1,100,000,001",
+            "1,000,000,001",
+            "1,010,000,001"
+        ],
+        "correctIndex": 0,
+        "videoSolution": "",
+        "hint": "Fill blanks minimally: 'one billion, one hundred zero million, one thousand and one' → 1,000,100,001."
+    }
+]
   };
 
 // Start the game when the page loads
