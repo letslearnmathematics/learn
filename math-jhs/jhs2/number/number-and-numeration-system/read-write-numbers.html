@@ -31,10 +31,21 @@
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +53,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -234,7 +236,244 @@
                                     <li>9 is in the <strong>ones</strong> place</li>
                                 </ul>
                             </div>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on the lesson with worked examples.</p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/video-ID" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                            </div>
+                            -->
                         </section>
+
+                        <!-- Place Value: Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>
+                                    In the number <strong>3,728,456,901</strong>, what is the place value of the digit 
+                                    <strong>7</strong>?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    In the number <strong>770,098,<u>9</u>90,211</strong>, what is the place value of the underlined 
+                                    digit?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    <p>Which digit is in the <strong>billions</strong> place in <strong>3,045,678,921</strong>?</p>
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Identify the digit in the <strong>hundred millions</strong> place for the number 
+                                    <strong>9,128,475,360</strong>.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    Write the number <strong>7,503,618,942</strong> in expanded form using place values.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        In the number <strong><u>8</u>0,783,090,391</strong>, what is the place value of the underlined 
+                                        digit?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong><u>Solution:</u></strong></p>
+                                        <p>Number given $\Rightarrow$ 80,783,090,391</p>
+                                        <p>Underlined digit $\Rightarrow$ 8</p>
+                                        <p><strong>Place</strong> of 8 $\Rightarrow$ <strong>ten billion</strong></p>
+                                        <p><strong>Place Value</strong> of 8 $\Rightarrow$ <strong>80,000,000,000</strong></p>
+                                        <p>$\therefore$ <u>the place value of 8 is <strong>80,000,000,000</strong></u></p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        In the number <strong><u>7</u>,000,980,205</strong>, what is the place value of the underlined 
+                                        digit?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Number given $\Rightarrow$ 7,000,980,205</p>
+                                        <p>Underlined digit $\Rightarrow$ 7</p>
+                                        <p><strong>Place</strong> of 7 $\Rightarrow$ <strong>billion</strong></p>
+                                        <p><strong>Place Value</strong> of 7 $\Rightarrow$ <strong>7,000,000,000</strong></p>
+                                        <p>$\therefore$ <u>the place value of 7 is <strong>7,000,000,000</strong></u></p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        In the number <strong>4,68<u>7</u>,500</strong>, what is the place value of the underlined 
+                                        digit?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Number given $\Rightarrow$ 4,687,500</p>
+                                        <p>Underlined digit $\Rightarrow$ 7</p>
+                                        <p><strong>Place</strong> of 7 $\Rightarrow$ <strong>thousands</strong></p>
+                                        <p><strong>Place Value</strong> of 7 $\Rightarrow$ <strong>7,000</strong></p>
+                                        <p>$\therefore$ <u>the place value of 7 is <strong>7,000</strong></u></p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        In the number <strong>10<u>0</u>,100,111</strong>, what is the place value of the underlined 
+                                        digit?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Number given $\Rightarrow$ 100,100,111</p>
+                                        <p>Underlined digit $\Rightarrow$ 0</p>
+                                        <p><strong>Place</strong> of 0 $\Rightarrow$ <strong>millions</strong></p>
+                                        <p><strong>Place Value</strong> of 0 $\Rightarrow$ <strong>0</strong></p>
+                                        <p>$\therefore$ <u>the place value of the underlined digit is <strong>0</strong></u></p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        In the number <strong>1<u>2</u>3,432,009</strong>, what is the place value of the underlined 
+                                        digit?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Number given $\Rightarrow$ 123,432,009</p>
+                                        <p>Underlined digit $\Rightarrow$ 2</p>
+                                        <p><strong>Place</strong> of 2 $\Rightarrow$ <strong>ten millions</strong></p>
+                                        <p><strong>Place Value</strong> of 2 $\Rightarrow$ <strong>20,000,000</strong></p>
+                                        <p>$\therefore$ <u>the place value of 2 is <strong>20,000,000</strong></u></p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
 
                         <!-- Numbers in Words Section -->
                         <section id="in-words" class="lesson-section">
@@ -242,7 +481,7 @@
                                 <i class="fas fa-edit"></i> Numbers in Words
                             </h2>
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-hashtag"></i> Writing Numbers in Words
                                 </h3>
@@ -315,13 +554,15 @@
                             </div>
                         </section>
 
+                        <br><br>
+
                         <!-- Numbers in Figures Section -->
                         <section id="in-figures" class="lesson-section">
                             <h2 class="section-title">
                                 <i class="fas fa-edit"></i> Numbers in Figures
                             </h2>
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-hashtag"></i> Writing Words in Figures
                                 </h3>
@@ -393,6 +634,8 @@
                             </div>
                         </section>
 
+                        <br><br>
+
                         <!-- Currency Serial Numbers Section -->
                         <section id="serial-numbers" class="lesson-section">
                             <h2 class="section-title">
@@ -460,6 +703,8 @@
                                 </a>
                             </div>
                         </section>
+
+                        <br><br>
 
                         <!-- Speed Test Game -->
                         <section id="quick-test" class="lesson-section">
