@@ -31,10 +31,21 @@
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +53,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -163,12 +165,22 @@
                             
                             <div class="concept-box">
                                 <p>
-                                    <strong>Skip counting</strong> is a method of counting numbers by skipping forward or backward by a fixed number other than 1. 
-                                    This technique helps in developing number sense and understanding patterns in numbers.
+                                    <strong>Skip counting</strong> is a method of counting numbers by skipping forward or backward by a fixed number 
+                                    other than 1. This technique helps in developing number sense and understanding patterns in numbers.
                                 </p>
                                 <p>
-                                    In this lesson, we will learn how to skip count forwards and backwards in large increments such as 10,000s, 100,000s, 
-                                    and 500,000s. This skill is particularly useful for working with large numbers in real-world applications.
+                                    Skip counting can also be thought of as a way to perform addition and/or subtraction on the real number line. 
+                                    In this lesson, we will learn how to skip count forward and backward in intervals of 10,000s, 100,000s, 
+                                    500,000s, etc.
+                                </p>
+
+                                <p><strong>RECALL:</strong></p>
+		
+                                <p>
+                                    In skip counting; <br>
+                                    
+                                    Movement to the right \(\Rightarrow\) <strong>addition</strong> <br>
+                                    Movement to the left \(\Rightarrow\) <strong>subtraction</strong>
                                 </p>
                             </div>
                         </section>
@@ -179,178 +191,217 @@
                                 <i class="fas fa-arrow-up"></i> Counting Forward
                             </h2>
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-plus-circle"></i> Counting Forward in 500,000s
+                                    <i class="fas fa-plus-circle"></i> Counting Forward in 10,000s, 100,000s, 500,000s
                                 </h3>
+                                <p>When skip counting to the \(n^{th}\) term:</p>
+		
+                                <p>Starting point \(\Rightarrow \) first term \(\left( a \right)\)</p>
+                                
+                                <p>Number of jumps or skips \(\Rightarrow n - 1\)</p>
+                                
+                                <p>Difference between two subsequent terms \(\Rightarrow\) Interval \((d)\)</p>
+                                
                                 <p>
-                                    To count forward in 500,000s, we start with a given number and repeatedly add 500,000 to get the next numbers in the sequence.
+                                    The last term (\(l\)) can be calculated using the formular:
+                                    \begin{equation*}
+                                        l = a + (n - 1)d
+                                    \end{equation*}
                                 </p>
                                 
-                                <div class="math-example">
-                                    <h4>Example 1:</h4>
-                                    <p>Count forward in 500,000s up to the fifth number starting from 200,000.</p>
-                                    <p><strong>Solution:</strong></p>
-                                    <ol>
-                                        <li>Start with 200,000</li>
-                                        <li>Add 500,000: 200,000 + 500,000 = 700,000</li>
-                                        <li>Add 500,000: 700,000 + 500,000 = 1,200,000</li>
-                                        <li>Add 500,000: 1,200,000 + 500,000 = 1,700,000</li>
-                                        <li>Add 500,000: 1,700,000 + 500,000 = 2,200,000</li>
-                                    </ol>
-                                    <p>The sequence is: <strong>200,000, 700,000, 1,200,000, 1,700,000, 2,200,000</strong></p>
-                                </div>
-                                
-                                <div class="math-example">
-                                    <h4>Example 2:</h4>
-                                    <p>Count forward in 100,000s up to the fifth number starting from 50,000.</p>
-                                    <p><strong>Solution:</strong></p>
-                                    <ol>
-                                        <li>Start with 50,000</li>
-                                        <li>Add 100,000: 50,000 + 100,000 = 150,000</li>
-                                        <li>Add 100,000: 150,000 + 100,000 = 250,000</li>
-                                        <li>Add 100,000: 250,000 + 100,000 = 350,000</li>
-                                        <li>Add 100,000: 350,000 + 100,000 = 450,000</li>
-                                    </ol>
-                                    <p>The sequence is: <strong>50,000, 150,000, 250,000, 350,000, 450,000</strong></p>
-                                </div>
+                                <p>
+                                    Remember that the number of skips is the number of times you will be adding the 
+                                    interval onto each previous term.
+                                </p>
+                                <p>
+                                    To skip count forward in a particular interval simply means to add the interval value onto 
+                                    each term to get the next term. Hence, to skip count forward in an interval of 10,000, means 
+                                    <strong>adding 10,000</strong> to each previous term to get the next term.
+                                </p>
                             </div>
                         </section>
 
-                        <!-- Backward Counting Section -->
-                        <section id="backward-counting" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-arrow-down"></i> Counting Backward
-                            </h2>
-
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-minus-circle"></i> Counting Backward in 100,500s
-                                </h3>
+                        <!-- Place Value: Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
                                 <p>
-                                    To count backward in 100,500s, we start with a given number and repeatedly subtract 100,500 to get the next numbers in the sequence.
+                                    Skip count forwards up to the 5th term in intervals of 10,000: <br>
+                                    200,000, $\quad$  210,000, $\quad$  $\dots$
                                 </p>
-                                
-                                <div class="math-example">
-                                    <h4>Example 1:</h4>
-                                    <p>Count backward in 100,500s up to the fifth number starting from 1,800,000.</p>
-                                    <p><strong>Solution:</strong></p>
-                                    <ol>
-                                        <li>Start with 1,800,000</li>
-                                        <li>Subtract 100,500: 1,800,000 - 100,500 = 1,699,500</li>
-                                        <li>Subtract 100,500: 1,699,500 - 100,500 = 1,599,000</li>
-                                        <li>Subtract 100,500: 1,599,000 - 100,500 = 1,498,500</li>
-                                        <li>Subtract 100,500: 1,498,500 - 100,500 = 1,398,000</li>
-                                    </ol>
-                                    <p>The sequence is: <strong>1,800,000, 1,699,500, 1,599,000, 1,498,500, 1,398,000</strong></p>
-                                </div>
-                                
-                                <div class="math-example">
-                                    <h4>Example 2:</h4>
-                                    <p>Count backward in 50,000s up to the fifth number starting from 500,000.</p>
-                                    <p><strong>Solution:</strong></p>
-                                    <ol>
-                                        <li>Start with 500,000</li>
-                                        <li>Subtract 50,000: 500,000 - 50,000 = 450,000</li>
-                                        <li>Subtract 50,000: 450,000 - 50,000 = 400,000</li>
-                                        <li>Subtract 50,000: 400,000 - 50,000 = 350,000</li>
-                                        <li>Subtract 50,000: 350,000 - 50,000 = 300,000</li>
-                                    </ol>
-                                    <p>The sequence is: <strong>500,000, 450,000, 400,000, 350,000, 300,000</strong></p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
                                 </div>
                             </div>
-                        </section>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    Skip count forwards in 500000s up to the 5th number: <br>
+                                    200,000, $\quad$ 700,000, $\quad$ $\dots$
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Find the value of the 5th term when skip counting forward in intervals of 100,000 from 300,000.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Skip count forwards up to the 4th term in intervals of 10,500: <br>
+                                    200,000, $\quad$ 210,500, $\quad$ ...
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    Skip count forwards up to the 5th term in intervals of 100,500: <br>
+                                    200,000, $\quad$ 300,500, $\quad$ ...
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
 
-                        <!-- Practice Section -->
-                        <section id="practice" class="practice-section">
+                        <!-- Place value Practice Section -->
+                        <section class="practice-section">
                             <div class="practice-header">
                                 <i class="fas fa-pen-fancy"></i>
                                 <h2>Practice Exercise</h2>
                             </div>
                             
+                            <p>Skip count forward to the 5th term:</p>
+                            
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
-                                    <p>Count forward in 500,000s up to the fifth number starting from 300,000.</p>
+                                    <p>
+                                        In 10,000s from 300,000
+                                    </p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p><strong>Solution:</strong></p>
-                                        <ol>
-                                            <li>300,000</li>
-                                            <li>300,000 + 500,000 = 800,000</li>
-                                            <li>800,000 + 500,000 = 1,300,000</li>
-                                            <li>1,300,000 + 500,000 = 1,800,000</li>
-                                            <li>1,800,000 + 500,000 = 2,300,000</li>
-                                        </ol>
-                                        <p>The sequence is: <strong>300,000, 800,000, 1,300,000, 1,800,000, 2,300,000</strong></p>
+                                        <p><strong><u>Solution:</u></strong></p>
+                                        
                                     </div>
                                 </div>
-                                
                                 <div class="problem-card">
                                     <h3>Question 2</h3>
-                                    <p>Count forward in 100,000s up to the fifth number starting from 75,000.</p>
+                                    <p>
+                                        In 100,000s from 300,000
+                                    </p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <ol>
-                                            <li>75,000</li>
-                                            <li>75,000 + 100,000 = 175,000</li>
-                                            <li>175,000 + 100,000 = 275,000</li>
-                                            <li>275,000 + 100,000 = 375,000</li>
-                                            <li>375,000 + 100,000 = 475,000</li>
-                                        </ol>
-                                        <p>The sequence is: <strong>75,000, 175,000, 275,000, 375,000, 475,000</strong></p>
+                                        
                                     </div>
                                 </div>
-                                
                                 <div class="problem-card">
                                     <h3>Question 3</h3>
-                                    <p>Count backward in 100,500s up to the fifth number starting from 2,000,000.</p>
+                                    <p>
+                                        In 500,000s from 300,000
+                                    </p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <ol>
-                                            <li>2,000,000</li>
-                                            <li>2,000,000 - 100,500 = 1,899,500</li>
-                                            <li>1,899,500 - 100,500 = 1,799,000</li>
-                                            <li>1,799,000 - 100,500 = 1,698,500</li>
-                                            <li>1,698,500 - 100,500 = 1,598,000</li>
-                                        </ol>
-                                        <p>The sequence is: <strong>2,000,000, 1,899,500, 1,799,000, 1,698,500, 1,598,000</strong></p>
+                                        
                                     </div>
                                 </div>
-                                
                                 <div class="problem-card">
                                     <h3>Question 4</h3>
-                                    <p>Count backward in 50,000s up to the fifth number starting from 750,000.</p>
+                                    <p>
+                                        In 150,000s from 500,500
+                                    </p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <ol>
-                                            <li>750,000</li>
-                                            <li>750,000 - 50,000 = 700,000</li>
-                                            <li>700,000 - 50,000 = 650,000</li>
-                                            <li>650,000 - 50,000 = 600,000</li>
-                                            <li>600,000 - 50,000 = 550,000</li>
-                                        </ol>
-                                        <p>The sequence is: <strong>750,000, 700,000, 650,000, 600,000, 550,000</strong></p>
+                                        
                                     </div>
                                 </div>
-                                
                                 <div class="problem-card">
                                     <h3>Question 5</h3>
-                                    <p>Count forward in 250,000s up to the fifth number starting from 100,000.</p>
+                                    <p>
+                                        In 150,500s from 600,500
+                                    </p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <ol>
-                                            <li>100,000</li>
-                                            <li>100,000 + 250,000 = 350,000</li>
-                                            <li>350,000 + 250,000 = 600,000</li>
-                                            <li>600,000 + 250,000 = 850,000</li>
-                                            <li>850,000 + 250,000 = 1,100,000</li>
-                                        </ol>
-                                        <p>The sequence is: <strong>100,000, 350,000, 600,000, 850,000, 1,100,000</strong></p>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -362,6 +413,221 @@
                                 </a>
                             </div>
                         </section>
+
+                        <br><br>
+
+                        <!-- Backward Counting Section -->
+                        <section id="backward-counting" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-arrow-down"></i> Counting Backward
+                            </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-minus-circle"></i> Counting Backward in 10,000s, 100,000s, 500,000s
+                                </h3>
+                                <p>
+                                    To skip count backward in a particular interval simply means to subtract the interval value 
+                                    from each term to get the next term
+                                </p>
+
+                                <p>
+                                    Since we are subtracting, it means our interval, \(\left(d\right)\), will now have a negative
+                                    sign beside it, \(\left(-d\right)\) , hence the <strong>formula for the last term \((l)\)</strong> becomes:
+                                    \begin{equation*}
+                                        l = a - \left(n - 1\right)d
+                                    \end{equation*}
+                                </p>
+                            </div>
+                        </section>
+
+                        <!-- Place Value: Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>
+                                    Skip count backward up to the 5th term in intervals of 10,000: <br>
+                                    200,000, $\quad$  190,000, $\quad$  $\dots$
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    Skip count backwards in 500000s up to the 5th number: <br>
+                                    2,200,000, $\quad$ 1,700,000, $\quad$ $\dots$
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Find the value of the 5th term when skip counting backward in intervals of 100,000 from 700,000.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Skip count backward up to the 4th term in intervals of 10,500:: <br>
+                                    231,500, $\quad$ 221,000, $\quad$ ...
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    Skip count backwards up to the 5th term in intervals of 100,000: <br>
+                                    600,000, $\quad$ 500,500, $\quad$ ...
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <!--
+                                    <p>Watch the video below for a clearer understanding of the question.</p>
+                                    <div class="video-container">
+                                        <iframe 
+                                            src="https://www.youtube.com/embed/video-ID" 
+                                            title="YouTube video player" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                    -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Practice Section -->
+                        <section id="practice" class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+
+                            <p>Skip count backward to the 5th term:</p>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>In 10,000s from 300,000</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>In 100,000s from 1,300,000</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>In 500,000s from 100,000,000</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>In 150,000s from 1,500,500</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>In 150,500s from 3,600,500</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
 
                         <!-- Speed Test Game -->
                         <section id="quick-test" class="lesson-section">
@@ -400,25 +666,33 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--
+                                <li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>
+                                -->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
                             </ul>
                         </div>
@@ -434,8 +708,8 @@
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a><br>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -445,8 +719,8 @@
             </div>
         </footer>
 
-         <!-- Scripts -->
-         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-skip-counting.js"></script>
         <script src="../../../../js/mathjhs-lesson.js"></script>
         <script src="../../js/read-write-numbers.js"></script>
         <script>
