@@ -109,13 +109,9 @@ function createGameStructure() {
 // Initialize MathJax processing
 function processMathJax() {
     if (typeof MathJax !== 'undefined' && MathJax.typesetPromise) {
-        MathJax.typesetPromise().then(() => {
-            console.log('MathJax processed successfully');
-        }).catch(err => {
+        MathJax.typesetPromise().catch(err => {
             console.log('MathJax typeset error:', err);
         });
-    } else {
-        console.log('MathJax not loaded yet');
     }
 }
 
@@ -258,7 +254,7 @@ function loadQuestion() {
     startTimer();
     
     // Process MathJax content
-    setTimeout(processMathJax, 100);
+    processMathJax();
 }
 
 function startTimer() {
@@ -343,7 +339,7 @@ function selectAnswer(e) {
     }
     
     // Process MathJax for highlighted answers
-    setTimeout(processMathJax, 100);
+    processMathJax();
     
     // Move to next question after delay
     setTimeout(() => {
@@ -465,861 +461,923 @@ function initGame() {
 // Make sure allQuestions is defined before the game starts
 const allQuestions = {
     1: [
-        {
-            text: "What is $5^2 \\times 5^3$ simplified using the multiplication law?",
-            answers: ["5", "$5^5$", "$5^6$", "$25^5$"],
-            correctIndex: 1,
-            videoSolution: ""
-        },
-        {
-            text: "Simplify $\\frac{7^4}{7^2}$ using the division law",
-            answers: ["$7^2$", "$7^6$", "1", "$7^8$"],
-            correctIndex: 0,
-            videoSolution: ""
-        },
-        {
-            text: "What is $(2^3)^2$ simplified using the power law?",
-            answers: ["$2^5$", "$2^6$", "$2^9$", "$4^6$"],
-            correctIndex: 1,
-            videoSolution: ""
-        },
-        {
-            text: "According to the zero index law, what is $9^0$ equal to?",
-            answers: ["0", "1", "9", "Undefined"],
-            correctIndex: 1,
-            videoSolution: ""
-        },
-        {
-            text: "What is $4^{-2}$ equivalent to?",
-            answers: ["-16", "$\\frac{1}{16}$", "-8", "$\\frac{1}{8}$"],
-            correctIndex: 1,
-            videoSolution: ""
-        },
-        {
-            text: "Simplify $8^{\\frac{1}{3}}$ using the fractional index law",
-            answers: ["2", "4", "$\\frac{8}{3}$", "24"],
-            correctIndex: 0,
-            videoSolution: ""
-        },
-        {
-            text: "What is $3 \\times 3^4$ simplified?",
-            answers: ["$3^4$", "$3^5$", "$9^4$", "$12^4$"],
-            correctIndex: 1,
-            videoSolution: ""
-        },
-        {
-            text: "Simplify $\\frac{x^5}{x^2}$",
-            answers: ["$x^3$", "$x^{2.5}$", "$x^7$", "$x^{10}$"],
-            correctIndex: 0,
-            videoSolution: ""
-        },
-        {
-            text: "What is $(5^2)^0$ equal to?",
-            answers: ["0", "1", "5", "25"],
-            correctIndex: 1,
-            videoSolution: ""
-        },
-        {
-            text: "Express $\\frac{1}{2^3}$ using negative indices",
-            answers: ["$2^{-1}$", "$2^{-2}$", "$2^{-3}$", "$3^{-2}$"],
-            correctIndex: 2,
-            videoSolution: ""
-        },
-        {
-            text: "What is $\\sqrt{25}$ expressed with fractional indices?",
-            answers: ["$25^1$", "$25^2$", "$25^{0.5}$", "$25^{-1}$"],
-            correctIndex: 2,
-            videoSolution: ""
-        },
-        {
-            text: "Simplify $10^6 \\div 10^4$",
-            answers: ["10", "$10^2$", "$10^{10}$", "1000"],
-            correctIndex: 1,
-            videoSolution: ""
-        },
-        {
-            text: "What is $y^0 \\times y^5$ equal to?",
-            answers: ["0", "1", "$y^5$", "$y^6$"],
-            correctIndex: 2,
-            videoSolution: ""
-        },
-        {
-            text: "Express $\\frac{1}{5}$ using negative indices",
-            answers: ["-5", "$5^{-1}$", "$-5^1$", "$1^{-5}$"],
-            correctIndex: 1,
-            videoSolution: ""
-        },
-        {
-            text: "What is $\\sqrt[3]{8}$ in index notation?",
-            answers: ["$8^1$", "$8^2$", "$8^{\\frac{1}{3}}$", "$8^{-\\frac{1}{3}}$"],
-            correctIndex: 2,
-            videoSolution: ""
-        },
-        {
-            text: "Simplify $(a^3)^2 \\times a^4$",
-            answers: ["$a^6$", "$a^9$", "$a^{10}$", "$a^{24}$"],
-            correctIndex: 2,
-            videoSolution: ""
-        },
-        {
-            text: "What is $6^3 \\div 6^3$ equal to?",
-            answers: ["0", "1", "6", "$6^6$"],
-            correctIndex: 1,
-            videoSolution: ""
-        },
-        {
-            text: "Express $\\sqrt{x}$ using fractional indices",
-            answers: ["$x^2$", "$x^{-1}$", "$x^{\\frac{1}{2}}$", "$x^{-\\frac{1}{2}}$"],
-            correctIndex: 2,
-            videoSolution: ""
-        },
-        {
-            text: "Simplify $2^4 \\times 2^{-2}$",
-            answers: ["$2^2$", "$2^6$", "$4^2$", "$8^{-8}$"],
-            correctIndex: 0,
-            videoSolution: ""
-        },
-        {
-            text: "What is $100^{\\frac{1}{2}}$ equal to?",
-            answers: ["50", "10", "$\\frac{1}{100}$", "200"],
-            correctIndex: 1,
-            videoSolution: ""
-        }
-],
-    2:[
     {
-        text: "Simplify $(3^2 \\times 3^4) \\div 3^3$",
-        answers: ["$3^2$", "$3^3$", "$3^4$", "$3^5$"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "What is $(5^3)^2 \\div 5^4$ simplified?",
-        answers: ["$5^1$", "$5^2$", "$5^6$", "$5^{10}$"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\frac{2^5 \\times 2^3}{2^4 \\times 2^2}$",
-        answers: ["$2^0$", "$2^1$", "$2^2$", "$2^3$"],
+        text: "Compare 45,678 and 45,768 using >, <, or =",
+        answers: ["45,678 > 45,768", "45,678 = 45,768", "45,678 < 45,768", "Cannot compare"],
         correctIndex: 2,
         videoSolution: ""
     },
     {
-        text: "What is $(4^{-2})^{-1}$ equal to?",
-        answers: ["$4^{-2}$", "$4^0$", "$4^2$", "$4^{-1}$"],
+        text: "Which symbol makes this true: 123,456 __ 123,465?",
+        answers: ["≥", "<", ">", "="],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Compare 999,999 and 1,000,000",
+        answers: ["999,999 < 1,000,000", "999,999 > 1,000,000", "999,999 = 1,000,000", "None of these"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Which is greater: 456,789 or 456,798?",
+        answers: ["They are equal", "456,789", "456,798", "Cannot determine"],
         correctIndex: 2,
         videoSolution: ""
     },
     {
-        text: "Simplify $8^{\\frac{2}{3}}$",
-        answers: ["2", "4", "8", "16"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "What is $\\frac{3^{-2} \\times 3^5}{3^2}$ simplified?",
-        answers: ["$3^{-4}$", "$3^1$", "$3^2$", "$3^3$"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $(x^4 y^3)^2 \\div (x^2 y)^3$",
-        answers: ["$x^2 y^3$", "$x^4 y^6$", "$x^8 y^9$", "$x^{10} y^3$"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "What is $16^{-\\frac{1}{2}}$ equal to?",
-        answers: ["-4", "$\\frac{1}{4}$", "$\\frac{1}{8}$", "-$\\frac{1}{16}$"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\left(\\frac{2^3}{2^{-2}}\\right)^2$",
-        answers: ["$2^2$", "$2^5$", "$2^{10}$", "$2^{12}$"],
-        correctIndex: 2,
-        videoSolution: ""
-    },
-    {
-        text: "What is $\\sqrt[4]{81}$ expressed with fractional indices?",
-        answers: ["$81^2$", "$81^{\\frac{1}{4}}$", "$81^{-4}$", "$81^{\\frac{1}{2}}$"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $(a^{-3}b^2)^{-2} \\times (a^2 b^{-1})^3$",
-        answers: ["$a^{10}b^{-7}$", "$a^2b^1$", "$a^{-6}b^{-4}$", "$a^{-10}b^7$"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "What is $125^{\\frac{2}{3}}$ equal to?",
-        answers: ["5", "25", "50", "250"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\frac{(3x^2 y)^3}{(9xy^2)^2}$",
-        answers: ["$3x^4 y^{-1}$", "$x^4 y^{-1}$", "$3x^4 y^7$", "$\\frac{x^4}{y}$"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "What is $(2^{-1} + 3^0)^{-1}$ equal to?",
-        answers: ["$\\frac{1}{2}$", "$\\frac{2}{3}$", "$\\frac{3}{2}$", "2"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\sqrt{32^{\\frac{2}{5}}}$",
-        answers: ["2", "4", "8", "16"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "What is $\\left(\\frac{x^{-2}}{y^3}\\right)^{-3}$ simplified?",
-        answers: ["$x^{-6}y^{-9}$", "$x^6y^{-9}$", "$x^{-5}y^0$", "$x^6y^9$"],
+        text: "Compare 3,450,000 and 3,405,000",
+        answers: ["3,450,000 < 3,405,000", "3,450,000 = 3,405,000", "None of these", "3,450,000 > 3,405,000"],
         correctIndex: 3,
         videoSolution: ""
     },
     {
-        text: "Simplify $(0.25)^{-\\frac{1}{2}}$",
-        answers: ["0.5", "2", "4", "16"],
+        text: "Which symbol makes this true: 78,901 __ 78,910?",
+        answers: ["<", "≤", ">", "="],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Compare 12,345,678 and 12,345,687",
+        answers: ["Cannot compare", "12,345,678 > 12,345,687", "12,345,678 = 12,345,687", "12,345,678 < 12,345,687"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Which is smaller: 987,654 or 987,645?",
+        answers: ["987,654", "They are equal", "Cannot determine", "987,645"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Compare 5,555,555 and 5,555,555",
+        answers: ["5,555,555 = 5,555,555", "None of these", "5,555,555 < 5,555,555", "5,555,555 > 5,555,555"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Which symbol makes this true: 100,001 __ 99,999?",
+        answers: ["<", ">", "=", "≤"],
         correctIndex: 1,
         videoSolution: ""
     },
     {
-        text: "What is $\\frac{5^{n+2} - 5^{n+1}}{5^n}$ equal to?",
-        answers: ["1", "4", "5", "$5^n$"],
+        text: "Compare 23,456,789 and 23,456,798",
+        answers: ["23,456,789 = 23,456,798", "23,456,789 < 23,456,798", "Cannot compare", "23,456,789 > 23,456,798"],
         correctIndex: 1,
         videoSolution: ""
     },
     {
-        text: "Simplify $\\left(\\frac{8}{27}\\right)^{-\\frac{2}{3}}$",
-        answers: ["$\\frac{4}{9}$", "$\\frac{9}{4}$", "$\\frac{2}{3}$", "$\\frac{3}{2}$"],
+        text: "Which is greater: 345,678 or 345,687?",
+        answers: ["345,678", "They are equal", "Cannot determine", "345,687"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Compare 9,999,999 and 10,000,000",
+        answers: ["9,999,999 > 10,000,000", "9,999,999 = 10,000,000", "9,999,999 < 10,000,000", "None of these"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Which symbol makes this true: 456,789 __ 456,798?",
+        answers: ["<", "≥", ">", "="],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Compare 1,234,567 and 1,234,576",
+        answers: ["Cannot compare", "1,234,567 < 1,234,576", "1,234,567 = 1,234,576", "1,234,567 > 1,234,576"],
         correctIndex: 1,
         videoSolution: ""
     },
     {
-        text: "What is $(2^a \\times 4^b \\times 8^c)^{\\frac{1}{3}}$ simplified?",
-        answers: ["$2^{a+b+c}$", "$2^{\\frac{a+2b+3c}{3}}$", "$8^{\\frac{a+b+c}{3}}$", "$2^{3a+6b+9c}$"],
+        text: "Which is smaller: 876,543 or 876,534?",
+        answers: ["876,543", "876,534", "They are equal", "Cannot determine"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Compare 6,666,666 and 6,666,666",
+        answers: ["6,666,666 < 6,666,666", "None of these", "6,666,666 = 6,666,666", "6,666,666 > 6,666,666"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Which symbol makes this true: 200,002 __ 199,999?",
+        answers: ["<", "=", "≤", ">"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Compare 34,567,890 and 34,567,809",
+        answers: ["Cannot compare", "34,567,890 > 34,567,809", "34,567,890 = 34,567,809", "34,567,890 < 34,567,809"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Which is greater: 567,890 or 567,809?",
+        answers: ["567,809", "Cannot determine", "They are equal", "567,890"],
+        correctIndex: 3,
+        videoSolution: ""
+    }
+],
+    2: [
+    {
+        text: "Order these numbers from smallest to largest: 45,678, 45,768, 45,687",
+        answers: ["45,687, 45,678, 45,768", "45,678, 45,687, 45,768", "45,678, 45,768, 45,687", "45,768, 45,687, 45,678"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Arrange in descending order: 123,456, 123,465, 123,546",
+        answers: ["123,546, 123,456, 123,465", "123,546, 123,465, 123,456", "123,456, 123,465, 123,546", "123,465, 123,456, 123,546"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Which set is ordered from largest to smallest?",
+        answers: ["999,999, 99,999, 9,999", "9,999, 99,999, 999,999", "999,999, 9,999, 99,999", "99,999, 9,999, 999,999"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Order these numbers from largest to smallest: 456,789, 456,798, 456,879",
+        answers: ["456,879, 456,798, 456,789", "456,798, 456,789, 456,879", "456,879, 456,789, 456,798", "456,789, 456,798, 456,879"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Arrange in ascending order: 3,450,000, 3,405,000, 3,045,000",
+        answers: ["3,045,000, 3,405,000, 3,450,000", "3,045,000, 3,450,000, 3,405,000", "3,450,000, 3,405,000, 3,045,000", "3,405,000, 3,045,000, 3,450,000"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Which set is ordered from smallest to largest?",
+        answers: ["78,091, 78,901, 78,910", "78,901, 78,910, 78,091", "78,910, 78,901, 78,091", "78,901, 78,091, 78,910"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Order these numbers from smallest to largest: 12,345,678, 12,345,687, 12,354,678",
+        answers: ["12,354,678, 12,345,687, 12,345,678", "12,345,687, 12,345,678, 12,354,678", "12,345,678, 12,345,687, 12,354,678", "12,345,678, 12,354,678, 12,345,687"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Arrange in descending order: 987,654, 987,645, 987,564",
+        answers: ["987,645, 987,654, 987,564", "987,654, 987,564, 987,645", "987,564, 987,645, 987,654", "987,654, 987,645, 987,564"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Which set is ordered from largest to smallest?",
+        answers: ["5,555,555, 555,555, 55,555", "555,555, 5,555,555, 55,555", "5,555,555, 55,555, 555,555", "55,555, 555,555, 5,555,555"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Order these numbers from largest to smallest: 100,001, 99,999, 100,100",
+        answers: ["100,001, 100,100, 99,999", "100,100, 99,999, 100,001", "99,999, 100,001, 100,100", "100,100, 100,001, 99,999"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Arrange in ascending order: 23,456,789, 23,456,798, 23,465,789",
+        answers: ["23,456,789, 23,465,789, 23,456,798", "23,456,789, 23,456,798, 23,465,789", "23,465,789, 23,456,798, 23,456,789", "23,456,798, 23,456,789, 23,465,789"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Which set is ordered from smallest to largest?",
+        answers: ["345,687, 345,678, 345,768", "345,768, 345,687, 345,678", "345,678, 345,768, 345,687", "345,678, 345,687, 345,768"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Order these numbers from largest to smallest: 9,999,999, 10,000,000, 9,900,000",
+        answers: ["10,000,000, 9,999,999, 9,900,000", "9,999,999, 10,000,000, 9,900,000", "9,900,000, 9,999,999, 10,000,000", "10,000,000, 9,900,000, 9,999,999"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Arrange in descending order: 456,789, 456,798, 456,879",
+        answers: ["456,879, 456,798, 456,789", "456,798, 456,789, 456,879", "456,879, 456,789, 456,798", "456,789, 456,798, 456,879"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Which set is ordered from smallest to largest?",
+        answers: ["1,234,567, 1,243,567, 1,234,576", "1,243,567, 1,234,576, 1,234,567", "1,234,567, 1,234,576, 1,243,567", "1,234,576, 1,234,567, 1,243,567"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Order these numbers from smallest to largest: 876,543, 876,534, 876,453",
+        answers: ["876,453, 876,534, 876,543", "876,453, 876,543, 876,534", "876,534, 876,453, 876,543", "876,543, 876,534, 876,453"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Arrange in ascending order: 6,666,666, 6,066,666, 6,666,066",
+        answers: ["6,066,666, 6,666,066, 6,666,666", "6,066,666, 6,666,666, 6,666,066", "6,666,066, 6,066,666, 6,666,666", "6,666,666, 6,666,066, 6,066,666"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Which set is ordered from largest to smallest?",
+        answers: ["199,999, 200,002, 199,992", "200,002, 199,992, 199,999", "200,002, 199,999, 199,992", "200,002, 199,999, 199,992"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Order these numbers from largest to smallest: 34,567,890, 34,567,809, 34,568,790",
+        answers: ["34,567,809, 34,567,890, 34,568,790", "34,567,890, 34,568,790, 34,567,809", "34,568,790, 34,567,809, 34,567,890", "34,568,790, 34,567,890, 34,567,809"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Arrange in descending order: 567,890, 567,809, 567,980",
+        answers: ["567,980, 567,809, 567,890", "567,980, 567,890, 567,809", "567,809, 567,890, 567,980", "567,890, 567,980, 567,809"],
         correctIndex: 1,
         videoSolution: ""
     }
 ],
     3: [
     {
-        text: "Simplify $\\left(\\frac{8x^6 y^{-3}}{27x^{-9} y^6}\\right)^{-\\frac{1}{3}}$",
-        answers: ["$\\frac{3x^5}{2y^3}$", "$\\frac{2y^3}{3x^5}$", "$\\frac{9x^5}{4y^3}$", "$\\frac{3x^{-5}}{2y^{-3}}$"],
+        text: "What is 100,000 more than 45,678,921?",
+        answers: ["45,778,921", "46,678,921", "55,678,921", "45,688,921"],
         correctIndex: 0,
         videoSolution: ""
     },
     {
-        text: "If $2^x = 8^{y+1}$ and $3^y = 27^{x-1}$, what is $x+y$?",
-        answers: ["$\\frac{9}{5}$", "$\\frac{12}{7}$", "$\\frac{15}{8}$", "$\\frac{21}{11}$"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\frac{(2^{n+3} - 2^{n+1})}{2^{n-1}}$ to its simplest form",
-        answers: ["6", "8", "12", "14"],
+        text: "What is 100,000 less than 123,456,789?",
+        answers: ["123,446,789", "122,456,789", "123,356,789", "123,455,789"],
         correctIndex: 2,
         videoSolution: ""
     },
     {
-        text: "Solve for x: $9^{x-1} = \\left(\\frac{1}{27}\\right)^{2x-3}$",
-        answers: ["$\\frac{7}{8}$", "$\\frac{5}{6}$", "$\\frac{11}{12}$", "$\\frac{9}{10}$"],
-        correctIndex: 2,
-        videoSolution: ""
-    },
-    {
-        text: "Express $\\sqrt[5]{\\frac{x^{10}}{y^{-15}}}$ in simplified index form",
-        answers: ["$x^2 y^3$", "$x^5 y^{15}$", "$x^{-2} y^{-3}$", "$x^{\\frac{1}{2}} y^{\\frac{1}{3}}$"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "If $5^{2x} \\times 25^{3x-1} = 125^{x+2}$, find x",
-        answers: ["1", "$\\frac{5}{4}$", "$\\frac{7}{5}$", "2"],
+        text: "Find the number that is 500,000 more than 300,000",
+        answers: ["305,000", "800,000", "350,000", "300,500"],
         correctIndex: 1,
         videoSolution: ""
     },
     {
-        text: "Simplify $\\left(\\frac{a^{-\\frac{3}{2}} b^{\\frac{1}{4}}}{a^{\\frac{1}{2}} b^{-\\frac{3}{4}}}\\right)^{-4}$",
-        answers: ["$a^8 b^4$", "$a^{-8} b^{-4}$", "$a^4 b^8$", "$\\frac{a^4}{b^8}$"],
+        text: "What is 100,000 less than 1,000,000?",
+        answers: ["900,000", "999,000", "990,000", "99,000"],
         correctIndex: 0,
         videoSolution: ""
     },
     {
-        text: "What is the value of $\\frac{4^{x+3} - 4^{x+1}}{4^{x-1}}$ when simplified?",
-        answers: ["15", "30", "60", "120"],
+        text: "Find the number that is 1,000,000 more than 45,678,921",
+        answers: ["45,778,921", "45,688,921", "46,678,921", "55,678,921"],
         correctIndex: 2,
         videoSolution: ""
     },
     {
-        text: "If $\\sqrt[x]{8} = 2^y$ and $\\sqrt[y]{81} = 3^x$, find $x+y$",
-        answers: ["5", "6", "7", "8"],
+        text: "What is 500,000 less than 3,450,000?",
+        answers: ["2,950,000", "2,450,000", "3,400,000", "3,000,000"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 100,000 more than 12,345,678",
+        answers: ["12,445,678", "12,355,678", "12,345,778", "13,345,678"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "What is 1,000,000 less than 987,654,321?",
+        answers: ["987,653,321", "986,654,321", "987,554,321", "977,654,321"],
         correctIndex: 1,
         videoSolution: ""
     },
     {
-        text: "Simplify $\\left(\\frac{x^{-2} y^3 z^{-1}}{x^3 y^{-2} z}\\right)^{-2} \\times \\left(\\frac{x y^{-1}}{z^2}\\right)^3$",
-        answers: ["$x^{13} y^{-12} z^{-1}$", "$x^5 y^{-4} z^7$", "$x^{-5} y^4 z^{-7}$", "$x^{-13} y^{12} z^1$"],
+        text: "Find the number that is 500,000 more than 5,555,555",
+        answers: ["5,555,555", "5,655,555", "6,055,555", "5,565,555"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "What is 100,000 less than 100,001?",
+        answers: ["1", "99,001", "99,901", "901"],
         correctIndex: 0,
         videoSolution: ""
     },
     {
-        text: "Find x if $\\frac{16^{x}}{8^{x-1}} = 4^{x+2}$",
-        answers: ["$\\frac{3}{2}$", "$\\frac{5}{3}$", "$\\frac{7}{4}$", "$\\frac{9}{5}$"],
-        correctIndex: 2,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\frac{(3a^2 b^{-3})^{-2} \\times (2a^{-1} b^2)^3}{(6a^{-2} b)^2}$",
-        answers: ["$\\frac{8a^4}{27b^{14}}$", "$\\frac{27b^{14}}{8a^4}$", "$\\frac{8b^{14}}{27a^4}$", "$\\frac{27a^4}{8b^{14}}$"],
-        correctIndex: 2,
-        videoSolution: ""
-    },
-    {
-        text: "If $2^{x} = 3^{y} = 6^{-z}$, express $\\frac{1}{x} + \\frac{1}{y}$ in terms of z",
-        answers: ["z", "-z", "$\\frac{1}{z}$", "$-\\frac{1}{z}$"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\left(\\frac{8^{0.5} \\times 16^{-\\frac{1}{4}}}{32^{\\frac{1}{5}}}\\right)^{10}$",
-        answers: ["$\\frac{1}{4}$", "$\\frac{1}{2}$", "2", "4"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "Find the value of $\\frac{5^{n+2} - 6 \\times 5^{n+1}}{9 \\times 5^n - 5^{n+1}}$",
-        answers: ["1", "5", "-5", "$\\frac{5}{4}$"],
-        correctIndex: 2,
-        videoSolution: ""
-    },
-    {
-        text: "If $x = 2^{\\frac{1}{3}} + 2^{-\\frac{1}{3}}$, what is $2x^3 - 6x$?",
-        answers: ["3", "4", "5", "6"],
+        text: "Find the number that is 1,000,000 more than 23,456,789",
+        answers: ["23,456,889", "23,556,789", "33,456,789", "24,456,789"],
         correctIndex: 3,
         videoSolution: ""
     },
     {
-        text: "Simplify $\\frac{(a^{2n+1} \\times a^{3-2n})^3}{(a^{n-2} \\times a^{5-n})^2}$",
-        answers: ["$a^8$", "$a^{10}$", "$a^{12}$", "$a^{14}$"],
+        text: "What is 500,000 less than 345,678?",
+        answers: ["345,178", "340,678", "-154,322", "344,678"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 100,000 more than 9,999,999",
+        answers: ["9,999,999", "10,999,999", "10,099,999", "9,999,999"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "What is 1,000,000 less than 456,789?",
+        answers: ["456,788", "446,789", "-543,211", "455,789"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 500,000 more than 1,234,567",
+        answers: ["1,284,567", "1,234,567", "1,734,567", "1,334,567"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "What is 100,000 less than 876,543?",
+        answers: ["875,543", "776,543", "876,443", "866,543"],
         correctIndex: 1,
         videoSolution: ""
     },
     {
-        text: "Solve the equation $9 \\times 3^{x} = 4^{x} + 10 \\times 2^{x}$ for x",
-        answers: ["0", "1", "2", "3"],
+        text: "Find the number that is 1,000,000 more than 6,666,666",
+        answers: ["16,666,666", "7,666,666", "6,766,666", "6,666,766"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is 500,000 less than 200,002?",
+        answers: ["200,001", "-299,998", "150,002", "199,502"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 100,000 more than 34,567,890",
+        answers: ["34,567,990", "34,577,890", "34,667,890", "35,567,890"],
         correctIndex: 2,
         videoSolution: ""
     },
     {
-        text: "If $5^{2x-y} = 100$ and $2^{x+y} = 32$, find $x^2 + y^2$",
-        answers: ["5", "10", "13", "17"],
-        correctIndex: 2,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\left(\\frac{x^{a+b}}{x^{a-b}}\\right)^{\\frac{1}{2a}}} \\times \\left(\\frac{x^{2b}}{x^{-2a}}\\right)^{\\frac{1}{2b}}}$",
-        answers: ["$x^{1+\\frac{a}{b}}$", "$x^{2}$", "$x^{1+\\frac{b}{a}}$", "$x^{\\frac{a+b}{ab}}$"],
-        correctIndex: 0,
+        text: "What is 1,000,000 less than 567,890?",
+        answers: ["566,890", "567,880", "557,890", "-432,110"],
+        correctIndex: 3,
         videoSolution: ""
     }
-], 
+],
     4: [
     {
-        text: "Simplify $\\frac{(3^{x+2} - 3^x)}{8 \\times 3^{x-1}}$ to its simplest form",
-        answers: ["1", "$\\frac{3}{4}$", "$\\frac{9}{8}$", "3"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "If $2^{2x} - 3 \\times 2^{x+1} + 8 = 0$, find the value of x",
-        answers: ["1", "2", "3", "4"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\left(\\frac{16x^8 y^{-4}}{81x^{-6} y^{12}}\\right)^{-\\frac{1}{4}}$",
-        answers: ["$\\frac{3y^4}{2x^{\\frac{7}{2}}}$", "$\\frac{2x^{\\frac{7}{2}}}{3y^4}$", "$\\frac{9y^8}{4x^7}$", "$\\frac{3x^{-\\frac{7}{2}}}{2y^{-4}}$"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "What is the value of $\\frac{5^{n} + 5^{n+1} + 5^{n+2}}{31 \\times 5^{n-1}}$?",
-        answers: ["5", "10", "25", "125"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "Solve for x: $8^{x-1} = 16^{2x+1}$",
-        answers: ["-$\\frac{7}{5}$", "-$\\frac{5}{7}$", "$\\frac{3}{5}$", "$\\frac{5}{3}$"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\frac{(a^{2n+3} \\times a^{4-3n})^2}{(a^{n-1} \\times a^{7-2n})^3}$",
-        answers: ["$a^{-5}$", "$a^{-3}$", "$a^3$", "$a^5$"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "If $4^{x} = 8^{y}$, express y in terms of x",
-        answers: ["$y = \\frac{2x}{3}$", "$y = \\frac{3x}{2}$", "$y = \\frac{x}{2}$", "$y = 2x$"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "What is $\\frac{2^{x+3} + 2^{x+2} + 2^{x+1}}{2^{x-1}}$ simplified?",
-        answers: ["7", "14", "28", "56"],
+        text: "What is 150,000 more than 45,678,921?",
+        answers: ["45,688,921", "45,778,921", "45,828,921", "45,678,921"],
         correctIndex: 2,
         videoSolution: ""
     },
     {
-        text: "Simplify $\\left(\\frac{x^{-\\frac{1}{2}} y^{\\frac{2}{3}}}{x^{\\frac{1}{3}} y^{-\\frac{1}{4}}}\\right)^{12}$",
-        answers: ["$x^{-14} y^{11}$", "$x^{14} y^{-11}$", "$x^{-10} y^7$", "$x^{10} y^{-7}$"],
+        text: "What is 250,000 less than 123,456,789?",
+        answers: ["123,206,789", "123,446,789", "123,456,539", "123,256,789"],
         correctIndex: 0,
         videoSolution: ""
     },
     {
-        text: "Find x if $9 \\times 3^x = 27^{x-1}$",
-        answers: ["$\\frac{3}{2}$", "$\\frac{5}{2}$", "3", "5"],
+        text: "Find the number that is 750,000 more than 300,000",
+        answers: ["300,750", "1,050,000", "307,500", "375,000"],
         correctIndex: 1,
         videoSolution: ""
     },
     {
-        text: "Simplify $\\frac{(2a^3 b^{-2})^{-3} \\times (3a^{-1} b)^2}{(6a^{-2} b^3)^{-1}}$",
-        answers: ["$\\frac{3a^5}{8b^{11}}$", "$\\frac{8b^{11}}{3a^5}$", "$\\frac{3b^{11}}{8a^5}$", "$\\frac{8a^5}{3b^{11}}$"],
+        text: "What is 150,000 less than 1,000,000?",
+        answers: ["850,000", "998,500", "985,000", "150,000"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 1,500,000 more than 45,678,921",
+        answers: ["45,688,921", "47,178,921", "45,678,921", "45,828,921"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is 750,000 less than 3,450,000?",
+        answers: ["3,000,000", "2,700,000", "2,450,000", "3,400,000"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 250,000 more than 12,345,678",
+        answers: ["12,595,678", "13,345,678", "12,345,928", "12,355,678"],
+        correctIndex: 0,
+        videoSolution: ""
+    },
+    {
+        text: "What is 1,500,000 less than 987,654,321?",
+        answers: ["987,654,321", "986,154,321", "977,654,321", "987,554,321"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 750,000 more than 5,555,555",
+        answers: ["5,565,555", "5,555,555", "6,305,555", "5,655,555"],
         correctIndex: 2,
         videoSolution: ""
     },
     {
-        text: "If $5^{2x} = 10$, find the value of $5^{-x}$",
-        answers: ["$\\frac{1}{\\sqrt{10}}$", "$\\sqrt{10}$", "$\\frac{1}{10}$", "10"],
+        text: "What is 150,000 less than 100,001?",
+        answers: ["-49,999", "99,851", "99,001", "85,001"],
         correctIndex: 0,
         videoSolution: ""
     },
     {
-        text: "What is $\\frac{3^{x+2} + 3^{x+1} + 3^x}{13 \\times 3^{x-1}}$ simplified?",
-        answers: ["1", "3", "9", "13"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\left(\\frac{27^{\\frac{1}{3}} \\times 16^{-\\frac{1}{4}}}{81^{\\frac{1}{4}}}\\right)^6$",
-        answers: ["$\\frac{1}{9}$", "$\\frac{1}{3}$", "3", "9"],
-        correctIndex: 0,
-        videoSolution: ""
-    },
-    {
-        text: "Find x if $\\frac{8^x}{2^{x+1}} = 16^{x-1}$",
-        answers: ["$\\frac{3}{2}$", "$\\frac{5}{3}$", "$\\frac{7}{4}$", "$\\frac{9}{5}$"],
-        correctIndex: 1,
-        videoSolution: ""
-    },
-    {
-        text: "Simplify $\\frac{(x^{2a+b} \\times x^{a-2b})^3}{(x^{a-b} \\times x^{2a+b})^2}$",
-        answers: ["$x^{a-4b}$", "$x^{2a-3b}$", "$x^{3a-8b}$", "$x^{5a-7b}$"],
+        text: "Find the number that is 1,250,000 more than 23,456,789",
+        answers: ["23,456,889", "33,456,789", "24,706,789", "23,556,789"],
         correctIndex: 2,
         videoSolution: ""
     },
     {
-        text: "If $2^x = 3^y = 6^z$, prove that $\\frac{1}{z} = \\frac{1}{x} + \\frac{1}{y}$",
-        answers: ["$xy = z(x+y)$", "$xz = y(x+z)$", "$yz = x(y+z)$", "$x+y+z=1$"],
+        text: "What is 750,000 less than 345,678?",
+        answers: ["344,678", "340,678", "-404,322", "345,178"],
+        correctIndex: 2,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 150,000 more than 9,999,999",
+        answers: ["10,149,999", "10,999,999", "9,999,999", "9,999,999"],
         correctIndex: 0,
         videoSolution: ""
     },
     {
-        text: "What is $\\frac{4^{x+1} - 2^{2x-1}}{3 \\times 2^{2x}}$ simplified?",
-        answers: ["$\\frac{1}{2}$", "1", "$\\frac{3}{2}$", "2"],
+        text: "What is 1,250,000 less than 456,789?",
+        answers: ["455,789", "-793,211", "446,789", "456,788"],
         correctIndex: 1,
         videoSolution: ""
     },
     {
-        text: "Simplify $\\left(\\frac{a^{\\frac{3}{2}} b^{-\\frac{1}{3}}}{a^{-\\frac{1}{4}} b^{\\frac{2}{3}}}\\right)^4 \\times \\left(\\frac{a^{-1} b}{a^2 b^{-2}}\\right)^{-1}$",
-        answers: ["$a^7 b^{-6}$", "$a^{-7} b^6$", "$a^5 b^{-4}$", "$a^{-5} b^4$"],
-        correctIndex: 0,
+        text: "Find the number that is 750,000 more than 1,234,567",
+        answers: ["1,284,567", "1,234,567", "1,984,567", "1,334,567"],
+        correctIndex: 2,
         videoSolution: ""
     },
     {
-        text: "Find the value of $x$ if $\\frac{9^{x}}{27^{x-1}} = \\frac{1}{3}$",
-        answers: ["$\\frac{1}{2}$", "$\\frac{3}{4}$", "$\\frac{5}{6}$", "$\\frac{7}{8}$"],
+        text: "What is 250,000 less than 876,543?",
+        answers: ["875,543", "866,543", "876,443", "626,543"],
+        correctIndex: 3,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 1,750,000 more than 6,666,666",
+        answers: ["6,766,666", "8,416,666", "16,666,666", "6,666,766"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is 750,000 less than 200,002?",
+        answers: ["200,001", "-549,998", "150,002", "199,502"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "Find the number that is 250,000 more than 34,567,890",
+        answers: ["34,577,890", "34,817,890", "35,567,890", "34,567,990"],
+        correctIndex: 1,
+        videoSolution: ""
+    },
+    {
+        text: "What is 1,750,000 less than 567,890?",
+        answers: ["557,890", "-1,182,110", "566,890", "567,880"],
         correctIndex: 1,
         videoSolution: ""
     }
-], 
+],
+ 
     5: [
     {
-        "text": "Simplify $\\frac{(2^{x+3} \\cdot 4^{x})}{8^{x-2}}$",
-        "answers": ["$2^5$", "$2^7$", "$2^{4x+9}$", "$2^{3x+5}$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Which of these is greater: 456,789,123 or 456,788,999?",
+        answers: ["456,788,999", "456,789,123", "456,789,000", "456,700,000"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "Evaluate $\\left(\\frac{9a^{-4}}{27a^{-1}}\\right)^{-2}$",
-        "answers": ["$3a^{6}$", "$9a^{4}$", "$9a^{-4}$", "$3a^{-6}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Compare: 999,999,999 ___ 1,000,000,000",
+        answers: ["=", ">", "<", "None"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "If $3^{x} = 81$, what is the value of $3^{x-2}$?",
-        "answers": ["3", "9", "27", "81"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Which of these is the smallest number?",
+        answers: ["987,654,321", "987,654,123", "987,654,312", "987,655,000"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{x^{1/2}}{x^{-1/3}}\\right)^6$",
-        "answers": ["$x^{5}$", "$x^{1}$", "$x^{4}$", "$x^{6}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Arrange in descending order: 123,456,789; 123,465,789; 123,456,798",
+        answers: [
+            "123,456,798; 123,456,789; 123,465,789",
+            "123,456,789; 123,456,798; 123,465,789",
+            "123,465,789; 123,456,798; 123,456,789",
+            "123,456,789; 123,465,789; 123,456,798"
+        ],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "What is $\\left(\\frac{81x^8}{16y^{-4}}\\right)^{\\frac{1}{4}}$?",
-        "answers": ["$\\frac{3x^2}{2y}$", "$\\frac{3x^2y}{2}$", "$\\frac{3x^2}{2y^2}$", "$\\frac{3x^2y^2}{2}$"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "What is 500,000 more than 123,000,000?",
+        answers: ["123,500,000", "124,000,000", "123,050,000", "123,005,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Solve for $x$ if $2^{2x} = 32$",
-        "answers": ["2.5", "3", "4", "5"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "What is 100,000 less than 100,000,000?",
+        answers: ["99,900,000", "99,000,000", "99,999,000", "100,099,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{a^{-1}b^2}{a^2b^{-3}}\\right)^{-2}$",
-        "answers": ["$a^6b^{-10}$", "$a^{-6}b^{10}$", "$a^4b^{-2}$", "$a^{-4}b^{2}$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Which of these pairs are equal?",
+        answers: [
+            "234,567,890 and 234,567,809",
+            "456,000,000 and 456,000,000",
+            "123,456,789 and 123,456,798",
+            "500,500,500 and 500,505,000"
+        ],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "What is $\\left(16^{3/4}\\right) \\div \\left(4^{1/2}\\right)$?",
-        "answers": ["2", "4", "8", "16"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "What is 750,000 less than 500,000?",
+        answers: ["-250,000", "0", "250,000", "-750,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\frac{(x^{-2}y^3)^3}{(x^{-1}y)^2}$",
-        "answers": ["$x^{-4}y^7$", "$x^{-5}y^8$", "$x^{-3}y^6$", "$x^{-4}y^6$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which number is missing in this ascending list? 234,567,809; ___ ; 234,567,890",
+        answers: ["234,567,889", "234,567,888", "234,567,800", "234,567,879"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "If $5^x = 25$, find the value of $5^{x+1}$",
-        "answers": ["125", "625", "100", "50"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Compare: 500,000,000 ___ 499,500,000",
+        answers: [">", "<", "=", "None"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{1}{x^{-3}y^2}\\right)^2$",
-        "answers": ["$x^6y^4$", "$x^{-6}y^4$", "$x^3y^2$", "$x^{-3}y^{-2}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Find the number that is 250,000 more than 876,543,210",
+        answers: ["876,793,210", "876,543,460", "876,553,210", "876,783,210"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Find $x$ if $\\frac{2^x}{8^{x+1}} = 1$",
-        "answers": ["-1", "0", "1", "2"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Arrange in ascending order: 99,999,999; 100,000,000; 100,000,001",
+        answers: [
+            "100,000,000; 99,999,999; 100,000,001",
+            "100,000,001; 100,000,000; 99,999,999",
+            "99,999,999; 100,000,000; 100,000,001",
+            "100,000,001; 99,999,999; 100,000,000"
+        ],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "Evaluate $\\left(27x^6\\right)^{1/3}$",
-        "answers": ["$3x^2$", "$9x^3$", "$3x^3$", "$6x^2$"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "What is 1,000,000 more than 999,000,000?",
+        answers: ["1,000,000,000", "999,100,000", "999,999,999", "999,500,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{a^{3/2}}{b^{1/4}}\\right)^4$",
-        "answers": ["$a^6b^{-1}$", "$a^5b^{-1}$", "$a^4b^{-1}$", "$a^6b^{-2}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which of these is true?",
+        answers: [
+            "234,567,890 < 234,567,809",
+            "999,999,999 = 1,000,000,000",
+            "1,000,000,000 > 999,999,999",
+            "500,000,000 = 500,500,000"
+        ],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "What is $\\left(\\frac{64a^{-6}}{81b^4}\\right)^{\\frac{1}{2}}$?",
-        "answers": ["$\\frac{8a^{-3}}{9b^2}$", "$\\frac{8a^3}{9b^2}$", "$\\frac{8a^{-3}}{9b}$", "$\\frac{8a^3}{9b}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which number is greatest?",
+        answers: ["1,000,000,000", "999,999,999", "987,654,321", "876,543,210"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Solve: $9^{x+1} = 3^{2x+4}$",
-        "answers": ["1", "2", "3", "4"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "What is 500,000 less than 123,500,000?",
+        answers: ["123,000,000", "123,499,500", "123,400,000", "123,450,000"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{x^2y^{-1}}{x^{-3}y^4}\\right)^3$",
-        "answers": ["$x^{15}y^{-15}$", "$x^{6}y^{-15}$", "$x^{6}y^{-3}$", "$x^{15}y^{-3}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Compare: 123,456,789 ___ 123,456,788",
+        answers: ["<", ">", "=", "None"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "If $4^x = 8$, find $2^{2x}$",
-        "answers": ["4", "8", "16", "32"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "Find the number that is 1,500,000 more than 10,000,000",
+        answers: ["11,500,000", "11,050,000", "10,015,000", "10,150,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{3x^{-2}}{6x^3}\\right)^{-2}$",
-        "answers": ["$4x^{10}$", "$2x^{10}$", "$4x^{-10}$", "$2x^{-10}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which of these numbers is in the middle when arranged in ascending order: 456,789; 654,321; 567,890?",
+        answers: ["654,321", "456,789", "567,890", "567,789"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "Find the value of $x$ if $\\left(\\frac{1}{4}\\right)^x = 8$",
-        "answers": ["$-3/2$", "$-5/2$", "$-2$", "$-3$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "What is 250,000 less than 123,456,789?",
+        answers: ["123,206,789", "123,456,539", "123,206,788", "123,456,788"],
+        correctIndex: 0,
+        videoSolution: ""
     }
-]
-, 
+    ],
+
+
     6: [
     {
-        "text": "Simplify $\\frac{2^{x+3} + 2^{x+2}}{2^{x-1}}$",
-        "answers": ["28", "20", "24", "16"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "What is 1,250,000 more than 88,888,888?",
+        answers: ["90,138,888", "88,888,988", "89,888,888", "89,138,888"],
+        correctIndex: 3,
+        videoSolution: ""
     },
     {
-        "text": "If $a^{x+1} = a^2 \\cdot a^{3x-4}$, find x",
-        "answers": ["1", "2", "3", "4"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Which number is greatest among the following?",
+        answers: ["123,456,780", "123,456,789", "123,456,788", "123,456,700"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{a^2 b^{-3}}{a^{-1} b^2}\\right)^{-2}$",
-        "answers": ["$a^{-6}b^{10}$", "$a^{6}b^{-10}$", "$a^{3}b^{-1}$", "$a^{-3}b^1$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Compare: 500,500,500 ___ 500,505,000",
+        answers: ["<", ">", "=", "None"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Evaluate $\\left(\\frac{8x^6y^{-9}}{27x^3y^3}\\right)^{-\\frac{2}{3}}$",
-        "answers": ["$\\frac{9x^2}{4y^8}$", "$\\frac{4y^8}{9x^2}$", "$\\frac{4x^2}{9y^8}$", "$\\frac{9y^8}{4x^2}$"],
-        "correctIndex": 3,
-        "videoSolution": ""
+        text: "What is 750,000 less than 500,500,000?",
+        answers: ["499,750,000", "500,000,000", "499,500,000", "499,250,000"],
+        correctIndex: 3,
+        videoSolution: ""
     },
     {
-        "text": "Find the value of x if $\\frac{5^{x+1}}{25^{x}} = 1$",
-        "answers": ["0", "1", "2", "3"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "Arrange in ascending order: 345,678,912; 345,678,921; 345,679,000",
+        answers: [
+            "345,678,912; 345,679,000; 345,678,921",
+            "345,678,912; 345,678,921; 345,679,000",
+            "345,678,921; 345,678,912; 345,679,000",
+            "345,679,000; 345,678,921; 345,678,912"
+        ],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{4x^{-2}y^3}{8x^3y^{-2}}\\right)^2$",
-        "answers": ["$\\frac{y^{10}}{4x^{10}}$", "$\\frac{y^{8}}{4x^{10}}$", "$\\frac{y^{10}}{16x^{10}}$", "$\\frac{y^8}{16x^8}$"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "Find the number that is 1,000,000 less than 345,678,000",
+        answers: ["344,678,000", "345,677,000", "344,778,000", "346,678,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "If $3^x = 81$ and $3^y = 27$, find $3^{x-y}$",
-        "answers": ["1", "3", "9", "27"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "Compare: 234,567,890 ___ 234,567,809",
+        answers: ["<", ">", "=", "None"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{16a^{-4}}{81b^2}\\right)^{\\frac{3}{4}}$",
-        "answers": ["$\\frac{8a^{-3}}{27b^{3/2}}$", "$\\frac{8a^{-3}}{27b^{3}}$", "$\\frac{8a^{-3}}{9b^{3}}$", "$\\frac{8a^3}{27b^{3}}$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Which of these is the correct descending order?",
+        answers: [
+            "234,567,890; 234,567,809; 234,567,800",
+            "234,567,800; 234,567,809; 234,567,890",
+            "234,567,809; 234,567,800; 234,567,890",
+            "234,567,809; 234,567,890; 234,567,800"
+        ],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "If $2^x = 4^{x+1}$, find x",
-        "answers": ["1", "0", "-1", "2"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "What is 500,000 more than 999,999,999?",
+        answers: ["1,000,499,999", "1,000,999,999", "1,000,499,000", "1,000,000,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{x^{-2}y^3}{x^4y^{-1}}\\right)^{-3}$",
-        "answers": ["$x^{18}y^{-12}$", "$x^{-18}y^{12}$", "$x^{6}y^{-12}$", "$x^{-6}y^{12}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Find the number that is 750,000 more than 250,000",
+        answers: ["1,000,000", "500,000", "750,000", "1,050,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "What is $\\left(\\frac{81x^{-8}}{16y^4}\\right)^{1/4}$?",
-        "answers": ["$\\frac{3x^{-2}}{2y}$", "$\\frac{3x^2}{2y}$", "$\\frac{3x^{-2}}{2y^2}$", "$\\frac{3x^2}{2y^2}$"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "What is 1,750,000 less than 1,500,000?",
+        answers: ["-250,000", "250,000", "-1,250,000", "-1,750,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "If $x^{a+b} = x^3 \\cdot x^{-1}$, find $a + b$",
-        "answers": ["1", "2", "3", "4"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Find the number that is 250,000 more than 1,999,999",
+        answers: ["2,249,999", "2,000,000", "2,099,999", "2,499,999"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{27x^3}{64y^6}\\right)^{-\\frac{2}{3}}$",
-        "answers": ["$\\frac{16y^4}{9x^2}$", "$\\frac{16y^6}{9x^2}$", "$\\frac{9x^2}{16y^4}$", "$\\frac{4x^2}{3y^2}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Compare: 876,543,210 ___ 876,543,200",
+        answers: ["=", "<", ">", "None"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "If $3^{2x-1} = 27$, find $x$",
-        "answers": ["1", "2", "3", "4"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "Arrange these in ascending order: 88,888,888; 89,888,888; 87,888,888",
+        answers: [
+            "87,888,888; 88,888,888; 89,888,888",
+            "89,888,888; 88,888,888; 87,888,888",
+            "88,888,888; 89,888,888; 87,888,888",
+            "88,888,888; 87,888,888; 89,888,888"
+        ],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Evaluate $\\left(\\frac{x^{-\\frac{3}{4}}y^{\\frac{1}{2}}}{x^{\\frac{1}{4}}y^{-\\frac{1}{4}}}\\right)^2$",
-        "answers": ["$x^{-2}y^{1.5}$", "$x^{-2}y^{3/2}$", "$x^{-2}y^3$", "$x^2y^{-3/2}$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "What is 1,500,000 more than 98,500,000?",
+        answers: ["99,000,000", "100,000,000", "100,000,500", "100,000,000"],
+        correctIndex: 3,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{a^2b^{-1}}{a^{-3}b^2}\\right)^{-2}$",
-        "answers": ["$a^{-10}b^{6}$", "$a^{10}b^{-6}$", "$a^{-5}b^1$", "$a^5b^{-1}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which is smaller: 987,654,321 or 987,564,321?",
+        answers: ["987,564,321", "987,654,321", "They are equal", "Can't tell"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "What is $\\frac{(2^{x+2} + 2^{x})}{2^{x-2}}$ simplified?",
-        "answers": ["20", "24", "28", "32"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "Find the number that is 100,000 more than 45,578,921",
+        answers: ["45,678,921", "45,588,921", "45,679,921", "45,578,931"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Solve: $\\left(\\frac{1}{9}\\right)^{x} = 27$",
-        "answers": ["-1", "-1.5", "-2", "-3"],
-        "correctIndex": 3,
-        "videoSolution": ""
+        text: "Which number comes last when arranged in descending order: 765,432,000; 765,432,100; 765,432,001",
+        answers: ["765,432,100", "765,432,000", "765,432,001", "765,432,999"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "If $a^{3x} = a^9$, what is $x$?",
-        "answers": ["1", "2", "3", "4"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "What is 500,000 less than 100,500,000?",
+        answers: ["100,000,000", "99,500,000", "100,499,000", "101,000,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{x^{-2}y^5}{x^3y^{-1}}\\right)^{2}$",
-        "answers": ["$x^{-10}y^{12}$", "$x^5y^{6}$", "$x^{-5}y^{12}$", "$x^5y^{-6}$"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "Which of these numbers is equal to 234,567,890?",
+        answers: ["234,567,089", "234,567,890", "234,576,890", "234,567,098"],
+        correctIndex: 1,
+        videoSolution: ""
     }
-]
-, 
+    ], 
+    
     7: [
     {
-        "text": "Simplify $\\frac{3^{2x} + 3^{x+1}}{3^{x}}$",
-        "answers": ["$3^{x} + 3$", "$3^{x+1} + 1$", "$3^{x} + 3^{2}$", "$3^{x+1} + 3$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which number is the greatest: 1,000,000,000; 999,999,999; 987,654,321?",
+        answers: ["999,999,999", "987,654,321", "1,000,000,000", "987,654,322"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "If $2^x = 3^y = 6^z$, prove that $\\frac{1}{x} + \\frac{1}{y} = \\frac{1}{z}$. What is $z$ in terms of $x$ and $y$?",
-        "answers": ["$z = \\frac{xy}{x+y}$", "$z = x + y$", "$z = \\frac{x+y}{xy}$", "$z = \\frac{x}{y}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "What is 1,500,000 less than 1,000,000?",
+        answers: ["-500,000", "500,000", "-1,000,000", "1,500,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Evaluate $\\left(\\frac{x^{-\\frac{3}{2}} y^{\\frac{5}{3}}}{x^{\\frac{2}{3}} y^{-\\frac{1}{4}}}\\right)^6$",
-        "answers": ["$x^{-13} y^{10.5}$", "$x^{-13} y^{31/2}$", "$x^{-13} y^{21/2}$", "$x^{-13} y^{11/2}$"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "Arrange in descending order: 345,600,000; 345,660,000; 345,606,000",
+        answers: [
+            "345,660,000; 345,606,000; 345,600,000",
+            "345,600,000; 345,606,000; 345,660,000",
+            "345,660,000; 345,600,000; 345,606,000",
+            "345,606,000; 345,660,000; 345,600,000"
+        ],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "If $3^{x+2} + 3^{x+1} + 3^x = 39 \\times 3^x$, find the value of x",
-        "answers": ["any x", "1", "2", "3"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "What is 2,000,000 more than 998,000,000?",
+        answers: ["1,000,000,000", "1,998,000,000", "1,000,000,001", "1,000,000,002"],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{27^{1/3} \\cdot 16^{-1/4}}{81^{1/4}}\\right)^6$",
-        "answers": ["$\\frac{1}{9}$", "$\\frac{1}{3}$", "$3$", "$\\frac{1}{27}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Compare: 345,678,000 ___ 345,678,000",
+        answers: ["<", ">", "=", "None"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "If $5^{2x} = 125$, what is $5^{x-1}$?",
-        "answers": ["$\\frac{1}{5}$", "$\\sqrt{5}$", "$5$", "$25$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Which of these is the correct ascending order?",
+        answers: [
+            "87,654,321; 87,655,321; 87,654,322",
+            "87,654,321; 87,654,322; 87,655,321",
+            "87,654,322; 87,655,321; 87,654,321",
+            "87,655,321; 87,654,321; 87,654,322"
+        ],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{4a^{-3}b^{2}}{16a^{2}b^{-1}}\\right)^{-3/2}$",
-        "answers": ["$2a^{7.5}b^{-4.5}$", "$8a^{7.5}b^{-4.5}$", "$8a^{-7.5}b^{4.5}$", "$2a^{-7.5}b^{4.5}$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Which of the following is NOT equal to 123,456,789?",
+        answers: ["123,456,789", "123,456,788 + 1", "123,456,780 + 9", "123,456,788"],
+        correctIndex: 3,
+        videoSolution: ""
     },
     {
-        "text": "If $x = \\log_2 81$, find the value of $2^{x/2}$",
-        "answers": ["9", "81", "3", "√81"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Find the number that is 1,750,000 more than 998,250,000",
+        answers: ["1,000,000,000", "1,000,000,001", "1,000,000,250", "1,000,000,500"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Evaluate $\\left(\\frac{x^{-2}y^3}{x^5y^{-2}}\\right)^{-2}$",
-        "answers": ["$x^{14}y^{-10}$", "$x^{-14}y^{10}$", "$x^6y^{-5}$", "$x^{-6}y^{5}$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "What is 2,500,000 less than 2,000,000?",
+        answers: ["-500,000", "-2,000,000", "500,000", "0"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{2^{2x+1}}{4^x}\\right)^2$",
-        "answers": ["$2^2$", "$2^x$", "$2^{2x}$", "$2^4$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which number is smallest among these?",
+        answers: ["555,555,555", "555,555,550", "555,555,500", "555,555,505"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "If $2^x = 3$, express $8^{x+1}$ in terms of powers of 3",
-        "answers": ["$3^6$", "$3^5$", "$9^x$", "$3^{3x+3}$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Arrange in descending order: 345,345,345; 354,354,354; 435,435,435",
+        answers: [
+            "435,435,435; 354,354,354; 345,345,345",
+            "345,345,345; 354,354,354; 435,435,435",
+            "354,354,354; 435,435,435; 345,345,345",
+            "435,435,435; 345,345,345; 354,354,354"
+        ],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Solve: $\\left(\\frac{1}{2}\\right)^x = 16$",
-        "answers": ["4", "-4", "5", "-5"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "What is 500,000 more than 1,000,000,000?",
+        answers: ["1,000,500,000", "1,000,000,500", "1,050,000,000", "1,005,000,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "If $a^{2x+1} = a^3 \\cdot a^{4x-2}$, find x",
-        "answers": ["1", "2", "3", "4"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which of the following gives a difference of exactly 100,000?",
+        answers: ["123,456,789 and 123,556,789", "123,456,789 and 123,457,789", "123,456,789 and 123,466,789", "123,456,789 and 123,456,689"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{x^{-\\frac{1}{3}}y^{\\frac{3}{4}}}{x^{\\frac{5}{6}}y^{-\\frac{1}{2}}}\\right)^6$",
-        "answers": ["$x^{-7}y^{7.5}$", "$x^{-7}y^{7/2}$", "$x^{-2}y^{6}$", "$x^2y^{-6}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Compare: 888,888,888 ___ 888,888,889",
+        answers: ["=", ">", "<", "None"],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "What is $\\left(\\frac{a^3 b^{-2}}{a^{-2} b^5}\\right)^{-1/5}$?",
-        "answers": ["$a^{-1}b^{1.4}$", "$a^{-1}b^{-1.4}$", "$a^1b^{1.4}$", "$a^1b^{-1.4}$"],
-        "correctIndex": 1,
-        "videoSolution": ""
+        text: "Which of these is an incorrect comparison?",
+        answers: [
+            "234,567,890 > 234,567,809",
+            "1,000,000,000 < 999,999,999",
+            "500,500,500 < 500,505,000",
+            "123,456,789 = 123,456,789"
+        ],
+        correctIndex: 1,
+        videoSolution: ""
     },
     {
-        "text": "If $2^x = 5$ and $2^y = 25$, find $2^{x - 0.5y}$",
-        "answers": ["1", "5", "√5", "25"],
-        "correctIndex": 2,
-        "videoSolution": ""
+        text: "What is 3,000,000 less than 2,500,000?",
+        answers: ["-500,000", "500,000", "-3,000,000", "-2,500,000"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "Evaluate $\\left(\\frac{1}{x^2y^{-3}}\\right)^3 \\cdot (x^3y)^2$",
-        "answers": ["$x^0y^0$", "$x^{-1}y^5$", "$x^0y^5$", "$x^0y^2$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Find the number that is 999,999 more than 1",
+        answers: ["1,000,000", "999,999", "2", "1,000,001"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "If $9^x = 3$, find $x$",
-        "answers": ["1/2", "1/3", "2", "3"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which pair of numbers are equal?",
+        answers: [
+            "345,678,900 and 345,678,909",
+            "100,000,000 and 99,999,999",
+            "876,543,210 and 876,543,210",
+            "345,678,901 and 345,678,900"
+        ],
+        correctIndex: 2,
+        videoSolution: ""
     },
     {
-        "text": "Simplify $\\left(\\frac{a^{-1/2}b^2}{a^{1/2}b^{-1}}\\right)^4$",
-        "answers": ["$a^{-4}b^{12}$", "$a^4b^{12}$", "$a^{-4}b^{-12}$", "$a^4b^{-12}$"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "What is the result of 123,456,789 minus 500,000?",
+        answers: ["122,956,789", "123,956,789", "122,956,788", "124,456,789"],
+        correctIndex: 0,
+        videoSolution: ""
     },
     {
-        "text": "If $x = \\log_4 8$, find $4^x$",
-        "answers": ["8", "16", "√8", "2"],
-        "correctIndex": 0,
-        "videoSolution": ""
+        text: "Which number fits: 987,654,321 ___ 987,655,321?",
+        answers: [">", "<", "=", "None"],
+        correctIndex: 1,
+        videoSolution: ""
     }
-]
+    ]
 
 };
 
