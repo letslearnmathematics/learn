@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Standard Form of Numbers | JHS2 Mathematics">
         <meta property="og:description" content="Learn to Express Integers of Any Size into Standard Form">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/standard-form">
         <meta property="og:type" content="website">
     
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/read-write-numbers.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -63,12 +67,6 @@
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
             crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
     </head>
     <body>
         <!-- Header Navigation -->
@@ -163,10 +161,13 @@
                             
                             <div class="concept-box">
                                 <p>
-                                    <strong>Standard form</strong> (also called scientific notation) is a way of writing very large or very small numbers in a compact form. It expresses numbers as a product of a number between 1 and 10 and a power of 10.
+                                    <strong>Standard form</strong> (also called scientific notation) is a way of writing 
+                                    very large or very small numbers in a compact form. It expresses numbers as a product of a 
+                                    number between 1 and 10 and a power of 10.
                                 </p>
                                 <p>
-                                    Standard form is particularly useful in science and engineering where we often deal with extremely large numbers (like distances between stars) or extremely small numbers (like the size of atoms).
+                                    A number in standard form is written as:
+		                            \[a \times 10^n\]
                                 </p>
                                 <p>
                                     In this lesson, we will learn how to:
@@ -205,7 +206,7 @@
                             </div>
                             -->
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-hashtag"></i> Understanding Powers of 10
                                 </h3>
@@ -232,18 +233,81 @@
                                         </ul>
                                     </div>
                                 </div>
-                                
-                                <div class="math-example">
-                                    <p><strong>Example 1:</strong> Express 10,000 as a power of 10</p>
-                                    <p><strong>Solution:</strong> Count the number of zeros: 10,000 has 4 zeros</p>
-                                    \[ 10,000 = 10^4 \]
-                                    
-                                    <p><strong>Example 2:</strong> Express 0.0001 as a power of 10</p>
-                                    <p><strong>Solution:</strong> Count the number of decimal places: 0.0001 has 4 decimal places</p>
-                                    \[ 0.0001 = 10^{-4} \]
-                                </div>
                             </div>
                         </section>
+
+                        <!-- Numbers in Words: Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>
+                                    Write the number 10,000,000,000 (ten billion) as a power of 10
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 10,000,000,000</p>
+                                    <p>Number of zeros in the number $\Rightarrow$ 10</p>
+                                    <p>$\therefore$ 10,000,000,000 $= 10^{10}$</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    Write the number 1,000,000,000 (1 billion) as a power of 10
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 1,000,000,000</p>
+                                    <p>Number of zeros in the number $\Rightarrow$ 9</p>
+                                    <p>$\therefore$ 10,000,000,000 $= 10^{9}$</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Write the number 0.0001 as a power of 10
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 0.0001</p>
+                                    <p>Number of decimal places $\Rightarrow$ 4</p>
+                                    <p>$\therefore$ 0.0001 $= 10^{-4}$</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Write the number 0.000001 as a power of 10
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 0.000001</p>
+                                    <p>Number of zeros in the number $\Rightarrow$ 6</p>
+                                    <p>$\therefore$ 10,000,000,000 $= 10^{-6}$</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    Write the number 100,000,000 (100 million) as a power of 10
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 100,000,000</p>
+                                    <p>Number of zeros in the number $\Rightarrow$ 8</p>
+                                    <p>$\therefore$ 10,000,000,000 $= 10^{8}$</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Practice Section -->
                         <section class="practice-section">
@@ -280,6 +344,24 @@
                                         \[ 1,000,000,000 = 10^9 \]
                                     </div>
                                 </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Express 0.00000001 as a power of 10.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p></p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Express 10,000,000 as a power of 10.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p></p>
+                                        
+                                    </div>
+                                </div>
                             </div>
                             
                             <div class="cta-box">
@@ -290,13 +372,15 @@
                             </div>
                         </section>
 
+                        <br><br>
+
                         <!-- Multiples in Standard Form Section -->
                         <section id="multiples-standard" class="lesson-section">
                             <h2 class="section-title">
                                 <i class="fas fa-edit"></i> Writing Multiples of 10 in Standard Form
                             </h2>
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-hashtag"></i> Standard Form Structure
                                 </h3>
@@ -310,21 +394,7 @@
                                 <p>The general form is:</p>
                                 \[ a \times 10^n \]
                                 <p>where \(1 \leq a < 10\) and \(n\) is an integer.</p>
-                                
-                                <div class="math-example">
-                                    <p><strong>Example 1:</strong> Write 300 in standard form</p>
-                                    <p><strong>Solution:</strong> 
-                                        \[ 300 = 3 \times 100 = 3 \times 10^2 \]
-                                    </p>
-                                    
-                                    <p><strong>Example 2:</strong> Write 45,000 in standard form</p>
-                                    <p><strong>Solution:</strong> 
-                                        \[ 45,000 = 4.5 \times 10,000 = 4.5 \times 10^4 \]
-                                    </p>
-                                </div>
-                            </div>
-                            
-                            <div class="concept-box highlight-box">
+
                                 <h3 class="subsection-title">
                                     <i class="fas fa-lightbulb"></i> Key Steps
                                 </h3>
@@ -337,6 +407,79 @@
                                 </ol>
                             </div>
                         </section>
+
+                        <!-- Numbers in Words: Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>
+                                    Write 300 in standard form
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 300 </p>
+                                    <p>$\Rightarrow 3 \times 100$</p>
+                                    <p>$\Rightarrow 3 \times 10^2 $</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    Write 45,000 in standard form
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 45,000 </p>
+                                    <p>$\Rightarrow 4.5 \times 10000$</p>
+                                    <p>$\Rightarrow 4.5 \times 10^4 $</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Express \(4000\) in standard form.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 4000</p>
+                                    <p>$\Rightarrow 4 \times 1000$</p>
+                                    <p>$\Rightarrow 4 \times 10^3 $</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Express \(80000\) in standard form.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 80000</p>
+                                    <p>$\Rightarrow 8 \times 10000$</p>
+                                    <p>$\Rightarrow 8 \times 10^4 $</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    Express \(70,000,000\) in standard form.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Number given $\Rightarrow$ 70,000,000</p>
+                                    <p>$\Rightarrow 7 \times 10,000,000$</p>
+                                    <p>$\Rightarrow 7 \times 10^7 $</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Practice Section -->
                         <section class="practice-section">
@@ -351,8 +494,10 @@
                                     <p>Write 7,000 in standard form.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Move decimal after 7 (3 places):</p>
-                                        \[ 7,000 = 7 \times 10^3 \]
+                                        <p> 
+                                            Hint: <br>
+                                            Move decimal point to after 7 (3 places to the left):
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
@@ -360,8 +505,10 @@
                                     <p>Write 820,000 in standard form.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Move decimal after 8 (5 places):</p>
-                                        \[ 820,000 = 8.2 \times 10^5 \]
+                                        <p> 
+                                            Hint: <br>
+                                            Move decimal point to after 8 (5 places to the left):
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
@@ -369,8 +516,34 @@
                                     <p>Write 0.0045 in standard form.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Move decimal to after 4 (3 places to the right):</p>
-                                        \[ 0.0045 = 4.5 \times 10^{-3} \]
+                                        <p> 
+                                            Hint: <br>
+                                            Move decimal point to after 4 (3 places to the right):
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Write 0.000009 in standard form.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p> 
+                                            Hint: <br>
+                                            Move decimal point to after 9 (6 places to the right):
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Write 5,000,000 in standard form.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p> 
+                                            Hint: <br>
+                                            Move decimal point to after 5 (6 places to the left):
+                                        </p>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -383,13 +556,15 @@
                             </div>
                         </section>
 
+                        <br><br>
+
                         <!-- Integers in Standard Form Section -->
                         <section id="integers-standard" class="lesson-section">
                             <h2 class="section-title">
                                 <i class="fas fa-edit"></i> Writing Integers in Standard Form
                             </h2>
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-hashtag"></i> General Method
                                 </h3>
@@ -401,21 +576,83 @@
                                     <li>Count how many places you moved the decimal from its original position</li>
                                     <li>Write as a product of this new number and 10 raised to the count</li>
                                 </ol>
-                                
-                                <div class="math-example">
-                                    <p><strong>Example 1:</strong> Write 45,678 in standard form</p>
-                                    <p><strong>Solution:</strong> 
-                                        \[ 45,678 = 4.5678 \times 10,000 = 4.5678 \times 10^4 \]
+                            </div>
+
+                            <!-- Numbers in Words: Examples -->
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Examples</h2>
+                            </div>
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        Write 45,678 in standard form
                                     </p>
-                                    
-                                    <p><strong>Example 2:</strong> Write 203 in standard form</p>
-                                    <p><strong>Solution:</strong> 
-                                        \[ 203 = 2.03 \times 100 = 2.03 \times 10^2 \]
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Number given $\Rightarrow$ 45,678 </p>
+                                        <p>$\Rightarrow 4.5678 \times 10,000$</p>
+                                        <p>$\Rightarrow 4.5678 \times 10^4 $</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        Write 203 in standard form
                                     </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Number given $\Rightarrow$ 203 </p>
+                                        <p>$\Rightarrow 2.03 \times 100$</p>
+                                        <p>$\Rightarrow 2.03 \times 10^2 $</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        Write \(375\) in standard form..
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Number given $\Rightarrow$ 375 </p>
+                                        <p>$\Rightarrow 3.75 \times 100$</p>
+                                        <p>$\Rightarrow 3.75 \times 10^2 $</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p><strong>(BECE 2002 A)</strong></p>
+                                    <p>
+                                        Write \(2474.5\) in standard form. 
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p> Number given $\Rightarrow$ 2474.5 </p>
+                                        <p> $\Rightarrow 2.4745 \times 1000$ </p>
+                                        <p> $\Rightarrow 2.4745 \times 10^3 $</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        Express \(8,765,049\) in standard form.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p>Number given $\Rightarrow$ 8,765,049</p>
+                                        <p>$\Rightarrow 8.765049 \times 1,000,000$</p>
+                                        <p>$\Rightarrow 8.765049 \times 10^6 $</p>
+                                    </div>
                                 </div>
                             </div>
                             
-                            <div class="concept-box highlight-box">
+                            <div class="concept-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-lightbulb"></i> Common Mistakes to Avoid
                                 </h3>
@@ -441,8 +678,9 @@
                                     <p>Write 123,456 in standard form.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Move decimal after 1 (5 places):</p>
-                                        \[ 123,456 = 1.23456 \times 10^5 \]
+                                        <p> Hint: <br> 
+                                            Move decimal after 1 (5 places to the left):
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
@@ -450,8 +688,9 @@
                                     <p>Write 7,050 in standard form.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Move decimal after 7 (3 places):</p>
-                                        \[ 7,050 = 7.05 \times 10^3 \]
+                                        <p> Hint: <br>
+                                            Move decimal after 7 (3 places to the left):
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
@@ -459,8 +698,32 @@
                                     <p>Write 90,000,000 in standard form.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Move decimal after 9 (7 places):</p>
-                                        \[ 90,000,000 = 9 \times 10^7 \]
+                                        <p>
+                                            Hint: <br>
+                                            Move decimal after 9 (7 places):
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p><strong>(BECE 2011)</strong></p>
+                                    <p>Write \(3560\) in standard form.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            Hint: <br>
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p><strong>(BECE 1994)</strong></p>
+                                    <p>Express 0.0043216 in standard form.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            Hint: <br>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -473,28 +736,1271 @@
                             </div>
                         </section>
 
-                        <!-- Speed Test Game -->
+                        <br><br>
+
+                        <!-- Test Instructions -->
                         <section id="quick-test" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 140</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
                                 </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                 <!-- Question 1 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 1</h3>
+            <p>What is \(10^5\) in ordinary form?</p>
+        </div>
+        <div class="option" data-correct="false">1,000</div>
+        <div class="option" data-correct="false">10,000</div>
+        <div class="option" data-correct="true">100,000</div>
+        <div class="option" data-correct="false">1,000,000</div>
+    </div>
+
+    <!-- Question 2 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 2</h3>
+            <p>What is \(10^{-3}\) in ordinary form?</p>
+        </div>
+        <div class="option" data-correct="false">0.01</div>
+        <div class="option" data-correct="true">0.001</div>
+        <div class="option" data-correct="false">0.0001</div>
+        <div class="option" data-correct="false">0.1</div>
+    </div>
+
+    <!-- Question 3 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 3</h3>
+            <p>Express 1,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^5\)</div>
+        <div class="option" data-correct="true">\(10^6\)</div>
+        <div class="option" data-correct="false">\(10^7\)</div>
+        <div class="option" data-correct="false">\(10^8\)</div>
+    </div>
+
+    <!-- Question 4 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 4</h3>
+            <p>Express 0.00001 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-4}\)</div>
+        <div class="option" data-correct="true">\(10^{-5}\)</div>
+        <div class="option" data-correct="false">\(10^{-6}\)</div>
+        <div class="option" data-correct="false">\(10^{-7}\)</div>
+    </div>
+
+    <!-- Question 5 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 5</h3>
+            <p>What is \(5 \times 10^3\) in ordinary form?</p>
+        </div>
+        <div class="option" data-correct="false">50</div>
+        <div class="option" data-correct="false">500</div>
+        <div class="option" data-correct="true">5,000</div>
+        <div class="option" data-correct="false">50,000</div>
+    </div>
+
+    <!-- Question 6 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 6</h3>
+            <p>What is \(7.2 \times 10^4\) in ordinary form?</p>
+        </div>
+        <div class="option" data-correct="false">720</div>
+        <div class="option" data-correct="false">7,200</div>
+        <div class="option" data-correct="true">72,000</div>
+        <div class="option" data-correct="false">720,000</div>
+    </div>
+
+    <!-- Question 7 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 7</h3>
+            <p>Express 300 in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(3 \times 10^2\)</div>
+        <div class="option" data-correct="false">\(3 \times 10^3\)</div>
+        <div class="option" data-correct="false">\(30 \times 10^1\)</div>
+        <div class="option" data-correct="false">\(0.3 \times 10^3\)</div>
+    </div>
+
+    <!-- Question 8 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 8</h3>
+            <p>Express 45,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(45 \times 10^3\)</div>
+        <div class="option" data-correct="true">\(4.5 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(0.45 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(450 \times 10^2\)</div>
+    </div>
+
+    <!-- Question 9 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 9</h3>
+            <p>Express 0.0045 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(45 \times 10^{-4}\)</div>
+        <div class="option" data-correct="true">\(4.5 \times 10^{-3}\)</div>
+        <div class="option" data-correct="false">\(0.45 \times 10^{-2}\)</div>
+        <div class="option" data-correct="false">\(450 \times 10^{-5}\)</div>
+    </div>
+
+    <!-- Question 10 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 10</h3>
+            <p>Express 123,456 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(1.23456 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(12.3456 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(1.23456 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(123.456 \times 10^3\)</div>
+    </div>
+
+    <!-- Question 11 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 11</h3>
+            <p>What is \(2.5 \times 10^{-2}\) in ordinary form?</p>
+        </div>
+        <div class="option" data-correct="false">0.25</div>
+        <div class="option" data-correct="true">0.025</div>
+        <div class="option" data-correct="false">0.0025</div>
+        <div class="option" data-correct="false">0.00025</div>
+    </div>
+
+    <!-- Question 12 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 12</h3>
+            <p>Express 8,765,049 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(8.765049 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(8.765049 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(87.65049 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(0.8765049 \times 10^7\)</div>
+    </div>
+
+    <!-- Question 13 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 13</h3>
+            <p>Which of these is NOT in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(3.4 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(7.89 \times 10^{-3}\)</div>
+        <div class="option" data-correct="true">\(12.3 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(9.0 \times 10^2\)</div>
+    </div>
+
+    <!-- Question 14 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 14</h3>
+            <p>Express 0.0000007 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(7 \times 10^{-6}\)</div>
+        <div class="option" data-correct="true">\(7 \times 10^{-7}\)</div>
+        <div class="option" data-correct="false">\(0.7 \times 10^{-6}\)</div>
+        <div class="option" data-correct="false">\(70 \times 10^{-8}\)</div>
+    </div>
+
+    <!-- Question 15 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 15</h3>
+            <p>What is \(9.9 \times 10^0\) in ordinary form?</p>
+        </div>
+        <div class="option" data-correct="false">0.99</div>
+        <div class="option" data-correct="false">99</div>
+        <div class="option" data-correct="true">9.9</div>
+        <div class="option" data-correct="false">990</div>
+    </div>
+
+    <!-- Question 16 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 16</h3>
+            <p>Express 2474.5 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(2.4745 \times 10^2\)</div>
+        <div class="option" data-correct="true">\(2.4745 \times 10^3\)</div>
+        <div class="option" data-correct="false">\(24.745 \times 10^2\)</div>
+        <div class="option" data-correct="false">\(0.24745 \times 10^4\)</div>
+    </div>
+
+    <!-- Question 17 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 17</h3>
+            <p>Which number is larger: \(3.2 \times 10^4\) or \(5.6 \times 10^3\)?</p>
+        </div>
+        <div class="option" data-correct="true">\(3.2 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(5.6 \times 10^3\)</div>
+        <div class="option" data-correct="false">They are equal</div>
+        <div class="option" data-correct="false">Cannot be determined</div>
+    </div>
+
+    <!-- Question 18 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 18</h3>
+            <p>Express 3560 in standard form (BECE 2011).</p>
+        </div>
+        <div class="option" data-correct="false">\(3.56 \times 10^2\)</div>
+        <div class="option" data-correct="true">\(3.56 \times 10^3\)</div>
+        <div class="option" data-correct="false">\(35.6 \times 10^2\)</div>
+        <div class="option" data-correct="false">\(0.356 \times 10^4\)</div>
+    </div>
+
+    <!-- Question 19 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 19</h3>
+            <p>Express 0.0043216 in standard form (BECE 1994).</p>
+        </div>
+        <div class="option" data-correct="false">\(4.3216 \times 10^{-2}\)</div>
+        <div class="option" data-correct="true">\(4.3216 \times 10^{-3}\)</div>
+        <div class="option" data-correct="false">\(43.216 \times 10^{-4}\)</div>
+        <div class="option" data-correct="false">\(432.16 \times 10^{-5}\)</div>
+    </div>
+
+    <!-- Question 20 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 20</h3>
+            <p>What is the correct standard form for 70,000,000?</p>
+        </div>
+        <div class="option" data-correct="false">\(7 \times 10^6\)</div>
+        <div class="option" data-correct="true">\(7 \times 10^7\)</div>
+        <div class="option" data-correct="false">\(70 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(0.7 \times 10^8\)</div>
+    </div>
+
+                                    <!-- Question 21 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 21</h3>
+            <p>What is \( (3 \times 10^2) \times (2 \times 10^3) \) in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(5 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(6 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(6 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(6 \times 10^6\)</div>
+    </div>
+
+    <!-- Question 22 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 22</h3>
+            <p>What is \( (8 \times 10^5) ÷ (2 \times 10^2) \) in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(4 \times 10^3\)</div>
+        <div class="option" data-correct="true">\(4 \times 10^3\)</div>
+        <div class="option" data-correct="false">\(6 \times 10^3\)</div>
+        <div class="option" data-correct="false">\(4 \times 10^7\)</div>
+    </div>
+
+    <!-- Question 23 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 23</h3>
+            <p>Express 0.000000043 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(4.3 \times 10^{-7}\)</div>
+        <div class="option" data-correct="true">\(4.3 \times 10^{-8}\)</div>
+        <div class="option" data-correct="false">\(43 \times 10^{-9}\)</div>
+        <div class="option" data-correct="false">\(0.43 \times 10^{-7}\)</div>
+    </div>
+
+    <!-- Question 24 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 24</h3>
+            <p>What is \(2.4 \times 10^3 + 3.1 \times 10^2\) in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(5.5 \times 10^3\)</div>
+        <div class="option" data-correct="false">\(2.71 \times 10^3\)</div>
+        <div class="option" data-correct="true">\(2.71 \times 10^3\)</div>
+        <div class="option" data-correct="false">\(5.5 \times 10^5\)</div>
+    </div>
+
+    <!-- Question 25 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 25</h3>
+            <p>Which number is smaller: \(7.8 \times 10^{-4}\) or \(9.2 \times 10^{-5}\)?</p>
+        </div>
+        <div class="option" data-correct="false">\(7.8 \times 10^{-4}\)</div>
+        <div class="option" data-correct="true">\(9.2 \times 10^{-5}\)</div>
+        <div class="option" data-correct="false">They are equal</div>
+        <div class="option" data-correct="false">Cannot be determined</div>
+    </div>
+
+    <!-- Question 26 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 26</h3>
+            <p>Express the speed of light (299,792,458 m/s) in standard form rounded to 3 significant figures.</p>
+        </div>
+        <div class="option" data-correct="false">\(2.99 \times 10^7\) m/s</div>
+        <div class="option" data-correct="false">\(3 \times 10^9\) m/s</div>
+        <div class="option" data-correct="true">\(3.00 \times 10^8\) m/s</div>
+        <div class="option" data-correct="false">\(299 \times 10^6\) m/s</div>
+    </div>
+
+    <!-- Question 27 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 27</h3>
+            <p>What is \( (5 \times 10^{-3})^2 \) in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(25 \times 10^{-6}\)</div>
+        <div class="option" data-correct="true">\(2.5 \times 10^{-5}\)</div>
+        <div class="option" data-correct="false">\(2.5 \times 10^{-6}\)</div>
+        <div class="option" data-correct="false">\(25 \times 10^{-5}\)</div>
+    </div>
+
+    <!-- Question 28 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 28</h3>
+            <p>The Earth's mass is approximately \(5.97 \times 10^{24}\) kg. How would you write this in full?</p>
+        </div>
+        <div class="option" data-correct="false">59,700,000,000,000,000,000 kg</div>
+        <div class="option" data-correct="true">5,970,000,000,000,000,000,000,000 kg</div>
+        <div class="option" data-correct="false">597,000,000,000,000,000 kg</div>
+        <div class="option" data-correct="false">5,970,000,000,000 kg</div>
+    </div>
+
+    <!-- Question 29 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 29</h3>
+            <p>Express 1 nanometer (0.000000001 meters) in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(1 \times 10^{-9}\) m</div>
+        <div class="option" data-correct="false">\(1 \times 10^{-6}\) m</div>
+        <div class="option" data-correct="false">\(1 \times 10^{-8}\) m</div>
+        <div class="option" data-correct="false">\(0.1 \times 10^{-10}\) m</div>
+    </div>
+
+    <!-- Question 30 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 30</h3>
+            <p>What is \( \sqrt{9 \times 10^{10}} \) in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(3 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(4.5 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(3 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(9 \times 10^5\)</div>
+    </div>
+
+    <!-- Question 31 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 31</h3>
+            <p>If \(a = 3.2 \times 10^4\) and \(b = 1.6 \times 10^3\), what is \(a ÷ b\)?</p>
+        </div>
+        <div class="option" data-correct="false">\(2 \times 10^1\)</div>
+        <div class="option" data-correct="true">\(2 \times 10^1\)</div>
+        <div class="option" data-correct="false">\(5.12 \times 10^7\)</div>
+        <div class="option" data-correct="false">\(2 \times 10^7\)</div>
+    </div>
+
+    <!-- Question 32 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 32</h3>
+            <p>Express Avogadro's number (602,200,000,000,000,000,000,000) in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(6.022 \times 10^{22}\)</div>
+        <div class="option" data-correct="true">\(6.022 \times 10^{23}\)</div>
+        <div class="option" data-correct="false">\(60.22 \times 10^{22}\)</div>
+        <div class="option" data-correct="false">\(602.2 \times 10^{21}\)</div>
+    </div>
+
+    <!-- Question 33 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 33</h3>
+            <p>What is \( (4 \times 10^{-2}) \times (5 \times 10^{-3}) \) in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(20 \times 10^{-6}\)</div>
+        <div class="option" data-correct="true">\(2 \times 10^{-4}\)</div>
+        <div class="option" data-correct="false">\(2 \times 10^{-5}\)</div>
+        <div class="option" data-correct="false">\(20 \times 10^{-5}\)</div>
+    </div>
+
+    <!-- Question 34 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 34</h3>
+            <p>The diameter of a hydrogen atom is about 0.0000000001 meters. Express this in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(1 \times 10^{-9}\) m</div>
+        <div class="option" data-correct="true">\(1 \times 10^{-10}\) m</div>
+        <div class="option" data-correct="false">\(0.1 \times 10^{-9}\) m</div>
+        <div class="option" data-correct="false">\(10 \times 10^{-11}\) m</div>
+    </div>
+
+    <!-- Question 35 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 35</h3>
+            <p>What is \( (2.5 \times 10^3) - (7.5 \times 10^2) \) in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(1.75 \times 10^3\)</div>
+        <div class="option" data-correct="true">\(1.75 \times 10^3\)</div>
+        <div class="option" data-correct="false">\(1.75 \times 10^2\)</div>
+        <div class="option" data-correct="false">\(-5.0 \times 10^2\)</div>
+    </div>
+
+    <!-- Question 36 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 36</h3>
+            <p>Express the charge of an electron (0.0000000000000000001602 coulombs) in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(1.602 \times 10^{-19}\) C</div>
+        <div class="option" data-correct="false">\(16.02 \times 10^{-20}\) C</div>
+        <div class="option" data-correct="false">\(1.602 \times 10^{-18}\) C</div>
+        <div class="option" data-correct="false">\(160.2 \times 10^{-21}\) C</div>
+    </div>
+
+    <!-- Question 37 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 37</h3>
+            <p>What is \( \frac{6 \times 10^8}{3 \times 10^{-2}} \) in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(2 \times 10^6\)</div>
+        <div class="option" data-correct="true">\(2 \times 10^{10}\)</div>
+        <div class="option" data-correct="false">\(2 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(18 \times 10^6\)</div>
+    </div>
+
+    <!-- Question 38 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 38</h3>
+            <p>Express Planck's constant (0.0000000000000000000000000000000006626 J·s) in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(6.626 \times 10^{-33}\) J·s</div>
+        <div class="option" data-correct="true">\(6.626 \times 10^{-34}\) J·s</div>
+        <div class="option" data-correct="false">\(66.26 \times 10^{-35}\) J·s</div>
+        <div class="option" data-correct="false">\(0.6626 \times 10^{-33}\) J·s</div>
+    </div>
+
+    <!-- Question 39 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 39</h3>
+            <p>What is \( (3.6 \times 10^5) + (4.4 \times 10^4) \) in standard form?</p>
+        </div>
+        <div class="option" data-correct="false">\(7.0 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(4.04 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(4.04 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(8.0 \times 10^9\)</div>
+    </div>
+
+    <!-- Question 40 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 40</h3>
+            <p>The distance to the Andromeda galaxy is about 2,400,000 light years. Express this in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(2.4 \times 10^5\) light years</div>
+        <div class="option" data-correct="true">\(2.4 \times 10^6\) light years</div>
+        <div class="option" data-correct="false">\(24 \times 10^5\) light years</div>
+        <div class="option" data-correct="false">\(0.24 \times 10^7\) light years</div>
+    </div>
+
+                                    <!-- Question 41 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 41</h3>
+            <p>Write 500,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^7\)</div>
+        <div class="option" data-correct="false">\(10^8\)</div>
+        <div class="option" data-correct="true">\(10^8\)</div>
+        <div class="option" data-correct="false">\(10^9\)</div>
+    </div>
+
+    <!-- Question 42 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 42</h3>
+            <p>Write 0.0000001 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-6}\)</div>
+        <div class="option" data-correct="true">\(10^{-7}\)</div>
+        <div class="option" data-correct="false">\(10^{-8}\)</div>
+        <div class="option" data-correct="false">\(10^{-9}\)</div>
+    </div>
+
+    <!-- Question 43 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 43</h3>
+            <p>Express 600 in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(6 \times 10^2\)</div>
+        <div class="option" data-correct="false">\(0.6 \times 10^3\)</div>
+        <div class="option" data-correct="false">\(60 \times 10^1\)</div>
+        <div class="option" data-correct="false">\(600 \times 10^0\)</div>
+    </div>
+
+    <!-- Question 44 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 44</h3>
+            <p>Express 7,200,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(72 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(7.2 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(0.72 \times 10^7\)</div>
+        <div class="option" data-correct="false">\(720 \times 10^4\)</div>
+    </div>
+
+    <!-- Question 45 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 45</h3>
+            <p>Write 0.000005 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(5 \times 10^{-5}\)</div>
+        <div class="option" data-correct="false">\(50 \times 10^{-7}\)</div>
+        <div class="option" data-correct="true">\(5 \times 10^{-6}\)</div>
+        <div class="option" data-correct="false">\(0.5 \times 10^{-5}\)</div>
+    </div>
+
+    <!-- Question 46 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 46</h3>
+            <p>Express 203,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(2.03 \times 10^4\)</div>
+        <div class="option" data-correct="true">\(2.03 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(20.3 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(203 \times 10^3\)</div>
+    </div>
+
+    <!-- Question 47 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 47</h3>
+            <p>Write 90,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^9\)</div>
+        <div class="option" data-correct="false">\(10^{10}\)</div>
+        <div class="option" data-correct="true">\(10^{10}\)</div>
+        <div class="option" data-correct="false">\(10^{11}\)</div>
+    </div>
+
+    <!-- Question 48 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 48</h3>
+            <p>Express 0.00000008 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(8 \times 10^{-7}\)</div>
+        <div class="option" data-correct="true">\(8 \times 10^{-8}\)</div>
+        <div class="option" data-correct="false">\(80 \times 10^{-9}\)</div>
+        <div class="option" data-correct="false">\(0.8 \times 10^{-7}\)</div>
+    </div>
+
+    <!-- Question 49 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 49</h3>
+            <p>Express 4,050,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(4.05 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(40.5 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(405 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(0.405 \times 10^7\)</div>
+    </div>
+
+    <!-- Question 50 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 50</h3>
+            <p>Write 0.0000000003 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-9}\)</div>
+        <div class="option" data-correct="true">\(10^{-10}\)</div>
+        <div class="option" data-correct="false">\(10^{-11}\)</div>
+        <div class="option" data-correct="false">\(3 \times 10^{-9}\)</div>
+    </div>
+
+    <!-- Question 51 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 51</h3>
+            <p>Express 1,080,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(1.08 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(1.08 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(10.8 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(108 \times 10^4\)</div>
+    </div>
+
+    <!-- Question 52 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 52</h3>
+            <p>Write 20,000,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{12}\)</div>
+        <div class="option" data-correct="false">\(10^{13}\)</div>
+        <div class="option" data-correct="true">\(10^{13}\)</div>
+        <div class="option" data-correct="false">\(2 \times 10^{13}\)</div>
+    </div>
+
+    <!-- Question 53 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 53</h3>
+            <p>Express 0.000000045 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(4.5 \times 10^{-7}\)</div>
+        <div class="option" data-correct="true">\(4.5 \times 10^{-8}\)</div>
+        <div class="option" data-correct="false">\(45 \times 10^{-9}\)</div>
+        <div class="option" data-correct="false">\(0.45 \times 10^{-7}\)</div>
+    </div>
+
+    <!-- Question 54 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 54</h3>
+            <p>Express 3,007,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(3.007 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(30.07 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(300.7 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(0.3007 \times 10^7\)</div>
+    </div>
+
+    <!-- Question 55 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 55</h3>
+            <p>Write 0.00000000007 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-10}\)</div>
+        <div class="option" data-correct="true">\(10^{-11}\)</div>
+        <div class="option" data-correct="false">\(10^{-12}\)</div>
+        <div class="option" data-correct="false">\(7 \times 10^{-11}\)</div>
+    </div>
+
+    <!-- Question 56 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 56</h3>
+            <p>Express 50,500,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(5.05 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(50.5 \times 10^6\)</div>
+        <div class="option" data-correct="true">\(5.05 \times 10^7\)</div>
+        <div class="option" data-correct="false">\(505 \times 10^5\)</div>
+    </div>
+
+    <!-- Question 57 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 57</h3>
+            <p>Write 1,000,000,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{13}\)</div>
+        <div class="option" data-correct="false">\(10^{14}\)</div>
+        <div class="option" data-correct="true">\(10^{15}\)</div>
+        <div class="option" data-correct="false">\(10^{16}\)</div>
+    </div>
+
+    <!-- Question 58 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 58</h3>
+            <p>Express 0.0000000000008 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(8 \times 10^{-12}\)</div>
+        <div class="option" data-correct="true">\(8 \times 10^{-13}\)</div>
+        <div class="option" data-correct="false">\(80 \times 10^{-14}\)</div>
+        <div class="option" data-correct="false">\(0.8 \times 10^{-12}\)</div>
+    </div>
+
+    <!-- Question 59 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 59</h3>
+            <p>Express 6,000,200 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(6.0002 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(6.0002 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(60.002 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(600.02 \times 10^4\)</div>
+    </div>
+
+    <!-- Question 60 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 60</h3>
+            <p>Write 0.000000000000001 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-14}\)</div>
+        <div class="option" data-correct="false">\(10^{-15}\)</div>
+        <div class="option" data-correct="true">\(10^{-15}\)</div>
+        <div class="option" data-correct="false">\(10^{-16}\)</div>
+    </div>
+
+                                    <!-- Question 61 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 61</h3>
+            <p>Write 7,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^8\)</div>
+        <div class="option" data-correct="true">\(10^9\)</div>
+        <div class="option" data-correct="false">\(10^{10}\)</div>
+        <div class="option" data-correct="false">\(7 \times 10^9\)</div>
+    </div>
+
+    <!-- Question 62 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 62</h3>
+            <p>Express 0.0000000002 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(2 \times 10^{-9}\)</div>
+        <div class="option" data-correct="true">\(2 \times 10^{-10}\)</div>
+        <div class="option" data-correct="false">\(20 \times 10^{-11}\)</div>
+        <div class="option" data-correct="false">\(0.2 \times 10^{-9}\)</div>
+    </div>
+
+    <!-- Question 63 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 63</h3>
+            <p>Express 900,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(9 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(0.9 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(90 \times 10^4\)</div>
+        <div class="option" data-correct="false">\(9.0 \times 10^6\)</div>
+    </div>
+
+    <!-- Question 64 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 64</h3>
+            <p>Write 0.000000000005 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-11}\)</div>
+        <div class="option" data-correct="true">\(10^{-12}\)</div>
+        <div class="option" data-correct="false">\(10^{-13}\)</div>
+        <div class="option" data-correct="false">\(5 \times 10^{-12}\)</div>
+    </div>
+
+    <!-- Question 65 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 65</h3>
+            <p>Express 8,040,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(8.04 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(8.04 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(80.4 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(804 \times 10^4\)</div>
+    </div>
+
+    <!-- Question 66 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 66</h3>
+            <p>Write 100,000,000,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{16}\)</div>
+        <div class="option" data-correct="true">\(10^{17}\)</div>
+        <div class="option" data-correct="false">\(10^{18}\)</div>
+        <div class="option" data-correct="false">\(10^{19}\)</div>
+    </div>
+
+    <!-- Question 67 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 67</h3>
+            <p>Express 0.00000000000004 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(4 \times 10^{-13}\)</div>
+        <div class="option" data-correct="true">\(4 \times 10^{-14}\)</div>
+        <div class="option" data-correct="false">\(40 \times 10^{-15}\)</div>
+        <div class="option" data-correct="false">\(0.4 \times 10^{-13}\)</div>
+    </div>
+
+    <!-- Question 68 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 68</h3>
+            <p>Express 2,000,300 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(2.0003 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(2.0003 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(20.003 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(200.03 \times 10^4\)</div>
+    </div>
+
+    <!-- Question 69 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 69</h3>
+            <p>Write 0.0000000000000001 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-15}\)</div>
+        <div class="option" data-correct="true">\(10^{-16}\)</div>
+        <div class="option" data-correct="false">\(10^{-17}\)</div>
+        <div class="option" data-correct="false">\(10^{-18}\)</div>
+    </div>
+
+    <!-- Question 70 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 70</h3>
+            <p>Express 5,000,500 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(5.0005 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(5.0005 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(50.005 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(500.05 \times 10^4\)</div>
+    </div>
+
+    <!-- Question 71 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 71</h3>
+            <p>Write 1,000,000,000,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{17}\)</div>
+        <div class="option" data-correct="false">\(10^{18}\)</div>
+        <div class="option" data-correct="true">\(10^{18}\)</div>
+        <div class="option" data-correct="false">\(10^{19}\)</div>
+    </div>
+
+    <!-- Question 72 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 72</h3>
+            <p>Express 0.00000000000000008 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(8 \times 10^{-16}\)</div>
+        <div class="option" data-correct="true">\(8 \times 10^{-17}\)</div>
+        <div class="option" data-correct="false">\(80 \times 10^{-18}\)</div>
+        <div class="option" data-correct="false">\(0.8 \times 10^{-16}\)</div>
+    </div>
+
+    <!-- Question 73 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 73</h3>
+            <p>Express 3,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(3 \times 10^9\)</div>
+        <div class="option" data-correct="false">\(0.3 \times 10^{10}\)</div>
+        <div class="option" data-correct="false">\(30 \times 10^8\)</div>
+        <div class="option" data-correct="false">\(300 \times 10^7\)</div>
+    </div>
+
+    <!-- Question 74 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 74</h3>
+            <p>Write 0.000000000000000001 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-17}\)</div>
+        <div class="option" data-correct="true">\(10^{-18}\)</div>
+        <div class="option" data-correct="false">\(10^{-19}\)</div>
+        <div class="option" data-correct="false">\(10^{-20}\)</div>
+    </div>
+
+    <!-- Question 75 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 75</h3>
+            <p>Express 7,000,700 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(7.0007 \times 10^5\)</div>
+        <div class="option" data-correct="true">\(7.0007 \times 10^6\)</div>
+        <div class="option" data-correct="false">\(70.007 \times 10^5\)</div>
+        <div class="option" data-correct="false">\(700.07 \times 10^4\)</div>
+    </div>
+
+    <!-- Question 76 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 76</h3>
+            <p>Write 10,000,000,000,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{18}\)</div>
+        <div class="option" data-correct="false">\(10^{19}\)</div>
+        <div class="option" data-correct="true">\(10^{19}\)</div>
+        <div class="option" data-correct="false">\(10^{20}\)</div>
+    </div>
+
+    <!-- Question 77 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 77</h3>
+            <p>Express 0.0000000000000000001 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(1 \times 10^{-18}\)</div>
+        <div class="option" data-correct="true">\(1 \times 10^{-19}\)</div>
+        <div class="option" data-correct="false">\(10 \times 10^{-20}\)</div>
+        <div class="option" data-correct="false">\(0.1 \times 10^{-18}\)</div>
+    </div>
+
+    <!-- Question 78 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 78</h3>
+            <p>Express 4,000,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(4 \times 10^{12}\)</div>
+        <div class="option" data-correct="false">\(0.4 \times 10^{13}\)</div>
+        <div class="option" data-correct="false">\(40 \times 10^{11}\)</div>
+        <div class="option" data-correct="false">\(400 \times 10^{10}\)</div>
+    </div>
+
+    <!-- Question 79 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 79</h3>
+            <p>Write 0.00000000000000000001 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-19}\)</div>
+        <div class="option" data-correct="true">\(10^{-20}\)</div>
+        <div class="option" data-correct="false">\(10^{-21}\)</div>
+        <div class="option" data-correct="false">\(10^{-22}\)</div>
+    </div>
+
+    <!-- Question 80 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 80</h3>
+            <p>Express 9,000,900,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(9.0009 \times 10^8\)</div>
+        <div class="option" data-correct="true">\(9.0009 \times 10^9\)</div>
+        <div class="option" data-correct="false">\(90.009 \times 10^8\)</div>
+        <div class="option" data-correct="false">\(900.09 \times 10^7\)</div>
+    </div>
+
+                                    <!-- Question 81 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 81</h3>
+            <p>Write 500,000,000,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{16}\)</div>
+        <div class="option" data-correct="false">\(10^{17}\)</div>
+        <div class="option" data-correct="true">\(10^{17}\)</div>
+        <div class="option" data-correct="false">\(5 \times 10^{17}\)</div>
+    </div>
+
+    <!-- Question 82 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 82</h3>
+            <p>Express 0.0000000000000000005 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(5 \times 10^{-18}\)</div>
+        <div class="option" data-correct="true">\(5 \times 10^{-19}\)</div>
+        <div class="option" data-correct="false">\(50 \times 10^{-20}\)</div>
+        <div class="option" data-correct="false">\(0.5 \times 10^{-18}\)</div>
+    </div>
+
+    <!-- Question 83 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 83</h3>
+            <p>Express 60,000,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="true">\(6 \times 10^{13}\)</div>
+        <div class="option" data-correct="false">\(0.6 \times 10^{14}\)</div>
+        <div class="option" data-correct="false">\(60 \times 10^{12}\)</div>
+        <div class="option" data-correct="false">\(600 \times 10^{11}\)</div>
+    </div>
+
+    <!-- Question 84 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 84</h3>
+            <p>Write 0.00000000000000000002 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-19}\)</div>
+        <div class="option" data-correct="true">\(10^{-20}\)</div>
+        <div class="option" data-correct="false">\(10^{-21}\)</div>
+        <div class="option" data-correct="false">\(2 \times 10^{-20}\)</div>
+    </div>
+
+    <!-- Question 85 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 85</h3>
+            <p>Express 7,000,000,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(7 \times 10^{14}\)</div>
+        <div class="option" data-correct="true">\(7 \times 10^{15}\)</div>
+        <div class="option" data-correct="false">\(0.7 \times 10^{16}\)</div>
+        <div class="option" data-correct="false">\(70 \times 10^{14}\)</div>
+    </div>
+
+    <!-- Question 86 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 86</h3>
+            <p>Write 1,000,000,000,000,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{20}\)</div>
+        <div class="option" data-correct="false">\(10^{21}\)</div>
+        <div class="option" data-correct="true">\(10^{21}\)</div>
+        <div class="option" data-correct="false">\(10^{22}\)</div>
+    </div>
+
+    <!-- Question 87 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 87</h3>
+            <p>Express 0.000000000000000000003 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(3 \times 10^{-20}\)</div>
+        <div class="option" data-correct="true">\(3 \times 10^{-21}\)</div>
+        <div class="option" data-correct="false">\(30 \times 10^{-22}\)</div>
+        <div class="option" data-correct="false">\(0.3 \times 10^{-20}\)</div>
+    </div>
+
+    <!-- Question 88 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 88</h3>
+            <p>Express 8,000,000,000,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(8 \times 10^{17}\)</div>
+        <div class="option" data-correct="true">\(8 \times 10^{18}\)</div>
+        <div class="option" data-correct="false">\(0.8 \times 10^{19}\)</div>
+        <div class="option" data-correct="false">\(80 \times 10^{17}\)</div>
+    </div>
+
+    <!-- Question 89 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 89</h3>
+            <p>Write 0.0000000000000000000004 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-21}\)</div>
+        <div class="option" data-correct="true">\(10^{-22}\)</div>
+        <div class="option" data-correct="false">\(10^{-23}\)</div>
+        <div class="option" data-correct="false">\(4 \times 10^{-22}\)</div>
+    </div>
+
+    <!-- Question 90 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 90</h3>
+            <p>Express 9,999,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(9.999 \times 10^{11}\)</div>
+        <div class="option" data-correct="true">\(9.999 \times 10^{12}\)</div>
+        <div class="option" data-correct="false">\(99.99 \times 10^{11}\)</div>
+        <div class="option" data-correct="false">\(999.9 \times 10^{10}\)</div>
+    </div>
+
+    <!-- Question 91 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 91</h3>
+            <p>Write 10,000,000,000,000,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{21}\)</div>
+        <div class="option" data-correct="false">\(10^{22}\)</div>
+        <div class="option" data-correct="true">\(10^{22}\)</div>
+        <div class="option" data-correct="false">\(10^{23}\)</div>
+    </div>
+
+    <!-- Question 92 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 92</h3>
+            <p>Express 0.00000000000000000000005 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(5 \times 10^{-22}\)</div>
+        <div class="option" data-correct="true">\(5 \times 10^{-23}\)</div>
+        <div class="option" data-correct="false">\(50 \times 10^{-24}\)</div>
+        <div class="option" data-correct="false">\(0.5 \times 10^{-22}\)</div>
+    </div>
+
+    <!-- Question 93 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 93</h3>
+            <p>Express 6,000,600,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(6.0006 \times 10^{13}\)</div>
+        <div class="option" data-correct="true">\(6.0006 \times 10^{15}\)</div>
+        <div class="option" data-correct="false">\(60.006 \times 10^{14}\)</div>
+        <div class="option" data-correct="false">\(600.06 \times 10^{13}\)</div>
+    </div>
+
+    <!-- Question 94 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 94</h3>
+            <p>Write 0.000000000000000000000001 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-23}\)</div>
+        <div class="option" data-correct="true">\(10^{-24}\)</div>
+        <div class="option" data-correct="false">\(10^{-25}\)</div>
+        <div class="option" data-correct="false">\(10^{-26}\)</div>
+    </div>
+
+    <!-- Question 95 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 95</h3>
+            <p>Express 7,777,000,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(7.777 \times 10^{13}\)</div>
+        <div class="option" data-correct="true">\(7.777 \times 10^{15}\)</div>
+        <div class="option" data-correct="false">\(77.77 \times 10^{14}\)</div>
+        <div class="option" data-correct="false">\(777.7 \times 10^{13}\)</div>
+    </div>
+
+    <!-- Question 96 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 96</h3>
+            <p>Write 100,000,000,000,000,000,000,000 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{22}\)</div>
+        <div class="option" data-correct="false">\(10^{23}\)</div>
+        <div class="option" data-correct="true">\(10^{23}\)</div>
+        <div class="option" data-correct="false">\(10^{24}\)</div>
+    </div>
+
+    <!-- Question 97 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 97</h3>
+            <p>Express 0.0000000000000000000000006 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(6 \times 10^{-24}\)</div>
+        <div class="option" data-correct="true">\(6 \times 10^{-25}\)</div>
+        <div class="option" data-correct="false">\(60 \times 10^{-26}\)</div>
+        <div class="option" data-correct="false">\(0.6 \times 10^{-24}\)</div>
+    </div>
+
+    <!-- Question 98 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 98</h3>
+            <p>Express 5,050,000,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(5.05 \times 10^{13}\)</div>
+        <div class="option" data-correct="true">\(5.05 \times 10^{15}\)</div>
+        <div class="option" data-correct="false">\(50.5 \times 10^{14}\)</div>
+        <div class="option" data-correct="false">\(505 \times 10^{13}\)</div>
+    </div>
+
+    <!-- Question 99 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 99</h3>
+            <p>Write 0.00000000000000000000000001 as a power of 10.</p>
+        </div>
+        <div class="option" data-correct="false">\(10^{-25}\)</div>
+        <div class="option" data-correct="true">\(10^{-26}\)</div>
+        <div class="option" data-correct="false">\(10^{-27}\)</div>
+        <div class="option" data-correct="false">\(10^{-28}\)</div>
+    </div>
+
+    <!-- Question 100 -->
+    <div class="question" data-solution="">
+        <div class="question-text">
+            <h3>Question 100</h3>
+            <p>Express 8,888,000,000,000,000,000 in standard form.</p>
+        </div>
+        <div class="option" data-correct="false">\(8.888 \times 10^{16}\)</div>
+        <div class="option" data-correct="true">\(8.888 \times 10^{18}\)</div>
+        <div class="option" data-correct="false">\(88.88 \times 10^{17}\)</div>
+        <div class="option" data-correct="false">\(888.8 \times 10^{16}\)</div>
+    </div>
                             </div>
                         </section>
                     </article>
@@ -510,25 +2016,33 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--
+                                <li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>
+                                -->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
                             </ul>
                         </div>
@@ -544,8 +2058,8 @@
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a><br>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -555,25 +2069,37 @@
             </div>
         </footer>
 
-         <!-- Scripts -->
-         <script src="../../js/math-challenge-read-write-numbers.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/read-write-numbers.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../passco/js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>

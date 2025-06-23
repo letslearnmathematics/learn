@@ -62,9 +62,9 @@ document.addEventListener('DOMContentLoaded', function () {
         testContent.innerHTML = `
             <div class="welcome-screen">
                 <div class="welcome-card">
-                    <h2><i class="fas fa-graduation-cap"></i> Section A - Mathematics</h2>
+                    <h2><i class="fas fa-graduation-cap"></i> 100 Questions/hr Challenge.</h2>
                     <div class="test-info">
-                        <p><i class="fas fa-list-ol"></i> <strong>${totalQuestions} questions</strong> in Section A</p>
+                        <p><i class="fas fa-list-ol"></i> <strong>${totalQuestions} questions</strong> in total.</p>
                         <p><i class="fas fa-clock"></i> <strong>60 minutes</strong> time limit</p>
                         <p><i class="fas fa-check-circle"></i> Multiple choice format</p>
                     </div>
