@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Perfect Squares and Square Roots | JHS2 Mathematics">
         <meta property="og:description" content="Learn to Identify Perfect Squares and Determine Square Roots Using Sets Concepts">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/perfect-squares">
         <meta property="og:type" content="website">
     
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/read-write-numbers.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -63,12 +67,6 @@
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375"
             crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
     </head>
     <body>
         <!-- Header Navigation -->
@@ -178,7 +176,7 @@
                                 
                                 <div class="math-example">
                                     <p>Examples of perfect squares:</p>
-                                    \[ \{1, 4, 9, 16, 25, 36, 49, 64, 81, 100, \ldots\} \]
+                                    <p>{1, 4, 9, 16, 25, 36, 49, 64, 81, 100, $\ldots$}</p>
                                 </div>
                             </div>
                         </section>
@@ -227,18 +225,18 @@
                                 <div class="method-card">
                                     <div class="method-header">
                                         <i class="fas fa-th-list"></i>
-                                        <h3>Example: Identifying Perfect Squares from Multiples</h3>
+                                        <h3>Identifying Perfect Squares from Multiples</h3>
                                     </div>
                                     <div class="method-body">
                                         <p>Consider the set of multiples of numbers from 1 to 5:</p>
                                         <div class="math-example">
                                             \[
                                                 \begin{align*}
-                                                    \text{Multiples of 1} &= \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, \ldots\} \\
-                                                    \text{Multiples of 2} &= \{2, 4, 6, 8, 10, 12, 14, 16, 18, 20, \ldots\} \\
-                                                    \text{Multiples of 3} &= \{3, 6, 9, 12, 15, 18, 21, 24, 27, 30, \ldots\} \\
-                                                    \text{Multiples of 4} &= \{4, 8, 12, 16, 20, 24, 28, 32, 36, 40, \ldots\} \\
-                                                    \text{Multiples of 5} &= \{5, 10, 15, 20, 25, 30, 35, 40, 45, 50, \ldots\}
+                                                    \text{Multiples of 1} &= \{1, 2, 3, 4, 5, 6, 7, 8, \ldots\} \\
+                                                    \text{Multiples of 2} &= \{2, 4, 6, 8, 10, 12, 14,  \ldots\} \\
+                                                    \text{Multiples of 3} &= \{3, 6, 9, 12, 15, 18, 21,  \ldots\} \\
+                                                    \text{Multiples of 4} &= \{4, 8, 12, 16, 20, 24, 28, \ldots\} \\
+                                                    \text{Multiples of 5} &= \{5, 10, 15, 20, 25, 30, 35, \ldots\}
                                                 \end{align*}
                                             \]
                                             <p>The numbers that appear in the intersection of a set with itself (when multiplied by the same number) are perfect squares:</p>
@@ -250,7 +248,7 @@
                                 <div class="method-card">
                                     <div class="method-header">
                                         <i class="fas fa-calculator"></i>
-                                        <h3>Alternative Method: Using Factors</h3>
+                                        <h3>Using Factors</h3>
                                     </div>
                                     <div class="method-body">
                                         <p>Perfect squares have an odd number of factors. We can use this property to identify them:</p>
@@ -265,8 +263,98 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="method-card">
+                                    <div class="method-header">
+                                        <i class="fas fa-divide"></i>
+                                        <h3>Identifying Perfect Squares by Prime Factorisation</h3>
+                                    </div>
+                                    <div class="method-body">
+                                        <p>
+                                            A number is a perfect square if all the exponents in its prime factorisation are even. This means every prime factor can be paired.
+                                        </p>
+                                        <div class="math-example">
+                                            <p>Example: Is 36 a perfect square?</p>
+                                            \[ 36 = 2 \times 2 \times 3 \times 3 = 2^2 \times 3^2 \]
+                                            <p>All exponents are even (2 and 2), so 36 is a perfect square.</p>
+                                            <p>Example: Is 18 a perfect square?</p>
+                                            \[ 18 = 2 \times 3 \times 3 = 2^1 \times 3^2 \]
+                                            <p>Exponent of 2 is odd, so 18 is <strong>not</strong> a perfect square.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </section>
+
+                        <!--Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>
+                                    Identify the perfect squares from the set {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>The perfect squares in the set are: <strong>1</strong> (1×1), <strong>4</strong> (2×2), and <strong>9</strong> (3×3).</p>
+                                    <p>So, the perfect squares are: <strong>{1, 4, 9}</strong>.</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    Which of the following numbers are perfect squares: 15, 36, 50, 64, 81?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>36 (6×6), 64 (8×8), and 81 (9×9) are perfect squares.</p>
+                                    <p>15 and 50 are not perfect squares.</p>
+                                    <p>So, the perfect squares are: <strong>{36, 64, 81}</strong>.</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Find the square root of 121 using the prime factorization method.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Prime factors of 121: 121 = 11 × 11 = 11<sup>2</sup></p>
+                                    <p>Take one from the pair: 11</p>
+                                    <p>Therefore, $\sqrt{121} = 11$.</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Is 50 a perfect square? Explain your answer.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Prime factors of 50: 50 = 2 × 5 × 5 = 2<sup>1</sup> × 5<sup>2</sup></p>
+                                    <p>The exponent of 2 is odd, so 50 is <strong>not</strong> a perfect square.</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    List all perfect squares between 30 and 70.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Perfect squares between 30 and 70 are: 36 (6×6), 49 (7×7), and 64 (8×8).</p>
+                                    <p>So, the perfect squares are: <strong>{36, 49, 64}</strong>.</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Practice Section -->
                         <section class="practice-section">
@@ -291,7 +379,7 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p>The first 10 perfect squares are:</p>
-                                        \[ \{1, 4, 9, 16, 25, 36, 49, 64, 81, 100\} \]
+                                        <p>{1, 4, 9, 16, 25, 36, 49, 64, 81, 100}</p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
@@ -300,8 +388,31 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p>Factors of 144:</p>
-                                        \[ \{1, 2, 3, 4, 6, 8, 9, 12, 16, 18, 24, 36, 48, 72, 144\} \]
-                                        <p>Number of factors = 15 (odd) → 144 is a perfect square (12×12)</p>
+                                        <p>{1, 2, 3, 4, 6, 8, 9, 12, 16, 18, 24, 36, 48, 72, 144}</p>
+                                        <p>
+                                            Number of factors = 15 (odd) <br>
+                                            $\Rightarrow$ 144 is a perfect square (12$\times$12)
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Which of the following numbers is <strong>not</strong> a perfect square: 121, 144, 169, 180?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>121 = 11×11, 144 = 12×12, 169 = 13×13, 180 is not a perfect square.</p>
+                                        <p>Therefore, <strong>180</strong> is not a perfect square.</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Find the square root of 196 and explain your method.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Prime factorization of 196:</p>
+                                        \[ 196 = 2 \times 2 \times 7 \times 7 \]
+                                        <p>Take one from each pair: 2 × 7 = 14</p>
+                                        <p>Therefore, $\sqrt{196} = 14$ </p>
                                     </div>
                                 </div>
                             </div>
@@ -313,6 +424,8 @@
                                 </a>
                             </div>
                         </section>
+
+                        <br><br>
 
                         <!-- Square Roots Section -->
                         <section id="square-roots" class="lesson-section">
@@ -364,17 +477,23 @@
                                         <h3>Example: Finding Square Roots</h3>
                                     </div>
                                     <div class="method-body">
-                                        <p>To find √36:</p>
+                                        <p>To find $\sqrt{36}$:</p>
                                         <ol>
-                                            <li>Start adding consecutive odd numbers: 1 + 3 + 5 + 7 + 9 + 11 = 36</li>
+                                            <li>
+                                                Start adding consecutive odd numbers: <br>
+                                                1 + 3 + 5 + 7 + 9 + 11 = 36
+                                            </li>
                                             <li>Count the number of odd numbers added: 6</li>
                                             <li>Therefore, √36 = 6</li>
                                         </ol>
                                         
                                         <div class="math-example">
-                                            <p>Similarly for √81:</p>
-                                            \[ 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 = 81 \]
-                                            <p>Number of terms = 9 → √81 = 9</p>
+                                            <p>Similarly for $\sqrt{81}$:</p>
+                                            <p>1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 = 81</p>
+                                            <p>
+                                                Number of terms $= 9$  <br>
+                                                $\Rightarrow$ $\sqrt{81} = 9$
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -387,18 +506,122 @@
                                     <div class="method-body">
                                         <p>We can also find square roots by prime factorization:</p>
                                         <div class="math-example">
-                                            <p>Find √144:</p>
+                                            <p>Find $\sqrt{144}$:</p>
                                             \[ 144 = 2 \times 2 \times 2 \times 2 \times 3 \times 3 \]
                                             <p>Pair the factors:</p>
                                             \[ (2 \times 2) \times (2 \times 2) \times (3 \times 3) \]
                                             <p>Take one from each pair:</p>
                                             \[ 2 \times 2 \times 3 = 12 \]
-                                            <p>Therefore, √144 = 12</p>
+                                            <p>Therefore, $\sqrt{144} = 12$ </p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </section>
+
+                        <!--Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>
+                                    Find the square root of 49 using the odd number method.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Add consecutive odd numbers until you reach 49:</p>
+                                    <p>
+                                    1 = 1 <br>
+                                    1 + 3 = 4 <br>
+                                    1 + 3 + 5 = 9 <br>
+                                    1 + 3 + 5 + 7 = 16 <br>
+                                    1 + 3 + 5 + 7 + 9 = 25 <br>
+                                    1 + 3 + 5 + 7 + 9 + 11 = 36 <br>
+                                    1 + 3 + 5 + 7 + 9 + 11 + 13 = 49
+                                    </p>
+                                    <p>
+                                    Number of terms = 7 <br>
+                                    $\Rightarrow \sqrt{49} = 7$
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    Find the square root of 100 using the odd number method.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Add consecutive odd numbers until you reach 100:</p>
+                                    <p>
+                                        1 = 1 <br>
+                                        1 + 3 = 4 <br>
+                                        1 + 3 + 5 = 9 <br>
+                                        1 + 3 + 5 + 7 = 16 <br>
+                                        1 + 3 + 5 + 7 + 9 = 25 <br>
+                                        1 + 3 + 5 + 7 + 9 + 11 = 36 <br>
+                                        1 + 3 + 5 + 7 + 9 + 11 + 13 = 49 <br>
+                                        1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 = 64 <br>
+                                        1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 = 81 <br>
+                                        1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 = 100
+                                    </p>
+                                    <p>
+                                        Number of terms = 10 <br>
+                                        $\Rightarrow \sqrt{100} = 10$
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Use prime factorization to find the square root of 324.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Prime factors of 324:</p>
+                                    <p>324 = 2 × 2 × 3 × 3 × 3 × 3 = 2<sup>2</sup> × 3<sup>4</sup></p>
+                                    <p>Take one from each pair: 2 × 3 × 3 = 18</p>
+                                    <p>Therefore, $\sqrt{324} = 18$</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Which of the following numbers is <strong>not</strong> a perfect square: 49, 81, 90, 121?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>49 = 7×7, 81 = 9×9, 121 = 11×11</p>
+                                    <p>90 is not a perfect square.</p>
+                                    <p>Therefore, <strong>90</strong> is not a perfect square.</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    Find the square root of 256 using the odd number method.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Add consecutive odd numbers until you reach 256:</p>
+                                    <p>
+                                        1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 + 21 + 23 + 25 + 27 + 29 + 31 = 256
+                                    </p>
+                                    <p>
+                                        Number of terms = 16 <br>
+                                        $\Rightarrow \sqrt{256} = 16$
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Practice Section -->
                         <section class="practice-section">
@@ -410,24 +633,27 @@
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
-                                    <p>Use the odd number method to find √64.</p>
+                                    <p>Use the odd number method to find $\sqrt{64}$.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p>Adding consecutive odd numbers:</p>
-                                        \[ 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 = 64 \]
-                                        <p>Number of terms = 8 → √64 = 8</p>
+                                        <p>1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 = 64</p>
+                                        <p>
+                                            Number of terms $= 8$ <br>
+                                            $\Rightarrow \sqrt{64} = 8$
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
                                     <h3>Question 2</h3>
-                                    <p>Use prime factorization to find √225.</p>
+                                    <p>Use prime factorization to find $\sqrt{225}$.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p>Prime factors of 225:</p>
-                                        \[ 225 = 3 \times 3 \times 5 \times 5 \]
+                                        <p>$225 = 3 \times 3 \times 5 \times 5 $</p>
                                         <p>Take one from each pair:</p>
-                                        \[ 3 \times 5 = 15 \]
-                                        <p>Therefore, √225 = 15</p>
+                                        <p>$ 3 \times 5 = 15 $</p>
+                                        <p>Therefore, $\sqrt{64} = 15$</p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
@@ -436,8 +662,33 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p>Sum of first 10 odd numbers:</p>
-                                        \[ 1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 = 100 \]
-                                        <p>Number of terms = 10 → √100 = 10</p>
+                                        <p>1 + 3 + 5 + 7 + 9 + 11 + 13 + 15 + 17 + 19 $=$ 100</p>
+                                        <p>
+                                            Number of terms $= 10$ <br>
+                                            $\Rightarrow \sqrt{100} = 10$ 
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Find the square root of 400 using the prime factorization method.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Prime factors of 400:</p>
+                                        <p>$400 = 2 \times 2 \times 2 \times 2 \times 5 \times 5$</p>
+                                        <p>Pair the factors: $(2 \times 2) \times (2 \times 2) \times (5 \times 5)$</p>
+                                        <p>Take one from each pair: $2 \times 2 \times 5 = 20$</p>
+                                        <p>Therefore, $\sqrt{400} = 20$</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Which of the following numbers is a perfect square: 121, 150, 169, 200?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>121 = 11×11, 169 = 13×13</p>
+                                        <p>150 and 200 are not perfect squares.</p>
+                                        <p>Therefore, the perfect squares are: <strong>121</strong> and <strong>169</strong>.</p>
                                     </div>
                                 </div>
                             </div>
@@ -449,6 +700,8 @@
                                 </a>
                             </div>
                         </section>
+
+                        <br><br>
 
                         <!-- Problem Solving Section -->
                         <section id="problem-solving" class="lesson-section">
@@ -518,14 +771,14 @@
                                         <h3>Example: Area Problems</h3>
                                     </div>
                                     <div class="method-body">
-                                        <p>A square garden has an area of 625 m². What is the length of one side?</p>
+                                        <p>A square garden has an area of 625 m$^2$. What is the length of one side?</p>
                                         <div class="math-example">
                                             <p>Solution:</p>
                                             <ol>
-                                                <li>Area of square = side × side</li>
-                                                <li>Find √625:</li>
+                                                <li>Area of square = side $\times$ side</li>
+                                                <li>Find $\sqrt{625}$:</li>
                                                 \[ 625 = 5 \times 5 \times 5 \times 5 \]
-                                                <li>Take one from each pair: 5 × 5 = 25</li>
+                                                <li>Take one from each pair: 5 $\times$ 5 = 25</li>
                                                 <li>Therefore, side length = 25 m</li>
                                             </ol>
                                         </div>
@@ -533,6 +786,85 @@
                                 </div>
                             </div>
                         </section>
+
+                        <!--Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>
+                                    A square has an area of 144 cm$^2$. What is the length of one side?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Find $\sqrt{144}$:</p>
+                                    \( 144 = 2 \times 2 \times 2 \times 2 \times 3 \times 3 \)
+                                    <p>Take one from each pair: 2 × 2 × 3 = 12</p>
+                                    <p>Therefore, side length = 12 cm</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    If the perimeter of a square is 64 m, what is the area?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Perimeter = 4 × side length</p>
+                                    \[ 64 = 4 × \text{side length} \]
+                                    \[ \text{side length} = 16 m \]
+                                    <p>Area = side × side = \(16 × 16 = 256 m^2\)</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Find the smallest number by which 180 must be multiplied to make it a perfect square.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Prime factors of 180: 180 = 2 × 2 × 3 × 3 × 5 = 2<sup>2</sup> × 3<sup>2</sup> × 5<sup>1</sup></p>
+                                    <p>The exponent of 5 is odd, so multiply by 5 to make it even:</p>
+                                    <p>180 × 5 = 900 = 30 × 30</p>
+                                    <p>Therefore, the smallest number is <strong>5</strong>.</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Find the smallest number by which 50 must be multiplied to make it a perfect square. Is 50 a perfect square?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Prime factors of 50: 50 = 2 × 5 × 5 = 2<sup>1</sup> × 5<sup>2</sup></p>
+                                    <p>The exponent of 2 is odd, so 50 is <strong>not</strong> a perfect square.</p>
+                                    <p>To make it a perfect square, multiply by 2 (to pair the unpaired 2):</p>
+                                    <p>50 × 2 = 100 = 10 × 10</p>
+                                    <p>Therefore, the smallest number is <strong>2</strong>.</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    A square has a perimeter of 48 cm. What is the area of the square?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>Perimeter = 4 × side length</p>
+                                    <p>\( 48 = 4 × \text{side length} \)</p>
+                                    <p>\( \text{side length} = 12 cm \)</p>
+                                    <p>Area = side × side = \(12 × 12 = 144 cm^2\)</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Practice Section -->
                         <section class="practice-section">
@@ -548,7 +880,7 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p>Prime factors of 72:</p>
-                                        \[ 72 = 2 \times 2 \times 2 \times 3 \times 3 \]
+                                        <p>\( 72 = 2 \times 2 \times 2 \times 3 \times 3 \)</p>
                                         <p>Unpaired factor: 2</p>
                                         <p>Multiply by 2: 72 × 2 = 144 (12×12)</p>
                                     </div>
@@ -558,8 +890,8 @@
                                     <p>A square tile has an area of 1,024 cm². What is the perimeter of the tile?</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Find √1024:</p>
-                                        \[ 1024 = 2^{10} = (2^5)^2 = 32^2 \]
+                                        <p>Find $\sqrt{1024}$:</p>
+                                        <p>\( 1024 = 2^{10} = (2^5)^2 = 32^2 \)</p>
                                         <p>Side length = 32 cm</p>
                                         <p>Perimeter = 4 × 32 = 128 cm</p>
                                     </div>
@@ -579,6 +911,28 @@
                                         <p>The perfect squares are 64 (8²) and 81 (9²)</p>
                                     </div>
                                 </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>A square field has an area of 784 m². What is the length of one side and its perimeter?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Find $\sqrt{784}$:</p>
+                                        <p>Prime factors: 784 = 2 × 2 × 2 × 2 × 7 × 7 = (2 × 2) × (2 × 2) × (7 × 7)</p>
+                                        <p>Take one from each pair: 2 × 2 × 7 = 28</p>
+                                        <p>Side length = 28 m</p>
+                                        <p>Perimeter = 4 × 28 = 112 m</p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Which of the following numbers is <strong>not</strong> a perfect square: 256, 324, 400, 450?</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>256 = 16 × 16, 324 = 18 × 18, 400 = 20 × 20</p>
+                                        <p>450 is not a perfect square.</p>
+                                        <p>Therefore, <strong>450</strong> is not a perfect square.</p>
+                                    </div>
+                                </div>
                             </div>
                             
                             <div class="cta-box">
@@ -589,30 +943,1271 @@
                             </div>
                         </section>
 
-                        <!-- Speed Test Game -->
+                         <br><br>
+
+                        <!-- Test Instructions -->
                         <section id="quick-test" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 140</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>What is the square root of 49?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="true">7</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">9</div>
+                                </div>
+
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>Which of the following best describes a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">A number that is the product of an integer with itself</div>
+                                    <div class="option" data-correct="false">A number that is a multiple of 10</div>
+                                    <div class="option" data-correct="false">A number that is a product of two different numbers</div>
+                                    <div class="option" data-correct="false">A number that is a multiple of 5</div>
+                                </div>
+
+                                <!-- Question 3 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>Which numbers are perfect squares in the set {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{2, 4, 8}</div>
+                                    <div class="option" data-correct="true">{1, 4, 9}</div>
+                                    <div class="option" data-correct="false">{1, 2, 3}</div>
+                                    <div class="option" data-correct="false">{4, 8, 10}</div>
+                                </div>
+
+                                <!-- Question 4 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>What is the square root of 121?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">11</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">13</div>
+                                </div>
+
+                                <!-- Question 5 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>Which property must a number have to be a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">It must be odd</div>
+                                    <div class="option" data-correct="true">All exponents in its prime factorization are even</div>
+                                    <div class="option" data-correct="false">It must be even</div>
+                                    <div class="option" data-correct="false">It must end with 0</div>
+                                </div>
+
+                                <!-- Question 6 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>Which of the following is NOT a perfect square between 30 and 70?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">36</div>
+                                    <div class="option" data-correct="false">49</div>
+                                    <div class="option" data-correct="false">64</div>
+                                    <div class="option" data-correct="true">50</div>
+                                </div>
+
+                                <!-- Question 7 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>What is the sum of the first 4 odd numbers?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="true">16</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">24</div>
+                                </div>
+
+                                <!-- Question 8 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>What is the square root of 100?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="true">10</div>
+                                    <div class="option" data-correct="false">11</div>
+                                </div>
+
+                                <!-- Question 9 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>What is the square root of 36?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">8</div>
+                                </div>
+
+                                <!-- Question 10 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>Which of the following lists contains only perfect squares?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{2, 4, 8, 16, 32}</div>
+                                    <div class="option" data-correct="true">{1, 4, 9, 16, 25}</div>
+                                    <div class="option" data-correct="false">{3, 6, 9, 12, 15}</div>
+                                    <div class="option" data-correct="false">{5, 10, 15, 20, 25}</div>
+                                </div>
+
+                                <!-- Question 11 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>What is the square root of 225?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">13</div>
+                                    <div class="option" data-correct="true">15</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 12 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>Which of the following is a property of perfect squares?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">They are always odd numbers</div>
+                                    <div class="option" data-correct="true">They have an odd number of factors</div>
+                                    <div class="option" data-correct="false">They are always even numbers</div>
+                                    <div class="option" data-correct="false">They end with 5</div>
+                                </div>
+
+                                <!-- Question 13 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>Which of the following numbers is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">36</div>
+                                    <div class="option" data-correct="false">64</div>
+                                    <div class="option" data-correct="false">81</div>
+                                    <div class="option" data-correct="true">50</div>
+                                </div>
+
+                                <!-- Question 14 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>What is the square root of 64?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="true">8</div>
+                                    <div class="option" data-correct="false">9</div>
+                                </div>
+
+                                <!-- Question 15 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>What is the sum of the first 6 odd numbers?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="true">36</div>
+                                    <div class="option" data-correct="false">42</div>
+                                    <div class="option" data-correct="false">48</div>
+                                </div>
+
+                                <!-- Question 16 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>What is the square root of 324?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">17</div>
+                                    <div class="option" data-correct="true">18</div>
+                                    <div class="option" data-correct="false">19</div>
+                                </div>
+
+                                <!-- Question 17 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="true">36</div>
+                                    <div class="option" data-correct="false">45</div>
+                                </div>
+
+                                <!-- Question 18 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>What is the square root of 256?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">14</div>
+                                    <div class="option" data-correct="true">16</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 19 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>How many perfect squares are there between 1 and 100 (inclusive)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="true">10</div>
+                                    <div class="option" data-correct="false">11</div>
+                                </div>
+
+                                <!-- Question 20 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>What is the square root of 81?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="true">9</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+                                <!-- Question 21 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>Which of the following is the square root of 400?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">19</div>
+                                    <div class="option" data-correct="true">20</div>
+                                    <div class="option" data-correct="false">21</div>
+                                </div>
+
+                                <!-- Question 22 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>Which number is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">121</div>
+                                    <div class="option" data-correct="false">144</div>
+                                    <div class="option" data-correct="true">180</div>
+                                    <div class="option" data-correct="false">169</div>
+                                </div>
+
+                                <!-- Question 23 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>What is the square root of 16?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+
+                                <!-- Question 24 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">24</div>
+                                    <div class="option" data-correct="false">28</div>
+                                    <div class="option" data-correct="true">36</div>
+                                    <div class="option" data-correct="false">40</div>
+                                </div>
+
+                                <!-- Question 25 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>What is the square root of 196?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="true">14</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 26 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>Which of these numbers is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">49</div>
+                                    <div class="option" data-correct="false">81</div>
+                                    <div class="option" data-correct="true">90</div>
+                                    <div class="option" data-correct="false">121</div>
+                                </div>
+
+                                <!-- Question 27 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>What is the square root of 625?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">35</div>
+                                </div>
+
+                                <!-- Question 28 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>Which of the following is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="true">64</div>
+                                    <div class="option" data-correct="false">70</div>
+                                </div>
+
+                                <!-- Question 29 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>What is the square root of 9?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+
+                                <!-- Question 30 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">45</div>
+                                    <div class="option" data-correct="false">54</div>
+                                    <div class="option" data-correct="true">49</div>
+                                    <div class="option" data-correct="false">63</div>
+                                </div>
+
+                                <!-- Question 31 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>What is the square root of 144?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">11</div>
+                                    <div class="option" data-correct="true">12</div>
+                                    <div class="option" data-correct="false">13</div>
+                                </div>
+
+                                <!-- Question 32 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">81</div>
+                                    <div class="option" data-correct="false">100</div>
+                                    <div class="option" data-correct="true">150</div>
+                                    <div class="option" data-correct="false">121</div>
+                                </div>
+
+                                <!-- Question 33 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>What is the square root of 225?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">13</div>
+                                    <div class="option" data-correct="true">15</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 34 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">72</div>
+                                    <div class="option" data-correct="false">98</div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">99</div>
+                                </div>
+
+                                <!-- Question 35 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>What is the square root of 324?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">17</div>
+                                    <div class="option" data-correct="true">18</div>
+                                    <div class="option" data-correct="false">19</div>
+                                </div>
+
+                                <!-- Question 36 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">256</div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="true">450</div>
+                                </div>
+
+                                <!-- Question 37 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>What is the square root of 16 + the square root of 9?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">7</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">9</div>
+                                </div>
+
+                                <!-- Question 38 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>Which of the following is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">27</div>
+                                </div>
+
+                                <!-- Question 39 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>What is the square root of 81?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="true">9</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+
+                                <!-- Question 40 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>Which of the following numbers is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">49</div>
+                                    <div class="option" data-correct="false">64</div>
+                                    <div class="option" data-correct="false">81</div>
+                                    <div class="option" data-correct="true">90</div>
+                                </div>
+                                <!-- Question 41 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>What is the square root of 169?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">11</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="true">13</div>
+                                    <div class="option" data-correct="false">14</div>
+                                </div>
+
+                                <!-- Question 42 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>Which of the following numbers is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">49</div>
+                                    <div class="option" data-correct="false">64</div>
+                                    <div class="option" data-correct="true">98</div>
+                                    <div class="option" data-correct="false">81</div>
+                                </div>
+
+                                <!-- Question 43 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>What is the square root of 36 + the square root of 64?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">14</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+
+                                <!-- Question 44 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>Which of the following is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">72</div>
+                                    <div class="option" data-correct="false">98</div>
+                                    <div class="option" data-correct="true">121</div>
+                                    <div class="option" data-correct="false">99</div>
+                                </div>
+
+                                <!-- Question 45 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>What is the square root of 100 + the square root of 49?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="true">17</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">19</div>
+                                </div>
+
+                                <!-- Question 46 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">70</div>
+                                </div>
+
+                                <!-- Question 47 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>What is the square root of 400 + the square root of 16?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">22</div>
+                                    <div class="option" data-correct="true">24</div>
+                                    <div class="option" data-correct="false">26</div>
+                                    <div class="option" data-correct="false">28</div>
+                                </div>
+
+                                <!-- Question 48 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">121</div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="true">150</div>
+                                    <div class="option" data-correct="false">169</div>
+                                </div>
+
+                                <!-- Question 49 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>What is the square root of 256?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">14</div>
+                                    <div class="option" data-correct="true">16</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 50 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">72</div>
+                                    <div class="option" data-correct="false">98</div>
+                                    <div class="option" data-correct="true">100</div>
+                                    <div class="option" data-correct="false">99</div>
+                                </div>
+
+                                <!-- Question 51 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>What is the square root of 225 + the square root of 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17</div>
+                                    <div class="option" data-correct="true">20</div>
+                                    <div class="option" data-correct="false">22</div>
+                                    <div class="option" data-correct="false">24</div>
+                                </div>
+
+                                <!-- Question 52 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">144</div>
+                                    <div class="option" data-correct="false">169</div>
+                                    <div class="option" data-correct="true">180</div>
+                                    <div class="option" data-correct="false">196</div>
+                                </div>
+
+                                <!-- Question 53 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>What is the square root of 289?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">17</div>
+                                    <div class="option" data-correct="true">17</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 54 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="true">36</div>
+                                    <div class="option" data-correct="false">70</div>
+                                </div>
+
+                                <!-- Question 55 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>What is the square root of 484?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="true">22</div>
+                                    <div class="option" data-correct="false">23</div>
+                                </div>
+
+                                <!-- Question 56 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">256</div>
+                                    <div class="option" data-correct="true">300</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+
+                                <!-- Question 57 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>What is the square root of 576?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">22</div>
+                                    <div class="option" data-correct="false">23</div>
+                                    <div class="option" data-correct="true">24</div>
+                                    <div class="option" data-correct="false">25</div>
+                                </div>
+
+                                <!-- Question 58 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="false">70</div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">90</div>
+                                </div>
+
+                                <!-- Question 59 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>What is the square root of 900?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">28</div>
+                                    <div class="option" data-correct="false">29</div>
+                                    <div class="option" data-correct="true">30</div>
+                                    <div class="option" data-correct="false">31</div>
+                                </div>
+
+                                <!-- Question 60 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="true">450</div>
+                                    <div class="option" data-correct="false">484</div>
+                                </div>
+                                <!-- Question 61 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>What is the square root of 1024?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">31</div>
+                                    <div class="option" data-correct="true">32</div>
+                                    <div class="option" data-correct="false">33</div>
+                                </div>
+
+                                <!-- Question 62 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="true">500</div>
+                                    <div class="option" data-correct="false">625</div>
+                                </div>
+
+                                <!-- Question 63 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>What is the square root of 576?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">22</div>
+                                    <div class="option" data-correct="false">23</div>
+                                    <div class="option" data-correct="true">24</div>
+                                    <div class="option" data-correct="false">25</div>
+                                </div>
+
+                                <!-- Question 64 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">72</div>
+                                    <div class="option" data-correct="false">98</div>
+                                    <div class="option" data-correct="true">121</div>
+                                    <div class="option" data-correct="false">99</div>
+                                </div>
+
+                                <!-- Question 65 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>What is the square root of 784?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">26</div>
+                                    <div class="option" data-correct="true">28</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">32</div>
+                                </div>
+
+                                <!-- Question 66 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="true">500</div>
+                                    <div class="option" data-correct="false">484</div>
+                                </div>
+
+                                <!-- Question 67 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>What is the square root of 900?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">28</div>
+                                    <div class="option" data-correct="false">29</div>
+                                    <div class="option" data-correct="true">30</div>
+                                    <div class="option" data-correct="false">31</div>
+                                </div>
+
+                                <!-- Question 68 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">70</div>
+                                </div>
+
+                                <!-- Question 69 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>What is the square root of 361?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17</div>
+                                    <div class="option" data-correct="true">19</div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="false">23</div>
+                                </div>
+
+                                <!-- Question 70 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">121</div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="true">300</div>
+                                    <div class="option" data-correct="false">400</div>
+                                </div>
+
+                                <!-- Question 71 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>What is the square root of 441?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">19</div>
+                                    <div class="option" data-correct="true">21</div>
+                                    <div class="option" data-correct="false">23</div>
+                                    <div class="option" data-correct="false">25</div>
+                                </div>
+
+                                <!-- Question 72 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">72</div>
+                                    <div class="option" data-correct="false">98</div>
+                                    <div class="option" data-correct="true">100</div>
+                                    <div class="option" data-correct="false">99</div>
+                                </div>
+
+                                <!-- Question 73 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>What is the square root of 529?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="false">22</div>
+                                    <div class="option" data-correct="true">23</div>
+                                    <div class="option" data-correct="false">24</div>
+                                </div>
+
+                                <!-- Question 74 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">256</div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="true">350</div>
+                                    <div class="option" data-correct="false">400</div>
+                                </div>
+
+                                <!-- Question 75 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>What is the square root of 625?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">35</div>
+                                </div>
+
+                                <!-- Question 76 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">70</div>
+                                </div>
+
+                                <!-- Question 77 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>What is the square root of 729?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="false">26</div>
+                                    <div class="option" data-correct="true">27</div>
+                                    <div class="option" data-correct="false">28</div>
+                                </div>
+
+                                <!-- Question 78 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="true">350</div>
+                                    <div class="option" data-correct="false">400</div>
+                                </div>
+
+                                <!-- Question 79 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>What is the square root of 484?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="true">22</div>
+                                    <div class="option" data-correct="false">23</div>
+                                </div>
+
+                                <!-- Question 80 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">72</div>
+                                    <div class="option" data-correct="false">98</div>
+                                    <div class="option" data-correct="true">144</div>
+                                    <div class="option" data-correct="false">99</div>
+                                </div>
+
+                                <!-- Question 81 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>What is the square root of 121?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">11</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">13</div>
+                                </div>
+
+                                <!-- Question 82 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>Which of the following numbers is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">144</div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="true">200</div>
+                                    <div class="option" data-correct="false">169</div>
+                                </div>
+
+                                <!-- Question 83 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>What is the square root of 36 + the square root of 49?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">13</div>
+                                    <div class="option" data-correct="false">14</div>
+                                    <div class="option" data-correct="false">15</div>
+                                </div>
+
+                                <!-- Question 84 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>Which of the following is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">27</div>
+                                </div>
+
+                                <!-- Question 85 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>What is the square root of 400?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">19</div>
+                                    <div class="option" data-correct="true">20</div>
+                                    <div class="option" data-correct="false">21</div>
+                                </div>
+
+                                <!-- Question 86 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">70</div>
+                                </div>
+
+                                <!-- Question 87 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>What is the square root of 576?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">22</div>
+                                    <div class="option" data-correct="false">23</div>
+                                    <div class="option" data-correct="true">24</div>
+                                    <div class="option" data-correct="false">25</div>
+                                </div>
+
+                                <!-- Question 88 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">256</div>
+                                    <div class="option" data-correct="true">300</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+
+                                <!-- Question 89 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>What is the square root of 900?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">28</div>
+                                    <div class="option" data-correct="false">29</div>
+                                    <div class="option" data-correct="true">30</div>
+                                    <div class="option" data-correct="false">31</div>
+                                </div>
+
+                                <!-- Question 90 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>Which of the following numbers is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="true">450</div>
+                                    <div class="option" data-correct="false">484</div>
+                                </div>
+
+                                <!-- Question 91 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>What is the square root of 784?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">26</div>
+                                    <div class="option" data-correct="true">28</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">32</div>
+                                </div>
+
+                                <!-- Question 92 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>Which of the following is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">72</div>
+                                    <div class="option" data-correct="false">98</div>
+                                    <div class="option" data-correct="true">121</div>
+                                    <div class="option" data-correct="false">99</div>
+                                </div>
+
+                                <!-- Question 93 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>What is the square root of 529?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="false">22</div>
+                                    <div class="option" data-correct="true">23</div>
+                                    <div class="option" data-correct="false">24</div>
+                                </div>
+
+                                <!-- Question 94 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>Which of the following numbers is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">256</div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="true">350</div>
+                                    <div class="option" data-correct="false">400</div>
+                                </div>
+
+                                <!-- Question 95 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>What is the square root of 625?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">35</div>
+                                </div>
+
+                                <!-- Question 96 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>Which of the following is NOT a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="true">350</div>
+                                    <div class="option" data-correct="false">400</div>
+                                </div>
+
+                                <!-- Question 97 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>What is the square root of 441?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">19</div>
+                                    <div class="option" data-correct="true">21</div>
+                                    <div class="option" data-correct="false">23</div>
+                                    <div class="option" data-correct="false">25</div>
+                                </div>
+
+                                <!-- Question 98 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">70</div>
+                                </div>
+
+                                <!-- Question 99 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>What is the square root of 484?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="true">22</div>
+                                    <div class="option" data-correct="false">23</div>
+                                </div>
+
+                                <!-- Question 100 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>Which of the following numbers is a perfect square?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">72</div>
+                                    <div class="option" data-correct="false">98</div>
+                                    <div class="option" data-correct="true">144</div>
+                                    <div class="option" data-correct="false">99</div>
                                 </div>
                             </div>
                         </section>
+                        
                     </article>
                 </div>
             </div>
@@ -626,26 +2221,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -654,14 +2257,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -671,25 +2275,37 @@
             </div>
         </footer>
 
-         <!-- Scripts -->
-         <script src="../../js/math-challenge-read-write-numbers.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/read-write-numbers.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
