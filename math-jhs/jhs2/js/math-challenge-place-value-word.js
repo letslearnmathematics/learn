@@ -464,7 +464,8 @@ const allQuestions = {
      {
         text: "Kofi sold 5,432 eggs in January and 6,789 eggs in February. How many eggs did he sell in total?",
         answers: ["12,121", "12,221", "12,311", "12,321"],
-        correctIndex: 3
+        correctIndex: 3,
+        // videoSolution: ""
     },
     {
         text: "A company produced 78,450 bags of cement last year and plans to produce 80,000 this year. How many more bags will they produce?",
@@ -565,38 +566,38 @@ const allQuestions = {
     2: [
     {
         text: "A shopkeeper recorded sales of Gh₵23,450 on Monday and Gh₵37,890 on Tuesday. How much did he earn over the two days?",
-        answers: ["Gh₵61,340", "Gh₵60,340", "Gh₵61,440", "Gh₵62,340"],
+        answers: ["Gh₵61,340", "Gh₵60,340", "Gh₵62,340", "Gh₵61,440"],
         correctIndex: 0
     },
     {
         text: "A truck carried 18,760 bricks in the morning and 21,240 in the afternoon. How many bricks were delivered that day?",
-        answers: ["40,000", "40,100", "39,900", "40,200"],
-        correctIndex: 0
+        answers: ["40,200", "40,100", "40,000", "39,900"],
+        correctIndex: 2
     },
     {
         text: "Round 487,563 to the nearest ten thousand.",
-        answers: ["490,000", "480,000", "500,000", "485,000"],
-        correctIndex: 0
+        answers: ["480,000", "485,000", "500,000", "490,000"],
+        correctIndex: 3
     },
     {
         text: "What is the value of the digit 6 in 46,782?",
-        answers: ["6,000", "60,000", "600", "60"],
+        answers: ["6,000", "600", "60", "60,000"],
         correctIndex: 0
     },
     {
         text: "A company makes 125,000 bottles in January and plans to triple production in February. How many bottles in February?",
-        answers: ["375,000", "350,000", "360,000", "400,000"],
+        answers: ["375,000", "360,000", "350,000", "400,000"],
         correctIndex: 0
     },
     {
         text: "Estimate the sum of 48,635 and 53,472 by rounding both numbers to the nearest thousand before adding.",
-        answers: ["102,000", "101,000", "103,000", "104,000"],
-        correctIndex: 0
+        answers: ["103,000", "101,000", "104,000", "102,000"],
+        correctIndex: 3
     },
     {
         text: "Which number is greatest?",
-        answers: ["567,890", "576,890", "567,980", "567,899"],
-        correctIndex: 1
+        answers: ["576,890", "567,890", "567,980", "567,899"],
+        correctIndex: 0
     },
     {
         text: "Find the difference between 900,000 and 875,400.",
@@ -605,13 +606,13 @@ const allQuestions = {
     },
     {
         text: "Round 9,745 to the nearest hundred.",
-        answers: ["9,700", "9,800", "9,600", "9,900"],
-        correctIndex: 1
+        answers: ["9,700", "9,600", "9,800", "9,900"],
+        correctIndex: 2
     },
     {
         text: "If a man saves Gh₵3,500 every month, how much does he save in a year?",
-        answers: ["Gh₵42,000", "Gh₵36,000", "Gh₵48,000", "Gh₵40,000"],
-        correctIndex: 0
+        answers: ["Gh₵48,000", "Gh₵40,000", "Gh₵42,000", "Gh₵36,000"],
+        correctIndex: 2
     },
     {
         text: "A school has 12 classes with 45 pupils each. How many pupils in total?",
@@ -625,18 +626,18 @@ const allQuestions = {
     },
     {
         text: "Round 675,984 to the nearest hundred thousand.",
-        answers: ["700,000", "600,000", "680,000", "650,000"],
-        correctIndex: 0
+        answers: ["650,000", "600,000", "700,000", "680,000"],
+        correctIndex: 2
     },
     {
         text: "A farmer harvested 234,580 coconuts. If he sells 120,000, how many are left?",
-        answers: ["114,580", "124,580", "104,580", "110,580"],
-        correctIndex: 0
+        answers: ["124,580", "114,580", "104,580", "110,580"],
+        correctIndex: 1
     },
     {
         text: "Which of these numbers is closest to 500,000?",
-        answers: ["499,500", "505,000", "498,000", "495,000"],
-        correctIndex: 0
+        answers: ["498,000", "505,000", "499,500", "495,000"],
+        correctIndex: 2
     },
     {
         text: "What is the value of the digit 9 in 9,876?",
@@ -645,13 +646,13 @@ const allQuestions = {
     },
     {
         text: "Round 45,378 to the nearest thousand.",
-        answers: ["45,000", "46,000", "44,000", "47,000"],
+        answers: ["44,000", "46,000", "45,000", "47,000"],
         correctIndex: 1
     },
     {
         text: "Add: 345,000 + 456,000.",
-        answers: ["801,000", "811,000", "791,000", "801,500"],
-        correctIndex: 0
+        answers: ["801,500", "811,000", "801,000", "791,000"],
+        correctIndex: 2
     },
     {
         text: "Compare: 745,321 ___ 754,123.",
@@ -660,8 +661,8 @@ const allQuestions = {
     },
     {
         text: "A stadium holds 78,650 people. If 54,275 attended a match, how many seats were empty?",
-        answers: ["24,375", "23,375", "25,375", "26,375"],
-        correctIndex: 0
+        answers: ["25,375", "23,375", "24,375", "26,375"],
+        correctIndex: 2
     }
 ],
     3:[
@@ -767,50 +768,50 @@ const allQuestions = {
     }
 ], 
     4:[
-     {
+    {
         text: "A mining company extracted 7,456,789 tonnes of ore in 2022 and 8,345,678 tonnes in 2023. What was the total extraction over the two years?",
-        answers: ["15,802,467", "15,801,467", "15,802,567", "15,801,567"],
-        correctIndex: 0
+        answers: ["15,801,467", "15,802,567", "15,802,467", "15,801,567"],
+        correctIndex: 2
     },
     {
         text: "Round 23,456,789 to the nearest million.",
-        answers: ["23,000,000", "24,000,000", "23,500,000", "22,000,000"],
-        correctIndex: 1
+        answers: ["23,500,000", "23,000,000", "22,000,000", "24,000,000"],
+        correctIndex: 3
     },
     {
         text: "What is the value of the digit 4 in 54,678,912?",
-        answers: ["4,000,000", "40,000,000", "400,000", "4,000"],
-        correctIndex: 0
+        answers: ["40,000,000", "400,000", "4,000,000", "4,000"],
+        correctIndex: 2
     },
     {
         text: "Estimate the sum of 15,678,900 and 24,345,600 by rounding each to the nearest million before adding.",
-        answers: ["40,000,000", "41,000,000", "39,000,000", "42,000,000"],
-        correctIndex: 0
+        answers: ["39,000,000", "41,000,000", "40,000,000", "42,000,000"],
+        correctIndex: 2
     },
     {
         text: "Which number is smallest?",
-        answers: ["56,789,012", "65,789,012", "75,789,012", "85,789,012"],
-        correctIndex: 0
+        answers: ["65,789,012", "75,789,012", "85,789,012", "56,789,012"],
+        correctIndex: 3
     },
     {
         text: "Round 6,789,123 to the nearest ten thousand.",
-        answers: ["6,790,000", "6,780,000", "6,800,000", "6,770,000"],
-        correctIndex: 0
+        answers: ["6,800,000", "6,770,000", "6,790,000", "6,780,000"],
+        correctIndex: 2
     },
     {
         text: "If a town’s population increased from 1,234,567 to 1,789,654 in 10 years, what was the increase?",
-        answers: ["555,087", "555,097", "554,087", "554,097"],
-        correctIndex: 0
+        answers: ["555,097", "554,087", "555,087", "554,097"],
+        correctIndex: 2
     },
     {
         text: "What is the value of the digit 9 in 92,345,678?",
-        answers: ["90,000,000", "9,000,000", "900,000", "9,000"],
-        correctIndex: 0
+        answers: ["9,000,000", "900,000", "9,000", "90,000,000"],
+        correctIndex: 3
     },
     {
         text: "Round 87,654,321 to the nearest ten million.",
-        answers: ["90,000,000", "80,000,000", "88,000,000", "89,000,000"],
-        correctIndex: 0
+        answers: ["89,000,000", "80,000,000", "90,000,000", "88,000,000"],
+        correctIndex: 2
     },
     {
         text: "Which digit is in the millions place of 24,567,890?",
@@ -819,13 +820,13 @@ const allQuestions = {
     },
     {
         text: "A company earned Gh₵12,345,000 last year and Gh₵15,678,000 this year. How much more did they earn this year?",
-        answers: ["3,333,000", "3,334,000", "3,343,000", "3,344,000"],
-        correctIndex: 0
+        answers: ["3,344,000", "3,343,000", "3,333,000", "3,334,000"],
+        correctIndex: 2
     },
     {
         text: "Estimate the difference between 48,765,432 and 37,654,321 by rounding both to the nearest million first.",
-        answers: ["11,000,000", "12,000,000", "10,000,000", "13,000,000"],
-        correctIndex: 0
+        answers: ["10,000,000", "11,000,000", "12,000,000", "13,000,000"],
+        correctIndex: 1
     },
     {
         text: "Compare: 89,765,432 ___ 98,765,432",
@@ -834,38 +835,38 @@ const allQuestions = {
     },
     {
         text: "Round 54,321,987 to the nearest hundred thousand.",
-        answers: ["54,300,000", "54,400,000", "54,000,000", "54,500,000"],
-        correctIndex: 0
+        answers: ["54,500,000", "54,400,000", "54,000,000", "54,300,000"],
+        correctIndex: 3
     },
     {
         text: "Find the difference between 100,000,000 and 87,654,321.",
-        answers: ["12,345,679", "12,345,689", "12,345,669", "12,345,659"],
-        correctIndex: 0
+        answers: ["12,345,669", "12,345,659", "12,345,679", "12,345,689"],
+        correctIndex: 2
     },
     {
         text: "Which digit is in the hundred millions place of 234,567,890?",
-        answers: ["2", "3", "4", "5"],
-        correctIndex: 0
-    },
-    {
-        text: "A school expects to receive 3,456,789 textbooks over 4 years. About how many textbooks is this each year, rounded to the nearest thousand?",
-        answers: ["864,000", "865,000", "866,000", "867,000"],
+        answers: ["3", "2", "5", "4"],
         correctIndex: 1
     },
     {
-        text: "Round 76,543,210 to the nearest million.",
-        answers: ["77,000,000", "76,000,000", "75,000,000", "78,000,000"],
+        text: "A school expects to receive 3,456,789 textbooks over 4 years. About how many textbooks is this each year, rounded to the nearest thousand?",
+        answers: ["865,000", "866,000", "864,000", "867,000"],
         correctIndex: 0
+    },
+    {
+        text: "Round 76,543,210 to the nearest million.",
+        answers: ["75,000,000", "77,000,000", "76,000,000", "78,000,000"],
+        correctIndex: 1
     },
     {
         text: "Which is closest to 100 million?",
-        answers: ["99,500,000", "95,000,000", "101,000,000", "90,000,000"],
-        correctIndex: 0
+        answers: ["101,000,000", "90,000,000", "95,000,000", "99,500,000"],
+        correctIndex: 3
     },
     {
         text: "What is the value of the digit 7 in 7,654,321?",
-        answers: ["7,000,000", "700,000", "70,000", "7,000"],
-        correctIndex: 0
+        answers: ["700,000", "7,000,000", "70,000", "7,000"],
+        correctIndex: 1
     }
 ], 
     5: [
