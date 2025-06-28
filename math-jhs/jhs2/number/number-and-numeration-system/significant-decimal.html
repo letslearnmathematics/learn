@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Significant and Decimal Places | JHS2 Mathematics">
         <meta property="og:description" content="Learn to Express Numbers in Significant Figures and Decimal Places">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/significant-decimal-places">
         <meta property="og:type" content="website">
     
@@ -31,10 +31,21 @@
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +53,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -121,7 +123,6 @@
                                 <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
                                 <li><a href="#significant-figures"><i class="fas fa-chevron-right"></i> Significant Figures</a></li>
                                 <li><a href="#decimal-places"><i class="fas fa-chevron-right"></i> Decimal Places</a></li>
-                                <li><a href="#quick-test"><i class="fas fa-chevron-right"></i> Math Challenge</a></li>
                             </ul>
                             
                             <div class="level-buttons">
@@ -181,27 +182,7 @@
                                 <i class="fas fa-hashtag"></i> Significant Figures
                             </h2>
 
-                            <!-- Lesson Video embed 
-                            <div class="video-embed">
-                                <h4>
-                                    <i class="fas fa-video"></i> Video Lesson
-                                </h4>
-                                <div class="video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/VIDEO_ID" 
-                                        title="YouTube video player" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                                <div class="video-description">
-                                    <p>Watch this comprehensive explanation on significant figures with worked examples.</p>
-                                </div>
-                            </div>
-                            -->
-
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-info-circle"></i> What are Significant Figures?
                                 </h3>
@@ -212,14 +193,7 @@
                                     <li>Leading zeros (zeros before the first non-zero digit)</li>
                                     <li>Trailing zeros when they are merely placeholders (unless specified by a decimal point)</li>
                                 </ul>
-                                
-                                <div class="math-example">
-                                    <p><strong>Example 1:</strong> Identify the significant figures in 0.00456</p>
-                                    <p>Solution: The significant figures are 4, 5, and 6 (the leading zeros are not significant)</p>
-                                </div>
-                            </div>
-                            
-                            <div class="concept-box highlight-box">
+
                                 <h3 class="subsection-title">
                                     <i class="fas fa-ruler"></i> Rules for Significant Figures
                                 </h3>
@@ -230,7 +204,33 @@
                                     <li>Trailing zeros in a decimal number are significant</li>
                                     <li>Trailing zeros in a whole number without a decimal point may or may not be significant</li>
                                 </ol>
+                                <div class="math-example">
+                                    <p><strong>Example:</strong> Identify the significant figures in 0.00456</p>
+                                    <p>Solution: The significant figures are 4, 5, and 6 (the leading zeros are not significant)</p>
+                                </div>
                             </div>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on the lesson with worked examples.</p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/3I_enewAVQ0" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Kindly subscribe to our channel for more educational content.</p>
+                                </div>
+                            </div>-->
                             
                             <div class="concept-box">
                                 <h3 class="subsection-title">
@@ -243,24 +243,99 @@
                                     <li>If it's 5 or more, round up the last significant figure</li>
                                     <li>If it's less than 5, keep the last significant figure the same</li>
                                 </ol>
-                                
-                                <div class="math-example">
-                                    <p><strong>Example 2:</strong> Express 45,678 to 3 significant figures</p>
-                                    <p>Solution: 
-                                        \[ 45,678 \rightarrow 45,700 \]
-                                        (The 6 is the third significant figure, and we look at the next digit 7 which is ≥5, so we round up)
-                                    </p>
+                            </div>
+                        </section>
+
+                        <!-- Significant Figures: Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>
+                                    Express 45,678 to 3 significant figures
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong><u>Solution:</u></strong></p>
+                                    \[ 45,678 \rightarrow 45,700 \]
+                                    (The 6 is the third significant figure, and we look at the next digit 7 which is ≥5, so we round up, that is, add 
+                                    1 to 6)  <br> 
+                                    (6 + 1 = 7)
                                 </div>
-                                
-                                <div class="math-example">
-                                    <p><strong>Example 3:</strong> Express 0.0023456 to 2 significant figures</p>
-                                    <p>Solution: 
-                                        \[ 0.0023456 \rightarrow 0.0023 \]
-                                        (The 3 is the second significant figure, and we look at the next digit 4 which is <5, so we keep the 3)
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    Express 0.0342567 to 5 significant figures.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>
+                                        Number given: 0.0342567 <br>
+                                        Number of significant figures required $\Rightarrow$ 5 significant figures <br>
+                                        Required significant figures $\Rightarrow$ 3, 4, 2, 5 and 6   <br>
+                                        Immediate right digit $\Rightarrow$ 7 <br>
+                                        Rounding off last required digit $\Rightarrow$ (add 1 to 6) <br>
+                                        $\Rightarrow$ 0.0342567 $\approx$ 0.034257 to 5 s.f <br>
+                                        \(\therefore\) <u>0.0342567 rounded to 5 siginificant figures is 0.034257</u>.
                                     </p>
                                 </div>
                             </div>
-                        </section>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Express 0.0023456 to 2 significant figures
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>
+                                        \[ 0.0023456 \rightarrow 0.0023 \]
+                                        (The 3 is the second significant figure, and we look at the next digit 4 which is $<$5, so we keep the 3)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Express 987.654 to 4 significant figures.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>
+                                        \[ 987.654 \rightarrow 987.7 \]
+                                        (The 6 is the fourth significant figure, and we look at the next digit to its right, 5 which is $≥5$, 
+                                        so we add 1 to 6)
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p><strong>(B.E.C.E 1993)</strong></p>
+                                <p>
+                                    Write 39.9748 km correct to three significant figures.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    <p>
+                                        Number given: 39.9748 km <br>
+                                        Number of significant figures required: 3 <br>
+                                        The first three significant figures are 3, 9, and 9.<br>
+                                        The next digit is 7 (immediately after the third significant figure).<br>
+                                        Since 7 is greater than or equal to 5, we round up the last significant figure (9).<br>
+                                        Rounding up 9 gives 10, so we carry 1 to the previous digit:<br>
+                                        39.9748 $\rightarrow$ 40.0 (to 3 significant figures)<br>
+                                        <strong>$\therefore$ 39.9748 km correct to three significant figures is <u>40.0 km</u>.</strong>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Practice Section -->
                         <section class="practice-section">
@@ -272,26 +347,52 @@
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
-                                    <p>Express 12,345 to 2 significant figures.</p>
+                                    <p>Write \(3560\) to 5 significant figures</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>12,000 (The 2 is the second significant figure, and we look at the next digit 3 which is <5, so we keep the 2)</p>
+                                        <p>
+
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
                                     <h3>Question 2</h3>
-                                    <p>Express 0.0005678 to 3 significant figures.</p>
+                                    <p>Write 39.9748 km to 7 significant figures.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>0.000568 (The 7 is the third significant figure, and we look at the next digit 8 which is ≥5, so we round up)</p>
+                                        <p>
+
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
                                     <h3>Question 3</h3>
-                                    <p>Express 9,876,543 to 4 significant figures.</p>
+                                    <p>Express 0.0043216 to 5 significant figures.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>9,877,000 (The 6 is the fourth significant figure, and we look at the next digit 5 which is ≥5, so we round up)</p>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Write \(356.07\) to 5 significant figures.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Write \(4687.02\) to 5 significant figures.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -304,11 +405,36 @@
                             </div>
                         </section>
 
+                        <br><br>
+
                         <!-- Decimal Places Section -->
                         <section id="decimal-places" class="lesson-section">
                             <h2 class="section-title">
                                 <i class="fas fa-decimal-point"></i> Decimal Places
                             </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-info-circle"></i> What are Decimal Places?
+                                </h3>
+                                <p>
+                                    Decimal places refer to the number of digits after the decimal point in a number. When we express a number to a certain number of decimal places, we're specifying how precise we want the number to be.
+                                </p>
+                                
+                                <div class="math-example">
+                                    <p><strong>Example</strong> The number 3.14159 has 5 decimal places</p>
+                                </div>
+
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-ruler"></i> Rules for Decimal Places
+                                </h3>
+                                <ol>
+                                    <li>Count the number of digits after the decimal point</li>
+                                    <li>To round to a certain number of decimal places, look at the next digit</li>
+                                    <li>If it's 5 or more, round up the last decimal digit</li>
+                                    <li>If it's less than 5, keep the last decimal digit the same</li>
+                                </ol>
+                            </div>
 
                             <!-- Lesson Video embed 
                             <div class="video-embed">
@@ -329,31 +455,6 @@
                                 </div>
                             </div>
                             -->
-
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-info-circle"></i> What are Decimal Places?
-                                </h3>
-                                <p>
-                                    Decimal places refer to the number of digits after the decimal point in a number. When we express a number to a certain number of decimal places, we're specifying how precise we want the number to be.
-                                </p>
-                                
-                                <div class="math-example">
-                                    <p><strong>Example 4:</strong> The number 3.14159 has 5 decimal places</p>
-                                </div>
-                            </div>
-                            
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-ruler"></i> Rules for Decimal Places
-                                </h3>
-                                <ol>
-                                    <li>Count the number of digits after the decimal point</li>
-                                    <li>To round to a certain number of decimal places, look at the next digit</li>
-                                    <li>If it's 5 or more, round up the last decimal digit</li>
-                                    <li>If it's less than 5, keep the last decimal digit the same</li>
-                                </ol>
-                            </div>
                             
                             <div class="concept-box">
                                 <h3 class="subsection-title">
@@ -366,24 +467,76 @@
                                     <li>If it's 5 or more, round up the identified digit</li>
                                     <li>If it's less than 5, keep the identified digit the same</li>
                                 </ol>
-                                
-                                <div class="math-example">
-                                    <p><strong>Example 5:</strong> Express 2.71828 to 2 decimal places</p>
-                                    <p>Solution: 
-                                        \[ 2.71828 \rightarrow 2.72 \]
-                                        (The 1 is at the second decimal place, and we look at the next digit 8 which is ≥5, so we round up)
-                                    </p>
-                                </div>
-                                
-                                <div class="math-example">
-                                    <p><strong>Example 6:</strong> Express 0.333333 to 3 decimal places</p>
-                                    <p>Solution: 
-                                        \[ 0.333333 \rightarrow 0.333 \]
-                                        (The 3 is at the third decimal place, and we look at the next digit 3 which is <5, so we keep the 3)
-                                    </p>
-                                </div>
                             </div>
                         </section>
+
+                        <!-- Significant Figures: Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>
+                                    Express 2.71828 to 2 decimal places
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong><u>Solution:</u></strong></p>
+                                    \[ 2.71828 \rightarrow 2.72 \]
+                                    (The 1 is at the second decimal place, and we look at the next digit 8 which is $≥5$, so we round up)
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>
+                                    Express 15.9876 to 3 decimal places
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    \[ 15.9876 \rightarrow 15.988 \]
+                                    (The 7 is at the third decimal place, and we look at the next digit 6 which is ≥5, so we round up)
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Express 0.12345 to 4 decimal places
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    \[ 0.12345 \rightarrow 0.1235 \]
+                                    (The 4 is at the fourth decimal place, and we look at the next digit 5 which is ≥5, so we round up)
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Express 98.7654 to 1 decimal place
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    \[ 98.7654 \rightarrow 98.8 \]
+                                    (The 7 is at the first decimal place, and we look at the next digit 6 which is ≥5, so we round up)
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    Express 7.65432 to 4 decimal places
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    \[ 7.65432 \rightarrow 7.6543 \]
+                                    (The 3 is at the fourth decimal place, and we look at the next digit 2 which is &lt;5, so we keep the 3)
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Practice Section -->
                         <section class="practice-section">
@@ -398,7 +551,9 @@
                                     <p>Express 5.6789 to 2 decimal places.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>5.68 (The 7 is at the second decimal place, and we look at the next digit 8 which is ≥5, so we round up)</p>
+                                        <p>
+
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
@@ -406,7 +561,9 @@
                                     <p>Express 0.004321 to 3 decimal places.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>0.004 (The 3 is at the third decimal place, and we look at the next digit 2 which is <5, so we keep the 3)</p>
+                                        <p>
+
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
@@ -414,7 +571,29 @@
                                     <p>Express 123.456789 to 4 decimal places.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>123.4568 (The 7 is at the fourth decimal place, and we look at the next digit 8 which is ≥5, so we round up)</p>
+                                        <p>
+
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Express 0.99999 to 3 decimal places.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Express 12.34567 to 1 decimal place.</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>
+
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -426,6 +605,8 @@
                                 </a>
                             </div>
                         </section>
+
+                        <br><br>
 
                         <!-- Math Challenge Game -->
                         <section id="quick-test" class="lesson-section">
@@ -464,25 +645,33 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--
+                                <li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>
+                                -->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
                             </ul>
                         </div>
@@ -498,8 +687,8 @@
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a><br>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -509,8 +698,8 @@
             </div>
         </footer>
 
-         <!-- Scripts -->
-         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+        <!-- Scripts -->
+        <script src="../../js/math-challenge-significant-decimal.js"></script>
         <script src="../../../../js/mathjhs-lesson.js"></script>
         <script src="../../js/read-write-numbers.js"></script>
         <script>
