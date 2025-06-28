@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Place Value Word Problems | JHS2 Mathematics">
         <meta property="og:description" content="Learn to create and solve word problems involving place values">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/place-value-word-problems">
         <meta property="og:type" content="website">
     
@@ -31,10 +31,21 @@
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +53,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -162,19 +164,21 @@
                             </h2>
                             
                             <div class="concept-box">
-                                <p>
-                                    <strong>Place value word problems</strong> are mathematical questions that use real-life situations 
-                                    to test our understanding of how digits represent different values based on their position 
-                                    in a number. These problems help us apply our knowledge of place values to practical scenarios.
-                                </p>
-                                <p>
-                                    In this lesson, we will learn how to:
-                                </p>
-                                <ul>
-                                    <li>Understand and interpret word problems involving place values</li>
-                                    <li>Solve these problems using our knowledge of place values</li>
-                                    <li>Create our own word problems based on place value concepts</li>
-                                </ul>
+                                In this lesson, we will use what we have learnt so far on place values and numbers in general to solve word problems.
+		
+                                So far, we have learnt how to;
+                                <ol>
+                                    <li>read and write numbers in words and in figures</li>
+                                    <li>skip count forwards and backwards in given intervals,</li>
+                                    <li>use the comparison operators (>, < and =) to compare numbers,</li>
+                                    <li>express numbers in: <br>
+                                        standard form <br>
+                                        significant figures and <br>
+                                        decimal places.
+                                    </li>
+                                </ol>
+                                    
+                                <p>We will now combine all that we have learnt to solve story, or word, problems.</p>
                             </div>
                         </section>
                         
@@ -184,34 +188,48 @@
                                 <i class="fas fa-lightbulb"></i> Understanding Word Problems
                             </h2>
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-question-circle"></i> Key Steps to Understand Word Problems
                                 </h3>
+                                <p>
+                                    Always, when solving word problems try to get or gather some data from the problem given. 
+                                    For instance, if the question says, "Kofi is 20 years old now. 
+                                    What will be his age in 5 years time?" Then your data from the story problem will look like the 
+                                    statement below:
+	                                \[\text{Kofi's age now} = 20 \ years\] 
+                                </p>
                                 <ol>
                                     <li><strong>Read carefully:</strong> Identify what the problem is asking.</li>
                                     <li><strong>Identify given information:</strong> Note all numbers and relationships mentioned.</li>
                                     <li><strong>Determine what's being asked:</strong> Find out exactly what you need to solve.</li>
                                     <li><strong>Visualize if needed:</strong> Draw diagrams or write down relationships.</li>
                                 </ol>
-                                
-                                <div class="math-example">
-                                    <h4>Example Problem:</h4>
-                                    <p>Adom earns Gh₵2500 a month after tax and his elder brother Arko earns three times as much. How much is their total income after five years if there are no increases in their earnings?</p>
-                                    
-                                    <h4>Understanding the Problem:</h4>
-                                    <ul>
-                                        <li><strong>Given:</strong> 
-                                            <ul>
-                                                <li>Adom's monthly income = Gh₵2,500</li>
-                                                <li>Arko earns 3 times Adom's income</li>
-                                                <li>Time period = 5 years</li>
-                                            </ul>
-                                        </li>
-                                        <li><strong>Asked:</strong> Total combined income after 5 years</li>
-                                    </ul>
-                                </div>
                             </div>
+
+                            <!-- Lesson Video embed 
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on the lesson with worked examples.</p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/3I_enewAVQ0" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="video-description">
+                                    <p>Kindly subscribe to our channel for more educational content.</p>
+                                </div>
+                            </div>-->
+
+                            
                         </section>
 
                         <!-- Solving Problems Section -->
@@ -220,7 +238,7 @@
                                 <i class="fas fa-calculator"></i> Solving Word Problems
                             </h2>
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-steps"></i> Problem-Solving Steps
                                 </h3>
@@ -230,27 +248,6 @@
                                     <li><strong>Perform calculations:</strong> Solve step by step, paying attention to place values.</li>
                                     <li><strong>Check your answer:</strong> Verify if the result makes sense in the context.</li>
                                 </ol>
-                                
-                                <div class="math-example">
-                                    <h4>Solving the Example Problem:</h4>
-                                    <p><strong>Problem:</strong> Adom earns Gh₵2500 a month after tax and his elder brother Arko earns three times as much. How much is their total income after five years if there are no increases in their earnings?</p>
-                                    
-                                    <h4>Solution:</h4>
-                                    <p><strong>Step 1:</strong> Find Arko's monthly income</p>
-                                    <p>Arko earns 3 times Adom's income:</p>
-                                    \[ \text{Arko's income} = 3 \times \text{Adom's income} = 3 \times \text{Gh₵}2,500 = \text{Gh₵}7,500 \]
-                                    
-                                    <p><strong>Step 2:</strong> Calculate their combined monthly income</p>
-                                    \[ \text{Total monthly income} = \text{Adom's income} + \text{Arko's income} = \text{Gh₵}2,500 + \text{Gh₵}7,500 = \text{Gh₵}10,000 \]
-                                    
-                                    <p><strong>Step 3:</strong> Calculate yearly income (12 months)</p>
-                                    \[ \text{Yearly income} = \text{Monthly income} \times 12 = \text{Gh₵}10,000 \times 12 = \text{Gh₵}120,000 \]
-                                    
-                                    <p><strong>Step 4:</strong> Calculate income over 5 years</p>
-                                    \[ \text{5-year income} = \text{Yearly income} \times 5 = \text{Gh₵}120,000 \times 5 = \text{Gh₵}600,000 \]
-                                    
-                                    <p><strong>Final Answer:</strong> Their total income after five years is <strong>Gh₵600,000</strong>.</p>
-                                </div>
                             </div>
                         </section>
 
@@ -260,7 +257,7 @@
                                 <i class="fas fa-pencil-alt"></i> Creating Word Problems
                             </h2>
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-magic"></i> How to Create Your Own Problems
                                 </h3>
@@ -286,6 +283,122 @@
                             </div>
                         </section>
 
+                        <!-- Place Value: Examples -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        Adom earns Gh₵2500 a month after tax and his elder brother Arko earns three times as much. How much 
+                                        is their total income after five years if there are no increases in their earnings?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <h4>Understanding the Problem:</h4>
+                                        <ul>
+                                            <li><strong>Given:</strong> 
+                                                <ul>
+                                                    <li>Adom's monthly income = Gh₵2,500</li>
+                                                    <li>Arko earns 3 times Adom's income</li>
+                                                    <li>Time period = 5 years</li>
+                                                </ul>
+                                            </li>
+                                            <li><strong>Asked:</strong> Total combined income after 5 years</li>
+                                        </ul>
+                                        <br><br>
+                                        <p><strong><u>Solution:</u></strong></p>
+                                        <p>Adom's monthly income $=$ Gh₵2,500</p>
+                                        <p>Arko's monthly income $=$ 3 $\times$ Gh₵2,500 $=$ Gh₵7,500</p>
+                                        <p><strong>Their total income in a month:</strong></p>
+                                        <p>$\Rightarrow$ Gh₵2,500 $+$ Gh₵7,500</p>
+                                        <p>$\Rightarrow$ Gh₵10,000</p>
+                                        <p><strong>Their total income in a year:</strong></p>
+                                        <p>$\Rightarrow$ 12 $\times$ Gh₵10,000</p>
+                                        <p>$\Rightarrow$ Gh₵120,000</p>
+                                        <p><strong>Their total income in 5 year:</strong></p>
+                                        <p>$\Rightarrow$ 5 $\times$ Gh₵120,000</p>
+                                        <p>$\Rightarrow$ Gh₵600,000</p>
+                                    </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p><strong>[B.E.C.E 2005]</strong></p>
+                                <p>
+                                    In sharing 95 oranges with Dede, Fofo kept 45 of them and shared the rest equally with Dede. How many oranges did Dede get?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><u><strong>Solution:</strong></u></p>
+                                    <p>Total oranges to be shared $=$ 95 oranges</p>
+                                    <p>Number kept by Fofo $=$ 45 oranges </p>
+                                    
+                                    <p><strong>Oranges left to be shared:</strong></p>
+                                    <p>\(\Rightarrow\) $95 - 45$ </p>
+                                    <p>\(\Rightarrow\) $50$ oranges </p>
+                                    <p>\(\therefore\) Fofo shared 50 oranges with Dede.</p>
+                                    
+                                    <p><strong>Dede's share:</strong></p>
+                                    <p>\(\Rightarrow\) $50 \ \text{oranges} \div 2$ </p>
+                                    <p>\(\Rightarrow\) 25 oranges. </p>
+                                    <p>\(\therefore\) <u>Dede's share was 25 oranges.</u></p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>
+                                    Maame Araba's monthly salary is twice his brother's earning each month. Calculate her salary for March, 
+                                    if her brother earns Gh₵ 3,500.00 per month.
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><u><strong>Solution:</strong></u></p>
+                                    <p>Her brother's monthly salary = Gh₵ 3,500.00 </p>
+                                    <p><strong>Maame Araba's salary:</strong></p>
+                                    <p>\(\Rightarrow 2 \times\) her brother's salary: </p>
+                                    <p>\(\Rightarrow 2 \times 3,500\) </p>
+                                    <p>\(\Rightarrow\) Gh₵ 7,000.00 </p>
+                                    <p>\(\therefore\) <u>Maame Araba's salary for March is Gh₵ 7,000.00.</u></p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>
+                                    Queenster paid Gh₵ 49,000.00 for a brand new car. If she was given a discount of Gh₵ 7,000.00. 
+                                    What was the actual value of the car?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><u><strong>Solution:</strong></u></p>
+                                    <p>Amount paid for the car $=$ Gh₵ 49,000.00 </p>
+                                    <p>Discount allowed $=$ Gh₵ 7,000.00 </p>
+                                    <p><strong>Actual value of Queenster's car:</strong> </p>
+                                    <p>\(\Rightarrow\) Amount paid $+$ discount given </p>
+                                    <p>\(\Rightarrow 49,000 + 7,000\) </p>
+                                    <p>\(\Rightarrow\) Gh₵ 56,000.00 </p>
+                                    <p>\(\therefore\) <u>the actual value of Queester's car was Gh₵ 56,000.00</u></p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>
+                                    Kofi is 20 years old now. What will be his age in 5 years time?
+                                </p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p><strong>Solution:</strong></p>
+                                    	<p>Kofi's age now = 20 years</p>
+                                        <p>In five years time:</p>
+                                        <p>\(\Rightarrow\) <strong>add 5 to his age now</strong></p>
+                                        <p>\(\Rightarrow\) \(20 + 5\) </p>
+                                        <p>\(\Rightarrow 25\) </p>
+                                        <p>\(\therefore\) <u>In 5 years time, Kofi will be 25 years of age.</u></p>
+                                </div>
+                            </div>
+                        </div>
+
                         <!-- Practice Section -->
                         <section class="practice-section">
                             <div class="practice-header">
@@ -300,10 +413,7 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <p>1. Calculate termly collection: 1,250 students × Gh₵120 = Gh₵150,000</p>
-                                        <p>2. Calculate yearly collection: Gh₵150,000 × 3 terms = Gh₵450,000</p>
-                                        <p>3. Calculate 4-year collection: Gh₵450,000 × 4 = Gh₵1,800,000</p>
-                                        <p><strong>Answer:</strong> The school collects Gh₵1,800,000 over 4 years.</p>
+                                        
                                     </div>
                                 </div>
                                 
@@ -313,9 +423,6 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <p>1. Calculate daily production in ml: 2,500 × 350ml = 875,000ml</p>
-                                        <p>2. Calculate monthly production in ml: 875,000ml × 30 = 26,250,000ml</p>
-                                        <p>3. Convert to liters (1,000ml = 1L): 26,250,000 ÷ 1,000 = 26,250L</p>
                                         <p><strong>Answer:</strong> The factory produces 26,250 liters in a month.</p>
                                     </div>
                                 </div>
@@ -326,8 +433,6 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <p>1. Calculate area in m²: 1,200m × 750m = 900,000m²</p>
-                                        <p>2. Convert to hectares: 900,000 ÷ 10,000 = 90 hectares</p>
                                         <p><strong>Answer:</strong> The farm area is 90 hectares.</p>
                                     </div>
                                 </div>
@@ -349,8 +454,21 @@
                                         
                                         <p><strong>Sample Solution:</strong></p>
                                         <p>1. Monthly revenue: 450 × Gh₵35 = Gh₵15,750</p>
-                                        <p>2. Monthly profit: Gh₵15,750 - Gh₵8,500 = Gh₵7,250</p>
+                                        <p>2. Monthly profit: Gh₵ 15,750 - Gh₵8,500 = Gh₵7,250</p>
                                         <p>3. 2-year profit: Gh₵7,250 × 24 months = Gh₵174,000</p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        A pencil sells at Gh₵ 3.40 and an eraser costs Gh₵ 1.00. How much will Kofi pay if he 
+                                        bought three pencils and five erasers?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p><strong>Solution:</strong></p>
+                                        <p><strong>Answer:</strong> Kofi will pay Gh₵ 15.20 for 3 pencils and 5 erasers. </p>
                                     </div>
                                 </div>
                             </div>
@@ -362,6 +480,8 @@
                                 </a>
                             </div>
                         </section>
+
+                        <br><br>
 
                         <!-- Speed Test Game -->
                         <section id="quick-test" class="lesson-section">
@@ -400,25 +520,33 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics </a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a> </li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a> </li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a> </li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a> </li>
+                                <!--
+                                <li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>
+                                -->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
                             </ul>
                         </div>
@@ -434,8 +562,8 @@
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a><br>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -446,7 +574,7 @@
         </footer>
 
          <!-- Scripts -->
-         <script src="../../js/math-challenge-read-write-numbers.js"></script>
+         <script src="../../js/math-challenge-place-value-word.js"></script>
         <script src="../../../../js/mathjhs-lesson.js"></script>
         <script src="../../js/read-write-numbers.js"></script>
         <script>
