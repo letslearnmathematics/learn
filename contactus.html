@@ -98,7 +98,13 @@
                 <!-- Contact Form -->
                 <section class="contact-form-section">
                     <h2 class="section-title">Send Us a Message</h2>
-                    <form  action="https://formsubmit.co/theletslearnproject7@gmail.com" method="POST" class="contact-form">
+                    <form action="https://formsubmit.co/theletslearnproject7@gmail.com" method="POST" class="contact-form">
+                        <!-- Disable captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+                        
+                        <!-- Optional: Redirect after submit -->
+                        <!-- <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html"> -->
+
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" id="name" name="name" required>
@@ -122,6 +128,7 @@
                         <button type="submit" class="btn btn-submit">Send Message</button>
                     </form>
                 </section>
+
 
                 <!-- FAQ Section -->
                 <section class="faq-section">
@@ -223,7 +230,7 @@
                         <a href="privacy-policy">Privacy Policy</a>
                         <a href="terms-and-conditions">Terms & Conditions</a>
                     </div>
-                    <p class="copyright">&copy; 2025 The Let's Learn Project. All rights reserved. Created by Anoff Akonnor.</p>
+                    <p class="copyright">&copy; 2025 The Let's Learn Project. All rights reserved.</p>
                 </div>
             </div>
         </footer>
