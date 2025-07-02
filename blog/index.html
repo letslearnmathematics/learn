@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Favicons -->
+    <link rel="icon" href="../images/android-chrome-192x192.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Blog | The Let's Learn Project">
+    <meta property="og:description" content="Educational insights, teaching strategies, and exam preparation tips from experienced educators.">
+    <meta property="og:image" content="https://theletslearnproject.com/images/blog-og-image.jpg">
+    <meta property="og:image:alt" content="The Let's Learn Project Blog">
+    <meta property="og:url" content="https://theletslearnproject.com/blog">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | The Let's Learn Project">
+    <meta name="twitter:description" content="Educational insights and teaching strategies from experienced educators.">
+    <meta name="twitter:image" content="https://theletslearnproject.com/images/blog-og-image.jpg">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/blog.css">
+    
+    <title>Blog | The Let's Learn Project</title>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4218511468511375" crossorigin="anonymous"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "The Let's Learn Project Blog",
+        "description": "Educational insights and teaching strategies",
+        "url": "https://theletslearnproject.com/blog",
+        "publisher": {
+            "@type": "Organization",
+            "name": "The Let's Learn Project",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://theletslearnproject.com/images/android-chrome-192x192.png"
+            }
+        }
+    }
+    </script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <a href="../" class="logo-link">
+                        <img src="../images/android-chrome-192x192.png" alt="Logo" class="logo">
+                        <div class="logo-text">
+                            <span class="logo-name">The Let's Learn Project</span>
+                            <span class="tagline">Learning Made Easy</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-container">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="../" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="../about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="../blog" class="nav-link active">Blog</a></li>
+                        <li class="nav-item"><a href="../contactus" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Hero -->
+    <section class="blog-hero">
+        <div class="container">
+            <h1>Educational Insights & Updates</h1>
+            <p>Discover teaching strategies, learning tips, and project updates from our team</p>
+            <div class="blog-search">
+                <input type="text" placeholder="Search blog posts...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Blog Content -->
+    <main class="blog-main">
+        <div class="container">
+            <!-- Featured Post -->
+            <section class="featured-post">
+                <div class="featured-image">
+                    <img src="../images/blog/student-learning.jpg" alt="Student Learning" loading="lazy">
+                </div>
+                <div class="featured-content">
+                    <span class="post-category">Learning Strategies</span>
+                    <h2>5 Ways to Build a Good Learning Habit</h2>
+                    <p class="post-excerpt">
+                        Discover practical steps to help students develop consistent study routines, boost motivation, and 
+                        achieve better results in and out of the classroom.
+                    </p>
+                    <div class="post-meta">
+                        <span class="post-date"><i class="far fa-calendar"></i> June 2, 2025</span>
+                        <span class="post-author"><i class="far fa-user"></i> Anoff Akonnor</span>
+                        <span class="post-read-time"><i class="far fa-clock"></i> 8 min read</span>
+                    </div>
+                    <a href="building-a-good-learning-habit/" class="btn">Read Article</a>
+                </div>
+            </section>
+
+            <!-- Blog Posts Grid -->
+            <section class="blog-posts">
+                <div class="section-header">
+                    <h2 class="section-title">Latest Articles</h2>
+                    <div class="category-filter">
+                        <span>Filter by:</span>
+                        <select id="categorySelect">
+                            <option value="all">All Categories</option>
+                            <option value="teaching-strategies">Teaching Strategies</option>
+                            <option value="exam-prep">Exam Preparation</option>
+                            <option value="learning-strategies">Learning Strategies</option>
+                            <option value="digital-learning">Digital Learning</option>
+                            <option value="classroom-management">Classroom Management</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="posts-grid">
+                    <!-- Post 1 
+                    <article class="post-card" data-category="science">
+                        <div class="post-image">
+                            <img src="../images/blog/science-experiments.jpg" alt="Students conducting science experiment" loading="lazy">
+                            <span class="post-category">Science Education</span>
+                        </div>
+                        <div class="post-content">
+                            <h3>Making Science Fun: Hands-on Experiments for JHS Students</h3>
+                            <p class="post-excerpt">Practical science activities that increased engagement by 40% in our Basic 7-9 classes, with minimal equipment requirements.</p>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> May 28, 2023</span>
+                                <span class="post-read-time"><i class="far fa-clock"></i> 6 min read</span>
+                                <a href="science-experiments/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>-->
+
+                    <!-- Post 2 
+                    <article class="post-card" data-category="exam-prep">
+                        <div class="post-image">
+                            <img src="../images/blog/bece-preparation.jpg" alt="Students taking BECE exam" loading="lazy">
+                            <span class="post-category">Exam Preparation</span>
+                        </div>
+                        <div class="post-content">
+                            <h3>BECE Mathematics: Top 5 Topics Students Struggle With</h3>
+                            <p class="post-excerpt">Analysis of 3 years of exam data reveals consistent problem areas and practical strategies to address them before exam day.</p>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> April 12, 2023</span>
+                                <span class="post-read-time"><i class="far fa-clock"></i> 10 min read</span>
+                                <a href="bece-math-topics/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>-->
+
+                    <!-- Post 3 
+                    <article class="post-card" data-category="digital-learning">
+                        <div class="post-image">
+                            <img src="../images/blog/digital-classroom.jpg" alt="Students using tablets in class" loading="lazy">
+                            <span class="post-category">Digital Education</span>
+                        </div>
+                        <div class="post-content">
+                            <h3>Integrating Technology in Ghanaian Classrooms</h3>
+                            <p class="post-excerpt">How we successfully implemented blended learning with limited resources, and the tools that made the biggest impact.</p>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> March 5, 2023</span>
+                                <span class="post-read-time"><i class="far fa-clock"></i> 7 min read</span>
+                                <a href="digital-classrooms/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>-->
+
+                    <!-- Post 4 
+                    <article class="post-card" data-category="teaching-strategies">
+                        <div class="post-image">
+                            <img src="../images/blog/reading-skills.jpg" alt="Students reading books" loading="lazy">
+                            <span class="post-category">Language Arts</span>
+                        </div>
+                        <div class="post-content">
+                            <h3>Improving Comprehension Skills in Junior High</h3>
+                            <p class="post-excerpt">Our proven framework for developing critical reading abilities in students, with downloadable lesson templates.</p>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> February 18, 2023</span>
+                                <span class="post-read-time"><i class="far fa-clock"></i> 9 min read</span>
+                                <a href="reading-comprehension/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>-->
+
+                    <!-- Post 5 
+                    <article class="post-card" data-category="exam-prep">
+                        <div class="post-image">
+                            <img src="../images/blog/exam-stress.jpg" alt="Student stressed about exams" loading="lazy">
+                            <span class="post-category">Exam Preparation</span>
+                        </div>
+                        <div class="post-content">
+                            <h3>Reducing Exam Anxiety: Strategies That Work</h3>
+                            <p class="post-excerpt">Evidence-based techniques we've used to help students manage test stress and perform at their best.</p>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> January 10, 2023</span>
+                                <span class="post-read-time"><i class="far fa-clock"></i> 5 min read</span>
+                                <a href="reducing-exam-anxiety/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>-->
+
+                    <!-- Post 6 
+                    <article class="post-card" data-category="teaching-strategies">
+                        <div class="post-image">
+                            <img src="../images/blog/group-learning.jpg" alt="Students working in groups" loading="lazy">
+                            <span class="post-category">Teaching Strategies</span>
+                        </div>
+                        <div class="post-content">
+                            <h3>Effective Group Work in Large Classes</h3>
+                            <p class="post-excerpt">How to structure group activities for maximum participation and learning in classrooms of 40+ students.</p>
+                            <div class="post-meta">
+                                <span class="post-date"><i class="far fa-calendar"></i> December 5, 2022</span>
+                                <span class="post-read-time"><i class="far fa-clock"></i> 8 min read</span>
+                                <a href="group-work-strategies/" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </article>-->
+                </div>
+
+                <!-- Ad Banner -->
+                <div class="blog-ad">
+                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-4218511468511375"
+                         data-ad-slot="1234567890"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                </div>
+
+                <div class="pagination">
+                    <a href="#" class="page-btn active">1</a>
+                    <a href="#" class="page-btn">2</a>
+                    <a href="#" class="page-btn">3</a>
+                    <a href="#" class="page-btn next">Next <i class="fas fa-chevron-right"></i></a>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter-section">
+                <div class="newsletter-content">
+                    <h2>Stay Updated</h2>
+                    <p>Subscribe to our newsletter for the latest teaching resources and blog updates</p>
+                    <form action="https://formsubmit.co/theletslearnproject7@gmail.com" method="POST" class="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                    <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="../images/android-chrome-192x192.png" alt="Logo" class="footer-logo">
+                    <p>The Let's Learn Project provides quality educational resources to help students excel in their examinations.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/18sxntpusV/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="../">Home</a></li>
+                            <li><a href="../about">About Us</a></li>
+                            <li><a href="../blog">Blog</a></li>
+                            <li><a href="../contactus">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Subjects</h4>
+                        <ul>
+                            <li><a href="../emath">Elective Mathematics</a></li>
+                            <li><a href="../math-jhs">JHS Mathematics</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="../math-jhs/passco">Past Questions</a></li>
+                            <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi">Video Tutorials</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-policies">
+                    <a href="../privacy-policy">Privacy Policy</a>
+                    <a href="../terms-and-conditions">Terms & Conditions</a>
+                </div>
+                <p class="copyright">&copy; <span id="year"></span> The Let's Learn Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/blog.js"></script>
+
+    <script>
+        // Current year for footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Category filter functionality
+        document.getElementById('categorySelect').addEventListener('change', function() {
+            const selectedCategory = this.value;
+            const posts = document.querySelectorAll('.post-card');
+            
+            posts.forEach(post => {
+                if (selectedCategory === 'all' || post.dataset.category === selectedCategory) {
+                    post.style.display = 'block';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
