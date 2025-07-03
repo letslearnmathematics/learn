@@ -31,8 +31,34 @@
         <link rel="stylesheet" href="../passco/css/bece-tests-general.css">
     
         <!-- MathJax Configuration -->
-
-        <script src="../../js/mathjax-config.js"></script>
+        <script>
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
+                tex: {
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                    processEscapes: true,
+                    packages: {'[+]': ['ams']}
+                },
+                options: {
+                    ignoreHtmlClass: 'tex2jax_ignore',
+                    processHtmlClass: 'tex2jax_process'
+                },
+                loader: {
+                    load: ['[tex]/ams']
+                }
+            };
+        </script>
         
         <!-- MathJax with combined TeX and MathML input, HTML output -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
@@ -522,10 +548,13 @@
                                                 The perimeter of the rectangle \(\Rightarrow 38\) cm.
                                             </p>
                                             <p>
-                                                Perimeter \( = 2(\text{L} + \text{W})\)
+                                                Perimeter $= 2(L + W)$
                                             </p>
                                             <p>
                                                 <strong>Substituting the values:</strong> 
+                                            </p>
+                                            <p>
+                                                \(\Rightarrow 38 = 2(x + 7 + x)\)
                                             </p>
                                             <p>
                                                 \(\Rightarrow 38 = 2(2x + 7)\)
