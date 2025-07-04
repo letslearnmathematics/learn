@@ -1,37 +1,45 @@
 document.addEventListener('DOMContentLoaded', function() {
+  // ======================
+    // Blog Post Category Highlighting
     // ======================
-    // Mobile Navigation
-    // ======================
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-    
-    /*if (hamburger && navMenu) {
-        hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    function highlightCurrentCategory() {
+        // Get current category from URL or post meta
+        const urlParams = new URLSearchParams(window.location.search);
+        let currentCategory = urlParams.get('category');
+        
+        // If no category in URL, get from post category element
+        if (!currentCategory) {
+            const postCategoryElement = document.querySelector('.post-category');
+            if (postCategoryElement) {
+                currentCategory = postCategoryElement.textContent
+                    .toLowerCase()
+                    .replace(/\s+/g, '-')
+                    .replace(/[^a-z-]/g, '');
+            }
+        }
+        
+        if (currentCategory) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.category-filter').forEach(btn => {
+                btn.classList.remove('active');
+            });
             
-            // Toggle body scroll when menu is open
-            if (navMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = 'auto';
+            // Find and activate matching category button
+            const activeButton = document.querySelector(`.category-filter[data-category="${currentCategory}"]`);
+            if (activeButton) {
+                activeButton.classList.add('active');
             }
             
-            // Toggle aria-expanded for accessibility
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
-            navMenu.setAttribute('aria-hidden', isExpanded);
-        });
-
-        // Close menu when clicking on nav links
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                navMenu.classList.remove('active');
-                document.body.style.overflow = 'auto';
-            });
-        });
-    }*/
+            // If no exact match, activate "All Posts"
+            if (!activeButton && currentCategory !== 'all') {
+                const allButton = document.querySelector('.category-filter[data-category="all"]');
+                if (allButton) allButton.classList.add('active');
+            }
+        }
+    }
+    
+    // Initialize category highlighting
+    highlightCurrentCategory();
 
     // ======================
     // Newsletter Handling
@@ -92,88 +100,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         lazyLoadImages(document.querySelectorAll('img[loading="lazy"]'));
     }
-
-    // ======================
-    // Category Filtering
-    // ======================
-    const categorySelect = document.getElementById('categorySelect');
-    if (categorySelect) {
-        categorySelect.addEventListener('change', function() {
-            const category = this.value;
-            const posts = document.querySelectorAll('.post-card');
-            let visibleCount = 0;
-            
-            posts.forEach(post => {
-                if (category === 'all' || post.dataset.category === category) {
-                    post.style.display = 'block';
-                    visibleCount++;
-                } else {
-                    post.style.display = 'none';
-                }
-            });
-            
-            // Show message if no posts match filter
-            const noResults = document.getElementById('noResults');
-            if (visibleCount === 0) {
-                if (!noResults) {
-                    const grid = document.querySelector('.posts-grid');
-                    const message = document.createElement('p');
-                    message.id = 'noResults';
-                    message.textContent = 'No posts found in this category.';
-                    message.style.gridColumn = '1 / -1';
-                    message.style.textAlign = 'center';
-                    grid.appendChild(message);
-                }
-            } else if (noResults) {
-                noResults.remove();
-            }
-        });
-    }
-
-    // ======================
-    // Comment System
-    // ======================
-    const commentForms = document.querySelectorAll('#commentForm');
-    commentForms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = this.querySelector('#commentName').value.trim();
-            const email = this.querySelector('#commentEmail').value.trim();
-            const text = this.querySelector('#commentText').value.trim();
-            
-            if (!name || !text) {
-                showToast('Please fill in all required fields', 'error');
-                return;
-            }
-            
-            // In production: Send to your backend
-            console.log('New comment:', { name, email, text });
-            
-            // Simulate comment display
-            const commentList = document.querySelector('.comment-list');
-            if (commentList) {
-                const comment = document.createElement('div');
-                comment.className = 'comment';
-                comment.innerHTML = `
-                    <div class="comment-author">
-                        <img src="../images/avatars/default.jpg" alt="${name}">
-                        <div>
-                            <h5>${name}</h5>
-                            <span class="comment-date">Just now</span>
-                        </div>
-                    </div>
-                    <div class="comment-content">
-                        <p>${text}</p>
-                    </div>
-                `;
-                commentList.prepend(comment);
-            }
-            
-            showToast('Comment submitted for moderation', 'success');
-            this.reset();
-        });
-    });
 
     // ======================
     // Table of Contents Generator
