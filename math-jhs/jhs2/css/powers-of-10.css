@@ -1,0 +1,343 @@
+.place {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+/* Multiplication Table Container */
+.multiplication-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 20px 0;
+  padding-bottom: 10px;
+}
+
+/* Table Styles */
+.multiplication-table {
+  width: auto;
+  min-width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  table-layout: fixed;
+}
+
+/* Header Styles */
+.multiplication-table thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.multiplication-table th {
+  padding: 12px 10px;
+  text-align: center;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+  min-width: 50px;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+.multiplication-table tbody tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+.multiplication-table tbody tr:hover {
+  background-color: #f1f1f1;
+}
+
+.multiplication-table td {
+  padding: 12px 10px;
+  text-align: center;
+  border: 1px solid #ddd;
+  min-width: 50px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+/* First Column Styles */
+.multiplication-table th:first-child,
+.multiplication-table td:first-child {
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+
+/* Hover Effects */
+.multiplication-table td:hover {
+  background-color: #e6f7e6;
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+/* Diagonal Perfect Squares Highlight */
+.multiplication-table tr:nth-child(1) td:nth-child(2),
+.multiplication-table tr:nth-child(2) td:nth-child(3),
+.multiplication-table tr:nth-child(3) td:nth-child(4),
+.multiplication-table tr:nth-child(4) td:nth-child(5),
+.multiplication-table tr:nth-child(5) td:nth-child(6),
+.multiplication-table tr:nth-child(6) td:nth-child(7),
+.multiplication-table tr:nth-child(7) td:nth-child(8),
+.multiplication-table tr:nth-child(8) td:nth-child(9),
+.multiplication-table tr:nth-child(9) td:nth-child(10),
+.multiplication-table tr:nth-child(10) td:nth-child(11),
+.multiplication-table tr:nth-child(11) td:nth-child(12),
+.multiplication-table tr:nth-child(12) td:nth-child(13) {
+  background-color: #dff0d8;
+  font-weight: bold;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 768px) {
+  .multiplication-table th,
+  .multiplication-table td {
+    padding: 10px 8px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .multiplication-table th,
+  .multiplication-table td {
+    padding: 8px 6px;
+    font-size: 13px;
+    min-width: 40px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .multiplication-table-container {
+    overflow-x: visible;
+  }
+  .multiplication-table {
+    width: 100%;
+    box-shadow: none;
+    border: 1px solid #ddd;
+  }
+  
+  .multiplication-table th {
+    background-color: #4CAF50 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .multiplication-table tr:nth-child(even) {
+    background-color: #f8f8f8 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* ---------------------------------------------------------------------- */
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    overflow-y: auto;
+}
+
+.modal-content {
+    background-color: var(--light);
+    margin: 5% auto;
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    max-width: 800px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.modal-content h3 {
+    color: var(--primary);
+    margin-bottom: var(--space-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+}
+
+.modal-content p {
+    margin-bottom: var(--space-md);
+    color: var(--gray-dark);
+}
+
+.close-modal {
+    position: absolute;
+    right: var(--space-md);
+    top: var(--space-sm);
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--gray-dark);
+    transition: all 0.3s;
+}
+
+.close-modal:hover {
+    color: var(--accent);
+    transform: rotate(90deg);
+}
+
+.year-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: var(--space-sm);
+    margin-top: var(--space-md);
+}
+
+.year-btn {
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--primary-light);
+    border: 2px solid var(--primary);
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s;
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.year-btn:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.year-btn.recent {
+    background-color: var(--accent-light);
+    border-color: var(--accent);
+    color: var(--accent-dark);
+}
+
+.year-btn.recent:hover {
+    background-color: var(--accent);
+    color: var(--light);
+}
+
+.year-btn .format-badge {
+    font-size: 0.7rem;
+    margin-top: var(--space-xs);
+    padding: 2px 5px;
+    border-radius: 10px;
+    background-color: var(--secondary-light);
+    color: var(--secondary-dark);
+}
+
+.pdf-badge {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.web-badge {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+@media (max-width: 768px) {
+    .modal-content {
+        margin: 10% auto;
+        width: 90%;
+    }
+    
+    .year-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    }
+}
+
+/* ---------------------------------------------------------------------- */
+
+.year-btn {
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 5px;
+    background: #f0f0f0;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.year-btn:hover {
+    background: #e0e0e0;
+}
+
+.format-badge {
+    margin-left: 8px;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+}
+
+.pdf-badge {
+    background: #ff6b6b;
+    color: white;
+}
+
+.web-badge {
+    background: #4ecdc4;
+    color: white;
+}
+
+/* Place Value Table Styles */
+.place-value-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.place-value-table th {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary);
+}
+
+.place-value-table td {
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+}
+
+.place-value-table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.place-value-table tr:hover td {
+    background-color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .place-value-table {
+        font-size: 0.9em;
+    }
+    
+    .place-value-table th, 
+    .place-value-table td {
+        padding: 8px 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .place-value-table {
+        font-size: 0.8em;
+    }
+}

@@ -3,38 +3,50 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+
         <!-- SEO and Social Meta Tags -->
-        <title>Powers of 10 and Benchmark Fractions | JHS Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Comprehensive lesson on multiplying and dividing by powers of 10 and benchmark fractions for JHS2 Mathematics.">
-        
+        <title>Multiply and Divide by Powers of 10 | JHS Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Learn how to multiply and divide numbers by powers of 10, including decimals and fractions. JHS2 Mathematics lesson with examples and practice.">
+
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
         <link rel="manifest" href="../../../../site.webmanifest">
-        
+
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Powers of 10 and Benchmark Fractions | JHS2 Mathematics">
-        <meta property="og:description" content="Learn to multiply and divide by powers of 10 and work with benchmark fractions">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/powers-of-10">
+        <meta property="og:title" content="Multiply and Divide by Powers of 10 | JHS2 Mathematics">
+        <meta property="og:description" content="Master multiplying and dividing by powers of 10 with clear explanations and practice questions.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-operations/multiply-and-divide-by-powers-of-10">
         <meta property="og:type" content="website">
-    
+
         <!-- Fonts and Icons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-        
+
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
-        <link rel="stylesheet" href="../../css/read-write-numbers.css">
-    
+        <link rel="stylesheet" href="../../css/powers-of-10.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
+
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,33 +54,18 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
-        
+
         <!-- MathJax with combined TeX and MathML input, HTML output -->
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
-    
+
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
     </head>
     <body>
         <!-- Header Navigation -->
@@ -85,7 +82,7 @@
                         </a>
                     </div>
                     
-                    <h1 class="lesson-title">Powers of 10 and Benchmark Fractions</h1>
+                    <h1 class="lesson-title">Powers of 10 & Fractions</h1>
                     
                     <nav class="main-nav">
                         <ul class="nav-list">
@@ -112,7 +109,7 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <h3 class="sidebar-title">JHS 2: Number Operations</h3>
                             <div class="current-topic">
                                 <i class="fas fa-project-diagram"></i>
                                 <span>Powers of 10 & Fractions</span>
@@ -126,9 +123,9 @@
                             </ul>
                             
                             <div class="level-buttons">
-                                <a href="../../../../emath" class="level-btn">E-MATH</a>
-                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
-                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                                <a href="../../../../emath/" class="level-btn">E-MATH</a>
+                                <a href="../../../../coremath/" class="level-btn">C-MATH</a>
+                                <a href="../../../../math-jhs/" class="level-btn">JHS</a>
                             </div>
                         </div>
                         
@@ -151,9 +148,9 @@
                             <i class="fas fa-chevron-right"></i>
                             <a href="../../../../maths">Mathematics</a>
                             <i class="fas fa-chevron-right"></i>
-                            <a href="../../../../math-jhs">JHS2</a>
+                            <span>JHS2</span>
                             <i class="fas fa-chevron-right"></i>
-                            <span>Powers of 10</span>
+                            <span>Powers of 10 & Fractions</span>
                         </nav>
 
                         <!-- Definition Section -->
@@ -209,24 +206,40 @@
                                     <i class="fas fa-globe"></i> Multiplication Table (Up to 12×12)
                                 </h3>
                                 <p>Mastering multiplication facts up to 12×12 is essential for quick calculations:</p>
-                                <div class="math-example">
-                                    \[
-                                    \begin{array}{ccccccccccccc}
-                                    \times & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
-                                    1 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
-                                    2 & 2 & 4 & 6 & 8 & 10 & 12 & 14 & 16 & 18 & 20 & 22 & 24 \\
-                                    3 & 3 & 6 & 9 & 12 & 15 & 18 & 21 & 24 & 27 & 30 & 33 & 36 \\
-                                    4 & 4 & 8 & 12 & 16 & 20 & 24 & 28 & 32 & 36 & 40 & 44 & 48 \\
-                                    5 & 5 & 10 & 15 & 20 & 25 & 30 & 35 & 40 & 45 & 50 & 55 & 60 \\
-                                    6 & 6 & 12 & 18 & 24 & 30 & 36 & 42 & 48 & 54 & 60 & 66 & 72 \\
-                                    7 & 7 & 14 & 21 & 28 & 35 & 42 & 49 & 56 & 63 & 70 & 77 & 84 \\
-                                    8 & 8 & 16 & 24 & 32 & 40 & 48 & 56 & 64 & 72 & 80 & 88 & 96 \\
-                                    9 & 9 & 18 & 27 & 36 & 45 & 54 & 63 & 72 & 81 & 90 & 99 & 108 \\
-                                    10 & 10 & 20 & 30 & 40 & 50 & 60 & 70 & 80 & 90 & 100 & 110 & 120 \\
-                                    11 & 11 & 22 & 33 & 44 & 55 & 66 & 77 & 88 & 99 & 110 & 121 & 132 \\
-                                    12 & 12 & 24 & 36 & 48 & 60 & 72 & 84 & 96 & 108 & 120 & 132 & 144 \\
-                                    \end{array}
-                                    \]
+                                <div class="multiplication-table-container">
+                                    <table class="multiplication-table">
+                                        <thead>
+                                            <tr>
+                                                <th>&times;</th>
+                                                <th>1</th>
+                                                <th>2</th>
+                                                <th>3</th>
+                                                <th>4</th>
+                                                <th>5</th>
+                                                <th>6</th>
+                                                <th>7</th>
+                                                <th>8</th>
+                                                <th>9</th>
+                                                <th>10</th>
+                                                <th>11</th>
+                                                <th>12</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr><th>1</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr>
+                                            <tr><th>2</th><td>2</td><td>4</td><td>6</td><td>8</td><td>10</td><td>12</td><td>14</td><td>16</td><td>18</td><td>20</td><td>22</td><td>24</td></tr>
+                                            <tr><th>3</th><td>3</td><td>6</td><td>9</td><td>12</td><td>15</td><td>18</td><td>21</td><td>24</td><td>27</td><td>30</td><td>33</td><td>36</td></tr>
+                                            <tr><th>4</th><td>4</td><td>8</td><td>12</td><td>16</td><td>20</td><td>24</td><td>28</td><td>32</td><td>36</td><td>40</td><td>44</td><td>48</td></tr>
+                                            <tr><th>5</th><td>5</td><td>10</td><td>15</td><td>20</td><td>25</td><td>30</td><td>35</td><td>40</td><td>45</td><td>50</td><td>55</td><td>60</td></tr>
+                                            <tr><th>6</th><td>6</td><td>12</td><td>18</td><td>24</td><td>30</td><td>36</td><td>42</td><td>48</td><td>54</td><td>60</td><td>66</td><td>72</td></tr>
+                                            <tr><th>7</th><td>7</td><td>14</td><td>21</td><td>28</td><td>35</td><td>42</td><td>49</td><td>56</td><td>63</td><td>70</td><td>77</td><td>84</td></tr>
+                                            <tr><th>8</th><td>8</td><td>16</td><td>24</td><td>32</td><td>40</td><td>48</td><td>56</td><td>64</td><td>72</td><td>80</td><td>88</td><td>96</td></tr>
+                                            <tr><th>9</th><td>9</td><td>18</td><td>27</td><td>36</td><td>45</td><td>54</td><td>63</td><td>72</td><td>81</td><td>90</td><td>99</td><td>108</td></tr>
+                                            <tr><th>10</th><td>10</td><td>20</td><td>30</td><td>40</td><td>50</td><td>60</td><td>70</td><td>80</td><td>90</td><td>100</td><td>110</td><td>120</td></tr>
+                                            <tr><th>11</th><td>11</td><td>22</td><td>33</td><td>44</td><td>55</td><td>66</td><td>77</td><td>88</td><td>99</td><td>110</td><td>121</td><td>132</td></tr>
+                                            <tr><th>12</th><td>12</td><td>24</td><td>36</td><td>48</td><td>60</td><td>72</td><td>84</td><td>96</td><td>108</td><td>120</td><td>132</td><td>144</td></tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             
