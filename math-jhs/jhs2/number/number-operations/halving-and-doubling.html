@@ -17,8 +17,8 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Mental Math Strategies | JHS2 Mathematics">
         <meta property="og:description" content="Learn mental math strategies including halving and doubling techniques for quick calculations.">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/mental-math-strategies">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-operations/halving-and-doubling">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/read-write-numbers.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -63,12 +67,6 @@
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
     </head>
     <body>
         <!-- Header Navigation -->
@@ -120,8 +118,6 @@
                             <ul class="topic-menu">
                                 <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
                                 <li><a href="#halving-doubling"><i class="fas fa-chevron-right"></i> Halving & Doubling</a></li>
-                                <li><a href="#applications"><i class="fas fa-chevron-right"></i> Practical Applications</a></li>
-                                <li><a href="#advanced"><i class="fas fa-chevron-right"></i> Advanced Techniques</a></li>
                             </ul>
                             
                             <div class="level-buttons">
@@ -163,10 +159,15 @@
                             
                             <div class="concept-box">
                                 <p>
-                                    <strong>Mental math strategies</strong> are techniques that allow us to perform calculations quickly and efficiently in our heads, without the need for paper, calculators, or other tools. These strategies leverage number properties and mathematical relationships to simplify complex problems.
+                                    <strong>Mental math strategies</strong> are techniques that allow us to perform calculations 
+                                    quickly and efficiently in our heads, without the need for paper, calculators, or other tools. 
+                                    These strategies leverage number properties and mathematical relationships to simplify complex problems.
                                 </p>
                                 <p>
-                                    In this lesson, we'll focus specifically on the <strong>halving and doubling</strong> strategy, which is particularly useful for multiplication problems. This technique takes advantage of the fact that sometimes it's easier to work with numbers that are half or double the original numbers in a calculation.
+                                    In this lesson, we'll focus specifically on the <strong>halving and doubling</strong> 
+                                    strategy, which is particularly useful for multiplication problems. This technique takes 
+                                    advantage of the fact that sometimes it's easier to work with numbers that are half or 
+                                    double the original numbers in a calculation.
                                 </p>
                             </div>
                         </section>
@@ -202,11 +203,26 @@
                                     <i class="fas fa-lightbulb"></i> The Basic Idea
                                 </h3>
                                 <p>
-                                    The halving and doubling strategy works because of the fundamental property of multiplication:
+                                    The halving and doubling technique involves adjusting two numbers being multiplied, that is:
                                 </p>
-                                \[
-                                    (a \times b) = \left(\frac{a}{2} \times 2b\right) = \left(2a \times \frac{b}{2}\right)
-                                \]
+                                <p><i class="fas fa-pen-fancy"></i> Half one of the numbers, and</p>
+                                <p><i class="fas fa-pen-fancy"></i> Double the other number.</p>
+                                <p>
+                                    If $a$ and $b$ are two numbers, we can express their product in a different way:
+                                </p>
+                                <p>
+                                    \(a \times b\)  
+                                </p>
+                                
+                                <p>
+                                    $\Rightarrow \left(\dfrac{a}{2} \times 2b\right)$
+                                </p>
+                                <p>
+                                    It can also be written as:
+                                </p>
+                                <p>
+                                    $\Rightarrow \left(2a \times \dfrac{b}{2}\right) $
+                                </p>
                                 <p>
                                     When one number is halved and the other is doubled, the product remains the same. We can use this to simplify multiplication problems by converting them into easier calculations.
                                 </p>
@@ -245,42 +261,75 @@
                                 </div>
                             </div>
                             
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-calculator"></i> Examples
-                                </h3>
-                                
-                                <div class="math-example">
-                                    <h4>Example 1: 14 × 5</h4>
-                                    <p>
-                                        \[
-                                            \begin{align*}
-                                                14 \times 5 &= (14 \div 2) \times (5 \times 2) \\
-                                                &= 7 \times 10 \\
-                                                &= 70
-                                            \end{align*}
-                                        \]
-                                    </p>
-                                    <p>Halving 14 gives 7, doubling 5 gives 10, and 7 × 10 is much easier to calculate mentally.</p>
-                                </div>
-                                
-                                <div class="math-example">
-                                    <h4>Example 2: 16 × 25</h4>
-                                    <p>
-                                        \[
-                                            \begin{align*}
-                                                16 \times 25 &= (16 \div 2) \times (25 \times 2) \\
-                                                &= 8 \times 50 \quad \text{(we can simplify further)} \\
-                                                &= (8 \div 2) \times (50 \times 2) \\
-                                                &= 4 \times 100 \\
-                                                &= 400
-                                            \end{align*}
-                                        \]
-                                    </p>
-                                    <p>We applied the halving/doubling strategy twice to arrive at a simple multiplication by 100.</p>
+                            
+                        </section>
+
+                        <!-- Practice Section -->
+                        <div class="practice-header">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h2>Examples</h2>
+                        </div>
+                        
+                        <div class="practice-problems">
+                            <div class="problem-card">
+                                <h3>Question 1</h3>
+                                <p>Use the halving and doubling strategy to calculate 18 × 15.</p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>$18 \times 15$</p>
+                                    <p>$\Rightarrow \left(\dfrac{18}{2}\right) \times \left( 15 \times 2 \right)$</p>
+                                    <p>$\Rightarrow 9 \times 30 $</p>
+                                    <p>$\Rightarrow 270$</p>
                                 </div>
                             </div>
-                        </section>
+                            <div class="problem-card">
+                                <h3>Question 2</h3>
+                                <p>Calculate 24 × 50 using the halving and doubling method.</p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>$24 \times 50$</p>
+                                    <p>$\Rightarrow \left(\dfrac{24}{2}\right) \times (50 \times 2)$</p>
+                                    <p>$\Rightarrow 12 \times 100$</p>
+                                    <p>$\Rightarrow 1,200$</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 3</h3>
+                                <p>Find the product of 45 × 8 using mental math strategies.</p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>$45 \times 8$</p>
+                                    <p>(Since 8 is a power of 2, you can double 45 and halve 8:)</p>
+                                    <p>$\Rightarrow (45 \times 2) \times (8 \div 2)$</p>
+                                    <p>$\Rightarrow 90 \times 4$</p>
+                                    <p>$\Rightarrow 360$</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 4</h3>
+                                <p>Use halving and doubling to calculate 125 × 16.</p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>$125 \times 16$</p>
+                                    <p>$\Rightarrow (125 \times 2) \times \left(\dfrac{16}{2}\right) $</p>
+                                    <p>$\Rightarrow 250 \times 8$</p>
+                                    <p>$\Rightarrow 2,000$</p>
+                                </div>
+                            </div>
+                            <div class="problem-card">
+                                <h3>Question 5</h3>
+                                <p>Calculate 35 × 12 using mental math strategies.</p>
+                                <button class="solution-toggle">Show Solution</button>
+                                <div class="solution">
+                                    <p>$35 \times 12$</p>
+                                    <p>(Double the odd number 35 and halve 12:)</p>
+                                    <p>$\Rightarrow (35 \times 2) \times (12 \div 2)$</p>
+                                    <p>$\Rightarrow 70 \times 6$</p>
+                                    <p>$\Rightarrow 420$</p>
+                                </div>
+                            </div>
+                        </div>
 
                         <!-- Practice Section -->
                         <section class="practice-section">
@@ -292,88 +341,42 @@
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
-                                    <p>Use the halving and doubling strategy to calculate 18 × 15.</p>
+                                    <p>Use the halving and doubling strategy to calculate \( 36 \times 25 \).</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>
-                                            \[
-                                                \begin{align*}
-                                                    18 \times 15 &= (18 \div 2) \times (15 \times 2) \\
-                                                    &= 9 \times 30 \\
-                                                    &= 270
-                                                \end{align*}
-                                            \]
-                                        </p>
+                                        <p>900</p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
                                     <h3>Question 2</h3>
-                                    <p>Calculate 24 × 50 using the halving and doubling method.</p>
+                                    <p>Calculate \( 48 \times 50 \) using the halving and doubling method.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>
-                                            \[
-                                                \begin{align*}
-                                                    24 \times 50 &= (24 \div 2) \times (50 \times 2) \\
-                                                    &= 12 \times 100 \\
-                                                    &= 1,200
-                                                \end{align*}
-                                            \]
-                                        </p>
+                                        <p>2,400</p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
                                     <h3>Question 3</h3>
-                                    <p>Find the product of 45 × 8 using mental math strategies.</p>
+                                    <p>Find the product of \( 32 \times 15 \) using mental math strategies.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>
-                                            \[
-                                                \begin{align*}
-                                                    45 \times 8 &= (45 \times 2) \times (8 \div 2) \\
-                                                    &= 90 \times 4 \quad \text{(can simplify further)} \\
-                                                    &= (90 \times 2) \times (4 \div 2) \\
-                                                    &= 180 \times 2 \\
-                                                    &= 360
-                                                \end{align*}
-                                            \]
-                                        </p>
+                                        <p>480</p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
                                     <h3>Question 4</h3>
-                                    <p>Use halving and doubling to calculate 125 × 16.</p>
+                                    <p>Use halving and doubling to calculate \( 125 \times 24 \).</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>
-                                            \[
-                                                \begin{align*}
-                                                    125 \times 16 &= (125 \times 2) \times (16 \div 2) \\
-                                                    &= 250 \times 8 \quad \text{(simplify further)} \\
-                                                    &= (250 \times 2) \times (8 \div 2) \\
-                                                    &= 500 \times 4 \quad \text{(simplify again)} \\
-                                                    &= (500 \times 2) \times (4 \div 2) \\
-                                                    &= 1,000 \times 2 \\
-                                                    &= 2,000
-                                                \end{align*}
-                                            \]
-                                        </p>
+                                        <p>3,000</p>
                                     </div>
                                 </div>
                                 <div class="problem-card">
                                     <h3>Question 5</h3>
-                                    <p>Calculate 35 × 12 using mental math strategies.</p>
+                                    <p>Calculate \( 56 \times 25 \) using the halving and doubling strategy.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>
-                                            \[
-                                                \begin{align*}
-                                                    35 \times 12 &= (35 \times 2) \times (12 \div 2) \\
-                                                    &= 70 \times 6 \\
-                                                    &= 420
-                                                \end{align*}
-                                            \]
-                                        </p>
+                                        <p>1,400</p>
                                     </div>
                                 </div>
                             </div>
@@ -386,193 +389,1147 @@
                             </div>
                         </section>
 
-                        <!-- Practical Applications Section -->
-                        <section id="applications" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-shopping-cart"></i> Practical Applications
-                            </h2>
+                        <br><br>
 
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-coins"></i> Real-World Uses
-                                </h3>
-                                <p>
-                                    The halving and doubling strategy is particularly useful in everyday situations like shopping, cooking, and budgeting. Here are some practical examples:
-                                </p>
-                                
-                                <div class="math-example">
-                                    <h4>Example 1: Shopping Discounts</h4>
-                                    <p>If an item costs ₵35 each and is on sale for "buy 1 get 1 half off", what's the cost for 4 items?</p>
-                                    <p>
-                                        \[
-                                            \begin{align*}
-                                                \text{First pair:} & \quad 35 + (35 \div 2) = 35 + 17.50 = 52.50 \\
-                                                \text{Second pair:} & \quad \text{Same as first pair} = 52.50 \\
-                                                \text{Total:} & \quad 52.50 \times 2 = (50 \times 2) + (2.50 \times 2) = 100 + 5 = 105
-                                            \end{align*}
-                                        \]
-                                    </p>
-                                </div>
-                                
-                                <div class="math-example">
-                                    <h4>Example 2: Recipe Adjustments</h4>
-                                    <p>A recipe calls for 250g of flour for 8 servings. How much flour for 12 servings?</p>
-                                    <p>
-                                        \[
-                                            \begin{align*}
-                                                \text{For 4 servings:} & \quad 250g \div 2 = 125g \\
-                                                \text{For 12 servings:} & \quad 250g + 125g = 375g
-                                            \end{align*}
-                                        \]
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Advanced Techniques Section -->
-                        <section id="advanced" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-brain"></i> Advanced Techniques
-                            </h2>
-
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-chess"></i> Combining Strategies
-                                </h3>
-                                <p>
-                                    The halving and doubling strategy can be combined with other mental math techniques for even more powerful calculations:
-                                </p>
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>With Distributive Property</h4>
-                                        <p>Break numbers into parts that are easier to work with:</p>
-                                        \[
-                                            24 \times 25 = (20 \times 25) + (4 \times 25) = 500 + 100 = 600
-                                        \]
-                                    </div>
-                                    <div class="point">
-                                        <h4>With Rounding</h4>
-                                        <p>Adjust numbers to make them easier to halve/double:</p>
-                                        \[
-                                            19 \times 25 \approx 20 \times 25 - 25 = 500 - 25 = 475
-                                        \]
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-magic"></i> Special Cases
-                                </h3>
-                                <p>
-                                    Some number combinations are particularly well-suited for halving/doubling:
-                                </p>
-                                <ul>
-                                    <li>Multiplying by 5: Halve the other number and multiply by 10</li>
-                                    <li>Multiplying by 25: Halve twice and multiply by 100</li>
-                                    <li>Multiplying by 125: Halve three times and multiply by 1000</li>
-                                </ul>
-                                
-                                <div class="math-example">
-                                    <h4>Example: 48 × 125</h4>
-                                    <p>
-                                        \[
-                                            \begin{align*}
-                                                48 \times 125 &= (48 \div 2) \times (125 \times 2) \\
-                                                &= 24 \times 250 \quad \text{(halve/double again)} \\
-                                                &= 12 \times 500 \quad \text{(halve/double once more)} \\
-                                                &= 6 \times 1,000 \\
-                                                &= 6,000
-                                            \end{align*}
-                                        \]
-                                    </p>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Final Practice Section -->
-                        <section class="practice-section">
-                            <div class="practice-header">
-                                <i class="fas fa-pen-fancy"></i>
-                                <h2>Advanced Practice</h2>
-                            </div>
-                            
-                            <div class="practice-problems">
-                                <div class="problem-card">
-                                    <h3>Question 1</h3>
-                                    <p>Calculate 64 × 125 using halving and doubling.</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <p>
-                                            \[
-                                                \begin{align*}
-                                                    64 \times 125 &= (64 \div 2) \times (125 \times 2) \\
-                                                    &= 32 \times 250 \\
-                                                    &= 16 \times 500 \\
-                                                    &= 8 \times 1,000 \\
-                                                    &= 8,000
-                                                \end{align*}
-                                            \]
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="problem-card">
-                                    <h3>Question 2</h3>
-                                    <p>Find 22 × 45 using combined mental math strategies.</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <p>
-                                            \[
-                                                \begin{align*}
-                                                    22 \times 45 &= (20 \times 45) + (2 \times 45) \\
-                                                    &= 900 + 90 \\
-                                                    &= 990
-                                                \end{align*}
-                                            \]
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="problem-card">
-                                    <h3>Question 3</h3>
-                                    <p>A shop sells pencils at ₵12 each. What's the cost for 25 pencils?</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <p>
-                                            \[
-                                                \begin{align*}
-                                                    12 \times 25 &= (12 \div 2) \times (25 \times 2) \\
-                                                    &= 6 \times 50 \\
-                                                    &= 300 \text{ cedis}
-                                                \end{align*}
-                                            \]
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Speed Test Game -->
+                        <!-- Test Instructions -->
                         <section id="quick-test" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your mental math skills through progressively challenging levels</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 140</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>What is the result of halving 36 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">36 × 25 = 700</div>
+                                    <div class="option" data-correct="true">36 × 25 = 900</div>
+                                    <div class="option" data-correct="false">36 × 25 = 625</div>
+                                    <div class="option" data-correct="false">36 × 25 = 850</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>Using halving and doubling, what is 24 × 50?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">2,400</div>
+                                    <div class="option" data-correct="true">1,200</div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>What is the product of 45 × 8 using doubling and halving?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">380</div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="true">360</div>
+                                    <div class="option" data-correct="false">320</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>Calculate 125 × 16 using the halving and doubling strategy.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">2,000</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                    <div class="option" data-correct="false">2,500</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>What is 35 × 12 using mental math (halving and doubling)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">350</div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="true">420</div>
+                                    <div class="option" data-correct="false">480</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>Halve 48 and double 50, then multiply. What is the answer?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="false">2,200</div>
+                                    <div class="option" data-correct="true">2,400</div>
+                                    <div class="option" data-correct="false">2,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>Using halving and doubling, what is 32 × 15?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">420</div>
+                                    <div class="option" data-correct="true">480</div>
+                                    <div class="option" data-correct="false">520</div>
+                                    <div class="option" data-correct="false">560</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>What is 125 × 24 using the halving and doubling method?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2,500</div>
+                                    <div class="option" data-correct="false">2,800</div>
+                                    <div class="option" data-correct="true">3,000</div>
+                                    <div class="option" data-correct="false">3,200</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>Calculate 56 × 25 using halving and doubling.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">1,400</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>Which of the following is a correct use of halving and doubling for 18 × 15?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">18 × 15 = 18 × 30</div>
+                                    <div class="option" data-correct="true">18 × 15 = 9 × 30</div>
+                                    <div class="option" data-correct="false">18 × 15 = 36 × 7.5</div>
+                                    <div class="option" data-correct="false">18 × 15 = 6 × 45</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>What is the result of doubling 45 and halving 8, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">180</div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="true">360</div>
+                                    <div class="option" data-correct="false">320</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>Which multiplication is easiest to solve using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 13</div>
+                                    <div class="option" data-correct="true">24 × 50</div>
+                                    <div class="option" data-correct="false">19 × 21</div>
+                                    <div class="option" data-correct="false">23 × 11</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>What is the product of 36 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">800</div>
+                                    <div class="option" data-correct="false">850</div>
+                                    <div class="option" data-correct="true">900</div>
+                                    <div class="option" data-correct="false">950</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>Which of these is a correct halving and doubling transformation for 24 × 50?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">24 × 50 = 48 × 25</div>
+                                    <div class="option" data-correct="true">24 × 50 = 12 × 100</div>
+                                    <div class="option" data-correct="false">24 × 50 = 6 × 200</div>
+                                    <div class="option" data-correct="false">24 × 50 = 24 × 25</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>What is the answer to 32 × 15 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">420</div>
+                                    <div class="option" data-correct="false">450</div>
+                                    <div class="option" data-correct="true">480</div>
+                                    <div class="option" data-correct="false">500</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>Which of these is a correct halving and doubling for 125 × 16?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">250 × 4</div>
+                                    <div class="option" data-correct="true">250 × 8</div>
+                                    <div class="option" data-correct="false">500 × 2</div>
+                                    <div class="option" data-correct="false">125 × 8</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>What is the result of halving 56 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">1,400</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>Which multiplication is best for the halving and doubling strategy?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 19</div>
+                                    <div class="option" data-correct="false">21 × 23</div>
+                                    <div class="option" data-correct="true">48 × 50</div>
+                                    <div class="option" data-correct="false">13 × 17</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>What is the answer to 18 × 15 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">250</div>
+                                    <div class="option" data-correct="false">300</div>
+                                    <div class="option" data-correct="true">270</div>
+                                    <div class="option" data-correct="false">320</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>Which of these is a correct halving and doubling for 35 × 12?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">35 × 12 = 17.5 × 24</div>
+                                    <div class="option" data-correct="true">35 × 12 = 70 × 6</div>
+                                    <div class="option" data-correct="false">35 × 12 = 140 × 3</div>
+                                    <div class="option" data-correct="false">35 × 12 = 35 × 6</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>What is the result of halving 36 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">700</div>
+                                    <div class="option" data-correct="true">900</div>
+                                    <div class="option" data-correct="false">625</div>
+                                    <div class="option" data-correct="false">850</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>Using halving and doubling, what is 48 × 50?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="true">2,400</div>
+                                    <div class="option" data-correct="false">2,800</div>
+                                    <div class="option" data-correct="false">2,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>What is the product of 32 × 15 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">420</div>
+                                    <div class="option" data-correct="true">480</div>
+                                    <div class="option" data-correct="false">520</div>
+                                    <div class="option" data-correct="false">560</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>Calculate 125 × 24 using the halving and doubling strategy.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2,500</div>
+                                    <div class="option" data-correct="true">3,000</div>
+                                    <div class="option" data-correct="false">2,800</div>
+                                    <div class="option" data-correct="false">3,200</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>What is 56 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">1,400</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>Which of these is a correct halving and doubling for 36 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">18 × 50</div>
+                                    <div class="option" data-correct="true">18 × 50</div>
+                                    <div class="option" data-correct="false">12 × 75</div>
+                                    <div class="option" data-correct="false">9 × 100</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>What is the result of doubling 24 and halving 50, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                    <div class="option" data-correct="true">1,200</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>Which multiplication is best for halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 19</div>
+                                    <div class="option" data-correct="true">48 × 50</div>
+                                    <div class="option" data-correct="false">23 × 11</div>
+                                    <div class="option" data-correct="false">21 × 13</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>What is the answer to 18 × 15 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">250</div>
+                                    <div class="option" data-correct="false">300</div>
+                                    <div class="option" data-correct="true">270</div>
+                                    <div class="option" data-correct="false">320</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>Which of these is a correct halving and doubling for 35 × 12?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">35 × 12 = 17.5 × 24</div>
+                                    <div class="option" data-correct="true">35 × 12 = 70 × 6</div>
+                                    <div class="option" data-correct="false">35 × 12 = 140 × 3</div>
+                                    <div class="option" data-correct="false">35 × 12 = 35 × 6</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>Halve 24 and double 50, then multiply. What is the answer?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                    <div class="option" data-correct="true">600</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">2,400</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>What is the result of halving 32 and doubling 15, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">420</div>
+                                    <div class="option" data-correct="true">240</div>
+                                    <div class="option" data-correct="false">480</div>
+                                    <div class="option" data-correct="false">320</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>Which of these is a correct halving and doubling for 125 × 24?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">250 × 12</div>
+                                    <div class="option" data-correct="true">250 × 12</div>
+                                    <div class="option" data-correct="false">500 × 6</div>
+                                    <div class="option" data-correct="false">125 × 48</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>What is the answer to 56 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">1,400</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>Which multiplication is best for the halving and doubling strategy?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 19</div>
+                                    <div class="option" data-correct="true">36 × 25</div>
+                                    <div class="option" data-correct="false">23 × 11</div>
+                                    <div class="option" data-correct="false">21 × 13</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>What is the answer to 24 × 50 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                    <div class="option" data-correct="true">1,200</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>Which of these is a correct halving and doubling for 45 × 8?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">90 × 2</div>
+                                    <div class="option" data-correct="true">90 × 4</div>
+                                    <div class="option" data-correct="false">45 × 16</div>
+                                    <div class="option" data-correct="false">22.5 × 16</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>What is the result of doubling 35 and halving 12, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="true">420</div>
+                                    <div class="option" data-correct="false">350</div>
+                                    <div class="option" data-correct="false">480</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>Which multiplication is easiest to solve using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 13</div>
+                                    <div class="option" data-correct="true">56 × 25</div>
+                                    <div class="option" data-correct="false">19 × 21</div>
+                                    <div class="option" data-correct="false">23 × 11</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>What is the answer to 125 × 16 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">2,000</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                    <div class="option" data-correct="false">2,500</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>What is the result of halving 48 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                    <div class="option" data-correct="true">1,200</div>
+                                    <div class="option" data-correct="false">2,400</div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>Using halving and doubling, what is 36 × 50?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="true">1,800</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>What is the product of 64 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="true">1,600</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>Calculate 28 × 50 using the halving and doubling strategy.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                    <div class="option" data-correct="true">1,400</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>What is 72 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="true">1,800</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>Which of these is a correct halving and doubling for 32 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">16 × 100</div>
+                                    <div class="option" data-correct="true">16 × 50</div>
+                                    <div class="option" data-correct="false">8 × 200</div>
+                                    <div class="option" data-correct="false">32 × 50</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>What is the answer to 40 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">900</div>
+                                    <div class="option" data-correct="false">800</div>
+                                    <div class="option" data-correct="true">1,000</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>Which multiplication is best for the halving and doubling strategy?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 21</div>
+                                    <div class="option" data-correct="false">19 × 23</div>
+                                    <div class="option" data-correct="true">48 × 25</div>
+                                    <div class="option" data-correct="false">13 × 17</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>What is the result of doubling 36 and halving 50, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">900</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>Which of these is a correct halving and doubling for 56 × 50?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">28 × 25</div>
+                                    <div class="option" data-correct="true">28 × 100</div>
+                                    <div class="option" data-correct="false">56 × 25</div>
+                                    <div class="option" data-correct="false">14 × 200</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>What is the answer to 80 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">2,000</div>
+                                    <div class="option" data-correct="false">2,400</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>Which multiplication is easiest to solve using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 13</div>
+                                    <div class="option" data-correct="false">19 × 21</div>
+                                    <div class="option" data-correct="true">64 × 25</div>
+                                    <div class="option" data-correct="false">23 × 11</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>What is the result of halving 72 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="true">1,800</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>Using halving and doubling, what is 56 × 50?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">2,800</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>What is the product of 28 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">600</div>
+                                    <div class="option" data-correct="false">800</div>
+                                    <div class="option" data-correct="true">700</div>
+                                    <div class="option" data-correct="false">900</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>Which of these is a correct halving and doubling for 64 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">32 × 25</div>
+                                    <div class="option" data-correct="false">16 × 50</div>
+                                    <div class="option" data-correct="true">32 × 50</div>
+                                    <div class="option" data-correct="false">64 × 50</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>What is the answer to 48 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="true">1,200</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>Which multiplication is best for the halving and doubling strategy?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 19</div>
+                                    <div class="option" data-correct="false">23 × 11</div>
+                                    <div class="option" data-correct="true">80 × 25</div>
+                                    <div class="option" data-correct="false">21 × 13</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>What is the result of doubling 28 and halving 50, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="true">700</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>Which of these is a correct halving and doubling for 40 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20 × 25</div>
+                                    <div class="option" data-correct="true">20 × 50</div>
+                                    <div class="option" data-correct="false">40 × 50</div>
+                                    <div class="option" data-correct="false">10 × 100</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>What is the answer to 28 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">800</div>
+                                    <div class="option" data-correct="false">900</div>
+                                    <div class="option" data-correct="true">700</div>
+                                    <div class="option" data-correct="false">600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>Which of these is a correct halving and doubling for 64 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">16 × 25</div>
+                                    <div class="option" data-correct="true">32 × 50</div>
+                                    <div class="option" data-correct="false">64 × 50</div>
+                                    <div class="option" data-correct="false">8 × 100</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>What is the result of doubling 40 and halving 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">800</div>
+                                    <div class="option" data-correct="true">1,000</div>
+                                    <div class="option" data-correct="false">900</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>Using halving and doubling, what is 72 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">1,800</div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>Which multiplication is best for the halving and doubling strategy?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">19 × 23</div>
+                                    <div class="option" data-correct="true">64 × 25</div>
+                                    <div class="option" data-correct="false">17 × 21</div>
+                                    <div class="option" data-correct="false">13 × 17</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>What is the answer to 56 × 50 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2,400</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">2,800</div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>Which of these is a correct halving and doubling for 80 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">40 × 25</div>
+                                    <div class="option" data-correct="true">40 × 50</div>
+                                    <div class="option" data-correct="false">20 × 100</div>
+                                    <div class="option" data-correct="false">80 × 50</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>What is the result of halving 64 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">800</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>Using halving and doubling, what is 48 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="true">1,200</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>Which multiplication is easiest to solve using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 19</div>
+                                    <div class="option" data-correct="false">21 × 13</div>
+                                    <div class="option" data-correct="true">80 × 25</div>
+                                    <div class="option" data-correct="false">23 × 11</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>What is the result of doubling 28 and halving 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">700</div>
+                                    <div class="option" data-correct="false">800</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>Which of these is a correct halving and doubling for 72 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">36 × 25</div>
+                                    <div class="option" data-correct="true">36 × 50</div>
+                                    <div class="option" data-correct="false">18 × 100</div>
+                                    <div class="option" data-correct="false">72 × 50</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>What is the answer to 32 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">800</div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>Which multiplication is best for the halving and doubling strategy?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">19 × 23</div>
+                                    <div class="option" data-correct="false">17 × 21</div>
+                                    <div class="option" data-correct="true">56 × 50</div>
+                                    <div class="option" data-correct="false">13 × 17</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>What is the result of halving 80 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">1,000</div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>Using halving and doubling, what is 64 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">1,600</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>Which of these is a correct halving and doubling for 56 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">28 × 25</div>
+                                    <div class="option" data-correct="true">28 × 50</div>
+                                    <div class="option" data-correct="false">14 × 100</div>
+                                    <div class="option" data-correct="false">56 × 50</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>What is the answer to 40 × 50 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">2,000</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>Which multiplication is easiest to solve using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">19 × 23</div>
+                                    <div class="option" data-correct="true">72 × 25</div>
+                                    <div class="option" data-correct="false">17 × 21</div>
+                                    <div class="option" data-correct="false">13 × 17</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>What is the result of doubling 32 and halving 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">800</div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>What is the answer to 36 × 50 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">1,800</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>Which of these is a correct halving and doubling for 64 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">16 × 100</div>
+                                    <div class="option" data-correct="true">32 × 50</div>
+                                    <div class="option" data-correct="false">64 × 50</div>
+                                    <div class="option" data-correct="false">8 × 200</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>What is the result of halving 72 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                    <div class="option" data-correct="true">1,800</div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>Using halving and doubling, what is 40 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">800</div>
+                                    <div class="option" data-correct="true">1,000</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">900</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>Which multiplication is best for the halving and doubling strategy?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">19 × 23</div>
+                                    <div class="option" data-correct="true">72 × 25</div>
+                                    <div class="option" data-correct="false">13 × 17</div>
+                                    <div class="option" data-correct="false">17 × 21</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>What is the result of doubling 56 and halving 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">1,400</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>Which of these is a correct halving and doubling for 48 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">24 × 25</div>
+                                    <div class="option" data-correct="true">24 × 50</div>
+                                    <div class="option" data-correct="false">12 × 100</div>
+                                    <div class="option" data-correct="false">48 × 50</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>What is the answer to 28 × 50 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">1,400</div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>Which multiplication is easiest to solve using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 19</div>
+                                    <div class="option" data-correct="true">32 × 25</div>
+                                    <div class="option" data-correct="false">19 × 23</div>
+                                    <div class="option" data-correct="false">21 × 13</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>What is the result of halving 40 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">800</div>
+                                    <div class="option" data-correct="true">1,000</div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="false">900</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>Using halving and doubling, what is 56 × 50?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="true">2,800</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">2,400</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>Which of these is a correct halving and doubling for 72 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">18 × 100</div>
+                                    <div class="option" data-correct="true">36 × 50</div>
+                                    <div class="option" data-correct="false">72 × 50</div>
+                                    <div class="option" data-correct="false">36 × 25</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>What is the answer to 48 × 50 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="true">2,400</div>
+                                    <div class="option" data-correct="false">2,800</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>Which multiplication is best for the halving and doubling strategy?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">19 × 23</div>
+                                    <div class="option" data-correct="true">56 × 50</div>
+                                    <div class="option" data-correct="false">13 × 17</div>
+                                    <div class="option" data-correct="false">17 × 21</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>What is the result of doubling 32 and halving 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">800</div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>Using halving and doubling, what is 80 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">2,000</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                    <div class="option" data-correct="false">2,400</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>Which of these is a correct halving and doubling for 56 × 25?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">14 × 100</div>
+                                    <div class="option" data-correct="true">28 × 50</div>
+                                    <div class="option" data-correct="false">56 × 50</div>
+                                    <div class="option" data-correct="false">28 × 25</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>What is the answer to 64 × 25 using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">1,600</div>
+                                    <div class="option" data-correct="false">1,800</div>
+                                    <div class="option" data-correct="false">1,400</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>Which multiplication is easiest to solve using halving and doubling?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">17 × 19</div>
+                                    <div class="option" data-correct="true">40 × 25</div>
+                                    <div class="option" data-correct="false">19 × 23</div>
+                                    <div class="option" data-correct="false">21 × 13</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>What is the result of halving 80 and doubling 25, then multiplying?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,600</div>
+                                    <div class="option" data-correct="true">1,000</div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="false">1,200</div>
                                 </div>
                             </div>
                         </section>
@@ -589,26 +1546,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -617,14 +1582,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -634,25 +1600,37 @@
             </div>
         </footer>
 
-         <!-- Scripts -->
-         <script src="../../js/math-challenge-read-write-numbers.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/read-write-numbers.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
