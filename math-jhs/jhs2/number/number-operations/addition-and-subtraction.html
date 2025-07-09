@@ -18,7 +18,7 @@
         <meta property="og:title" content="Add and Subtract Large Numbers | JHS2 Mathematics">
         <meta property="og:description" content="Learn to Add and Subtract Large Numbers Using Partitioning and Place Value System">
         <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-and-numeration-system/add-subtract-large-numbers">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-operations/add-subtract-large-numbers">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/read-write-numbers.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -63,12 +67,6 @@
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
     </head>
     <body>
         <!-- Header Navigation -->

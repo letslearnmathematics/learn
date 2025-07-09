@@ -469,7 +469,7 @@ document.addEventListener("DOMContentLoaded", function() {
             "Number Operations": [
                 { name: "Multiply & Divide By Powers of 10", url: "./jhs2/number/number-operations/multiply-and-divide-by-powers-of-10" },
                 { name: "Halving & Doubling Technique", url: "./jhs2/number/number-operations/halving-and-doubling" },
-                { name: "Products (Word Problems)", url: "./jhs2/number/number-operations/products-word-problems" },
+                /*{ name: "Products (Word Problems)", url: "./jhs2/number/number-operations/products-word-problems" },*/
                 { name: "Addition & Subtraction", url: "./jhs2/number/number-operations/addition-and-subtraction" },
                 { name: "Multiplication & Division", url: "./jhs2/number/number-operations/multiplication-and-division" },
                 { name: "Operations (Word Problems)", url: "./jhs2/number/number-operations/operations-word-problems" },
