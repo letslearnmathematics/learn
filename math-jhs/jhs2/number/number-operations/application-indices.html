@@ -18,7 +18,7 @@
         <meta property="og:title" content="Laws of Indices | JHS2 Mathematics">
         <meta property="og:description" content="Learn to Apply the Laws of Indices to Simplify and Evaluate Numbers Involving Powers">
         <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/laws-of-indices">
+        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/number-operations/application-indices">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -27,14 +27,27 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
-        <link rel="stylesheet" href="../../css/read-write-numbers.css">
+        <link rel="stylesheet" href="../../css/laws-of-indices.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -63,12 +67,6 @@
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
     </head>
     <body>
         <!-- Header Navigation -->
@@ -85,7 +83,7 @@
                         </a>
                     </div>
                     
-                    <h1 class="lesson-title">Laws of Indices</h1>
+                    <h1 class="lesson-title">Indices</h1>
                     
                     <nav class="main-nav">
                         <ul class="nav-list">
@@ -112,10 +110,10 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">JHS 2: Number & Numeration System</h3>
+                            <h3 class="sidebar-title">JHS 2: Number Operations</h3>
                             <div class="current-topic">
                                 <i class="fas fa-project-diagram"></i>
-                                <span>Laws of Indices</span>
+                                <span>Indices (Applications)</span>
                             </div>
                             <ul class="topic-menu">
                                 <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
@@ -349,6 +347,8 @@
                             </div>
                         </section>
 
+                        <br><br>
+
                         <!-- Simplification Section -->
                         <section id="simplification" class="lesson-section">
                             <h2 class="section-title">
@@ -378,9 +378,9 @@
                                             <p><strong>Solution:</strong></p>
                                             \[ 
                                             \begin{align*}
-                                            \frac{2^5 \times 2^3}{2^4} &= \frac{2^{5+3}}{2^4} \quad \text{(Multiplication law)} \\
+                                            \frac{2^5 \times 2^3}{2^4} &= \frac{2^{5+3}}{2^4} \\
                                             &= \frac{2^8}{2^4} \\
-                                            &= 2^{8-4} \quad \text{(Division law)} \\
+                                            &= 2^{8-4} \\
                                             &= 2^4 \\
                                             &= 16
                                             \end{align*}
@@ -392,9 +392,9 @@
                                             <p><strong>Solution:</strong></p>
                                             \[ 
                                             \begin{align*}
-                                            (3^2 \times 3^4)^3 &= (3^{2+4})^3 \quad \text{(Multiplication law)} \\
+                                            (3^2 \times 3^4)^3 &= (3^{2+4})^3 \\
                                             &= (3^6)^3 \\
-                                            &= 3^{6 \times 3} \quad \text{(Power of a power law)} \\
+                                            &= 3^{6 \times 3} \\
                                             &= 3^{18}
                                             \end{align*}
                                             \]
@@ -468,6 +468,8 @@
                                 </a>
                             </div>
                         </section>
+
+                        <br><br>
 
                         <!-- Evaluation Section -->
                         <section id="evaluation" class="lesson-section">
@@ -583,6 +585,8 @@
                             </div>
                         </section>
 
+                        <br><br>
+
                         <!-- PEDMAS Section -->
                         <section id="pedmas" class="lesson-section">
                             <h2 class="section-title">
@@ -595,7 +599,7 @@
                                 </h3>
                                 <p>
                                     When simplifying and evaluating expressions with indices, we must follow the correct 
-                                    order of operations (PEDMAS):
+                                    order of operations (PEDMAS) or BODMAS:
                                 </p>
                                 <ol>
                                     <li><strong>P</strong>arentheses</li>
@@ -618,9 +622,9 @@
                                             <p><strong>Solution:</strong></p>
                                             \[ 
                                             \begin{align*}
-                                            2 \times 3^2 + 4 &= 2 \times 9 + 4 \quad \text{(Exponents first)} \\
-                                            &= 18 + 4 \quad \text{(Multiplication next)} \\
-                                            &= 22 \quad \text{(Addition last)}
+                                            2 \times 3^2 + 4 &= 2 \times 9 + 4  \\
+                                            &= 18 + 4  \\
+                                            &= 22
                                             \end{align*}
                                             \]
                                         </div>
@@ -630,10 +634,10 @@
                                             <p><strong>Solution:</strong></p>
                                             \[ 
                                             \begin{align*}
-                                            (2 + 3)^2 \times 4 - 5 &= 5^2 \times 4 - 5 \quad \text{(Parentheses first)} \\
-                                            &= 25 \times 4 - 5 \quad \text{(Exponents next)} \\
-                                            &= 100 - 5 \quad \text{(Multiplication next)} \\
-                                            &= 95 \quad \text{(Subtraction last)}
+                                            (2 + 3)^2 \times 4 - 5 &= 5^2 \times 4 - 5  \\
+                                            &= 25 \times 4 - 5 \\
+                                            &= 100 - 5 \\
+                                            &= 95 
                                             \end{align*}
                                             \]
                                         </div>
@@ -657,9 +661,9 @@
                                     <div class="solution">
                                         \[ 
                                         \begin{align*}
-                                        3 + 2 \times 4^2 &= 3 + 2 \times 16 \quad \text{(Exponents first)} \\
-                                        &= 3 + 32 \quad \text{(Multiplication next)} \\
-                                        &= 35 \quad \text{(Addition last)}
+                                        3 + 2 \times 4^2 &= 3 + 2 \times 16  \\
+                                        &= 3 + 32  \\
+                                        &= 35 
                                         \end{align*}
                                         \]
                                     </div>
@@ -671,10 +675,10 @@
                                     <div class="solution">
                                         \[ 
                                         \begin{align*}
-                                        (5 - 2)^3 \times 2 + 10 &= 3^3 \times 2 + 10 \quad \text{(Parentheses first)} \\
-                                        &= 27 \times 2 + 10 \quad \text{(Exponents next)} \\
-                                        &= 54 + 10 \quad \text{(Multiplication next)} \\
-                                        &= 64 \quad \text{(Addition last)}
+                                        (5 - 2)^3 \times 2 + 10 &= 3^3 \times 2 + 10 \\
+                                        &= 27 \times 2 + 10 \\
+                                        &= 54 + 10  \\
+                                        &= 64 
                                         \end{align*}
                                         \]
                                     </div>
@@ -686,10 +690,10 @@
                                     <div class="solution">
                                         \[ 
                                         \begin{align*}
-                                        \frac{2^3 \times 3^2}{6} + 5 &= \frac{8 \times 9}{6} + 5 \quad \text{(Exponents first)} \\
-                                        &= \frac{72}{6} + 5 \quad \text{(Multiplication next)} \\
-                                        &= 12 + 5 \quad \text{(Division next)} \\
-                                        &= 17 \quad \text{(Addition last)}
+                                        \frac{2^3 \times 3^2}{6} + 5 &= \frac{8 \times 9}{6} + 5  \\
+                                        &= \frac{72}{6} + 5  \\
+                                        &= 12 + 5  \\
+                                        &= 17 
                                         \end{align*}
                                         \]
                                     </div>
@@ -704,27 +708,1611 @@
                             </div>
                         </section>
 
-                        <!-- Speed Test Game -->
-                        <section id="quick-test" class="lesson-section">
+                        <br><br>
+
+                        <!-- Test Instructions -->
+                        <section id="instructions" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Section A - Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 140</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>What is \(5^2 \times 5^3\) simplified using the multiplication law?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">\(5^5\)</div>
+                                    <div class="option" data-correct="false">\(5^6\)</div>
+                                    <div class="option" data-correct="false">\(25^5\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>Simplify \(\dfrac{7^4}{7^2}\) using the division law</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\(7^2\)</div>
+                                    <div class="option" data-correct="false">\(7^6\)</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">\(7^8\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>What is \((2^3)^2\) simplified using the power law?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2^5\)</div>
+                                    <div class="option" data-correct="true">\(2^6\)</div>
+                                    <div class="option" data-correct="false">\(2^9\)</div>
+                                    <div class="option" data-correct="false">\(4^6\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>According to the zero index law, what is \(9^0\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">Undefined</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>What is \(4^{-2}\) equivalent to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">-16</div>
+                                    <div class="option" data-correct="true">\(\dfrac{1}{16}\)</div>
+                                    <div class="option" data-correct="false">-8</div>
+                                    <div class="option" data-correct="false">\(\dfrac{1}{8}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>Simplify \(8^{\frac{1}{3}}\) using the fractional index law</p>
+                                    </div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">\(\dfrac{8}{3}\)</div>
+                                    <div class="option" data-correct="false">24</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>What is \(3 \times 3^4\) simplified?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3^4\)</div>
+                                    <div class="option" data-correct="true">\(3^5\)</div>
+                                    <div class="option" data-correct="false">\(9^4\)</div>
+                                    <div class="option" data-correct="false">\(12^4\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>Simplify \(\dfrac{x^5}{x^2}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\(x^3\)</div>
+                                    <div class="option" data-correct="false">\(x^{2.5}\)</div>
+                                    <div class="option" data-correct="false">\(x^7\)</div>
+                                    <div class="option" data-correct="false">\(x^{10}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>What is \((5^2)^0\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">25</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>Express \(\dfrac{1}{2^3}\) using negative indices</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2^{-1}\)</div>
+                                    <div class="option" data-correct="false">\(2^{-2}\)</div>
+                                    <div class="option" data-correct="true">\(2^{-3}\)</div>
+                                    <div class="option" data-correct="false">\(3^{-2}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>What is \(\sqrt{25}\) expressed with fractional indices?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(25^1\)</div>
+                                    <div class="option" data-correct="false">\(25^2\)</div>
+                                    <div class="option" data-correct="true">\(25^{0.5}\)</div>
+                                    <div class="option" data-correct="false">\(25^{-1}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>Simplify \(10^6 \div 10^4\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">\(10^2\)</div>
+                                    <div class="option" data-correct="false">\(10^{10}\)</div>
+                                    <div class="option" data-correct="false">1000</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>What is \(y^0 \times y^5\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">\(y^5\)</div>
+                                    <div class="option" data-correct="false">\(y^6\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>Express \(\dfrac{1}{5}\) using negative indices</p>
+                                    </div>
+                                    <div class="option" data-correct="false">-5</div>
+                                    <div class="option" data-correct="true">\(5^{-1}\)</div>
+                                    <div class="option" data-correct="false">\(-5^1\)</div>
+                                    <div class="option" data-correct="false">\(1^{-5}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>What is \(\sqrt[3]{8}\) in index notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(8^1\)</div>
+                                    <div class="option" data-correct="false">\(8^2\)</div>
+                                    <div class="option" data-correct="true">\(8^{\frac{1}{3}}\)</div>
+                                    <div class="option" data-correct="false">\(8^{-\frac{1}{3}}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>Simplify \((a^3)^2 \times a^4\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(a^6\)</div>
+                                    <div class="option" data-correct="false">\(a^9\)</div>
+                                    <div class="option" data-correct="true">\(a^{10}\)</div>
+                                    <div class="option" data-correct="false">\(a^{24}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>What is \(6^3 \div 6^3\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">\(6^6\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>Express \(\sqrt{x}\) using fractional indices</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(x^2\)</div>
+                                    <div class="option" data-correct="false">\(x^{-1}\)</div>
+                                    <div class="option" data-correct="true">\(x^{\frac{1}{2}}\)</div>
+                                    <div class="option" data-correct="false">\(x^{-\frac{1}{2}}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>Simplify \(2^4 \times 2^{-2}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\(2^2\)</div>
+                                    <div class="option" data-correct="false">\(2^6\)</div>
+                                    <div class="option" data-correct="false">\(4^2\)</div>
+                                    <div class="option" data-correct="false">\(8^{-8}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>What is \(100^{\frac{1}{2}}\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="true">10</div>
+                                    <div class="option" data-correct="false">\(\dfrac{1}{100}\)</div>
+                                    <div class="option" data-correct="false">200</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>Simplify \((3^2 \times 3^4) \div 3^3\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3^2\)</div>
+                                    <div class="option" data-correct="true">\(3^3\)</div>
+                                    <div class="option" data-correct="false">\(3^4\)</div>
+                                    <div class="option" data-correct="false">\(3^5\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>What is \((5^3)^2 \div 5^4\) simplified?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(5^1\)</div>
+                                    <div class="option" data-correct="true">\(5^2\)</div>
+                                    <div class="option" data-correct="false">\(5^6\)</div>
+                                    <div class="option" data-correct="false">\(5^{10}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>Simplify \(\dfrac{2^5 \times 2^3}{2^4 \times 2^2}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2^0\)</div>
+                                    <div class="option" data-correct="false">\(2^1\)</div>
+                                    <div class="option" data-correct="true">\(2^2\)</div>
+                                    <div class="option" data-correct="false">\(2^3\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>What is \((4^{-2})^{-1}\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(4^{-2}\)</div>
+                                    <div class="option" data-correct="false">\(4^0\)</div>
+                                    <div class="option" data-correct="true">\(4^2\)</div>
+                                    <div class="option" data-correct="false">\(4^{-1}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>Simplify \(8^{\frac{2}{3}}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">16</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>What is \(\dfrac{3^{-2} \times 3^5}{3^2}\) simplified?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3^{-4}\)</div>
+                                    <div class="option" data-correct="true">\(3^1\)</div>
+                                    <div class="option" data-correct="false">\(3^2\)</div>
+                                    <div class="option" data-correct="false">\(3^3\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>Simplify \((x^4 y^3)^2 \div (x^2 y)^3\)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\(x^2 y^3\)</div>
+                                    <div class="option" data-correct="false">\(x^4 y^6\)</div>
+                                    <div class="option" data-correct="false">\(x^8 y^9\)</div>
+                                    <div class="option" data-correct="false">\(x^{10} y^3\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>What is \(16^{-\frac{1}{2}}\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">-4</div>
+                                    <div class="option" data-correct="true">\(\dfrac{1}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\dfrac{1}{8}\)</div>
+                                    <div class="option" data-correct="false">\(-\dfrac{1}{16}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>Simplify \(\left(\dfrac{2^3}{2^{-2}}\right)^2\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2^2\)</div>
+                                    <div class="option" data-correct="false">\(2^5\)</div>
+                                    <div class="option" data-correct="true">\(2^{10}\)</div>
+                                    <div class="option" data-correct="false">\(2^{12}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>What is \(\sqrt[4]{81}\) expressed with fractional indices?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(81^2\)</div>
+                                    <div class="option" data-correct="true">\(81^{\frac{1}{4}}\)</div>
+                                    <div class="option" data-correct="false">\(81^{-4}\)</div>
+                                    <div class="option" data-correct="false">\(81^{\frac{1}{2}}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>Simplify \((a^{-3}b^2)^{-2} \times (a^2 b^{-1})^3\)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\(a^{10}b^{-7}\)</div>
+                                    <div class="option" data-correct="false">\(a^2b^1\)</div>
+                                    <div class="option" data-correct="false">\(a^{-6}b^{-4}\)</div>
+                                    <div class="option" data-correct="false">\(a^{-10}b^7\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>What is \(125^{\frac{2}{3}}\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">250</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>Simplify \(\dfrac{(3x^2 y)^3}{(9xy^2)^2}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\(3x^4 y^{-1}\)</div>
+                                    <div class="option" data-correct="false">\(x^4 y^{-1}\)</div>
+                                    <div class="option" data-correct="false">\(3x^4 y^7\)</div>
+                                    <div class="option" data-correct="false">\(\dfrac{x^4}{y}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>What is \((2^{-1} + 3^0)^{-1}\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>Simplify \(\sqrt{32^{\frac{2}{5}}}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">16</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>What is \(\left(\frac{x^{-2}}{y^3}\right)^{-3}\) simplified?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(x^{-6}y^{-9}\)</div>
+                                    <div class="option" data-correct="false">\(x^6y^{-9}\)</div>
+                                    <div class="option" data-correct="false">\(x^{-5}y^0\)</div>
+                                    <div class="option" data-correct="true">\(x^6y^9\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>Simplify \((0.25)^{-\frac{1}{2}}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.5</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">16</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>What is \(\frac{5^{n+2} - 5^{n+1}}{5^n}\) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">\(5^n\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>Simplify \(\left(\frac{8}{27}\right)^{-\frac{2}{3}}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{9}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{9}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>What is \((2^a \times 4^b \times 8^c)^{\frac{1}{3}}\) simplified?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2^{a+b+c}\)</div>
+                                    <div class="option" data-correct="true">\(2^{\frac{a+2b+3c}{3}}\)</div>
+                                    <div class="option" data-correct="false">\(8^{\frac{a+b+c}{3}}\)</div>
+                                    <div class="option" data-correct="false">\(2^{3a+6b+9c}\)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>Simplify $\left(\frac{8x^6 y^{-3}}{27x^{-9} y^6}\right)^{-\frac{1}{3}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">$\frac{3x^5}{2y^3}$</div>
+                                    <div class="option" data-correct="false">$\frac{2y^3}{3x^5}$</div>
+                                    <div class="option" data-correct="false">$\frac{9x^5}{4y^3}$</div>
+                                    <div class="option" data-correct="false">$\frac{3x^{-5}}{2y^{-3}}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>If $2^x = 8^{y+1}$ and $3^y = 27^{x-1}$, what is $x+y$?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">$\frac{9}{5}$</div>
+                                    <div class="option" data-correct="false">$\frac{12}{7}$</div>
+                                    <div class="option" data-correct="false">$\frac{15}{8}$</div>
+                                    <div class="option" data-correct="false">$\frac{21}{11}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>Simplify $\frac{(2^{n+3} - 2^{n+1})}{2^{n-1}}$ to its simplest form</p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="true">12</div>
+                                    <div class="option" data-correct="false">14</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>Solve for x: $9^{x-1} = \left(\frac{1}{27}\right)^{2x-3}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$\frac{7}{8}$</div>
+                                    <div class="option" data-correct="false">$\frac{5}{6}$</div>
+                                    <div class="option" data-correct="true">$\frac{11}{12}$</div>
+                                    <div class="option" data-correct="false">$\frac{9}{10}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>Express $\sqrt[5]{\frac{x^{10}}{y^{-15}}}$ in simplified index form</p>
+                                    </div>
+                                    <div class="option" data-correct="true">$x^2 y^3$</div>
+                                    <div class="option" data-correct="false">$x^5 y^{15}$</div>
+                                    <div class="option" data-correct="false">$x^{-2} y^{-3}$</div>
+                                    <div class="option" data-correct="false">$x^{\frac{1}{2}} y^{\frac{1}{3}}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>If $5^{2x} \times 25^{3x-1} = 125^{x+2}$, find x</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">$\frac{5}{4}$</div>
+                                    <div class="option" data-correct="false">$\frac{7}{5}$</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>Simplify $\left(\frac{a^{-\frac{3}{2}} b^{\frac{1}{4}}}{a^{\frac{1}{2}} b^{-\frac{3}{4}}}\right)^{-4}$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">$a^8 b^4$</div>
+                                    <div class="option" data-correct="false">$a^{-8} b^{-4}$</div>
+                                    <div class="option" data-correct="false">$a^4 b^8$</div>
+                                    <div class="option" data-correct="false">$\frac{a^4}{b^8}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>What is the value of $\frac{4^{x+3} - 4^{x+1}}{4^{x-1}}$ when simplified?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="true">60</div>
+                                    <div class="option" data-correct="false">120</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>If $\sqrt[x]{8} = 2^y$ and $\sqrt[y]{81} = 3^x$, find $x+y$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">8</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>Simplify $\left(\frac{x^{-2} y^3 z^{-1}}{x^3 y^{-2} z}\right)^{-2} \times \left(\frac{x y^{-1}}{z^2}\right)^3$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">$x^{13} y^{-12} z^{-1}$</div>
+                                    <div class="option" data-correct="false">$x^5 y^{-4} z^7$</div>
+                                    <div class="option" data-correct="false">$x^{-5} y^4 z^{-7}$</div>
+                                    <div class="option" data-correct="false">$x^{-13} y^{12} z^1$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>Find x if $\frac{16^{x}}{8^{x-1}} = 4^{x+2}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$\frac{3}{2}$</div>
+                                    <div class="option" data-correct="false">$\frac{5}{3}$</div>
+                                    <div class="option" data-correct="true">$\frac{7}{4}$</div>
+                                    <div class="option" data-correct="false">$\frac{9}{5}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>Simplify $\frac{(3a^2 b^{-3})^{-2} \times (2a^{-1} b^2)^3}{(6a^{-2} b)^2}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$\frac{8a^4}{27b^{14}}$</div>
+                                    <div class="option" data-correct="false">$\frac{27b^{14}}{8a^4}$</div>
+                                    <div class="option" data-correct="true">$\frac{8b^{14}}{27a^4}$</div>
+                                    <div class="option" data-correct="false">$\frac{27a^4}{8b^{14}}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>If $2^{x} = 3^{y} = 6^{-z}$, express $\frac{1}{x} + \frac{1}{y}$ in terms of z</p>
+                                    </div>
+                                    <div class="option" data-correct="false">z</div>
+                                    <div class="option" data-correct="true">-z</div>
+                                    <div class="option" data-correct="false">$\frac{1}{z}$</div>
+                                    <div class="option" data-correct="false">$-\frac{1}{z}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>Simplify $\left(\frac{8^{0.5} \times 16^{-\frac{1}{4}}}{32^{\frac{1}{5}}}\right)^{10}$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">$\frac{1}{4}$</div>
+                                    <div class="option" data-correct="false">$\frac{1}{2}$</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>Find the value of $\frac{5^{n+2} - 6 \times 5^{n+1}}{9 \times 5^n - 5^{n+1}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">-5</div>
+                                    <div class="option" data-correct="false">$\frac{5}{4}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>If $x = 2^{\frac{1}{3}} + 2^{-\frac{1}{3}}$, what is $2x^3 - 6x$?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">6</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>Simplify $\frac{(a^{2n+1} \times a^{3-2n})^3}{(a^{n-2} \times a^{5-n})^2}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$a^8$</div>
+                                    <div class="option" data-correct="true">$a^{10}$</div>
+                                    <div class="option" data-correct="false">$a^{12}$</div>
+                                    <div class="option" data-correct="false">$a^{14}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>Solve the equation $9 \times 3^{x} = 4^{x} + 10 \times 2^{x}$ for x</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>If $5^{2x-y} = 100$ and $2^{x+y} = 32$, find $x^2 + y^2$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">13</div>
+                                    <div class="option" data-correct="false">17</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>Simplify $\left(\frac{x^{a+b}}{x^{a-b}}\right)^{\frac{1}{2a}} \times \left(\frac{x^{2b}}{x^{-2a}}\right)^{\frac{1}{2b}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">$x^{1+\frac{a}{b}}$</div>
+                                    <div class="option" data-correct="false">$x^{2}$</div>
+                                    <div class="option" data-correct="false">$x^{1+\frac{b}{a}}$</div>
+                                    <div class="option" data-correct="false">$x^{\frac{a+b}{ab}}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>Simplify $\left(\frac{27^{n+1} \times 9^{n-1}}{81^{n-2}}\right)^{\frac{1}{4}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$3^{n-1}$</div>
+                                    <div class="option" data-correct="true">$3^{n+1}$</div>
+                                    <div class="option" data-correct="false">$9^{n-1}$</div>
+                                    <div class="option" data-correct="false">$9^{n+1}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>If $2^{x} = 3^{y} = 6^{z}$, express $z$ in terms of $x$ and $y$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$\frac{x+y}{xy}$</div>
+                                    <div class="option" data-correct="false">$\frac{xy}{x+y}$</div>
+                                    <div class="option" data-correct="true">$\frac{x+y}{2xy}$</div>
+                                    <div class="option" data-correct="false">$\frac{2xy}{x+y}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>Simplify $\frac{(x^{a-b})^{a+b} \times (x^{b-c})^{b+c} \times (x^{c-a})^{c+a}}{(x^{a^2} \times x^{b^2} \times x^{c^2})}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$x^{a+b+c}$</div>
+                                    <div class="option" data-correct="false">$x^{ab+bc+ca}$</div>
+                                    <div class="option" data-correct="false">$x^{a^2+b^2+c^2}$</div>
+                                    <div class="option" data-correct="true">1</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>Solve for x: $4^{x} + 6^{x} = 9^{x}$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">$\log_{\frac{2}{3}}\left(\frac{\sqrt{5}-1}{2}\right)$</div>
+                                    <div class="option" data-correct="false">$\log_{\frac{3}{2}}\left(\frac{1+\sqrt{5}}{2}\right)$</div>
+                                    <div class="option" data-correct="false">$\log_{\frac{3}{2}}\left(\frac{\sqrt{5}-1}{2}\right)$</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>Simplify $\left(\frac{a^{\frac{1}{x-y}} \times a^{\frac{1}{y-z}} \times a^{\frac{1}{z-x}}}{a^{\frac{2}{x-y}} \times a^{\frac{2}{y-z}} \times a^{\frac{2}{z-x}}}\right)^{\frac{1}{3}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$a^{-\frac{1}{x-y-z}}$</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">$a^{\frac{1}{3(x+y+z)}}$</div>
+                                    <div class="option" data-correct="false">$a^{-\frac{1}{3}}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>If $x = 2^{\frac{1}{3}} + 2^{-\frac{1}{3}}$, what is the value of $x^3 - 3x$?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>Simplify $\frac{(a^{x+y})^{x-y} \times (a^{y+z})^{y-z} \times (a^{z+x})^{z-x}}}{a^{x^2+y^2+z^2}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$a^{xy+yz+zx}$</div>
+                                    <div class="option" data-correct="false">$a^{x+y+z}$</div>
+                                    <div class="option" data-correct="false">$a^{x^2+y^2+z^2}$</div>
+                                    <div class="option" data-correct="true">1</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>Solve the system: $2^{x} \times 3^{y} = 72$ and $2^{y} \times 3^{x} = 108$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">x=2, y=1</div>
+                                    <div class="option" data-correct="false">x=1, y=2</div>
+                                    <div class="option" data-correct="false">x=3, y=2</div>
+                                    <div class="option" data-correct="false">x=2, y=3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>Simplify $\left(\frac{x^{a^2}}{x^{b^2}}\right)^{\frac{1}{a+b}} \times \left(\frac{x^{b^2}}{x^{c^2}}\right)^{\frac{1}{b+c}} \times \left(\frac{x^{c^2}}{x^{a^2}}\right)^{\frac{1}{c+a}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">x</div>
+                                    <div class="option" data-correct="false">$x^{a+b+c}$</div>
+                                    <div class="option" data-correct="false">$x^{abc}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>If $a = 2^{\frac{1}{3}} + 2^{-\frac{1}{3}}$, then $a^3 - 3a$ equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>Simplify $\frac{(a^{m+n})^{m-n} \times (a^{n+p})^{n-p} \times (a^{p+m})^{p-m}}}{a^{2(m^2+n^2+p^2)}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$a^{mn+np+pm}$</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">$a^{m+n+p}$</div>
+                                    <div class="option" data-correct="false">$a^{-(m^2+n^2+p^2)}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>Solve for x: $8^{x} - 9^{x} + 2 \times 12^{x} - 6^{x} \times 4^{x} = 0$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">x=0 or x=1</div>
+                                    <div class="option" data-correct="false">x=1 or x=2</div>
+                                    <div class="option" data-correct="false">x=0 or x=2</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>If $a^x = b^y = c^z$ and $b^2 = ac$, then $\frac{2}{y}$ equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$\frac{1}{x} + \frac{1}{z}$</div>
+                                    <div class="option" data-correct="false">$\frac{1}{x} - \frac{1}{z}$</div>
+                                    <div class="option" data-correct="false">$\frac{2}{x} + \frac{2}{z}$</div>
+                                    <div class="option" data-correct="true">$\frac{1}{x} + \frac{1}{z}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>Simplify $\left(\frac{a^{x-y}}{a^{y-z}}\right)^{\frac{1}{z-x}} \times \left(\frac{a^{y-z}}{a^{z-x}}\right)^{\frac{1}{x-y}} \times \left(\frac{a^{z-x}}{a^{x-y}}\right)^{\frac{1}{y-z}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$a$</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">$a^{xyz}$</div>
+                                    <div class="option" data-correct="false">$a^{x+y+z}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>If $2^{x} = 3^{y} = 12^{z}$, show that $\frac{1}{z} = \frac{1}{x} + \frac{1}{y}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$\frac{1}{z} = \frac{1}{x} - \frac{1}{y}$</div>
+                                    <div class="option" data-correct="false">$\frac{1}{z} = \frac{2}{x} + \frac{1}{y}$</div>
+                                    <div class="option" data-correct="true">$\frac{1}{z} = \frac{1}{x} + \frac{1}{y}$</div>
+                                    <div class="option" data-correct="false">$\frac{1}{z} = \frac{1}{x} + \frac{2}{y}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>Solve for x: $5^{2x} - 7 \times 5^{x} + 10 = 0$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">x=0 or x=log₅2</div>
+                                    <div class="option" data-correct="false">x=1 or x=log₅5</div>
+                                    <div class="option" data-correct="false">x=0 or x=1</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>If $a = 2^{\frac{1}{3}} + 2^{-\frac{1}{3}}$, then $2a^3 - 6a - 5$ equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>Simplify $\left(\frac{x^{a^2+ab+b^2}}{x^{b^2+bc+c^2}}\right)^{\frac{1}{a-c}} \times \left(\frac{x^{b^2+bc+c^2}}{x^{c^2+ca+a^2}}\right)^{\frac{1}{b-a}} \times \left(\frac{x^{c^2+ca+a^2}}{x^{a^2+ab+b^2}}\right)^{\frac{1}{c-b}}$</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$x$</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">$x^{a+b+c}$</div>
+                                    <div class="option" data-correct="false">$x^{abc}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>If $3^{x} = 4^{y} = 6^{z}$, then $\frac{2}{x} + \frac{1}{y}$ equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">$\frac{1}{z}$</div>
+                                    <div class="option" data-correct="false">$\frac{2}{z}$</div>
+                                    <div class="option" data-correct="true">$\frac{3}{z}$</div>
+                                    <div class="option" data-correct="false">$\frac{4}{z}$</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>Solve for x: $4^{x} - 3^{x-\frac{1}{2}} = 3^{x+\frac{1}{2}} - 2^{2x-1}$</p>
+                                    </div>
+                                    <div class="option" data-correct="true">x=1/2</div>
+                                    <div class="option" data-correct="false">x=1</div>
+                                    <div class="option" data-correct="false">x=3/2</div>
+                                    <div class="option" data-correct="false">No solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>If \( a^x = b^y = c^z \) and \( b^2 = ac \), prove that \( \frac{2}{y} = \frac{1}{x} + \frac{1}{z} \). Which equation correctly represents this?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( \frac{2}{y} = \frac{1}{x} - \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{1}{y} = \frac{1}{x} + \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="true">\( \frac{2}{y} = \frac{1}{x} + \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{2}{y} = \frac{2}{x} + \frac{2}{z} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>Solve for \( x \): \( 2^{2x} - 3 \cdot 2^{x+1} + 8 = 0 \).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = 2 \)</div>
+                                    <div class="option" data-correct="true">\( x = 1 \) or \( x = 2 \)</div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>If \( 3^x = 5^y = 15^z \), express \( z \) in terms of \( x \) and \( y \).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( z = \frac{x + y}{xy} \)</div>
+                                    <div class="option" data-correct="false">\( z = \frac{xy}{x + y} \)</div>
+                                    <div class="option" data-correct="false">\( z = \frac{x - y}{xy} \)</div>
+                                    <div class="option" data-correct="true">\( z = \frac{xy}{x - y} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>Simplify \( \left( \frac{a^{x+y}}{a^{y+z}} \right)^{1/(x-z)} \times \left( \frac{a^{y+z}}{a^{z+x}} \right)^{1/(y-x)} \times \left( \frac{a^{z+x}}{a^{x+y}} \right)^{1/(z-y)} \).</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">\( a \)</div>
+                                    <div class="option" data-correct="false">\( a^{x+y+z} \)</div>
+                                    <div class="option" data-correct="false">Undefined</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>If \( 2^x = 3^y = 6^{-z} \), what is \( \frac{1}{x} + \frac{1}{y} \) in terms of \( z \)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( z \)</div>
+                                    <div class="option" data-correct="false">\( -z \)</div>
+                                    <div class="option" data-correct="true">\( \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="false">\( -\frac{1}{z} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>Solve for \( x \): \( 4^x + 6^x = 9^x \).</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( x = \log_{2/3} \left( \frac{\sqrt{5} - 1}{2} \right) \)</div>
+                                    <div class="option" data-correct="false">\( x = \log_{3/2} \left( \frac{1 + \sqrt{5}}{2} \right) \)</div>
+                                    <div class="option" data-correct="false">\( x = \log_{3/2} \left( \frac{\sqrt{5} - 1}{2} \right) \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>If \( a = 2^{1/3} + 2^{-1/3} \), what is \( 2a^3 - 6a - 5 \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>Simplify \( \left( \frac{a^{m+n}}{a^{n+p}} \right)^{1/(m-p)} \times \left( \frac{a^{n+p}}{a^{p+m}} \right)^{1/(n-m)} \times \left( \frac{a^{p+m}}{a^{m+n}} \right)^{1/(p-n)} \).</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">\( a \)</div>
+                                    <div class="option" data-correct="false">\( a^{m+n+p} \)</div>
+                                    <div class="option" data-correct="false">Undefined</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>If \( 5^{2x - y} = 100 \) and \( 2^{x + y} = 32 \), find \( x^2 + y^2 \).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">13</div>
+                                    <div class="option" data-correct="false">17</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>Solve for \( x \): \( 9 \cdot 3^x = 4^x + 10 \cdot 2^x \).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="true">\( x = 1 \) or \( x = 2 \)</div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = 2 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>If \( x = 2^{1/3} + 2^{-1/3} \), what is \( x^3 - 3x \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">4</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>Simplify \( \left( \frac{a^{x^2 + xy + y^2}}{a^{y^2 + yz + z^2}} \right)^{1/(x - z)} \times \left( \frac{a^{y^2 + yz + z^2}}{a^{z^2 + zx + x^2}} \right)^{1/(y - x)} \times \left( \frac{a^{z^2 + zx + x^2}}{a^{x^2 + xy + y^2}} \right)^{1/(z - y)} \).</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">\( a \)</div>
+                                    <div class="option" data-correct="false">\( a^{x + y + z} \)</div>
+                                    <div class="option" data-correct="false">Undefined</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>If \( 2^x = 3^y = 12^z \), show that \( \frac{1}{z} = \frac{1}{x} + \frac{1}{y} \). Which equation is correct?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( \frac{1}{z} = \frac{1}{x} - \frac{1}{y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{1}{z} = \frac{2}{x} + \frac{1}{y} \)</div>
+                                    <div class="option" data-correct="true">\( \frac{1}{z} = \frac{1}{x} + \frac{1}{y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{1}{z} = \frac{1}{x} + \frac{2}{y} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>Solve for \( x \): \( 5^{2x} - 7 \cdot 5^x + 10 = 0 \).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = \log_5 2 \)</div>
+                                    <div class="option" data-correct="true">\( x = 1 \) or \( x = \log_5 5 \)</div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>If \( a = 2^{1/3} + 2^{-1/3} \), then \( 2a^3 - 6a - 5 \) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>Simplify \( \left( \frac{a^{x^3 + x^2y + xy^2 + y^3}}{a^{y^3 + y^2z + yz^2 + z^3}} \right)^{1/(x - z)} \times \left( \frac{a^{y^3 + y^2z + yz^2 + z^3}}{a^{z^3 + z^2x + zx^2 + x^3}} \right)^{1/(y - x)} \times \left( \frac{a^{z^3 + z^2x + zx^2 + x^3}}{a^{x^3 + x^2y + xy^2 + y^3}} \right)^{1/(z - y)} \).</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">\( a \)</div>
+                                    <div class="option" data-correct="false">\( a^{x + y + z} \)</div>
+                                    <div class="option" data-correct="false">Undefined</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>If \( 2^x = 3^y = 6^z \), prove that \( \frac{1}{x} + \frac{1}{y} = \frac{1}{z} \). Which option is correct?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( \frac{1}{x} + \frac{1}{y} = \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="true">\( \frac{1}{x} - \frac{1}{y} = \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{2}{x} + \frac{1}{y} = \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{1}{x} + \frac{2}{y} = \frac{1}{z} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>Solve for \( x \): \( 8^x - 9^x + 2 \cdot 12^x - 6^x \cdot 4^x = 0 \).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="false">\( x = 1 \) or \( x = 2 \)</div>
+                                    <div class="option" data-correct="true">\( x = 0 \) or \( x = 2 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>If \( a = 3^{1/4} + 3^{-1/4} \), what is \( 4a^3 - 12a \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">10</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">14</div>
+                                    <div class="option" data-correct="false">16</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>If \( 4^x = 6^y = 9^z \), express \( z \) in terms of \( x \) and \( y \).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( z = \frac{x + y}{xy} \)</div>
+                                    <div class="option" data-correct="false">\( z = \frac{xy}{x + y} \)</div>
+                                    <div class="option" data-correct="false">\( z = \frac{x - y}{xy} \)</div>
+                                    <div class="option" data-correct="true">\( z = \frac{xy}{2(x + y)} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 101</h3>
+                                        <p>Simplify: \( \left( \frac{a^{x^2 - y^2} \cdot a^{y^2 - z^2} \cdot a^{z^2 - x^2}}{a^{x+y} \cdot a^{y+z} \cdot a^{z+x}} \right)^{\frac{1}{x+y+z}} \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( a^{x+y+z} \)</div>
+                                    <div class="option" data-correct="false">\( a^{x-y-z} \)</div>
+                                    <div class="option" data-correct="false">\( a^{-1} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 102</h3>
+                                        <p>If \( 2^{x} = 3^{y} = 6^{-z} \), what is \( \frac{1}{x} + \frac{1}{y} + \frac{1}{z} \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 103</h3>
+                                        <p>Solve for \( x \): \( 8^{x} + 18^{x} = 2 \cdot 27^{x} \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \)</div>
+                                    <div class="option" data-correct="false">\( x = 1 \)</div>
+                                    <div class="option" data-correct="true">\( x = 0 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 104</h3>
+                                        <p>If \( a = 3^{\frac{1}{3}} + 3^{-\frac{1}{3}} \), what is \( a^3 - 3a - 4 \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 105</h3>
+                                        <p>Simplify: \( \left( \frac{x^{a^2 + ab + b^2} \cdot x^{b^2 + bc + c^2} \cdot x^{c^2 + ca + a^2}}{x^{a^3 + b^3 + c^3}} \right)^{\frac{1}{a+b+c}} \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x^{a+b+c} \)</div>
+                                    <div class="option" data-correct="false">\( x^{ab+bc+ca} \)</div>
+                                    <div class="option" data-correct="false">\( x^{abc} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 106</h3>
+                                        <p>If \( 5^{x} = 6^{y} = 30^{z} \), express \( z \) in terms of \( x \) and \( y \)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( \frac{xy}{x + y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{x + y}{xy} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{xy}{x - y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{x - y}{xy} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 107</h3>
+                                        <p>Solve: \( 2^{2x+1} - 5 \cdot 2^{x} + 2 = 0 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = -1 \)</div>
+                                    <div class="option" data-correct="false">\( x = 1 \)</div>
+                                    <div class="option" data-correct="true">\( x = -1 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 108</h3>
+                                        <p>If \( a = 5^{\frac{1}{3}} + 5^{-\frac{1}{3}} \), what is \( a^3 - 3a - 6 \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 109</h3>
+                                        <p>Simplify: \( \left( \frac{a^{x^3 + y^3} \cdot a^{y^3 + z^3} \cdot a^{z^3 + x^3}}{a^{x^4 + y^4 + z^4}} \right)^{\frac{1}{x+y+z}} \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( a^{x^2 + y^2 + z^2} \)</div>
+                                    <div class="option" data-correct="false">\( a^{xy + yz + zx} \)</div>
+                                    <div class="option" data-correct="false">\( a^{xyz} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 110</h3>
+                                        <p>If \( 7^{x} = 8^{y} = 56^{z} \), express \( z \) in terms of \( x \) and \( y \)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( \frac{xy}{x + y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{x + y}{xy} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{xy}{x - y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{x - y}{xy} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 111</h3>
+                                        <p>Solve: \( 3^{2x} - 4 \cdot 3^{x} + 3 = 0 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \)</div>
+                                    <div class="option" data-correct="false">\( x = 1 \)</div>
+                                    <div class="option" data-correct="true">\( x = 0 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 112</h3>
+                                        <p>If \( a = 7^{\frac{1}{3}} + 7^{-\frac{1}{3}} \), what is \( a^3 - 3a - 8 \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 113</h3>
+                                        <p>Simplify: \( \left( \frac{a^{x^4 + y^4} \cdot a^{y^4 + z^4} \cdot a^{z^4 + x^4}}{a^{x^5 + y^5 + z^5}} \right)^{\frac{1}{x+y+z}} \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( a^{x^3 + y^3 + z^3} \)</div>
+                                    <div class="option" data-correct="false">\( a^{x^2y^2 + y^2z^2 + z^2x^2} \)</div>
+                                    <div class="option" data-correct="false">\( a^{xyz} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 114</h3>
+                                        <p>If \( 11^{x} = 12^{y} = 132^{z} \), express \( z \) in terms of \( x \) and \( y \)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( \frac{xy}{x + y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{x + y}{xy} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{xy}{x - y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{x - y}{xy} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 115</h3>
+                                        <p>Solve: \( 5^{2x} - 6 \cdot 5^{x} + 5 = 0 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \)</div>
+                                    <div class="option" data-correct="false">\( x = 1 \)</div>
+                                    <div class="option" data-correct="true">\( x = 0 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 116</h3>
+                                        <p>If \( a = 11^{\frac{1}{3}} + 11^{-\frac{1}{3}} \), what is \( a^3 - 3a - 10 \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 117</h3>
+                                        <p>Simplify: \( \left( \frac{a^{x^n + y^n} \cdot a^{y^n + z^n} \cdot a^{z^n + x^n}}{a^{x^{n+1} + y^{n+1} + z^{n+1}}} \right)^{\frac{1}{x+y+z}} \) where \( n = 5 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( a^{x^4 + y^4 + z^4} \)</div>
+                                    <div class="option" data-correct="false">\( a^{x^3y^3 + y^3z^3 + z^3x^3} \)</div>
+                                    <div class="option" data-correct="false">\( a^{xyz} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 118</h3>
+                                        <p>If \( 13^{x} = 14^{y} = 182^{z} \), express \( z \) in terms of \( x \) and \( y \)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( \frac{xy}{x + y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{x + y}{xy} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{xy}{x - y} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{x - y}{xy} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 119</h3>
+                                        <p>Solve: \( 7^{2x} - 8 \cdot 7^{x} + 7 = 0 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \)</div>
+                                    <div class="option" data-correct="false">\( x = 1 \)</div>
+                                    <div class="option" data-correct="true">\( x = 0 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 120</h3>
+                                        <p>If \( a = 13^{\frac{1}{3}} + 13^{-\frac{1}{3}} \), what is \( a^3 - 3a - 12 \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 121</h3>
+                                        <p>Given \( a^{x} = b^{y} = (ab)^{z} \), prove \( \frac{1}{x} + \frac{1}{y} = \frac{1}{z} \). Which identity is correct?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( \frac{1}{x} - \frac{1}{y} = \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{2}{x} + \frac{1}{y} = \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{1}{x} + \frac{2}{y} = \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="true">\( \frac{1}{x} + \frac{1}{y} = \frac{1}{z} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 122</h3>
+                                        <p>Solve for \( x \): \( 16^{x} - 5 \cdot 4^{x} + 6 = 0 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( x = \log_4 2 \) or \( x = \log_4 3 \)</div>
+                                    <div class="option" data-correct="false">\( x = 1 \) or \( x = \log_4 6 \)</div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = \log_4 5 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 123</h3>
+                                        <p>If \( a = \sqrt[3]{2 + \sqrt{5}} + \sqrt[3]{2 - \sqrt{5}} \), what is \( a^3 + 3a - 4 \) equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 124</h3>
+                                        <p>Simplify: \( \left( \frac{a^{x^3 + y^3 + z^3 - 3xyz}}{a^{x^2 + y^2 + z^2 - xy - yz - zx}} \right)^{x + y + z} \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( a^{(x+y+z)^2} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">\( a^{xyz} \)</div>
+                                    <div class="option" data-correct="false">\( a^{x^3 + y^3 + z^3} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 125</h3>
+                                        <p>If \( 2^{x} = 3^{y} = 5^{z} = 30^{w} \), express \( w \) in terms of \( x, y, z \):</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( \frac{xyz}{xy + yz + zx} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{xy + yz + zx}{xyz} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{1}{x} + \frac{1}{y} + \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="true">\( \frac{1}{\frac{1}{x} + \frac{1}{y} + \frac{1}{z}} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 126</h3>
+                                        <p>Solve: \( 3^{x+1} + 3^{2-x} = 28 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( x = 1 \) or \( x = 2 \)</div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = 3 \)</div>
+                                    <div class="option" data-correct="false">\( x = -1 \) or \( x = 4 \)</div>
+                                    <div class="option" data-correct="false">No real solution</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 127</h3>
+                                        <p>If \( a = \sqrt[3]{7 + 5\sqrt{2}} + \sqrt[3]{7 - 5\sqrt{2}} \), find \( a^3 + 3a - 14 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">7</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 128</h3>
+                                        <p>Simplify: \( \left( \frac{a^{(x-y)(y-z)(z-x)}}{a^{x^2(y-z) + y^2(z-x) + z^2(x-y)}}} \right)^{\frac{1}{(x-y)(y-z)(z-x)}} \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( a^{x+y+z} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">\( a^{xyz} \)</div>
+                                    <div class="option" data-correct="false">Undefined</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 129</h3>
+                                        <p>If \( 2^{x} = 3^{y} = 12^{z} \), prove \( z = \frac{xy}{x + y} \). Which substitution is crucial?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Let \( 2^{x} = 3^{y} = 12^{z} = k \)</div>
+                                    <div class="option" data-correct="false">Let \( x = y = z \)</div>
+                                    <div class="option" data-correct="false">Assume \( z = 1 \)</div>
+                                    <div class="option" data-correct="false">Let \( k = x + y \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 130</h3>
+                                        <p>Solve: \( 5^{x} + 5^{x-1} + 5^{x-2} = 775 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 1 \)</div>
+                                    <div class="option" data-correct="false">\( x = 2 \)</div>
+                                    <div class="option" data-correct="false">\( x = 3 \)</div>
+                                    <div class="option" data-correct="true">\( x = 4 \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 131</h3>
+                                        <p>If \( a = \sqrt[3]{10 + 6\sqrt{3}} + \sqrt[3]{10 - 6\sqrt{3}} \), find \( a^3 + 3a - 20 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 132</h3>
+                                        <p>Simplify: \( \left( \frac{a^{x^n - y^n} \cdot a^{y^n - z^n} \cdot a^{z^n - x^n}}{a^{(x-y)(y-z)(z-x)}}} \right)^{\frac{1}{n}} \) where \( n = 4 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( a^{(x+y+z)(x^2 + y^2 + z^2)} \)</div>
+                                    <div class="option" data-correct="false">\( a^{xyz} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">Undefined</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 133</h3>
+                                        <p>If \( 3^{x} = 4^{y} = 6^{z} \), prove \( \frac{2}{x} + \frac{1}{y} = \frac{2}{z} \). Which logarithmic property is essential?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( \log(ab) = \log a + \log b \)</div>
+                                    <div class="option" data-correct="false">\( \log(a^b) = b\log a \)</div>
+                                    <div class="option" data-correct="false">Change of base formula</div>
+                                    <div class="option" data-correct="false">All of the above</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 134</h3>
+                                        <p>Solve: \( 2^{3x} - 3 \cdot 2^{2x} + 3 \cdot 2^{x} - 1 = 0 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \)</div>
+                                    <div class="option" data-correct="false">\( x = 1 \)</div>
+                                    <div class="option" data-correct="false">\( x = 0 \) or \( x = 1 \)</div>
+                                    <div class="option" data-correct="true">\( x = 0 \), \( x = 1 \), or \( x = \log_2 (1 + \sqrt{2}) \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 135</h3>
+                                        <p>If \( a = \sqrt[3]{9 + 4\sqrt{5}} + \sqrt[3]{9 - 4\sqrt{5}} \), find \( a^3 + 3a - 18 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">9</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 136</h3>
+                                        <p>Simplify: \( \left( \frac{a^{(x^2 - y^2)(y^2 - z^2)(z^2 - x^2)}}{a^{x^4(y^2 - z^2) + y^4(z^2 - x^2) + z^4(x^2 - y^2)}}} \right)^{\frac{1}{(x-y)(y-z)(z-x)}} \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( a^{(x+y+z)^2} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">\( a^{x^2 + y^2 + z^2} \)</div>
+                                    <div class="option" data-correct="false">Undefined</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 137</h3>
+                                        <p>If \( 6^{x} = 8^{y} = 12^{z} = 24^{w} \), express \( w \) in terms of \( x, y, z \):</p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( \frac{xyz}{xy + 2xz + yz} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{xy + xz + yz}{xyz} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{1}{x} + \frac{1}{y} + \frac{1}{z} \)</div>
+                                    <div class="option" data-correct="false">\( \frac{1}{2x} + \frac{1}{y} - \frac{1}{z} \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 138</h3>
+                                        <p>Solve: \( 4^{x} - 3^{x-\frac{1}{2}} = 3^{x+\frac{1}{2}} - 2^{2x-1} \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( x = 0 \)</div>
+                                    <div class="option" data-correct="true">\( x = \frac{1}{2} \)</div>
+                                    <div class="option" data-correct="false">\( x = 1 \)</div>
+                                    <div class="option" data-correct="false">\( x = \frac{1}{2} \) or \( x = 1 \)</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 139</h3>
+                                        <p>If \( a = \sqrt[3]{5\sqrt{2} + 7} - \sqrt[3]{5\sqrt{2} - 7} \), find \( a^3 + 3a + 2 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 140</h3>
+                                        <p>Simplify: \( \left( \frac{a^{(x^{n} - y^{n})(y^{n} - z^{n})(z^{n} - x^{n})}}{a^{x^{n+1}(y^{n} - z^{n}) + y^{n+1}(z^{n} - x^{n}) + z^{n+1}(x^{n} - y^{n})}}} \right)^{\frac{1}{(x-y)(y-z)(z-x)}} \) for \( n = 3 \)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\( a^{x^2 + y^2 + z^2} \)</div>
+                                    <div class="option" data-correct="false">\( a^{xy + yz + zx} \)</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">Undefined</div>
                                 </div>
                             </div>
                         </section>
@@ -741,26 +2329,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -769,14 +2365,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -785,26 +2382,38 @@
                 </div>
             </div>
         </footer>
+        
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../passco/js/bece-tests-general.js"></script>
 
-         <!-- Scripts -->
-         <script src="../../js/math-challenge-read-write-numbers.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/read-write-numbers.js"></script>
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
