@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clarifying WAEC's Average Speed Question — The Let's Learn Project</title>
+    <meta name="description" content="An open letter on a recent WAEC BECE maths question highlighting the need for precise wording in examination questions.">
+    
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Clarifying WAEC's Average Speed Question" />
+    <meta property="og:description" content="An open letter discussing a WAEC BECE average speed question and why precise wording matters in mathematics exams." />
+    <meta property="og:image" content="https://theletslearnproject.com/images/blog/average-speed.png" />
+    <meta property="og:url" content="https://theletslearnproject.com/blog/clarifying-waec-average-speed-question/" />
+    <meta property="og:type" content="article" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Clarifying WAEC's Average Speed Question" />
+    <meta name="twitter:description" content="An open letter on why precise mathematical language is critical in exams." />
+    <meta name="twitter:image" content="https://theletslearnproject.com/images/blog/average-speed.png" />
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="../../css/styles.css" />
+    <link rel="stylesheet" href="../../css/blog-post.css" />
+
+    <!-- MathJax Configuration -->
+    <script>
+        window.MathJax = {
+            startup: {
+                pageReady: () => {
+                    return MathJax.startup.defaultPageReady().then(() => {
+                        console.log('MathJax is fully ready');
+                        // Re-render any dynamic content that might have loaded after initial typeset
+                        if (typeof MathJax.typesetPromise === 'function') {
+                            return MathJax.typesetPromise();
+                        }
+                    });
+                }
+            },
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true,
+                packages: {'[+]': ['ams']}
+            },
+            options: {
+                ignoreHtmlClass: 'tex2jax_ignore',
+                processHtmlClass: 'tex2jax_process'
+            },
+            loader: {
+                load: ['[tex]/ams']
+            }
+        };
+    </script>
+    
+    <!-- MathJax with combined TeX and MathML input, HTML output -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118" crossorigin="anonymous"></script>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Clarifying WAEC’s Average Speed Question — The Need for Precise Mathematics",
+        "description": "An open letter discussing a WAEC BECE average speed question, highlighting why precise wording is critical in mathematics examinations.",
+        "author": {
+            "@type": "Person",
+            "name": "Anoff Akonnor",
+            "url": "https://theletslearnproject.com/about"
+        },
+        "datePublished": "2025-07-12",
+        "image": "https://theletslearnproject.com/images/blog/average-speed.png",
+        "publisher": {
+            "@type": "Organization",
+            "name": "The Let's Learn Project",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://theletslearnproject.com/images/android-chrome-192x192.png"
+            }
+        },
+        "url": "https://theletslearnproject.com/blog/clarifying-waec-average-speed-question"
+    }
+    </script>
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo-container">
+                    <a href="../../" class="logo-link">
+                        <img src="../../images/android-chrome-192x192.png" alt="Logo" class="logo">
+                        <div class="logo-text">
+                            <span class="logo-name">The Let's Learn Project</span>
+                            <span class="tagline">Learning Made Easy</span>
+                        </div>
+                    </a>
+                </div>
+                <div class="nav-container">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="../../" class="nav-link">Home</a></li>
+                        <li class="nav-item"><a href="../../about" class="nav-link">About</a></li>
+                        <li class="nav-item"><a href="../../blog/" class="nav-link">Blog</a></li>
+                        <li class="nav-item"><a href="../../contactus" class="nav-link">Contact</a></li>
+                    </ul>
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Blog Post Content -->
+    <main class="blog-post-container">
+        <article class="blog-post">
+            <!-- Breadcrumbs -->
+            <nav class="breadcrumbs">
+                <a href="../../">Home</a> &gt;
+                <a href="../../blog">Blog</a> &gt;
+                <span>Clarifying WAEC's Average Speed Question</span>
+            </nav>
+
+            <!-- Post Header -->
+            <header class="post-header">
+                <span class="post-category">Teaching Strategies</span>
+                <h1 class="post-title">Clarifying WAEC's BECE Average Speed Question — The Need for Precision</h1>
+                <div class="post-meta">
+                    <span class="post-date"><i class="far fa-calendar"></i> July 12, 2025</span>
+                    <span class="post-read-time"><i class="far fa-clock"></i> 6 min read</span>
+                    <span class="post-author"><i class="far fa-user"></i> Anoff Akonnor</span>
+                </div>
+
+                <!-- Social Sharing -->
+                <div class="social-sharing">
+                    <span>Share:</span>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://theletslearnproject.com/blog/clarifying-waec-average-speed-question" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://twitter.com/intent/tweet?url=https://theletslearnproject.com/blog/clarifying-waec-average-speed-question&text=An%20open%20letter%20to%20WAEC%20on%20average%20speed%20questions%20and%20why%20precise%20math%20language%20matters" target="_blank" aria-label="Share on Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="whatsapp://send?text=Read%20this%20open%20letter%20to%20WAEC%20about%20average%20speed%20question:%20https://theletslearnproject.com/blog/clarifying-waec-average-speed-question" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:?subject=Clarifying%20WAEC%20Average%20Speed%20Question&body=Check%20out%20this%20open%20letter:%20https://theletslearnproject.com/blog/clarifying-waec-average-speed-question" target="_blank" aria-label="Share via Email"><i class="far fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://theletslearnproject.com/blog/clarifying-waec-average-speed-question&title=Clarifying%20WAEC%20Average%20Speed%20Question%20—%20The%20Need%20for%20Precise%20Math" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+
+            </header>
+
+            <!-- Featured Image -->
+            <div class="post-featured-image">
+                <img src="../../images/blog/average-speed.png" alt="Students discussing a mathematics problem." loading="lazy">
+                <p class="image-caption">Exam questions require precise wording to fairly assess students' understanding. (Photo: The Let's Learn Project)</p>
+            </div>
+
+            <!-- Letter Content -->
+            <div class="post-content">
+                <p><strong>Anoff Akonnor</strong><br/>
+                Cape Coast, Ghana<br/>
+                12th July, 2025</p>
+
+                <h2>To Whom It May Concern,</h2>
+                <p>I wish to publicly raise an important point concerning a mathematics question from the recent WAEC BECE paper, which may unintentionally mislead students. This is not only to seek clarification but also to advocate for greater precision in setting questions that guide countless young learners across the country and beyond.</p>
+
+                <h3>The Question (paraphrased)</h3>
+                <p>Adamu was travelling a distance of 40 km from Kadumgu to Datanu. Sixty minutes after starting the journey, he made a stop at Cooltown, 10 km from Kadumgu, to rest for 30 minutes. He then continued the journey from Cooltown and reached Datanu 60 minutes later.</p>
+                <p><strong>(c)</strong> If Adamu did not rest but travelled to Datanu within the time, what was his average speed?</p>
+
+                <h3>Why the official solution is problematic</h3>
+                <p>The official solution by WAEC took the total time for the journey as:</p>
+                <p><strong><em>Total time $= 150 \ \text{minutes} = 2.5 \ \text{hours}$</em></strong></p>
+                <p>leading to an average speed calculated as:</p>
+                <p><strong><em>$$\text{Average speed} = \dfrac{\text{Total distance}}{\text{Total time}}$$</em></strong></p>
+                <p>$$\Rightarrow \text{Average speed} = \dfrac{40 \ \text{km}}{2.5\text{h}}$$</p>
+                <p>$$\Rightarrow \text{Average speed} = 16 \ \text{km/h}$$</p>
+                <p>
+                    However, the question did not explicitly state that Adamu would still take 150 minutes even without resting. 
+                    The phrase 'If Adamu did not rest but travelled to Datanu within the time' is ambiguous.
+                </p>
+                <p>
+                    Also, using 2.5 hours as the total time assumes that the rest period is included in the total travel time, which is not clearly stated.
+                </p>
+
+                <quote>
+                    <strong>Mathematics is no more a science if we take out the logical aspects of it.</strong>
+                </quote>
+
+
+                <h3>A logical alternative interpretation</h3>
+                <p>Reasonably, if Adamu did not stop to rest for 30 minutes, then his journey should have taken less time to complete:</p>
+                <p>
+                    \[
+                    \begin{align*}
+                    \text{Original total time} &= 150\ \text{minutes} \\
+                    \text{Subtract rest period}\\ 
+                    \Rightarrow & \quad 150\  - 30 \\
+                    \Rightarrow & \quad 120\ \text{minutes} \\
+                    \text{Convert to hours}\\
+                    \Rightarrow & \quad 2\ \text{hours}
+                    \end{align*}
+                    \]
+                </p>
+                <p>Thus, the average speed would be calculated as:</p>
+                <p><strong><em>$$\text{Average speed} = \dfrac{\text{Total distance}}{\text{Time without rest}}$$</em></strong></p>
+                <p>$$\Rightarrow \text{Average speed} = \dfrac{40 \ \text{km}}{2\text{h}}$$</p>
+                <p>$$\Rightarrow \text{Average speed} = 20 \ \text{km/h}$$</p>
+                <p>
+                    Both interpretations are mathematically sound depending on how one understands <strong>'within the time.'</strong> 
+                    This highlights a critical point: <strong>
+                    mathematics depends heavily on precise language, especially at the Basic Education Certificate Examination (BECE) 
+                    settings where every mark counts.
+                    </strong>
+                </p>
+
+                <h3>Why this matters</h3>
+                <p>
+                    Examinations should assess clear understanding, not confuse students due to ambiguities in wording. 
+                    <strong>
+                        A student who logically concluded that eliminating the rest period reduces the total travel time —
+                        and thus calculated 20 km/h — is not incorrect but would be unfairly penalized by the official marking scheme.
+                    </strong>
+                </p>
+
+                <h3>A humble recommendation</h3>
+                <p>I respectfully encourage WAEC and similar examination bodies to:</p>
+                <ul>
+                    <li>
+                        Phrase such questions with greater clarity, e.g. 'If he did not rest but still completed the journey in the same time 
+                        taken in minutes...'
+                    </li>
+                    <li>
+                        Or to accept alternative logically valid solutions provided the student's reasoning is clearly shown.
+                    </li>
+                </ul>
+
+                <h3>Why I make this public</h3>
+                <p>
+                    This is not only to seek fairness for students who think critically, but also to uphold the integrity 
+                    and clarity of mathematics as a discipline. It is important that both teaching and assessment emphasize precise interpretation.
+                    As stated earlier, <strong>mathematics is no more a science if we take out the logical aspects of it.</strong>
+                </p>
+
+                <p>
+                    Thank you for your attention to this matter. I trust this will contribute to even stronger examination standards 
+                    and fairer assessment for all students.
+                </p>
+
+                <p><strong>Yours faithfully,</strong><br/>
+                Anoff Akonnor<br/>
+                (A concerned teacher.)</p>
+            </div>
+        </article>
+
+        
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+            <div class="sidebar-widget">
+                <h4>Categories</h4>
+                <div class="category-filters">
+                    <a href="../../blog/?category=all" class="category-filter" data-category="all">All Posts</a>
+                    <a href="../../blog/?category=teaching-strategies" class="category-filter" data-category="teaching-strategies">Teaching Strategies</a>
+                    <a href="../../blog/?category=exam-prep" class="category-filter" data-category="exam-prep">Exam Preparation</a>
+                    <a href="../../blog/?category=learning-strategies" class="category-filter active" data-category="learning-strategies">Learning Strategies</a>
+                    <a href="../../blog/?category=digital-learning" class="category-filter" data-category="digital-learning">Digital Learning</a>
+                    <a href="../../blog/?category=classroom-management" class="category-filter" data-category="classroom-management">Classroom Management</a>
+                </div>
+            </div>
+            
+            <!--
+            <div class="sidebar-widget">
+                <h4>Popular Posts</h4>
+                <div class="popular-post">
+                    <a href="../../blog/bece-math-topics">
+                        <h5>BECE Math: Top 5 Problem Areas</h5>
+                        <span class="post-date">April 12, 2023</span>
+                    </a>
+                </div>
+                <div class="popular-post">
+                    <a href="../../blog/digital-classrooms">
+                        <h5>Integrating Technology in Classrooms</h5>
+                        <span class="post-date">March 5, 2023</span>
+                    </a>
+                </div>
+                <div class="popular-post">
+                    <a href="../../blog/group-work-strategies">
+                        <h5>Effective Group Work in Large Classes</h5>
+                        <span class="post-date">December 5, 2022</span>
+                    </a>
+                </div>
+            </div>-->
+            
+            <!-- Newsletter Widget 
+            <div class="sidebar-widget newsletter-widget">
+                <h4>Get Teaching Tips</h4>
+                <p>Subscribe to our newsletter for weekly teaching resources</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your email" required>
+                    <button type="submit" class="btn">Subscribe</button>
+                </form>
+                <p class="privacy-note">We'll never share your email. Unsubscribe anytime.</p>
+            </div>-->
+            
+            <!-- Ad Widget -->
+            <div class="sidebar-widget ad-widget">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
+                    crossorigin="anonymous"></script>
+                <!-- Square ads -->
+                <ins class="adsbygoogle"
+                    style="display:block"
+                    data-ad-client="ca-pub-7096546149694118"
+                    data-ad-slot="7612658834"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+            
+            <!-- Resource Widget 
+            <div class="sidebar-widget resource-widget">
+                <h4>Free Resources</h4>
+                <ul>
+                    <li><a href="../../downloads/learning-habits-worksheet.pdf"><i class="fas fa-file-pdf"></i> Learning Habits Worksheet</a></li>
+                    <li><a href="../../downloads/study-planner.pdf"><i class="fas fa-file-alt"></i> Weekly Study Planner</a></li>
+                    <li><a href="../../downloads/smart-goals-template.pdf"><i class="fas fa-file-alt"></i> SMART Goals Template</a></li>
+                </ul>
+            </div>-->
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <img src="../../images/android-chrome-192x192.png" alt="Logo" class="footer-logo">
+                    <p>The Let's Learn Project provides quality educational resources to help students excel in their examinations.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/share/18sxntpusV/" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                        <a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="../../">Home</a></li>
+                            <li><a href="../../about">About Us</a></li>
+                            <li><a href="../../blog/">Blog</a></li>
+                            <li><a href="../../contactus">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Subjects</h4>
+                        <ul>
+                            <li><a href="../../emath/">Elective Mathematics</a></li>
+                            <li><a href="../../coremath/">Core Mathematics</a></li>
+                            <li><a href="../../math-jhs/">JHS Mathematics</a></li>
+                            <li><a href="../../social-jhs/">JHS Social Studies</a></li>
+                            <li><a href="../../english-jhs/">JHS English</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <!--<li><a href="../../math-jhs/passco">Past Questions</a></li>-->
+                            <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi">Video Tutorials</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-policies">
+                    <a href="../../privacy-policy">Privacy Policy</a>
+                    <a href="../../terms-and-conditions">Terms & Conditions</a>
+                </div>
+                <p class="copyright">&copy; <span id="year"></span> The Let's Learn Project. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="../../js/script.js"></script>
+    <script src="../../js/blog.js"></script>
+</body>
+</html>
