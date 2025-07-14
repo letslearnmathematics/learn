@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Adding and Subtracting Fractions | JHS Mathematics">
         <meta property="og:description" content="Learn to add and subtract fractions and mixed numbers with step-by-step examples.">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/fractions">
         <meta property="og:type" content="website">
     
@@ -27,14 +27,27 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
-        <link rel="stylesheet" href="../../css/fractions.css">
+        <link rel="stylesheet" href="../../css/addition-and-subtraction.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -64,13 +68,17 @@
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
 
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
+        <!-- AMP Auto Ads -->
+        <script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+        </script>
     </head>
     <body>
+        <!-- AMP Auto Ads -->
+        <amp-auto-ads type="adsense"
+            data-ad-client="ca-pub-7096546149694118">
+        </amp-auto-ads>
+
         <!-- Header Navigation -->
         <header class="lesson-header">
             <div class="container">
@@ -450,27 +458,1269 @@
 
                         <br><br>
 
-                        <!-- Math Challenge Section -->
+                        <!-- Test Instructions -->
                         <section id="quick-test" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your skills with adding and subtracting fractions</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 140</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>
+                                            Which of the following is the correct result of adding the fractions \(\frac{12}{25}\) and \(\frac{24}{25}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{12}{25} + \frac{24}{25} = \frac{36}{25}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{12}{25} + \frac{24}{25} = \frac{36}{25}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{25} + \frac{24}{25} = \frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{25} + \frac{24}{25} = \frac{12}{50}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>
+                                            What is the sum of \(\frac{5}{12}\) and \(\frac{1}{4}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{16}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>
+                                            Subtract: \(\frac{7}{9} - \frac{2}{9}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{9}{7}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{11}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{7}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>
+                                            Add: \(\frac{3}{8} + \frac{1}{2}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>
+                                            What is \(\frac{5}{6} - \frac{1}{3}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>
+                                            Add: \(1\frac{1}{4} + 2\frac{1}{2}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="true">\(3\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{3}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>
+                                            Subtract: \(4\frac{2}{5} - 1\frac{3}{5}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{5}\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{5}\)</div>
+                                    <div class="option" data-correct="true">\(3\frac{4}{5}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{4}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>
+                                            What is the result of \(\frac{2}{7} + \frac{3}{14}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{21}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{14}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{10}{21}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{14}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>
+                                            Add: \(\frac{1}{6} + \frac{1}{3} + \frac{1}{2}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{6}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{1}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{6}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>
+                                            Subtract: \(3\frac{1}{2} - 1\frac{3}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(1\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="true">\(1\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{3}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>
+                                            What is \(\frac{9}{10} - \frac{2}{5}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{7}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>
+                                            What is the sum of \(\frac{3}{7} + \frac{2}{7}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{14}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{7}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>
+                                            Subtract: \(\frac{11}{12} - \frac{5}{12}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{24}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{24}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{12}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>
+                                            Add: \(\frac{2}{9} + \frac{1}{3}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{9}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>
+                                            What is \(\frac{7}{8} - \frac{1}{4}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{8}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>
+                                            Add: \(2\frac{2}{5} + 1\frac{3}{5}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{5}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{5}\)</div>
+                                    <div class="option" data-correct="true">\(4\frac{0}{5}\) or \(4\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{4}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>
+                                            Subtract: \(5\frac{1}{6} - 2\frac{5}{6}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{4}{6}\)</div>
+                                    <div class="option" data-correct="true">\(2\frac{2}{6}\) or \(2\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{6}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>
+                                            What is the sum of \(\frac{4}{15} + \frac{2}{5}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{20}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{15}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{10}{15}\) or \(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{15}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>
+                                            Subtract: \(\frac{5}{9} - \frac{1}{3}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{9}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{2}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{6}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>
+                                            Add: \(3\frac{1}{3} + 2\frac{2}{3}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(5\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(6\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="true">\(6\)</div>
+                                    <div class="option" data-correct="false">\(5\frac{2}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>
+                                            What is the sum of \(\frac{2}{3} + \frac{1}{6}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{6}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>
+                                            Subtract: \(\frac{4}{7} - \frac{2}{7}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{14}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{2}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{14}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{7}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>
+                                            Add: \(\frac{5}{8} + \frac{1}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{8}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>
+                                            What is \(\frac{3}{5} - \frac{1}{10}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{5}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>
+                                            Add: \(1\frac{2}{3} + 2\frac{1}{6}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="true">\(3\frac{5}{6}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{5}{6}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>
+                                            Subtract: \(2\frac{3}{4} - 1\frac{1}{2}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(1\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(1\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="false">\(1\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="false">\(1\frac{1}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>
+                                            What is the sum of \(\frac{7}{12} + \frac{1}{3}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{8}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{11}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>
+                                            Subtract: \(\frac{5}{8} - \frac{1}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{8}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>
+                                            Add: \(3\frac{1}{5} + 2\frac{2}{5}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(5\frac{2}{5}\)</div>
+                                    <div class="option" data-correct="true">\(5\frac{3}{5}\)</div>
+                                    <div class="option" data-correct="false">\(6\frac{1}{5}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{3}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>
+                                            What is \(\frac{7}{10} - \frac{1}{5}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>
+                                            Add: \(\frac{2}{9} + \frac{4}{9}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{18}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{18}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{6}{9}\) or \(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>
+                                            Subtract: \(6\frac{1}{2} - 3\frac{3}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="true">\(2\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>
+                                            What is the sum of \(\frac{3}{10} + \frac{2}{5}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{15}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>
+                                            Subtract: \(\frac{11}{15} - \frac{2}{5}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{9}{15}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{15}\) or \(\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>
+                                            Add: \(4\frac{1}{6} + 2\frac{5}{6}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(6\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="true">\(7\)</div>
+                                    <div class="option" data-correct="false">\(6\frac{5}{6}\)</div>
+                                    <div class="option" data-correct="false">\(7\frac{1}{6}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>
+                                            What is \(\frac{8}{9} - \frac{2}{3}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{9}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{2}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>
+                                            Add: \(\frac{1}{2} + \frac{3}{8}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>
+                                            Subtract: \(5\frac{2}{3} - 3\frac{1}{3}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="true">\(2\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{2}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>
+                                            What is the sum of \(\frac{1}{4} + \frac{1}{8}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{8}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>
+                                            Subtract: \(\frac{7}{12} - \frac{1}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{4}{12}\) or \(\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{12}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>
+                                            Add: \(\frac{2}{3} + \frac{1}{9}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{9}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>
+                                            Subtract: \(\frac{5}{8} - \frac{1}{2}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{8}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>
+                                            What is the sum of \(\frac{1}{5} + \frac{2}{5}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>
+                                            Add: \(2\frac{1}{4} + 1\frac{3}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(4\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>
+                                            Subtract: \(7\frac{2}{3} - 4\frac{1}{3}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="true">\(3\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{2}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>
+                                            What is \(\frac{4}{7} + \frac{2}{7}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{14}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{6}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{7}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>
+                                            Subtract: \(\frac{7}{10} - \frac{1}{2}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>
+                                            Add: \(\frac{3}{4} + \frac{1}{8}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{8}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>
+                                            What is the sum of \(\frac{5}{6} + \frac{1}{3}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{9}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{6}\) or \(1\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>
+                                            Subtract: \(4\frac{1}{2} - 2\frac{2}{3}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="true">\(1\frac{5}{6}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(1\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>
+                                            Add: \(\frac{2}{5} + \frac{3}{10}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{15}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>
+                                            What is \(\frac{9}{12} - \frac{1}{4}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{8}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{6}{12}\) or \(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{12}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>
+                                            Add: \(1\frac{1}{3} + 2\frac{2}{3}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="true">\(4\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>
+                                            Subtract: \(\frac{8}{9} - \frac{5}{9}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{18}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{18}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>
+                                            What is the sum of \(\frac{1}{2} + \frac{1}{5}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{7}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>
+                                            Add: \(3\frac{1}{2} + 2\frac{1}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(5\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(5\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(6\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{3}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>
+                                            Subtract: \(2\frac{2}{3} - 1\frac{5}{6}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(1\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="true">\(5/6\)</div>
+                                    <div class="option" data-correct="false">\(1\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{6}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>
+                                            What is \(\frac{3}{4} + \frac{1}{3}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{7}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{13}{12}\) or \(1\frac{1}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{12}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>
+                                            Subtract: \(\frac{7}{8} - \frac{1}{8}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{16}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{6}{8}\) or \(\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{16}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>
+                                            Add: \(2\frac{3}{5} + 1\frac{2}{5}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{4}{5}\)</div>
+                                    <div class="option" data-correct="true">\(4\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{2}{5}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>
+                                            What is the sum of \(\frac{4}{9} + \frac{2}{3}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{10}{9}\) or \(1\frac{1}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>
+                                            Subtract: \(\frac{5}{7} - \frac{2}{7}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{14}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{14}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>
+                                            Add: \(1\frac{3}{8} + 2\frac{1}{8}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{2}{8}\)</div>
+                                    <div class="option" data-correct="true">\(3\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{8}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{4}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>
+                                            What is \(\frac{7}{12} - \frac{1}{3}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{12}\) or \(\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>
+                                            Add: \(\frac{5}{6} + \frac{1}{2}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{8}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{4}{3}\) or \(1\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>
+                                            Subtract: \(3\frac{2}{5} - 1\frac{4}{5}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{5}\)</div>
+                                    <div class="option" data-correct="true">\(1\frac{3}{5}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{3}{5}\)</div>
+                                    <div class="option" data-correct="false">\(1\frac{2}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>
+                                            What is the sum of \(\frac{1}{8} + \frac{3}{4}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>
+                                            Subtract: \(\frac{11}{15} - \frac{1}{3}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{10}{15}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{6}{15}\) or \(\frac{2}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{15}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>
+                                            Add: \(2\frac{1}{6} + 1\frac{5}{6}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="true">\(4\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{5}{6}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{6}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>
+                                            What is \(\frac{5}{12} - \frac{1}{6}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{12}\) or \(\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>
+                                            Add: \(\frac{2}{7} + \frac{3}{7}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{14}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{7}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>
+                                            Subtract: \(4\frac{3}{8} - 2\frac{1}{8}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{2}{8}\)</div>
+                                    <div class="option" data-correct="true">\(2\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{8}\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{2}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>
+                                            What is the sum of \(\frac{3}{5} + \frac{2}{10}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{15}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{8}{10}\) or \(\frac{4}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>
+                                            Subtract: \(\frac{7}{8} - \frac{3}{8}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{16}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{16}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>
+                                            Add: \(1\frac{1}{2} + 2\frac{1}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(3\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{3}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>
+                                            What is \(\frac{6}{7} - \frac{2}{7}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{14}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{4}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{14}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>
+                                            Add: \(\frac{1}{3} + \frac{5}{6}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{9}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{6}\) or \(1\frac{1}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>
+                                            Subtract: \(5\frac{1}{4} - 2\frac{3}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{2}{4}\)</div>
+                                    <div class="option" data-correct="true">\(2\frac{2}{4}\) or \(2\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>
+                                            What is the sum of \(\frac{2}{5} + \frac{1}{10}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{10}\) or \(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>
+                                            Subtract: \(\frac{9}{10} - \frac{1}{2}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{8}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{4}{10}\) or \(\frac{2}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>
+                                            Add: \(\frac{3}{7} + \frac{2}{7}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{14}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{7}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>
+                                            Subtract: \(\frac{5}{8} - \frac{1}{8}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{16}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>
+                                            What is the sum of \(\frac{1}{2} + \frac{1}{3}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{5}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>
+                                            Add: \(2\frac{1}{3} + 1\frac{2}{3}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="true">\(4\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>
+                                            Subtract: \(3\frac{3}{5} - 1\frac{4}{5}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{5}\)</div>
+                                    <div class="option" data-correct="true">\(1\frac{4}{5}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{4}{5}\)</div>
+                                    <div class="option" data-correct="false">\(1\frac{3}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>
+                                            What is \(\frac{4}{5} + \frac{1}{10}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{15}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{9}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>
+                                            Subtract: \(\frac{7}{12} - \frac{1}{6}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{12}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>
+                                            Add: \(1\frac{1}{2} + 2\frac{1}{2}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(4\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>
+                                            What is the sum of \(\frac{3}{8} + \frac{1}{4}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>
+                                            Subtract: \(4\frac{1}{4} - 2\frac{3}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(1\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(1\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{3}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>
+                                            Add: \(\frac{2}{3} + \frac{1}{9}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>
+                                            What is \(\frac{5}{6} - \frac{1}{2}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{6}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{6}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>
+                                            Add: \(3\frac{1}{4} + 2\frac{3}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(5\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(6\)</div>
+                                    <div class="option" data-correct="false">\(5\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(6\frac{1}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>
+                                            Subtract: \(\frac{7}{9} - \frac{4}{9}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{18}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>
+                                            What is the sum of \(\frac{1}{6} + \frac{1}{2}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{8}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{6}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>
+                                            Add: \(2\frac{2}{7} + 1\frac{5}{7}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{6}{7}\)</div>
+                                    <div class="option" data-correct="true">\(4\frac{0}{7}\) or \(4\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{5}{7}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{7}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>
+                                            Subtract: \(5\frac{1}{2} - 2\frac{3}{4}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="true">\(2\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>
+                                            What is \(\frac{3}{4} + \frac{1}{8}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>
+                                            Subtract: \(\frac{11}{12} - \frac{7}{12}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{24}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{12}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{12}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>
+                                            Add: \(1\frac{1}{5} + 2\frac{3}{5}\)
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\frac{4}{5}\)</div>
+                                    <div class="option" data-correct="true">\(4\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{3}{5}\)</div>
+                                    <div class="option" data-correct="false">\(4\frac{1}{5}\)</div>
                                 </div>
                             </div>
                         </section>
@@ -487,26 +1737,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath/"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath/"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs/"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs/"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs/"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -515,14 +1773,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -532,25 +1791,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-         <script src="../../js/math-challenge-fractions.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/fractions.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>

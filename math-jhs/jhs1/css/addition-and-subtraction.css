@@ -159,3 +159,101 @@
     background: #4ecdc4;
     color: white;
 }
+
+/*css for table*/
+
+.place-value-table {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.place-value-table th {
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 12px 8px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid var(--primary);
+}
+
+.place-value-table td {
+    padding: 10px 8px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    background-color: white;
+}
+
+.place-value-table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+.place-value-table tr:hover td {
+    background-color: #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .place-value-table {
+        font-size: 0.9em;
+    }
+    
+    .place-value-table th, 
+    .place-value-table td {
+        padding: 8px 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .place-value-table {
+        font-size: 0.8em;
+    }
+    
+    /* stack the table on very small screens */
+    /* This converts the table to a stacked layout 
+    add 
+    <td data-label="Billions">Hundreds</td> */
+    /*
+    .place-value-table, 
+    .place-value-table thead, 
+    .place-value-table tbody, 
+    .place-value-table th, 
+    .place-value-table td, 
+    .place-value-table tr { 
+        display: block; 
+    }
+    
+    .place-value-table thead tr { 
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .place-value-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    
+    .place-value-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+        text-align: right;
+    }
+    
+    .place-value-table td:before {
+        position: absolute;
+        left: 8px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        text-align: left;
+        content: attr(data-label);
+        font-weight: bold;
+    }
+    */
+}
