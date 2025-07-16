@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO and Social Meta Tags -->
-        <title>Division of Fractions | JHS Mathematics | The Let's Learn Project</title>
+        <title>Division of Fractions | JHS 1 Mathematics | The Let's Learn Project</title>
         <meta name="description" content="Learn how to divide fractions and solve word problems involving division of fractions.">
         
         <!-- Favicons -->
@@ -15,9 +15,9 @@
         <link rel="manifest" href="../../../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Division of Fractions | JHS Mathematics">
+        <meta property="og:title" content="Division of Fractions | JHS 1 Mathematics">
         <meta property="og:description" content="Learn to divide fractions and solve word problems involving fractions.">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/apple-touch-icon.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/fractions">
         <meta property="og:type" content="website">
     
@@ -27,14 +27,27 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
-        <link rel="stylesheet" href="../../css/fractions.css">
+        <link rel="stylesheet" href="../../css/addition-and-subtraction.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -64,13 +68,17 @@
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
 
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
+        <!-- AMP Auto Ads -->
+        <script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+        </script>
     </head>
     <body>
+        <!-- AMP Auto Ads -->
+        <amp-auto-ads type="adsense"
+            data-ad-client="ca-pub-7096546149694118">
+        </amp-auto-ads>
+
         <!-- Header Navigation -->
         <header class="lesson-header">
             <div class="container">
@@ -112,7 +120,7 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">JHS: Fractions</h3>
+                            <h3 class="sidebar-title">JHS 1: Fractions</h3>
                             <div class="current-topic">
                                 <i class="fas fa-project-diagram"></i>
                                 <span>Division of Fractions</span>
@@ -150,7 +158,7 @@
                             <i class="fas fa-chevron-right"></i>
                             <a href="../../../../maths">Mathematics</a>
                             <i class="fas fa-chevron-right"></i>
-                            <a href="../../../../math-jhs">JHS</a>
+                            <a href="../../../../math-jhs">JHS_1</a>
                             <i class="fas fa-chevron-right"></i>
                             <span>Division_of_Fractions</span>
                         </nav>
@@ -455,27 +463,1071 @@
 
                         <br><br>
 
-                        <!-- Math Challenge Section -->
+                        <!-- Test Instructions -->
                         <section id="quick-test" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your skills with dividing fractions and solving word problems</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>
+                                            What is the result of dividing \(\frac{2}{3}\) by \(\frac{4}{5}\)?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{8}{15}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{12}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>What is the reciprocal of \(\frac{5}{8}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{8}{5}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{8}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{8}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>\(4 \div \frac{2}{3}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(6\)</div>
+                                    <div class="option" data-correct="false">\(8\)</div>
+                                    <div class="option" data-correct="true">\(6\)</div>
+                                    <div class="option" data-correct="false">\(2\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>Which of the following is the correct solution for \(\frac{7}{10} \div \frac{2}{5}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{7}{4}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{7}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{14}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{14}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>What is \(3 \div \frac{3}{4}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(4\)</div>
+                                    <div class="option" data-correct="false">\(2\frac{1}{4}\)</div>
+                                    <div class="option" data-correct="true">\(4\)</div>
+                                    <div class="option" data-correct="false">\(3\frac{1}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>\(\frac{9}{4} \div \frac{3}{8}\) is equal to:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(8\)</div>
+                                    <div class="option" data-correct="false">\(6\)</div>
+                                    <div class="option" data-correct="true">\(6\)</div>
+                                    <div class="option" data-correct="false">\(12\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>Find the value of \(\frac{5}{8} \div \frac{1}{2}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{4}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>\(\frac{3}{4} \div \frac{1}{8}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(6\)</div>
+                                    <div class="option" data-correct="false">\(2\)</div>
+                                    <div class="option" data-correct="true">\(6\)</div>
+                                    <div class="option" data-correct="false">\(8\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>What is the result of \(\frac{7}{8} \div \frac{7}{16}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\)</div>
+                                    <div class="option" data-correct="true">\(2\)</div>
+                                    <div class="option" data-correct="false">\(1\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>\(\frac{6}{7} \div \frac{2}{7}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\)</div>
+                                    <div class="option" data-correct="false">\(2\)</div>
+                                    <div class="option" data-correct="true">\(3\)</div>
+                                    <div class="option" data-correct="false">\(4\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>Calculate: \(8 \div \frac{2}{5}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(20\)</div>
+                                    <div class="option" data-correct="true">\(20\)</div>
+                                    <div class="option" data-correct="false">\(10\)</div>
+                                    <div class="option" data-correct="false">\(16\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>\(\frac{3}{5} \div \frac{1}{10}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(6\)</div>
+                                    <div class="option" data-correct="false">\(3\)</div>
+                                    <div class="option" data-correct="true">\(6\)</div>
+                                    <div class="option" data-correct="false">\(5\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>What is the value of \(\frac{4}{9} \div \frac{2}{3}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{9}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>\(\frac{5}{6} \div \frac{5}{12}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\)</div>
+                                    <div class="option" data-correct="true">\(2\)</div>
+                                    <div class="option" data-correct="false">\(1\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{18}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>Find the result of \(\frac{8}{9} \div \frac{4}{9}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(1\)</div>
+                                    <div class="option" data-correct="false">\(2\)</div>
+                                    <div class="option" data-correct="true">\(2\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>\(\frac{3}{7} \div \frac{1}{7}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\)</div>
+                                    <div class="option" data-correct="true">\(3\)</div>
+                                    <div class="option" data-correct="false">\(7\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{1}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>Calculate: \(\frac{10}{11} \div \frac{5}{11}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\)</div>
+                                    <div class="option" data-correct="true">\(2\)</div>
+                                    <div class="option" data-correct="false">\(1\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>\(\frac{12}{13} \div \frac{4}{13}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\)</div>
+                                    <div class="option" data-correct="true">\(3\)</div>
+                                    <div class="option" data-correct="false">\(4\)</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>What is the result of \(\frac{15}{16} \div \frac{5}{8}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{16}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{15}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>\(\frac{9}{10} \div \frac{3}{5}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{9}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{10}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>What is the result of \(\frac{3}{5} \div \frac{1}{2}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{6}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>\(7 \div \frac{7}{8}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(1\)</div>
+                                    <div class="option" data-correct="false">\(8\)</div>
+                                    <div class="option" data-correct="true">\(8\)</div>
+                                    <div class="option" data-correct="false">\(7\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>Find the value of \(\frac{4}{7} \div \frac{2}{7}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{7}\)</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{14}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>\(\frac{5}{12} \div \frac{1}{3}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{36}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>Calculate: \(10 \div \frac{5}{6}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(12\)</div>
+                                    <div class="option" data-correct="true">\(12\)</div>
+                                    <div class="option" data-correct="false">\(15\)</div>
+                                    <div class="option" data-correct="false">\(6\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>\(\frac{8}{9} \div \frac{2}{3}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>What is the result of \(\frac{6}{11} \div \frac{2}{11}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\)</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{22}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{11}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>\(\frac{9}{10} \div \frac{3}{5}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{9}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{10}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>Find the value of \(\frac{7}{12} \div \frac{7}{24}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{24}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>\(\frac{5}{6} \div \frac{5}{12}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{18}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>What is the result of \(6 \div \frac{3}{4}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="true">8</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>\(\frac{10}{15} \div \frac{2}{5}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\)</div>
+                                    <div class="option" data-correct="true">\(1\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(3\)</div>
+                                    <div class="option" data-correct="false">\(5\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>Find the value of \(\frac{12}{13} \div \frac{4}{13}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(3\)</div>
+                                    <div class="option" data-correct="true">\(3\)</div>
+                                    <div class="option" data-correct="false">\(4\)</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>\(\frac{15}{16} \div \frac{5}{8}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{16}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{15}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>Calculate: \(\frac{8}{9} \div \frac{4}{9}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>\(\frac{3}{7} \div \frac{1}{7}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{1}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>What is the result of \(\frac{10}{11} \div \frac{5}{11}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{10}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>\(\frac{9}{4} \div \frac{3}{8}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>Calculate: \(8 \div \frac{2}{5}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="true">20</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">16</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>\(\frac{3}{5} \div \frac{1}{10}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>What is the result of \(\frac{2}{5} \div \frac{1}{10}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>\(\frac{3}{8} \div \frac{1}{4}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">1.5</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>Calculate: \(7 \div \frac{1}{7}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">49</div>
+                                    <div class="option" data-correct="true">49</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>\(\frac{5}{9} \div \frac{1}{3}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{3}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{9}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>What is the value of \(\frac{8}{15} \div \frac{2}{5}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{15}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>\(9 \div \frac{3}{4}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="true">12</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">7</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>Find the result of \(\frac{6}{7} \div \frac{2}{7}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>\(\frac{4}{5} \div \frac{2}{5}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">\(\frac{4}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>Calculate: \(\frac{9}{10} \div \frac{3}{5}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{9}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{10}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>\(\frac{7}{8} \div \frac{7}{16}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>What is the result of \(5 \div \frac{1}{5}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>\(\frac{6}{11} \div \frac{2}{11}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>Calculate: \(\frac{10}{15} \div \frac{2}{5}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(2\)</div>
+                                    <div class="option" data-correct="true">\(1\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(3\)</div>
+                                    <div class="option" data-correct="false">\(5\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>\(\frac{8}{9} \div \frac{4}{9}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>What is the value of \(\frac{3}{7} \div \frac{1}{7}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{1}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>\(\frac{12}{13} \div \frac{4}{13}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>Calculate: \(\frac{15}{16} \div \frac{5}{8}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{16}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{15}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>\(\frac{9}{4} \div \frac{3}{8}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>What is the result of \(8 \div \frac{2}{5}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="true">20</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">16</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>\(\frac{3}{5} \div \frac{1}{10}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>What is the result of \(\frac{5}{12} \div \frac{5}{6}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{18}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{5}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>\(6 \div \frac{3}{8}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="true">16</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>Find the value of \(\frac{4}{5} \div \frac{2}{3}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{6}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{6}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{15}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>\(\frac{9}{10} \div \frac{3}{4}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{12}{10}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{6}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{9}{7}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{40}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>Calculate: \(7 \div \frac{1}{2}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">14</div>
+                                    <div class="option" data-correct="true">14</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">3.5</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>\(\frac{8}{15} \div \frac{4}{5}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{20}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{15}{8}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>What is the result of \(\frac{3}{7} \div \frac{6}{7}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{1}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{13}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>\(10 \div \frac{2}{5}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>Find the value of \(\frac{6}{11} \div \frac{3}{11}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>\(\frac{7}{9} \div \frac{7}{27}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">27</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>Calculate: \(\frac{5}{6} \div \frac{1}{2}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{12}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>\(\frac{12}{15} \div \frac{4}{5}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{20}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{15}{4}\)</div> 
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>What is the result of \(\frac{7}{12} \div \frac{7}{36}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">36</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>\(\frac{5}{8} \div \frac{1}{4}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2.5</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">8</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>Calculate: \(9 \div \frac{3}{9}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">27</div>
+                                    <div class="option" data-correct="true">27</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>\(\frac{6}{13} \div \frac{2}{13}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>What is the value of \(\frac{8}{15} \div \frac{2}{5}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{15}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>\(12 \div \frac{3}{4}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="true">16</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">9</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>Find the result of \(\frac{10}{11} \div \frac{2}{11}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>\(\frac{9}{10} \div \frac{3}{5}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{2}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{9}{15}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{10}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>What is the result of \(\frac{4}{9} \div \frac{2}{3}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{6}{9}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{3}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>\(\frac{5}{6} \div \frac{5}{12}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">\(\frac{5}{18}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>Calculate: \(8 \div \frac{2}{5}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="true">20</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">16</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>\(\frac{3}{5} \div \frac{1}{10}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>What is the result of \(\frac{2}{5} \div \frac{1}{10}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>\(\frac{3}{8} \div \frac{1}{4}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">1.5</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>Calculate: \(7 \div \frac{1}{7}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">49</div>
+                                    <div class="option" data-correct="true">49</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>\(\frac{5}{9} \div \frac{1}{3}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{5}{3}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{5}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{9}{5}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{3}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>What is the value of \(\frac{8}{15} \div \frac{2}{5}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{10}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{15}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>\(9 \div \frac{3}{4}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="true">12</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">7</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>What is the result of \(\frac{7}{14} \div \frac{1}{2}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">\(\frac{7}{28}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>\(\frac{5}{12} \div \frac{5}{18}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">1.5</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>Calculate: \(8 \div \frac{4}{5}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">10</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>\(\frac{9}{16} \div \frac{3}{8}\) is:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="true">1.5</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>What is the value of \(\frac{12}{15} \div \frac{4}{5}\)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{3}{4}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{12}{20}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{15}{4}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>\(15 \div \frac{3}{5}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>Find the result of \(\frac{8}{9} \div \frac{2}{3}\).</p>
+                                    </div>
+                                    <div class="option" data-correct="false">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="true">\(\frac{4}{3}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{8}{6}\)</div>
+                                    <div class="option" data-correct="false">\(\frac{2}{9}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>\(\frac{7}{8} \div \frac{7}{16}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">\(\frac{1}{2}\)</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>Calculate: \(6 \div \frac{3}{4}\)</p>
+                                    </div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="true">8</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>\(\frac{10}{15} \div \frac{2}{5}\) equals:</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">\(1\frac{2}{3}\)</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="false">5</div>
                                 </div>
                             </div>
                         </section>
@@ -492,26 +1544,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath/"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath/"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs/"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs/"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs/"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -520,14 +1580,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -537,25 +1598,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-         <script src="../../js/math-challenge-fractions.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/fractions.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
