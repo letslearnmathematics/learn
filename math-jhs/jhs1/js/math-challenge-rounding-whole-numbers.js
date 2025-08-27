@@ -461,871 +461,859 @@ function initGame() {
 // Make sure allQuestions is defined before the game starts
 const allQuestions = {
     1: [
-      {
-        text: "If 1 rod = 10 cubes, how many cubes are in 3 rods?",
-        answers: ["3", "30", "300", "3,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods make 1 flat?",
-        answers: ["1", "10", "100", "1,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is the value of 2 flats + 5 rods + 7 cubes?",
-        answers: ["275", "2,057", "257", "2570"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 1 block?",
-        answers: ["10", "100", "1,000", "10,000"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 6 blocks, how many flats is that?",
-        answers: ["6", "60", "600", "6,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Convert 8 rods + 9 cubes to total cubes.",
-        answers: ["17", "69", "89", "98"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods are in 2 flats?",
-        answers: ["2", "20", "200", "2,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is 1 block - 3 flats in cubes?",
-        answers: ["7", "70", "700", "7,000"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 60 cubes, how many rods can you make?",
-        answers: ["6", "60", "600", "6,000"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 1 flat + 2 rods?",
-        answers: ["12", "102", "120", "1,200"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Which equals 250 cubes?",
-        answers: ["2 flats + 5 rods", "2 rods + 5 flats", "2 blocks + 5 cubes", "2 blocks + 5 rods"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Subtract: 1 flat - 4 rods. Result in cubes?",
-        answers: ["6", "60", "96", "600"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many full flats can you make from 325 cubes?",
-        answers: ["3", "32", "325", "3,250"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Add: 3 rods + 7 rods. Total cubes?",
-        answers: ["10", "37", "100", "370"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If 1 block = 10 flats, how many flats are in 5 blocks?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 4 rods + 9 cubes?",
-        answers: ["49", "409", "94", "490"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you combine 2 flats + 0 rods + 3 cubes, what is the total?",
-        answers: ["23", "203", "230", "2,003"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods are needed to make 1 block?",
-        answers: ["10", "100", "1,000", "10,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is 5 flats - 2 rods in cubes?",
-        answers: ["3", "48", "480", "498"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 120 cubes, how many flats can you make?",
-        answers: ["1", "12", "120", "1,200"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      }
-    ],
+  {
+    text: "Round 4,732 to the nearest hundred.",
+    answers: ["4,700", "4,730", "4,800", "5,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 8,569 up to the nearest thousand.",
+    answers: ["8,000", "8,500", "8,600", "9,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "Round 3,241 down to the nearest hundred.",
+    answers: ["3,000", "3,200", "3,240", "3,300"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 6,789 rounded to the nearest ten?",
+    answers: ["6,780", "6,790", "6,800", "7,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 9,505 to the nearest thousand.",
+    answers: ["9,000", "9,500", "10,000", "9,600"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 1,234 up to the nearest hundred.",
+    answers: ["1,200", "1,230", "1,300", "1,240"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "Round 5,671 down to the nearest ten.",
+    answers: ["5,600", "5,670", "5,700", "5,680"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 7,328 rounded to the nearest thousand?",
+    answers: ["7,000", "7,300", "7,400", "8,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 2,499 to the nearest hundred.",
+    answers: ["2,400", "2,490", "2,500", "2,600"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 4,321 up to the nearest thousand.",
+    answers: ["4,000", "4,300", "4,400", "5,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "What is 8,765 rounded to three significant figures?",
+    answers: ["8,760", "8,770", "8,800", "8,700"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 6,543 down to the nearest hundred.",
+    answers: ["6,500", "6,540", "6,600", "6,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 3,987 rounded to the nearest ten?",
+    answers: ["3,980", "3,990", "4,000", "3,900"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 7,654 to two significant figures.",
+    answers: ["7,600", "7,700", "7,650", "7,660"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 2,345 up to the nearest hundred.",
+    answers: ["2,300", "2,340", "2,400", "2,350"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "What is 9,876 rounded to the nearest thousand?",
+    answers: ["9,000", "9,800", "9,900", "10,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 1,111 down to the nearest ten.",
+    answers: ["1,100", "1,110", "1,000", "1,200"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 5,555 rounded to three significant figures?",
+    answers: ["5,550", "5,560", "5,500", "5,600"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 3,333 up to the nearest hundred.",
+    answers: ["3,300", "3,330", "3,400", "3,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "What is 6,666 rounded to the nearest thousand?",
+    answers: ["6,000", "6,600", "6,700", "7,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  }
+],
     2: [
-      // Level 2 questions would go here
-      // Follow same format as level 1
-      {
-        text: "How many cubes are in 7 rods + 2 cubes?",
-        answers: ["27", "72", "702", "720"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is the value of 1 flat + 0 rods + 5 cubes?",
-        answers: ["15", "105", "150", "1,005"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many rods make 5 flats?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Subtract: 3 flats - 4 rods. Result in cubes?",
-        answers: ["26", "260", "296", "2,600"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If you have 15 rods, how many cubes is that?",
-        answers: ["15", "150", "1,500", "15,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many full rods can you make from 84 cubes?",
-        answers: ["8", "84", "840", "8,400"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 1 block + 2 flats + 3 rods + 4 cubes?",
-        answers: ["123", "1,234", "12,340", "123,400"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Convert 9 rods + 9 cubes to total cubes.",
-        answers: ["18", "99", "909", "999"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in half a flat?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If 1 block = 10 flats, how many cubes are in 0.5 blocks?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Add: 1 rod + 1 flat + 1 block. Total cubes?",
-        answers: ["111", "1,110", "11,100", "111,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many flats are in 2 blocks + 5 flats?",
-        answers: ["7", "25", "250", "2,500"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 3 rods \\(\\times\\) 4 in cubes?",
-        answers: ["12", "120", "1,200", "12,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Divide: 1 block \\(\\div\\) 2 rods. Result?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If you have 250 cubes, how many full flats can you make?",
-        answers: ["2", "25", "250", "2,500"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in 0.1 blocks?",
-        answers: ["1", "10", "100", "1,000"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Combine: 4 flats + 9 rods + 6 cubes. Total cubes?",
-        answers: ["4.096", "469", "496", "964"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 1 flat - 1 rod - 1 cube, in cubes?",
-        answers: ["89", "98", "109", "189"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If 20 rods = _____ cubes, the missing value is:",
-        answers: ["20", "200", "2,000", "20,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in 0.25 flats?",
-        answers: ["25", "250", "2.5", "2,500"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    ],
+  {
+    text: "Round 34,567 to the nearest thousand.",
+    answers: ["34,000", "34,500", "35,000", "34,600"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 89,432 up to the nearest ten thousand.",
+    answers: ["89,000", "90,000", "89,400", "80,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "Round 56,789 down to the nearest hundred.",
+    answers: ["56,700", "56,780", "56,800", "57,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 123,456 rounded to the nearest ten thousand?",
+    answers: ["120,000", "123,000", "123,500", "100,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 75,501 to the nearest thousand.",
+    answers: ["75,000", "75,500", "76,000", "75,600"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 99,999 up to the nearest hundred.",
+    answers: ["99,900", "99,990", "100,000", "100,900"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "Round 42,315 down to the nearest thousand.",
+    answers: ["42,000", "42,300", "43,000", "40,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 67,891 rounded to the nearest hundred?",
+    answers: ["67,800", "67,890", "67,900", "68,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 150,505 to three significant figures.",
+    answers: ["151,000", "150,000", "151,500", "150,500"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 333,333 up to the nearest ten thousand.",
+    answers: ["330,000", "333,000", "333,300", "340,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "What is 888,888 rounded to four significant figures?",
+    answers: ["888,900", "888,800", "889,000", "888,800"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 499,999 down to the nearest thousand.",
+    answers: ["499,000", "499,900", "500,000", "490,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 625,000 rounded to the nearest hundred thousand?",
+    answers: ["600,000", "620,000", "630,000", "625,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 777,777 to two significant figures.",
+    answers: ["780,000", "770,000", "777,000", "800,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 123,456 up to the nearest hundred.",
+    answers: ["123,400", "123,460", "123,500", "124,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "What is 987,654 rounded to the nearest ten thousand?",
+    answers: ["980,000", "987,000", "990,000", "1,000,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 555,555 down to the nearest ten thousand.",
+    answers: ["550,000", "555,000", "560,000", "500,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 444,444 rounded to five significant figures?",
+    answers: ["444,440", "444,450", "444,400", "444,500"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 666,666 up to the nearest thousand.",
+    answers: ["666,000", "666,600", "667,000", "670,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "What is 250,000 rounded to the nearest hundred thousand?",
+    answers: ["200,000", "250,000", "300,000", "250,500"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  }
+],
     3: [
-      // Level 3 questions would go here
-      // Follow same format as level 1
-    {
-        text: "Add: 3 rods + 5 rods. Total cubes?",
-        answers: ["8", "80", "800", "8,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Subtract: 1 flat - 2 rods. Remaining cubes?",
-        answers: ["8", "80", "98", "800"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Multiply: 4 rods \\(\\times\\) 3. Total cubes?",
-        answers: ["12", "120", "1,200", "12,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Divide: 1 block \\(\\div\\) 5 rods. Result?",
-        answers: ["2", "20", "200", "2,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 2 flats + 7 rods + 4 cubes?",
-        answers: ["2,074", "247", "274", "724"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If you have 5 rods \\(\\times\\) 4, how many cubes total?",
-        answers: ["20", "200", "2,000", "20,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Solve: 1 block - 3 flats + 2 rods.",
-        answers: ["720", "702", "270", "1,320"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in 0.5 flats + 2 rods?",
-        answers: ["25", "45", "70", "700"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 3 rods \\(\\times\\) 2 rods?",
-        answers: ["6 cubes", "60 cubes", "600 cubes", "6,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Divide: 2 blocks \\(\\div\\) 4 flats. Result?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Subtract: 10 rods - 25 cubes.",
-        answers: ["7.5 cubes", "75 cubes", "750 cubes", "7,500 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Add: 0.3 blocks + 4 rods. Total cubes?",
-        answers: ["34", "340", "430", "3,040"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Multiply: 1 flat \\(\\times\\) 1 rod.",
-        answers: ["10 cubes", "100 cubes", "1,000 cubes", "10,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If 1 rod = 10 cubes, what is 7 rods ÷ 2?",
-        answers: ["3.5 cubes", "35 cubes", "350 cubes", "3,500 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Solve: 5 flats - 3 rods + 1 block.",
-        answers: ["1,270", "1,470", "1,700", "15,300"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in 0.2 blocks + 0.5 flats?",
-        answers: ["25", "250", "2,500", "25,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 12 rods \\(\\times\\) 5?",
-        answers: ["60 cubes", "600 cubes", "6,000 cubes", "60,000 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Divide: 3 blocks \\(\\div\\) 6 rods.",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Add: 0.7 flats + 8 cubes.",
-        answers: ["15", "78", "708", "780"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Subtract: 1 block - 0.5 blocks.",
-        answers: ["5 cubes", "50 cubes", "500 cubes", "5,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    ], 
+  {
+    text: "Round 1,234,567 to the nearest hundred thousand.",
+    answers: ["1,200,000", "1,230,000", "1,235,000", "1,300,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 4,999,999 up to the nearest million.",
+    answers: ["4,900,000", "4,990,000", "5,000,000", "5,900,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "Round 7,654,321 down to the nearest ten thousand.",
+    answers: ["7,650,000", "7,600,000", "7,654,000", "7,700,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 8,888,888 rounded to the nearest million?",
+    answers: ["8,000,000", "8,800,000", "8,900,000", "9,000,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 3,456,789 to three significant figures.",
+    answers: ["3,450,000", "3,460,000", "3,500,000", "3,456,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 6,543,210 up to the nearest hundred thousand.",
+    answers: ["6,500,000", "6,540,000", "6,600,000", "6,543,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "Round 9,876,543 down to the nearest thousand.",
+    answers: ["9,876,000", "9,870,000", "9,877,000", "9,800,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 5,555,555 rounded to the nearest ten thousand?",
+    answers: ["5,555,000", "5,550,000", "5,560,000", "5,600,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 2,345,678 to four significant figures.",
+    answers: ["2,345,000", "2,346,000", "2,350,000", "2,340,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 1,999,999 up to the nearest ten thousand.",
+    answers: ["1,990,000", "2,000,000", "1,999,000", "2,009,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "What is 7,777,777 rounded to two significant figures?",
+    answers: ["7,700,000", "7,800,000", "7,770,000", "7,780,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 3,333,333 down to the nearest hundred thousand.",
+    answers: ["3,300,000", "3,330,000", "3,333,000", "3,400,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 6,499,999 rounded to the nearest million?",
+    answers: ["6,000,000", "6,400,000", "6,500,000", "7,000,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 8,765,432 to five significant figures.",
+    answers: ["8,765,400", "8,765,500", "8,765,430", "8,765,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 4,321,098 up to the nearest hundred thousand.",
+    answers: ["4,300,000", "4,320,000", "4,400,000", "4,321,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "What is 9,999,999 rounded to the nearest ten?",
+    answers: ["9,999,990", "10,000,000", "9,999,900", "10,000,990"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  },
+  {
+    text: "Round 5,678,901 down to the nearest hundred thousand.",
+    answers: ["5,600,000", "5,670,000", "5,678,000", "5,700,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down"
+  },
+  {
+    text: "What is 1,234,567 rounded to three significant figures?",
+    answers: ["1,230,000", "1,234,000", "1,240,000", "1,235,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/significant-figures"
+  },
+  {
+    text: "Round 7,890,123 up to the nearest million.",
+    answers: ["7,800,000", "7,890,000", "8,000,000", "7,900,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up"
+  },
+  {
+    text: "What is 6,543,210 rounded to the nearest hundred thousand?",
+    answers: ["6,500,000", "6,540,000", "6,543,000", "6,600,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-basics"
+  }
+], 
     4: [
-        // Level 4 questions would go here
-      // Follow same format as level 1
-        {
-            text: "Solve: (2 flats \\(\\times\\) 3) + (5 rods \\(\\times\\) 4).",
-            answers: ["800", "1,100", "1,600", "2,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, what is 1 flat \\(\\div\\) 2 rods?",
-            answers: ["5", "50", "500", "5,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.4 blocks + 3 flats - 2 rods?",
-            answers: ["420", "480", "4,200", "4,800"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 0.5 blocks \\(\\times\\) 10 rods.",
-            answers: ["50 cubes", "500 cubes", "5,000 cubes", "50,000 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "1,000 cubes ÷ 25 cubes",
-            answers: ["2 rods", "4 rods", "40 rods", "400 rods"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A builder uses 3 flats + 8 rods of material. How many cubes is this?",
-            answers: ["38", "308", "380", "3,080"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Subtract: 1.5 blocks - 7 flats. Result in cubes?",
-            answers: ["80", "800", "8,000", "80,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Multiply: 6 rods \\(\\times\\) 0.5 flats. (Hint: 0.5 flat = 50 cubes)",
-            answers: ["30 cubes", "300 cubes", "3,000 cubes", "30,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A shop sells 2 rods + 5 cubes of ribbon per customer. How much ribbon for 4 customers?",
-            answers: ["25 cubes", "100 cubes", "250 cubes", "1,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Divide: 9 flats \\(\\div\\) 3 rods.",
-            answers: ["3", "30", "300", "3,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Solve: (1 block - 2 rods) + (3 flats \\(\\times\\) 2).",
-            answers: ["1,160", "1,600", "2,600", "3,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, what is \\frac{1}{4} block + \\frac{1}{2} flat?",
-            answers: ["250 cubes", "300 cubes", "350 cubes", "400 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A recipe requires 2 rods + 7 cubes of sugar. Double the recipe.",
-            answers: ["27 cubes", "54 cubes", "270 cubes", "540 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "How many full rods can you make from 365 cubes?",
-            answers: ["3", "36", "360", "3,650"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.2 blocks + 30 rods - 1 flat?",
-            answers: ["10 cubes", "100 cubes", "1,000 cubes", "10,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A classroom has 4 blocks + 5 flats of paper. How many sheets if 1 cube = 1 sheet?",
-            answers: ["45", "450", "4,500", "45,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 5 rods = 50 cubes, what is 5 rods \\(\\times\\) 5 rods?",
-            answers: ["25 cubes", "250 cubes", "2,500 cubes", "25,000 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank has 2 blocks - 5 flats of water. How many cubes remain?",
-            answers: ["500", "1,500", "2,500", "5,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Combine: 0.3 flats + 4 rods + 0.7 blocks.",
-            answers: ["740 cubes", "804 cubes", "840 cubes", "8,040 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 1 block + 2 flats daily. Weekly production?",
-            answers: ["1,200 cubes", "8,400 cubes", "12,000 cubes", "84,000 cubes"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ], 
+  {
+    text: "A city has a population of 2,345,678. Round this to the nearest hundred thousand for a news report.",
+    answers: ["2,300,000", "2,340,000", "2,350,000", "2,400,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-realworld"
+  },
+  {
+    text: "A company made $8,765,432 in revenue. Round this up to the nearest million for their annual report.",
+    answers: ["8,700,000", "8,765,000", "8,800,000", "9,000,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-applied"
+  },
+  {
+    text: "Round 12,345,678 down to the nearest hundred thousand.",
+    answers: ["12,300,000", "12,340,000", "12,345,000", "12,400,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-large"
+  },
+  {
+    text: "A national park covers 7,654,321 acres. Round this to three significant figures for a brochure.",
+    answers: ["7,650,000", "7,660,000", "7,700,000", "7,654,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-applied"
+  },
+  {
+    text: "Round the sum of 3,456,789 and 1,234,567 to the nearest million.",
+    answers: ["4,000,000", "4,600,000", "4,691,000", "5,000,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-after-addition"
+  },
+  {
+    text: "A factory produced 15,999,999 units. Round this up to the nearest hundred thousand for inventory records.",
+    answers: ["15,900,000", "16,000,000", "16,100,000", "15,999,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-inventory"
+  },
+  {
+    text: "Round the difference between 10,000,000 and 3,456,789 down to the nearest million.",
+    answers: ["6,000,000", "6,500,000", "7,000,000", "6,543,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-after-subtraction"
+  },
+  {
+    text: "A country's GDP is $23,456,789,000. Round this to four significant figures for an economic report.",
+    answers: ["23,450,000,000", "23,460,000,000", "23,500,000,000", "23,456,700,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-billions"
+  },
+  {
+    text: "Round 45,678,901 to the nearest ten million.",
+    answers: ["40,000,000", "45,000,000", "46,000,000", "50,000,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-ten-millions"
+  },
+  {
+    text: "A distance is 123,456,789 meters. Round this down to the nearest million meters.",
+    answers: ["123,000,000", "123,400,000", "123,500,000", "124,000,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-distance"
+  },
+  {
+    text: "Round the product of 1,234 and 9,876 to the nearest hundred thousand.",
+    answers: ["12,100,000", "12,180,000", "12,200,000", "12,184,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-after-multiplication"
+  },
+  {
+    text: "A website had 98,765,432 visitors. Round this to two significant figures for a press release.",
+    answers: ["98,000,000", "99,000,000", "100,000,000", "98,800,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-large-numbers"
+  },
+  {
+    text: "Round 76,543,210 up to the nearest ten million.",
+    answers: ["76,500,000", "77,000,000", "80,000,000", "76,540,000"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-ten-millions"
+  },
+  {
+    text: "A company's stock is valued at $154.9876 per share. Round this to the nearest dollar for trading.",
+    answers: ["$154", "$155", "$154.90", "$154.99"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-money"
+  },
+  {
+    text: "Round the average of 23,456,789 and 34,567,890 to the nearest million.",
+    answers: ["28,000,000", "29,000,000", "29,500,000", "30,000,000"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-averages"
+  },
+  {
+    text: "A car's odometer shows 123,456.7 miles. Round this down to the nearest hundred miles for resale value.",
+    answers: ["123,400", "123,500", "123,000", "123,456"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-odometer"
+  },
+  {
+    text: "Round 987,654,321 to five significant figures.",
+    answers: ["987,650,000", "987,660,000", "987,700,000", "987,654,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-9digit"
+  },
+  {
+    text: "A marathon is 42,165 meters. Round this up to the nearest thousand meters for race planning.",
+    answers: ["42,000", "42,100", "42,200", "43,000"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-distance"
+  },
+  {
+    text: "Round the result of 50,000,000 ÷ 7 to the nearest million.",
+    answers: ["7,000,000", "7,100,000", "7,142,000", "7,000,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-after-division"
+  },
+  {
+    text: "A library has 1,234,567 books. Round this to the nearest ten thousand for a grant application.",
+    answers: ["1,230,000", "1,234,000", "1,235,000", "1,240,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-grant-applications"
+  }
+], 
     5: [
-        // Level 5 questions would go here
-      // Follow same format as level 1
-        {
-            text: "Emma buys a toy for 2 flats + 3 rods + 5 cubes. How much does she spend (in cubes)?",
-            answers: ["235", "253", "352", "325"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A book costs 1 block - 2 flats. What's the price in cubes?",
-            answers: ["800", "1,200", "8,000", "12,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = Gh₵10.00, how much is 5 flats + 4 rods?",
-            answers: ["Gh₵54.00", "Gh₵540.00", "Gh₵5,400.00", "Gh₵54,000.00"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A wall is built with 3 blocks + 5 flats of bricks. How many bricks are used?",
-            answers: ["305", "3,050", "3,500", "35,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A rope is 4 rods + 7 cubes long. How many cubes is that?",
-            answers: ["407", "470", "4,007", "47"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank holds 2 blocks of water. If you remove 5 flats, how much remains?",
-            answers: ["500", "1,500", "2,500", "5,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A machine makes 1 flat of widgets every hour. How many widgets does it make in 8 hours?",
-            answers: ["8", "80", "800", "8,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A worker packs 2 rods of boxes daily. How many cubes does he pack in 5 days?",
-            answers: ["10", "100", "500", "1,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Half a block + a quarter flat = ___ cubes.",
-            answers: ["250", "525", "600", "1,025"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "0.3 blocks + 0.7 flats = ___ cubes.",
-            answers: ["37", "3,070", "3,700", "370"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A store has 5 blocks of stock. It sells 3 flats + 2 rods daily. How many cubes remain after 2 days?",
-            answers: ["4,360", "4,600", "4,960", "5,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "You have 2 blocks. You give away 1 flat + 5 rods + 3 cubes. How much is left?",
-            answers: ["847", "1,847", "2,153", "2,847"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A pizza is cut into 1 flat + 2 rods slices. How many slices is that?",
-            answers: ["12", "102", "120", "1,020"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A school orders 4 blocks + 5 rods of pencils. How many pencils is that?",
-            answers: ["405", "4,500", "45,000", "4,050"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A car travels 1 rod km per minute. How far in 1 flat minutes?",
-            answers: ["10 km", "100 km", "0.1 km", "1,000 km"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Combine: 0.5 blocks + 25 rods - 3 flats.",
-            answers: ["0 cubes", "200 cubes", "450 cubes", "700 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 1,000 marbles, how many marbles are in 2.5 blocks?",
-            answers: ["25", "250", "2,500", "25,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A box weighs 1 block - 5 rods. What's its weight in cubes?",
-            answers: ["50", "500", "950", "995"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A recipe needs 3 rods + 2 cubes of flour. What is triple the recipe.",
-            answers: ["96", "15", "9", "32"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A garden has 2 blocks of plants. If 1 flat + 2 rods die, how many survive?",
-            answers: ["1,880", "1,808", "1,280", "1,082"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ], 
+  {
+    text: "Round 12,345.6789 to the nearest whole number.",
+    answers: ["12,345", "12,346", "12,345.7", "12,345.68"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-decimals-whole"
+  },
+  {
+    text: "A scientific measurement is 0.00456789 cm. Round this to three significant figures.",
+    answers: ["0.00457", "0.00456", "0.004567", "0.00457 cm"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-decimal"
+  },
+  {
+    text: "Round π (3.1415926535) to four significant figures.",
+    answers: ["3.142", "3.1416", "3.141", "3.14159"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-pi"
+  },
+  {
+    text: "A chemical solution has a concentration of 0.09999 mol/L. Round this up to two decimal places.",
+    answers: ["0.09", "0.10", "0.099", "0.100"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-decimals"
+  },
+  {
+    text: "Round 999.999 down to the nearest whole number.",
+    answers: ["999", "999.9", "1,000", "999.99"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-decimals"
+  },
+  {
+    text: "The speed of light is 299,792,458 m/s. Round this to four significant figures.",
+    answers: ["299,800,000", "299,790,000", "299,792,500", "299,792,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-physics"
+  },
+  {
+    text: "Round 1,234.5678 to the nearest hundred.",
+    answers: ["1,200", "1,230", "1,234.6", "1,234.57"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-mixed-place-values"
+  },
+  {
+    text: "A medication dosage is 0.008765 grams. Round this to two significant figures.",
+    answers: ["0.0088", "0.0087", "0.009", "0.00877"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-medicine"
+  },
+  {
+    text: "Round 55.555 up to the nearest whole number.",
+    answers: ["55", "55.6", "56", "55.56"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-fractions"
+  },
+  {
+    text: "The distance to the moon is 384,400 km. Round this to three significant figures.",
+    answers: ["384,000", "385,000", "384,400", "384,000 km"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-astronomy"
+  },
+  {
+    text: "Round 0.009876 down to three decimal places.",
+    answers: ["0.009", "0.010", "0.00987", "0.00988"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-small-numbers"
+  },
+  {
+    text: "A microorganism measures 0.000456789 mm. Round this to four significant figures.",
+    answers: ["0.0004568", "0.0004567", "0.000457", "0.00045679"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-biology"
+  },
+  {
+    text: "Round 7,654.321 to the nearest ten.",
+    answers: ["7,650", "7,654", "7,654.3", "7,660"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-mixed-ten"
+  },
+  {
+    text: "The gravitational constant is 6.67430 × 10⁻¹¹. Round this to three significant figures.",
+    answers: ["6.67 × 10⁻¹¹", "6.674 × 10⁻¹¹", "6.68 × 10⁻¹¹", "6.67"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-scientific"
+  },
+  {
+    text: "Round 123.456789 up to two decimal places.",
+    answers: ["123.45", "123.46", "123.46", "123.457"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-hundredths"
+  },
+  {
+    text: "A nanoparticle has a diameter of 0.0000001234 m. Round this to two significant figures.",
+    answers: ["1.2 × 10⁻⁷", "1.23 × 10⁻⁷", "1.2 × 10⁻⁷ m", "0.00000012"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-nano"
+  },
+  {
+    text: "Round 9,999.999 down to the nearest hundred.",
+    answers: ["9,900", "9,999", "10,000", "9,999.99"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-nines"
+  },
+  {
+    text: "The atomic mass of carbon is 12.0107 u. Round this to three significant figures.",
+    answers: ["12.0", "12.01", "12.010", "12.0 u"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-chemistry"
+  },
+  {
+    text: "Round 0.123456 up to three decimal places.",
+    answers: ["0.123", "0.124", "0.1235", "0.12346"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-thousandths"
+  },
+  {
+    text: "A financial calculation yields $1234.56789. Round this to the nearest cent.",
+    answers: ["$1234.57", "$1234.56", "$1234.567", "$1234.568"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-money-cents"
+  }
+], 
     6: [
-        // Level 6 questions would go here
-      // Follow same format as level 1
-        {
-            text: "A store has 3 blocks + 7 flats of product. They sell 1 block + 2 flats + 5 rods in a day. How much inventory remains?",
-            answers: ["1,450 cubes", "2,450 cubes", "1,550 cubes", "2,550 cubes"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 4 rods + 3 cubes of goods every hour. How many cubes are made in an 8-hour shift?",
-            answers: ["344 cubes", "434 cubes", "3,440 cubes", "4,340 cubes"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Sarah saves 2 flats + 5 rods weekly. How many cubes does she save in 4 weeks?",
-            answers: ["100", "250", "1,000", "10,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A wall is 0.5 blocks + 2 flats tall. How many cubes is the height?",
-            answers: ["520", "700", "1,200", "7,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A Gh₵1,000.00 phone is discounted by 3 rods + 2 cubes. What's the new price in cubes?",
-            answers: ["Gh₵968.00", "Gh₵986.00", "Gh₵698.00", "Gh₵896.00"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A farmer harvests 5 blocks + 4 flats of corn. If 1 flat spoils, how much remains?",
-            answers: ["5,500", "530", "5,400", "5,300"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A truck carries 2 blocks + 5 rods of sand per trip. How many cubes can it transport in 3 trips?",
-            answers: ["2,500", "2,050", "615", "6,150"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Water boils at 1 flat °C. If it cools by 3 rods °C, what's the new temperature?",
-            answers: ["30°C", "70°C", "130°C", "170°C"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A runner completes 1 block + 2 flats meters in a race. How many meters is that?",
-            answers: ["1,002", "1,020", "1,200", "12,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A cake requires 3 rods + 4 cubes of flour. How much flour is needed for 5 cakes?",
-            answers: ["170", "107", "1,700", "17,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 3 blocks + \\(x\\) rods = 3,200 cubes, find the value of \\(x\\)?",
-            answers: ["2", "20", "200", "2,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is \\(\\dfrac{1}{2}\\) block + \\(\\dfrac{1}{4}\\) flat in cubes?",
-            answers: ["525", "600", "1,025", "1,250"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If \\(x\\) rods = 1 flat, what is \\(x\\)?",
-            answers: ["15", "5", "20", "10"],
-            correctIndex: 3, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A store has 5 blocks of inventory. It sells 2 blocks + 3 flats + 4 rods on Monday. How much remains?",
-            answers: ["2,660", "2,340", "4,340", "1,640"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which is greater: 0.6 blocks or 7 flats?",
-            answers: ["0.6 blocks", "7 flats", "They are equal", "Not enough information"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 rod = 10 cubes, how many flats are in 50 rods?",
-            answers: ["0.5", "5", "50", "500"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A tank has 4,500 cubes of water. How many full blocks + flats is this?",
-            answers: ["4 blocks + 5 flats", "5 blocks + 4 flats", "3 blocks + 15 flats", "2 blocks + 25 flats"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.3 blocks - 15 rods?",
-            answers: ["150", "15", "1,500", "0"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 10 flats, and 1 flat = 10 rods, how many rods are in 2 blocks?",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A construction project needs 12,000 cubes of concrete. How many full blocks are required?",
-            answers: ["12", "120", "1,200", "1.2"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ], 
+  {
+    text: "Estimate the product of 4,876 × 321 by rounding each number to its highest place value before multiplying.",
+    answers: ["1,500,000", "1,600,000", "1,550,000", "1,565,196"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/estimation-multiplication"
+  },
+  {
+    text: "A measurement is recorded as 12.5 cm with a possible error of ±0.25 cm. What is the range of possible values when rounded to the nearest whole centimeter?",
+    answers: ["12-13 cm", "12.25-12.75 cm", "12.3-12.7 cm", "12-13 cm with uncertainty"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-error-analysis"
+  },
+  {
+    text: "Round 7.849 to the nearest tenth, then round that result to the nearest whole number. What is your final answer?",
+    answers: ["7", "8", "7.8", "7.9"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/multi-step-rounding"
+  },
+  {
+    text: "Estimate the sum of 12,456 + 7,891 + 23,409 by rounding each number to the nearest thousand before adding.",
+    answers: ["43,000", "44,000", "43,756", "43,800"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/estimation-addition"
+  },
+  {
+    text: "A number is rounded to 3,400,000. What is the greatest possible value it could have been before rounding?",
+    answers: ["3,449,999", "3,444,999", "3,400,000", "3,404,999"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/reverse-rounding"
+  },
+  {
+    text: "Which of these numbers would round to 5.60 when rounded to three significant figures?",
+    answers: ["5.594", "5.604", "5.595", "5.605"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-boundaries"
+  },
+  {
+    text: "Estimate √150 by finding the two perfect squares it lies between, then rounding to the nearest whole number.",
+    answers: ["12", "12.2", "12.25", "12.3"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/estimating-roots"
+  },
+  {
+    text: "A number is rounded to 7,800,000 to two significant figures. What is the smallest possible value it could have been?",
+    answers: ["7,750,000", "7,750,000", "7,800,000", "7,750,000.0"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-range"
+  },
+  {
+    text: "Estimate 4,987 ÷ 48 by rounding both numbers to one significant figure before dividing.",
+    answers: ["100", "125", "103.9", "104"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/estimation-division"
+  },
+  {
+    text: "Which measurement has been incorrectly rounded? 2.346 → 2.35 (to 3 sig fig), 0.005678 → 0.00568 (to 3 sig fig), 12,345 → 12,300 (to 3 sig fig)",
+    answers: ["Only the first", "Only the second", "Only the third", "All are correct"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-error-detection"
+  },
+  {
+    text: "Estimate the value of π² by using π ≈ 3.14, then rounding your answer to two significant figures.",
+    answers: ["9.8", "9.9", "9.86", "9.8596"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/estimating-pi-squared"
+  },
+  {
+    text: "A number is rounded to 0.00760. How many significant figures does this represent?",
+    answers: ["3", "4", "5", "6"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-counting"
+  },
+  {
+    text: "Estimate 23% of 4,876 by rounding both numbers appropriately before calculating.",
+    answers: ["1,121", "1,120", "1,100", "1,121.48"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/estimating-percentages"
+  },
+  {
+    text: "Which of these is the best estimate for 987 × 0.512? (Round each number to one significant figure first)",
+    answers: ["500", "505", "510", "495"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/estimation-decimals"
+  },
+  {
+    text: "A measurement of 12.34 cm is made with an instrument that measures to the nearest 0.05 cm. How should this be properly rounded?",
+    answers: ["12.3 cm", "12.34 cm", "12.35 cm", "12.30 cm"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/measurement-precision"
+  },
+  {
+    text: "Estimate the mean of these numbers: 4,567; 3,892; 5,123; 4,876 by rounding each to the nearest hundred first.",
+    answers: ["4,600", "4,614.5", "4,615", "4,610"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/estimating-means"
+  },
+  {
+    text: "Which number would not round to 6.50 when rounded to three significant figures?",
+    answers: ["6.495", "6.504", "6.499", "6.501"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-boundaries"
+  },
+  {
+    text: "Estimate 15³ by calculating 15 × 15 × 15, then rounding to two significant figures.",
+    answers: ["3,400", "3,375", "3,380", "3,400"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/estimating-powers"
+  },
+  {
+    text: "A population is reported as 1,240,000 people. What is the maximum possible error in this rounded figure?",
+    answers: ["±500 people", "±5,000 people", "±50,000 people", "±500,000 people"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-error-range"
+  },
+  {
+    text: "Estimate the solution to (123,456 + 87,654) ÷ 321 by rounding appropriately before calculating.",
+    answers: ["657", "658", "657.4", "660"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/estimation-multi-operations"
+  }
+], 
     7: [
-        // Level 7 questions would go here
-      // Follow same format as level 1
-        {
-            text: "If 5 rods + \\(x\\) cubes = 1 flat, what is the value of \\(x\\)?",
-            answers: ["40", "50", "60", "100"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is \\(\\dfrac{3}{4}\\) block - 2 rods in cubes?",
-            answers: ["550", "650", "730", "800"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A truck carries 2 blocks + 3 flats of sand. It drops off 5 rods + 7 cubes. How much sand remains?",
-            answers: ["2,243", "2,343", "2,443", "2,543"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which is greater: 0.7 blocks or 6 flats + 5 rods?",
-            answers: ["0.7 blocks", "6 flats + 5 rods", "Equal", "Not comparable"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 150 rods = _____ blocks, what fills the blank?",
-            answers: ["0.15", "1.5", "15", "150"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A box weighs 3,050 cubes. How many full blocks + flats + rods is this?",
-            answers: ["3 blocks + 0 flats + 5 rods", "3 blocks + 5 flats + 0 rods", "30 blocks + 5 rods", "305 flats"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = 5 flats, 1 flat = 2 rods, and 1 rod = 10 cubes, how many cubes are in 2 blocks?",
-            answers: ["100", "200", "1,000", "2,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A bakery uses 2 flats + 8 rods of flour daily. How much flour is used in 5 days?",
-            answers: ["1,400", "2,800", "14,000", "28,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is 0.4 blocks \\(\\times\\) 5 rods? (Assume rod = 10 cubes)",
-            answers: ["20", "200", "2,000", "20,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If A = \\(\\dfrac{1}{4}\\) block, B = 3 rods, and C = 0.2 flats, which is smallest?",
-            answers: ["A", "B", "C", "All equal"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A container holds 2.5 blocks of water. How many flats is this equivalent to?",
-            answers: ["2.5", "25", "250", "2,500"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 block = \\(x\\) rods, what is the value of \\(x\\)?",
-            answers: ["10", "100", "1,000", "10,000"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A factory produces 3 blocks + 5 flats of goods daily. How many cubes are produced in 4 days?",
-            answers: ["1,400", "3,500", "14,000", "35,000"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "What is \\(\\dfrac{3}{4}\\) block + \\(\\dfrac{1}{5}\\) flat in cubes?",
-            answers: ["755", "770", "800", "850"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Which quantity is largest?",
-            answers: ["0.6 blocks", "7 flats", "65 rods", "600 cubes"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A machine makes 2 rods + 5 cubes every minute. How much does it produce in 30 minutes?",
-            answers: ["75", "250", "750", "7500"],
-            correctIndex: 2, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "If 1 cube = 1 gram, how many kilograms is 1 block?",
-            answers: ["1", "10", "100", "1,000"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "A shipment contains 4,200 cubes. How many full blocks and flats is this?",
-            answers: ["4 blocks + 2 flats", "2 blocks + 4 flats", "42 flats", "420 rods"],
-            correctIndex: 0, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "35% of a block equals how many rods?",
-            answers: ["3.5", "35", "350", "3,500"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-        {
-            text: "Boxes hold 1 flat (100 cubes) each. How many boxes are needed for 3 blocks + 2 rods?",
-            answers: ["30", "31", "32", "40"],
-            correctIndex: 1, // Index of correct answer (0-3)
-            videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-        },
-    ]
+  {
+    text: "A scientific constant is known to be 6.02214076 × 10²³. Round this to five significant figures for a high school textbook.",
+    answers: ["6.0221 × 10²³", "6.0220 × 10²³", "6.02214 × 10²³", "6.022 × 10²³"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-avogadro"
+  },
+  {
+    text: "The distance between two cities is 123.456789 km. If you need to express this in meters with appropriate precision for a road sign, what should it be?",
+    answers: ["123 km", "123.5 km", "123.46 km", "123.457 km"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-practical-applications"
+  },
+  {
+    text: "A financial report shows a profit of $1,234,567.89. Round this appropriately for a executive summary to the nearest $10,000.",
+    answers: ["$1,230,000", "$1,234,600", "$1,235,000", "$1,200,000"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-financial-reports"
+  },
+  {
+    text: "Which rounding approach would be most appropriate for calculating medication dosage: always rounding up, always rounding down, or standard rounding?",
+    answers: ["Always round up for safety", "Always round down to avoid overdose", "Standard rounding rules", "It depends on the specific medication"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-medical-context"
+  },
+  {
+    text: "Estimate the value of (√2 + π) by first rounding each irrational number to three decimal places, then adding, then rounding the result to two decimal places.",
+    answers: ["4.56", "4.55", "4.56", "4.55"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-irrational-numbers"
+  },
+  {
+    text: "A measurement is 12.3456 cm with an uncertainty of ±0.0123 cm. How should this be properly reported with appropriate rounding?",
+    answers: ["12.35 ± 0.01 cm", "12.346 ± 0.012 cm", "12.35 ± 0.012 cm", "12.3 ± 0.0 cm"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-with-uncertainty"
+  },
+  {
+    text: "In statistical analysis, why might researchers sometimes use rounding down instead of standard rounding?",
+    answers: ["To be conservative in estimates", "It's mathematically more accurate", "To minimize Type I errors", "There's never a reason to round down in statistics"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-statistical-context"
+  },
+  {
+    text: "Round 9.999999 to the appropriate number of decimal places for a scientific measurement with precision to the nearest 0.001.",
+    answers: ["10.000", "9.999", "10.00", "10.0"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-nines-precision"
+  },
+  {
+    text: "A population grows from 1,234,567 to 1,345,678 in one year. Calculate the percentage increase, then round appropriately for a demographic report.",
+    answers: ["9.0%", "8.99%", "9%", "8.995%"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-percentage-growth"
+  },
+  {
+    text: "Which of these numbers, when rounded to two significant figures, would give a different result if rounded using the 'round half to even' method versus standard rounding?",
+    answers: ["2.35", "1.75", "3.25", "4.65"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/round-half-even-vs-standard"
+  },
+  {
+    text: "Estimate the product of 0.123456 × 789.012 by rounding each number to three significant figures first, then multiplying.",
+    answers: ["97.4", "97.3", "97.0", "97.5"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/estimation-mixed-decimals"
+  },
+  {
+    text: "A physics constant is 6.62607015 × 10⁻³⁴. Round this appropriately for an introductory college textbook.",
+    answers: ["6.626 × 10⁻³⁴", "6.63 × 10⁻³⁴", "6.6261 × 10⁻³⁴", "6.62607 × 10⁻³⁴"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-physics-constants"
+  },
+  {
+    text: "In computer science, why is rounding important when working with floating-point numbers?",
+    answers: ["To prevent accumulation of rounding errors", "To make calculations faster", "To reduce memory usage", "All mathematical operations require rounding in computing"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-computer-science"
+  },
+  {
+    text: "Round the result of 22/7 to a more accurate approximation of π than 3.14, using appropriate rounding.",
+    answers: ["3.142857", "3.1429", "3.143", "3.14286"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-pi-approximation"
+  },
+  {
+    text: "A scientific instrument measures to the nearest 0.0001 units but has a systematic error of ±0.00005 units. How should measurements from this instrument be rounded?",
+    answers: ["To the nearest 0.0001", "To the nearest 0.00005", "To the nearest 0.001", "To the nearest 0.0002"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-with-systematic-error"
+  },
+  {
+    text: "Estimate the value of e² (where e ≈ 2.71828) by rounding e to three significant figures first, then squaring, then rounding the result to three significant figures.",
+    answers: ["7.39", "7.38", "7.40", "7.389"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/estimating-e-squared"
+  },
+  {
+    text: "In financial calculations, why is it important to understand the difference between rounding intermediate steps versus rounding only the final result?",
+    answers: ["Rounding intermediate steps can accumulate errors", "It affects tax calculations differently", "Banks use different rounding rules for intermediate steps", "There is no important difference"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-financial-calculations"
+  },
+  {
+    text: "A measurement is recorded as 123.456 ± 0.789 units. What is the appropriate way to round both the measurement and uncertainty?",
+    answers: ["123.5 ± 0.8", "123.46 ± 0.79", "123 ± 1", "123.456 ± 0.789"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-with-large-uncertainty"
+  },
+  {
+    text: "Which of these demonstrates proper use of significant figures in a calculation: (12.34 × 5.6) or (12.34 × 5.60)?",
+    answers: ["The first, as it reflects the precision of the least precise measurement", "The second, as it maintains more precision", "Both are equally valid", "It depends on the context of the measurement"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-multiplication"
+  },
+  {
+    text: "A mathematical constant is known to be 1.6180339887... (the golden ratio). Round this appropriately for an architectural design where precision to 0.001 is sufficient.",
+    answers: ["1.618", "1.6180", "1.62", "1.61803"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-golden-ratio"
+  }
+]
   };
 
 // Start the game when the page loads
