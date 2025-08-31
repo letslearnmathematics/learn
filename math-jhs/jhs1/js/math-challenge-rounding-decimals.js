@@ -461,375 +461,371 @@ function initGame() {
 // Make sure allQuestions is defined before the game starts
 const allQuestions = {
     1: [
-      {
-        text: "If 1 rod = 10 cubes, how many cubes are in 3 rods?",
-        answers: ["3", "30", "300", "3,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods make 1 flat?",
-        answers: ["1", "10", "100", "1,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is the value of 2 flats + 5 rods + 7 cubes?",
-        answers: ["275", "2,057", "257", "2570"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 1 block?",
-        answers: ["10", "100", "1,000", "10,000"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 6 blocks, how many flats is that?",
-        answers: ["6", "60", "600", "6,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Convert 8 rods + 9 cubes to total cubes.",
-        answers: ["17", "69", "89", "98"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods are in 2 flats?",
-        answers: ["2", "20", "200", "2,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is 1 block - 3 flats in cubes?",
-        answers: ["7", "70", "700", "7,000"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 60 cubes, how many rods can you make?",
-        answers: ["6", "60", "600", "6,000"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 1 flat + 2 rods?",
-        answers: ["12", "102", "120", "1,200"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Which equals 250 cubes?",
-        answers: ["2 flats + 5 rods", "2 rods + 5 flats", "2 blocks + 5 cubes", "2 blocks + 5 rods"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Subtract: 1 flat - 4 rods. Result in cubes?",
-        answers: ["6", "60", "96", "600"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many full flats can you make from 325 cubes?",
-        answers: ["3", "32", "325", "3,250"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "Add: 3 rods + 7 rods. Total cubes?",
-        answers: ["10", "37", "100", "370"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If 1 block = 10 flats, how many flats are in 5 blocks?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 4 rods + 9 cubes?",
-        answers: ["49", "409", "94", "490"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you combine 2 flats + 0 rods + 3 cubes, what is the total?",
-        answers: ["23", "203", "230", "2,003"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods are needed to make 1 block?",
-        answers: ["10", "100", "1,000", "10,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is 5 flats - 2 rods in cubes?",
-        answers: ["3", "48", "480", "498"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "If you have 120 cubes, how many flats can you make?",
-        answers: ["1", "12", "120", "1,200"],
-        correctIndex: 0,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      }
-    ],
+  {
+    text: "Round 3.456 to the nearest tenth.",
+    answers: ["3.4", "3.5", "3.46", "3.45"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-decimals-tenths"
+  },
+  {
+    text: "Round 7.891 to the nearest whole number.",
+    answers: ["7", "7.8", "7.9", "8"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-decimals-whole"
+  },
+  {
+    text: "Round 0.345 to the nearest hundredth.",
+    answers: ["0.3", "0.34", "0.35", "0.345"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-decimals-hundredths"
+  },
+  {
+    text: "Round 2.999 to the nearest tenth.",
+    answers: ["2.9", "3.0", "3", "2.99"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-nines"
+  },
+  {
+    text: "Round 5.678 up to the nearest whole number.",
+    answers: ["5", "5.6", "5.7", "6"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-decimals"
+  },
+  {
+    text: "Round 4.321 down to the nearest tenth.",
+    answers: ["4.3", "4.2", "4.32", "4.0"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-decimals"
+  },
+  {
+    text: "Round 9.876 to the nearest hundredth.",
+    answers: ["9.87", "9.88", "9.8", "9.9"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-hundredths-practice"
+  },
+  {
+    text: "Round 1.234 up to the nearest tenth.",
+    answers: ["1.2", "1.3", "1.23", "1.24"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-tenths"
+  },
+  {
+    text: "Round 6.789 down to the nearest whole number.",
+    answers: ["6", "6.7", "6.8", "7"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-whole"
+  },
+  {
+    text: "Round 0.987 to the nearest tenth.",
+    answers: ["0.9", "1.0", "0.98", "0.99"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-small-decimals"
+  },
+  {
+    text: "How many significant figures does 0.045 have?",
+    answers: ["1", "2", "3", "4"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-intro"
+  },
+  {
+    text: "Round 12.345 to two decimal places.",
+    answers: ["12.34", "12.35", "12.3", "12.4"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/decimal-places-intro"
+  },
+  {
+    text: "Round 8.765 up to the nearest hundredth.",
+    answers: ["8.76", "8.77", "8.7", "8.8"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-hundredths"
+  },
+  {
+    text: "Round 3.141 down to the nearest tenth.",
+    answers: ["3.1", "3.0", "3.14", "3.2"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-tenths"
+  },
+  {
+    text: "Round 7.500 to the nearest whole number.",
+    answers: ["7", "7.5", "8", "7.0"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-midpoint"
+  },
+  {
+    text: "How many decimal places does 12.345 have?",
+    answers: ["2", "3", "4", "5"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/counting-decimal-places"
+  },
+  {
+    text: "Round 9.999 to the nearest hundredth.",
+    answers: ["9.99", "10.00", "9.9", "10.0"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-repeating-nines"
+  },
+  {
+    text: "Round 4.321 to one decimal place.",
+    answers: ["4.3", "4.4", "4.32", "4.2"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/one-decimal-place"
+  },
+  {
+    text: "How many significant figures does 120.0 have?",
+    answers: ["1", "2", "3", "4"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-trailing-zeros"
+  },
+  {
+    text: "Round 6.666 to the nearest tenth.",
+    answers: ["6.6", "6.7", "6.67", "6.66"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-repeating-digits"
+  }
+],
     2: [
-      // Level 2 questions would go here
-      // Follow same format as level 1
-      {
-        text: "How many cubes are in 7 rods + 2 cubes?",
-        answers: ["27", "72", "702", "720"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is the value of 1 flat + 0 rods + 5 cubes?",
-        answers: ["15", "105", "150", "1,005"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many rods make 5 flats?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Subtract: 3 flats - 4 rods. Result in cubes?",
-        answers: ["26", "260", "296", "2,600"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If you have 15 rods, how many cubes is that?",
-        answers: ["15", "150", "1,500", "15,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many full rods can you make from 84 cubes?",
-        answers: ["8", "84", "840", "8,400"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 1 block + 2 flats + 3 rods + 4 cubes?",
-        answers: ["123", "1,234", "12,340", "123,400"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Convert 9 rods + 9 cubes to total cubes.",
-        answers: ["18", "99", "909", "999"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in half a flat?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If 1 block = 10 flats, how many cubes are in 0.5 blocks?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Add: 1 rod + 1 flat + 1 block. Total cubes?",
-        answers: ["111", "1,110", "11,100", "111,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many flats are in 2 blocks + 5 flats?",
-        answers: ["7", "25", "250", "2,500"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 3 rods \\(\\times\\) 4 in cubes?",
-        answers: ["12", "120", "1,200", "12,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Divide: 1 block \\(\\div\\) 2 rods. Result?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If you have 250 cubes, how many full flats can you make?",
-        answers: ["2", "25", "250", "2,500"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in 0.1 blocks?",
-        answers: ["1", "10", "100", "1,000"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Combine: 4 flats + 9 rods + 6 cubes. Total cubes?",
-        answers: ["4.096", "469", "496", "964"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 1 flat - 1 rod - 1 cube, in cubes?",
-        answers: ["89", "98", "109", "189"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If 20 rods = _____ cubes, the missing value is:",
-        answers: ["20", "200", "2,000", "20,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in 0.25 flats?",
-        answers: ["25", "250", "2.5", "2,500"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    ],
+  {
+    text: "Round 78.4604783 to the nearest tenths.",
+    answers: ["78.5", "78.4", "78.46", "78.0"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-tenths-example"
+  },
+  {
+    text: "Round 78.4604783 to the nearest hundredths.",
+    answers: ["78.46", "78.47", "78.460", "78.500"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-hundredths-example"
+  },
+  {
+    text: "Round 78.4604783 to the nearest thousandths.",
+    answers: ["78.460", "78.461", "78.4605", "78.4600"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-thousandths-example"
+  },
+  {
+    text: "Round up 78.4604783 to the nearest tenths.",
+    answers: ["78.5", "78.4", "78.46", "78.0"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-tenths"
+  },
+  {
+    text: "Round up 78.4604783 to the nearest hundredths.",
+    answers: ["78.47", "78.46", "78.460", "78.500"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-hundredths"
+  },
+  {
+    text: "Round up 78.4604783 to the nearest thousandths.",
+    answers: ["78.461", "78.460", "78.4605", "78.4600"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-thousandths"
+  },
+  {
+    text: "Round down 78.4604783 to the nearest tenths.",
+    answers: ["78.4", "78.5", "78.46", "78.0"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-tenths"
+  },
+  {
+    text: "Round down 78.4604783 to the nearest hundredths.",
+    answers: ["78.46", "78.47", "78.460", "78.500"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-hundredths"
+  },
+  {
+    text: "Round down 78.4604783 to the nearest thousandths.",
+    answers: ["78.460", "78.461", "78.4605", "78.4600"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-thousandths"
+  },
+  {
+    text: "How many significant figures does 0.360 have?",
+    answers: ["3", "2", "1", "4"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-0360"
+  },
+  {
+    text: "How many significant figures does 7.021 have?",
+    answers: ["4", "3", "2", "1"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-7021"
+  },
+  {
+    text: "Round 0.00234567 to 3 significant figures.",
+    answers: ["0.00235", "0.00234", "0.002345", "0.002346"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-3-digits"
+  },
+  {
+    text: "Round 84.40995000 to 4 significant figures.",
+    answers: ["84.41", "84.40", "84.409", "84.410"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-4-digits"
+  },
+  {
+    text: "Round 0.00234567 to 5 significant figures.",
+    answers: ["0.0023457", "0.0023456", "0.002345", "0.002346"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-5-digits"
+  },
+  {
+    text: "Express 745.9674 correct to 3 decimal places.",
+    answers: ["745.967", "745.968", "745.970", "745.966"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/3-decimal-places"
+  },
+  {
+    text: "Express 745.9674 correct to 2 decimal places.",
+    answers: ["745.97", "745.96", "745.967", "745.968"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/2-decimal-places"
+  },
+  {
+    text: "Express 745.9674 correct to 1 decimal place.",
+    answers: ["746.0", "745.9", "745.97", "745.96"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/1-decimal-place"
+  },
+  {
+    text: "Which of these could be Musa's actual measurement if he rounded to 0.76m (2 decimal places)?",
+    answers: ["0.755m", "0.764m", "0.759m", "0.765m"],
+    correctIndex: 2,
+    videoSolution: "https://www.youtube.com/embed/rounding-range-example"
+  },
+  {
+    text: "What is the place value of the digit 4 in 78.4604783?",
+    answers: ["Tenths", "Hundredths", "Thousandths", "Ten-thousandths"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/decimal-place-values"
+  },
+  {
+    text: "What is the place value of the digit 6 in 78.4604783?",
+    answers: ["Hundredths", "Tenths", "Thousandths", "Ten-thousandths"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/decimal-place-values-2"
+  }
+],
     3: [
-      // Level 3 questions would go here
-      // Follow same format as level 1
-    {
-        text: "Add: 3 rods + 5 rods. Total cubes?",
-        answers: ["8", "80", "800", "8,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Subtract: 1 flat - 2 rods. Remaining cubes?",
-        answers: ["8", "80", "98", "800"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Multiply: 4 rods \\(\\times\\) 3. Total cubes?",
-        answers: ["12", "120", "1,200", "12,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Divide: 1 block \\(\\div\\) 5 rods. Result?",
-        answers: ["2", "20", "200", "2,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 2 flats + 7 rods + 4 cubes?",
-        answers: ["2,074", "247", "274", "724"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If you have 5 rods \\(\\times\\) 4, how many cubes total?",
-        answers: ["20", "200", "2,000", "20,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Solve: 1 block - 3 flats + 2 rods.",
-        answers: ["720", "702", "270", "1,320"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in 0.5 flats + 2 rods?",
-        answers: ["25", "45", "70", "700"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 3 rods \\(\\times\\) 2 rods?",
-        answers: ["6 cubes", "60 cubes", "600 cubes", "6,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Divide: 2 blocks \\(\\div\\) 4 flats. Result?",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Subtract: 10 rods - 25 cubes.",
-        answers: ["7.5 cubes", "75 cubes", "750 cubes", "7,500 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Add: 0.3 blocks + 4 rods. Total cubes?",
-        answers: ["34", "340", "430", "3,040"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Multiply: 1 flat \\(\\times\\) 1 rod.",
-        answers: ["10 cubes", "100 cubes", "1,000 cubes", "10,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "If 1 rod = 10 cubes, what is 7 rods ÷ 2?",
-        answers: ["3.5 cubes", "35 cubes", "350 cubes", "3,500 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Solve: 5 flats - 3 rods + 1 block.",
-        answers: ["1,270", "1,470", "1,700", "15,300"],
-        correctIndex: 0, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "How many cubes are in 0.2 blocks + 0.5 flats?",
-        answers: ["25", "250", "2,500", "25,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "What is 12 rods \\(\\times\\) 5?",
-        answers: ["60 cubes", "600 cubes", "6,000 cubes", "60,000 cubes"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Divide: 3 blocks \\(\\div\\) 6 rods.",
-        answers: ["5", "50", "500", "5,000"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Add: 0.7 flats + 8 cubes.",
-        answers: ["15", "78", "708", "780"],
-        correctIndex: 1, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    {
-        text: "Subtract: 1 block - 0.5 blocks.",
-        answers: ["5 cubes", "50 cubes", "500 cubes", "5,000 cubes"],
-        correctIndex: 2, // Index of correct answer (0-3)
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-    },
-    ], 
+  {
+    text: "Round 123.456789 to the nearest thousandths.",
+    answers: ["123.457", "123.456", "123.4568", "123.4567"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-thousandths-advanced"
+  },
+  {
+    text: "Round 45.678901 up to the nearest hundredths.",
+    answers: ["45.68", "45.67", "45.679", "45.678"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-hundredths-advanced"
+  },
+  {
+    text: "Round 99.999999 down to the nearest tenths.",
+    answers: ["99.9", "100.0", "99.99", "99.0"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-nines"
+  },
+  {
+    text: "How many significant figures does 0.007890 have?",
+    answers: ["4", "3", "5", "6"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-leading-zeros"
+  },
+  {
+    text: "Round 0.000456789 to 2 significant figures.",
+    answers: ["0.00046", "0.00045", "0.000457", "0.000456"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-small-numbers"
+  },
+  {
+    text: "Express 987.654321 correct to 4 decimal places.",
+    answers: ["987.6543", "987.6544", "987.6540", "987.65432"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/4-decimal-places"
+  },
+  {
+    text: "Which measurement would NOT round to 12.35 when rounded to 2 decimal places?",
+    answers: ["12.345", "12.354", "12.346", "12.355"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-boundaries"
+  },
+  {
+    text: "Round 55.555555 to the nearest thousandths.",
+    answers: ["55.556", "55.555", "55.5556", "55.5555"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-repeating-digits"
+  },
+  {
+    text: "How many decimal places does 0.123456789 have?",
+    answers: ["9", "8", "7", "6"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/counting-many-decimals"
+  },
+  {
+    text: "Round 33.333333 up to the nearest hundredths.",
+    answers: ["33.34", "33.33", "33.333", "33.330"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-repeating"
+  },
+  {
+    text: "What is the smallest number that rounds to 7.80 when rounded to 2 decimal places?",
+    answers: ["7.795", "7.799", "7.805", "7.750"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-range-min"
+  },
+  {
+    text: "Round 66.666666 down to the nearest thousandths.",
+    answers: ["66.666", "66.667", "66.6666", "66.6667"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-down-repeating"
+  },
+  {
+    text: "How many significant figures does 100.004 have?",
+    answers: ["6", "5", "4", "3"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-middle-zeros"
+  },
+  {
+    text: "Round 0.999999 to 3 significant figures.",
+    answers: ["1.00", "0.999", "1.000", "0.100"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/sig-figs-near-one"
+  },
+  {
+    text: "Express 1234.56789 correct to 1 decimal place.",
+    answers: ["1234.6", "1234.5", "1234.57", "1234.56"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/large-number-decimals"
+  },
+  {
+    text: "What is the place value of the digit 8 in 12.3456789?",
+    answers: ["Hundred-thousandths", "Ten-thousandths", "Millionths", "Thousandths"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/advanced-place-values"
+  },
+  {
+    text: "Round 22.222222 to the nearest ten-thousandths.",
+    answers: ["22.2222", "22.2223", "22.2220", "22.22222"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-ten-thousandths"
+  },
+  {
+    text: "Which of these numbers has exactly 5 significant figures?",
+    answers: ["100.40", "0.001234", "1004.0", "0.10040"],
+    correctIndex: 3,
+    videoSolution: "https://www.youtube.com/embed/identifying-sig-figs"
+  },
+  {
+    text: "Round 77.777777 up to the nearest thousandths.",
+    answers: ["77.778", "77.777", "77.780", "77.7778"],
+    correctIndex: 0,
+    videoSolution: "https://www.youtube.com/embed/rounding-up-thousandths-advanced"
+  },
+  {
+    text: "What is the largest number that rounds to 5.25 when rounded to 2 decimal places?",
+    answers: ["5.254", "5.255", "5.259", "5.249"],
+    correctIndex: 1,
+    videoSolution: "https://www.youtube.com/embed/rounding-range-max"
+  }
+], 
     4: [
         // Level 4 questions would go here
       // Follow same format as level 1
