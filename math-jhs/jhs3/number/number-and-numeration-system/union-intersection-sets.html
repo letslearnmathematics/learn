@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Rational Number Relationships | JHS3 Mathematics">
         <meta property="og:description" content="Learn about relationships between rational numbers using union and intersection of sets">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/favicon-32x32.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/number-and-numeration-system/rational-number-relationships">
         <meta property="og:type" content="website">
     
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/read-write-numbers.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -63,12 +67,6 @@
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
     </head>
     <body>
         <!-- Header Navigation -->
@@ -197,13 +195,13 @@
                                     <i class="fas fa-globe"></i> Hierarchy of Real Numbers
                                 </h3>
                                 <p>The real number system can be represented using nested sets to show how different number types relate:</p>
-                                <img src="../../../../images/real-numbers-diagram.png" alt="Real Number System Diagram" class="place">
+                                <img src="../../../../images/subsets-real-numbers.png" alt="Real Number System Diagram" class="place">
                                 
                                 <div class="math-example">
                                     <p>Key relationships:</p>
                                     <ul>
                                         <li>Natural numbers (\( \mathbb{N} \)) ⊂ Whole numbers (\( \mathbb{W} \)) ⊂ Integers (\( \mathbb{Z} \)) ⊂ Rational numbers (\( \mathbb{Q} \)) ⊂ Real numbers (\( \mathbb{R} \))</li>
-                                        <li>Irrational numbers (\( \mathbb{P} \)) are separate but also part of real numbers</li>
+                                        <li>Irrational numbers (\( \mathbb{I} \)) are separate but also part of real numbers</li>
                                     </ul>
                                 </div>
                             </div>
@@ -222,7 +220,7 @@
                                 
                                 <div class="math-example">
                                     <p><strong>Example 2:</strong> Relationship between rational and irrational numbers</p>
-                                    \[ \mathbb{Q} \cap \mathbb{P} = \emptyset \]
+                                    \[ \mathbb{Q} \cap \mathbb{I} = \emptyset \]
                                     <p>This shows they have no common elements</p>
                                 </div>
                             </div>
