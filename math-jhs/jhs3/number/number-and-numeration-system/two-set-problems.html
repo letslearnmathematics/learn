@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Sets and Number Systems | JHS3 Mathematics">
         <meta property="og:description" content="Learn to Apply Sets Concepts to Solve Problems with Rational Numbers">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/favicon-32x32.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs3/number/number-and-numeration-system/sets-and-number-systems">
         <meta property="og:type" content="website">
     
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/read-write-numbers.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -63,12 +67,6 @@
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-read-write-numbers.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
     </head>
     <body>
         <!-- Header Navigation -->
@@ -169,8 +167,8 @@
                                     We'll focus on two key operations with sets:
                                 </p>
                                 <ul>
-                                    <li><strong>Union (∪)</strong>: Combines all elements from both sets</li>
-                                    <li><strong>Intersection (∩)</strong>: Contains only elements common to both sets</li>
+                                    <li><strong>Union ($\cup$)</strong>: Combines all elements from both sets</li>
+                                    <li><strong>Intersection ($\cap$)</strong>: Contains only elements common to both sets</li>
                                 </ul>
                                 
                                 <div class="math-example">
@@ -309,14 +307,7 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <p>Let F = French students, G = German students</p>
-                                        <p>Given: n(F) = 30, n(G) = 25, n(F ∩ G) = 10, Total = 50</p>
-                                        
-                                        <ol type="a">
-                                            <li>Only French: n(F) - n(F ∩ G) = 30 - 10 = 20</li>
-                                            <li>Only German: n(G) - n(F ∩ G) = 25 - 10 = 15</li>
-                                            <li>At least one language: n(F ∪ G) = n(F) + n(G) - n(F ∩ G) = 30 + 25 - 10 = 45</li>
-                                        </ol>
+
                                     </div>
                                 </div>
                                 
@@ -330,25 +321,7 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <p>Let D = Daily Graphic readers, T = Ghanaian Times readers</p>
-                                        <p>Given: n(D) = 60, n(T) = 45, n(neither) = 20, Total = 100</p>
-                                        <p>Number reading at least one paper: 100 - 20 = 80</p>
-                                        
-                                        <p>Using union formula:</p>
-                                        <p>n(D ∪ T) = n(D) + n(T) - n(D ∩ T)</p>
-                                        <p>80 = 60 + 45 - n(D ∩ T)</p>
-                                        <p>n(D ∩ T) = 105 - 80 = 25</p>
-                                        
-                                        <ol type="a">
-                                            <li>Both newspapers: 25</li>
-                                            <li>Exactly one newspaper:
-                                                <ul>
-                                                    <li>Only Daily Graphic: 60 - 25 = 35</li>
-                                                    <li>Only Ghanaian Times: 45 - 25 = 20</li>
-                                                    <li>Total: 35 + 20 = 55</li>
-                                                </ul>
-                                            </li>
-                                        </ol>
+
                                     </div>
                                 </div>
                                 
@@ -363,17 +336,7 @@
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Solution:</strong></p>
-                                        <p>Let F = football players, B = basketball players</p>
-                                        <p>Given: n(F) = 70, n(B) = 50, n(F ∩ B) = 15, Total = 120</p>
-                                        
-                                        <ol type="a">
-                                            <li>Only football: n(F) - n(F ∩ B) = 70 - 15 = 55</li>
-                                            <li>Only basketball: n(B) - n(F ∩ B) = 50 - 15 = 35</li>
-                                            <li>Neither sport: 
-                                                <p>First find n(F ∪ B) = 70 + 50 - 15 = 105</p>
-                                                <p>Then neither = 120 - 105 = 15</p>
-                                            </li>
-                                        </ol>
+
                                     </div>
                                 </div>
                             </div>
@@ -386,27 +349,1081 @@
                             </div>
                         </section>
 
-                        <!-- Speed Test Game -->
-                        <section id="quick-test" class="lesson-section">
+                        <br><br>
+
+                        <!-- Test Instructions -->
+                        <section id="instructions" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Section A - Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>In a group of 80 students, 50 study Mathematics and 60 study Science. Each student studies at least one of the two subjects. How many students study both subjects?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">30</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">50</div>
+                                </div>
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>Which of the following is the intersection of the sets A = {2, 4, 6, 8} and B = {4, 8, 10, 12}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{2, 6}</div>
+                                    <div class="option" data-correct="false">{10, 12}</div>
+                                    <div class="option" data-correct="true">{4, 8}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6, 8, 10, 12}</div>
+                                </div>
+                                <!-- Question 3 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>If n(A) = 15, n(B) = 20, and n(A ∩ B) = 5, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">35</div>
+                                    <div class="option" data-correct="true">30</div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="false">20</div>
+                                </div>
+                                <!-- Question 4 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>Which symbol represents the union of two sets?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">∩</div>
+                                    <div class="option" data-correct="true">∪</div>
+                                    <div class="option" data-correct="false">⊆</div>
+                                    <div class="option" data-correct="false">⊂</div>
+                                </div>
+                                <!-- Question 5 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>What is the cardinality of the set S = {a, e, i, o, u}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+                                <!-- Question 6 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>If A = {1, 2, 3} and B = {3, 4, 5}, what is A ∪ B?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2, 3}</div>
+                                    <div class="option" data-correct="false">{3}</div>
+                                    <div class="option" data-correct="true">{1, 2, 3, 4, 5}</div>
+                                    <div class="option" data-correct="false">{4, 5}</div>
+                                </div>
+                                <!-- Question 7 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>Which of the following sets is empty?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{0}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                </div>
+                                <!-- Question 8 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>In a class, 18 students play football, 12 play basketball, and 5 play both. How many play at least one sport?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">35</div>
+                                </div>
+                                <!-- Question 9 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>Which of the following is true about disjoint sets?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Their intersection is empty</div>
+                                    <div class="option" data-correct="false">Their union is empty</div>
+                                    <div class="option" data-correct="false">They have all elements in common</div>
+                                    <div class="option" data-correct="false">They are equal</div>
+                                </div>
+                                <!-- Question 10 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>If A = {2, 4, 6} and B = {1, 3, 5}, what is A ∩ B?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{2, 4, 6, 1, 3, 5}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6}</div>
+                                    <div class="option" data-correct="false">{1, 3, 5}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>Which of the following sets is a subset of {1, 2, 3, 4}?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">{2, 4}</div>
+                                    <div class="option" data-correct="false">{5, 6}</div>
+                                    <div class="option" data-correct="false">{1, 5}</div>
+                                    <div class="option" data-correct="false">{0, 4}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>What is the union of {a, b} and {b, c}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{b}</div>
+                                    <div class="option" data-correct="true">{a, b, c}</div>
+                                    <div class="option" data-correct="false">{a, c}</div>
+                                    <div class="option" data-correct="false">{a, b}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>If n(A) = 12, n(B) = 8, and n(A ∩ B) = 4, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="true">16</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">8</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>Which set contains all even numbers between 1 and 10?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 3, 5, 7, 9}</div>
+                                    <div class="option" data-correct="true">{2, 4, 6, 8, 10}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6, 8}</div>
+                                    <div class="option" data-correct="false">{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>Which of the following is NOT a set?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{apple, orange, banana}</div>
+                                    <div class="option" data-correct="false">{1, 2, 3}</div>
+                                    <div class="option" data-correct="true">A group of beautiful girls</div>
+                                    <div class="option" data-correct="false">{red, blue, green}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>What is the intersection of {x, y, z} and {y, z, w}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{x, w}</div>
+                                    <div class="option" data-correct="true">{y, z}</div>
+                                    <div class="option" data-correct="false">{x, y, z, w}</div>
+                                    <div class="option" data-correct="false">{z, w}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>If n(A) = 18, n(B) = 15, and n(A ∩ B) = 7, how many elements are in A only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="true">11</div>
+                                    <div class="option" data-correct="false">25</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>Which of the following is the universal set for the sets A = {2, 4, 6} and B = {4, 6, 8}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{2, 4, 6}</div>
+                                    <div class="option" data-correct="false">{4, 6, 8}</div>
+                                    <div class="option" data-correct="true">{2, 4, 6, 8}</div>
+                                    <div class="option" data-correct="false">{2, 8}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>What is the cardinality of the set {a, b, c, d, e, f}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>Which of the following is a proper subset of {1, 2, 3}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2, 3}</div>
+                                    <div class="option" data-correct="true">{1, 2}</div>
+                                    <div class="option" data-correct="false">{4, 5}</div>
+                                    <div class="option" data-correct="false">{2, 3, 4}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>If A = {1, 3, 5} and B = {2, 4, 6}, what is A ∪ B?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">{1, 2, 3, 4, 5, 6}</div>
+                                    <div class="option" data-correct="false">{1, 3, 5}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6}</div>
+                                    <div class="option" data-correct="false">{3, 4, 5, 6}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>Which of the following is the empty set?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{0}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{1}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>If n(A) = 25, n(B) = 20, n(A ∩ B) = 10, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">45</div>
+                                    <div class="option" data-correct="true">35</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">15</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>Which of the following is a singleton set?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                    <div class="option" data-correct="true">{5}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="false">{3, 4, 5}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>What is the intersection of {a, b, c} and {c, d, e}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{a, b}</div>
+                                    <div class="option" data-correct="true">{c}</div>
+                                    <div class="option" data-correct="false">{d, e}</div>
+                                    <div class="option" data-correct="false">{a, b, c, d, e}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>If n(A) = 40, n(B) = 30, n(A ∩ B) = 10, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">80</div>
+                                    <div class="option" data-correct="true">60</div>
+                                    <div class="option" data-correct="false">70</div>
+                                    <div class="option" data-correct="false">50</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>Which of the following is a subset of every set?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{1}</div>
+                                    <div class="option" data-correct="false">{0}</div>
+                                    <div class="option" data-correct="false">{a}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>What is the union of {2, 4, 6} and {4, 6, 8}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{4, 6}</div>
+                                    <div class="option" data-correct="true">{2, 4, 6, 8}</div>
+                                    <div class="option" data-correct="false">{2, 8}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>If n(A) = 10, n(B) = 15, n(A ∩ B) = 5, how many elements are in B only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">10</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">20</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>Which of the following sets is disjoint from {1, 2, 3}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{2, 3, 4}</div>
+                                    <div class="option" data-correct="true">{4, 5, 6}</div>
+                                    <div class="option" data-correct="false">{1, 4, 5}</div>
+                                    <div class="option" data-correct="false">{3, 5, 6}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>If n(A) = 22, n(B) = 18, n(A ∩ B) = 8, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">40</div>
+                                    <div class="option" data-correct="true">32</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">28</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>Which of the following is a subset of {a, b, c, d}?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">{a, c}</div>
+                                    <div class="option" data-correct="false">{e, f}</div>
+                                    <div class="option" data-correct="false">{a, d, e}</div>
+                                    <div class="option" data-correct="false">{b, c, e}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>What is the intersection of {1, 2, 3, 4} and {3, 4, 5, 6}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                    <div class="option" data-correct="true">{3, 4}</div>
+                                    <div class="option" data-correct="false">{5, 6}</div>
+                                    <div class="option" data-correct="false">{1, 2, 3, 4, 5, 6}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>If n(A) = 12, n(B) = 15, n(A ∩ B) = 5, how many elements are in A only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">7</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">15</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>Which of the following is the union of {x, y} and {y, z}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{y}</div>
+                                    <div class="option" data-correct="true">{x, y, z}</div>
+                                    <div class="option" data-correct="false">{x, z}</div>
+                                    <div class="option" data-correct="false">{x, y}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>What is the cardinality of the set {2, 4, 6, 8, 10, 12}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>If A = {a, b, c} and B = {b, c, d}, what is A ∩ B?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{a, d}</div>
+                                    <div class="option" data-correct="true">{b, c}</div>
+                                    <div class="option" data-correct="false">{a, b, c, d}</div>
+                                    <div class="option" data-correct="false">{c, d}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>Which of the following sets is a singleton?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                    <div class="option" data-correct="true">{7}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="false">{3, 4, 5}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>If n(A) = 16, n(B) = 14, n(A ∩ B) = 6, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="true">24</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">22</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>Which of the following is NOT a set?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{dog, cat, bird}</div>
+                                    <div class="option" data-correct="false">{1, 2, 3}</div>
+                                    <div class="option" data-correct="true">A group of clever boys</div>
+                                    <div class="option" data-correct="false">{red, blue, green}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>What is the intersection of {p, q, r} and {q, r, s}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{p, s}</div>
+                                    <div class="option" data-correct="true">{q, r}</div>
+                                    <div class="option" data-correct="false">{p, q, r, s}</div>
+                                    <div class="option" data-correct="false">{r, s}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>If n(A) = 20, n(B) = 25, n(A ∩ B) = 10, how many elements are in B only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">15</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">25</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>Which of the following is the universal set for A = {3, 5, 7} and B = {5, 7, 9}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{3, 5, 7}</div>
+                                    <div class="option" data-correct="false">{5, 7, 9}</div>
+                                    <div class="option" data-correct="true">{3, 5, 7, 9}</div>
+                                    <div class="option" data-correct="false">{3, 9}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>What is the union of {m, n} and {n, o}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{n}</div>
+                                    <div class="option" data-correct="true">{m, n, o}</div>
+                                    <div class="option" data-correct="false">{m, o}</div>
+                                    <div class="option" data-correct="false">{m, n}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>If n(A) = 30, n(B) = 25, n(A ∩ B) = 15, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">55</div>
+                                    <div class="option" data-correct="true">40</div>
+                                    <div class="option" data-correct="false">45</div>
+                                    <div class="option" data-correct="false">30</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>Which of the following sets is empty?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{0}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>Which of the following is a subset of every set?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{1}</div>
+                                    <div class="option" data-correct="false">{0}</div>
+                                    <div class="option" data-correct="false">{a}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>What is the union of {4, 6, 8} and {6, 8, 10}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{6, 8}</div>
+                                    <div class="option" data-correct="true">{4, 6, 8, 10}</div>
+                                    <div class="option" data-correct="false">{4, 10}</div>
+                                    <div class="option" data-correct="false">{4, 6, 8}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>If n(A) = 18, n(B) = 12, n(A ∩ B) = 6, how many elements are in A only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="true">12</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">24</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>Which symbol represents the intersection of two sets?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">∩</div>
+                                    <div class="option" data-correct="false">∪</div>
+                                    <div class="option" data-correct="false">⊆</div>
+                                    <div class="option" data-correct="false">⊂</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>If A = {2, 4, 6} and B = {4, 6, 8}, what is A ∩ B?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">{4, 6}</div>
+                                    <div class="option" data-correct="false">{2, 8}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6, 8}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>What is the cardinality of the set {x, y, z, w}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>If n(A) = 14, n(B) = 9, n(A ∩ B) = 5, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">23</div>
+                                    <div class="option" data-correct="true">18</div>
+                                    <div class="option" data-correct="false">14</div>
+                                    <div class="option" data-correct="false">9</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>Which of the following is a subset of {a, b, c}?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">{a, b}</div>
+                                    <div class="option" data-correct="false">{d, e}</div>
+                                    <div class="option" data-correct="false">{a, d}</div>
+                                    <div class="option" data-correct="false">{b, c, d}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>What is the union of {1, 3, 5} and {2, 4, 6}?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">{1, 2, 3, 4, 5, 6}</div>
+                                    <div class="option" data-correct="false">{1, 3, 5}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6}</div>
+                                    <div class="option" data-correct="false">{3, 4, 5, 6}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>If n(A) = 20, n(B) = 15, n(A ∩ B) = 5, how many elements are in A only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">15</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>Which of the following sets is a singleton?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                    <div class="option" data-correct="true">{8}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="false">{3, 4, 5}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>What is the intersection of {a, b, c, d} and {c, d, e, f}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{a, b}</div>
+                                    <div class="option" data-correct="true">{c, d}</div>
+                                    <div class="option" data-correct="false">{e, f}</div>
+                                    <div class="option" data-correct="false">{a, b, c, d, e, f}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>If n(A) = 25, n(B) = 20, n(A ∩ B) = 10, how many elements are in B only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="true">10</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">15</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>Which of the following is the universal set for A = {1, 2} and B = {2, 3}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                    <div class="option" data-correct="false">{2, 3}</div>
+                                    <div class="option" data-correct="true">{1, 2, 3}</div>
+                                    <div class="option" data-correct="false">{1, 3}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>What is the union of {a, b} and {b, c, d}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{b}</div>
+                                    <div class="option" data-correct="true">{a, b, c, d}</div>
+                                    <div class="option" data-correct="false">{a, c, d}</div>
+                                    <div class="option" data-correct="false">{a, b}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>If n(A) = 16, n(B) = 12, n(A ∩ B) = 4, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">28</div>
+                                    <div class="option" data-correct="true">24</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>Which of the following sets is empty?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{0}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>Which of the following is a subset of every set?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{1}</div>
+                                    <div class="option" data-correct="false">{0}</div>
+                                    <div class="option" data-correct="false">{a}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>What is the intersection of {1, 2, 3} and {3, 4, 5}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                    <div class="option" data-correct="true">{3}</div>
+                                    <div class="option" data-correct="false">{4, 5}</div>
+                                    <div class="option" data-correct="false">{1, 2, 3, 4, 5}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>If n(A) = 18, n(B) = 14, n(A ∩ B) = 6, how many elements are in A only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="true">12</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">14</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>Which of the following is the union of {x, y} and {y, z}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{y}</div>
+                                    <div class="option" data-correct="true">{x, y, z}</div>
+                                    <div class="option" data-correct="false">{x, z}</div>
+                                    <div class="option" data-correct="false">{x, y}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>What is the cardinality of the set {2, 4, 6, 8, 10}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>If A = {a, b, c} and B = {b, c, d}, what is A ∪ B?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{a, d}</div>
+                                    <div class="option" data-correct="true">{a, b, c, d}</div>
+                                    <div class="option" data-correct="false">{b, c}</div>
+                                    <div class="option" data-correct="false">{a, b, c}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>Which of the following sets is a singleton?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                    <div class="option" data-correct="true">{9}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="false">{3, 4, 5}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>If n(A) = 20, n(B) = 18, n(A ∩ B) = 8, how many elements are in A only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="true">12</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">20</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>What is the union of {a, b, c} and {c, d, e}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{c}</div>
+                                    <div class="option" data-correct="true">{a, b, c, d, e}</div>
+                                    <div class="option" data-correct="false">{a, b, d, e}</div>
+                                    <div class="option" data-correct="false">{a, b, c}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>Which of the following is the intersection of {2, 4, 6, 8} and {6, 8, 10, 12}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{2, 4}</div>
+                                    <div class="option" data-correct="true">{6, 8}</div>
+                                    <div class="option" data-correct="false">{10, 12}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6, 8, 10, 12}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>If n(A) = 24, n(B) = 16, n(A ∩ B) = 6, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">40</div>
+                                    <div class="option" data-correct="true">34</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">28</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>Which of the following sets is disjoint from {a, b, c}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{b, c, d}</div>
+                                    <div class="option" data-correct="true">{d, e, f}</div>
+                                    <div class="option" data-correct="false">{a, d, e}</div>
+                                    <div class="option" data-correct="false">{a, b}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>What is the cardinality of the set {m, n, o, p, q}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>If A = {2, 4, 6, 8} and B = {4, 8, 10}, what is A ∩ B?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{2, 6}</div>
+                                    <div class="option" data-correct="true">{4, 8}</div>
+                                    <div class="option" data-correct="false">{10}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6, 8, 10}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>Which of the following is a proper subset of {a, b, c, d}?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">{a, b, c}</div>
+                                    <div class="option" data-correct="false">{a, b, c, d}</div>
+                                    <div class="option" data-correct="false">{e, f}</div>
+                                    <div class="option" data-correct="false">{b, d, e}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>If n(A) = 30, n(B) = 22, n(A ∩ B) = 12, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">52</div>
+                                    <div class="option" data-correct="true">40</div>
+                                    <div class="option" data-correct="false">34</div>
+                                    <div class="option" data-correct="false">44</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>Which of the following is the universal set for A = {1, 2, 3} and B = {2, 3, 4}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2, 3}</div>
+                                    <div class="option" data-correct="false">{2, 3, 4}</div>
+                                    <div class="option" data-correct="true">{1, 2, 3, 4}</div>
+                                    <div class="option" data-correct="false">{1, 4}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>What is the intersection of {a, b, c, d} and {b, d, e, f}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{a, c}</div>
+                                    <div class="option" data-correct="true">{b, d}</div>
+                                    <div class="option" data-correct="false">{e, f}</div>
+                                    <div class="option" data-correct="false">{a, b, c, d, e, f}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>If n(A) = 15, n(B) = 10, n(A ∩ B) = 5, how many elements are in B only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">15</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>Which of the following sets is empty?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{0}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>Which of the following is a subset of every set?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">∅</div>
+                                    <div class="option" data-correct="false">{1}</div>
+                                    <div class="option" data-correct="false">{0}</div>
+                                    <div class="option" data-correct="false">{a}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>What is the union of {2, 4, 6} and {6, 8, 10}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{6}</div>
+                                    <div class="option" data-correct="true">{2, 4, 6, 8, 10}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6}</div>
+                                    <div class="option" data-correct="false">{8, 10}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>If n(A) = 28, n(B) = 24, n(A ∩ B) = 12, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">52</div>
+                                    <div class="option" data-correct="true">40</div>
+                                    <div class="option" data-correct="false">36</div>
+                                    <div class="option" data-correct="false">44</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>Which of the following is a singleton set?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2}</div>
+                                    <div class="option" data-correct="true">{10}</div>
+                                    <div class="option" data-correct="false">{ }</div>
+                                    <div class="option" data-correct="false">{3, 4, 5}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>What is the intersection of {x, y, z} and {y, z, w}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{x, w}</div>
+                                    <div class="option" data-correct="true">{y, z}</div>
+                                    <div class="option" data-correct="false">{x, y, z, w}</div>
+                                    <div class="option" data-correct="false">{z, w}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>If n(A) = 22, n(B) = 18, n(A ∩ B) = 8, how many elements are in A only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="true">14</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">22</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>Which of the following is the union of {a, b, c} and {c, d, e}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{c}</div>
+                                    <div class="option" data-correct="true">{a, b, c, d, e}</div>
+                                    <div class="option" data-correct="false">{a, b, d, e}</div>
+                                    <div class="option" data-correct="false">{a, b, c}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>What is the intersection of {2, 4, 6, 8} and {6, 8, 10, 12}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{2, 4}</div>
+                                    <div class="option" data-correct="true">{6, 8}</div>
+                                    <div class="option" data-correct="false">{10, 12}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6, 8, 10, 12}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>If n(A) = 24, n(B) = 16, n(A ∩ B) = 6, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">40</div>
+                                    <div class="option" data-correct="true">34</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">28</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>Which of the following sets is disjoint from {a, b, c}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{b, c, d}</div>
+                                    <div class="option" data-correct="true">{d, e, f}</div>
+                                    <div class="option" data-correct="false">{a, d, e}</div>
+                                    <div class="option" data-correct="false">{a, b}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>What is the cardinality of the set {m, n, o, p, q}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>If A = {2, 4, 6, 8} and B = {4, 8, 10}, what is A ∩ B?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{2, 6}</div>
+                                    <div class="option" data-correct="true">{4, 8}</div>
+                                    <div class="option" data-correct="false">{10}</div>
+                                    <div class="option" data-correct="false">{2, 4, 6, 8, 10}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>Which of the following is a proper subset of {a, b, c, d}?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">{a, b, c}</div>
+                                    <div class="option" data-correct="false">{a, b, c, d}</div>
+                                    <div class="option" data-correct="false">{e, f}</div>
+                                    <div class="option" data-correct="false">{b, d, e}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>If n(A) = 30, n(B) = 22, n(A ∩ B) = 12, what is n(A ∪ B)?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">52</div>
+                                    <div class="option" data-correct="true">40</div>
+                                    <div class="option" data-correct="false">34</div>
+                                    <div class="option" data-correct="false">44</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>Which of the following is the universal set for A = {1, 2, 3} and B = {2, 3, 4}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{1, 2, 3}</div>
+                                    <div class="option" data-correct="false">{2, 3, 4}</div>
+                                    <div class="option" data-correct="true">{1, 2, 3, 4}</div>
+                                    <div class="option" data-correct="false">{1, 4}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>What is the intersection of {a, b, c, d} and {b, d, e, f}?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">{a, c}</div>
+                                    <div class="option" data-correct="true">{b, d}</div>
+                                    <div class="option" data-correct="false">{e, f}</div>
+                                    <div class="option" data-correct="false">{a, b, c, d, e, f}</div>
+                                </div>
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>If n(A) = 15, n(B) = 10, n(A ∩ B) = 5, how many elements are in B only?</p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">15</div>
                                 </div>
                             </div>
                         </section>
@@ -423,26 +1440,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -451,14 +1476,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -468,25 +1494,37 @@
             </div>
         </footer>
 
-         <!-- Scripts -->
-         <script src="../../js/math-challenge-read-write-numbers.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/read-write-numbers.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../passco/js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
