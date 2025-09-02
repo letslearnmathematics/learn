@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Using Number Properties | JHS1 Mathematics">
         <meta property="og:description" content="Learn to use Number Properties.">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/favicon-32x32.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/using-number-properties">
         <meta property="og:type" content="website">
     
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/using-number-properties.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -63,12 +67,6 @@
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-using-number-properties.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
     </head>
     <body>
         <!-- Header Navigation -->
@@ -764,274 +762,1171 @@
 
                         <br><br>
 
-                        <!-- Multiples Section 
-                        <section id="decimals-and-powers" class="lesson-section">
+                        <!-- Test Instructions -->
+                        <section id="instructions" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-edit"></i> Decimals & Powers of 10
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-
-                            Lesson Video embed 
-                            <div class="video-embed">
-                                <h4>
-                                    <i class="fas fa-video"></i> Video Lesson
-                                </h4>
-                                <div class="video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/video-ID" 
-                                        title="YouTube video player" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen>
-                                    </iframe>
-                                </div>
-                                <div class="video-description">
-                                    <p>Watch this comprehensive explanation on the lesson worked examples.</p>
-                                </div>
-                            </div>
-
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-globe"></i> Powers of 10
-                                </h3>
-                                <p>
-                                    Powers of 10 are the numbers that can be expressed as \(10^n\), where \(n\) is a whole number.
-                                    For example, \(10^2 = 100\), \(10^3 = 1000\), and so on.
-                                </p>
-                                <p>
-                                    Multiplying or dividing by powers of \(10\) is about shifting the decimal 
-                                    point to the right (if it is multiplication) or to the left (when dividing) \(n\) times.
-                                </p>
-                            </div>
                             
-                            Relations
                             <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-hashtag"></i> In general,
-                                </h3>
                                 <p>
-                                    When multiplying or dividing by powers of \(10\), the decimal point 
-                                    shifts to the right or left, respectively.
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
                                 </p>
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Multiplying</h4>
-                                        <p>
-                                            The decimal point moves a number of places to the right, depending on the number 
-                                            of zeros (0) present in the power of 10.
-                                        </p>
-                                    </div>
-
-                                    <div class="point">
-                                        <h4>Dividing</h4>
-                                        <p>
-                                            The decimal point moves a number of places to the left, depending on the number 
-                                            of zeros (0) present in the power of 10.
-                                        </p>
-                                    </div>
-                                    
-                                </div>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
                             </div>
                         </section>
-                        -->
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Section A - Multiple Choice Questions</h2>
 
-                        <!--
-                        Practice Section
-                        <section class="practice-section">
-                            <div class="practice-header">
-                                <i class="fas fa-pen-fancy"></i>
-                                <h2>Practice Exercise</h2>
-                            </div>
-                            
-                            <div class="practice-problems">
-                                <div class="problem-card">
-                                    <h3>Question 1</h3>
-                                    <p>Multiply 3.45 by 10.</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <img src="../../../../images/modelmultiple1.png" alt="Modelling Table 1" class="place">
-                                        <p>
-                                            \(\therefore\) 5,560=(200 \(\times\) 20)+(100 \(\times\) 10)+(50 \(\times\) 11)+(10 \(\times\) 1)
-                                        </p>
-                                        
-                                        <p>Watch the video below for a clearer understanding of the question.</p>
-                                        <div class="video-container">
-                                            <iframe 
-                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
-                                                title="YouTube video player" 
-                                                frameborder="0" 
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                                allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                    </div>
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                <div class="problem-card">
-                                    <h3>Question 2</h3>
-                                    <p>Multiply 105.25 by 100.</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <img src="../../../../images/modelmultiple1.png" alt="Modelling Table 1" class="place">
-                                        <p>
-                                            \(\therefore\) 5,560=(200 \(\times\) 20)+(100 \(\times\) 10)+(50 \(\times\) 11)+(10 \(\times\) 1)
-                                        </p>
-                                        
-                                        <p>Watch the video below for a clearer understanding of the question.</p>
-                                        <div class="video-container">
-                                            <iframe 
-                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
-                                                title="YouTube video player" 
-                                                frameborder="0" 
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                                allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="problem-card">
-                                    <h3>Question 3</h3>
-                                    <p>Multiply 0.67 by 1,000.</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <img src="../../../../images/modelmultiple1.png" alt="Modelling Table 1" class="place">
-                                        <p>
-                                            \(\therefore\) 5,560=(200 \(\times\) 20)+(100 \(\times\) 10)+(50 \(\times\) 11)+(10 \(\times\) 1)
-                                        </p>
-                                        
-                                        <p>Watch the video below for a clearer understanding of the question.</p>
-                                        <div class="video-container">
-                                            <iframe 
-                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
-                                                title="YouTube video player" 
-                                                frameborder="0" 
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                                allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="problem-card">
-                                    <h3>Question 4</h3>
-                                    <p>Divide 3.45 by 10.</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <img src="../../../../images/modelmultiple1.png" alt="Modelling Table 1" class="place">
-                                        <p>
-                                            \(\therefore\) 5,560=(200 \(\times\) 20)+(100 \(\times\) 10)+(50 \(\times\) 11)+(10 \(\times\) 1)
-                                        </p>
-                                        
-                                        <p>Watch the video below for a clearer understanding of the question.</p>
-                                        <div class="video-container">
-                                            <iframe 
-                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
-                                                title="YouTube video player" 
-                                                frameborder="0" 
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                                allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="problem-card">
-                                    <h3>Question 5</h3>
-                                    <p>Divide 105.25 by 100.</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <img src="../../../../images/modelmultiple1.png" alt="Modelling Table 1" class="place">
-                                        <p>
-                                            \(\therefore\) 5,560=(200 \(\times\) 20)+(100 \(\times\) 10)+(50 \(\times\) 11)+(10 \(\times\) 1)
-                                        </p>
-                                        
-                                        <p>Watch the video below for a clearer understanding of the question.</p>
-                                        <div class="video-container">
-                                            <iframe 
-                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
-                                                title="YouTube video player" 
-                                                frameborder="0" 
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                                allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="problem-card">
-                                    <h3>Question 6</h3>
-                                    <p>Divide 0.67 by 1,000.</p>
-                                    <button class="solution-toggle">Show Solution</button>
-                                    <div class="solution">
-                                        <img src="../../../../images/modelmultiple1.png" alt="Modelling Table 1" class="place">
-                                        <p>
-                                            \(\therefore\) 5,560=(200 \(\times\) 20)+(100 \(\times\) 10)+(50 \(\times\) 11)+(10 \(\times\) 1)
-                                        </p>
-                                        
-                                        <p>Watch the video below for a clearer understanding of the question.</p>
-                                        <div class="video-container">
-                                            <iframe 
-                                                src="https://www.youtube.com/embed/b44YSq6pgHY" 
-                                                title="YouTube video player" 
-                                                frameborder="0" 
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                                allowfullscreen>
-                                            </iframe>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="cta-box">
-                                <p>Ready for more challenges?</p>
-                                <a href="#quick-test" class="cta-button">
-                                    <i class="fas fa-arrow-right"></i> Full Practice Set
-                                </a>
-                            </div>
-                        </section>
-                        -->
 
-                        <!-- Special Sets: Can use for definitions and formulas
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-star"></i> Special Sets
-                                </h3>
-                                
-                                <div class="special-set-cards">
-                                    <div class="set-card">
-                                        <h4>Empty Set (\( \emptyset \))</h4>
-                                        <p>Contains no elements:</p>
-                                        \[ \emptyset = \{\} \]
-                                        \[ n(\emptyset) = 0 \]
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
+                                </div>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="">
                                     
-                                    <div class="set-card">
-                                        <h4>Unit Set</h4>
-                                        <p>Contains exactly one element:</p>
-                                        \[ S = \{a\} \]
+                                    <div class="question-text">
+                                        
+                                        <h3>Question 1</h3>
+                                        <p>Using the distributive property, find the product of 7 and 28.</p>
                                     </div>
+                                    <div class="option" data-correct="false">196</div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="true">196</div>
+                                    <div class="option" data-correct="false">235</div>
                                 </div>
-                            </div>
-                        --> 
-
-                        <!-- HTML Section (same as before) -->
-                        <!-- Speed Test Game -->
-                        <section id="quick-test" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
-                            </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
-                                </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>Find the product of 12 and 15 using the distributive property.</p>
                                     </div>
+                                    <div class="option" data-correct="false">180</div>
+                                    <div class="option" data-correct="true">180</div>
+                                    <div class="option" data-correct="false">170</div>
+                                    <div class="option" data-correct="false">165</div>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                <!-- Question 3 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>Using the distributive property, calculate 8 × 13.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">104</div>
+                                    <div class="option" data-correct="true">104</div>
+                                    <div class="option" data-correct="false">112</div>
+                                    <div class="option" data-correct="false">96</div>
+                                </div>
+                                <!-- Question 4 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>Find the product of 16 and 9 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">144</div>
+                                    <div class="option" data-correct="true">144</div>
+                                    <div class="option" data-correct="false">152</div>
+                                    <div class="option" data-correct="false">128</div>
+                                </div>
+                                <!-- Question 5 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>Using the distributive property, calculate 11 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">198</div>
+                                    <div class="option" data-correct="true">198</div>
+                                    <div class="option" data-correct="false">189</div>
+                                    <div class="option" data-correct="false">176</div>
+                                </div>
+                                <!-- Question 6 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>Find the product of 14 and 17 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">238</div>
+                                    <div class="option" data-correct="true">238</div>
+                                    <div class="option" data-correct="false">224</div>
+                                    <div class="option" data-correct="false">210</div>
+                                </div>
+                                <!-- Question 7 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>Using the distributive property, calculate 19 × 6.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">114</div>
+                                    <div class="option" data-correct="false">120</div>
+                                    <div class="option" data-correct="true">114</div>
+                                    <div class="option" data-correct="false">126</div>
+                                </div>
+                                <!-- Question 8 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>Find the product of 21 and 8 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">168</div>
+                                    <div class="option" data-correct="true">168</div>
+                                    <div class="option" data-correct="false">176</div>
+                                    <div class="option" data-correct="false">162</div>
+                                </div>
+                                <!-- Question 9 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>Using the distributive property, calculate 15 × 14.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="true">210</div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">196</div>
+                                </div>
+                                <!-- Question 10 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>Find the product of 13 and 12 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">156</div>
+                                    <div class="option" data-correct="true">156</div>
+                                    <div class="option" data-correct="false">144</div>
+                                    <div class="option" data-correct="false">169</div>
+                                </div>
+                                <!-- Question 11 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>Using the distributive property, calculate 9 × 17.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">153</div>
+                                    <div class="option" data-correct="true">153</div>
+                                    <div class="option" data-correct="false">162</div>
+                                    <div class="option" data-correct="false">145</div>
+                                </div>
+                                <!-- Question 12 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>Find the product of 20 and 13 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">260</div>
+                                    <div class="option" data-correct="true">260</div>
+                                    <div class="option" data-correct="false">250</div>
+                                    <div class="option" data-correct="false">273</div>
+                                </div>
+                                <!-- Question 13 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>Using the distributive property, calculate 15 × 16.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">240</div>
+                                    <div class="option" data-correct="true">240</div>
+                                    <div class="option" data-correct="false">256</div>
+                                    <div class="option" data-correct="false">225</div>
+                                </div>
+                                <!-- Question 14 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>Find the product of 18 and 11 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">198</div>
+                                    <div class="option" data-correct="true">198</div>
+                                    <div class="option" data-correct="false">189</div>
+                                    <div class="option" data-correct="false">176</div>
+                                </div>
+                                <!-- Question 15 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>Using the distributive property, calculate 13 × 14.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">182</div>
+                                    <div class="option" data-correct="true">182</div>
+                                    <div class="option" data-correct="false">169</div>
+                                    <div class="option" data-correct="false">196</div>
+                                </div>
+                                <!-- Question 16 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>Find the product of 12 and 19 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">228</div>
+                                    <div class="option" data-correct="true">228</div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="false">237</div>
+                                </div>
+                                <!-- Question 17 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>Using the distributive property, calculate 17 × 15.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">255</div>
+                                    <div class="option" data-correct="true">255</div>
+                                    <div class="option" data-correct="false">245</div>
+                                    <div class="option" data-correct="false">265</div>
+                                </div>
+                                <!-- Question 18 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>Find the product of 16 and 13 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">208</div>
+                                    <div class="option" data-correct="true">208</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">219</div>
+                                </div>
+                                <!-- Question 19 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>Using the distributive property, calculate 14 × 12.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">168</div>
+                                    <div class="option" data-correct="true">168</div>
+                                    <div class="option" data-correct="false">156</div>
+                                    <div class="option" data-correct="false">172</div>
+                                </div>
+                                <!-- Question 20 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>Find the product of 11 and 17 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">187</div>
+                                    <div class="option" data-correct="true">187</div>
+                                    <div class="option" data-correct="false">176</div>
+                                    <div class="option" data-correct="false">198</div>
+                                </div>
+                                <!-- Question 21 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>Using the distributive property, calculate 13 × 15.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">195</div>
+                                    <div class="option" data-correct="true">195</div>
+                                    <div class="option" data-correct="false">182</div>
+                                    <div class="option" data-correct="false">208</div>
+                                </div>
+                                <!-- Question 22 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>Find the product of 18 and 15 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">270</div>
+                                    <div class="option" data-correct="true">270</div>
+                                    <div class="option" data-correct="false">285</div>
+                                    <div class="option" data-correct="false">258</div>
+                                </div>
+                                <!-- Question 23 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>Using the distributive property, calculate 16 × 17.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">272</div>
+                                    <div class="option" data-correct="true">272</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">261</div>
+                                </div>
+                                <!-- Question 24 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>Find the product of 19 and 14 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">266</div>
+                                    <div class="option" data-correct="true">266</div>
+                                    <div class="option" data-correct="false">252</div>
+                                    <div class="option" data-correct="false">273</div>
+                                </div>
+                                <!-- Question 25 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>Using the distributive property, calculate 15 × 13.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">195</div>
+                                    <div class="option" data-correct="true">195</div>
+                                    <div class="option" data-correct="false">182</div>
+                                    <div class="option" data-correct="false">208</div>
+                                </div>
+                                <!-- Question 26 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>Find the product of 17 and 12 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">204</div>
+                                    <div class="option" data-correct="true">204</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">216</div>
+                                </div>
+                                <!-- Question 27 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>Using the distributive property, calculate 14 × 16.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">224</div>
+                                    <div class="option" data-correct="true">224</div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="false">238</div>
+                                </div>
+                                <!-- Question 28 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>Find the product of 18 and 13 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">234</div>
+                                    <div class="option" data-correct="true">234</div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="false">247</div>
+                                </div>
+                                <!-- Question 29 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>Using the distributive property, calculate 16 × 15.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">240</div>
+                                    <div class="option" data-correct="true">240</div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">256</div>
+                                </div>
+                                <!-- Question 30 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>Find the product of 19 and 13 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">247</div>
+                                    <div class="option" data-correct="true">247</div>
+                                    <div class="option" data-correct="false">234</div>
+                                    <div class="option" data-correct="false">256</div>
+                                </div>
+                                <!-- Question 31 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>Using the distributive property, calculate 12 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="true">216</div>
+                                    <div class="option" data-correct="false">228</div>
+                                    <div class="option" data-correct="false">204</div>
+                                </div>
+                                <!-- Question 32 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>Find the product of 17 and 13 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">221</div>
+                                    <div class="option" data-correct="true">221</div>
+                                    <div class="option" data-correct="false">234</div>
+                                    <div class="option" data-correct="false">208</div>
+                                </div>
+                                <!-- Question 33 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>Using the distributive property, calculate 15 × 17.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">255</div>
+                                    <div class="option" data-correct="true">255</div>
+                                    <div class="option" data-correct="false">240</div>
+                                    <div class="option" data-correct="false">265</div>
+                                </div>
+                                <!-- Question 34 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>Find the product of 18 and 12 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="true">216</div>
+                                    <div class="option" data-correct="false">228</div>
+                                    <div class="option" data-correct="false">204</div>
+                                </div>
+                                <!-- Question 35 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>Using the distributive property, calculate 13 × 19.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">247</div>
+                                    <div class="option" data-correct="true">247</div>
+                                    <div class="option" data-correct="false">228</div>
+                                    <div class="option" data-correct="false">221</div>
+                                </div>
+                                <!-- Question 36 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>Find the product of 16 and 14 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">224</div>
+                                    <div class="option" data-correct="true">224</div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="false">238</div>
+                                </div>
+                                <!-- Question 37 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>Using the distributive property, calculate 17 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="true">306</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 38 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>Find the product of 15 and 12 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">180</div>
+                                    <div class="option" data-correct="true">180</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">168</div>
+                                </div>
+                                <!-- Question 39 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>Using the distributive property, calculate 14 × 19.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">266</div>
+                                    <div class="option" data-correct="true">266</div>
+                                    <div class="option" data-correct="false">252</div>
+                                    <div class="option" data-correct="false">273</div>
+                                </div>
+                                <!-- Question 40 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>Find the product of 18 and 17 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="true">306</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 41 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>Using the distributive property, calculate 13 × 16.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">208</div>
+                                    <div class="option" data-correct="true">208</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">219</div>
+                                </div>
+                                <!-- Question 42 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>Find the product of 17 and 14 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">238</div>
+                                    <div class="option" data-correct="true">238</div>
+                                    <div class="option" data-correct="false">224</div>
+                                    <div class="option" data-correct="false">210</div>
+                                </div>
+                                <!-- Question 43 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>Using the distributive property, calculate 15 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">270</div>
+                                    <div class="option" data-correct="true">270</div>
+                                    <div class="option" data-correct="false">285</div>
+                                    <div class="option" data-correct="false">258</div>
+                                </div>
+                                <!-- Question 44 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>Find the product of 16 and 19 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">304</div>
+                                    <div class="option" data-correct="true">304</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 45 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>Using the distributive property, calculate 14 × 15.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="true">210</div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">196</div>
+                                </div>
+                                <!-- Question 46 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>Find the product of 17 and 16 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">272</div>
+                                    <div class="option" data-correct="true">272</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">261</div>
+                                </div>
+                                <!-- Question 47 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>Using the distributive property, calculate 15 × 19.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">285</div>
+                                    <div class="option" data-correct="true">285</div>
+                                    <div class="option" data-correct="false">270</div>
+                                    <div class="option" data-correct="false">258</div>
+                                </div>
+                                <!-- Question 48 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>Find the product of 18 and 16 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">288</div>
+                                    <div class="option" data-correct="true">288</div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 49 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>Using the distributive property, calculate 13 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">234</div>
+                                    <div class="option" data-correct="true">234</div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="false">247</div>
+                                </div>
+                                <!-- Question 50 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>Find the product of 19 and 15 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">285</div>
+                                    <div class="option" data-correct="true">285</div>
+                                    <div class="option" data-correct="false">270</div>
+                                    <div class="option" data-correct="false">258</div>
+                                </div>
+                                <!-- Question 51 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>Using the distributive property, calculate 12 × 17.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">204</div>
+                                    <div class="option" data-correct="true">204</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">216</div>
+                                </div>
+                                <!-- Question 52 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>Find the product of 18 and 19 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">342</div>
+                                    <div class="option" data-correct="true">342</div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="false">306</div>
+                                </div>
+                                <!-- Question 53 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>Using the distributive property, calculate 13 × 14.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">182</div>
+                                    <div class="option" data-correct="true">182</div>
+                                    <div class="option" data-correct="false">169</div>
+                                    <div class="option" data-correct="false">196</div>
+                                </div>
+                                <!-- Question 54 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>Find the product of 17 and 19 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">323</div>
+                                    <div class="option" data-correct="true">323</div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="false">342</div>
+                                </div>
+                                <!-- Question 55 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>Using the distributive property, calculate 15 × 16.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">240</div>
+                                    <div class="option" data-correct="true">240</div>
+                                    <div class="option" data-correct="false">256</div>
+                                    <div class="option" data-correct="false">225</div>
+                                </div>
+                                <!-- Question 56 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>Find the product of 19 and 12 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">228</div>
+                                    <div class="option" data-correct="true">228</div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="false">237</div>
+                                </div>
+                                <!-- Question 57 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>Using the distributive property, calculate 14 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">252</div>
+                                    <div class="option" data-correct="true">252</div>
+                                    <div class="option" data-correct="false">266</div>
+                                    <div class="option" data-correct="false">234</div>
+                                </div>
+                                <!-- Question 58 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>Find the product of 16 and 18 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">288</div>
+                                    <div class="option" data-correct="true">288</div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 59 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>Using the distributive property, calculate 13 × 17.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">221</div>
+                                    <div class="option" data-correct="true">221</div>
+                                    <div class="option" data-correct="false">234</div>
+                                    <div class="option" data-correct="false">208</div>
+                                </div>
+                                <!-- Question 60 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>Find the product of 18 and 14 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">252</div>
+                                    <div class="option" data-correct="true">252</div>
+                                    <div class="option" data-correct="false">266</div>
+                                    <div class="option" data-correct="false">234</div>
+                                </div>
+                                <!-- Question 61 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>Using the distributive property, calculate 15 × 14.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="true">210</div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">196</div>
+                                </div>
+                                <!-- Question 62 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>Find the product of 17 and 18 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="true">306</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 63 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>Using the distributive property, calculate 16 × 13.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">208</div>
+                                    <div class="option" data-correct="true">208</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">219</div>
+                                </div>
+                                <!-- Question 64 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>Find the product of 19 and 16 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">304</div>
+                                    <div class="option" data-correct="true">304</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 65 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>Using the distributive property, calculate 14 × 17.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">238</div>
+                                    <div class="option" data-correct="true">238</div>
+                                    <div class="option" data-correct="false">224</div>
+                                    <div class="option" data-correct="false">210</div>
+                                </div>
+                                <!-- Question 66 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>Find the product of 18 and 15 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">270</div>
+                                    <div class="option" data-correct="true">270</div>
+                                    <div class="option" data-correct="false">285</div>
+                                    <div class="option" data-correct="false">258</div>
+                                </div>
+                                <!-- Question 67 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>Using the distributive property, calculate 13 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">234</div>
+                                    <div class="option" data-correct="true">234</div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="false">247</div>
+                                </div>
+                                <!-- Question 68 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>Find the product of 17 and 15 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">255</div>
+                                    <div class="option" data-correct="true">255</div>
+                                    <div class="option" data-correct="false">245</div>
+                                    <div class="option" data-correct="false">265</div>
+                                </div>
+                                <!-- Question 69 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>Using the distributive property, calculate 16 × 14.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">224</div>
+                                    <div class="option" data-correct="true">224</div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="false">238</div>
+                                </div>
+                                <!-- Question 70 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>Find the product of 19 and 13 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">247</div>
+                                    <div class="option" data-correct="true">247</div>
+                                    <div class="option" data-correct="false">234</div>
+                                    <div class="option" data-correct="false">256</div>
+                                </div>
+                                <!-- Question 71 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>Using the distributive property, calculate 15 × 12.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">180</div>
+                                    <div class="option" data-correct="true">180</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">168</div>
+                                </div>
+                                <!-- Question 72 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>Find the product of 18 and 17 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="true">306</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 73 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>Using the distributive property, calculate 13 × 16.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">208</div>
+                                    <div class="option" data-correct="true">208</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">219</div>
+                                </div>
+                                <!-- Question 74 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>Find the product of 17 and 14 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">238</div>
+                                    <div class="option" data-correct="true">238</div>
+                                    <div class="option" data-correct="false">224</div>
+                                    <div class="option" data-correct="false">210</div>
+                                </div>
+                                <!-- Question 75 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>Using the distributive property, calculate 15 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">270</div>
+                                    <div class="option" data-correct="true">270</div>
+                                    <div class="option" data-correct="false">285</div>
+                                    <div class="option" data-correct="false">258</div>
+                                </div>
+                                <!-- Question 76 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>Find the product of 16 and 19 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">304</div>
+                                    <div class="option" data-correct="true">304</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 77 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>Using the distributive property, calculate 14 × 15.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="true">210</div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">196</div>
+                                </div>
+                                <!-- Question 78 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>Find the product of 17 and 16 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">272</div>
+                                    <div class="option" data-correct="true">272</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">261</div>
+                                </div>
+                                <!-- Question 79 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>Using the distributive property, calculate 15 × 19.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">285</div>
+                                    <div class="option" data-correct="true">285</div>
+                                    <div class="option" data-correct="false">270</div>
+                                    <div class="option" data-correct="false">258</div>
+                                </div>
+                                <!-- Question 80 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>Find the product of 18 and 16 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">288</div>
+                                    <div class="option" data-correct="true">288</div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 81 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>Using the distributive property, calculate 13 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">234</div>
+                                    <div class="option" data-correct="true">234</div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="false">247</div>
+                                </div>
+                                <!-- Question 82 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>Find the product of 19 and 15 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">285</div>
+                                    <div class="option" data-correct="true">285</div>
+                                    <div class="option" data-correct="false">270</div>
+                                    <div class="option" data-correct="false">258</div>
+                                </div>
+                                <!-- Question 83 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>Using the distributive property, calculate 12 × 17.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">204</div>
+                                    <div class="option" data-correct="true">204</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">216</div>
+                                </div>
+                                <!-- Question 84 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>Find the product of 18 and 19 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">342</div>
+                                    <div class="option" data-correct="true">342</div>
+                                    <div class="option" data-correct="false">324</div>
+                                    <div class="option" data-correct="false">306</div>
+                                </div>
+                                <!-- Question 85 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>Using the distributive property, calculate 13 × 14.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">182</div>
+                                    <div class="option" data-correct="true">182</div>
+                                    <div class="option" data-correct="false">169</div>
+                                    <div class="option" data-correct="false">196</div>
+                                </div>
+                                <!-- Question 86 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>Find the product of 17 and 19 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">323</div>
+                                    <div class="option" data-correct="true">323</div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="false">342</div>
+                                </div>
+                                <!-- Question 87 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>Using the distributive property, calculate 15 × 16.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">240</div>
+                                    <div class="option" data-correct="true">240</div>
+                                    <div class="option" data-correct="false">256</div>
+                                    <div class="option" data-correct="false">225</div>
+                                </div>
+                                <!-- Question 88 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>Find the product of 19 and 12 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">228</div>
+                                    <div class="option" data-correct="true">228</div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="false">237</div>
+                                </div>
+                                <!-- Question 89 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>Using the distributive property, calculate 14 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">252</div>
+                                    <div class="option" data-correct="true">252</div>
+                                    <div class="option" data-correct="false">266</div>
+                                    <div class="option" data-correct="false">234</div>
+                                </div>
+                                <!-- Question 90 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>Find the product of 16 and 18 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">288</div>
+                                    <div class="option" data-correct="true">288</div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 91 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>Using the distributive property, calculate 15 × 17.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">255</div>
+                                    <div class="option" data-correct="true">255</div>
+                                    <div class="option" data-correct="false">240</div>
+                                    <div class="option" data-correct="false">265</div>
+                                </div>
+                                <!-- Question 92 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>Find the product of 18 and 12 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">216</div>
+                                    <div class="option" data-correct="true">216</div>
+                                    <div class="option" data-correct="false">228</div>
+                                    <div class="option" data-correct="false">204</div>
+                                </div>
+                                <!-- Question 93 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>Using the distributive property, calculate 13 × 19.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">247</div>
+                                    <div class="option" data-correct="true">247</div>
+                                    <div class="option" data-correct="false">228</div>
+                                    <div class="option" data-correct="false">221</div>
+                                </div>
+                                <!-- Question 94 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>Find the product of 16 and 14 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">224</div>
+                                    <div class="option" data-correct="true">224</div>
+                                    <div class="option" data-correct="false">210</div>
+                                    <div class="option" data-correct="false">238</div>
+                                </div>
+                                <!-- Question 95 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>Using the distributive property, calculate 17 × 18.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="true">306</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 96 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>Find the product of 15 and 12 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">180</div>
+                                    <div class="option" data-correct="true">180</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">168</div>
+                                </div>
+                                <!-- Question 97 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>Using the distributive property, calculate 14 × 19.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">266</div>
+                                    <div class="option" data-correct="true">266</div>
+                                    <div class="option" data-correct="false">252</div>
+                                    <div class="option" data-correct="false">273</div>
+                                </div>
+                                <!-- Question 98 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>Find the product of 18 and 17 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">306</div>
+                                    <div class="option" data-correct="true">306</div>
+                                    <div class="option" data-correct="false">289</div>
+                                    <div class="option" data-correct="false">324</div>
+                                </div>
+                                <!-- Question 99 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>Using the distributive property, calculate 13 × 16.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">208</div>
+                                    <div class="option" data-correct="true">208</div>
+                                    <div class="option" data-correct="false">192</div>
+                                    <div class="option" data-correct="false">219</div>
+                                </div>
+                                <!-- Question 100 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>Find the product of 17 and 14 using the distributive property.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">238</div>
+                                    <div class="option" data-correct="true">238</div>
+                                    <div class="option" data-correct="false">224</div>
+                                    <div class="option" data-correct="false">210</div>
                                 </div>
                             </div>
                         </section>
@@ -1050,18 +1945,21 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
                                 <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
                                 <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
                                 <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
@@ -1071,7 +1969,7 @@
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
                                 <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
                                 <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
@@ -1090,8 +1988,8 @@
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -1101,25 +1999,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-         <script src="../../js/math-challenge-using-number-properties.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/using-number-properties.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../passco/js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
