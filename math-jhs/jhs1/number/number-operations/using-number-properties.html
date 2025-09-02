@@ -2009,7 +2009,7 @@
 
             // MathJax rendering observer
             const mathJaxObserver = new MutationObserver(mutations => {
-                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+            if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
                     MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
                 }
             });
