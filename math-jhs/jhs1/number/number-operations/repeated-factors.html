@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Repeated Factors and Powers | JHS1 Mathematics">
         <meta property="og:description" content="Learn about repeated factors and powers using counting objects.">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/favicon-32x32.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/repeated-factors">
         <meta property="og:type" content="website">
     
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/repeated-factors.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -62,13 +66,8 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
-            crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-repeated-factors.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <!-- Header Navigation -->
@@ -486,28 +485,1272 @@
 
                         <br><br>
 
-                        <!-- Speed Test Game -->
-                        <section id="quick-test" class="lesson-section">
+                        <br><br>
+
+                        <!-- Test Instructions -->
+                        <section id="instructions" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your understanding of powers through progressively challenging levels</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Section A - Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
                                 </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>What is the result of 2 × 2 × 2?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">8</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>How would you write 3 × 3 × 3 × 3 in power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">3⁴</div>
+                                    <div class="option" data-correct="false">4³</div>
+                                    <div class="option" data-correct="false">3×4</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+
+                                <!-- Question 3 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>If you have 4 groups of 4 bottle tops each, how many bottle tops do you have in total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">16</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <!-- Question 4 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>What is the value of 5²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">20</div>
+                                </div>
+
+                                <!-- Question 5 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>In the expression 7³, which number is the base?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">7</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="false">343</div>
+                                </div>
+
+                                <!-- Question 6 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>What is the correct way to say 4³?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Four cubed</div>
+                                    <div class="option" data-correct="false">Four squared</div>
+                                    <div class="option" data-correct="false">Three to the fourth</div>
+                                    <div class="option" data-correct="false">Four times three</div>
+                                </div>
+
+                                <!-- Question 7 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>How many sticks would you need to model 2 × 2 × 2?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">8</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+
+                                <!-- Question 8 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>What is the exponent in the expression 10⁶?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="false">1,000,000</div>
+                                </div>
+
+                                <!-- Question 9 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>If the base is 3 and the exponent is 4, what is the power value?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">64</div>
+                                    <div class="option" data-correct="false">7</div>
+                                </div>
+
+                                <!-- Question 10 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>What does the exponent in a power tell us?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">How many times to multiply the base by itself</div>
+                                    <div class="option" data-correct="false">What number to multiply by</div>
+                                    <div class="option" data-correct="false">The final answer</div>
+                                    <div class="option" data-correct="false">What number to add repeatedly</div>
+                                </div>
+
+                                <!-- Question 11 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>What is 2⁵ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">32</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="false">16</div>
+                                </div>
+
+                                <!-- Question 12 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>How would you write "five squared" in mathematical notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">5²</div>
+                                    <div class="option" data-correct="false">2⁵</div>
+                                    <div class="option" data-correct="false">5×2</div>
+                                    <div class="option" data-correct="false">5+5</div>
+                                </div>
+
+                                <!-- Question 13 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>If you have 3 layers of 3×3 sticks, how many sticks do you have?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">27</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 14 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>What is the value of 10³?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1000</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">100</div>
+                                    <div class="option" data-correct="false">10000</div>
+                                </div>
+
+                                <!-- Question 15 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>In the expression 4² = 16, which number is the power value?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">16</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">8</div>
+                                </div>
+
+                                <!-- Question 16 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>What is another way to say 6²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Six squared</div>
+                                    <div class="option" data-correct="false">Six cubed</div>
+                                    <div class="option" data-correct="false">Two to the sixth</div>
+                                    <div class="option" data-correct="false">Six times two</div>
+                                </div>
+
+                                <!-- Question 17 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>How many bottle tops would you need to model 5 × 5?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+
+                                <!-- Question 18 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>What is 1⁸ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 19 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>If the base is 2 and the exponent is 6, what is the correct power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">2⁶</div>
+                                    <div class="option" data-correct="false">6²</div>
+                                    <div class="option" data-correct="false">2×6</div>
+                                    <div class="option" data-correct="false">2+6</div>
+                                </div>
+
+                                <!-- Question 20 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>What does the base in a power represent?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">The number being multiplied by itself</div>
+                                    <div class="option" data-correct="false">How many times to multiply</div>
+                                    <div class="option" data-correct="false">The final answer</div>
+                                    <div class="option" data-correct="false">The number to add repeatedly</div>
+                                </div>
+
+                                <!-- Question 21 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>What is 3³ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">27</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+
+                                <!-- Question 22 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>How would you write 7 × 7 × 7 × 7 in power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">7⁴</div>
+                                    <div class="option" data-correct="false">4⁷</div>
+                                    <div class="option" data-correct="false">7×4</div>
+                                    <div class="option" data-correct="false">28</div>
+                                </div>
+
+                                <!-- Question 23 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>If you have 2 groups of 2 groups of 2 counters, how many counters do you have?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">8</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <!-- Question 24 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>What is the value of 8²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">64</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">32</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+
+                                <!-- Question 25 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>In the expression 5⁴, which number is the exponent?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">625</div>
+                                </div>
+
+                                <!-- Question 26 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>What is another way to say 4³?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Four cubed</div>
+                                    <div class="option" data-correct="false">Four squared</div>
+                                    <div class="option" data-correct="false">Three to the fourth</div>
+                                    <div class="option" data-correct="false">Four times three</div>
+                                </div>
+
+                                <!-- Question 27 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>How many sticks would you need to model 4 × 4 × 4?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">64</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">48</div>
+                                </div>
+
+                                <!-- Question 28 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>What is 10⁰ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">100</div>
+                                </div>
+
+                                <!-- Question 29 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>If the base is 9 and the exponent is 2, what is the power value?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">11</div>
+                                    <div class="option" data-correct="false">729</div>
+                                </div>
+
+                                <!-- Question 30 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>What is the main purpose of using power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">To write repeated multiplication compactly</div>
+                                    <div class="option" data-correct="false">To make numbers look more complicated</div>
+                                    <div class="option" data-correct="false">To represent addition of the same number</div>
+                                    <div class="option" data-correct="false">To indicate subtraction</div>
+                                </div>
+
+                                <!-- Question 31 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>What is 2⁴ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">16</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+
+                                <!-- Question 32 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>How would you write "three cubed" in mathematical notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">3³</div>
+                                    <div class="option" data-correct="false">3²</div>
+                                    <div class="option" data-correct="false">2³</div>
+                                    <div class="option" data-correct="false">3×3</div>
+                                </div>
+
+                                <!-- Question 33 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>If you have 5 groups of 5 bottle tops each, how many bottle tops do you have?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">25</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">5</div>
+                                </div>
+
+                                <!-- Question 34 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>What is the value of 4³?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">64</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">8</div>
+                                </div>
+
+                                <!-- Question 35 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>In the expression 6² = 36, which number is the base?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">36</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+
+                                <!-- Question 36 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>What is another way to say 7³?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Seven cubed</div>
+                                    <div class="option" data-correct="false">Seven squared</div>
+                                    <div class="option" data-correct="false">Three to the seventh</div>
+                                    <div class="option" data-correct="false">Seven times three</div>
+                                </div>
+
+                                <!-- Question 37 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>How many sticks would you need to model 3 × 3 × 3?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">27</div>
+                                    <div class="option" data-correct="false">9</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 38 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>What is 5³ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">125</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="false">30</div>
+                                </div>
+
+                                <!-- Question 39 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>If the base is 10 and the exponent is 4, what is the correct power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">10⁴</div>
+                                    <div class="option" data-correct="false">4¹⁰</div>
+                                    <div class="option" data-correct="false">10×4</div>
+                                    <div class="option" data-correct="false">10+4</div>
+                                </div>
+
+                                <!-- Question 40 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>What does the exponent in 9² tell us?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">To multiply 9 by itself 2 times</div>
+                                    <div class="option" data-correct="false">To multiply 2 by itself 9 times</div>
+                                    <div class="option" data-correct="false">To add 9 and 2 together</div>
+                                    <div class="option" data-correct="false">To subtract 2 from 9</div>
+                                </div>
+
+                                <!-- Question 41 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>What is 6² equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">36</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">24</div>
+                                </div>
+
+                                <!-- Question 42 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>How would you write 2 × 2 × 2 × 2 × 2 in power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">2⁵</div>
+                                    <div class="option" data-correct="false">5²</div>
+                                    <div class="option" data-correct="false">2×5</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+
+                                <!-- Question 43 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>If you have 4 layers of 4×4 sticks, how many sticks do you have?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">64</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">32</div>
+                                    <div class="option" data-correct="false">48</div>
+                                </div>
+
+                                <!-- Question 44 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>What is the value of 7²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">49</div>
+                                    <div class="option" data-correct="false">14</div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="false">28</div>
+                                </div>
+
+                                <!-- Question 45 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>In the expression 8³, which number is the exponent?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">24</div>
+                                    <div class="option" data-correct="false">512</div>
+                                </div>
+
+                                <!-- Question 46 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>What is another way to say 10²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Ten squared</div>
+                                    <div class="option" data-correct="false">Ten cubed</div>
+                                    <div class="option" data-correct="false">Two to the tenth</div>
+                                    <div class="option" data-correct="false">Ten times two</div>
+                                </div>
+
+                                <!-- Question 47 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>How many bottle tops would you need to model 6 × 6?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">36</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+
+                                <!-- Question 48 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>What is 2⁶ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">64</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">32</div>
+                                    <div class="option" data-correct="false">16</div>
+                                </div>
+
+                                <!-- Question 49 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>If the base is 3 and the exponent is 5, what is the power value?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">243</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">125</div>
+                                    <div class="option" data-correct="false">30</div>
+                                </div>
+
+                                <!-- Question 50 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>Why is power notation useful in mathematics?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">It simplifies writing repeated multiplication</div>
+                                    <div class="option" data-correct="false">It makes calculations more difficult</div>
+                                    <div class="option" data-correct="false">It only works for small numbers</div>
+                                    <div class="option" data-correct="false">It replaces the need for multiplication</div>
+                                </div>
+
+                                <!-- Question 51 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>What is 3⁴ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">27</div>
+                                    <div class="option" data-correct="false">64</div>
+                                </div>
+
+                                <!-- Question 52 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>How would you write "eight to the power of five" in mathematical notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">8⁵</div>
+                                    <div class="option" data-correct="false">5⁸</div>
+                                    <div class="option" data-correct="false">8×5</div>
+                                    <div class="option" data-correct="false">8+5</div>
+                                </div>
+
+                                <!-- Question 53 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>If you have 7 groups of 7 counters each, how many counters do you have?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">49</div>
+                                    <div class="option" data-correct="false">14</div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="false">7</div>
+                                </div>
+
+                                <!-- Question 54 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>What is the value of 9³?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">729</div>
+                                    <div class="option" data-correct="false">27</div>
+                                    <div class="option" data-correct="false">81</div>
+                                    <div class="option" data-correct="false">18</div>
+                                </div>
+
+                                <!-- Question 55 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>In the expression 11² = 121, which number is the power value?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">121</div>
+                                    <div class="option" data-correct="false">11</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">22</div>
+                                </div>
+
+                                <!-- Question 56 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>What is another way to say 12²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Twelve squared</div>
+                                    <div class="option" data-correct="false">Twelve cubed</div>
+                                    <div class="option" data-correct="false">Two to the twelfth</div>
+                                    <div class="option" data-correct="false">Twelve times two</div>
+                                </div>
+
+                                <!-- Question 57 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>How many sticks would you need to model 5 × 5 × 5?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">125</div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">50</div>
+                                </div>
+
+                                <!-- Question 58 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>What is 4⁴ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">256</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">64</div>
+                                    <div class="option" data-correct="false">8</div>
+                                </div>
+
+                                <!-- Question 59 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>If the base is 6 and the exponent is 3, what is the correct power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">6³</div>
+                                    <div class="option" data-correct="false">3⁶</div>
+                                    <div class="option" data-correct="false">6×3</div>
+                                    <div class="option" data-correct="false">6+3</div>
+                                </div>
+
+                                <!-- Question 60 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>What does the base in 15² represent?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">The number being multiplied by itself</div>
+                                    <div class="option" data-correct="false">How many times to multiply</div>
+                                    <div class="option" data-correct="false">The final answer</div>
+                                    <div class="option" data-correct="false">The number to add repeatedly</div>
+                                </div>
+
+                                <!-- Question 61 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>What is 7³ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">343</div>
+                                    <div class="option" data-correct="false">21</div>
+                                    <div class="option" data-correct="false">49</div>
+                                    <div class="option" data-correct="false">28</div>
+                                </div>
+
+                                <!-- Question 62 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>How would you write 10 × 10 × 10 × 10 in power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">10⁴</div>
+                                    <div class="option" data-correct="false">4¹⁰</div>
+                                    <div class="option" data-correct="false">10×4</div>
+                                    <div class="option" data-correct="false">40</div>
+                                </div>
+
+                                <!-- Question 63 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>If you have 3 layers of 5×5 sticks, how many sticks do you have?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">75</div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">30</div>
+                                </div>
+
+                                <!-- Question 64 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>What is the value of 12²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">144</div>
+                                    <div class="option" data-correct="false">24</div>
+                                    <div class="option" data-correct="false">36</div>
+                                    <div class="option" data-correct="false">48</div>
+                                </div>
+
+                                <!-- Question 65 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>In the expression 20³, which number is the exponent?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="false">8000</div>
+                                </div>
+
+                                <!-- Question 66 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>What is another way to say 2⁸?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Two to the power of eight</div>
+                                    <div class="option" data-correct="false">Eight squared</div>
+                                    <div class="option" data-correct="false">Two cubed</div>
+                                    <div class="option" data-correct="false">Eight times two</div>
+                                </div>
+
+                                <!-- Question 67 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>How many bottle tops would you need to model 8 × 8?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">64</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">24</div>
+                                    <div class="option" data-correct="false">8</div>
+                                </div>
+
+                                <!-- Question 68 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>What is 1¹⁰ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">100</div>
+                                </div>
+
+                                <!-- Question 69 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>If the base is 25 and the exponent is 2, what is the power value?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">625</div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">125</div>
+                                    <div class="option" data-correct="false">100</div>
+                                </div>
+
+                                <!-- Question 70 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>What is the main advantage of using power notation over writing out all the multiplication?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">It saves space and is easier to read</div>
+                                    <div class="option" data-correct="false">It makes numbers look bigger</div>
+                                    <div class="option" data-correct="false">It works for addition too</div>
+                                    <div class="option" data-correct="false">It's only used in advanced mathematics</div>
+                                </div>
+
+                                <!-- Question 71 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>What is 5⁴ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">625</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">125</div>
+                                    <div class="option" data-correct="false">25</div>
+                                </div>
+
+                                <!-- Question 72 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>How would you write "one hundred to the power of three" in mathematical notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">100³</div>
+                                    <div class="option" data-correct="false">3¹⁰⁰</div>
+                                    <div class="option" data-correct="false">100×3</div>
+                                    <div class="option" data-correct="false">100+3</div>
+                                </div>
+
+                                <!-- Question 73 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>If you have 9 groups of 9 counters each, how many counters do you have?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">27</div>
+                                    <div class="option" data-correct="false">9</div>
+                                </div>
+
+                                <!-- Question 74 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>What is the value of 6³?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">216</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">36</div>
+                                    <div class="option" data-correct="false">24</div>
+                                </div>
+
+                                <!-- Question 75 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>In the expression 15² = 225, which number is the base?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">15</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">225</div>
+                                    <div class="option" data-correct="false">30</div>
+                                </div>
+
+                                <!-- Question 76 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>What is another way to say 20²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Twenty squared</div>
+                                    <div class="option" data-correct="false">Twenty cubed</div>
+                                    <div class="option" data-correct="false">Two to the twentieth</div>
+                                    <div class="option" data-correct="false">Twenty times two</div>
+                                </div>
+
+                                <!-- Question 77 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>How many sticks would you need to model 4 × 4 × 4 × 4?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">256</div>
+                                    <div class="option" data-correct="false">64</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">32</div>
+                                </div>
+
+                                <!-- Question 78 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>What is 8² equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">64</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">24</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+
+                                <!-- Question 79 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>If the base is 7 and the exponent is 4, what is the correct power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">7⁴</div>
+                                    <div class="option" data-correct="false">4⁷</div>
+                                    <div class="option" data-correct="false">7×4</div>
+                                    <div class="option" data-correct="false">7+4</div>
+                                </div>
+
+                                <!-- Question 80 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>What does the exponent in 50² tell us?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">To multiply 50 by itself 2 times</div>
+                                    <div class="option" data-correct="false">To multiply 2 by itself 50 times</div>
+                                    <div class="option" data-correct="false">To add 50 and 2 together</div>
+                                    <div class="option" data-correct="false">To subtract 2 from 50</div>
+                                </div>
+
+                                <!-- Question 81 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>What is 9² equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">27</div>
+                                    <div class="option" data-correct="false">36</div>
+                                </div>
+
+                                <!-- Question 82 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>How would you write 3 × 3 × 3 × 3 × 3 in power notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">3⁵</div>
+                                    <div class="option" data-correct="false">5³</div>
+                                    <div class="option" data-correct="false">3×5</div>
+                                    <div class="option" data-correct="false">15</div>
+                                </div>
+
+                                <!-- Question 83 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>If you have 2 layers of 10×10 sticks, how many sticks do you have?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">200</div>
+                                    <div class="option" data-correct="false">100</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">40</div>
+                                </div>
+
+                                <!-- Question 84 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>What is the value of 11³?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1331</div>
+                                    <div class="option" data-correct="false">33</div>
+                                    <div class="option" data-correct="false">121</div>
+                                    <div class="option" data-correct="false">44</div>
+                                </div>
+
+                                <!-- Question 85 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>In the expression 30², which number is the exponent?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">30</div>
+                                    <div class="option" data-correct="false">60</div>
+                                    <div class="option" data-correct="false">900</div>
+                                </div>
+
+                                <!-- Question 86 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>What is another way to say 100²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">One hundred squared</div>
+                                    <div class="option" data-correct="false">One hundred cubed</div>
+                                    <div class="option" data-correct="false">Two to the one hundredth</div>
+                                    <div class="option" data-correct="false">One hundred times two</div>
+                                </div>
+
+                                <!-- Question 87 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>How many bottle tops would you need to model 10 × 10?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">100</div>
+                                    <div class="option" data-correct="false">20</div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+
+                                <!-- Question 88 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>What is 2⁷ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">128</div>
+                                    <div class="option" data-correct="false">14</div>
+                                    <div class="option" data-correct="false">64</div>
+                                    <div class="option" data-correct="false">32</div>
+                                </div>
+
+                                <!-- Question 89 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>If the base is 40 and the exponent is 2, what is the power value?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1600</div>
+                                    <div class="option" data-correct="false">80</div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="false">120</div>
+                                </div>
+
+                                <!-- Question 90 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>Why is it important to understand powers in mathematics?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">They are used in many areas of math and science</div>
+                                    <div class="option" data-correct="false">They are only used in advanced calculus</div>
+                                    <div class="option" data-correct="false">They make simple problems more complicated</div>
+                                    <div class="option" data-correct="false">They are rarely used in real-world applications</div>
+                                </div>
+
+                                <!-- Question 91 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>What is 10⁵ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">100,000</div>
+                                    <div class="option" data-correct="false">50</div>
+                                    <div class="option" data-correct="false">10,000</div>
+                                    <div class="option" data-correct="false">500</div>
+                                </div>
+
+                                <!-- Question 92 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>How would you write "two to the power of ten" in mathematical notation?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">2¹⁰</div>
+                                    <div class="option" data-correct="false">10²</div>
+                                    <div class="option" data-correct="false">2×10</div>
+                                    <div class="option" data-correct="false">2+10</div>
+                                </div>
+
+                                <!-- Question 93 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>If you have 6 groups of 6 counters each, how many counters do you have?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">36</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">18</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+
+                                <!-- Question 94 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>What is the value of 12³?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1,728</div>
+                                    <div class="option" data-correct="false">36</div>
+                                    <div class="option" data-correct="false">144</div>
+                                    <div class="option" data-correct="false">48</div>
+                                </div>
+
+                                <!-- Question 95 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>In the expression 25² = 625, which number is the power value?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">625</div>
+                                    <div class="option" data-correct="false">25</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">50</div>
+                                </div>
+
+                                <!-- Question 96 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>What is another way to say 50²?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">Fifty squared</div>
+                                    <div class="option" data-correct="false">Fifty cubed</div>
+                                    <div class="option" data-correct="false">Two to the fiftieth</div>
+                                    <div class="option" data-correct="false">Fifty times two</div>
+                                </div>
+
+                                <!-- Question 97 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>How many sticks would you need to model 3 × 3 × 3 × 3?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">81</div>
+                                    <div class="option" data-correct="false">27</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">36</div>
+                                </div>
+
+                                <!-- Question 98 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>What is 1⁵ equal to?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">10</div>
+                                </div>
+
+                                <!-- Question 99 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>If the base is 100 and the exponent is 2, what is the power value?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">10,000</div>
+                                    <div class="option" data-correct="false">200</div>
+                                    <div class="option" data-correct="false">1,000</div>
+                                    <div class="option" data-correct="false">500</div>
+                                </div>
+
+                                <!-- Question 100 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>What is the main reason we use exponents in mathematics?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">To efficiently represent repeated multiplication</div>
+                                    <div class="option" data-correct="false">To make simple calculations more difficult</div>
+                                    <div class="option" data-correct="false">To replace all addition operations</div>
+                                    <div class="option" data-correct="false">To only work with very large numbers</div>
+                                </div>
+
                             </div>
                         </section>
                     </article>
@@ -523,26 +1766,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -551,14 +1802,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -568,25 +1820,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <script src="../../js/math-challenge-repeated-factors.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/repeated-factors.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../passco/js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
