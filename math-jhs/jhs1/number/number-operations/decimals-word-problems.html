@@ -750,22 +750,1273 @@
                             </div>
                         </section>
 
-                        <!-- Math Challenge Section -->
-                        <section id="quick-test" class="lesson-section">
+                        <br><br>
+
+                        <!-- Test Instructions -->
+                        <section id="instructions" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4><i class="fas fa-hourglass-half"></i> Timed Test: 7 Levels</h4>
-                                    <p>Test your multiplication and division skills!</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Section A - Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game content loaded by JS -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>Sarah bought a book for GH₵12.50 and a pen for GH₵3.75. How much did she spend in total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵16.25</div>
+                                    <div class="option" data-correct="false">GH₵15.25</div>
+                                    <div class="option" data-correct="false">GH₵17.25</div>
+                                    <div class="option" data-correct="false">GH₵16.75</div>
+                                </div>
+
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>A 2.5 liter bottle of juice has 1.75 liters remaining. How much juice was consumed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.75 liters</div>
+                                    <div class="option" data-correct="false">0.85 liters</div>
+                                    <div class="option" data-correct="false">1.25 liters</div>
+                                    <div class="option" data-correct="false">1.5 liters</div>
+                                </div>
+
+                                <!-- Question 3 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>If one meter of fabric costs GH₵8.75, how much would 3.5 meters cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵30.63</div>
+                                    <div class="option" data-correct="false">GH₵31.25</div>
+                                    <div class="option" data-correct="false">GH₵30.75</div>
+                                    <div class="option" data-correct="false">GH₵29.63</div>
+                                </div>
+
+                                <!-- Question 4 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>A 4.8 kg bag of rice is divided equally into 6 containers. How much rice is in each container?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.8 kg</div>
+                                    <div class="option" data-correct="false">0.6 kg</div>
+                                    <div class="option" data-correct="false">0.75 kg</div>
+                                    <div class="option" data-correct="false">0.85 kg</div>
+                                </div>
+
+                                <!-- Question 5 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>Kofi ran 1.75 km on Monday, 2.5 km on Tuesday, and 1.25 km on Wednesday. What was his total distance?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">5.5 km</div>
+                                    <div class="option" data-correct="false">4.5 km</div>
+                                    <div class="option" data-correct="false">6.5 km</div>
+                                    <div class="option" data-correct="false">5.25 km</div>
+                                </div>
+
+                                <!-- Question 6 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>A shop bought 15.5 kg of sugar at GH₵4.20 per kg. What was the total cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵65.10</div>
+                                    <div class="option" data-correct="false">GH₵64.50</div>
+                                    <div class="option" data-correct="false">GH₵66.10</div>
+                                    <div class="option" data-correct="false">GH₵62.10</div>
+                                </div>
+
+                                <!-- Question 7 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>Ama buys 2 kg of rice at GH₵8.50/kg and 1.5 kg of beans at GH₵12.75/kg. How much does she spend?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵36.13</div>
+                                    <div class="option" data-correct="false">GH₵35.50</div>
+                                    <div class="option" data-correct="false">GH₵37.00</div>
+                                    <div class="option" data-correct="false">GH₵34.80</div>
+                                </div>
+
+                                <!-- Question 8 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>Kwame’s fastest 100m time is 11.28 seconds. Ama’s slowest is 11.89 seconds. What is the difference?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.61 seconds</div>
+                                    <div class="option" data-correct="false">0.51 seconds</div>
+                                    <div class="option" data-correct="false">0.71 seconds</div>
+                                    <div class="option" data-correct="false">0.59 seconds</div>
+                                </div>
+
+                                <!-- Question 9 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>A class buys 24 pencils at GH₵0.75 each and 15 notebooks at GH₵3.50 each. What is the total cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵70.50</div>
+                                    <div class="option" data-correct="false">GH₵68.50</div>
+                                    <div class="option" data-correct="false">GH₵71.00</div>
+                                    <div class="option" data-correct="false">GH₵72.50</div>
+                                </div>
+
+                                <!-- Question 10 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>The water consumption for five days was 125.5 L, 118.75 L, 132.25 L, 140.0 L, and 127.8 L. What is the average?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">128.86 L</div>
+                                    <div class="option" data-correct="false">128.50 L</div>
+                                    <div class="option" data-correct="false">129.00 L</div>
+                                    <div class="option" data-correct="false">127.75 L</div>
+                                </div>
+
+                                <!-- Question 11 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>A taxi driver uses 12.5 L of fuel on Monday and 15.75 L on Tuesday. How much fuel is used in total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">28.25 L</div>
+                                    <div class="option" data-correct="false">27.75 L</div>
+                                    <div class="option" data-correct="false">28.50 L</div>
+                                    <div class="option" data-correct="false">29.25 L</div>
+                                </div>
+
+                                <!-- Question 12 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>A rope is 24.6 m long. If 8.75 m is cut off, how much rope is left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">15.85 m</div>
+                                    <div class="option" data-correct="false">16.75 m</div>
+                                    <div class="option" data-correct="false">15.75 m</div>
+                                    <div class="option" data-correct="false">16.85 m</div>
+                                </div>
+
+                                <!-- Question 13 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>A loaf of bread costs GH₵4.25. How much will 7 loaves cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵29.75</div>
+                                    <div class="option" data-correct="false">GH₵28.75</div>
+                                    <div class="option" data-correct="false">GH₵30.25</div>
+                                    <div class="option" data-correct="false">GH₵31.00</div>
+                                </div>
+
+                                <!-- Question 14 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>A student scored 15.75, 18.25, 14.5, and 16.0 in four tests. Find his average score.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">16.13</div>
+                                    <div class="option" data-correct="false">16.25</div>
+                                    <div class="option" data-correct="false">16.0</div>
+                                    <div class="option" data-correct="false">15.95</div>
+                                </div>
+
+                                <!-- Question 15 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>The price of 3.5 m of cloth is GH₵42. How much is 1 m?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵12.00</div>
+                                    <div class="option" data-correct="false">GH₵11.50</div>
+                                    <div class="option" data-correct="false">GH₵12.25</div>
+                                    <div class="option" data-correct="false">GH₵11.75</div>
+                                </div>
+
+                                <!-- Question 16 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>A car travels 126.5 km in 2.5 hours. What is the average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">50.6 km/h</div>
+                                    <div class="option" data-correct="false">51.0 km/h</div>
+                                    <div class="option" data-correct="false">49.8 km/h</div>
+                                    <div class="option" data-correct="false">52.5 km/h</div>
+                                </div>
+
+                                <!-- Question 17 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>A farmer harvested 238.75 kg of maize on Monday and 315.25 kg on Tuesday. What was the total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">554.0 kg</div>
+                                    <div class="option" data-correct="false">553.5 kg</div>
+                                    <div class="option" data-correct="false">555.0 kg</div>
+                                    <div class="option" data-correct="false">556.0 kg</div>
+                                </div>
+
+                                <!-- Question 18 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>The length of a pole is 8.75 m. If 3.2 m is cut off, what is the remaining length?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">5.55 m</div>
+                                    <div class="option" data-correct="false">5.45 m</div>
+                                    <div class="option" data-correct="false">5.65 m</div>
+                                    <div class="option" data-correct="false">5.75 m</div>
+                                </div>
+
+                                <!-- Question 19 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>A student bought 6 pencils at GH₵1.25 each. What is the total cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵7.50</div>
+                                    <div class="option" data-correct="false">GH₵7.25</div>
+                                    <div class="option" data-correct="false">GH₵7.75</div>
+                                    <div class="option" data-correct="false">GH₵8.00</div>
+                                </div>
+
+                                <!-- Question 20 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>A bus covers 364.5 km in 7.5 hours. What is its average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">48.6 km/h</div>
+                                    <div class="option" data-correct="false">47.5 km/h</div>
+                                    <div class="option" data-correct="false">49.0 km/h</div>
+                                    <div class="option" data-correct="false">50.0 km/h</div>
+                                </div>
+
+                                <!-- Question 21 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>Four friends bought drinks costing GH₵5.25, GH₵4.50, GH₵3.75, and GH₵6.40. What was the total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵19.90</div>
+                                    <div class="option" data-correct="false">GH₵19.80</div>
+                                    <div class="option" data-correct="false">GH₵20.00</div>
+                                    <div class="option" data-correct="false">GH₵19.75</div>
+                                </div>
+
+                                <!-- Question 22 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>A bottle contains 1.25 L of oil. How many liters are in 12 bottles?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">15.0 L</div>
+                                    <div class="option" data-correct="false">14.5 L</div>
+                                    <div class="option" data-correct="false">15.5 L</div>
+                                    <div class="option" data-correct="false">16.0 L</div>
+                                </div>
+
+                                <!-- Question 23 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>The price of 8.5 kg of meat is GH₵255. What is the cost per kg?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵30.00</div>
+                                    <div class="option" data-correct="false">GH₵29.50</div>
+                                    <div class="option" data-correct="false">GH₵30.25</div>
+                                    <div class="option" data-correct="false">GH₵29.75</div>
+                                </div>
+
+                                <!-- Question 24 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>A container has 25.75 L of water. If 8.6 L is poured out, how much remains?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">17.15 L</div>
+                                    <div class="option" data-correct="false">17.25 L</div>
+                                    <div class="option" data-correct="false">16.85 L</div>
+                                    <div class="option" data-correct="false">17.05 L</div>
+                                </div>
+
+                                <!-- Question 25 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>A car used 45.6 L of petrol to cover 380 km. What is the consumption per km?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.12 L/km</div>
+                                    <div class="option" data-correct="false">0.11 L/km</div>
+                                    <div class="option" data-correct="false">0.13 L/km</div>
+                                    <div class="option" data-correct="false">0.14 L/km</div>
+                                </div>
+
+                                <!-- Question 26 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>A shop sells 15 mangoes for GH₵22.50. What is the cost of 1 mango?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵1.50</div>
+                                    <div class="option" data-correct="false">GH₵1.25</div>
+                                    <div class="option" data-correct="false">GH₵1.75</div>
+                                    <div class="option" data-correct="false">GH₵2.00</div>
+                                </div>
+
+                                <!-- Question 27 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>A woman bought 3.25 m of cloth at GH₵18.50 per meter. What is the total cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵60.13</div>
+                                    <div class="option" data-correct="false">GH₵61.13</div>
+                                    <div class="option" data-correct="false">GH₵59.50</div>
+                                    <div class="option" data-correct="false">GH₵62.00</div>
+                                </div>
+
+                                <!-- Question 28 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>The weights of 5 students are 42.5, 38.0, 44.5, 39.5, and 41.0 kg. What is their average weight?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">41.1 kg</div>
+                                    <div class="option" data-correct="false">41.0 kg</div>
+                                    <div class="option" data-correct="false">40.9 kg</div>
+                                    <div class="option" data-correct="false">41.5 kg</div>
+                                </div>
+
+                                <!-- Question 29 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>A shopkeeper sold 24 bottles of drink at GH₵2.75 each. How much did he earn?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵66.00</div>
+                                    <div class="option" data-correct="false">GH₵65.50</div>
+                                    <div class="option" data-correct="false">GH₵66.50</div>
+                                    <div class="option" data-correct="false">GH₵67.00</div>
+                                </div>
+
+                                <!-- Question 30 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>A farmer sold 48.75 kg of yam at GH₵4.60 per kg. How much money did he get?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵224.25</div>
+                                    <div class="option" data-correct="false">GH₵224.50</div>
+                                    <div class="option" data-correct="false">GH₵223.75</div>
+                                    <div class="option" data-correct="false">GH₵225.00</div>
+                                </div>
+
+                                <!-- Question 31 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>Three friends shared GH₵42.60 equally. How much did each get?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵14.20</div>
+                                    <div class="option" data-correct="false">GH₵14.50</div>
+                                    <div class="option" data-correct="false">GH₵14.10</div>
+                                    <div class="option" data-correct="false">GH₵13.90</div>
+                                </div>
+
+                                <!-- Question 32 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>A student had GH₵20.00 and spent GH₵13.45. How much money is left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵6.55</div>
+                                    <div class="option" data-correct="false">GH₵6.45</div>
+                                    <div class="option" data-correct="false">GH₵7.55</div>
+                                    <div class="option" data-correct="false">GH₵7.65</div>
+                                </div>
+
+                                <!-- Question 33 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>A box contains 48 cans of milk, each weighing 0.35 kg. What is the total weight?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">16.8 kg</div>
+                                    <div class="option" data-correct="false">17.5 kg</div>
+                                    <div class="option" data-correct="false">18.0 kg</div>
+                                    <div class="option" data-correct="false">15.8 kg</div>
+                                </div>
+
+                                <!-- Question 34 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>A man walked 2.85 km in the morning and 3.65 km in the evening. How far did he walk in total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">6.5 km</div>
+                                    <div class="option" data-correct="false">6.45 km</div>
+                                    <div class="option" data-correct="false">6.55 km</div>
+                                    <div class="option" data-correct="false">6.6 km</div>
+                                </div>
+
+                                <!-- Question 35 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>A car covers 248.4 km using 27.6 L of fuel. What is the average consumption per km?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.112 L/km</div>
+                                    <div class="option" data-correct="false">0.120 L/km</div>
+                                    <div class="option" data-correct="false">0.110 L/km</div>
+                                    <div class="option" data-correct="false">0.115 L/km</div>
+                                </div>
+
+                                <!-- Question 36 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>A bag of oranges weighs 18.75 kg. If 5.2 kg is removed, what is the remaining weight?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">13.55 kg</div>
+                                    <div class="option" data-correct="false">13.45 kg</div>
+                                    <div class="option" data-correct="false">13.65 kg</div>
+                                    <div class="option" data-correct="false">13.75 kg</div>
+                                </div>
+
+                                <!-- Question 37 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>A cake is cut into 12 equal parts. If one piece weighs 0.45 kg, what is the weight of the whole cake?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">5.4 kg</div>
+                                    <div class="option" data-correct="false">5.5 kg</div>
+                                    <div class="option" data-correct="false">5.6 kg</div>
+                                    <div class="option" data-correct="false">5.3 kg</div>
+                                </div>
+
+                                <!-- Question 38 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>The temperatures in a town over 3 days are 24.5°C, 25.75°C, and 26.0°C. Find the average.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">25.42°C</div>
+                                    <div class="option" data-correct="false">25.25°C</div>
+                                    <div class="option" data-correct="false">25.5°C</div>
+                                    <div class="option" data-correct="false">25.75°C</div>
+                                </div>
+
+                                <!-- Question 39 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>A shopkeeper bought 36.5 kg of sugar. If he sold 28.75 kg, how much sugar is left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">7.75 kg</div>
+                                    <div class="option" data-correct="false">7.85 kg</div>
+                                    <div class="option" data-correct="false">7.65 kg</div>
+                                    <div class="option" data-correct="false">8.0 kg</div>
+                                </div>
+
+                                <!-- Question 40 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>Five students had pocket money of GH₵12.50, GH₵15.25, GH₵14.75, GH₵16.0, and GH₵13.50. Find the average.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵14.40</div>
+                                    <div class="option" data-correct="false">GH₵14.25</div>
+                                    <div class="option" data-correct="false">GH₵14.50</div>
+                                    <div class="option" data-correct="false">GH₵14.30</div>
+                                </div>
+
+                                <!-- Question 41 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>A shop sold 18.25 kg of tomatoes on Monday and 22.5 kg on Tuesday. How many kilograms were sold in total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">40.75 kg</div>
+                                    <div class="option" data-correct="false">41.25 kg</div>
+                                    <div class="option" data-correct="false">39.75 kg</div>
+                                    <div class="option" data-correct="false">40.25 kg</div>
+                                </div>
+
+                                <!-- Question 42 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>A rope is 15.75 m long. If 6.4 m is cut off, what is the remaining length?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">9.35 m</div>
+                                    <div class="option" data-correct="false">9.25 m</div>
+                                    <div class="option" data-correct="false">9.45 m</div>
+                                    <div class="option" data-correct="false">9.50 m</div>
+                                </div>
+
+                                <!-- Question 43 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>A taxi fare is GH₵3.75 per kilometer. How much does a 12.5 km journey cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵46.88</div>
+                                    <div class="option" data-correct="false">GH₵47.50</div>
+                                    <div class="option" data-correct="false">GH₵45.75</div>
+                                    <div class="option" data-correct="false">GH₵48.00</div>
+                                </div>
+
+                                <!-- Question 44 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>The heights of three boys are 1.52 m, 1.48 m, and 1.63 m. What is their average height?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">1.54 m</div>
+                                    <div class="option" data-correct="false">1.55 m</div>
+                                    <div class="option" data-correct="false">1.56 m</div>
+                                    <div class="option" data-correct="false">1.53 m</div>
+                                </div>
+
+                                <!-- Question 45 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>A farmer bought 5.25 kg of maize at GH₵3.40 per kg. How much did he pay?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵17.85</div>
+                                    <div class="option" data-correct="false">GH₵18.00</div>
+                                    <div class="option" data-correct="false">GH₵17.50</div>
+                                    <div class="option" data-correct="false">GH₵17.75</div>
+                                </div>
+
+                                <!-- Question 46 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>A runner completed 4 laps of 2.35 km each. How far did he run in total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">9.4 km</div>
+                                    <div class="option" data-correct="false">9.5 km</div>
+                                    <div class="option" data-correct="false">9.25 km</div>
+                                    <div class="option" data-correct="false">9.6 km</div>
+                                </div>
+
+                                <!-- Question 47 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>A dressmaker used 18.25 m of cloth to sew 5 dresses. How much cloth was used for each dress?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">3.65 m</div>
+                                    <div class="option" data-correct="false">3.75 m</div>
+                                    <div class="option" data-correct="false">3.55 m</div>
+                                    <div class="option" data-correct="false">3.50 m</div>
+                                </div>
+
+                                <!-- Question 48 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>Five friends spent GH₵12.25, GH₵14.50, GH₵11.75, GH₵13.25, and GH₵12.50. What was the total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵64.25</div>
+                                    <div class="option" data-correct="false">GH₵63.50</div>
+                                    <div class="option" data-correct="false">GH₵64.50</div>
+                                    <div class="option" data-correct="false">GH₵65.00</div>
+                                </div>
+
+                                <!-- Question 49 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>A woman bought 6.25 kg of fish at GH₵22.50. What is the cost per kilogram?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵3.60</div>
+                                    <div class="option" data-correct="false">GH₵3.50</div>
+                                    <div class="option" data-correct="false">GH₵3.55</div>
+                                    <div class="option" data-correct="false">GH₵3.65</div>
+                                </div>
+
+                                <!-- Question 50 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>A train travels 152.5 km in 2.5 hours. What is its average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">61 km/h</div>
+                                    <div class="option" data-correct="false">62 km/h</div>
+                                    <div class="option" data-correct="false">60.5 km/h</div>
+                                    <div class="option" data-correct="false">59.5 km/h</div>
+                                </div>
+
+                                <!-- Question 51 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>A box weighs 12.35 kg. If 7.6 kg is removed, what is the remaining weight?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">4.75 kg</div>
+                                    <div class="option" data-correct="false">4.85 kg</div>
+                                    <div class="option" data-correct="false">4.65 kg</div>
+                                    <div class="option" data-correct="false">4.55 kg</div>
+                                </div>
+
+                                <!-- Question 52 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>A shopkeeper bought 42.5 L of milk. If he sold 28.75 L, how much is left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">13.75 L</div>
+                                    <div class="option" data-correct="false">13.65 L</div>
+                                    <div class="option" data-correct="false">13.55 L</div>
+                                    <div class="option" data-correct="false">13.85 L</div>
+                                </div>
+
+                                <!-- Question 53 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>The weights of 4 bags are 12.25 kg, 15.75 kg, 14.5 kg, and 13.25 kg. Find their average.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">13.94 kg</div>
+                                    <div class="option" data-correct="false">14.0 kg</div>
+                                    <div class="option" data-correct="false">13.75 kg</div>
+                                    <div class="option" data-correct="false">14.25 kg</div>
+                                </div>
+
+                                <!-- Question 54 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>A man bought 2.75 m of cloth at GH₵18.20 per meter. What is the cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵50.05</div>
+                                    <div class="option" data-correct="false">GH₵50.25</div>
+                                    <div class="option" data-correct="false">GH₵49.95</div>
+                                    <div class="option" data-correct="false">GH₵50.50</div>
+                                </div>
+
+                                <!-- Question 55 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>A shopkeeper sells 36 pencils at GH₵0.85 each. What is the total cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵30.60</div>
+                                    <div class="option" data-correct="false">GH₵30.75</div>
+                                    <div class="option" data-correct="false">GH₵31.00</div>
+                                    <div class="option" data-correct="false">GH₵29.75</div>
+                                </div>
+
+                                <!-- Question 56 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>A bus covers 425.25 km in 8.5 hours. What is its average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">50.03 km/h</div>
+                                    <div class="option" data-correct="false">50.25 km/h</div>
+                                    <div class="option" data-correct="false">49.75 km/h</div>
+                                    <div class="option" data-correct="false">51.0 km/h</div>
+                                </div>
+
+                                <!-- Question 57 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>A student had GH₵25.75 and spent GH₵14.95. How much is left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵10.80</div>
+                                    <div class="option" data-correct="false">GH₵11.00</div>
+                                    <div class="option" data-correct="false">GH₵10.75</div>
+                                    <div class="option" data-correct="false">GH₵11.10</div>
+                                </div>
+
+                                <!-- Question 58 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>A farmer harvested 186.25 kg of cocoa. If he sold 79.5 kg, how much remains?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">106.75 kg</div>
+                                    <div class="option" data-correct="false">107.25 kg</div>
+                                    <div class="option" data-correct="false">106.5 kg</div>
+                                    <div class="option" data-correct="false">107.5 kg</div>
+                                </div>
+
+                                <!-- Question 59 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>A worker is paid GH₵15.25 per hour. How much will he earn in 12.5 hours?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵190.63</div>
+                                    <div class="option" data-correct="false">GH₵191.25</div>
+                                    <div class="option" data-correct="false">GH₵189.50</div>
+                                    <div class="option" data-correct="false">GH₵192.00</div>
+                                </div>
+
+                                <!-- Question 60 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>A loaf of bread weighs 0.85 kg. How much do 24 loaves weigh?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">20.4 kg</div>
+                                    <div class="option" data-correct="false">20.5 kg</div>
+                                    <div class="option" data-correct="false">20.25 kg</div>
+                                    <div class="option" data-correct="false">20.6 kg</div>
+                                </div>
+
+                                <!-- Question 61 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>A student scored 12.75, 15.25, 14.5, and 16.0 marks. What is the average?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">14.63</div>
+                                    <div class="option" data-correct="false">14.5</div>
+                                    <div class="option" data-correct="false">14.75</div>
+                                    <div class="option" data-correct="false">14.25</div>
+                                </div>
+
+                                <!-- Question 62 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>A taxi travels 78.5 km using 6.25 L of fuel. What is the average consumption per km?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.08 L/km</div>
+                                    <div class="option" data-correct="false">0.09 L/km</div>
+                                    <div class="option" data-correct="false">0.07 L/km</div>
+                                    <div class="option" data-correct="false">0.085 L/km</div>
+                                </div>
+
+                                <!-- Question 63 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>A woman bought 15.5 m of cloth. If she used 9.25 m, how much cloth is left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">6.25 m</div>
+                                    <div class="option" data-correct="false">6.5 m</div>
+                                    <div class="option" data-correct="false">6.15 m</div>
+                                    <div class="option" data-correct="false">6.0 m</div>
+                                </div>
+
+                                <!-- Question 64 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>A trader bought 28.5 kg of groundnuts. If she sold 17.75 kg, how many kilograms remain?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">10.75 kg</div>
+                                    <div class="option" data-correct="false">10.5 kg</div>
+                                    <div class="option" data-correct="false">11.0 kg</div>
+                                    <div class="option" data-correct="false">11.25 kg</div>
+                                </div>
+
+                                <!-- Question 65 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>The cost of 3.25 kg of beef is GH₵65.00. What is the cost per kg?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵20.00</div>
+                                    <div class="option" data-correct="false">GH₵19.75</div>
+                                    <div class="option" data-correct="false">GH₵20.25</div>
+                                    <div class="option" data-correct="false">GH₵21.00</div>
+                                </div>
+
+                                <!-- Question 66 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>A train covered 324.5 km in 4.25 hours. What is its average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">76.35 km/h</div>
+                                    <div class="option" data-correct="false">76.25 km/h</div>
+                                    <div class="option" data-correct="false">76.5 km/h</div>
+                                    <div class="option" data-correct="false">75.5 km/h</div>
+                                </div>
+
+                                <!-- Question 67 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>A shop sells 48 bottles of water at GH₵2.15 each. What is the total cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵103.20</div>
+                                    <div class="option" data-correct="false">GH₵103.00</div>
+                                    <div class="option" data-correct="false">GH₵102.75</div>
+                                    <div class="option" data-correct="false">GH₵104.00</div>
+                                </div>
+
+                                <!-- Question 68 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>A motorbike covers 245.0 km using 17.5 L of fuel. What is its average consumption per km?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.071 L/km</div>
+                                    <div class="option" data-correct="false">0.072 L/km</div>
+                                    <div class="option" data-correct="false">0.070 L/km</div>
+                                    <div class="option" data-correct="false">0.075 L/km</div>
+                                </div>
+
+                                <!-- Question 69 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>A man had GH₵85.75 and spent GH₵42.25. How much is left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵43.50</div>
+                                    <div class="option" data-correct="false">GH₵44.00</div>
+                                    <div class="option" data-correct="false">GH₵42.50</div>
+                                    <div class="option" data-correct="false">GH₵43.25</div>
+                                </div>
+
+                                <!-- Question 70 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>A woman bought 5.75 kg of sugar at GH₵6.20 per kg. What is the total cost?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵35.65</div>
+                                    <div class="option" data-correct="false">GH₵35.50</div>
+                                    <div class="option" data-correct="false">GH₵36.00</div>
+                                    <div class="option" data-correct="false">GH₵34.75</div>
+                                </div>
+
+                                <!-- Question 71 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>A car uses 48.6 L of petrol to cover 405 km. What is the consumption per km?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.12 L/km</div>
+                                    <div class="option" data-correct="false">0.11 L/km</div>
+                                    <div class="option" data-correct="false">0.13 L/km</div>
+                                    <div class="option" data-correct="false">0.125 L/km</div>
+                                </div>
+
+                                <!-- Question 72 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>A trader bought 125.75 kg of rice. If she sold 87.5 kg, how much remains?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">38.25 kg</div>
+                                    <div class="option" data-correct="false">37.75 kg</div>
+                                    <div class="option" data-correct="false">38.5 kg</div>
+                                    <div class="option" data-correct="false">39.0 kg</div>
+                                </div>
+
+                                <!-- Question 73 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>A worker earns GH₵42.75 per day. How much does he earn in 18 days?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵769.50</div>
+                                    <div class="option" data-correct="false">GH₵770.00</div>
+                                    <div class="option" data-correct="false">GH₵768.50</div>
+                                    <div class="option" data-correct="false">GH₵771.25</div>
+                                </div>
+
+                                <!-- Question 74 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>A bottle contains 1.35 L of oil. How much oil is in 24 bottles?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">32.4 L</div>
+                                    <div class="option" data-correct="false">33.0 L</div>
+                                    <div class="option" data-correct="false">31.5 L</div>
+                                    <div class="option" data-correct="false">32.0 L</div>
+                                </div>
+
+                                <!-- Question 75 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>A bus covered 248.5 km in 4.25 hours. What was its average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">58.47 km/h</div>
+                                    <div class="option" data-correct="false">58.25 km/h</div>
+                                    <div class="option" data-correct="false">58.5 km/h</div>
+                                    <div class="option" data-correct="false">59.0 km/h</div>
+                                </div>
+
+                                <!-- Question 76 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>A student scored 18.75, 15.25, 17.5, and 16.0 in four tests. Find his average score.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">16.88</div>
+                                    <div class="option" data-correct="false">16.75</div>
+                                    <div class="option" data-correct="false">17.0</div>
+                                    <div class="option" data-correct="false">16.95</div>
+                                </div>
+
+                                <!-- Question 77 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>A woman bought 3.25 m of lace at GH₵45.50 per meter. How much did she spend?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵147.88</div>
+                                    <div class="option" data-correct="false">GH₵148.00</div>
+                                    <div class="option" data-correct="false">GH₵147.50</div>
+                                    <div class="option" data-correct="false">GH₵148.25</div>
+                                </div>
+
+                                <!-- Question 78 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>The weights of 6 students are 42.5, 45.75, 44.25, 41.0, 43.5, and 46.0 kg. What is the average weight?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">43.83 kg</div>
+                                    <div class="option" data-correct="false">43.75 kg</div>
+                                    <div class="option" data-correct="false">43.5 kg</div>
+                                    <div class="option" data-correct="false">44.0 kg</div>
+                                </div>
+
+                                <!-- Question 79 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>A trader bought 52.5 L of palm oil. If she sold 37.75 L, how much oil is left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">14.75 L</div>
+                                    <div class="option" data-correct="false">15.25 L</div>
+                                    <div class="option" data-correct="false">14.5 L</div>
+                                    <div class="option" data-correct="false">15.0 L</div>
+                                </div>
+
+                                <!-- Question 80 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>A factory produced 245.75 kg of soap on Monday and 318.25 kg on Tuesday. What was the total production?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">564.0 kg</div>
+                                    <div class="option" data-correct="false">563.5 kg</div>
+                                    <div class="option" data-correct="false">564.5 kg</div>
+                                    <div class="option" data-correct="false">565.0 kg</div>
+                                </div>
+
+                                <!-- Question 81 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>A rope is 75.25 m long. If 28.5 m is cut off, what is the remaining length?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">46.75 m</div>
+                                    <div class="option" data-correct="false">46.25 m</div>
+                                    <div class="option" data-correct="false">47.25 m</div>
+                                    <div class="option" data-correct="false">47.0 m</div>
+                                </div>
+
+                                <!-- Question 82 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>A student bought 24 exercise books at GH₵3.75 each. How much did she pay?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵90.00</div>
+                                    <div class="option" data-correct="false">GH₵91.00</div>
+                                    <div class="option" data-correct="false">GH₵92.00</div>
+                                    <div class="option" data-correct="false">GH₵89.50</div>
+                                </div>
+
+                                <!-- Question 83 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>A car travels 345.0 km in 6.25 hours. What is its average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">55.2 km/h</div>
+                                    <div class="option" data-correct="false">55.5 km/h</div>
+                                    <div class="option" data-correct="false">54.8 km/h</div>
+                                    <div class="option" data-correct="false">56.0 km/h</div>
+                                </div>
+
+                                <!-- Question 84 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>A shopkeeper sold 126.75 kg of beans in one week and 148.25 kg the next week. How many kilograms in total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">275.0 kg</div>
+                                    <div class="option" data-correct="false">274.75 kg</div>
+                                    <div class="option" data-correct="false">275.25 kg</div>
+                                    <div class="option" data-correct="false">276.0 kg</div>
+                                </div>
+
+                                <!-- Question 85 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>A student had GH₵125.50. After spending GH₵78.75, how much is left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵46.75</div>
+                                    <div class="option" data-correct="false">GH₵46.25</div>
+                                    <div class="option" data-correct="false">GH₵47.25</div>
+                                    <div class="option" data-correct="false">47.5</div>
+                                </div>
+
+                                <!-- Question 86 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>A man bought 18.25 m of cloth. If he used 9.75 m, how much remains?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">8.5 m</div>
+                                    <div class="option" data-correct="false">8.25 m</div>
+                                    <div class="option" data-correct="false">8.75 m</div>
+                                    <div class="option" data-correct="false">9.0 m</div>
+                                </div>
+
+                                <!-- Question 87 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>A baker uses 2.5 kg of flour for one cake. How much flour will he need for 7 cakes?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">17.5 kg</div>
+                                    <div class="option" data-correct="false">18.0 kg</div>
+                                    <div class="option" data-correct="false">17.0 kg</div>
+                                    <div class="option" data-correct="false">16.5 kg</div>
+                                </div>
+
+                                <!-- Question 88 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>A trader bought 156.25 L of oil. If she sold 78.75 L, how much remains?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">77.5 L</div>
+                                    <div class="option" data-correct="false">78.0 L</div>
+                                    <div class="option" data-correct="false">77.25 L</div>
+                                    <div class="option" data-correct="false">76.75 L</div>
+                                </div>
+
+                                <!-- Question 89 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>A boy ran 2.75 km in the morning and 3.25 km in the evening. How far did he run in total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">6.0 km</div>
+                                    <div class="option" data-correct="false">5.75 km</div>
+                                    <div class="option" data-correct="false">6.25 km</div>
+                                    <div class="option" data-correct="false">6.1 km</div>
+                                </div>
+
+                                <!-- Question 90 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>A train covered 418.0 km in 7.6 hours. What is its average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">55 km/h</div>
+                                    <div class="option" data-correct="false">55.1 km/h</div>
+                                    <div class="option" data-correct="false">54.9 km/h</div>
+                                    <div class="option" data-correct="false">56 km/h</div>
+                                </div>
+
+                                <!-- Question 91 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>A fruit seller sold 12.75 kg of apples on Monday and 18.25 kg on Tuesday. How many kilograms in total?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">31.0 kg</div>
+                                    <div class="option" data-correct="false">30.5 kg</div>
+                                    <div class="option" data-correct="false">31.5 kg</div>
+                                    <div class="option" data-correct="false">32.0 kg</div>
+                                </div>
+
+                                <!-- Question 92 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>A shopkeeper sold 8.25 kg of fish at GH₵12.75 per kg. How much did he get?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵105.19</div>
+                                    <div class="option" data-correct="false">GH₵105.50</div>
+                                    <div class="option" data-correct="false">GH₵104.75</div>
+                                    <div class="option" data-correct="false">GH₵106.00</div>
+                                </div>
+
+                                <!-- Question 93 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>A student had GH₵32.75. After buying a book for GH₵18.50, how much money was left?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵14.25</div>
+                                    <div class="option" data-correct="false">GH₵14.50</div>
+                                    <div class="option" data-correct="false">GH₵14.0</div>
+                                    <div class="option" data-correct="false">GH₵13.75</div>
+                                </div>
+
+                                <!-- Question 94 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>A motorbike covers 125.0 km in 2.5 hours. What is its average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">50 km/h</div>
+                                    <div class="option" data-correct="false">51 km/h</div>
+                                    <div class="option" data-correct="false">49 km/h</div>
+                                    <div class="option" data-correct="false">52 km/h</div>
+                                </div>
+
+                                <!-- Question 95 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>A farmer sold 38.75 kg of yam at GH₵5.20 per kg. How much did he earn?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵201.50</div>
+                                    <div class="option" data-correct="false">GH₵202.00</div>
+                                    <div class="option" data-correct="false">GH₵200.75</div>
+                                    <div class="option" data-correct="false">GH₵199.50</div>
+                                </div>
+
+                                <!-- Question 96 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>A student’s scores were 15.5, 14.25, 16.0, and 15.75. What is the average?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">15.38</div>
+                                    <div class="option" data-correct="false">15.25</div>
+                                    <div class="option" data-correct="false">15.5</div>
+                                    <div class="option" data-correct="false">15.75</div>
+                                </div>
+
+                                <!-- Question 97 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>A trader bought 225.5 kg of groundnuts. If she sold 148.75 kg, how much remains?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">76.75 kg</div>
+                                    <div class="option" data-correct="false">77.25 kg</div>
+                                    <div class="option" data-correct="false">76.5 kg</div>
+                                    <div class="option" data-correct="false">77.5 kg</div>
+                                </div>
+
+                                <!-- Question 98 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>A worker earns GH₵225.75 per week. How much will he earn in 12 weeks?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">GH₵2,709.00</div>
+                                    <div class="option" data-correct="false">GH₵2,708.75</div>
+                                    <div class="option" data-correct="false">GH₵2,710.00</div>
+                                    <div class="option" data-correct="false">GH₵2,700.50</div>
+                                </div>
+
+                                <!-- Question 99 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>A shop sold 36 bottles of juice, each containing 1.25 L. What is the total volume?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">45.0 L</div>
+                                    <div class="option" data-correct="false">44.5 L</div>
+                                    <div class="option" data-correct="false">45.5 L</div>
+                                    <div class="option" data-correct="false">46.0 L</div>
+                                </div>
+
+                                <!-- Question 100 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>A bus covered 612.0 km in 10.2 hours. What is its average speed?</p>
+                                    </div>
+                                    <div class="option" data-correct="true">60 km/h</div>
+                                    <div class="option" data-correct="false">59.5 km/h</div>
+                                    <div class="option" data-correct="false">60.5 km/h</div>
+                                    <div class="option" data-correct="false">61 km/h</div>
+                                </div>
+
+
                             </div>
                         </section>
                     </article>
@@ -781,26 +2032,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -809,14 +2068,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a> <br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -826,13 +2086,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <script src="../../js/math-challenge-decimals-and-word-problems.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/decimals-and-word-problems.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../passco/js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
+
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
         </script>
     </body>
 </html>
