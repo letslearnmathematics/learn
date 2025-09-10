@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="HCF & LCM Using Prime Factors | JHS Mathematics">
         <meta property="og:description" content="Learn to find HCF and LCM using prime factorization with practical examples.">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/favicon-32x32.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/number/number-operations/hcf-and-lcm">
         <meta property="og:type" content="website">
     
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/hcf-and-lcm.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -62,13 +66,8 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
-            crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-hcf-and-lcm.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <!-- Header Navigation -->
@@ -396,28 +395,1270 @@
 
                         <br><br>
 
-                        <!-- Math Challenge Section -->
-                        <section id="quick-test" class="lesson-section">
+                        <!-- Test Instructions -->
+                        <section id="instructions" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
+                                <i class="fas fa-book-open"></i> Quick Test
                             </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your skills in finding HCF and LCM using prime factors</p>
+                            
+                            <div class="concept-box">
+                                <p>
+                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
+                                    towards the final exam.
+                                </p>
+                                <p>
+                                    Good luck and remember to check your answers with the solutions provided.
+                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
+                                </p>
+                            </div>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Section A - Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
                                 </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 1</h3>
+        <p>Find the HCF of 28 and 42 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">14</div>
+    <div class="option" data-correct="false">12</div>
+    <div class="option" data-correct="false">6</div>
+    <div class="option" data-correct="false">18</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 2</h3>
+        <p>Find the LCM of 15 and 25 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">75</div>
+    <div class="option" data-correct="false">30</div>
+    <div class="option" data-correct="false">125</div>
+    <div class="option" data-correct="false">50</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 3</h3>
+        <p>Three bells ring at intervals of 6, 8, and 12 minutes. If they ring together at noon, when will they next ring together?</p>
+    </div>
+    <div class="option" data-correct="true">12:24 PM</div>
+    <div class="option" data-correct="false">12:12 PM</div>
+    <div class="option" data-correct="false">12:36 PM</div>
+    <div class="option" data-correct="false">1:00 PM</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 4</h3>
+        <p>A rectangular floor is 300cm by 450cm. What is the largest square tile that can cover it completely?</p>
+    </div>
+    <div class="option" data-correct="true">150 cm × 150 cm</div>
+    <div class="option" data-correct="false">100 cm × 100 cm</div>
+    <div class="option" data-correct="false">75 cm × 75 cm</div>
+    <div class="option" data-correct="false">200 cm × 200 cm</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 5</h3>
+        <p>Find the smallest number divisible by both 18 and 24.</p>
+    </div>
+    <div class="option" data-correct="true">72</div>
+    <div class="option" data-correct="false">36</div>
+    <div class="option" data-correct="false">144</div>
+    <div class="option" data-correct="false">48</div>
+</div>
+
+<!-- Question 6 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 6</h3>
+        <p>Find the HCF of 36 and 60 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">12</div>
+    <div class="option" data-correct="false">18</div>
+    <div class="option" data-correct="false">6</div>
+    <div class="option" data-correct="false">24</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 7</h3>
+        <p>Find the LCM of 12 and 18 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">36</div>
+    <div class="option" data-correct="false">24</div>
+    <div class="option" data-correct="false">48</div>
+    <div class="option" data-correct="false">30</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 8</h3>
+        <p>Two ropes are 48m and 80m long. What is the longest length each piece can be if cut into equal lengths with no leftovers?</p>
+    </div>
+    <div class="option" data-correct="true">16 m</div>
+    <div class="option" data-correct="false">12 m</div>
+    <div class="option" data-correct="false">24 m</div>
+    <div class="option" data-correct="false">20 m</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 9</h3>
+        <p>Bus A arrives every 15 minutes and Bus B every 20 minutes. If they arrive together at 8:00 AM, when will they next arrive together?</p>
+    </div>
+    <div class="option" data-correct="true">9:00 AM</div>
+    <div class="option" data-correct="false">8:45 AM</div>
+    <div class="option" data-correct="false">9:15 AM</div>
+    <div class="option" data-correct="false">8:30 AM</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 10</h3>
+        <p>Find the HCF of 24 and 36 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">12</div>
+    <div class="option" data-correct="false">6</div>
+    <div class="option" data-correct="false">18</div>
+    <div class="option" data-correct="false">24</div>
+</div>
+
+<!-- Question 11 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 11</h3>
+        <p>Find the LCM of 8 and 12 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">24</div>
+    <div class="option" data-correct="false">36</div>
+    <div class="option" data-correct="false">48</div>
+    <div class="option" data-correct="false">12</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 12</h3>
+        <p>The HCF of 45 and 75 is:</p>
+    </div>
+    <div class="option" data-correct="true">15</div>
+    <div class="option" data-correct="false">5</div>
+    <div class="option" data-correct="false">25</div>
+    <div class="option" data-correct="false">30</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 13</h3>
+        <p>The LCM of 9 and 21 is:</p>
+    </div>
+    <div class="option" data-correct="true">63</div>
+    <div class="option" data-correct="false">27</div>
+    <div class="option" data-correct="false">45</div>
+    <div class="option" data-correct="false">81</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 14</h3>
+        <p>Find the HCF of 56 and 98 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">14</div>
+    <div class="option" data-correct="false">7</div>
+    <div class="option" data-correct="false">28</div>
+    <div class="option" data-correct="false">21</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 15</h3>
+        <p>Find the LCM of 14 and 35 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">70</div>
+    <div class="option" data-correct="false">140</div>
+    <div class="option" data-correct="false">105</div>
+    <div class="option" data-correct="false">49</div>
+</div>
+
+<!-- Question 16 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 16</h3>
+        <p>The HCF of 64 and 80 is:</p>
+    </div>
+    <div class="option" data-correct="true">16</div>
+    <div class="option" data-correct="false">8</div>
+    <div class="option" data-correct="false">32</div>
+    <div class="option" data-correct="false">20</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 17</h3>
+        <p>The LCM of 16 and 20 is:</p>
+    </div>
+    <div class="option" data-correct="true">80</div>
+    <div class="option" data-correct="false">40</div>
+    <div class="option" data-correct="false">160</div>
+    <div class="option" data-correct="false">60</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 18</h3>
+        <p>Find the HCF of 90 and 126 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">18</div>
+    <div class="option" data-correct="false">9</div>
+    <div class="option" data-correct="false">21</div>
+    <div class="option" data-correct="false">6</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 19</h3>
+        <p>The LCM of 25 and 30 is:</p>
+    </div>
+    <div class="option" data-correct="true">150</div>
+    <div class="option" data-correct="false">75</div>
+    <div class="option" data-correct="false">125</div>
+    <div class="option" data-correct="false">90</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 20</h3>
+        <p>The HCF of 84 and 120 is:</p>
+    </div>
+    <div class="option" data-correct="true">12</div>
+    <div class="option" data-correct="false">24</div>
+    <div class="option" data-correct="false">18</div>
+    <div class="option" data-correct="false">30</div>
+</div>
+
+<!-- Question 21 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 21</h3>
+        <p>Find the LCM of 18 and 30 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">90</div>
+    <div class="option" data-correct="false">60</div>
+    <div class="option" data-correct="false">120</div>
+    <div class="option" data-correct="false">150</div>
+</div>
+
+<!-- Question 22 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 22</h3>
+        <p>Find the HCF of 72 and 108 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">36</div>
+    <div class="option" data-correct="false">18</div>
+    <div class="option" data-correct="false">12</div>
+    <div class="option" data-correct="false">24</div>
+</div>
+
+<!-- Question 23 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 23</h3>
+        <p>Find the LCM of 45 and 60 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">180</div>
+    <div class="option" data-correct="false">120</div>
+    <div class="option" data-correct="false">240</div>
+    <div class="option" data-correct="false">90</div>
+</div>
+
+<!-- Question 24 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 24</h3>
+        <p>Two cyclists meet every 24 minutes if one cycles every 8 minutes and the other every 12 minutes. This is because of their:</p>
+    </div>
+    <div class="option" data-correct="true">LCM</div>
+    <div class="option" data-correct="false">HCF</div>
+    <div class="option" data-correct="false">Average</div>
+    <div class="option" data-correct="false">Difference</div>
+</div>
+
+<!-- Question 25 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 25</h3>
+        <p>Find the HCF of 50 and 75 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">25</div>
+    <div class="option" data-correct="false">15</div>
+    <div class="option" data-correct="false">10</div>
+    <div class="option" data-correct="false">5</div>
+</div>
+
+<!-- Question 26 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 26</h3>
+        <p>Find the LCM of 40 and 56 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">280</div>
+    <div class="option" data-correct="false">120</div>
+    <div class="option" data-correct="false">180</div>
+    <div class="option" data-correct="false">200</div>
+</div>
+
+<!-- Question 27 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 27</h3>
+        <p>The HCF of 81 and 108 is:</p>
+    </div>
+    <div class="option" data-correct="true">27</div>
+    <div class="option" data-correct="false">18</div>
+    <div class="option" data-correct="false">9</div>
+    <div class="option" data-correct="false">36</div>
+</div>
+
+<!-- Question 28 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 28</h3>
+        <p>Find the LCM of 21, 28, and 35 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">420</div>
+    <div class="option" data-correct="false">210</div>
+    <div class="option" data-correct="false">280</div>
+    <div class="option" data-correct="false">350</div>
+</div>
+
+<!-- Question 29 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 29</h3>
+        <p>Find the HCF of 132 and 198 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">66</div>
+    <div class="option" data-correct="false">22</div>
+    <div class="option" data-correct="false">33</div>
+    <div class="option" data-correct="false">44</div>
+</div>
+
+<!-- Question 30 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 30</h3>
+        <p>Find the LCM of 36 and 54 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">108</div>
+    <div class="option" data-correct="false">72</div>
+    <div class="option" data-correct="false">162</div>
+    <div class="option" data-correct="false">90</div>
+</div>
+
+<!-- Question 31 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 31</h3>
+        <p>What is the HCF of 84, 126, and 210?</p>
+    </div>
+    <div class="option" data-correct="true">42</div>
+    <div class="option" data-correct="false">21</div>
+    <div class="option" data-correct="false">63</div>
+    <div class="option" data-correct="false">14</div>
+</div>
+
+<!-- Question 32 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 32</h3>
+        <p>Find the LCM of 9, 12, and 15.</p>
+    </div>
+    <div class="option" data-correct="true">180</div>
+    <div class="option" data-correct="false">60</div>
+    <div class="option" data-correct="false">90</div>
+    <div class="option" data-correct="false">120</div>
+</div>
+
+<!-- Question 33 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 33</h3>
+        <p>The HCF of 96 and 144 is:</p>
+    </div>
+    <div class="option" data-correct="true">48</div>
+    <div class="option" data-correct="false">24</div>
+    <div class="option" data-correct="false">36</div>
+    <div class="option" data-correct="false">72</div>
+</div>
+
+<!-- Question 34 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 34</h3>
+        <p>Find the LCM of 22 and 55 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">110</div>
+    <div class="option" data-correct="false">220</div>
+    <div class="option" data-correct="false">55</div>
+    <div class="option" data-correct="false">66</div>
+</div>
+
+<!-- Question 35 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 35</h3>
+        <p>Find the HCF of 144 and 216 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">72</div>
+    <div class="option" data-correct="false">36</div>
+    <div class="option" data-correct="false">48</div>
+    <div class="option" data-correct="false">96</div>
+</div>
+
+<!-- Question 36 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 36</h3>
+        <p>Find the LCM of 32 and 48 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">96</div>
+    <div class="option" data-correct="false">128</div>
+    <div class="option" data-correct="false">192</div>
+    <div class="option" data-correct="false">64</div>
+</div>
+
+<!-- Question 37 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 37</h3>
+        <p>Find the HCF of 120, 150, and 180.</p>
+    </div>
+    <div class="option" data-correct="true">30</div>
+    <div class="option" data-correct="false">20</div>
+    <div class="option" data-correct="false">40</div>
+    <div class="option" data-correct="false">60</div>
+</div>
+
+<!-- Question 38 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 38</h3>
+        <p>The LCM of 27 and 36 is:</p>
+    </div>
+    <div class="option" data-correct="true">108</div>
+    <div class="option" data-correct="false">72</div>
+    <div class="option" data-correct="false">81</div>
+    <div class="option" data-correct="false">54</div>
+</div>
+
+<!-- Question 39 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 39</h3>
+        <p>Find the HCF of 84, 112, and 140.</p>
+    </div>
+    <div class="option" data-correct="true">28</div>
+    <div class="option" data-correct="false">14</div>
+    <div class="option" data-correct="false">42</div>
+    <div class="option" data-correct="false">56</div>
+</div>
+
+<!-- Question 40 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 40</h3>
+        <p>Find the LCM of 18, 24, and 32 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">288</div>
+    <div class="option" data-correct="false">144</div>
+    <div class="option" data-correct="false">216</div>
+    <div class="option" data-correct="false">192</div>
+</div>
+
+<!-- Question 41 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 41</h3>
+        <p>Find the HCF of 210 and 315 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">105</div>
+    <div class="option" data-correct="false">210</div>
+    <div class="option" data-correct="false">35</div>
+    <div class="option" data-correct="false">70</div>
+</div>
+
+<!-- Question 42 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 42</h3>
+        <p>Find the LCM of 45, 60, and 75.</p>
+    </div>
+    <div class="option" data-correct="true">900</div>
+    <div class="option" data-correct="false">450</div>
+    <div class="option" data-correct="false">600</div>
+    <div class="option" data-correct="false">300</div>
+</div>
+
+<!-- Question 43 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 43</h3>
+        <p>Find the HCF of 108 and 180 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">36</div>
+    <div class="option" data-correct="false">18</div>
+    <div class="option" data-correct="false">72</div>
+    <div class="option" data-correct="false">54</div>
+</div>
+
+<!-- Question 44 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 44</h3>
+        <p>Find the LCM of 14, 21, and 36.</p>
+    </div>
+    <div class="option" data-correct="true">252</div>
+    <div class="option" data-correct="false">126</div>
+    <div class="option" data-correct="false">168</div>
+    <div class="option" data-correct="false">189</div>
+</div>
+
+<!-- Question 45 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 45</h3>
+        <p>The HCF of 225 and 300 is:</p>
+    </div>
+    <div class="option" data-correct="true">75</div>
+    <div class="option" data-correct="false">25</div>
+    <div class="option" data-correct="false">50</div>
+    <div class="option" data-correct="false">100</div>
+</div>
+
+<!-- Question 46 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 46</h3>
+        <p>Find the LCM of 48 and 60 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">240</div>
+    <div class="option" data-correct="false">180</div>
+    <div class="option" data-correct="false">300</div>
+    <div class="option" data-correct="false">120</div>
+</div>
+
+<!-- Question 47 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 47</h3>
+        <p>Find the HCF of 98 and 210 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">14</div>
+    <div class="option" data-correct="false">7</div>
+    <div class="option" data-correct="false">21</div>
+    <div class="option" data-correct="false">28</div>
+</div>
+
+<!-- Question 48 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 48</h3>
+        <p>Find the LCM of 16, 20, and 24.</p>
+    </div>
+    <div class="option" data-correct="true">240</div>
+    <div class="option" data-correct="false">120</div>
+    <div class="option" data-correct="false">180</div>
+    <div class="option" data-correct="false">200</div>
+</div>
+
+<!-- Question 49 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 49</h3>
+        <p>Find the HCF of 126, 210, and 294.</p>
+    </div>
+    <div class="option" data-correct="true">42</div>
+    <div class="option" data-correct="false">21</div>
+    <div class="option" data-correct="false">14</div>
+    <div class="option" data-correct="false">28</div>
+</div>
+
+<!-- Question 50 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 50</h3>
+        <p>Find the LCM of 25, 30, and 40 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">600</div>
+    <div class="option" data-correct="false">300</div>
+    <div class="option" data-correct="false">200</div>
+    <div class="option" data-correct="false">400</div>
+</div>
+
+<!-- Question 51 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 51</h3>
+        <p>The HCF of 150 and 225 is:</p>
+    </div>
+    <div class="option" data-correct="true">75</div>
+    <div class="option" data-correct="false">25</div>
+    <div class="option" data-correct="false">50</div>
+    <div class="option" data-correct="false">100</div>
+</div>
+
+<!-- Question 52 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 52</h3>
+        <p>Find the LCM of 18, 27, and 45.</p>
+    </div>
+    <div class="option" data-correct="true">270</div>
+    <div class="option" data-correct="false">90</div>
+    <div class="option" data-correct="false">180</div>
+    <div class="option" data-correct="false">225</div>
+</div>
+
+<!-- Question 53 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 53</h3>
+        <p>Find the HCF of 288 and 360 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">72</div>
+    <div class="option" data-correct="false">48</div>
+    <div class="option" data-correct="false">36</div>
+    <div class="option" data-correct="false">18</div>
+</div>
+
+<!-- Question 54 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 54</h3>
+        <p>Find the LCM of 42 and 63 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">126</div>
+    <div class="option" data-correct="false">252</div>
+    <div class="option" data-correct="false">84</div>
+    <div class="option" data-correct="false">189</div>
+</div>
+
+<!-- Question 55 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 55</h3>
+        <p>The HCF of 135 and 225 is:</p>
+    </div>
+    <div class="option" data-correct="true">45</div>
+    <div class="option" data-correct="false">15</div>
+    <div class="option" data-correct="false">25</div>
+    <div class="option" data-correct="false">75</div>
+</div>
+
+<!-- Question 56 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 56</h3>
+        <p>Find the LCM of 72, 90, and 108.</p>
+    </div>
+    <div class="option" data-correct="true">1080</div>
+    <div class="option" data-correct="false">540</div>
+    <div class="option" data-correct="false">720</div>
+    <div class="option" data-correct="false">360</div>
+</div>
+
+<!-- Question 57 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 57</h3>
+        <p>Find the HCF of 160 and 200 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">40</div>
+    <div class="option" data-correct="false">20</div>
+    <div class="option" data-correct="false">80</div>
+    <div class="option" data-correct="false">60</div>
+</div>
+
+<!-- Question 58 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 58</h3>
+        <p>Find the LCM of 50 and 84 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">2100</div>
+    <div class="option" data-correct="false">420</div>
+    <div class="option" data-correct="false">840</div>
+    <div class="option" data-correct="false">1260</div>
+</div>
+
+<!-- Question 59 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 59</h3>
+        <p>Find the HCF of 312 and 468 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">156</div>
+    <div class="option" data-correct="false">104</div>
+    <div class="option" data-correct="false">78</div>
+    <div class="option" data-correct="false">52</div>
+</div>
+
+<!-- Question 60 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 60</h3>
+        <p>Find the LCM of 36, 45, and 60.</p>
+    </div>
+    <div class="option" data-correct="true">180</div>
+    <div class="option" data-correct="false">360</div>
+    <div class="option" data-correct="false">540</div>
+    <div class="option" data-correct="false">720</div>
+</div>
+
+<!-- Question 61 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 61</h3>
+        <p>Find the HCF of 432 and 576 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">144</div>
+    <div class="option" data-correct="false">72</div>
+    <div class="option" data-correct="false">288</div>
+    <div class="option" data-correct="false">96</div>
+</div>
+
+<!-- Question 62 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 62</h3>
+        <p>Find the LCM of 84 and 126 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">252</div>
+    <div class="option" data-correct="false">168</div>
+    <div class="option" data-correct="false">378</div>
+    <div class="option" data-correct="false">504</div>
+</div>
+
+<!-- Question 63 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 63</h3>
+        <p>The HCF of 540 and 720 is:</p>
+    </div>
+    <div class="option" data-correct="true">180</div>
+    <div class="option" data-correct="false">90</div>
+    <div class="option" data-correct="false">120</div>
+    <div class="option" data-correct="false">240</div>
+</div>
+
+<!-- Question 64 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 64</h3>
+        <p>Find the LCM of 32, 36, and 48.</p>
+    </div>
+    <div class="option" data-correct="true">288</div>
+    <div class="option" data-correct="false">144</div>
+    <div class="option" data-correct="false">192</div>
+    <div class="option" data-correct="false">96</div>
+</div>
+
+<!-- Question 65 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 65</h3>
+        <p>Find the HCF of 600 and 900 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">300</div>
+    <div class="option" data-correct="false">150</div>
+    <div class="option" data-correct="false">200</div>
+    <div class="option" data-correct="false">100</div>
+</div>
+
+<!-- Question 66 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 66</h3>
+        <p>Find the LCM of 70, 84, and 90 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">1260</div>
+    <div class="option" data-correct="false">630</div>
+    <div class="option" data-correct="false">1890</div>
+    <div class="option" data-correct="false">2520</div>
+</div>
+
+<!-- Question 67 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 67</h3>
+        <p>Find the HCF of 252 and 378 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">126</div>
+    <div class="option" data-correct="false">63</div>
+    <div class="option" data-correct="false">84</div>
+    <div class="option" data-correct="false">42</div>
+</div>
+
+<!-- Question 68 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 68</h3>
+        <p>Find the LCM of 45, 50, and 60.</p>
+    </div>
+    <div class="option" data-correct="true">900</div>
+    <div class="option" data-correct="false">450</div>
+    <div class="option" data-correct="false">600</div>
+    <div class="option" data-correct="false">750</div>
+</div>
+
+<!-- Question 69 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 69</h3>
+        <p>Find the HCF of 400 and 560 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">80</div>
+    <div class="option" data-correct="false">40</div>
+    <div class="option" data-correct="false">100</div>
+    <div class="option" data-correct="false">60</div>
+</div>
+
+<!-- Question 70 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 70</h3>
+        <p>Find the LCM of 36, 54, and 90 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">540</div>
+    <div class="option" data-correct="false">270</div>
+    <div class="option" data-correct="false">360</div>
+    <div class="option" data-correct="false">720</div>
+</div>
+
+<!-- Question 71 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 71</h3>
+        <p>The HCF of 630 and 945 is:</p>
+    </div>
+    <div class="option" data-correct="true">315</div>
+    <div class="option" data-correct="false">105</div>
+    <div class="option" data-correct="false">210</div>
+    <div class="option" data-correct="false">525</div>
+</div>
+
+<!-- Question 72 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 72</h3>
+        <p>Find the LCM of 56 and 72 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">504</div>
+    <div class="option" data-correct="false">336</div>
+    <div class="option" data-correct="false">252</div>
+    <div class="option" data-correct="false">432</div>
+</div>
+
+<!-- Question 73 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 73</h3>
+        <p>Find the HCF of 750 and 900 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">150</div>
+    <div class="option" data-correct="false">75</div>
+    <div class="option" data-correct="false">300</div>
+    <div class="option" data-correct="false">100</div>
+</div>
+
+<!-- Question 74 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 74</h3>
+        <p>Find the LCM of 42, 60, and 70.</p>
+    </div>
+    <div class="option" data-correct="true">420</div>
+    <div class="option" data-correct="false">210</div>
+    <div class="option" data-correct="false">630</div>
+    <div class="option" data-correct="false">840</div>
+</div>
+
+<!-- Question 75 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 75</h3>
+        <p>The HCF of 924 and 1232 is:</p>
+    </div>
+    <div class="option" data-correct="true">308</div>
+    <div class="option" data-correct="false">154</div>
+    <div class="option" data-correct="false">462</div>
+    <div class="option" data-correct="false">252</div>
+</div>
+
+<!-- Question 76 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 76</h3>
+        <p>Find the LCM of 66, 88, and 110 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">1320</div>
+    <div class="option" data-correct="false">660</div>
+    <div class="option" data-correct="false">1980</div>
+    <div class="option" data-correct="false">990</div>
+</div>
+
+<!-- Question 77 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 77</h3>
+        <p>Find the HCF of 810 and 945 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">135</div>
+    <div class="option" data-correct="false">90</div>
+    <div class="option" data-correct="false">270</div>
+    <div class="option" data-correct="false">180</div>
+</div>
+
+<!-- Question 78 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 78</h3>
+        <p>Find the LCM of 63 and 105 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">315</div>
+    <div class="option" data-correct="false">210</div>
+    <div class="option" data-correct="false">420</div>
+    <div class="option" data-correct="false">525</div>
+</div>
+
+<!-- Question 79 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 79</h3>
+        <p>The HCF of 336 and 504 is:</p>
+    </div>
+    <div class="option" data-correct="true">168</div>
+    <div class="option" data-correct="false">84</div>
+    <div class="option" data-correct="false">112</div>
+    <div class="option" data-correct="false">252</div>
+</div>
+
+<!-- Question 80 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 80</h3>
+        <p>Find the LCM of 25, 35, and 49 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">1225</div>
+    <div class="option" data-correct="false">525</div>
+    <div class="option" data-correct="false">875</div>
+    <div class="option" data-correct="false">1050</div>
+</div>
+
+<!-- Question 81 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 81</h3>
+        <p>Find the HCF of 630, 945, and 1260 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">315</div>
+    <div class="option" data-correct="false">210</div>
+    <div class="option" data-correct="false">105</div>
+    <div class="option" data-correct="false">420</div>
+</div>
+
+<!-- Question 82 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 82</h3>
+        <p>Find the LCM of 54, 72, and 90 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">1620</div>
+    <div class="option" data-correct="false">1080</div>
+    <div class="option" data-correct="false">720</div>
+    <div class="option" data-correct="false">2160</div>
+</div>
+
+<!-- Question 83 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 83</h3>
+        <p>The HCF of 512 and 640 is:</p>
+    </div>
+    <div class="option" data-correct="true">128</div>
+    <div class="option" data-correct="false">64</div>
+    <div class="option" data-correct="false">256</div>
+    <div class="option" data-correct="false">32</div>
+</div>
+
+<!-- Question 84 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 84</h3>
+        <p>Find the LCM of 75, 100, and 125 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">1500</div>
+    <div class="option" data-correct="false">750</div>
+    <div class="option" data-correct="false">1250</div>
+    <div class="option" data-correct="false">1000</div>
+</div>
+
+<!-- Question 85 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 85</h3>
+        <p>Find the HCF of 900 and 1200 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">300</div>
+    <div class="option" data-correct="false">150</div>
+    <div class="option" data-correct="false">200</div>
+    <div class="option" data-correct="false">100</div>
+</div>
+
+<!-- Question 86 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 86</h3>
+        <p>Find the LCM of 40, 60, and 75 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">600</div>
+    <div class="option" data-correct="false">300</div>
+    <div class="option" data-correct="false">450</div>
+    <div class="option" data-correct="false">900</div>
+</div>
+
+<!-- Question 87 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 87</h3>
+        <p>Find the HCF of 420 and 588 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">84</div>
+    <div class="option" data-correct="false">42</div>
+    <div class="option" data-correct="false">126</div>
+    <div class="option" data-correct="false">210</div>
+</div>
+
+<!-- Question 88 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 88</h3>
+        <p>Find the LCM of 120, 150, and 200 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">600</div>
+    <div class="option" data-correct="false">300</div>
+    <div class="option" data-correct="false">450</div>
+    <div class="option" data-correct="false">900</div>
+</div>
+
+<!-- Question 89 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 89</h3>
+        <p>The HCF of 840 and 1260 is:</p>
+    </div>
+    <div class="option" data-correct="true">420</div>
+    <div class="option" data-correct="false">210</div>
+    <div class="option" data-correct="false">280</div>
+    <div class="option" data-correct="false">630</div>
+</div>
+
+<!-- Question 90 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 90</h3>
+        <p>Find the LCM of 48, 72, and 96 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">288</div>
+    <div class="option" data-correct="false">144</div>
+    <div class="option" data-correct="false">192</div>
+    <div class="option" data-correct="false">360</div>
+</div>
+
+<!-- Question 91 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 91</h3>
+        <p>Find the HCF of 360, 540, and 900.</p>
+    </div>
+    <div class="option" data-correct="true">180</div>
+    <div class="option" data-correct="false">90</div>
+    <div class="option" data-correct="false">120</div>
+    <div class="option" data-correct="false">60</div>
+</div>
+
+<!-- Question 92 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 92</h3>
+        <p>Find the LCM of 21, 28, and 42.</p>
+    </div>
+    <div class="option" data-correct="true">252</div>
+    <div class="option" data-correct="false">168</div>
+    <div class="option" data-correct="false">336</div>
+    <div class="option" data-correct="false">294</div>
+</div>
+
+<!-- Question 93 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 93</h3>
+        <p>The HCF of 504 and 756 is:</p>
+    </div>
+    <div class="option" data-correct="true">252</div>
+    <div class="option" data-correct="false">126</div>
+    <div class="option" data-correct="false">84</div>
+    <div class="option" data-correct="false">168</div>
+</div>
+
+<!-- Question 94 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 94</h3>
+        <p>Find the LCM of 64 and 96 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">192</div>
+    <div class="option" data-correct="false">128</div>
+    <div class="option" data-correct="false">256</div>
+    <div class="option" data-correct="false">320</div>
+</div>
+
+<!-- Question 95 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 95</h3>
+        <p>Find the HCF of 128 and 160 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">32</div>
+    <div class="option" data-correct="false">16</div>
+    <div class="option" data-correct="false">64</div>
+    <div class="option" data-correct="false">48</div>
+</div>
+
+<!-- Question 96 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 96</h3>
+        <p>Find the LCM of 33, 44, and 55 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">660</div>
+    <div class="option" data-correct="false">330</div>
+    <div class="option" data-correct="false">495</div>
+    <div class="option" data-correct="false">550</div>
+</div>
+
+<!-- Question 97 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 97</h3>
+        <p>The HCF of 990 and 1210 is:</p>
+    </div>
+    <div class="option" data-correct="true">110</div>
+    <div class="option" data-correct="false">220</div>
+    <div class="option" data-correct="false">55</div>
+    <div class="option" data-correct="false">330</div>
+</div>
+
+<!-- Question 98 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 98</h3>
+        <p>Find the LCM of 36, 84, and 126 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">252</div>
+    <div class="option" data-correct="false">504</div>
+    <div class="option" data-correct="false">378</div>
+    <div class="option" data-correct="false">630</div>
+</div>
+
+<!-- Question 99 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 99</h3>
+        <p>Find the HCF of 432 and 648 using prime factorization.</p>
+    </div>
+    <div class="option" data-correct="true">216</div>
+    <div class="option" data-correct="false">108</div>
+    <div class="option" data-correct="false">144</div>
+    <div class="option" data-correct="false">72</div>
+</div>
+
+<!-- Question 100 -->
+<div class="question" data-solution="">
+    <div class="question-text">
+        <h3>Question 100</h3>
+        <p>Find the LCM of 72, 120, and 180 using prime factors.</p>
+    </div>
+    <div class="option" data-correct="true">360</div>
+    <div class="option" data-correct="false">720</div>
+    <div class="option" data-correct="false">540</div>
+    <div class="option" data-correct="false">900</div>
+</div>
+
                             </div>
                         </section>
                     </article>
@@ -433,26 +1674,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -461,14 +1710,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a><br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../../../privacy-policy">Privacy Policy</a>
+                        <a href="../../../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -478,25 +1728,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-         <script src="../../js/math-challenge-hcf-and-lcm.js"></script>
-        <script src="../../../../js/mathjhs-lesson.js"></script>
-        <script src="../../js/hcf-and-lcm.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../passco/js/bece-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
