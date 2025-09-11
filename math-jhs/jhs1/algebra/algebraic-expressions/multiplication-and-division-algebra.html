@@ -17,7 +17,7 @@
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Algebraic Expressions | JHS Mathematics">
         <meta property="og:description" content="Learn to multiply and divide algebraic expressions with rational coefficients.">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/favicon-32x32.png">
         <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs1/algebra/algebraic-expressions">
         <meta property="og:type" content="website">
     
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../../css/fractions.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -62,15 +66,20 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+        </script>
 
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../../css/math-challenge-fractions.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../css/for-passco.css">
+        <!-- AMP Auto Ads -->
+        <script async custom-element="amp-auto-ads"
+            src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+        </script>
     </head>
     <body>
+        <!-- AMP Auto Ads -->
+        <amp-auto-ads type="adsense"
+            data-ad-client="ca-pub-7096546149694118">
+        </amp-auto-ads>
+
         <!-- Header Navigation -->
         <header class="lesson-header">
             <div class="container">
@@ -136,7 +145,7 @@
                             <a href="#quick-test" class="quick-link">
                                 <i class="fas fa-pen-fancy"></i> Quick Test
                             </a>
-                            <a href="../../../passco" class="quick-link">
+                            <a href="../../../../passco-jhs" class="quick-link">
                                 <i class="fas fa-file-pdf"></i> PASSCO
                             </a>
                         </div>
