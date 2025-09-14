@@ -72,13 +72,18 @@
         </script>
     </head>
     <body>
+        <!-- AMP Auto Ads -->
+        <amp-auto-ads type="adsense"
+            data-ad-client="ca-pub-7096546149694118">
+        </amp-auto-ads>
+
         <!-- Header Navigation -->
         <header class="lesson-header">
             <div class="container">
                 <div class="header-content">
                     <div class="branding">
-                        <a href="../../../../" class="logo-link">
-                            <img src="../../../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                        <a href="../../" class="logo-link">
+                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
                             <div class="brand-name">
                                 <span class="main-name">Let's Learn</span>
                                 <span class="sub-name">Mathematics</span>
@@ -90,10 +95,10 @@
                     
                     <nav class="main-nav">
                         <ul class="nav-list">
-                            <li><a href="../../../../" class="nav-link">Home</a></li>
-                            <li><a href="../../../../about" class="nav-link">About</a></li>
-                            <li><a href="../../../../blog/" class="nav-link">Blog</a></li>
-                            <li><a href="../../../../contactus" class="nav-link">Contact</a></li>
+                            <li><a href="../../" class="nav-link">Home</a></li>
+                            <li><a href="../../about" class="nav-link">About</a></li>
+                            <li><a href="../../blog/" class="nav-link">Blog</a></li>
+                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
                         </ul>
                         
                         <div class="hamburger">
@@ -120,14 +125,14 @@
                             </div>
                             <ul class="topic-menu">
                                 <li><a href="#instructions" class="active"><i class="fas fa-chevron-right"></i> Guide</a></li>
+                                <li><a href="#section-a"><i class="fas fa-chevron-right"></i> Section A</a></li>
                                 <li><a href="#section-b"><i class="fas fa-chevron-right"></i> Section B</a></li>
-                                <li><a href="#section-a-timed"><i class="fas fa-chevron-right"></i> Section A (Timed) </a></li>
                             </ul>
                             
                             <div class="level-buttons">
-                                <a href="../../../../emath" class="level-btn">E-MATH</a>
-                                <a href="../../../../coremath" class="level-btn">C-MATH</a>
-                                <a href="../../../../math-jhs" class="level-btn">JHS</a>
+                                <a href="../../emath" class="level-btn">E-MATH</a>
+                                <a href="../../coremath" class="level-btn">C-MATH</a>
+                                <a href="../../math-jhs" class="level-btn">JHS</a>
                             </div>
                         </div>
                         
@@ -150,26 +155,6 @@
                             <span>BECE_2002a</span>
                         </nav>
 
-                      <!-- Video embed 
-                        <section class="video-embed">
-                            <h2 class="section-title">
-                                <i class="fas fa-video"></i> Video Lesson
-                            </h2>
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen></iframe>
-                            </div>
-                            <div class="video-description">
-                                <p>Watch this comprehensive explanation of Sets theory with worked examples.</p>
-                                <a href="#" class="video-download">
-                                    <i class="fas fa-download"></i> Download Video
-                                </a>
-                            </div>
-                        </section>
-                      -->
-
                         <!-- Definition Section -->
                         <section id="instructions" class="lesson-section">
                             <h2 class="section-title">
@@ -178,21 +163,627 @@
                             
                             <div class="concept-box">
                                 <p>
-                                    Try to solve each question within 15 minutes. Time yourself and see how well you can do.
-                                    After you are done solving the section B, try the timed section A, multiple choice questions at the 
-                                    bottom of the page.
+                                    You have 60 minutes for each section. Try to work on your speed as you prepare
+                                    towards the final exam.
                                 </p>
                                 <p>
                                     Good luck and remember to check your answers with the solutions provided.
                                     If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
                                 </p>
                             </div>
-                            
                         </section>
                         
-                        <!-- Continue with other sections... -->
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Section A - Multiple Choice Questions</h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 40 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
+                                </div>
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <span id="timer-display">60:00</span>
+                                </div>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 40</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example1">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+                                
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example2">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+                                
+                                <!-- Question 3 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example3">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 4 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example4">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 5 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example5">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 6 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example6">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 7 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example7">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 8 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example8">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 9 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example9">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 10 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example10">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 11 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example11">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 12 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example12">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 13 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example13">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 14 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example14">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 15 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example16">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 16 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example15">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 17 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example17">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 18 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example18">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 19 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example19">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 20 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example20">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 21 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example21">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 22 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example22">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 23 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example23">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 24 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example24">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 25 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example25">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 26 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example26">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 27 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example27">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 28 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example28">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 29 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example29">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 30 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example30">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 31 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example31">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 32 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example32">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 33 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example33">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 34 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example34">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 35 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example35">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 36 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example36">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 37 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example37">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 38 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example38">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 39 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example39">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+
+                                <!-- Question 40 -->
+                                <div class="question" data-solution="https://www.youtube.com/embed/example40">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <br><br>
                         
-                        <section id="section-b" class="practice-section">
+                        <section id="section-b" class="lesson-section">
                             <div class="practice-header">
                                 <i class="fas fa-pen-fancy"></i>
                                 <h2>Section B</h2>
@@ -356,117 +947,6 @@
                             </div>
                             
                         </section>
-                        
-                        <br><br>
-
-                        <!-- Test Instructions -->
-                        <section id="instructions" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-book-open"></i> Test Guide
-                            </h2>
-                            
-                            <div class="concept-box">
-                                <p>
-                                    This timed test consists of 40 multiple-choice questions to be completed in 60 minutes.
-                                    Read each question carefully and select the best answer.
-                                </p>
-                                <p>
-                                    After completing the test, your answers will be automatically submitted. You can review
-                                    your performance and see correct answers afterward.
-                                </p>
-                            </div>
-                        </section>    
-
-                        <!-- Timed Test Section -->
-                        <section id="section-a-timed" class="practice-section">
-                            <div class="practice-header">
-                                <i class="fas fa-clock"></i>
-                                <h2>Section A (Timed - 60 minutes)</h2>
-                            </div>
-                            
-                            <div class="test-instructions">
-                                <p>You have 60 minutes to complete this test. The timer will start when you begin.</p>
-                                <div class="timer-container">
-                                    <span id="timer-display">60:00</span>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill"></div>
-                                    </div>
-                                </div>
-                                <div id="test-warning" class="test-warning">
-                                    <i class="fas fa-exclamation-triangle"></i> Timer is running! Don't navigate away.
-                                </div>
-                            </div>
-                            
-                            <!-- Google Form Container -->
-                            <div id="google-form-container" style="display: none;">
-                                <iframe id="google-form-iframe" src="" frameborder="0" style="width: 100%; height: 1500px;"></iframe>
-                            </div>
-                            
-                            <div class="test-controls">
-                                <button id="start-timed-test" class="control-btn">Start Test</button>
-                                <div id="form-submit-message" style="display: none; margin-top: 1rem;">
-                                    <p>When finished, make sure to click the submit button in the Google Form above.</p>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- Results Section (Initially Hidden) -->
-                        <section id="test-results" class="lesson-section" style="display: none;">
-                            <h2 class="section-title">
-                                <i class="fas fa-chart-bar"></i> Test Results
-                            </h2>
-                            <div class="results-container">
-                                <div class="score-card">
-                                    <h3>Your Score</h3>
-                                    <div class="score-display">
-                                        <span id="score-value">0</span>/40
-                                    </div>
-                                    <div class="score-percentage" id="score-percentage">0%</div>
-                                </div>
-                                
-                                <div class="results-details">
-                                    <h3>Performance Breakdown</h3>
-                                    <div class="results-grid">
-                                        <div class="result-category correct">
-                                            <span class="result-count" id="correct-count">0</span>
-                                            <span class="result-label">Correct</span>
-                                        </div>
-                                        <div class="result-category incorrect">
-                                            <span class="result-count" id="incorrect-count">0</span>
-                                            <span class="result-label">Incorrect</span>
-                                        </div>
-                                        <div class="result-category unanswered">
-                                            <span class="result-count" id="unanswered-count">0</span>
-                                            <span class="result-label">Unanswered</span>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="time-summary">
-                                        <p>Time taken: <span id="time-taken">00:00</span></p>
-                                        <p>Time per question: <span id="time-per-question">0s</span></p>
-                                    </div>
-                                </div>
-                                
-                                <div class="answers-review">
-                                    <h3>Review Answers</h3>
-                                    <div id="answers-list">
-                                        <!-- Answers will be populated here -->
-                                    </div>
-                                </div>
-                                
-                                <div class="results-actions">
-                                    <button id="retake-test" class="control-btn">
-                                        <i class="fas fa-redo"></i> Retake Test
-                                    </button>
-                                    <button id="view-solutions" class="control-btn">
-                                        <i class="fas fa-book-open"></i> View Solutions
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-                        
-                        <br><br>
-                        
                     </article>
                 </div>
             </div>
