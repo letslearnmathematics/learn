@@ -5,8 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO and Social Meta Tags -->
-        <title>Meaning of Environment | JHS Social Studies | The Let's Learn Project</title>
-        <meta name="description" content="Comprehensive lesson on the environment and environmental issues in Social Studies for JHS students.">
+        <title>Algebraic Thinking | B.Ed (Mathematics) Switch | The Let's Learn Project</title>
+        <meta name="description" content="B.Ed (Mathematics) lesson on Algebraic Thinking: patterns, 
+            expressions, variables, equations, symbolic representation, and reasoning strategies to develop 
+            algebraic understanding and problem-solving." 
+        >
         
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
@@ -15,10 +18,12 @@
         <link rel="manifest" href="../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Meaning of Environment | JHS Social Studies">
-        <meta property="og:description" content="Comprehensive lesson on the environment and environmental issues in Social Studies for JHS students">
+        <meta property="og:title" content="Algebraic Thinking | The Let's Learn Project">
+        <meta property="og:description" content="B.Ed (Mathematics) lesson on Algebraic Thinking: patterns, expressions, 
+            variables, equations, symbolic representation, and reasoning strategies." 
+        >
         <meta property="og:image" content="https://theletslearnproject.com/images/favicon-32x32.png">
-        <meta property="og:url" content="https://theletslearnproject.com/math-jhs/jhs2/number/laws-of-indices">
+        <meta property="og:url" content="https://theletslearnproject.com/ucc/b-ed-math-switch/algebraic-thinking">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -28,10 +33,23 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../css/mathjhs-lesson.css">
         <link rel="stylesheet" href="../css/meaning-of-environment.css">
+        <link rel="stylesheet" href="../css/tests-general.css">
+        <link rel="stylesheet" href="../css/bece2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
                     inlineMath: [['$', '$'], ['\\(', '\\)']],
                     displayMath: [['$$', '$$'], ['\\[', '\\]']],
@@ -52,13 +70,9 @@
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118" crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../css/math-challenge-meaning-of-environment.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../../math-jhs/jhs1/css/for-passco.css">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <!-- Header Navigation -->
@@ -66,30 +80,30 @@
             <div class="container">
                 <div class="header-content">
                     <div class="branding">
-                        <a href="../../" class="logo-link">
-                            <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
-                            <div class="brand-name">
-                                <span class="main-name">Let's Learn</span>
-                                <span class="sub-name">Social</span>
-                            </div>
-                        </a>
+                    <a href="../../" class="logo-link">
+                        <img src="../../images/android-chrome-192x192.png" alt="Let's Learn Logo" class="logo">
+                        <div class="brand-name">
+                        <span class="main-name">Let's Learn</span>
+                        <span class="sub-name">Algebraic Thinking</span>
+                        </div>
+                    </a>
                     </div>
                     
-                    <h1 class="lesson-title">Meaning of Environment</h1>
+                    <h1 class="lesson-title">Algebraic Thinking</h1>
                     
                     <nav class="main-nav">
-                        <ul class="nav-list">
-                            <li><a href="../../../../" class="nav-link">Home</a></li>
-                            <li><a href="../../about" class="nav-link">About</a></li>
-                            <li><a href="../../blog/" class="nav-link">Blog</a></li>
-                            <li><a href="../../contactus" class="nav-link">Contact</a></li>
-                        </ul>
-                        
-                        <div class="hamburger">
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                        </div>
+                    <ul class="nav-list">
+                        <li><a href="../../" class="nav-link">Home</a></li>
+                        <li><a href="../../about" class="nav-link">About</a></li>
+                        <li><a href="../../blog/" class="nav-link">Blog</a></li>
+                        <li><a href="../../contactus" class="nav-link">Contact</a></li>
+                    </ul>
+                    
+                    <div class="hamburger">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </div>
                     </nav>
                 </div>
             </div>
@@ -102,16 +116,23 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">Environment</h3>
+                            <h3 class="sidebar-title">Algebraic Thinking</h3>
                             <div class="current-topic">
                                 <i class="fas fa-project-diagram"></i>
-                                <span>Meaning & Scope</span>
+                                <span>Content</span>
                             </div>
                             <ul class="topic-menu">
-                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Introduction</a></li>
-                                <li><a href="#physical-environment" ><i class="fas fa-chevron-right"></i> Physical Environment</a></li>
-                                <li><a href="#social-environment" ><i class="fas fa-chevron-right"></i>Social Environment </a></li>
-                                <li><a href="#conclusion" ><i class="fas fa-chevron-right"></i>Conclusion </a></li>
+                                <li><a href="#outline" class="active"><i class="fas fa-chevron-right"></i> Course Outline </a></li>
+                                <li><a href="#lecture" ><i class="fas fa-chevron-right"></i> Lectures</a></li>
+                                
+                                <!--
+                                <li><a href="#multiplication-law"><i class="fas fa-chevron-right"></i> Multiplication Law</a></li>
+                                <li><a href="#division-law"><i class="fas fa-chevron-right"></i> Division Law</a></li>
+                                <li><a href="#power-law"><i class="fas fa-chevron-right"></i> Power Law</a></li>
+                                <li><a href="#zero-law"><i class="fas fa-chevron-right"></i> Zero Index Law</a></li>
+                                <li><a href="#negative-law"><i class="fas fa-chevron-right"></i> Negative Index Law</a></li>
+                                <li><a href="#fractional-law"><i class="fas fa-chevron-right"></i> Fractional Index Law</a></li>
+                                -->
                             </ul>
                             
                             <!--
@@ -125,10 +146,11 @@
                         
                         <div class="quick-links">
                             <h4>Quick Links</h4>
-                            <!--
+                            
                             <a href="#quick-test" class="quick-link">
                                 <i class="fas fa-pen-fancy"></i> Quick Test
                             </a>
+                            <!--
                             <a href="../../../../passco-jhs" class="quick-link">
                                 <i class="fas fa-file-pdf"></i> PASSCO
                             </a>
@@ -142,213 +164,624 @@
                         <nav class="breadcrumb">
                             <a href="../../">Home</a>
                             <i class="fas fa-chevron-right"></i>
-                            <a href="../../social-studies/">Social Studies</a>
+                            <a href="../../ucc/">UCC </a>
                             <i class="fas fa-chevron-right"></i>
-                            <span>Environment & Issues</span>
-                            <i class="fas fa-chevron-right"></i>
-                            <span>The Environment</span>
+                            <span>Algebraic Thinking</span>
                         </nav>
 
                         <!-- Definition Section -->
-                        <section id="definition" class="lesson-section">
+                        <section id="outline" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-book-open"></i> Environment
+                                <i class="fas fa-book-open"></i> Course Outline
                             </h2>
 
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <p>
-                                    This can be defined as man and his immediate surrounding which includes both physical and 
-                                    social activities. This is to say, variables that constitute environment can be in the
-                                    form of physical (tangible) or intangible (can't be seen). 
-                                </p>
-                                <p>
-                                    On the other hand, environment 
-                                    can be defined as things that surround us. Example land, water bodies, air, roads, vehicles, 
-                                    custom and tradition etc.
+                                    The <strong>Developing Algebraic Thinking (EMA 111D)</strong> 
+                                    course is designed to expose students to the various elements of algebraic thinking necessary 
+                                    for prospective teachers to promote meaningful teaching and learning of algebra in schools. 
+                                    The course focuses on three main components of algebraic thinking: generalization, equality, and unknown quantities.
                                 </p>
 
-                                <br>
-
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-edit"></i> TYPES OF ENVIRONMENT
-                                </h3>
                                 <p>
-                                    There are two types of environment. These are:
+                                    The major topics covered in this course include:
                                 </p>
-                                <ol>
-                                    <li><strong>Physical environment</strong>, and</li>
-                                    <li><strong>Social environment</strong></li>
-                                </ol>
+
+                                <p><i class="fas fa-edit"></i> Components of Algebraic Thinking</p>
+                                <p><i class="fas fa-edit"></i> Algebra of Sets</p>
+                                <p><i class="fas fa-edit"></i> Relations, Functions and Mapping</p>
+                                <p><i class="fas fa-edit"></i> Properties of Integers</p>
+                                <p><i class="fas fa-edit"></i> Linear and Exponential Series</p>
+                                <p><i class="fas fa-edit"></i> Convergence and Divergence of Series</p>
+                                <p><i class="fas fa-edit"></i> Partial Fractions</p>
+                                <p><i class="fas fa-edit"></i> Mathematical Induction</p>
+                                <p><i class="fas fa-edit"></i> Linear Inequalities</p>
+
+                                <p>
+                                    By studying this course, you will learn to understand generalization in algebraic functions, 
+                                    the purpose and use of unknowns in algebraic expressions and equations, and how to use algebraic thinking 
+                                    to analyze the conceptual structures of selected topics in algebra. You will also learn effective teaching strategies 
+                                    for each algebraic topic covered in the course.
+                                </p>
+
+                                <p>
+                                    The course uses a variety of teaching methods including discussions, small group work, role play, 
+                                    and effective questioning to accommodate different learning styles. Assessment includes quizzes, 
+                                    assignments, presentations, and an end-of-semester examination.
+                                </p>
                             </div>
                             
-                            
-                            <!-- Lesson Video embed 
+                        </section>
+                        
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <section id="lecture" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-globe"></i> Lectures
+                            </h2>
+
+                            <!-- Lesson Video embed -->
                             <div class="video-embed">
                                 <h4>
-                                    <i class="fas fa-video"></i> Video Lesson
+                                    <i class="fas fa-video"></i> Online Lecture 3
                                 </h4>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on the lesson.</p>
+                                </div>
                                 <div class="video-container">
                                     <iframe 
-                                        src="https://www.youtube.com/embed/6YzeRmEr3IU" 
+                                        src="https://www.youtube.com/embed/X7spoDFva88?" 
                                         title="YouTube video player" 
                                         frameborder="0" 
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                         allowfullscreen>
                                     </iframe>
                                 </div>
+                                <!--
+                                <div class="video-description">
+                                    <p>Don't forget to <strong>subscribe</strong> to our channel</p>
+                                </div>
+                                -->
+                            </div>
+
+                            <br>
+
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Online Lecture 2
+                                </h4>
                                 <div class="video-description">
                                     <p>Watch this comprehensive explanation on the lesson.</p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/iCYX58ykRzk?" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <!--
+                                <div class="video-description">
+                                    <p>Don't forget to <strong>subscribe</strong> to our channel</p>
+                                </div>
+                                -->
+                            </div>
+
+                            <br>
+
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Online Lecture 2
+                                </h4>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on the lesson.</p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/htjbsyTiNVA?" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <!--
+                                <div class="video-description">
+                                    <p>Don't forget to <strong>subscribe</strong> to our channel</p>
+                                </div>
+                                -->
+                            </div>
+
+                            <br>
+
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Online Lecture 1
+                                </h4>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on the lesson.</p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/CjPzQuzjp2Q?" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <!--
+                                <div class="video-description">
+                                    <p>Don't forget to <strong>subscribe</strong> to our channel</p>
+                                </div>
+                                -->
+                            </div>
+                        </section>
+
+                        <section id="water-pollution" class="lesson-section">
+                            <!--
+                            <h2 class="section-title">
+                                <i class="fas fa-globe"></i> Water Pollution
+                            </h2>
+
+                             Components 
+                            <div class="concept-box highlight-box">
+                                <p>
+                                    <i class="fas fa-edit"></i> This is the release of a harmful substances such as DDT, oil etc. into water bodies. These substances, since they are
+                                    poisonous in nature, kills the aquatic life in that particular water source as well as any living organism that may come into
+                                    contact with such water body.
+                                </p>        
+                            </div>
+                            -->
+                            
+                            
+                            <!-- Relations 
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Causes
+                                </h3>
+                                <p>
+                                    Below are some of the causes of Water Pollution:
+                                </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4></h4>
+                                        <p><i class="fas fa-check"></i> Oil spillage</p>
+                                        <p><i class="fas fa-check"></i> Farming near water bodies</p>
+                                        <p><i class="fas fa-check"></i> Application of dangerous chemicals such as DDT for fishing</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4></h4>
+                                        <p><i class="fas fa-check"></i> Swimming, bathing and washing in water bodies</p>
+                                        <p><i class="fas fa-check"></i> Defecation in water bodies</p>
+                                        <p><i class="fas fa-check"></i> Indiscriminate disposal of solid waste</p>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+
+                            <!-- Relations 
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Effects of Water Pollution
+                                </h3>
+                                <p>
+                                    Below are some of the effects of water pollution:
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4></h4>
+                                        <p><i class="fas fa-check"></i> Destruction of aquatic life</p>
+                                        <p><i class="fas fa-check"></i> Outbreak of water-borne diseases</p>
+                                        <p><i class="fas fa-check"></i> Unpleasant odour</p>
+                                        <p><i class="fas fa-check"></i> Low agricultural produce</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4></h4>
+                                        <p><i class="fas fa-check"></i> Drying of water bodies</p>
+                                        <p><i class="fas fa-check"></i> High cost of water treatment</p>
+                                        <p><i class="fas fa-check"></i> Adverse effect on fishing and transportation</p>
+                                    </div>
                                 </div>
                             </div>
                             -->
                         </section>
 
-                        <section id="physical-environment" class="lesson-section">
+                        <section id="air-pollution" class="lesson-section">
+                            <!--
                             <h2 class="section-title">
-                                <i class="fas fa-globe"></i> Physical Environment
+                                <i class="fas fa-globe"></i> Air Pollution
                             </h2>
 
-                            <!-- Components -->
+                             Components 
                             <div class="concept-box highlight-box">
                                 <p>
-                                    <i class="fas fa-edit"></i> This refers to both natural and man-made aspect of the environment that can be seen,
-                                    felt and touched. They are also known as the tangible aspects of the environment. Examples include
+                                    <i class="fas fa-edit"></i> This refers to the release of poisonous gases and other harmful 
+                                    substances into the atmosphere that mix up with the air we
+                                    breathe, making it impure/unhealthy for human and other living organisms. 
                                 </p>        
-                            </div>
-                            
-                            
-                            <!-- Relations -->
-                            <div class="concept-box">
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>
-                                            <i class="fas fa-hashtag"></i> NATURAL ASPECTS
-                                        </h4>
-                                        <ul>
-                                            <li>Hemisphere (atmosphere/air)</li>
-                                            <li>Relief features ( Highlands and lowlands)</li>
-                                            <li>Vegetation (Forest and grassland)</li>
-                                            <li>Land</li>
-                                            <li>Climate</li>
-                                        </ul>
-                                    </div>
-                                    <div class="point">
-                                        <h4>
-                                            <i class="fas fa-hashtag"></i> ARTIFICIAL ASPECTS
-                                        </h4>
-                                        <ul>
-                                            <li>Railway line</li>
-                                            <li>House (building)</li>
-                                            <li>Electric poles</li>
-                                            <li>Drainage system</li>
-                                            <li>Market</li>
-                                            <li>School</li>
-                                            <li>Recreational centers</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <section id="social-environment" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-globe"></i> Social Environment
-                            </h2>
-
-                            <!-- Components -->
-                            <div class="concept-box highlight-box">
                                 <p>
-                                    <i class="fas fa-edit"></i> This is the interaction that exists between the individuals in a given community which includes;
-                                </p>  
-                                <ol>
-                                    <li>Customs and traditions</li>
-                                    <li>Marriage rites</li>
-                                    <li>Puberty rites</li>
-                                    <li>Outdoor / naming ceremony</li>
-                                    <li>Funeral rites</li>
-                                    <li>Beliefs</li>
-                                    <li>Festivals, etc.</li>
-                                </ol>      
-                            </div>
-                        </section>
-
-                        <section id="conclusion" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-globe"></i> Conclusion
-                            </h2>
-
-                            <!-- Components -->
-                            <div class="concept-box highlight-box">
-                                <p>
-                                    <i class="fas fa-edit"></i> All these aspects inter-depend on each other. That is to say that both 
-                                    the <strong>physical</strong> and social environment inter-relate with each other.
-                                </p>     
-                                <p>
-                                    
-                                </p>
-                                <p>
-                                    
+                                    This is mostly caused by some human activities
+                                    such as farming, fumes from vehicle exhaust pipes and other heavy industrial machines
                                 </p>
                             </div>
+                            -->
                             
                             
-                            <!-- Relations -->
+                            <!-- Relations 
                             <div class="concept-box">
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4></h4>
-                                        <p>
-                                            For instance, bamboo which is part of the <strong>physical environment</strong> is used to manufacture flute which 
-                                            produces music <strong>(social environment)</strong>
-                                        </p>
-                                    </div>
-                                    <div class="point">
-                                        <h4></h4>
-                                        <p>
-                                            Musical instruments such as drums which is made of trees and animal skin <strong>(physical environment)</strong> also produce 
-                                            music which is <strong>social environment</strong>.
-                                        </p>
-                                    </div>
-                                </div>
-
                                 <h3 class="subsection-title">
-                                    <i class="fas fa-hashtag"></i> Remember
+                                    <i class="fas fa-hashtag"></i> Causes
                                 </h3>
                                 <p>
-                                    Any activity that man does in connection with the things around him affects his surroundings in one way or the other.
+                                    Below are some of the causes of Air Pollution:
                                 </p>
+                                
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4></h4>
+                                        <p><i class="fas fa-check"></i> Burning of fossil fuel</p>
+                                        <p><i class="fas fa-check"></i> Agricultural activities</p>
+                                        <p><i class="fas fa-check"></i> Fumes from vehicle exhaust pipes and other heavy industrial</p>
+                                        <p><i class="fas fa-check"></i> Illegal mining activities</p>
+                                    </div>
+                                    <div class="point">
+                                        <h4></h4>
+                                        <p><i class="fas fa-check"></i> Domestic fuel wood fires</p>
+                                        <p><i class="fas fa-check"></i> Bush fire</p>
+                                        <p><i class="fas fa-check"></i> Unpleasant odour</p>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+
+                            <!-- Relations 
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Effects of Air Pollution
+                                </h3>
+                                <p>
+                                    Below are some of the ways we can prevent water pollution:
+                                </p>
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4></h4>
+                                        <p><i class="fas fa-check"></i> Health problems</p>
+                                        <p><i class="fas fa-check"></i> Acid rain</p>
+                                        <p><i class="fas fa-check"></i> Global warming</p>
+                                        <p><i class="fas fa-check"></i> Destruction of ozone layer</p>
+                                    </div>
+                                </div>
+                            </div>
+                            -->
+
+                            <!-- Relations 
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-hashtag"></i> Ways to Prevent Air Pollution
+                                </h3>
+                                <p>
+                                    Below are some of the ways we can prevent air pollution:
+                                </p>
+                                <p><i class="fas fa-check"></i> The use of public mode transport</p>
+                                <p><i class="fas fa-check"></i> Energy conservation</p>
+                                <p><i class="fas fa-check"></i> Ban on the importation of old and averaged vehicles</p>
+                                <p><i class="fas fa-check"></i> The use of LPG instead of firewood</p>
+                                <p><i class="fas fa-check"></i> Control the establishment of factories</p>
+                                <p><i class="fas fa-check"></i> Public education</p>
+                                
+                            </div>
+                            -->
+                        </section>
+
+                        <br><br>
+                        <hr>
+                        <br><br>
+
+                        <!-- Test Instructions -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-book-open"></i> Quick Test
+                            </h2>
+                        </section>
+                        
+                        <!-- Section A -->
+                        <section id="section-a" class="lesson-section">
+                            <!--
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Section A - Multiple Choice Questions</h2>
+                            -->
+                            <div class="test-container">
+                                <!---->
+                                <div class="test-instructions">
+                                    <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
+                                </div>
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <span id="timer-display">60:00</span>
+                                </div>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 1</h3>
+    <p>According to the unit, which of the following is the most accurate description of algebra?</p>
+  </div>
+  <div class="option" data-correct="false">The intensive study of the last three letters of the alphabet (x, y, and z).</div>
+  <div class="option" data-correct="true">The study of patterns and relationships.</div>
+  <div class="option" data-correct="false">A branch of mathematics limited to solving for unknown variables.</div>
+  <div class="option" data-correct="false">The application of complex arithmetic rules.</div>
+</div>
+
+<!-- Question 2 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 2</h3>
+    <p>What is the key factor that distinguishes algebraic thinking from arithmetic thinking?</p>
+  </div>
+  <div class="option" data-correct="false">The complexity of the numbers involved.</div>
+  <div class="option" data-correct="false">The presence of the letters x, y, and z.</div>
+  <div class="option" data-correct="true">It is how you solve a problem, not the problem itself.</div>
+  <div class="option" data-correct="false">Arithmetic is for children, while algebra is for adults.</div>
+</div>
+
+<!-- Question 3 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 3</h3>
+    <p>Which definition describes algebraic thinking as "the use of any of a variety of representations that handle quantitative situations in a relational way"?</p>
+  </div>
+  <div class="option" data-correct="false">Van de Walle (2004)</div>
+  <div class="option" data-correct="false">Kaput, NCTM (1993)</div>
+  <div class="option" data-correct="true">A general definition provided in the unit.</div>
+  <div class="option" data-correct="false">Steele & Johanning (2004)</div>
+</div>
+
+<!-- Question 4 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 4</h3>
+    <p>Van de Walle (2004) defines algebraic thinking as thinking that involves:</p>
+  </div>
+  <div class="option" data-correct="false">Solving equations and inequalities efficiently.</div>
+  <div class="option" data-correct="true">Representing, generalizing, and formalizing patterns and regularity in all aspects of mathematics.</div>
+  <div class="option" data-correct="false">Memorizing and applying algebraic formulas.</div>
+  <div class="option" data-correct="false">Converting word problems into mathematical symbols.</div>
+</div>
+
+<!-- Question 5 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 5</h3>
+    <p>From the various definitions, a core conclusion is that algebraic thinking is the ability to:</p>
+  </div>
+  <div class="option" data-correct="false">Perform calculations faster than a calculator.</div>
+  <div class="option" data-correct="true">Operate on an unknown quantity as if the quantity was known.</div>
+  <div class="option" data-correct="false">Understand geometric proofs and theorems.</div>
+  <div class="option" data-correct="false">Manipulate fractions and decimals with ease.</div>
+</div>
+
+<!-- Question 6 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 6</h3>
+    <p>According to the unit, what are the three main ingredients of algebraic thinking in algebra?</p>
+  </div>
+  <div class="option" data-correct="false">Numbers, operations, and equations.</div>
+  <div class="option" data-correct="false">Patterns, variables, and functions.</div>
+  <div class="option" data-correct="true">Objects of algebra, thinking disposition, and high-order tasks.</div>
+  <div class="option" data-correct="false">Addition, subtraction, and multiplication.</div>
+</div>
+
+<!-- Question 7 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 7</h3>
+    <p>Which of the following is an example of a "Category 1" object of algebra?</p>
+  </div>
+  <div class="option" data-correct="true">Variables and graphs, which represent changing quantities and relationships.</div>
+  <div class="option" data-correct="false">Solving linear equations, which involves working with unknown quantities.</div>
+  <div class="option" data-correct="false">Investigating exponential growth, which is a relationship between changing quantities.</div>
+  <div class="option" data-correct="false">The commutative property of addition.</div>
+</div>
+
+<!-- Question 8 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 8</h3>
+    <p>The "thinking disposition" for algebraic thinking involves processes like:</p>
+  </div>
+  <div class="option" data-correct="false">Memorizing multiplication tables.</div>
+  <div class="option" data-correct="false">Following a set algorithm without deviation.</div>
+  <div class="option" data-correct="true">Purposeful representation of quantities and generalization of patterns.</div>
+  <div class="option" data-correct="false">Avoiding the use of calculators.</div>
+</div>
+
+<!-- Question 9 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 9</h3>
+    <p>What are "high-order tasks" in the context of algebraic thinking?</p>
+  </div>
+  <div class="option" data-correct="false">Tasks that involve very large numbers.</div>
+  <div class="option" data-correct="false">Tasks assigned to the smartest students in the class.</div>
+  <div class="option" data-correct="true">Problem solving, mathematical investigations, and modeling.</div>
+  <div class="option" data-correct="false">Basic arithmetic drills.</div>
+</div>
+
+<!-- Question 10 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 10</h3>
+    <p>In the context of this unit, "Mathematical Habits of Mind" refer to:</p>
+  </div>
+  <div class="option" data-correct="false">The times of day when students are best at math.</div>
+  <div class="option" data-correct="true">An individual's disposition toward behaving intelligently when confronted with problems without immediate answers.</div>
+  <div class="option" data-correct="false">A list of rules for classroom behavior during math lessons.</div>
+  <div class="option" data-correct="false">The specific content covered in a mathematics curriculum.</div>
+</div>
+
+<!-- Question 11 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 11</h3>
+    <p>Which of the following is NOT listed as a key mathematical habit of mind?</p>
+  </div>
+  <div class="option" data-correct="false">Searching for Patterns</div>
+  <div class="option" data-correct="false">Reasoning</div>
+  <div class="option" data-correct="true">Memorizing Formulas</div>
+  <div class="option" data-correct="false">Making Connections</div>
+</div>
+
+<!-- Question 12 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 12</h3>
+    <p>The "Doing-Undoing" habit of mind is best described as:</p>
+  </div>
+  <div class="option" data-correct="false">Always checking your work after it's done.</div>
+  <div class="option" data-correct="true">The ability to reverse mathematical processes as well as do them.</div>
+  <div class="option" data-correct="false">Erasing mistakes completely.</div>
+  <div class="option" data-correct="false">Starting a problem over from the beginning if you get stuck.</div>
+</div>
+
+<!-- Question 13 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 13</h3>
+    <p>If a student can solve the equation \( 2x^2 - 8 = 0 \) and is then asked, "Write an equation that has solutions -2 and 2," they are engaging in which algebraic habit of mind?</p>
+  </div>
+  <div class="option" data-correct="true">Doing-Undoing</div>
+  <div class="option" data-correct="false">Abstracting from Computation</div>
+  <div class="option" data-correct="false">Building Rules to Represent Functions</div>
+  <div class="option" data-correct="false">Searching for Patterns</div>
+</div>
+
+<!-- Question 14 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 14</h3>
+    <p>The habit of "Abstracting from Computation" involves:</p>
+  </div>
+  <div class="option" data-correct="false">Using a calculator for all computations.</div>
+  <div class="option" data-correct="false">Writing out every single step of a calculation.</div>
+  <div class="option" data-correct="true">Thinking about computations independently of the particular numbers used.</div>
+  <div class="option" data-correct="false">Avoiding computation altogether.</div>
+</div>
+
+<!-- Question 15 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 15</h3>
+    <p>Using Gauss's approach to find the sum \( 1 + 2 + 3 + \ldots + 100 \) by pairing numbers is an example of:</p>
+  </div>
+  <div class="option" data-correct="false">Building rules to represent functions.</div>
+  <div class="option" data-correct="true">Abstracting from computation.</div>
+  <div class="option" data-correct="false">Doing-Undoing.</div>
+  <div class="option" data-correct="false">Searching for patterns.</div>
+</div>
+
+<!-- Question 16 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 16</h3>
+    <p>According to the unit, what is a crucial role of the teacher in developing students' algebraic habits of mind?</p>
+  </div>
+  <div class="option" data-correct="false">Providing the answers to all problems quickly.</div>
+  <div class="option" data-correct="false">Ensuring students only use one method to solve a problem.</div>
+  <div class="option" data-correct="true">Asking a variety of relevant questions to help students organize their thinking.</div>
+  <div class="option" data-correct="false">Giving tests frequently.</div>
+</div>
+
+<!-- Question 17 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 17</h3>
+    <p>Which of the following is an example of a "what if" question a teacher might ask to extend student thinking?</p>
+  </div>
+  <div class="option" data-correct="false">"What is the answer to problem 5?"</div>
+  <div class="option" data-correct="true">"What if we changed the numbers in this pattern?"</div>
+  <div class="option" data-correct="false">"What page is the homework on?"</div>
+  <div class="option" data-correct="false">"What is the definition of a variable?"</div>
+</div>
+
+<!-- Question 18 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 18</h3>
+    <p>The closure property for integers holds for which of the following operations?</p>
+  </div>
+  <div class="option" data-correct="false">Division</div>
+  <div class="option" data-correct="true">Multiplication</div>
+  <div class="option" data-correct="false">Subtraction, but only with positive results</div>
+  <div class="option" data-correct="false">None of the above</div>
+</div>
+
+<!-- Question 19 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 19</h3>
+    <p>If \( a \) and \( b \) are integers, the commutative property guarantees that:</p>
+  </div>
+  <div class="option" data-correct="false">\( a - b = b - a \)</div>
+  <div class="option" data-correct="true">\( a + b = b + a \)</div>
+  <div class="option" data-correct="false">\( a \div b = b \div a \)</div>
+  <div class="option" data-correct="false">\( (a + b) + c = a + (b + c) \)</div>
+</div>
+
+<!-- Question 20 -->
+<div class="question" data-solution="">
+  <div class="question-text">
+    <h3>Question 20</h3>
+    <p>The associative property of integers applies to:</p>
+  </div>
+  <div class="option" data-correct="false">Subtraction and Division</div>
+  <div class="option" data-correct="false">The distributive property of multiplication over addition</div>
+  <div class="option" data-correct="true">Addition and Multiplication</div>
+  <div class="option" data-correct="false">Finding the identity element</div>
+</div>
+
+
                             </div>
                         </section>
 
-                        <br>
-
-                        <!-- HTML Section (same as before) -->
-                        <!-- Speed Test Game 
-                        <section id="quick-test" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Quick Test
-                            </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
-                                </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        
-                                    </div>
-                                </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
-                                </div>
-                            </div>
-                        </section>-->
                     </article>
                 </div>
             </div>
@@ -401,7 +834,7 @@
                     </div>
 
                     <div class="site-policies">
-                        <a href="../../privacy-policy">Privacy Policy</a><br>
+                        <a href="../../privacy-policy">Privacy Policy</a>
                         <a href="../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
@@ -412,24 +845,36 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <script src="../js/math-challenge-meaning-of-environment.js"></script>
-        <script src="../../js/mathjhs-lesson.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../js/lessons-test-configuration.js"></script>
+        <script src="../js/bece-tests-general.js"></script>
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
