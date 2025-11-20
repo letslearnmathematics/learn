@@ -6,19 +6,19 @@
         
         <!-- SEO and Social Meta Tags -->
         <title>Polynomial Functions | Elective Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Comprehensive lesson on Polynomial Functions for SHS1 Elective Mathematics. Learn definitions, operations, graphing and theorems.">
+        <meta name="description" content="Comprehensive lesson on Polynomial Functions for SHS1 Elective Mathematics.">
         
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
-        <link rel="manifest" href="../../../../site.webmanifest">
+        <link rel="manifest" href="../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Polynomial Functions | Elective Mathematics">
-        <meta property="og:description" content="Master Polynomial Functions with interactive lessons and practice problems for SHS students">
-        <meta property="og:image" content="https://theletslearnproject.com/images/polynomials-social-preview.png">
-        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/polynomials">
+        <meta property="og:description" content="Master Polynomial Functions with our detailed SHS1 Elective Mathematics lesson.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/polynomial-functions-preview.png">
+        <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/polynomial-functions">
         <meta property="og:type" content="website">
     
         <!-- Fonts and Icons -->
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../css/emath-lesson.css">
         <link rel="stylesheet" href="../shs1/css/sets.css">
+        <link rel="stylesheet" href="../passco-emath/css/emath-tests-general.css">
+        <link rel="stylesheet" href="../passco-emath/css/emath2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -62,94 +66,8 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
-            crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../shs1/css/math-challenge-sets.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
-
-        <!-- New CSS for Polynomial Graphs -->
-        <style>
-            .graph-container {
-                width: 100%;
-                max-width: 500px;
-                margin: 20px auto;
-                background: white;
-                padding: 15px;
-                border-radius: 8px;
-                box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            }
-            
-            .graph {
-                width: 100%;
-                height: 300px;
-                background-color: #f9f9f9;
-                position: relative;
-                border: 1px solid #ddd;
-                margin-bottom: 15px;
-            }
-            
-            .graph-axis {
-                position: absolute;
-                background: #333;
-            }
-            
-            .x-axis {
-                width: 100%;
-                height: 2px;
-                bottom: 50%;
-                left: 0;
-            }
-            
-            .y-axis {
-                width: 2px;
-                height: 100%;
-                left: 50%;
-                top: 0;
-            }
-            
-            .graph-line {
-                position: absolute;
-                background: #e74c3c;
-                width: 100%;
-                height: 2px;
-                bottom: 50%;
-                transform-origin: left center;
-            }
-            
-            .graph-point {
-                position: absolute;
-                width: 8px;
-                height: 8px;
-                background: #3498db;
-                border-radius: 50%;
-                transform: translate(-50%, 50%);
-            }
-            
-            .graph-labels {
-                display: flex;
-                justify-content: space-between;
-                padding: 0 10px;
-            }
-            
-            .degree-badge {
-                display: inline-block;
-                padding: 3px 8px;
-                background: #3498db;
-                color: white;
-                border-radius: 12px;
-                font-size: 0.8em;
-                margin-left: 8px;
-            }
-            
-            .root-point {
-                background: #2ecc71 !important;
-                width: 10px !important;
-                height: 10px !important;
-            }
-        </style>
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <!-- Header Navigation -->
@@ -218,7 +136,8 @@
                             <a href="#quick-test" class="quick-link">
                                 <i class="fas fa-pen-fancy"></i> Quick Test
                             </a>
-                            <a href="../../../passco" class="quick-link">
+                            <!-- The Passco for Emath is not ready. -->
+                            <a href="../../../passco-jhs" class="quick-link">
                                 <i class="fas fa-file-pdf"></i> PASSCO
                             </a>
                         </div>
@@ -394,6 +313,8 @@
                             </div>
                         </section>
 
+                        <br><br>
+
                         <!-- Algebra of Polynomials Section -->
                         <section id="algebra" class="lesson-section">
                             <h2 class="section-title">
@@ -411,7 +332,37 @@
                                     \[ (3x^2 + 2x - 5) + (2x^2 - 4x + 1) = 5x^2 - 2x - 4 \]
                                 </div>
                             </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
                             
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <section id="algebra" class="lesson-section">
                             <div class="concept-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-times-circle"></i> Multiplication
@@ -423,7 +374,85 @@
                                     \[ (x + 2)(x - 3) = x^2 - 3x + 2x - 6 = x^2 - x - 6 \]
                                 </div>
                             </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
                             
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Multiply and simplify: \( (x + 2)(x^2 - 3x + 4) \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Multiply and simplify: \( (x - 3)(x^2 + 2x + 5) \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Expand:</p>
+                                        <p>\( x(x^2 + 2x + 5) - 3(x^2 + 2x + 5) = x^3 + 2x^2 + 5x - 3x^2 - 6x - 15 \)</p>
+                                        <p>Simplify:</p>
+                                        <p>\( x^3 - x^2 - x - 15 \)</p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Multiply and simplify: \( (2x + 1)(x^2 - x + 4) \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Expand:</p>
+                                        <p>\( 2x(x^2 - x + 4) + 1(x^2 - x + 4) = 2x^3 - 2x^2 + 8x + x^2 - x + 4 \)</p>
+                                        <p>Simplify:</p>
+                                        <p>\( 2x^3 - x^2 + 7x + 4 \)</p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>Multiply and simplify: \( (x^2 + 3x - 2)(x + 4) \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Expand:</p>
+                                        <p>\( x^2(x + 4) + 3x(x + 4) - 2(x + 4) = x^3 + 4x^2 + 3x^2 + 12x - 2x - 8 \)</p>
+                                        <p>Simplify:</p>
+                                        <p>\( x^3 + 7x^2 + 10x - 8 \)</p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Multiply and simplify: \( (3x - 2)(2x^2 + x - 5) \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Expand:</p>
+                                        <p>\( 3x(2x^2 + x - 5) - 2(2x^2 + x - 5) = 6x^3 + 3x^2 - 15x - 4x^2 - 2x + 10 \)</p>
+                                        <p>Simplify:</p>
+                                        <p>\( 6x^3 - x^2 - 17x + 10 \)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <section id="algebra" class="lesson-section">
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-divide"></i> Division of Polynomials
@@ -441,25 +470,120 @@
                                     <p>Result: \( x^2 - 4 \) with remainder 0</p>
                                 </div>
                             </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
                             
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-superscript"></i> Synthetic Division
-                                </h3>
-                                <p>A shortcut method for dividing polynomials by linear factors:</p>
-                                
-                                <div class="math-example">
-                                    <p>Divide \( 2x^3 - 5x^2 - x + 6 \) by \( x - 2 \):</p>
-                                    <div class="division-steps">
-                                        <p>1. Write coefficients: 2 | -5 | -1 | 6</p>
-                                        <p>2. Bring down first coefficient: 2</p>
-                                        <p>3. Multiply by root (2) and add to next column: 2×2 + (-5) = -1</p>
-                                        <p>4. Continue process: -1×2 + (-1) = -3; -3×2 + 6 = 0</p>
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        Divide \( 2x^3 + 3x^2 - 5x + 6 \) by \( x + 2 \).
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/tkoQrR4V0bk" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
                                     </div>
-                                    <p>Result: \( 2x^2 - x - 3 \) with remainder 0</p>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Divide \( x^3 - 6x^2 + 11x - 6 \) by \( x - 1 \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Divide \( x^3 + 2x^2 - x - 2 \) by \( x + 1 \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        $\dfrac{x^4 - 3x^3 - 3}{x^3 - x^2}$
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>Divide \( 2x^4 + 3x^3 - x^2 + 5x - 6 \) by \( x^2 + x - 2 \).</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Watch the video below for a clearer understanding of the question.</p>
+                                        <div class="video-container">
+                                            <iframe 
+                                                src="https://www.youtube.com/embed/" 
+                                                title="YouTube video player" 
+                                                frameborder="0" 
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                                allowfullscreen>
+                                            </iframe>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
                         </section>
+
+                        <br><br>
 
                         <!-- Remainder Theorem Section -->
                         <section id="remainder" class="lesson-section">
@@ -621,7 +745,7 @@
                             
                             <div class="cta-box">
                                 <p>Ready for more challenges?</p>
-                                <a href="../../practice/polynomials" class="cta-button">
+                                <a href="#quick-test" class="cta-button">
                                     <i class="fas fa-arrow-right"></i> Full Practice Set
                                 </a>
                             </div>
@@ -629,27 +753,75 @@
 
                         <br><br>
 
-                        <!-- Speed Test Game -->
+                        <!-- Test Instructions -->
+                        
+                        <!-- Section A -->
                         <section id="quick-test" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
-                            </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your polynomial skills through progressively challenging levels</p>
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Quick Test </h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p></p>
+                                    </div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p></p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
                                 </div>
                             </div>
                         </section>
@@ -666,26 +838,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -694,14 +874,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a> <br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../privacy-policy">Privacy Policy</a>
+                        <a href="../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -711,31 +892,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <script src="../shs1/js/math-challenge-sets.js"></script>
-        <script src="../../js/emath-lesson.js"></script>
-        <script src="../shs1/js/sets.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../js/lessons-test-configuration.js"></script>
+        <script src="../js/emath-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-            
-            // Polynomial Graph Simulation
+
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
             document.addEventListener('DOMContentLoaded', function() {
-                // This would be replaced with actual graphing functionality
-                console.log('Polynomial lesson loaded');
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
             });
         </script>
-
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
     </body>
 </html>

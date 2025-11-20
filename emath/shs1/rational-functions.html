@@ -12,7 +12,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
-        <link rel="manifest" href="../../../../site.webmanifest">
+        <link rel="manifest" href="../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
         <meta property="og:title" content="Rational Functions | Elective Mathematics">
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../css/emath-lesson.css">
         <link rel="stylesheet" href="../shs1/css/sets.css">
+        <link rel="stylesheet" href="../passco-emath/css/emath-tests-general.css">
+        <link rel="stylesheet" href="../passco-emath/css/emath2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -62,83 +66,8 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
-            crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../shs1/css/math-challenge-sets.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
-        
-        <!-- New CSS for Rational Functions -->
-        <style>
-            /* Graph container styles */
-            .graph-container {
-                width: 100%;
-                max-width: 600px;
-                margin: 20px auto;
-                border: 1px solid #ddd;
-                border-radius: 8px;
-                padding: 15px;
-                background-color: #f9f9f9;
-            }
-            
-            .graph-placeholder {
-                width: 100%;
-                height: 300px;
-                background-color: #fff;
-                border: 1px solid #eee;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: #666;
-                font-style: italic;
-            }
-            
-            /* Asymptote styling */
-            .asymptote {
-                color: #e74c3c;
-                font-weight: bold;
-            }
-            
-            /* Partial fractions table */
-            .partial-fractions-table {
-                width: 100%;
-                border-collapse: collapse;
-                margin: 15px 0;
-            }
-            
-            .partial-fractions-table th, 
-            .partial-fractions-table td {
-                border: 1px solid #ddd;
-                padding: 8px;
-                text-align: left;
-            }
-            
-            .partial-fractions-table th {
-                background-color: #f2f2f2;
-            }
-            
-            /* Case examples */
-            .case-example {
-                background-color: #f8f9fa;
-                border-left: 4px solid #3498db;
-                padding: 12px;
-                margin: 15px 0;
-                border-radius: 0 4px 4px 0;
-            }
-            
-            /* Responsive adjustments */
-            @media (max-width: 768px) {
-                .graph-container {
-                    padding: 10px;
-                }
-                
-                .partial-fractions-table {
-                    font-size: 14px;
-                }
-            }
-        </style>
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <!-- Header Navigation -->
@@ -208,7 +137,8 @@
                             <a href="#quick-test" class="quick-link">
                                 <i class="fas fa-pen-fancy"></i> Quick Test
                             </a>
-                            <a href="../../../passco" class="quick-link">
+                            <!-- The Passco for Emath is not ready. -->
+                            <a href="../../../passco-jhs" class="quick-link">
                                 <i class="fas fa-file-pdf"></i> PASSCO
                             </a>
                         </div>
@@ -479,6 +409,22 @@
                                     </ol>
                                 </div>
                                 
+                                <div class="key-points">
+                                    <div class="point">
+                                        <h4>Applications:</h4>
+                                        <p>Partial fractions are essential for:</p>
+                                        <ul>
+                                            <li>Integration of rational functions</li>
+                                            <li>Solving differential equations</li>
+                                            <li>Laplace transforms</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section id="partial-fractions" class="lesson-section">
+                            <div class="concept-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-list-ol"></i> Case 1: Distinct Linear Factors
                                 </h3>
@@ -495,46 +441,8 @@
                                     <p>Thus:</p>
                                     \[ \frac{3x + 5}{(x + 1)(x - 2)} = \frac{-2/3}{x + 1} + \frac{11/3}{x - 2} \]
                                 </div>
-                                
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-list-ol"></i> Case 2: Repeated Linear Factors
-                                </h3>
-                                <div class="case-example">
-                                    <p>For a repeated linear factor \( (ax + b)^n \), include terms with all powers up to n:</p>
-                                    \[ \frac{A_1}{ax + b} + \frac{A_2}{(ax + b)^2} + \cdots + \frac{A_n}{(ax + b)^n} \]
-                                    <p>Example: Decompose \( \frac{x^2 + 1}{(x - 1)^3} \)</p>
-                                    <p>Solution:</p>
-                                    \[ \frac{x^2 + 1}{(x - 1)^3} = \frac{A}{x - 1} + \frac{B}{(x - 1)^2} + \frac{C}{(x - 1)^3} \]
-                                    <p>Multiply through and solve similarly to Case 1.</p>
-                                </div>
-                                
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-list-ol"></i> Case 3: Irreducible Quadratic Factors
-                                </h3>
-                                <div class="case-example">
-                                    <p>For irreducible quadratics \( (ax^2 + bx + c) \), use a linear numerator:</p>
-                                    \[ \frac{Ax + B}{ax^2 + bx + c} \]
-                                    <p>Example: Decompose \( \frac{2x^2 - x + 4}{(x^2 + 1)(x - 1)} \)</p>
-                                    <p>Solution:</p>
-                                    \[ \frac{2x^2 - x + 4}{(x^2 + 1)(x - 1)} = \frac{Ax + B}{x^2 + 1} + \frac{C}{x - 1} \]
-                                    <p>Multiply through and solve for A, B, and C.</p>
-                                </div>
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Applications:</h4>
-                                        <p>Partial fractions are essential for:</p>
-                                        <ul>
-                                            <li>Integration of rational functions</li>
-                                            <li>Solving differential equations</li>
-                                            <li>Laplace transforms</li>
-                                        </ul>
-                                    </div>
-                                </div>
                             </div>
                         </section>
-
-                        
 
                         <!-- Practice Section -->
                         <section class="practice-section">
@@ -587,7 +495,7 @@
                             
                             <div class="cta-box">
                                 <p>Ready for more challenges?</p>
-                                <a href="../../practice/rational-functions" class="cta-button">
+                                <a href="#quick-test" class="cta-button">
                                     <i class="fas fa-arrow-right"></i> Full Practice Set
                                 </a>
                             </div>
@@ -595,27 +503,225 @@
 
                         <br><br>
 
-                        <!-- Speed Test Game -->
-                        <section id="quick-test" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
-                            </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                        <section id="partial-fractions" class="lesson-section">
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Case 2: Repeated Linear Factors
+                                </h3>
+                                <div class="case-example">
+                                    <p>For a repeated linear factor \( (ax + b)^n \), include terms with all powers up to n:</p>
+                                    \[ \frac{A_1}{ax + b} + \frac{A_2}{(ax + b)^2} + \cdots + \frac{A_n}{(ax + b)^n} \]
+                                    <p>Example: Decompose \( \frac{x^2 + 1}{(x - 1)^3} \)</p>
+                                    <p>Solution:</p>
+                                    \[ \frac{x^2 + 1}{(x - 1)^3} = \frac{A}{x - 1} + \frac{B}{(x - 1)^2} + \frac{C}{(x - 1)^3} \]
+                                    <p>Multiply through and solve similarly to Case 1.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the domain of \( f(x) = \frac{x^2 + 3x}{x^2 - 5x + 6} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factor denominator: \( x^2 - 5x + 6 = (x - 2)(x - 3) \)</p>
+                                        <p>Denominator zero when \( x = 2 \) or \( x = 3 \)</p>
+                                        <p>Domain: All real numbers except \( x = 2 \) and \( x = 3 \)</p>
+                                        \[ (-\infty, 2) \cup (2, 3) \cup (3, \infty) \]
                                     </div>
                                 </div>
                                 
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the zeroes of \( g(x) = \frac{x^3 - 2x^2 - 5x + 6}{x^2 - 4} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factor numerator: \( x^3 - 2x^2 - 5x + 6 = (x - 1)(x + 2)(x - 3) \)</p>
+                                        <p>Factor denominator: \( x^2 - 4 = (x - 2)(x + 2) \)</p>
+                                        <p>Numerator zero at \( x = 1, -2, 3 \)</p>
+                                        <p>Denominator zero at \( x = 2, -2 \)</p>
+                                        <p>Thus, zeroes at \( x = 1 \) and \( x = 3 \) (x = -2 makes denominator zero)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Express \( \frac{5x - 1}{(x + 2)(x - 3)} \) in partial fractions</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( \frac{5x - 1}{(x + 2)(x - 3)} = \frac{A}{x + 2} + \frac{B}{x - 3} \)</p>
+                                        <p>Multiply through:</p>
+                                        \[ 5x - 1 = A(x - 3) + B(x + 2) \]
+                                        <p>Let \( x = -2 \): \( -10 - 1 = A(-5) \) ⇒ \( A = \frac{11}{5} \)</p>
+                                        <p>Let \( x = 3 \): \( 15 - 1 = B(5) \) ⇒ \( B = \frac{14}{5} \)</p>
+                                        <p>Thus:</p>
+                                        \[ \frac{5x - 1}{(x + 2)(x - 3)} = \frac{11/5}{x + 2} + \frac{14/5}{x - 3} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <section id="partial-fractions" class="lesson-section">
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-list-ol"></i> Case 3: Irreducible Quadratic Factors
+                                </h3>
+                                <div class="case-example">
+                                    <p>For irreducible quadratics \( (ax^2 + bx + c) \), use a linear numerator:</p>
+                                    \[ \frac{Ax + B}{ax^2 + bx + c} \]
+                                    <p>Example: Decompose \( \frac{2x^2 - x + 4}{(x^2 + 1)(x - 1)} \)</p>
+                                    <p>Solution:</p>
+                                    \[ \frac{2x^2 - x + 4}{(x^2 + 1)(x - 1)} = \frac{Ax + B}{x^2 + 1} + \frac{C}{x - 1} \]
+                                    <p>Multiply through and solve for A, B, and C.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>Find the domain of \( f(x) = \frac{x^2 + 3x}{x^2 - 5x + 6} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factor denominator: \( x^2 - 5x + 6 = (x - 2)(x - 3) \)</p>
+                                        <p>Denominator zero when \( x = 2 \) or \( x = 3 \)</p>
+                                        <p>Domain: All real numbers except \( x = 2 \) and \( x = 3 \)</p>
+                                        \[ (-\infty, 2) \cup (2, 3) \cup (3, \infty) \]
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>Find the zeroes of \( g(x) = \frac{x^3 - 2x^2 - 5x + 6}{x^2 - 4} \)</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Factor numerator: \( x^3 - 2x^2 - 5x + 6 = (x - 1)(x + 2)(x - 3) \)</p>
+                                        <p>Factor denominator: \( x^2 - 4 = (x - 2)(x + 2) \)</p>
+                                        <p>Numerator zero at \( x = 1, -2, 3 \)</p>
+                                        <p>Denominator zero at \( x = 2, -2 \)</p>
+                                        <p>Thus, zeroes at \( x = 1 \) and \( x = 3 \) (x = -2 makes denominator zero)</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>Express \( \frac{5x - 1}{(x + 2)(x - 3)} \) in partial fractions</p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Let \( \frac{5x - 1}{(x + 2)(x - 3)} = \frac{A}{x + 2} + \frac{B}{x - 3} \)</p>
+                                        <p>Multiply through:</p>
+                                        \[ 5x - 1 = A(x - 3) + B(x + 2) \]
+                                        <p>Let \( x = -2 \): \( -10 - 1 = A(-5) \) ⇒ \( A = \frac{11}{5} \)</p>
+                                        <p>Let \( x = 3 \): \( 15 - 1 = B(5) \) ⇒ \( B = \frac{14}{5} \)</p>
+                                        <p>Thus:</p>
+                                        \[ \frac{5x - 1}{(x + 2)(x - 3)} = \frac{11/5}{x + 2} + \frac{14/5}{x - 3} \]
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+
+                        <br><br>
+
+                        <!-- Test Instructions -->
+                        
+                        <!-- Section A -->
+                        <section id="quick-test" class="lesson-section">
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Quick Test </h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
+                                </div>
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
+                                    </div>
+                                    <span id="timer-display">60:00</span>
+                                </div>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p></p>
+                                    </div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
+                                </div>
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p></p>
+                                    </div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="true"></div>
+                                    <div class="option" data-correct="false"></div>
+                                    <div class="option" data-correct="false"></div>
                                 </div>
                             </div>
                         </section>
@@ -632,26 +738,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -660,14 +774,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a> <br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../privacy-policy">Privacy Policy</a>
+                        <a href="../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -677,38 +792,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <script src="../shs1/js/math-challenge-sets.js"></script>
-        <script src="../../js/emath-lesson.js"></script>
-        <script src="../shs1/js/sets.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../js/lessons-test-configuration.js"></script>
+        <script src="../js/emath-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-            
-            // Additional scripts for rational functions
+
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
             document.addEventListener('DOMContentLoaded', function() {
-                // Solution toggles
-                const toggles = document.querySelectorAll('.solution-toggle');
-                toggles.forEach(toggle => {
-                    toggle.addEventListener('click', function() {
-                        const solution = this.nextElementSibling;
-                        solution.style.display = solution.style.display === 'block' ? 'none' : 'block';
-                        this.textContent = solution.style.display === 'block' ? 'Hide Solution' : 'Show Solution';
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
                     });
-                });
+                }
             });
         </script>
-
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
     </body>
 </html>
