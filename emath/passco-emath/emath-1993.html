@@ -1208,112 +1208,6 @@
                                     <!------------------------------------------------------------------->
                                 </ol>
                             </div>
-
-                            <!-- Test Instructions Section -->
-                            <section id="instructions" class="lesson-section">
-                                <h2 class="section-title">
-                                    <i class="fas fa-book-open"></i> Section A: Guide
-                                </h2>
-                                
-                                <div class="concept-box">
-                                    <p>
-                                        This timed test consists of 40 multiple-choice questions to be completed in 60 minutes.
-                                        Read each question carefully and select the best answer.
-                                    </p>
-                                    <p>
-                                        After completing the test, your answers will be automatically submitted. You can review
-                                        your performance and see correct answers afterward.
-                                    </p>
-                                </div>
-                            </section>    
-
-                            <!-- Timed Test Section -->
-                            <section id="section-a-timed" class="practice-section">
-                                <div class="practice-header">
-                                    <i class="fas fa-clock"></i>
-                                    <h2>Section A (Timed - 60 minutes)</h2>
-                                </div>
-                                
-                                <div class="test-instructions">
-                                    <p>You have 60 minutes to complete this test. The timer will start when you begin.</p>
-                                    <div class="timer-container">
-                                        <span id="timer-display">60:00</span>
-                                        <div class="progress-bar">
-                                            <div class="progress-fill"></div>
-                                        </div>
-                                    </div>
-                                    <div id="test-warning" class="test-warning">
-                                        <i class="fas fa-exclamation-triangle"></i> Timer is running! Don't navigate away.
-                                    </div>
-                                </div>
-                                
-                                <!-- Google Form Container -->
-                                <div id="google-form-container" style="display: none;">
-                                    <iframe id="google-form-iframe" src="" frameborder="0" style="width: 100%; height: 1500px;"></iframe>
-                                </div>
-                                
-                                <div class="test-controls">
-                                    <button id="start-timed-test" class="control-btn">Start Test</button>
-                                    <div id="form-submit-message" style="display: none; margin-top: 1rem;">
-                                        <p>When finished, make sure to click the submit button in the Google Form above.</p>
-                                    </div>
-                                </div>
-                            </section>
-
-                            <!-- Results Section (Initially Hidden) -->
-                            <section id="test-results" class="lesson-section" style="display: none;">
-                                <h2 class="section-title">
-                                    <i class="fas fa-chart-bar"></i> Test Results
-                                </h2>
-                                <div class="results-container">
-                                    <div class="score-card">
-                                        <h3>Your Score</h3>
-                                        <div class="score-display">
-                                            <span id="score-value">0</span>/40
-                                        </div>
-                                        <div class="score-percentage" id="score-percentage">0%</div>
-                                    </div>
-                                    
-                                    <div class="results-details">
-                                        <h3>Performance Breakdown</h3>
-                                        <div class="results-grid">
-                                            <div class="result-category correct">
-                                                <span class="result-count" id="correct-count">0</span>
-                                                <span class="result-label">Correct</span>
-                                            </div>
-                                            <div class="result-category incorrect">
-                                                <span class="result-count" id="incorrect-count">0</span>
-                                                <span class="result-label">Incorrect</span>
-                                            </div>
-                                            <div class="result-category unanswered">
-                                                <span class="result-count" id="unanswered-count">0</span>
-                                                <span class="result-label">Unanswered</span>
-                                            </div>
-                                        </div>
-                                        
-                                        <div class="time-summary">
-                                            <p>Time taken: <span id="time-taken">00:00</span></p>
-                                            <p>Time per question: <span id="time-per-question">0s</span></p>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="answers-review">
-                                        <h3>Review Answers</h3>
-                                        <div id="answers-list">
-                                            <!-- Answers will be populated here -->
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="results-actions">
-                                        <button id="retake-test" class="control-btn">
-                                            <i class="fas fa-redo"></i> Retake Test
-                                        </button>
-                                        <button id="view-solutions" class="control-btn">
-                                            <i class="fas fa-book-open"></i> View Solutions
-                                        </button>
-                                    </div>
-                                </div>
-                            </section>
                             
                             <br><br>
                             
@@ -1384,8 +1278,8 @@
         
 
         <!-- JavaScript Files -->
-        <script src="./js/all-test-configuration.js"></script>
-        <script src="./js/bece-tests-general.js"></script>
+        <script src="../js/lessons-test-configuration.js"></script>
+        <script src="../js/wassce-tests-general.js"></script>
 
         <script>
             // Current year for footer

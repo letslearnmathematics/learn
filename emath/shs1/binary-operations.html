@@ -5,19 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO and Social Meta Tags -->
-        <title>Binary Operations | Elective Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Comprehensive lesson on Binary Operations for SHS1 Elective Mathematics. Learn closure, properties, identity and inverse elements with examples.">
+        <title>Binary Operations | Additional Mathematics | The Let's Learn Project</title>
+        <meta name="description" content="Comprehensive lesson on Binary Operations for SHS1 Additional Mathematics. Learn closure, properties, identity and inverse elements with examples.">
         
         <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
         <link rel="manifest" href="../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Binary Operations | Elective Mathematics">
+        <meta property="og:title" content="Binary Operations | Additional Mathematics">
         <meta property="og:description" content="Master Binary Operations with interactive lessons and practice problems for SHS students">
-        <meta property="og:image" content="https://theletslearnproject.com/images/binary-ops-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
         <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/binary-operations">
         <meta property="og:type" content="website">
     
@@ -28,13 +28,26 @@
         <!-- CSS -->
         <link rel="stylesheet" href="../../css/emath-lesson.css">
         <link rel="stylesheet" href="../shs1/css/binary-operations.css">
+        <link rel="stylesheet" href="../css/ssce-tests-general.css">
+        <link rel="stylesheet" href="../css/ssce2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -62,13 +66,8 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
-            crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../shs1/css/math-challenge-binary.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <!-- Header Navigation -->
@@ -112,18 +111,18 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <h3 class="sidebar-title">SHS1: Add. Maths</h3>
                             <div class="current-topic">
                                 <i class="fas fa-calculator"></i>
                                 <span>Binary Operations</span>
                             </div>
                             <ul class="topic-menu">
-                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Definition</a></li>
-                                <li><a href="#closure"><i class="fas fa-chevron-right"></i> Closure Property</a></li>
-                                <li><a href="#properties"><i class="fas fa-chevron-right"></i> Properties</a></li>
-                                <li><a href="#identity"><i class="fas fa-chevron-right"></i> Identity Element</a></li>
-                                <li><a href="#inverse"><i class="fas fa-chevron-right"></i> Inverse Element</a></li>
-                                <li><a href="#problems"><i class="fas fa-chevron-right"></i> Practice Problems</a></li>
+                                <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Definition </a></li>
+                                <li><a href="#closure"><i class="fas fa-chevron-right"></i> Closure Property </a></li>
+                                <li><a href="#properties"><i class="fas fa-chevron-right"></i> Properties </a></li>
+                                <li><a href="#identity"><i class="fas fa-chevron-right"></i> Identity Element </a></li>
+                                <li><a href="#inverse"><i class="fas fa-chevron-right"></i> Inverse Element </a></li>
+                                <li><a href="#problems"><i class="fas fa-chevron-right"></i> Practice Problems </a></li>
                             </ul>
                             
                             <div class="level-buttons">
@@ -138,7 +137,7 @@
                             <a href="#quick-test" class="quick-link">
                                 <i class="fas fa-pen-fancy"></i> Quick Test
                             </a>
-                            <a href="../../../passco" class="quick-link">
+                            <a href="../../../../passco-jhs" class="quick-link">
                                 <i class="fas fa-file-pdf"></i> PASSCO
                             </a>
                         </div>
@@ -150,7 +149,7 @@
                         <nav class="breadcrumb">
                             <a href="../../">Home</a>
                             <i class="fas fa-chevron-right"></i>
-                            <a href="../../emath">E-Maths</a>
+                            <a href="../../emath">Add. Maths</a>
                             <i class="fas fa-chevron-right"></i>
                             <a href="../../emath#shs1">SHS1</a>
                             <i class="fas fa-chevron-right"></i>
@@ -163,7 +162,7 @@
                                 <i class="fas fa-book-open"></i> Definition of Binary Operations
                             </h2>
                             
-                            <div class="concept-box">
+                            <div class="concept-box highlight-box">
                                 <p>A <strong>binary operation</strong> is a mathematical operation that combines two elements (called operands) to produce another element. It is denoted by a symbol (like *, +, ×, etc.) and must satisfy the closure property.</p>
                                 
                                 <div class="math-example">
@@ -172,6 +171,7 @@
                                     <p>For any two elements \( a, b \in S \), the operation produces \( a * b \in S \).</p>
                                 </div>
                                 
+                                <!--
                                 <div class="key-points">
                                     <div class="point">
                                         <h4>Common Binary Operations:</h4>
@@ -184,20 +184,130 @@
                                     
                                     <div class="point">
                                         <h4>Notation:</h4>
-                                        <p>We often use symbols like *, ⊗, ⊕, or ○ to represent general binary operations.</p>
+                                        <p>We often use symbols like $*$, $⊗$, $⊕$, or $○$ to represent general binary operations.</p>
                                     </div>
                                 </div>
+                                -->
+                            </div>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on binary operations with worked examples.</p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/########" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
                                 
-                                <div class="math-example">
-                                    <h3>Example 1:</h3>
-                                    <p>Let * be defined on ℤ by \( a * b = a + b - ab \). Find \( 3 * 5 \).</p>
+                            </div>
+
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        Let $*$ be defined on $ℤ$ by \( a * b = a + b - ab \). Find \( 3 * 5 \).
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        \[ 3 * 5 = 3 + 5 - (3 \times 5) = 8 - 15 = -7 \]
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        A binary operation ∗ is defined on a set of real numbers by $a*b = 3a + 2b -ab$ where
+                                        $a, 𝒃∈𝑹$. <br>
+                                        Find: $4 ∗ (2∗3)$
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on a set of real numbers by $𝒎𝛁𝒏=𝟐𝒎+𝒏+𝒎𝒏$ 
+                                        where $ 𝒎, 𝒏 ∈ 𝑹 $. <br>
+                                        Find: $4 ∇ (2 ∇ 3)$
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set “$R$” of real numbers by $𝑎∗𝑏=𝑎+𝑏+2𝑎𝑏$. <br>
+                                        Find: $\dfrac{1}{2} * \dfrac{1}{3}$
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set “$R$” of real numbers by $𝑎∗𝑏=𝑎+𝑏+2𝑎𝑏$. <br>
+                                        Find: $\dfrac{1}{3} * \left( 3 * \dfrac{1}{4} \right)$
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
                         </section>
                         
+                        <br><br>
+
                         <!-- Closure Property Section -->
                         <section id="closure" class="lesson-section">
                             <h2 class="section-title">
@@ -205,98 +315,202 @@
                             </h2>
                             
                             <div class="concept-box">
-                                <p>A set S is <strong>closed</strong> under a binary operation * if for every \( a, b \in S \), the result \( a * b \) is also in S.</p>
-                                
-                                <div class="math-example">
-                                    <h3>Example 2:</h3>
-                                    <p>Is the set of even integers closed under addition?</p>
-                                    <div class="solution">
-                                        <p>Yes, because the sum of any two even integers is always even.</p>
-                                        \[ \text{Let } a = 2k, b = 2m \text{ where } k,m \in \mathbb{Z} \]
-                                        \[ a + b = 2k + 2m = 2(k + m) \text{ (even)} \]
-                                    </div>
+                                <p>
+                                    A set S is <strong>closed</strong> under a binary operation $*$ if for every \( a, b \in S \), 
+                                    the result \( a * b \) is also in S.
+                                </p>
+                            </div>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>Watch this comprehensive explanation on closure of a set with worked examples.</p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/########" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
                                 </div>
                                 
-                                <div class="math-example">
-                                    <h3>Example 3:</h3>
-                                    <p>Is the set of odd integers closed under multiplication?</p>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        Is the set of odd integers closed under multiplication?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Yes, because the product of any two odd integers is always odd.</p>
-                                        \[ \text{Let } a = 2k + 1, b = 2m + 1 \]
-                                        \[ a \times b = (2k + 1)(2m + 1) = 4km + 2k + 2m + 1 = 2(2km + k + m) + 1 \text{ (odd)} \]
+                                        <p>Solution:</p>
+                                        <p>
+                                            Yes, because the product of any two odd integers is always odd.
+                                        </p>
+                                        <p>
+                                            \( \text{Let } a = 2k + 1, b = 2m + 1 \)
+                                            \( a \times b = (2k + 1)(2m + 1) = 4km + 2k + 2m + 1 = 2(2km + k + m) + 1 \text{ (odd)} \)
+                                        </p>
                                     </div>
                                 </div>
-                                
-                                <div class="math-example">
-                                    <h3>Example 4:</h3>
-                                    <p>Is the set \( S = \{1, 2, 3\} \) closed under addition?</p>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        Is the set of even integers closed under addition?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>No, because \( 2 + 3 = 5 \) and \( 5 \notin S \).</p>
+                                        <p>Solution:</p>
+                                        <p>
+                                            Yes, because the sum of any two even integers is always even.
+                                            
+                                        </p>
+                                        <p>
+                                            $\text{Let } a = 2k, b = 2m \text{ where } k,m \in \mathbb{Z}$
+                                            $ a + b = 2k + 2m = 2(k + m) \text{ (even)} $
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        Is the set \( S = \{1, 2, 3\} \) closed under addition?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            No, because \( 2 + 3 = 5 \) and \( 5 \notin S \).
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on the set $D = \{ 2, 3, 5, 7\}$ 
+                                        by $a*b = a + b - 3ab$. State whether or not the set is closed.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined by 
+                                        $x \triangle y = \dfrac{1}{2} (x - y)$. State whether the set is 
+                                        closed with respect to the operation $\triangle$.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
                                     </div>
                                 </div>
                             </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
                         </section>
+                        
+                        <br><br>
 
                         <!-- Properties Section -->
                         <section id="properties" class="lesson-section">
                             <h2 class="section-title">
                                 <i class="fas fa-cogs"></i> Properties of Binary Operations
                             </h2>
-                            
-                            <div class="property-cards">
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>
+                                        Watch this comprehensive explanation on the properties of binary operations 
+                                        with worked examples.
+                                    </p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/########" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                
+                            </div>
+
+                            <div class="concept-box">
                                 <!-- Commutative Property -->
                                 <div class="property-card">
                                     <div class="property-header">
-                                        <i class="fas fa-exchange-alt"></i>
-                                        <h3>Commutative Property</h3>
+                                        <h3><i class="fas fa-exchange-alt"></i> Commutative Property</h3>
                                     </div>
                                     <div class="property-body">
-                                        <p>A binary operation * is commutative if:</p>
+                                        <p>A binary operation $*$ is commutative if:</p>
                                         \[ a * b = b * a \quad \forall a,b \in S \]
-                                        
-                                        <div class="math-example">
-                                            <p>Example: Addition is commutative:</p>
-                                            \[ 3 + 5 = 5 + 3 \]
-                                        </div>
                                     </div>
                                 </div>
                                 
                                 <!-- Associative Property -->
                                 <div class="property-card">
                                     <div class="property-header">
-                                        <i class="fas fa-layer-group"></i>
-                                        <h3>Associative Property</h3>
+                                        <h3><i class="fas fa-layer-group"></i> Associative Property</h3>
                                     </div>
                                     <div class="property-body">
                                         <p>A binary operation * is associative if:</p>
                                         \[ (a * b) * c = a * (b * c) \quad \forall a,b,c \in S \]
-                                        
-                                        <div class="math-example">
-                                            <p>Example: Multiplication is associative:</p>
-                                            \[ (2 \times 3) \times 4 = 2 \times (3 \times 4) \]
-                                        </div>
                                     </div>
                                 </div>
                                 
                                 <!-- Distributive Property -->
                                 <div class="property-card">
                                     <div class="property-header">
-                                        <i class="fas fa-project-diagram"></i>
-                                        <h3>Distributive Property</h3>
+                                        <h3><i class="fas fa-project-diagram"></i> Distributive Property</h3>
                                     </div>
                                     <div class="property-body">
                                         <p>Operation * distributes over ○ if:</p>
                                         \[ a * (b ○ c) = (a * b) ○ (a * c) \]
                                         \[ (a ○ b) * c = (a * c) ○ (b * c) \]
-                                        
-                                        <div class="math-example">
-                                            <p>Example: Multiplication distributes over addition:</p>
-                                            \[ 2 \times (3 + 4) = (2 \times 3) + (2 \times 4) \]
-                                        </div>
                                     </div>
                                 </div>
                             </div>
+
                             
+                            
+                            <!--
                             <div class="concept-box highlight-box">
                                 <h3 class="subsection-title">
                                     <i class="fas fa-flask"></i> Testing Properties
@@ -326,14 +540,243 @@
                                         <p>Since both expressions are equal, * is associative.</p>
                                     </div>
                                 </div>
+                            </div>-->
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set of real numbers by $𝑎 ∗ 𝑏= 2𝑎 + 𝑎𝑏$. 
+                                            Show that ∗ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on the set of real numbers by $𝑎∇𝑏=𝑎^2+2𝑎𝑏+𝑏^2$. 
+                                        Show that $∇$ is commutative.
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        A binary operation $∆$ is defined by 
+                                        $𝑎∆𝑏=𝑎+𝑏−2𝑏^2$ Show whether the binary operation $∆$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set of real numbers by $𝑎 ∗ 𝑏= 2𝑎 + 𝑎𝑏$. 
+                                            Show that ∗ is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on the set of real numbers by $𝑎∇𝑏=𝑎^2+2𝑎𝑏+𝑏^2$. 
+                                        Show that $∇$ is associative.
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>
+                                        A binary operation $∆$ is defined by 
+                                        $𝑎∆𝑏=𝑎+𝑏−2𝑏^2$ Show whether the binary operation $∆$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 7</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set of real numbers by $𝑎 ∗ 𝑏= 2𝑎 + 𝑎𝑏$. 
+                                            Show that ∗ is distributive.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 8</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on the set of real numbers by $𝑎∇𝑏=𝑎^2+2𝑎𝑏+𝑏^2$. 
+                                        Show that $∇$ is distributive.
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 9</h3>
+                                    <p>
+                                        A binary operation $∆$ is defined by 
+                                        $𝑎∆𝑏=𝑎+𝑏−2𝑏^2$ Show whether the binary operation $∆$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                             
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 10</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on the set of $R$, real numbers by
+                                        $p*q = p^2 + q^2 - 2pq$, show whether the operation is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 11</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined on the set $R$ of real numbers by
+                                        $$a \triangle b = \dfrac{ab}{a + b}$$ <br>
+                                        where $a, b \in R$
+                                    </p>
+                                    <p>
+                                        Determine whether the operation is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 12</h3>
+                                    <p>
+                                        A binary operation $*$ on the set $R$ of real numbers by $$a * b = ab + 2$$ 
+                                        where $a, b \in R$. Find $x$, if $4 * (3 * x) = 64$
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
                             </div>
                         </section>
+                        
+                        <br><br>
 
                         <!-- Identity Element Section -->
                         <section id="identity" class="lesson-section">
                             <h2 class="section-title">
                                 <i class="fas fa-fingerprint"></i> Identity Element
                             </h2>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>
+                                        Watch this comprehensive explanation on the identity element of a 
+                                        binary operations with worked examples.
+                                    </p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/########" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                
+                            </div>
                             
                             <div class="concept-box">
                                 <p>An <strong>identity element</strong> (or neutral element) for a binary operation * on set S is an element \( e \in S \) such that:</p>
@@ -351,43 +794,144 @@
                                         \[ a \times 1 = 1 \times a = a \]
                                     </div>
                                 </div>
-                                
-                                <div class="math-example">
-                                    <h3>Example 6:</h3>
-                                    <p>Find the identity element for * defined by \( a * b = a + b - ab \) on ℝ.</p>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        Find the identity element for $*$ defined by \( a * b = a + b - ab \) on ℝ.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p>Let e be the identity:</p>
-                                        \[ a * e = a \]
-                                        \[ a + e - ae = a \]
-                                        \[ e - ae = 0 \]
-                                        \[ e(1 - a) = 0 \]
+                                        <p>Solution:</p>
+                                        <p>
+                                            Let e be the identity:
+                                            \[ a * e = a \]
+                                            \[ a + e - ae = a \]
+                                            \[ e - ae = 0 \]
+                                            \[ e(1 - a) = 0 \]
+                                        </p>
                                         <p>This must hold for all a, so e = 0.</p>
-                                        <p>Verify: \( a * 0 = a + 0 - a \times 0 = a \) ✔️</p>
+                                        <p>Verify: \( a * 0 = a + 0 - a \times 0 = a \) </p>
                                     </div>
                                 </div>
-                                
-                                <div class="math-example">
-                                    <h3>Example 7:</h3>
-                                    <p>Does the operation \( a * b = a + b + 1 \) on ℤ have an identity?</p>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        Does the operation \( a * b = a + b + 1 \) on $ℤ$ have an identity?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
+                                        <p>Solution:</p>
                                         <p>Let e be the identity:</p>
                                         \[ a * e = a \]
                                         \[ a + e + 1 = a \]
                                         \[ e + 1 = 0 \]
                                         \[ e = -1 \]
-                                        <p>Verify: \( a * -1 = a + (-1) + 1 = a \) ✔️</p>
-                                        <p>Also \( -1 * a = -1 + a + 1 = a \) ✔️</p>
+                                        <p>Verify: \( a * -1 = a + (-1) + 1 = a \) </p>
+                                        <p>Also \( -1 * a = -1 + a + 1 = a \) </p>
                                         <p>Thus, -1 is the identity element.</p>
                                     </div>
                                 </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined on the set $R$ of real numbers
+                                        by $$ m \triangle n  = m + n + 10 $$
+                                    </p>
+                                    <p>
+                                        Find the identity element.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        The operation $*$ is defined on the set $R$ of real numbers by $$ a * b = a + b - 3ab $$
+                                        Find the identity element.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined on the set $R$ of real numbers by 
+                                        $$ x \triangle y = \dfrac{x + y}{1 + xy} $$
+                                        Find the identity element.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
                             </div>
                         </section>
+                        
+                        <br><br>
 
                         <!-- Inverse Element Section -->
                         <section id="inverse" class="lesson-section">
                             <h2 class="section-title">
                                 <i class="fas fa-retweet"></i> Inverse Element
                             </h2>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>
+                                        Watch this comprehensive explanation on the inverse element binary operations 
+                                        with worked examples.
+                                    </p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/########" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                
+                            </div>
                             
                             <div class="concept-box">
                                 <p>Given a binary operation * on S with identity element e, the <strong>inverse</strong> of an element \( a \in S \) is an element \( a^{-1} \) such that:</p>
@@ -405,29 +949,6 @@
                                         \[ a \times \frac{1}{a} = 1 \]
                                     </div>
                                 </div>
-                                
-                                <div class="math-example">
-                                    <h3>Example 8:</h3>
-                                    <p>Find inverses under * defined by \( a * b = a + b - ab \) (identity is 0).</p>
-                                    <div class="solution">
-                                        <p>Find \( a^{-1} \) such that \( a * a^{-1} = 0 \):</p>
-                                        \[ a + a^{-1} - a \times a^{-1} = 0 \]
-                                        \[ a^{-1}(1 - a) = -a \]
-                                        \[ a^{-1} = \frac{a}{a - 1} \text{ for } a \neq 1 \]
-                                        <p>Thus, the inverse is \( \frac{a}{a - 1} \).</p>
-                                    </div>
-                                </div>
-                                
-                                <div class="math-example">
-                                    <h3>Example 9:</h3>
-                                    <p>For \( a * b = a + b + 1 \) (identity is -1), find the inverse of 5.</p>
-                                    <div class="solution">
-                                        <p>Find \( 5^{-1} \) such that \( 5 * 5^{-1} = -1 \):</p>
-                                        \[ 5 + 5^{-1} + 1 = -1 \]
-                                        \[ 5^{-1} = -1 - 5 - 1 = -7 \]
-                                        <p>Verify: \( 5 * -7 = 5 + (-7) + 1 = -1 \) ✔️</p>
-                                    </div>
-                                </div>
                             </div>
                             
                             <div class="concept-box highlight-box">
@@ -442,6 +963,102 @@
                             </div>
                         </section>
 
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        Find inverses under * defined by \( a * b = a + b - ab \) (identity is 0).
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>Find \( a^{-1} \) such that \( a * a^{-1} = 0 \):</p>
+                                        \[ a + a^{-1} - a \times a^{-1} = 0 \]
+                                        \[ a^{-1}(1 - a) = -a \]
+                                        \[ a^{-1} = \frac{a}{a - 1} \text{ for } a \neq 1 \]
+                                        <p>Thus, the inverse is \( \frac{a}{a - 1} \).</p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        For \( a * b = a + b + 1 \) (identity is -1), find the inverse of 5.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>Find \( 5^{-1} \) such that \( 5 * 5^{-1} = -1 \):</p>
+                                        \[ 5 + 5^{-1} + 1 = -1 \]
+                                        \[ 5^{-1} = -1 - 5 - 1 = -7 \]
+                                        <p>Verify: \( 5 * -7 = 5 + (-7) + 1 = -1 \) </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on the set $R$ of real numbers by 
+                                        $$ a * b = a + b + \dfrac{3}{4} $$. Find the inverse element.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        The operation $*$ is defined on the set $R$ of real numbers by 
+                                        $$ a * b = 5ab $$. Find the inverse element under the operation.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined on the set $R$ of real numbers by 
+                                        $$ x \triangle y = \dfrac{x + y}{1 + xy} $$
+                                        Find the inverse element.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+                        
+                        <br><br>
+
                         <!-- Practice Problems Section -->
                         <section id="problems" class="lesson-section">
                             <h2 class="section-title">
@@ -451,22 +1068,20 @@
                             <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Problem 1</h3>
-                                    <p>Define * on ℤ by \( a * b = a + b + 2 \). Show that * is commutative and associative.</p>
+                                    <p>
+                                        Define * on ℤ by \( a * b = a + b + 2 \). Show that * is;
+                                        $(i)$ commutative and 
+                                        $(ii)$associative.
+                                    </p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
-                                        <p><strong>Commutative:</strong></p>
-                                        \[ a * b = a + b + 2 = b + a + 2 = b * a \]
                                         
-                                        <p><strong>Associative:</strong></p>
-                                        \[ (a * b) * c = (a + b + 2) * c = a + b + 2 + c + 2 = a + b + c + 4 \]
-                                        \[ a * (b * c) = a * (b + c + 2) = a + b + c + 2 + 2 = a + b + c + 4 \]
-                                        <p>Both expressions are equal, so * is associative.</p>
                                     </div>
                                 </div>
                                 
                                 <div class="problem-card">
                                     <h3>Problem 2</h3>
-                                    <p>Let * be defined on ℝ by \( a * b = \frac{a + b}{1 + ab} \). Find the identity element and the inverse of 2.</p>
+                                    <p>Let * be defined on ℝ by \( a * b = \dfrac{a + b}{1 + ab} \). Find the identity element and the inverse of 2.</p>
                                     <button class="solution-toggle">Show Solution</button>
                                     <div class="solution">
                                         <p><strong>Identity:</strong></p>
@@ -496,6 +1111,193 @@
                                         <p>Since 0 ≠ 2, ○ is not associative.</p>
                                     </div>
                                 </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 4</h3>
+                                    <p>
+                                        Let $*$ be defined on $R$ by \( a * b = a + b - 2 \).  
+                                        Show that $*$ is commutative and find the identity element.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 5</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on $R$ by  
+                                        \( a * b = ab + a + b \).  
+                                        Determine whether the operation is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 6</h3>
+                                    <p>
+                                        Define a binary operation $∗$ on $Z$ by  
+                                        \( a * b = a + b + 5 \).  
+                                        Find the identity element and the inverse of $3$.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 7</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined on $R$ by  
+                                        \( x \triangle y = x + y + xy \).  
+                                        Show that the operation is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 8</h3>
+                                    <p>
+                                        Let $*$ be defined on $R$ by  
+                                        \( a * b = \dfrac{a + b}{2} \).  
+                                        Is the set $R$ closed under this operation?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 9</h3>
+                                    <p>
+                                        A binary operation $*$ is defined by  
+                                        \( a * b = a^2 + b^2 \).  
+                                        State whether $*$ is commutative and associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 10</h3>
+                                    <p>
+                                        Define a binary operation $∇$ on $R$ by  
+                                        \( a ∇ b = a - b \).  
+                                        Test whether the operation is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 11</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on $R$ by  
+                                        \( a * b = a + b + ab \).  
+                                        Find the identity element of the operation.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 12</h3>
+                                    <p>
+                                        Let $*$ be defined on $R$ by  
+                                        \( a * b = a + b - ab \).  
+                                        Find the inverse of $4$ under the operation.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 13</h3>
+                                    <p>
+                                        A binary operation $\circ$ is defined on $R$ by  
+                                        \( a \circ b = \dfrac{ab}{2} \).  
+                                        Determine whether an identity element exists.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 14</h3>
+                                    <p>
+                                        Define a binary operation $*$ on $R$ by  
+                                        \( a * b = a^2b \).  
+                                        Is the operation commutative?
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 15</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on $R$ by  
+                                        \( a * b = a + b + 1 \).  
+                                        Show that the inverse of $x$ is $-x - 2$.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 16</h3>
+                                    <p>
+                                        Let $*$ be defined on $R$ by  
+                                        \( a * b = a - b + 2 \).  
+                                        Determine whether $*$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 17</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined on $R$ by  
+                                        \( x \triangle y = xy + x \).  
+                                        Test whether the operation is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 18</h3>
+                                    <p>
+                                        Define a binary operation $*$ on $R$ by  
+                                        \( a * b = \dfrac{a + b}{1 + ab} \).  
+                                        Find the identity element of the operation.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 19</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on $R$ by  
+                                        \( a * b = a + b + ab^2 \).  
+                                        State whether the operation is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Problem 20</h3>
+                                    <p>
+                                        Let $*$ be defined on $R$ by  
+                                        \( a * b = ab - a - b \).  
+                                        Find the identity element and the inverse of $2$.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution"></div>
+                                </div>
+
                             </div>
                             
                             <div class="cta-box">
@@ -506,30 +1308,1604 @@
                             </div>
                         </section>
 
-                        <!-- Speed Test Game -->
+                        <br><br>
+
+                        <!-- Test Instructions -->
+                        
+                        <!-- Section A -->
                         <section id="quick-test" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
-                            </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your binary operations skills through progressively challenging levels</p>
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Quick Test </h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
                                 </div>
                             </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                               <!-- Question 1 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>
+                                            Which of the following best describes a binary operation on a set $S$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">A function from $S \times S$ to $S$</div>
+                                    <div class="option" data-correct="false">A function from $S$ to $S$</div>
+                                    <div class="option" data-correct="false">A function from $S$ to $S \times S$</div>
+                                    <div class="option" data-correct="false">A relation on $S$</div>
+                                </div>
+
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>
+                                            If $a * b = a + b$ on the set of real numbers, what is $3 * 5$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="true">8</div>
+                                    <div class="option" data-correct="false">15</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <!-- Question 3 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>
+                                            Which property states that $a * b = b * a$ for all $a, b \in S$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Commutative</div>
+                                    <div class="option" data-correct="false">Associative</div>
+                                    <div class="option" data-correct="false">Closure</div>
+                                    <div class="option" data-correct="false">Distributive</div>
+                                </div>
+
+                                <!-- Question 4 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>
+                                            Which of the following operations is <strong>not</strong> commutative on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">Addition</div>
+                                    <div class="option" data-correct="false">Multiplication</div>
+                                    <div class="option" data-correct="true">Subtraction</div>
+                                    <div class="option" data-correct="false">Addition of integers</div>
+                                </div>
+
+                                <!-- Question 5 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>
+                                            A set $S$ is said to be closed under a binary operation $*$ if
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">$a * b \in S$ for all $a, b \in S$</div>
+                                    <div class="option" data-correct="false">$a + b \in S$</div>
+                                    <div class="option" data-correct="false">$a * b \notin S$</div>
+                                    <div class="option" data-correct="false">$a = b$</div>
+                                </div>
+
+                                <!-- Question 6 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>
+                                            If $a * b = a + b + 1$, what is $2 * 3$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <!-- Question 7 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>
+                                            Which property states that $(a * b) * c = a * (b * c)$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">Commutative</div>
+                                    <div class="option" data-correct="true">Associative</div>
+                                    <div class="option" data-correct="false">Closure</div>
+                                    <div class="option" data-correct="false">Identity</div>
+                                </div>
+
+                                <!-- Question 8 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>
+                                            If $a * b = ab$, what is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                    <div class="option" data-correct="false">$a$</div>
+                                </div>
+
+                                <!-- Question 9 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>
+                                            An identity element $e$ of a binary operation $*$ satisfies
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">$a * e = e * a = a$</div>
+                                    <div class="option" data-correct="false">$a * e = 0$</div>
+                                    <div class="option" data-correct="false">$a * a = e$</div>
+                                    <div class="option" data-correct="false">$e * e = a$</div>
+                                </div>
+
+                                <!-- Question 10 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>
+                                            If $a * b = a + b$, what is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                    <div class="option" data-correct="false">$a$</div>
+                                </div>
+
+                                <!-- Question 11 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>
+                                            The inverse of an element $a$ under a binary operation $*$ satisfies
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">$a * a^{-1} = e$</div>
+                                    <div class="option" data-correct="false">
+                                        $a * a = e$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $a^{-1} * a^{-1} = e$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $a + a^{-1} = 1$
+                                    </div>
+                                </div>
+
+                                <!-- Question 12 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>
+                                            Under addition on $R$, what is the inverse of $5$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">-5</div>
+                                    <div class="option" data-correct="false">1/5</div>
+                                    <div class="option" data-correct="false">0</div>
+                                </div>
+
+                                <!-- Question 13 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>
+                                            Which of the following sets is closed under multiplication?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Integers</div>
+                                    <div class="option" data-correct="false">Natural numbers excluding 1</div>
+                                    <div class="option" data-correct="false">Odd numbers under division</div>
+                                    <div class="option" data-correct="false">Whole numbers under subtraction</div>
+                                </div>
+
+                                <!-- Question 14 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>
+                                            Which operation has no identity element on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Subtraction</div>
+                                    <div class="option" data-correct="false">Addition</div>
+                                    <div class="option" data-correct="false">Multiplication</div>
+                                    <div class="option" data-correct="false">Addition of integers</div>
+                                </div>
+
+                                <!-- Question 15 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>
+                                            If $a * b = a + b + 2$, what is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="true">-2</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+
+                                <!-- Question 16 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>
+                                            If $a * b = ab$, what is the inverse of $4$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">-4</div>
+                                    <div class="option" data-correct="true">$\dfrac{1}{4}$</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <!-- Question 17 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>
+                                            Which of the following is an example of a binary operation?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Addition on real numbers</div>
+                                    <div class="option" data-correct="false">Square root on real numbers</div>
+                                    <div class="option" data-correct="false">Logarithm</div>
+                                    <div class="option" data-correct="false">Differentiation</div>
+                                </div>
+
+                                <!-- Question 18 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>
+                                            If $*$ is commutative, which of the following is true?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">$a * b = b * a$</div>
+                                    <div class="option" data-correct="false">$a * b = a$</div>
+                                    <div class="option" data-correct="false">$a * a = b$</div>
+                                    <div class="option" data-correct="false">$a * e = e$</div>
+                                </div>
+
+                                <!-- Question 19 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>
+                                            A binary operation must always satisfy which property?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Closure</div>
+                                    <div class="option" data-correct="false">Commutativity</div>
+                                    <div class="option" data-correct="false">Associativity</div>
+                                    <div class="option" data-correct="false">Distributivity</div>
+                                </div>
+
+                                <!-- Question 20 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>
+                                            If $a * b = a + b - ab$, what is $2 * 3$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">-1</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+
+                                                                <!-- Question 21 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>
+                                            Let $*$ be defined on $R$ by \( a * b = a + b - 1 \).
+                                            What is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <!-- Question 22 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>
+                                            If $a * b = a + b - 1$, what is the inverse of $4$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">-3</div>
+                                    <div class="option" data-correct="true">-2</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <!-- Question 23 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>
+                                            Which of the following is <strong>not</strong> a binary operation on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">Addition</div>
+                                    <div class="option" data-correct="false">Multiplication</div>
+                                    <div class="option" data-correct="true">Division by zero</div>
+                                    <div class="option" data-correct="false">Subtraction</div>
+                                </div>
+
+                                <!-- Question 24 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = ab - a \).
+                                            Find $2 * 3$.
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+
+                                <!-- Question 25 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>
+                                            A binary operation $*$ on a set $S$ is associative if
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        $(a * b) * c = a * (b * c)$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $a * b = b * a$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $a * a = a$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $a * b \in S$
+                                    </div>
+                                </div>
+
+                                <!-- Question 26 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>
+                                            Which of the following operations is associative on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Addition</div>
+                                    <div class="option" data-correct="false">Subtraction</div>
+                                    <div class="option" data-correct="false">Division</div>
+                                    <div class="option" data-correct="false">Taking square roots</div>
+                                </div>
+
+                                <!-- Question 27 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>
+                                            If $a * b = a + b + ab$, what is $1 * 2$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+
+                                <!-- Question 28 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>
+                                            For $a * b = a + b + ab$, what is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <!-- Question 29 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>
+                                            Which of the following operations is commutative but not associative?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        $a * b = a + b^2$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $a * b = a + b$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $a * b = ab$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $a * b = a - b$
+                                    </div>
+                                </div>
+
+                                <!-- Question 30 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>
+                                            Which element has an inverse under addition on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Every real number</div>
+                                    <div class="option" data-correct="false">Only positive numbers</div>
+                                    <div class="option" data-correct="false">Only zero</div>
+                                    <div class="option" data-correct="false">Only integers</div>
+                                </div>
+
+                                <!-- Question 31 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>
+                                            Let $*$ be defined on $R$ by \( a * b = a - b \).
+                                            Does an identity element exist?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">No</div>
+                                    <div class="option" data-correct="false">Yes, 0</div>
+                                    <div class="option" data-correct="false">Yes, 1</div>
+                                    <div class="option" data-correct="false">Yes, -1</div>
+                                </div>
+
+                                <!-- Question 32 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>
+                                            Which of the following is closed under subtraction?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Integers</div>
+                                    <div class="option" data-correct="false">Natural numbers</div>
+                                    <div class="option" data-correct="false">Positive integers</div>
+                                    <div class="option" data-correct="false">Whole numbers</div>
+                                </div>
+
+                                <!-- Question 33 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>
+                                            If $a * b = ab + 1$, what is $2 * 3$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="true">7</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <!-- Question 34 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>
+                                            Which property guarantees that a result of a binary operation
+                                            stays within the set?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Closure</div>
+                                    <div class="option" data-correct="false">Identity</div>
+                                    <div class="option" data-correct="false">Inverse</div>
+                                    <div class="option" data-correct="false">Commutativity</div>
+                                </div>
+
+                                <!-- Question 35 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>
+                                            If $a * b = \dfrac{a + b}{2}$, what is $4 * 6$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <!-- Question 36 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>
+                                            The identity element under multiplication on $R$ is
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                    <div class="option" data-correct="false">$a$</div>
+                                </div>
+
+                                <!-- Question 37 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>
+                                            Which real number has no inverse under multiplication?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <!-- Question 38 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>
+                                            If $*$ is a binary operation on $R$, which statement is always true?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        $a * b$ is uniquely defined for all $a, b \in R$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $a * b = b * a$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        $(a * b) * c = a * (b * c)$
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        An identity element exists
+                                    </div>
+                                </div>
+
+                                <!-- Question 39 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = a^2 + b^2 \).
+                                            Is the operation commutative?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Yes</div>
+                                    <div class="option" data-correct="false">No</div>
+                                    <div class="option" data-correct="false">Only for integers</div>
+                                    <div class="option" data-correct="false">Only for positives</div>
+                                </div>
+
+                                <!-- Question 40 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>
+                                            Which of the following best describes an identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        An element that leaves all others unchanged
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        An element equal to zero
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        An element with no inverse
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        An element greater than all others
+                                    </div>
+                                </div>
+
+                                                                <!-- Question 41 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>
+                                            Let $*$ be defined on $R$ by \( a * b = a + b + 3 \).
+                                            What is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">-3</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+
+                                <!-- Question 42 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>
+                                            If $a * b = a + b + 3$, what is the inverse of $5$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">-5</div>
+                                    <div class="option" data-correct="true">-11</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">-2</div>
+                                </div>
+
+                                <!-- Question 43 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>
+                                            Which of the following operations is <strong>not</strong> associative?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Subtraction</div>
+                                    <div class="option" data-correct="false">Addition</div>
+                                    <div class="option" data-correct="false">Multiplication</div>
+                                    <div class="option" data-correct="false">Addition on integers</div>
+                                </div>
+
+                                <!-- Question 44 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = ab + b \).
+                                            Find $2 * 3$.
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="true">9</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+
+                                <!-- Question 45 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>
+                                            A binary operation has an inverse for every element only if
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        an identity element exists
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        the operation is commutative
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        the operation is distributive
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        the set is finite
+                                    </div>
+                                </div>
+
+                                <!-- Question 46 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>
+                                            Which of the following elements has an inverse under multiplication on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">Only 1</div>
+                                    <div class="option" data-correct="false">All real numbers</div>
+                                </div>
+
+                                <!-- Question 47 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = a - b + 1 \).
+                                            Find $3 * 1$.
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">3</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">0</div>
+                                </div>
+
+                                <!-- Question 48 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>
+                                            Which statement about identity elements is correct?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        An identity element is unique
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        There can be more than one identity element
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Every operation has an identity element
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Identity elements depend on the element chosen
+                                    </div>
+                                </div>
+
+                                <!-- Question 49 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>
+                                            Let $*$ be defined on $R$ by \( a * b = \dfrac{ab}{2} \).
+                                            What is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">-2</div>
+                                </div>
+
+                                <!-- Question 50 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>
+                                            Which of the following operations always has an identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Addition on real numbers</div>
+                                    <div class="option" data-correct="false">Subtraction on real numbers</div>
+                                    <div class="option" data-correct="false">Division on real numbers</div>
+                                    <div class="option" data-correct="false">Square root operation</div>
+                                </div>
+
+                                <!-- Question 51 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>
+                                            If $a * b = ab + a$, what is $2 * 4$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="true">10</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+
+                                <!-- Question 52 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>
+                                            Which of the following operations is closed on the set of integers?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Subtraction</div>
+                                    <div class="option" data-correct="false">Division</div>
+                                    <div class="option" data-correct="false">Square root</div>
+                                    <div class="option" data-correct="false">Logarithm</div>
+                                </div>
+
+                                <!-- Question 53 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = a + 2b \).
+                                            Find $3 * 2$.
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="true">7</div>
+                                    <div class="option" data-correct="false">10</div>
+                                    <div class="option" data-correct="false">8</div>
+                                </div>
+
+                                <!-- Question 54 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>
+                                            Which of the following properties is <strong>not</strong> required
+                                            for a binary operation?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Commutativity</div>
+                                    <div class="option" data-correct="false">Closure</div>
+                                    <div class="option" data-correct="false">Well-defined</div>
+                                    <div class="option" data-correct="false">Two operands</div>
+                                </div>
+
+                                <!-- Question 55 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>
+                                            If $a * b = \dfrac{a + b}{ab}$, is $*$ a binary operation on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">No</div>
+                                    <div class="option" data-correct="false">Yes</div>
+                                    <div class="option" data-correct="false">Only for positive numbers</div>
+                                    <div class="option" data-correct="false">Only for integers</div>
+                                </div>
+
+                                <!-- Question 56 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>
+                                            Which statement about inverses is correct?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        Inverses are unique when they exist
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Every element has an inverse
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Inverses depend on the order
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Inverses exist without an identity
+                                    </div>
+                                </div>
+
+                                <!-- Question 57 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = a^2 + b \).
+                                            Is the operation commutative?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">No</div>
+                                    <div class="option" data-correct="true">No</div>
+                                    <div class="option" data-correct="false">Yes</div>
+                                    <div class="option" data-correct="false">Only for integers</div>
+                                </div>
+
+                                <!-- Question 58 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>
+                                            If $a * b = a + b + ab$, which structure is formed on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">A group</div>
+                                    <div class="option" data-correct="false">A semigroup</div>
+                                    <div class="option" data-correct="false">A ring</div>
+                                    <div class="option" data-correct="false">Not closed</div>
+                                </div>
+
+                                <!-- Question 59 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>
+                                            Which of the following operations does <strong>not</strong>
+                                            have inverses for all elements?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Multiplication on $R$</div>
+                                    <div class="option" data-correct="false">Addition on $R$</div>
+                                    <div class="option" data-correct="false">Addition on $Z$</div>
+                                    <div class="option" data-correct="false">Addition on $Q$</div>
+                                </div>
+
+                                <!-- Question 60 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>
+                                            Which condition must be satisfied for a binary operation
+                                            to form a group?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        Existence of identity and inverses
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Commutativity only
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Closure only
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Distributivity
+                                    </div>
+                                </div>
+
+                                                                <!-- Question 61 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>
+                                            Let $*$ be defined on $R$ by \( a * b = a + b - 4 \).
+                                            What is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="true">4</div>
+                                    <div class="option" data-correct="false">-4</div>
+                                    <div class="option" data-correct="false">0</div>
+                                </div>
+
+                                <!-- Question 62 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>
+                                            If $a * b = a + b - 4$, what is the inverse of $7$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">1</div>
+                                    <div class="option" data-correct="false">-3</div>
+                                    <div class="option" data-correct="false">11</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <!-- Question 63 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>
+                                            Which of the following sets is <strong>not</strong> closed under addition?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Natural numbers excluding zero</div>
+                                    <div class="option" data-correct="false">Integers</div>
+                                    <div class="option" data-correct="false">Rational numbers</div>
+                                    <div class="option" data-correct="false">Real numbers</div>
+                                </div>
+
+                                <!-- Question 64 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = a^2 + b^2 \).
+                                            Find $1 * 2$.
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">3</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+
+                                <!-- Question 65 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>
+                                            Which property ensures that a binary operation gives exactly one output?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Well-defined</div>
+                                    <div class="option" data-correct="false">Associative</div>
+                                    <div class="option" data-correct="false">Commutative</div>
+                                    <div class="option" data-correct="false">Inverse</div>
+                                </div>
+
+                                <!-- Question 66 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>
+                                            Which of the following operations is both commutative and associative?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Addition on real numbers</div>
+                                    <div class="option" data-correct="false">Subtraction on real numbers</div>
+                                    <div class="option" data-correct="false">Division on real numbers</div>
+                                    <div class="option" data-correct="false">Taking square roots</div>
+                                </div>
+
+                                <!-- Question 67 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>
+                                            If $a * b = ab - 1$, what is $3 * 2$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="true">5</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <!-- Question 68 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>
+                                            Let $*$ be defined on $R$ by \( a * b = ab - 1 \).
+                                            Does an identity element exist?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Yes</div>
+                                    <div class="option" data-correct="false">No</div>
+                                    <div class="option" data-correct="false">Only for integers</div>
+                                    <div class="option" data-correct="false">Only for positive numbers</div>
+                                </div>
+
+                                <!-- Question 69 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>
+                                            The identity element of the operation
+                                            \( a * b = ab - 1 \) is
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                </div>
+
+                                <!-- Question 70 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>
+                                            Which of the following statements is always true for inverses?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">An inverse is unique</div>
+                                    <div class="option" data-correct="false">Every element has an inverse</div>
+                                    <div class="option" data-correct="false">Inverses are optional</div>
+                                    <div class="option" data-correct="false">Inverses exist without identity</div>
+                                </div>
+
+                                <!-- Question 71 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = a + 2b + 1 \).
+                                            Find $2 * 3$.
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="true">9</div>
+                                    <div class="option" data-correct="false">11</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+
+                                <!-- Question 72 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>
+                                            Which of the following operations is <strong>not</strong> closed on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Division</div>
+                                    <div class="option" data-correct="false">Addition</div>
+                                    <div class="option" data-correct="false">Multiplication</div>
+                                    <div class="option" data-correct="false">Subtraction</div>
+                                </div>
+
+                                <!-- Question 73 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = \dfrac{a + b}{a - b} \).
+                                            Is $*$ a binary operation on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">No</div>
+                                    <div class="option" data-correct="false">Yes</div>
+                                    <div class="option" data-correct="false">Only for integers</div>
+                                    <div class="option" data-correct="false">Only for positives</div>
+                                </div>
+
+                                <!-- Question 74 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>
+                                            Which of the following is required for a set to form a group?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Closure, identity and inverses</div>
+                                    <div class="option" data-correct="false">Commutativity only</div>
+                                    <div class="option" data-correct="false">Distributivity</div>
+                                    <div class="option" data-correct="false">Order of elements</div>
+                                </div>
+
+                                <!-- Question 75 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>
+                                            If $a * b = a^2b$, is the operation commutative?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">No</div>
+                                    <div class="option" data-correct="false">Yes</div>
+                                    <div class="option" data-correct="false">Only for $a=b$</div>
+                                    <div class="option" data-correct="false">Only for integers</div>
+                                </div>
+
+                                <!-- Question 76 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>
+                                            Which element is its own inverse under addition?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <!-- Question 77 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = ab + a + b \).
+                                            What is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">-1</div>
+                                    <div class="option" data-correct="false">2</div>
+                                </div>
+
+                                <!-- Question 78 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>
+                                            Which statement correctly describes a binary operation?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        It combines two elements of a set to give one element of the same set
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It combines one element to give two outputs
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It maps elements to a different set
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It must be commutative
+                                    </div>
+                                </div>
+
+                                <!-- Question 79 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>
+                                            Which operation forms an abelian group on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Addition</div>
+                                    <div class="option" data-correct="false">Multiplication</div>
+                                    <div class="option" data-correct="false">Subtraction</div>
+                                    <div class="option" data-correct="false">Division</div>
+                                </div>
+
+                                <!-- Question 80 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>
+                                            Why is division on $R$ not a binary operation?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        Division by zero is undefined
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It is not commutative
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It has no identity element
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It is not associative
+                                    </div>
+                                </div>
+
+                                                                <!-- Question 81 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>
+                                            Let $*$ be defined on $R$ by \( a * b = a + b - 6 \).
+                                            What is the identity element?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">-6</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <!-- Question 82 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>
+                                            If $a * b = a + b - 6$, what is the inverse of $10$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">2</div>
+                                    <div class="option" data-correct="false">-4</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">6</div>
+                                </div>
+
+                                <!-- Question 83 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>
+                                            Which of the following is an example of a closed set under addition?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Integers</div>
+                                    <div class="option" data-correct="false">Natural numbers</div>
+                                    <div class="option" data-correct="false">Positive integers</div>
+                                    <div class="option" data-correct="false">Whole numbers excluding zero</div>
+                                </div>
+
+                                <!-- Question 84 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = ab + a \).
+                                            Find $3 * 2$.
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">9</div>
+                                    <div class="option" data-correct="false">6</div>
+                                    <div class="option" data-correct="false">8</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+
+                                <!-- Question 85 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>
+                                            Which property ensures that the order of grouping does not affect the result?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Associativity</div>
+                                    <div class="option" data-correct="false">Commutativity</div>
+                                    <div class="option" data-correct="false">Closure</div>
+                                    <div class="option" data-correct="false">Identity</div>
+                                </div>
+
+                                <!-- Question 86 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>
+                                            Which of the following operations is commutative on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Addition</div>
+                                    <div class="option" data-correct="false">Subtraction</div>
+                                    <div class="option" data-correct="false">Division</div>
+                                    <div class="option" data-correct="false">Taking logarithms</div>
+                                </div>
+
+                                <!-- Question 87 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>
+                                            If $a * b = a - b + 4$, what is $5 * 3$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">6</div>
+                                    <div class="option" data-correct="false">2</div>
+                                    <div class="option" data-correct="false">4</div>
+                                    <div class="option" data-correct="false">12</div>
+                                </div>
+
+                                <!-- Question 88 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>
+                                            Which statement about identity elements is true?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        An identity element leaves every element unchanged
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Every operation has more than one identity
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Identity depends on the element chosen
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        Identity exists only in groups
+                                    </div>
+                                </div>
+
+                                <!-- Question 89 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>
+                                            Let $*$ be defined on $R$ by \( a * b = ab \).
+                                            What is the inverse of $5$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">\( \dfrac{1}{5} \)</div>
+                                    <div class="option" data-correct="false">-5</div>
+                                    <div class="option" data-correct="false">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                </div>
+
+                                <!-- Question 90 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>
+                                            Which of the following does <strong>not</strong> have an inverse under multiplication?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">0</div>
+                                    <div class="option" data-correct="false">1</div>
+                                    <div class="option" data-correct="false">-2</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <!-- Question 91 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = a + 3b \).
+                                            Find $1 * 4$.
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">13</div>
+                                    <div class="option" data-correct="false">7</div>
+                                    <div class="option" data-correct="false">12</div>
+                                    <div class="option" data-correct="false">4</div>
+                                </div>
+
+                                <!-- Question 92 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>
+                                            Which of the following operations is <strong>not</strong> closed on the integers?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Division</div>
+                                    <div class="option" data-correct="false">Addition</div>
+                                    <div class="option" data-correct="false">Subtraction</div>
+                                    <div class="option" data-correct="false">Multiplication</div>
+                                </div>
+
+                                <!-- Question 93 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>
+                                            Let $*$ be defined by \( a * b = \dfrac{a + b}{2} \).
+                                            What is $6 * 10$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">8</div>
+                                    <div class="option" data-correct="false">16</div>
+                                    <div class="option" data-correct="false">5</div>
+                                    <div class="option" data-correct="false">3</div>
+                                </div>
+
+                                <!-- Question 94 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>
+                                            Which property ensures that a result belongs to the same set?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Closure</div>
+                                    <div class="option" data-correct="false">Commutativity</div>
+                                    <div class="option" data-correct="false">Associativity</div>
+                                    <div class="option" data-correct="false">Inverse</div>
+                                </div>
+
+                                <!-- Question 95 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>
+                                            If $a * b = a^2 + b$, is the operation commutative?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">No</div>
+                                    <div class="option" data-correct="false">Yes</div>
+                                    <div class="option" data-correct="false">Only for integers</div>
+                                    <div class="option" data-correct="false">Only for positives</div>
+                                </div>
+
+                                <!-- Question 96 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>
+                                            Which structure requires closure, associativity, identity and inverses?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Group</div>
+                                    <div class="option" data-correct="false">Set</div>
+                                    <div class="option" data-correct="false">Ring</div>
+                                    <div class="option" data-correct="false">Function</div>
+                                </div>
+
+                                <!-- Question 97 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>
+                                            Which of the following operations forms a group on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">Addition</div>
+                                    <div class="option" data-correct="false">Multiplication</div>
+                                    <div class="option" data-correct="false">Subtraction</div>
+                                    <div class="option" data-correct="false">Division</div>
+                                </div>
+
+                                <!-- Question 98 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>
+                                            Why does subtraction fail to form a group on $R$?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        It is not associative and has no identity
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It is not closed
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It has no inverses
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It is commutative
+                                    </div>
+                                </div>
+
+                                <!-- Question 99 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>
+                                            Which statement best summarizes a binary operation?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        A rule combining two elements of a set to produce one element of the same set
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        A rule combining one element to give two outputs
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        A mapping between two different sets
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        A relation without rules
+                                    </div>
+                                </div>
+
+                                <!-- Question 100 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>
+                                            Which of the following is the <strong>main reason</strong>
+                                            division on $R$ is not a binary operation?
+                                        </p>
+                                    </div>
+                                    <div class="option" data-correct="true">
+                                        Division by zero is undefined
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It is not commutative
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It has no inverses
+                                    </div>
+                                    <div class="option" data-correct="false">
+                                        It is not associative
+                                    </div>
+                                </div>
+
+                            </div>
                         </section>
+
                     </article>
                 </div>
             </div>
@@ -543,26 +2919,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -571,14 +2955,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a> <br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../privacy-policy">Privacy Policy</a>
+                        <a href="../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -588,25 +2973,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <script src="../shs1/js/math-challenge-binary.js"></script>
-        <script src="../../js/emath-lesson.js"></script>
-        <script src="../shs1/js/binary-operations.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../js/lessons-test-configuration.js"></script>
+        <script src="../js/wassce-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>

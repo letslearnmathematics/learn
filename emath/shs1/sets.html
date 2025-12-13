@@ -5,19 +5,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <!-- SEO and Social Meta Tags -->
-        <title>Sets Theory | Elective Mathematics | The Let's Learn Project</title>
+        <title>Sets Theory | Additional Mathematics | The Let's Learn Project</title>
         <meta name="description" content="Comprehensive lesson on Sets Theory for SHS1 Elective Mathematics. Learn definitions, operations, Venn diagrams and practical applications.">
         
         <!-- Favicons -->
-        <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon-16x16.png">
-        <link rel="manifest" href="../../../../site.webmanifest">
+        <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+        <link rel="manifest" href="../../site.webmanifest">
         
         <!-- Open Graph / Social Media -->
-        <meta property="og:title" content="Sets Theory | Elective Mathematics">
+        <meta property="og:title" content="Sets Theory | Additional Mathematics">
         <meta property="og:description" content="Master Sets Theory with interactive lessons and practice problems for SHS students">
-        <meta property="og:image" content="https://theletslearnproject.com/images/sets-social-preview.png">
+        <meta property="og:image" content="https://theletslearnproject.com/images/android-chrome-192x192.png">
         <meta property="og:url" content="https://theletslearnproject.com/emath/shs1/sets">
         <meta property="og:type" content="website">
     
@@ -27,14 +27,27 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="../../css/emath-lesson.css">
-        <link rel="stylesheet" href="../shs1/css/sets.css">
+        <link rel="stylesheet" href="../shs1/css/binary-operations.css">
+        <link rel="stylesheet" href="../css/ssce-tests-general.css">
+        <link rel="stylesheet" href="../css/ssce2024.css">
     
         <!-- MathJax Configuration -->
         <script>
-            MathJax = {
+            window.MathJax = {
+                startup: {
+                    pageReady: () => {
+                        return MathJax.startup.defaultPageReady().then(() => {
+                            console.log('MathJax is fully ready');
+                            // Re-render any dynamic content that might have loaded after initial typeset
+                            if (typeof MathJax.typesetPromise === 'function') {
+                                return MathJax.typesetPromise();
+                            }
+                        });
+                    }
+                },
                 tex: {
-                    inlineMath: [['\\(', '\\)']],
-                    displayMath: [['\\[', '\\]']],
+                    inlineMath: [['$', '$'], ['\\(', '\\)']],
+                    displayMath: [['$$', '$$'], ['\\[', '\\]']],
                     processEscapes: true,
                     packages: {'[+]': ['ams']}
                 },
@@ -42,17 +55,8 @@
                     ignoreHtmlClass: 'tex2jax_ignore',
                     processHtmlClass: 'tex2jax_process'
                 },
-                startup: {
-                    ready: () => {
-                        MathJax.startup.defaultReady();
-                        // Add handler to process dynamic content
-                        MathJax.startup.promise.then(() => {
-                            console.log('MathJax ready for dynamic content');
-                            if (window.gameInitialized) {
-                                MathJax.typesetPromise();
-                            }
-                        });
-                    }
+                loader: {
+                    load: ['[tex]/ams']
                 }
             };
         </script>
@@ -62,13 +66,8 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
-            crossorigin="anonymous"></script>
-
-        <!-- Add this to your existing head section -->
-        <link rel="stylesheet" href="../shs1/css/math-challenge-sets.css">
-
-        <!--Passco-->
-        <link rel="stylesheet" href="../passco-emath/css/for-passco.css">
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <!-- Header Navigation -->
@@ -112,7 +111,7 @@
                     <!-- Sidebar Navigation -->
                     <aside class="lesson-sidebar">
                         <div class="sidebar-card">
-                            <h3 class="sidebar-title">SHS1 E-Maths</h3>
+                            <h3 class="sidebar-title">SHS1: Add. Maths</h3>
                             <div class="current-topic">
                                 <i class="fas fa-project-diagram"></i>
                                 <span>Sets Theory</span>
@@ -138,7 +137,7 @@
                             <a href="#quick-test" class="quick-link">
                                 <i class="fas fa-pen-fancy"></i> Quick Test
                             </a>
-                            <a href="../../../passco" class="quick-link">
+                            <a href="../../../../passco-jhs" class="quick-link">
                                 <i class="fas fa-file-pdf"></i> PASSCO
                             </a>
                         </div>
@@ -150,7 +149,7 @@
                         <nav class="breadcrumb">
                             <a href="../../">Home</a>
                             <i class="fas fa-chevron-right"></i>
-                            <a href="../../emath">E-Maths</a>
+                            <a href="../../emath">Add. Maths</a>
                             <i class="fas fa-chevron-right"></i>
                             <a href="../../emath#shs1">SHS1</a>
                             <i class="fas fa-chevron-right"></i>
@@ -286,27 +285,6 @@
                                 </div>
                             </div>
                             
-                            <!-- Special Sets -->
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-star"></i> Special Sets
-                                </h3>
-                                
-                                <div class="special-set-cards">
-                                    <div class="set-card">
-                                        <h4>Empty Set (\( \emptyset \))</h4>
-                                        <p>Contains no elements:</p>
-                                        \[ \emptyset = \{\} \]
-                                        \[ n(\emptyset) = 0 \]
-                                    </div>
-                                    
-                                    <div class="set-card">
-                                        <h4>Unit Set</h4>
-                                        <p>Contains exactly one element:</p>
-                                        \[ S = \{a\} \]
-                                    </div>
-                                </div>
-                            </div>
                         </section>
 
                         <!-- Types of Sets Section -->
@@ -363,6 +341,29 @@
                                     \[ A \cap B = \emptyset \]
                                 </div>
                             </div>
+                            
+                            <!-- Special Sets -->
+                            <div class="concept-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-star"></i> Special Sets
+                                </h3>
+                                
+                                <div class="special-set-cards">
+                                    <div class="set-card">
+                                        <h4>Empty Set (\( \emptyset \))</h4>
+                                        <p>Contains no elements:</p>
+                                        \[ \emptyset = \{\} \]
+                                        \[ n(\emptyset) = 0 \]
+                                    </div>
+                                    
+                                    <div class="set-card">
+                                        <h4>Unit Set</h4>
+                                        <p>Contains exactly one element:</p>
+                                        \[ S = \{a\} \]
+                                    </div>
+                                </div>
+                            </div>
+
                         </section>
 
                         <!-- Number Systems Section -->
@@ -607,27 +608,1153 @@
 
                         <br><br>
 
-                        <!-- Speed Test Game -->
+                        <!-- Test Instructions -->
+                        
+                        <!-- Section A -->
                         <section id="quick-test" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-trophy"></i> Math Challenge
-                            </h2>
-                            <div class="speed-game">
-                                <div class="game-header">
-                                    <h4>
-                                        <i class="fas fa-hourglass-half"></i> Timed Test in 7 Levels
-                                    </h4>
-                                    <p class="game-description">Test your math skills through progressively challenging levels</p>
+                            <h2 class="section-title"><i class="fas fa-paw"></i> Quick Test </h2>
+
+                            <div class="test-container">
+                                <div class="test-instructions">
+                                    <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
+                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                 </div>
-                                
-                                <div class="game-card">
-                                    <div id="game-container">
-                                        <!-- Game screens will be inserted here by JavaScript -->
+
+                                <div class="timer-container">
+                                    <div class="progress-bar">
+                                        <div class="progress-fill"></div>
                                     </div>
+                                    <span id="timer-display">60:00</span>
                                 </div>
-                                
-                                <div class="game-footer">
-                                    <p><i class="fas fa-info-circle"></i> Each level has 20 questions. Need 17 correct to advance.</p>
+
+                                <div id="test-warning" style="display: none;"></div>
+                                <div id="test-content"></div>
+
+                                <div class="test-navigation">
+                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                    <span id="question-counter">Question 1 of 100</span>
+                                    <button id="next-btn" class="nav-btn">Next</button>
+                                </div>
+
+                                <div class="test-controls">
+                                    <button id="submit-btn" class="control-btn">Submit Test</button>
+                                </div>
+                            </div>
+
+                            <div id="results-section" style="display: none;">
+                                <div class="test-instructions">
+                                    <h3>Your Test Results</h3>
+                                    <p id="score-display">You scored 0 out of 40</p>
+                                </div>
+
+                                <div id="results-content"></div>
+
+                                <div class="test-controls">
+                                    <button id="review-btn" class="control-btn">Review All Questions</button>
+                                </div>
+                            </div>
+
+                            <!-- Hidden question bank in HTML -->
+                            <div id="question-bank" style="display: none;">
+                                <!-- Question 1 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 1</h3>
+                                        <p>Express 5,432 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">5,400</div>
+                                    <div class="option" data-correct="false">5,500</div>
+                                    <div class="option" data-correct="false">5,430</div>
+                                    <div class="option" data-correct="false">5,000</div>
+                                </div>
+                                <!-- Question 2 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 2</h3>
+                                        <p>Express 0.009876 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.0098</div>
+                                    <div class="option" data-correct="true">0.0099</div>
+                                    <div class="option" data-correct="false">0.00987</div>
+                                    <div class="option" data-correct="false">0.01</div>
+                                </div>
+                                <!-- Question 3 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 3</h3>
+                                        <p>Express 123.456 to 1 decimal place.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">123.4</div>
+                                    <div class="option" data-correct="false">123.45</div>
+                                    <div class="option" data-correct="true">123.5</div>
+                                    <div class="option" data-correct="false">123.46</div>
+                                </div>
+                                <!-- Question 4 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 4</h3>
+                                        <p>Express 0.0007894 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.00078</div>
+                                    <div class="option" data-correct="true">0.00079</div>
+                                    <div class="option" data-correct="false">0.0008</div>
+                                    <div class="option" data-correct="false">0.000789</div>
+                                </div>
+                                <!-- Question 5 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 5</h3>
+                                        <p>Express 67,891 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">67,800</div>
+                                    <div class="option" data-correct="false">68,000</div>
+                                    <div class="option" data-correct="true">67,900</div>
+                                    <div class="option" data-correct="false">67,890</div>
+                                </div>
+                                <!-- Question 6 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 6</h3>
+                                        <p>Express 8.7654 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">8.76</div>
+                                    <div class="option" data-correct="true">8.77</div>
+                                    <div class="option" data-correct="false">8.75</div>
+                                    <div class="option" data-correct="false">8.765</div>
+                                </div>
+                                <!-- Question 7 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 7</h3>
+                                        <p>Express 0.05678 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.057</div>
+                                    <div class="option" data-correct="false">0.05</div>
+                                    <div class="option" data-correct="false">0.06</div>
+                                    <div class="option" data-correct="true">0.06</div>
+                                </div>
+                                <!-- Question 8 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 8</h3>
+                                        <p>Express 345.678 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">340</div>
+                                    <div class="option" data-correct="true">350</div>
+                                    <div class="option" data-correct="false">346</div>
+                                    <div class="option" data-correct="false">345.7</div>
+                                </div>
+                                <!-- Question 9 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 9</h3>
+                                        <p>Express 0.12345 to 3 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.123</div>
+                                    <div class="option" data-correct="true">0.123</div>
+                                    <div class="option" data-correct="false">0.124</div>
+                                    <div class="option" data-correct="false">0.12</div>
+                                </div>
+                                <!-- Question 10 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 10</h3>
+                                        <p>Express 9,876 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">9,800</div>
+                                    <div class="option" data-correct="false">9,900</div>
+                                    <div class="option" data-correct="true">10,000</div>
+                                    <div class="option" data-correct="false">9,000</div>
+                                </div>
+                                <!-- Question 11 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 11</h3>
+                                        <p>Express 0.04567 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.045</div>
+                                    <div class="option" data-correct="false">0.0457</div>
+                                    <div class="option" data-correct="false">0.0456</div>
+                                    <div class="option" data-correct="true">0.046</div>
+                                </div>
+                                <!-- Question 12 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 12</h3>
+                                        <p>Express 789.123 to 1 decimal place.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">789.1</div>
+                                    <div class="option" data-correct="false">789.12</div>
+                                    <div class="option" data-correct="false">789.13</div>
+                                    <div class="option" data-correct="true">789.1</div>
+                                </div>
+                                <!-- Question 13 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 13</h3>
+                                        <p>Express 0.0001234 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.00012</div>
+                                    <div class="option" data-correct="false">0.00012</div>
+                                    <div class="option" data-correct="false">0.00013</div>
+                                    <div class="option" data-correct="false">0.000123</div>
+                                </div>
+                                <!-- Question 14 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 14</h3>
+                                        <p>Express 56,789 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">56,700</div>
+                                    <div class="option" data-correct="true">56,800</div>
+                                    <div class="option" data-correct="false">56,789</div>
+                                    <div class="option" data-correct="false">56,900</div>
+                                </div>
+                                <!-- Question 15 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 15</h3>
+                                        <p>Express 3.14159 to 4 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3.1415</div>
+                                    <div class="option" data-correct="true">3.1416</div>
+                                    <div class="option" data-correct="false">3.141</div>
+                                    <div class="option" data-correct="false">3.142</div>
+                                </div>
+                                <!-- Question 16 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 16</h3>
+                                        <p>Express 0.09999 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.09</div>
+                                    <div class="option" data-correct="false">0.10</div>
+                                    <div class="option" data-correct="true">0.1</div>
+                                    <div class="option" data-correct="false">0.099</div>
+                                </div>
+                                <!-- Question 17 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 17</h3>
+                                        <p>Express 2,345 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">2,300</div>
+                                    <div class="option" data-correct="false">2,340</div>
+                                    <div class="option" data-correct="false">2,350</div>
+                                    <div class="option" data-correct="false">2,345</div>
+                                </div>
+                                <!-- Question 18 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 18</h3>
+                                        <p>Express 0.00789 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.00789</div>
+                                    <div class="option" data-correct="false">0.0078</div>
+                                    <div class="option" data-correct="false">0.00790</div>
+                                    <div class="option" data-correct="false">0.008</div>
+                                </div>
+                                <!-- Question 19 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 19</h3>
+                                        <p>Express 123.4567 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">123.45</div>
+                                    <div class="option" data-correct="true">123.46</div>
+                                    <div class="option" data-correct="false">123.44</div>
+                                    <div class="option" data-correct="false">123.47</div>
+                                </div>
+                                <!-- Question 20 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 20</h3>
+                                        <p>Express 0.0005678 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.0005</div>
+                                    <div class="option" data-correct="true">0.0006</div>
+                                    <div class="option" data-correct="false">0.00057</div>
+                                    <div class="option" data-correct="false">0.00056</div>
+                                </div>
+                                <!-- Question 21 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 21</h3>
+                                        <p>Express 0.003456 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.0034</div>
+                                    <div class="option" data-correct="false">0.00345</div>
+                                    <div class="option" data-correct="true">0.0035</div>
+                                    <div class="option" data-correct="false">0.00346</div>
+                                </div>
+                                <!-- Question 22 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 22</h3>
+                                        <p>Express 789.654 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">789.65</div>
+                                    <div class="option" data-correct="false">789.66</div>
+                                    <div class="option" data-correct="true">789.65</div>
+                                    <div class="option" data-correct="false">789.64</div>
+                                </div>
+                                <!-- Question 23 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 23</h3>
+                                        <p>Express 0.0009876 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.0009</div>
+                                    <div class="option" data-correct="false">0.00099</div>
+                                    <div class="option" data-correct="true">0.001</div>
+                                    <div class="option" data-correct="false">0.00098</div>
+                                </div>
+                                <!-- Question 24 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 24</h3>
+                                        <p>Express 12,345 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12,300</div>
+                                    <div class="option" data-correct="true">12,300</div>
+                                    <div class="option" data-correct="false">12,350</div>
+                                    <div class="option" data-correct="false">12,400</div>
+                                </div>
+                                <!-- Question 25 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 25</h3>
+                                        <p>Express 0.123456 to 4 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.1235</div>
+                                    <div class="option" data-correct="false">0.1234</div>
+                                    <div class="option" data-correct="false">0.12345</div>
+                                    <div class="option" data-correct="false">0.12346</div>
+                                </div>
+                                <!-- Question 26 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 26</h3>
+                                        <p>Express 456.789 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">400</div>
+                                    <div class="option" data-correct="false">460</div>
+                                    <div class="option" data-correct="false">457</div>
+                                    <div class="option" data-correct="true">500</div>
+                                </div>
+                                <!-- Question 27 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 27</h3>
+                                        <p>Express 0.04567 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.0456</div>
+                                    <div class="option" data-correct="false">0.046</div>
+                                    <div class="option" data-correct="false">0.045</div>
+                                    <div class="option" data-correct="true">0.0457</div>
+                                </div>
+                                <!-- Question 28 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 28</h3>
+                                        <p>Express 3.9999 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">3.99</div>
+                                    <div class="option" data-correct="true">4.00</div>
+                                    <div class="option" data-correct="false">4.0</div>
+                                    <div class="option" data-correct="false">3.98</div>
+                                </div>
+                                <!-- Question 29 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 29</h3>
+                                        <p>Express 0.00012345 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.00012</div>
+                                    <div class="option" data-correct="true">0.00012</div>
+                                    <div class="option" data-correct="false">0.00013</div>
+                                    <div class="option" data-correct="false">0.000123</div>
+                                </div>
+                                <!-- Question 30 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 30</h3>
+                                        <p>Express 98,765 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">100,000</div>
+                                    <div class="option" data-correct="false">90,000</div>
+                                    <div class="option" data-correct="false">99,000</div>
+                                    <div class="option" data-correct="false">98,000</div>
+                                </div>
+                                <!-- Question 31 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 31</h3>
+                                        <p>Express 0.56789 to 3 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.567</div>
+                                    <div class="option" data-correct="true">0.568</div>
+                                    <div class="option" data-correct="false">0.569</div>
+                                    <div class="option" data-correct="false">0.56</div>
+                                </div>
+                                <!-- Question 32 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 32</h3>
+                                        <p>Express 1,234 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">1,200</div>
+                                    <div class="option" data-correct="true">1,200</div>
+                                    <div class="option" data-correct="false">1,230</div>
+                                    <div class="option" data-correct="false">1,240</div>
+                                </div>
+                                <!-- Question 33 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 33</h3>
+                                        <p>Express 0.0098765 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.009</div>
+                                    <div class="option" data-correct="false">0.0099</div>
+                                    <div class="option" data-correct="true">0.01</div>
+                                    <div class="option" data-correct="false">0.0098</div>
+                                </div>
+                                <!-- Question 34 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 34</h3>
+                                        <p>Express 567.891 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">560</div>
+                                    <div class="option" data-correct="false">568</div>
+                                    <div class="option" data-correct="true">570</div>
+                                    <div class="option" data-correct="false">567.9</div>
+                                </div>
+                                <!-- Question 35 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 35</h3>
+                                        <p>Express 0.0004567 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.000456</div>
+                                    <div class="option" data-correct="true">0.000457</div>
+                                    <div class="option" data-correct="false">0.00046</div>
+                                    <div class="option" data-correct="false">0.00045</div>
+                                </div>
+                                <!-- Question 36 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 36</h3>
+                                        <p>Express 23.4567 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">23.45</div>
+                                    <div class="option" data-correct="true">23.46</div>
+                                    <div class="option" data-correct="false">23.44</div>
+                                    <div class="option" data-correct="false">23.47</div>
+                                </div>
+                                <!-- Question 37 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 37</h3>
+                                        <p>Express 0.000789 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.0008</div>
+                                    <div class="option" data-correct="false">0.0007</div>
+                                    <div class="option" data-correct="false">0.00079</div>
+                                    <div class="option" data-correct="false">0.00078</div>
+                                </div>
+                                <!-- Question 38 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 38</h3>
+                                        <p>Express 345.6789 to 4 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">345.6</div>
+                                    <div class="option" data-correct="true">345.7</div>
+                                    <div class="option" data-correct="false">345.68</div>
+                                    <div class="option" data-correct="false">345.679</div>
+                                </div>
+                                <!-- Question 39 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 39</h3>
+                                        <p>Express 0.123456 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.12</div>
+                                    <div class="option" data-correct="true">0.12</div>
+                                    <div class="option" data-correct="false">0.13</div>
+                                    <div class="option" data-correct="false">0.123</div>
+                                </div>
+                                <!-- Question 40 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 40</h3>
+                                        <p>Express 9,876.543 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">9,870</div>
+                                    <div class="option" data-correct="true">9,880</div>
+                                    <div class="option" data-correct="false">9,900</div>
+                                    <div class="option" data-correct="false">9,876</div>
+                                </div>
+                                <!-- Question 41 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 41</h3>
+                                        <p>Express 0.004321 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.0043</div>
+                                    <div class="option" data-correct="false">0.00432</div>
+                                    <div class="option" data-correct="false">0.004</div>
+                                    <div class="option" data-correct="true">0.0043</div>
+                                </div>
+                                <!-- Question 42 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 42</h3>
+                                        <p>Express 12,987 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">13,000</div>
+                                    <div class="option" data-correct="true">13,000</div>
+                                    <div class="option" data-correct="false">12,900</div>
+                                    <div class="option" data-correct="false">12,980</div>
+                                </div>
+                                <!-- Question 43 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 43</h3>
+                                        <p>Express 0.07891 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.08</div>
+                                    <div class="option" data-correct="true">0.08</div>
+                                    <div class="option" data-correct="false">0.079</div>
+                                    <div class="option" data-correct="false">0.07</div>
+                                </div>
+                                <!-- Question 44 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 44</h3>
+                                        <p>Express 456.789 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">456.79</div>
+                                    <div class="option" data-correct="false">456.78</div>
+                                    <div class="option" data-correct="true">456.79</div>
+                                    <div class="option" data-correct="false">456.8</div>
+                                </div>
+                                <!-- Question 45 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 45</h3>
+                                        <p>Express 0.00056789 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.00057</div>
+                                    <div class="option" data-correct="false">0.00056</div>
+                                    <div class="option" data-correct="true">0.00057</div>
+                                    <div class="option" data-correct="false">0.0006</div>
+                                </div>
+                                <!-- Question 46 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 46</h3>
+                                        <p>Express 89,765 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">89,800</div>
+                                    <div class="option" data-correct="false">89,000</div>
+                                    <div class="option" data-correct="false">90,000</div>
+                                    <div class="option" data-correct="true">90,000</div>
+                                </div>
+                                <!-- Question 47 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 47</h3>
+                                        <p>Express 0.1234567 to 4 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.1234</div>
+                                    <div class="option" data-correct="false">0.12345</div>
+                                    <div class="option" data-correct="false">0.1235</div>
+                                    <div class="option" data-correct="true">0.1235</div>
+                                </div>
+                                <!-- Question 48 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 48</h3>
+                                        <p>Express 234.567 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">234.6</div>
+                                    <div class="option" data-correct="false">230</div>
+                                    <div class="option" data-correct="true">230</div>
+                                    <div class="option" data-correct="false">240</div>
+                                </div>
+                                <!-- Question 49 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 49</h3>
+                                        <p>Express 0.00098765 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.00099</div>
+                                    <div class="option" data-correct="false">0.000988</div>
+                                    <div class="option" data-correct="true">0.000988</div>
+                                    <div class="option" data-correct="false">0.000987</div>
+                                </div>
+                                <!-- Question 50 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 50</h3>
+                                        <p>Express 7,654 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">7,700</div>
+                                    <div class="option" data-correct="true">7,700</div>
+                                    <div class="option" data-correct="false">7,600</div>
+                                    <div class="option" data-correct="false">7,650</div>
+                                </div>
+                                <!-- Question 51 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 51</h3>
+                                        <p>Express 0.045678 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.05</div>
+                                    <div class="option" data-correct="false">0.05</div>
+                                    <div class="option" data-correct="false">0.046</div>
+                                    <div class="option" data-correct="false">0.045</div>
+                                </div>
+                                <!-- Question 52 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 52</h3>
+                                        <p>Express 123.456 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">123.46</div>
+                                    <div class="option" data-correct="true">123.46</div>
+                                    <div class="option" data-correct="false">123.45</div>
+                                    <div class="option" data-correct="false">123.5</div>
+                                </div>
+                                <!-- Question 53 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 53</h3>
+                                        <p>Express 0.000123456 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.00012</div>
+                                    <div class="option" data-correct="false">0.00013</div>
+                                    <div class="option" data-correct="true">0.00012</div>
+                                    <div class="option" data-correct="false">0.000123</div>
+                                </div>
+                                <!-- Question 54 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 54</h3>
+                                        <p>Express 56,789 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">57,000</div>
+                                    <div class="option" data-correct="false">56,800</div>
+                                    <div class="option" data-correct="false">56,700</div>
+                                    <div class="option" data-correct="true">57,000</div>
+                                </div>
+                                <!-- Question 55 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 55</h3>
+                                        <p>Express 0.987654 to 3 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.988</div>
+                                    <div class="option" data-correct="true">0.988</div>
+                                    <div class="option" data-correct="false">0.987</div>
+                                    <div class="option" data-correct="false">0.99</div>
+                                </div>
+                                <!-- Question 56 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 56</h3>
+                                        <p>Express 2,345 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">2,000</div>
+                                    <div class="option" data-correct="true">2,000</div>
+                                    <div class="option" data-correct="false">2,300</div>
+                                    <div class="option" data-correct="false">2,400</div>
+                                </div>
+                                <!-- Question 57 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 57</h3>
+                                        <p>Express 0.00045678 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.00046</div>
+                                    <div class="option" data-correct="false">0.00046</div>
+                                    <div class="option" data-correct="false">0.00045</div>
+                                    <div class="option" data-correct="false">0.000457</div>
+                                </div>
+                                <!-- Question 58 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 58</h3>
+                                        <p>Express 789.1234 to 3 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">789.123</div>
+                                    <div class="option" data-correct="true">789.123</div>
+                                    <div class="option" data-correct="false">789.124</div>
+                                    <div class="option" data-correct="false">789.12</div>
+                                </div>
+                                <!-- Question 59 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 59</h3>
+                                        <p>Express 0.056789 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.057</div>
+                                    <div class="option" data-correct="false">0.056</div>
+                                    <div class="option" data-correct="true">0.057</div>
+                                    <div class="option" data-correct="false">0.05</div>
+                                </div>
+                                <!-- Question 60 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 60</h3>
+                                        <p>Express 123,456 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">120,000</div>
+                                    <div class="option" data-correct="false">123,000</div>
+                                    <div class="option" data-correct="true">120,000</div>
+                                    <div class="option" data-correct="false">124,000</div>
+                                </div>
+                                <!-- Question 61 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 61</h3>
+                                        <p>Express 0.0003456 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.00034</div>
+                                    <div class="option" data-correct="false">0.000346</div>
+                                    <div class="option" data-correct="true">0.00035</div>
+                                    <div class="option" data-correct="false">0.0003</div>
+                                </div>
+                                <!-- Question 62 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 62</h3>
+                                        <p>Express 12,345.678 to 4 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">12,340</div>
+                                    <div class="option" data-correct="true">12,350</div>
+                                    <div class="option" data-correct="false">12,346</div>
+                                    <div class="option" data-correct="false">12,345.7</div>
+                                </div>
+                                <!-- Question 63 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 63</h3>
+                                        <p>Express 0.98765 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.99</div>
+                                    <div class="option" data-correct="false">0.98</div>
+                                    <div class="option" data-correct="false">0.987</div>
+                                    <div class="option" data-correct="false">0.988</div>
+                                </div>
+                                <!-- Question 64 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 64</h3>
+                                        <p>Express 456.1234 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">456</div>
+                                    <div class="option" data-correct="false">456</div>
+                                    <div class="option" data-correct="false">456.1</div>
+                                    <div class="option" data-correct="false">457</div>
+                                </div>
+                                <!-- Question 65 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 65</h3>
+                                        <p>Express 0.00056789 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.000568</div>
+                                    <div class="option" data-correct="false">0.00057</div>
+                                    <div class="option" data-correct="false">0.00056</div>
+                                    <div class="option" data-correct="true">0.000568</div>
+                                </div>
+                                <!-- Question 66 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 66</h3>
+                                        <p>Express 789.6543 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">789.65</div>
+                                    <div class="option" data-correct="false">789.66</div>
+                                    <div class="option" data-correct="false">789.64</div>
+                                    <div class="option" data-correct="true">789.65</div>
+                                </div>
+                                <!-- Question 67 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 67</h3>
+                                        <p>Express 0.0456789 to 4 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.04568</div>
+                                    <div class="option" data-correct="true">0.04568</div>
+                                    <div class="option" data-correct="false">0.0457</div>
+                                    <div class="option" data-correct="false">0.0456</div>
+                                </div>
+                                <!-- Question 68 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 68</h3>
+                                        <p>Express 123,456.789 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">120,000</div>
+                                    <div class="option" data-correct="false">123,000</div>
+                                    <div class="option" data-correct="false">120,000</div>
+                                    <div class="option" data-correct="false">124,000</div>
+                                </div>
+                                <!-- Question 69 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 69</h3>
+                                        <p>Express 0.000123456 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.000123</div>
+                                    <div class="option" data-correct="false">0.000124</div>
+                                    <div class="option" data-correct="false">0.00012</div>
+                                    <div class="option" data-correct="false">0.000123</div>
+                                </div>
+                                <!-- Question 70 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 70</h3>
+                                        <p>Express 567.8912 to 1 decimal place.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">567.8</div>
+                                    <div class="option" data-correct="false">567.89</div>
+                                    <div class="option" data-correct="true">567.9</div>
+                                    <div class="option" data-correct="false">568.0</div>
+                                </div>
+                                <!-- Question 71 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 71</h3>
+                                        <p>Express 0.00987654 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.0099</div>
+                                    <div class="option" data-correct="false">0.00988</div>
+                                    <div class="option" data-correct="false">0.00987</div>
+                                    <div class="option" data-correct="true">0.0099</div>
+                                </div>
+                                <!-- Question 72 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 72</h3>
+                                        <p>Express 234.5678 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">235</div>
+                                    <div class="option" data-correct="true">235</div>
+                                    <div class="option" data-correct="false">234.6</div>
+                                    <div class="option" data-correct="false">234.57</div>
+                                </div>
+                                <!-- Question 73 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 73</h3>
+                                        <p>Express 0.00078912 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.00079</div>
+                                    <div class="option" data-correct="true">0.00079</div>
+                                    <div class="option" data-correct="false">0.0008</div>
+                                    <div class="option" data-correct="false">0.00078</div>
+                                </div>
+                                <!-- Question 74 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 74</h3>
+                                        <p>Express 789.12345 to 4 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">789.1235</div>
+                                    <div class="option" data-correct="false">789.123</div>
+                                    <div class="option" data-correct="false">789.124</div>
+                                    <div class="option" data-correct="false">789.1234</div>
+                                </div>
+                                <!-- Question 75 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 75</h3>
+                                        <p>Express 0.056789 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.06</div>
+                                    <div class="option" data-correct="false">0.05</div>
+                                    <div class="option" data-correct="true">0.06</div>
+                                    <div class="option" data-correct="false">0.057</div>
+                                </div>
+                                <!-- Question 76 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 76</h3>
+                                        <p>Express 123.4567 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">123</div>
+                                    <div class="option" data-correct="false">123.5</div>
+                                    <div class="option" data-correct="false">124</div>
+                                    <div class="option" data-correct="false">123</div>
+                                </div>
+                                <!-- Question 77 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 77</h3>
+                                        <p>Express 0.000456789 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.00046</div>
+                                    <div class="option" data-correct="false">0.000457</div>
+                                    <div class="option" data-correct="false">0.00045</div>
+                                    <div class="option" data-correct="false">0.00046</div>
+                                </div>
+                                <!-- Question 78 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 78</h3>
+                                        <p>Express 789.6543 to 1 decimal place.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">789.65</div>
+                                    <div class="option" data-correct="false">789.6</div>
+                                    <div class="option" data-correct="false">789.7</div>
+                                    <div class="option" data-correct="true">789.7</div>
+                                </div>
+                                <!-- Question 79 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 79</h3>
+                                        <p>Express 0.045678 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.045</div>
+                                    <div class="option" data-correct="false">0.046</div>
+                                    <div class="option" data-correct="true">0.046</div>
+                                    <div class="option" data-correct="false">0.0457</div>
+                                </div>
+                                <!-- Question 80 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 80</h3>
+                                        <p>Express 123,456.789 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">120,000</div>
+                                    <div class="option" data-correct="false">123,000</div>
+                                    <div class="option" data-correct="true">123,000</div>
+                                    <div class="option" data-correct="false">124,000</div>
+                                </div>
+                                <!-- Question 81 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 81</h3>
+                                        <p>Express 0.00023456 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.00023</div>
+                                    <div class="option" data-correct="false">0.00024</div>
+                                    <div class="option" data-correct="false">0.000234</div>
+                                    <div class="option" data-correct="false">0.00023</div>
+                                </div>
+                                <!-- Question 82 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 82</h3>
+                                        <p>Express 456.7891 to 3 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">456.789</div>
+                                    <div class="option" data-correct="true">456.789</div>
+                                    <div class="option" data-correct="false">456.790</div>
+                                    <div class="option" data-correct="false">456.78</div>
+                                </div>
+                                <!-- Question 83 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 83</h3>
+                                        <p>Express 0.0456789 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.046</div>
+                                    <div class="option" data-correct="false">0.0457</div>
+                                    <div class="option" data-correct="false">0.046</div>
+                                    <div class="option" data-correct="false">0.045</div>
+                                </div>
+                                <!-- Question 84 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 84</h3>
+                                        <p>Express 789.1234 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">789.1</div>
+                                    <div class="option" data-correct="false">789.12</div>
+                                    <div class="option" data-correct="true">789.12</div>
+                                    <div class="option" data-correct="false">789.13</div>
+                                </div>
+                                <!-- Question 85 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 85</h3>
+                                        <p>Express 0.00056789 to 4 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.0005679</div>
+                                    <div class="option" data-correct="false">0.0005679</div>
+                                    <div class="option" data-correct="false">0.000568</div>
+                                    <div class="option" data-correct="false">0.000567</div>
+                                </div>
+                                <!-- Question 86 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 86</h3>
+                                        <p>Express 123,456 to 1 significant figure.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">123,000</div>
+                                    <div class="option" data-correct="false">100,000</div>
+                                    <div class="option" data-correct="true">100,000</div>
+                                    <div class="option" data-correct="false">120,000</div>
+                                </div>
+                                <!-- Question 87 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 87</h3>
+                                        <p>Express 0.00987654 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">0.00988</div>
+                                    <div class="option" data-correct="false">0.0099</div>
+                                    <div class="option" data-correct="false">0.00988</div>
+                                    <div class="option" data-correct="false">0.00987</div>
+                                </div>
+                                <!-- Question 88 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 88</h3>
+                                        <p>Express 234.5678 to 4 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">234.568</div>
+                                    <div class="option" data-correct="false">234.6</div>
+                                    <div class="option" data-correct="true">234.6</div>
+                                    <div class="option" data-correct="false">234.57</div>
+                                </div>
+                                <!-- Question 89 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 89</h3>
+                                        <p>Express 0.00078912 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.0008</div>
+                                    <div class="option" data-correct="false">0.000789</div>
+                                    <div class="option" data-correct="true">0.000789</div>
+                                    <div class="option" data-correct="false">0.00079</div>
+                                </div>
+                                <!-- Question 90 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 90</h3>
+                                        <p>Express 789.12345 to 3 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">789.124</div>
+                                    <div class="option" data-correct="false">789.123</div>
+                                    <div class="option" data-correct="true">789.123</div>
+                                    <div class="option" data-correct="false">789.12</div>
+                                </div>
+                                <!-- Question 91 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 91</h3>
+                                        <p>Express 0.056789 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.056</div>
+                                    <div class="option" data-correct="false">0.06</div>
+                                    <div class="option" data-correct="true">0.06</div>
+                                    <div class="option" data-correct="false">0.057</div>
+                                </div>
+                                <!-- Question 92 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 92</h3>
+                                        <p>Express 123.4567 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">124</div>
+                                    <div class="option" data-correct="false">120</div>
+                                    <div class="option" data-correct="true">120</div>
+                                    <div class="option" data-correct="false">123</div>
+                                </div>
+                                <!-- Question 93 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 93</h3>
+                                        <p>Express 0.000456789 to 3 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.00046</div>
+                                    <div class="option" data-correct="false">0.000457</div>
+                                    <div class="option" data-correct="true">0.000457</div>
+                                    <div class="option" data-correct="false">0.000456</div>
+                                </div>
+                                <!-- Question 94 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 94</h3>
+                                        <p>Express 789.6543 to 3 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">789.65</div>
+                                    <div class="option" data-correct="false">789.654</div>
+                                    <div class="option" data-correct="true">789.654</div>
+                                    <div class="option" data-correct="false">789.655</div>
+                                </div>
+                                <!-- Question 95 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 95</h3>
+                                        <p>Express 0.045678 to 4 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.0457</div>
+                                    <div class="option" data-correct="false">0.04568</div>
+                                    <div class="option" data-correct="true">0.04568</div>
+                                    <div class="option" data-correct="false">0.0456</div>
+                                </div>
+                                <!-- Question 96 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 96</h3>
+                                        <p>Express 123,456.789 to 4 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">123,456.8</div>
+                                    <div class="option" data-correct="false">123,500</div>
+                                    <div class="option" data-correct="true">123,500</div>
+                                    <div class="option" data-correct="false">123,460</div>
+                                </div>
+                                <!-- Question 97 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 97</h3>
+                                        <p>Express 0.000123456 to 4 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.000123</div>
+                                    <div class="option" data-correct="false">0.0001235</div>
+                                    <div class="option" data-correct="true">0.0001235</div>
+                                    <div class="option" data-correct="false">0.0001234</div>
+                                </div>
+                                <!-- Question 98 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 98</h3>
+                                        <p>Express 567.8912 to 2 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="true">570</div>
+                                    <div class="option" data-correct="false">568</div>
+                                    <div class="option" data-correct="false">567.9</div>
+                                    <div class="option" data-correct="false">570</div>
+                                </div>
+                                <!-- Question 99 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 99</h3>
+                                        <p>Express 0.00987654 to 4 significant figures.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">0.009877</div>
+                                    <div class="option" data-correct="true">0.00988</div>
+                                    <div class="option" data-correct="false">0.009876</div>
+                                    <div class="option" data-correct="false">0.0099</div>
+                                </div>
+                                <!-- Question 100 -->
+                                <div class="question" data-solution="">
+                                    <div class="question-text">
+                                        <h3>Question 100</h3>
+                                        <p>Express 234.5678 to 2 decimal places.</p>
+                                    </div>
+                                    <div class="option" data-correct="false">234.6</div>
+                                    <div class="option" data-correct="false">234.57</div>
+                                    <div class="option" data-correct="true">234.57</div>
+                                    <div class="option" data-correct="false">234.56</div>
                                 </div>
                             </div>
                         </section>
@@ -644,26 +1771,34 @@
                         <div class="site-links-column">
                             <h3>Quick Links</h3>
                             <ul class="site-links-list">
-                                <li><a href="./"><i class="fas fa-home"></i> Home</a></li>
-                                <li><a href="./about"><i class="fas fa-info-circle"></i> About Us</a></li>
-                                <li><a href="./blog"><i class="fas fa-newspaper"></i> Blog</a></li>
-                                <li><a href="./contactus"><i class="fas fa-envelope"></i> Contact</a></li>
+                                <li><a href="../../index"><i class="fas fa-home"></i> Home</a></li>
+                                <li><a href="../../about"><i class="fas fa-info-circle"></i> About Us</a></li>
+                                <li><a href="../../blog/"><i class="fas fa-newspaper"></i> Blog</a></li>
+                                <li><a href="../../contactus"><i class="fas fa-envelope"></i> Contact</a></li>
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Subjects</h3>
                             <ul class="site-links-list">
-                                <li><a href="./emaths"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
-                                <li><a href="./math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
+                                <li><a href="../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
+                                <li><a href="../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
+                                <li><a href="../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <li><a href="../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
+                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
+                                <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
                         </div>
                         
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>
+                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
+                                <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
+                                <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
                             </ul>
                         </div>
                         
@@ -672,14 +1807,15 @@
                             <ul class="site-links-list">
                                 <li><a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i> Facebook</a></li>
                                 <li><a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                                <!--<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>-->
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i> YouTube</a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="site-policies">
-                        <a href="privacy-policy">Privacy Policy</a> <br>
-                        <a href="terms-and-conditions">Terms and Conditions</a>
+                        <a href="../../privacy-policy">Privacy Policy</a>
+                        <a href="../../terms-and-conditions">Terms and Conditions</a>
                     </div>
                     
                     <div class="site-links-bottom">
@@ -689,25 +1825,37 @@
             </div>
         </footer>
 
-        <!-- Scripts -->
-        <script src="../shs1/js/math-challenge-sets.js"></script>
-        <script src="../../js/emath-lesson.js"></script>
-        <script src="../shs1/js/sets.js"></script>
+        <!-- JavaScript Files -->
+        <script src="../js/lessons-test-configuration.js"></script>
+        <script src="../js/wassce-tests-general.js"></script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
 
-        <!-- Year Selection Modal -->
-        <div id="yearModal" class="modal">
-            <div class="modal-content">
-                <span class="close-modal">&times;</span>
-                <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-                <p>Choose a year to view its past questions:</p>
-                <div class="year-grid">
-                    <!-- Years will be populated by JavaScript -->
-                </div>
-            </div>
-        </div>
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
+        </script>
     </body>
 </html>
