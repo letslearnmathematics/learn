@@ -71,6 +71,10 @@
 
         <!--Passco-->
         <link rel="stylesheet" href="../../css/for-passco.css">
+
+        <!-- Paywall -->
+        <link rel="stylesheet" href="../../../../css/paywall-system.css">
+        <script src="../../../../js/paywall-system.js"></script>
     </head>
     <body>
         <!-- Header Navigation -->
@@ -238,25 +242,33 @@
                             </div>
 
                             <!-- Lesson Video embed -->
-                            <div class="video-embed">
-                                <h4>
-                                    <i class="fas fa-video"></i> Video Lesson
-                                </h4>
+                            <div class="video-embed lesson-block">
+                                <h4><i class="fas fa-video"></i> Video Lesson</h4>
                                 <div class="video-description">
                                     <p>Watch this comprehensive explanation on the lesson with worked examples.</p>
                                 </div>
-                                <div class="video-container">
-                                    <iframe 
-                                        src="https://www.youtube.com/embed/3I_enewAVQ0" 
-                                        title="YouTube video player" 
-                                        frameborder="0" 
-                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                        allowfullscreen>
-                                    </iframe>
+
+                                <!-- PAYWALL 
+                                <div class="paywall-box"
+                                    data-lesson="place-value"
+                                    data-price="20"
+                                    data-video="https://www.youtube.com/embed/3I_enewAVQ0">
+                                    
+                                    <p><strong>This video lesson is locked.</strong></p>
+                                    <p>Pay Gh₵ 20.00 to watch the full explanation.</p>
+                                    <button class="payBtn">Pay & Watch</button>
                                 </div>
+                                -->
+
+                                <!-- VIDEO 
+                                <div class="video-container" style="display:none;">
+                                    <iframe width="100%" height="315" allowfullscreen></iframe>
+                                </div>
+                                
                                 <div class="video-description">
-                                    <p>Kindly subscribe to our channel for more educational content.</p>
+                                    <p>This helps us to bring you more lessons.</p>
                                 </div>
+                                -->
                             </div>
                             
                         </section>
