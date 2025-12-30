@@ -29,7 +29,7 @@ class PaywallSystem {
   constructor() {
     // 🔴 USE TEST KEY WHILE TESTING
     // 🔴 SWITCH TO pk_live_... ONLY WHEN READY
-    this.paystackKey = "pk_test_90a99abcf3ebecdf924ccfaafaa6b9562a49b869";
+    this.paystackKey = "pk_live_2940231cf4fa2089e18d89939c4b008472bbdf93";
 
     this.init();
   }
