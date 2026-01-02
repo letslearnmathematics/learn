@@ -29,6 +29,9 @@
         <link rel="stylesheet" href="./css/emath2024.css">
         <link rel="stylesheet" href="./css/emath-tests-general.css">
 
+        <!-- Paywall Global System -->
+        <link rel="stylesheet" href="../../css/paywall-system.css">
+
         <!-- MathJax Configuration -->
         <script>
             window.MathJax = {
@@ -589,13 +592,14 @@
                                     <div class="question-text">
                                         <h3>Question 24</h3>
                                         <p>
-                                            
+                                            The gradient of a curve is given by $\dfrac{dy}{dx} = 2x + 5$. If $(-1, 2)$
+                                            lies on the curve, find its equation.
                                         </p>
                                     </div>
-                                    <div class="option" data-correct="false">$$</div>
-                                    <div class="option" data-correct="false">$$</div>
-                                    <div class="option" data-correct="false">$$</div>
-                                    <div class="option" data-correct="true">$$</div>
+                                    <div class="option" data-correct="true">$x^2 + 5x + 6$</div>
+                                    <div class="option" data-correct="false">$\frac{1}{2}x^2 + 5x + 6$</div>
+                                    <div class="option" data-correct="false">$x^2 + 5x - 6$</div>
+                                    <div class="option" data-correct="false">$x^2 - 5x + 6$</div>
                                 </div>
 
                                 <!-- Question 25 -->
@@ -603,13 +607,24 @@
                                     <div class="question-text">
                                         <h3>Question 25</h3>
                                         <p>
-                                            
+                                            The values of the function $y = f(x)$ are given in the table below:
+                                        </p>
+                                        <p>
+                                            \[
+                                                \begin{array}{|c|c|c|c|c|} \hline
+                                                x & 1 & 2 & 3 & 4 \\ \hline
+                                                y & 0.50 & 0.33 & 0.25 & 0.20 \\ \hline
+                                                \end{array}
+                                            \]
+                                        </p>
+                                        <p>
+                                            Use the trapezium rule to evaluate $$ \int_1^4 f(x) dx $$
                                         </p>
                                     </div>
-                                    <div class="option" data-correct="false">$$</div>
-                                    <div class="option" data-correct="false">$$</div>
-                                    <div class="option" data-correct="false">$$</div>
-                                    <div class="option" data-correct="true">$$</div>
+                                    <div class="option" data-correct="false">$0.69$</div>
+                                    <div class="option" data-correct="false">$0.92$</div>
+                                    <div class="option" data-correct="true">$0.93$</div>
+                                    <div class="option" data-correct="false">$1.28$</div>
                                 </div>
 
                                 <!-- Question 26 -->
@@ -879,13 +894,15 @@
                                     <div class="question-text">
                                         <h3>Question 43</h3>
                                         <p>
-                                            
+                                            The velocity of a particle moving in a straight line at time $t$ seconds is given by
+                                            $v = 3t^2 - 2t$. Find an expression for the distance $s$ metres, given that $s= 2$ m 
+                                            when $t = 1$ s.
                                         </p>
                                     </div>
-                                    <div class="option" data-correct="false">$$</div>
-                                    <div class="option" data-correct="false">$$</div>
-                                    <div class="option" data-correct="false">$$</div>
-                                    <div class="option" data-correct="true">$$</div>
+                                    <div class="option" data-correct="true">$s = t^3 - t^2 + 2$</div>
+                                    <div class="option" data-correct="false">$s = t^3 + t^2 - 1$</div>
+                                    <div class="option" data-correct="false">$s = t^3 - 2t^2 $</div>
+                                    <div class="option" data-correct="false">$s = 2t^3 + 3t^2 - 1$</div>
                                 </div>
 
                                 <!-- Question 44 -->
@@ -1640,7 +1657,16 @@
             </div>
         </footer>
 
-        
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+        <!-- Paystack -->
+        <script src="https://js.paystack.co/v1/inline.js"></script>
+
+        <!-- Paywall -->
+        <script src="../../js/paywall-system.js" defer></script>
 
         <!-- JavaScript Files -->
         <script src="./js/lessons-test-configuration.js"></script>
