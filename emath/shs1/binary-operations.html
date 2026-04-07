@@ -122,7 +122,10 @@
                             <ul class="topic-menu">
                                 <li><a href="#definition" class="active"><i class="fas fa-chevron-right"></i> Definition </a></li>
                                 <!-- <li><a href="#closure"><i class="fas fa-chevron-right"></i> Closure Property </a></li> -->
-                                <li><a href="#properties"><i class="fas fa-chevron-right"></i> Properties </a></li>
+                                <li><a href="#closure"><i class="fas fa-chevron-right"></i> Closure </a></li>
+                                <li><a href="#commutative"><i class="fas fa-chevron-right"></i> Commutative Property </a></li>
+                                <li><a href="#associative"><i class="fas fa-chevron-right"></i> Associative Property </a></li>
+                                <li><a href="#distributive"><i class="fas fa-chevron-right"></i> Distributive Property </a></li>
                                 <li><a href="#identity"><i class="fas fa-chevron-right"></i> Identity Element </a></li>
                                 <li><a href="#inverse"><i class="fas fa-chevron-right"></i> Inverse Element </a></li>
                                 <li><a href="#problems"><i class="fas fa-chevron-right"></i> Practice Problems </a></li>
@@ -172,24 +175,6 @@
                                     A <strong>binary operation</strong> is a mathematical operation that combines two elements (called operands) 
                                     from a set to produce another element. Examples of binary operations $+$, $\times$, $\div$, $-$.
                                 </p>
-                                
-                                <!--
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Common Binary Operations:</h4>
-                                        <ul>
-                                            <li>Addition (+) on real numbers</li>
-                                            <li>Multiplication (×) on integers</li>
-                                            <li>Subtraction (-) on rational numbers</li>
-                                        </ul>
-                                    </div>
-                                    
-                                    <div class="point">
-                                        <h4>Notation:</h4>
-                                        <p>We often use symbols like $*$, $⊗$, $⊕$, or $○$ to represent general binary operations.</p>
-                                    </div>
-                                </div>
-                                -->
                             </div>
 
                             <!-- Lesson Video embed -->
@@ -349,10 +334,11 @@
                         
                         <br><br>
 
-                        <!-- Properties Section -->
-                        <section id="properties" class="lesson-section">
+
+                        <!-- Closure Property -->
+                        <section id="closure" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-cogs"></i> Properties of Binary Operations
+                                <i class="fas fa-cogs"></i> Closure Property
                             </h2>
 
                             <!-- Lesson Video embed -->
@@ -389,81 +375,7 @@
                                         the result \( a * b \) is also in S.
                                     </div>
                                 </div>
-
-                                <br>
-                                
-                                <!-- Commutative Property -->
-                                <div class="property-card">
-                                    <div class="property-header">
-                                        <h3><i class="fas fa-exchange-alt"></i> Commutative Property</h3>
-                                    </div>
-                                    <div class="property-body">
-                                        <p>A binary operation $*$ is commutative if:</p>
-                                        \[ a * b = b * a \quad \forall a,b \in S \]
-                                    </div>
-                                </div>
-
-                                <br>
-                                
-                                <!-- Associative Property -->
-                                <div class="property-card">
-                                    <div class="property-header">
-                                        <h3><i class="fas fa-layer-group"></i> Associative Property</h3>
-                                    </div>
-                                    <div class="property-body">
-                                        <p>A binary operation * is associative if:</p>
-                                        \[ (a * b) * c = a * (b * c) \quad \forall a,b,c \in S \]
-                                    </div>
-                                </div>
-
-                                <br>
-                                
-                                <!-- Distributive Property -->
-                                <div class="property-card">
-                                    <div class="property-header">
-                                        <h3><i class="fas fa-project-diagram"></i> Distributive Property</h3>
-                                    </div>
-                                    <div class="property-body">
-                                        <p>Operation * distributes over ○ if:</p>
-                                        \[ a * (b ○ c) = (a * b) ○ (a * c) \]
-                                        \[ (a ○ b) * c = (a * c) ○ (b * c) \]
-                                    </div>
-                                </div>
                             </div>
-
-                            
-                            
-                            <!--
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-flask"></i> Testing Properties
-                                </h3>
-                                <p>To verify properties for a custom binary operation:</p>
-                                <ol>
-                                    <li>Choose arbitrary elements from the set</li>
-                                    <li>Apply the operation in different orders</li>
-                                    <li>Check if the equality holds</li>
-                                </ol>
-                                
-                                <div class="math-example">
-                                    <h3>Example 5:</h3>
-                                    <p>Let * be defined by \( a * b = a + b + ab \). Verify if * is commutative and associative on ℝ.</p>
-                                    <div class="solution">
-                                        <p><strong>Commutative:</strong></p>
-                                        \[ a * b = a + b + ab \]
-                                        \[ b * a = b + a + ba = a + b + ab \]
-                                        <p>Since \( a * b = b * a \), * is commutative.</p>
-                                        
-                                        <p><strong>Associative:</strong></p>
-                                        \[ (a * b) * c = (a + b + ab) * c = a + b + ab + c + (a + b + ab)c \]
-                                        \[ = a + b + c + ab + ac + bc + abc \]
-                                        
-                                        \[ a * (b * c) = a * (b + c + bc) = a + b + c + bc + a(b + c + bc) \]
-                                        \[ = a + b + c + bc + ab + ac + abc \]
-                                        <p>Since both expressions are equal, * is associative.</p>
-                                    </div>
-                                </div>
-                            </div>-->
                         </section>
 
                         <!-- Practice Section -->
@@ -696,6 +608,834 @@
                         </section>
                         
                         <br><br>
+
+
+                        <!-- Commutative Property -->
+                        <section id="commutative" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-cogs"></i> Commutative Property
+                            </h2>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>
+                                        Watch this comprehensive explanation on the properties of binary operations 
+                                        with worked examples.
+                                    </p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/########" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                
+                            </div>
+
+                            <div class="concept-box">
+                                <!-- Commutative Property -->
+                                <div class="property-card">
+                                    <div class="property-header">
+                                        <h3><i class="fas fa-exchange-alt"></i> Commutative Property</h3>
+                                    </div>
+                                    <div class="property-body">
+                                        <p>A binary operation $*$ is commutative if:</p>
+                                        \[ a * b = b * a \quad \forall a,b \in S \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        A binary operation $\Delta$ is defined on the set $T = \{ 1, 2, 3, 4 \}$
+                                        by $a \Delta b = a + b - ab$, where $a, b \in T$.
+                                    </p>
+                                    <ol class="main-question-number">
+                                        <li class="sub-question-number">
+                                            <p>
+                                                ($i$) Copy and complete the table below:
+                                            </p>
+                                            <p>
+                                                \[
+                                                    \begin{array}{|c|c|c|c|c|} \hline
+                                                    \Delta & 1 & 2 & 3 & 4 \\ \hline
+                                                    1 & 1 & 1 & 1 & 1 \\ \hline
+                                                    2 & 1 & \ & -1 & -2 \\ \hline
+                                                    3 & 1 & -1 & \ & \ \\ \hline
+                                                    4 & 1 & -2 & \ & -8 \\ \hline
+                                                    \end{array}
+                                                \]
+                                            </p>
+                                            <p>
+                                                ($ii$) Is $T$ closed with respect to $\Delta$?
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p><strong>[SSSCE 1994 Section B Q1]</strong></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        The operation $\Delta$ is defined on the set of non-zero rational numbers by 
+                                        $a \Delta b = \dfrac{a + b}{ab}$. <br>
+                                        Determine whether $\Delta$ is commutative.
+                                    </p>
+                                    <p><strong>[SSSCE 1998 Section B Q1a]</strong></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        The operation $\Delta$ is defined on the set of non-zero rational numbers by 
+                                        $a \Delta b = \dfrac{a + b}{ab}$. <br>
+                                        Determine whether $\Delta$ is associative.
+                                    </p>
+                                    <p><strong>[SSSCE 1998 Section B Q1b]</strong></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set of real numbers by $𝑎 ∗ 𝑏= 2𝑎 + 𝑎𝑏$. 
+                                        Show that ∗ is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on the set of real numbers by $𝑎∇𝑏=𝑎^2+2𝑎𝑏+𝑏^2$. 
+                                        Show that $∇$ is associative.
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>
+                                        A binary operation $∆$ is defined by 
+                                        $𝑎∆𝑏=𝑎+𝑏−2𝑏^2$ Show whether the binary operation $∆$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 7</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set of real numbers by $𝑎 ∗ 𝑏= 2𝑎 + 𝑎𝑏$. 
+                                            Show that ∗ is distributive.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 8</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on the set of real numbers by $𝑎∇𝑏=𝑎^2+2𝑎𝑏+𝑏^2$. 
+                                        Show that $∇$ is distributive.
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 9</h3>
+                                    <p>
+                                        A binary operation $∆$ is defined by 
+                                        $𝑎∆𝑏=𝑎+𝑏−2𝑏^2$ Show whether the binary operation $∆$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                             
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 10</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on the set of $R$, real numbers by
+                                        $p*q = p^2 + q^2 - 2pq$, show whether the operation is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 11</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined on the set $R$ of real numbers by
+                                        $$a \triangle b = \dfrac{ab}{a + b}$$ <br>
+                                        where $a, b \in R$
+                                    </p>
+                                    <p>
+                                        Determine whether the operation is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 12</h3>
+                                    <p>
+                                        A binary operation $*$ on the set $R$ of real numbers by $$a * b = ab + 2$$ 
+                                        where $a, b \in R$. Find $x$, if $4 * (3 * x) = 64$
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+                        
+                        <br><br>
+
+
+                        <!-- Associative Property -->
+                        <section id="associative" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-cogs"></i> Associative Property
+                            </h2>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>
+                                        Watch this comprehensive explanation on the properties of binary operations 
+                                        with worked examples.
+                                    </p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/########" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                
+                            </div>
+
+                            <div class="concept-box">
+                                
+                                <!-- Associative Property -->
+                                <div class="property-card">
+                                    <div class="property-header">
+                                        <h3><i class="fas fa-layer-group"></i> Associative Property</h3>
+                                    </div>
+                                    <div class="property-body">
+                                        <p>A binary operation * is associative if:</p>
+                                        \[ (a * b) * c = a * (b * c) \quad \forall a,b,c \in S \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        A binary operation $\Delta$ is defined on the set $T = \{ 1, 2, 3, 4 \}$
+                                        by $a \Delta b = a + b - ab$, where $a, b \in T$.
+                                    </p>
+                                    <ol class="main-question-number">
+                                        <li class="sub-question-number">
+                                            <p>
+                                                ($i$) Copy and complete the table below:
+                                            </p>
+                                            <p>
+                                                \[
+                                                    \begin{array}{|c|c|c|c|c|} \hline
+                                                    \Delta & 1 & 2 & 3 & 4 \\ \hline
+                                                    1 & 1 & 1 & 1 & 1 \\ \hline
+                                                    2 & 1 & \ & -1 & -2 \\ \hline
+                                                    3 & 1 & -1 & \ & \ \\ \hline
+                                                    4 & 1 & -2 & \ & -8 \\ \hline
+                                                    \end{array}
+                                                \]
+                                            </p>
+                                            <p>
+                                                ($ii$) Is $T$ closed with respect to $\Delta$?
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p><strong>[SSSCE 1994 Section B Q1]</strong></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        The operation $\Delta$ is defined on the set of non-zero rational numbers by 
+                                        $a \Delta b = \dfrac{a + b}{ab}$. <br>
+                                        Determine whether $\Delta$ is commutative.
+                                    </p>
+                                    <p><strong>[SSSCE 1998 Section B Q1a]</strong></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        The operation $\Delta$ is defined on the set of non-zero rational numbers by 
+                                        $a \Delta b = \dfrac{a + b}{ab}$. <br>
+                                        Determine whether $\Delta$ is associative.
+                                    </p>
+                                    <p><strong>[SSSCE 1998 Section B Q1b]</strong></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set of real numbers by $𝑎 ∗ 𝑏= 2𝑎 + 𝑎𝑏$. 
+                                        Show that ∗ is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on the set of real numbers by $𝑎∇𝑏=𝑎^2+2𝑎𝑏+𝑏^2$. 
+                                        Show that $∇$ is associative.
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>
+                                        A binary operation $∆$ is defined by 
+                                        $𝑎∆𝑏=𝑎+𝑏−2𝑏^2$ Show whether the binary operation $∆$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 7</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set of real numbers by $𝑎 ∗ 𝑏= 2𝑎 + 𝑎𝑏$. 
+                                            Show that ∗ is distributive.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 8</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on the set of real numbers by $𝑎∇𝑏=𝑎^2+2𝑎𝑏+𝑏^2$. 
+                                        Show that $∇$ is distributive.
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 9</h3>
+                                    <p>
+                                        A binary operation $∆$ is defined by 
+                                        $𝑎∆𝑏=𝑎+𝑏−2𝑏^2$ Show whether the binary operation $∆$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                             
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 10</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on the set of $R$, real numbers by
+                                        $p*q = p^2 + q^2 - 2pq$, show whether the operation is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 11</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined on the set $R$ of real numbers by
+                                        $$a \triangle b = \dfrac{ab}{a + b}$$ <br>
+                                        where $a, b \in R$
+                                    </p>
+                                    <p>
+                                        Determine whether the operation is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 12</h3>
+                                    <p>
+                                        A binary operation $*$ on the set $R$ of real numbers by $$a * b = ab + 2$$ 
+                                        where $a, b \in R$. Find $x$, if $4 * (3 * x) = 64$
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+                        
+                        <br><br>
+
+
+                        <!-- Distributive Property -->
+                        <section id="distributive" class="lesson-section">
+                            <h2 class="section-title">
+                                <i class="fas fa-cogs"></i> Distributive Property
+                            </h2>
+
+                            <!-- Lesson Video embed -->
+                            <div class="video-embed">
+                                <h4>
+                                    <i class="fas fa-video"></i> Video Lesson
+                                </h4>
+                                <div class="video-description">
+                                    <p>
+                                        Watch this comprehensive explanation on the properties of binary operations 
+                                        with worked examples.
+                                    </p>
+                                </div>
+                                <div class="video-container">
+                                    <iframe 
+                                        src="https://www.youtube.com/embed/########" 
+                                        title="YouTube video player" 
+                                        frameborder="0" 
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                        allowfullscreen>
+                                    </iframe>
+                                </div>
+                                
+                            </div>
+
+                            <div class="concept-box">
+                                <!-- Distributive Property -->
+                                <div class="property-card">
+                                    <div class="property-header">
+                                        <h3><i class="fas fa-project-diagram"></i> Distributive Property</h3>
+                                    </div>
+                                    <div class="property-body">
+                                        <p>Operation * distributes over ○ if:</p>
+                                        \[ a * (b ○ c) = (a * b) ○ (a * c) \]
+                                        \[ (a ○ b) * c = (a * c) ○ (b * c) \]
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- Practice Section -->
+                        <section class="practice-section">
+                            <div class="practice-header">
+                                <i class="fas fa-pen-fancy"></i>
+                                <h2>Practice Exercise</h2>
+                            </div>
+                            
+                            <div class="practice-problems">
+                                <div class="problem-card">
+                                    <h3>Question 1</h3>
+                                    <p>
+                                        A binary operation $\Delta$ is defined on the set $T = \{ 1, 2, 3, 4 \}$
+                                        by $a \Delta b = a + b - ab$, where $a, b \in T$.
+                                    </p>
+                                    <ol class="main-question-number">
+                                        <li class="sub-question-number">
+                                            <p>
+                                                ($i$) Copy and complete the table below:
+                                            </p>
+                                            <p>
+                                                \[
+                                                    \begin{array}{|c|c|c|c|c|} \hline
+                                                    \Delta & 1 & 2 & 3 & 4 \\ \hline
+                                                    1 & 1 & 1 & 1 & 1 \\ \hline
+                                                    2 & 1 & \ & -1 & -2 \\ \hline
+                                                    3 & 1 & -1 & \ & \ \\ \hline
+                                                    4 & 1 & -2 & \ & -8 \\ \hline
+                                                    \end{array}
+                                                \]
+                                            </p>
+                                            <p>
+                                                ($ii$) Is $T$ closed with respect to $\Delta$?
+                                            </p>
+                                        </li>
+                                    </ol>
+                                    <p><strong>[SSSCE 1994 Section B Q1]</strong></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 2</h3>
+                                    <p>
+                                        The operation $\Delta$ is defined on the set of non-zero rational numbers by 
+                                        $a \Delta b = \dfrac{a + b}{ab}$. <br>
+                                        Determine whether $\Delta$ is commutative.
+                                    </p>
+                                    <p><strong>[SSSCE 1998 Section B Q1a]</strong></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 3</h3>
+                                    <p>
+                                        The operation $\Delta$ is defined on the set of non-zero rational numbers by 
+                                        $a \Delta b = \dfrac{a + b}{ab}$. <br>
+                                        Determine whether $\Delta$ is associative.
+                                    </p>
+                                    <p><strong>[SSSCE 1998 Section B Q1b]</strong></p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 4</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set of real numbers by $𝑎 ∗ 𝑏= 2𝑎 + 𝑎𝑏$. 
+                                        Show that ∗ is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 5</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on the set of real numbers by $𝑎∇𝑏=𝑎^2+2𝑎𝑏+𝑏^2$. 
+                                        Show that $∇$ is associative.
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 6</h3>
+                                    <p>
+                                        A binary operation $∆$ is defined by 
+                                        $𝑎∆𝑏=𝑎+𝑏−2𝑏^2$ Show whether the binary operation $∆$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 7</h3>
+                                    <p>
+                                        A binary operation $∗$ is defined on the set of real numbers by $𝑎 ∗ 𝑏= 2𝑎 + 𝑎𝑏$. 
+                                            Show that ∗ is distributive.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 8</h3>
+                                    <p>
+                                        A binary operation $∇$ is defined on the set of real numbers by $𝑎∇𝑏=𝑎^2+2𝑎𝑏+𝑏^2$. 
+                                        Show that $∇$ is distributive.
+
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 9</h3>
+                                    <p>
+                                        A binary operation $∆$ is defined by 
+                                        $𝑎∆𝑏=𝑎+𝑏−2𝑏^2$ Show whether the binary operation $∆$ is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                             
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 10</h3>
+                                    <p>
+                                        A binary operation $*$ is defined on the set of $R$, real numbers by
+                                        $p*q = p^2 + q^2 - 2pq$, show whether the operation is commutative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 11</h3>
+                                    <p>
+                                        A binary operation $\triangle$ is defined on the set $R$ of real numbers by
+                                        $$a \triangle b = \dfrac{ab}{a + b}$$ <br>
+                                        where $a, b \in R$
+                                    </p>
+                                    <p>
+                                        Determine whether the operation is associative.
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="problem-card">
+                                    <h3>Question 12</h3>
+                                    <p>
+                                        A binary operation $*$ on the set $R$ of real numbers by $$a * b = ab + 2$$ 
+                                        where $a, b \in R$. Find $x$, if $4 * (3 * x) = 64$
+                                    </p>
+                                    <button class="solution-toggle">Show Solution</button>
+                                    <div class="solution">
+                                        <p>Solution:</p>
+                                        <p>
+                                            
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="cta-box">
+                                <p>Ready for more challenges?</p>
+                                <a href="#quick-test" class="cta-button">
+                                    <i class="fas fa-arrow-right"></i> Full Practice Set
+                                </a>
+                            </div>
+                        </section>
+                        
+                        <br><br>
+
 
                         <!-- Identity Element Section -->
                         <section id="identity" class="lesson-section">
