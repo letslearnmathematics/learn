@@ -560,6 +560,10 @@ ul {
     border: 1px solid rgba(246, 156, 0, 0.3);
 }
 
+.reach-out {
+    color: rgb(255, 198, 106); 
+}
+
 .profile-section h2 {
     font-family: var(--font-display);
     font-size: 3.4rem;
@@ -711,151 +715,163 @@ ul {
     color: var(--gold);
 }
 
-/* ---- Video Slider Section ---- */
-.video-section {
-    background-color: rgba(62, 47, 93, 0.02);
-    border-radius: var(--radius-lg);
-    padding: 5rem 4rem !important;
-    margin: 4rem 0;
-}
+/* ====================================
+   VIDEO TUTORIAL SECTION
+==================================== */
 
-.video-slider-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center;
-    gap: 1.6rem;
-    margin-top: 3rem;
+.video-section {
+    margin-top: 4rem;
 }
 
 .video-slider {
     display: flex;
-    gap: 2.4rem;
+    gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
-    width: 100%;
-    padding: 1.5rem 0.5rem;
-    scrollbar-width: none; /* Hide standard Firefox scrollbars */
+    scrollbar-width: none;
+    padding: 10px 5px 20px;
 }
 
 .video-slider::-webkit-scrollbar {
-    display: none; /* Hide Chrome/Safari scrollbars */
+    display: none;
 }
 
+/* Card */
+
 .video-card {
-    flex: 0 0 calc((100% - 4.8rem) / 3);
-    min-width: 280px;
-    background: var(--bg-card);
-    border-radius: var(--radius-md);
+    min-width: 320px;
+    max-width: 320px;
+    flex-shrink: 0;
+
+    background: #fff;
+    border-radius: 16px;
     overflow: hidden;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,.08);
+    transition: all .3s ease;
 }
 
 .video-card:hover {
     transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
-    border-color: rgba(62, 47, 93, 0.25);
+    box-shadow: 0 15px 35px rgba(0,0,0,.12);
 }
+
+.video-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Thumbnail */
 
 .video-thumbnail {
     position: relative;
-    aspect-ratio: 16 / 9;
-    background-color: var(--primary-dark);
     overflow: hidden;
 }
 
 .video-thumbnail img {
     width: 100%;
-    height: 100%;
+    height: 190px;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    display: block;
 }
 
-.video-card:hover .video-thumbnail img {
-    transform: scale(1.05);
-}
+/* Play Button */
 
 .play-button {
     position: absolute;
-    inset: 0;
-    margin: auto;
-    width: 54px;
-    height: 54px;
-    background: rgba(246, 156, 0, 0.9);
-    color: var(--text-light);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.8rem;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: var(--transition);
-    opacity: 0.9;
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
-.video-card:hover .play-button {
-    background: var(--primary);
-    transform: scale(1.1);
-    opacity: 1;
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    background: rgba(255,0,0,.9);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 1.3rem;
 }
 
 .video-info {
-    padding: 2rem;
+    padding: 16px;
 }
 
 .video-title {
-    font-size: 1.6rem;
+    font-size: 1rem;
     font-weight: 600;
-    color: var(--primary);
     line-height: 1.4;
-    margin-bottom: 1.2rem;
-    overflow: hidden;
-    height: 4.4rem;
-    display: -webkit-box;          
-    -webkit-box-orient: vertical;  
-    line-clamp: 2;                 
-    -webkit-line-clamp: 2;         
+    margin-bottom: 10px;
+    color: #222;
 }
 
 .video-meta {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    font-size: 1.3rem;
-    color: var(--text-muted);
-    font-weight: 500;
+    font-size: .85rem;
+    color: #777;
 }
 
-.video-meta span {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-}
+/* Controls */
 
-/* Slider Layout Controls */
-.slider-btn {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    border: 1px solid var(--border);
-    background: var(--bg-card);
-    color: var(--primary);
+.slider-controls {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    margin-top: 20px;
+}
+
+.slider-btn {
+    width: 45px;
+    height: 45px;
+
+    border: none;
+    border-radius: 50%;
+
     cursor: pointer;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-    z-index: 10;
-    flex-shrink: 0;
+
+    background: #1f4f82;
+    color: #fff;
+
+    transition: .3s;
 }
 
 .slider-btn:hover {
-    background: var(--primary);
-    color: var(--text-light);
-    border-color: var(--primary);
-    box-shadow: var(--shadow-md);
+    background: #15385c;
+}
+
+.slider-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+    background: #ccc;
+}
+
+.slider-dot.active {
+    background: #1f4f82;
+}
+
+@media (max-width: 768px) {
+    .video-card {
+        min-width: 280px;
+        max-width: 280px;
+    }
+
+    .video-thumbnail img {
+        height: 170px;
+    }
 }
 
 /* Skeleton Loading Support */
@@ -1154,87 +1170,200 @@ ul {
     color: var(--text-light);
 }
 
-/* ---- Passco Modal Framework ---- */
+/* ===================================
+   PASSCO MODAL
+=================================== */
+
 .modal-overlay {
     position: fixed;
     inset: 0;
-    background: rgba(30, 24, 41, 0.6);
-    backdrop-filter: blur(8px);
-    z-index: 2000;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
     display: flex;
-    align-items: center;
     justify-content: center;
-    padding: 2.4rem;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+
     opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
+    visibility: hidden;
+    transition: all 0.3s ease;
 }
 
 .modal-overlay.active {
     opacity: 1;
-    pointer-events: all;
+    visibility: visible;
 }
 
+/* Modal Box */
 .modal-box {
-    background: var(--bg-card);
     width: 100%;
-    max-width: 640px;
-    border-radius: var(--radius-lg);
-    padding: 4rem;
-    box-shadow: var(--shadow-lg);
-    transform: translateY(20px);
-    transition: transform 0.3s ease;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(30px);
+    transition: all 0.3s ease;
 }
 
 .modal-overlay.active .modal-box {
     transform: translateY(0);
 }
 
+/* Header */
 .modal-header {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-bottom: 1.6rem;
+
+    padding: 25px 30px 15px;
+    border-bottom: 1px solid #e9ecef;
 }
 
 .modal-eyebrow {
-    font-size: 1.2rem;
+    display: block;
+    font-size: 0.8rem;
     text-transform: uppercase;
+    letter-spacing: 1px;
     font-weight: 700;
-    color: var(--gold);
-    letter-spacing: 0.05em;
+    color: #0d6efd;
+    margin-bottom: 6px;
 }
 
 #modalTitle {
-    font-family: var(--font-display);
-    font-size: 2.6rem;
-    color: var(--primary);
+    margin: 0;
+    font-size: 1.8rem;
+    color: #212529;
+    font-weight: 700;
 }
 
+/* Close Button */
 .close-modal {
     background: transparent;
     border: none;
-    font-size: 2rem;
-    color: var(--text-muted);
+    font-size: 1.6rem;
     cursor: pointer;
-    transition: var(--transition);
+    color: #6c757d;
+    transition: 0.3s ease;
+    padding: 5px;
 }
 
 .close-modal:hover {
-    color: var(--accent);
+    color: #dc3545;
+    transform: rotate(90deg);
 }
 
+/* Description */
 .modal-description {
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    margin-bottom: 2.4rem;
+    padding: 20px 30px 0;
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
+/* Year Grid */
 .year-grid {
+    padding: 25px 30px 30px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-    gap: 1.2rem;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 15px;
 }
+
+/* Year Buttons */
+.year-btn {
+    position: relative;
+    text-decoration: none;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    color: #212529;
+
+    padding: 16px 10px;
+    border-radius: 12px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+
+    transition: all 0.25s ease;
+}
+
+.year-btn:hover {
+    background: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(13,110,253,0.25);
+}
+
+/* Recent Year Highlight */
+.year-btn.recent {
+    border-color: #198754;
+    background: #f0fff5;
+}
+
+/* Badge */
+.format-badge {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.web-badge {
+    color: #0d6efd;
+}
+
+.pdf-badge {
+    color: #dc3545;
+}
+
+/* Scroll Support */
+.modal-box {
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .modal-box {
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .modal-header {
+        padding: 20px;
+    }
+
+    .modal-description {
+        padding: 15px 20px 0;
+    }
+
+    .year-grid {
+        padding: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #modalTitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .year-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .year-btn {
+        padding: 14px 8px;
+        font-size: 0.95rem;
+    }
+}
+
+/* ===================================
+   END OF PASSCO MODAL
 
 /* ---- Scroll-To-Top Button ---- */
 .scroll-top-btn {

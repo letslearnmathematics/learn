@@ -153,6 +153,13 @@ document.addEventListener("DOMContentLoaded", () => {
         /* -- Bootstrap -- */
         fetchLatestVideos();
 
+        /* ---- Utility Functions ---- */
+        function escapeHtml(text) {
+            const div = document.createElement("div");
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
 
         /* ---- Fetch from YouTube API ---- */
         async function fetchLatestVideos() {
@@ -244,6 +251,38 @@ document.addEventListener("DOMContentLoaded", () => {
                     title: "BECE Mathematics Past Questions Breakdown",
                     views: "1K", 
                     date: "5 days ago" 
+                },
+                { 
+                    id: "eLHZSpJxwp8", 
+                    url: "https://youtu.be/etjDUDHlhEQ?si=DUyzkJalkYT9dhbi", 
+                    img: "../images/2000q1c.png", 
+                    title: "BECE Mathematics Past Questions Breakdown",
+                    views: "1K", 
+                    date: "5 days ago" 
+                },
+                { 
+                    id: "eLHZSpJxwp8", 
+                    url: "https://youtu.be/wj-jDHt8jpk?si=sNGTWxhi3ZCKSNBy", 
+                    img: "../images/2000q1b.png", 
+                    title: "BECE Mathematics Past Questions Breakdown",
+                    views: "1K", 
+                    date: "5 days ago" 
+                },
+                { 
+                    id: "eLHZSpJxwp8", 
+                    url: "https://youtu.be/DqtjytOS5N4?si=kHkn0wzAzvNPqFUn", 
+                    img: "../images/2024q1b.png", 
+                    title: "BECE Mathematics Past Questions Breakdown",
+                    views: "1K", 
+                    date: "5 days ago" 
+                },
+                { 
+                    id: "eLHZSpJxwp8", 
+                    url: "https://youtu.be/X6LFrHQ2EPk?si=DVZG0WaElYqeOJO0", 
+                    img: "../images/1991q1a.png", 
+                    title: "BECE Mathematics Past Questions Breakdown",
+                    views: "1K", 
+                    date: "5 days ago" 
                 }
             ];
 
@@ -272,8 +311,67 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
         function initSlider() {
-            // Placeholder configuration logic for slider layout constraints
-            console.log("Slider initiated successfully.");
+
+            const dotsContainer = document.querySelector(".slider-dots");
+
+            if (!dotsContainer) return;
+
+            dotsContainer.innerHTML = "";
+
+            const cards = document.querySelectorAll(".video-card");
+
+            if (cards.length === 0) return;
+
+            const visibleCards = Math.max(
+                1,
+                Math.floor(videoSlider.clientWidth / cards[0].offsetWidth)
+            );
+
+            const pages = Math.ceil(cards.length / visibleCards);
+
+            for (let i = 0; i < pages; i++) {
+
+                const dot = document.createElement("span");
+                dot.classList.add("slider-dot");
+
+                if (i === 0) {
+                    dot.classList.add("active");
+                }
+
+                dot.addEventListener("click", () => {
+
+                    videoSlider.scrollTo({
+                        left: i * videoSlider.clientWidth,
+                        behavior: "smooth"
+                    });
+
+                    updateActiveDot(i);
+
+                });
+
+                dotsContainer.appendChild(dot);
+            }
+
+            videoSlider.addEventListener("scroll", () => {
+
+                const activePage = Math.round(
+                    videoSlider.scrollLeft / videoSlider.clientWidth
+                );
+
+                updateActiveDot(activePage);
+
+            });
+
+        }
+
+        function updateActiveDot(index) {
+
+            document.querySelectorAll(".slider-dot").forEach((dot, i) => {
+
+                dot.classList.toggle("active", i === index);
+
+            });
+
         }
 
         function navigateSlider(direction) {
