@@ -1362,6 +1362,74 @@ ul {
     }
 }
 
+/* Exam Switch Selection Layout inside Passco Modal */
+.modal-exam-selector {
+    padding: 15px 30px;
+    background: #f8f9fb;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.selector-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.exam-toggle-group {
+    display: flex;
+    background: #e9ecef;
+    padding: 4px;
+    border-radius: 30px;
+}
+
+.exam-toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.exam-toggle-btn:hover {
+    color: var(--primary);
+}
+
+.exam-toggle-btn.active {
+    background: var(--primary);
+    color: var(--text-light);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Adjust top padding on description item since selector fills spacer gap */
+.modal-description {
+    padding: 15px 30px 0 !important;
+}
+
+@media (max-width: 576px) {
+    .modal-exam-selector {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .exam-toggle-group {
+        width: 100%;
+    }
+    .exam-toggle-btn {
+        flex: 1;
+        text-align: center;
+        padding: 10px 5px;
+    }
+}
+
 /* ===================================
    END OF PASSCO MODAL
 

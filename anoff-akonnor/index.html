@@ -527,7 +527,7 @@
                                 <li><a href="https://youtube.com/@theletslearnproject" target="_blank" rel="noopener noreferrer">Video Tutorials</a></li>
                                 <li>
                                     <a href="#" data-passco-modal>
-                                        JHS Maths PASSCO
+                                        PASSCO
                                     </a>
                                 </li>
                             </ul>
@@ -558,14 +558,25 @@
             <div class="modal-box">
                 <div class="modal-header">
                     <div>
-                        <span class="modal-eyebrow">BECE Mathematics</span>
+                        <span class="modal-eyebrow" id="modalEyebrow">The Let's Learn Project</span>
                         <h3 id="modalTitle">Past Examination Papers</h3>
                     </div>
                     <button class="close-modal" aria-label="Close modal">
                         <i class="fas fa-times" aria-hidden="true"></i>
                     </button>
                 </div>
-                <p class="modal-description">Select a year below to access the full past examination paper and worked solutions.</p>
+                
+                <!-- Exam Selection Section -->
+                <div class="modal-exam-selector">
+                    <p class="selector-label">Choose Examination Track:</p>
+                    <div class="exam-toggle-group">
+                        <button type="button" class="exam-toggle-btn active" data-exam-type="bece">BECE</button>
+                        <!--<button type="button" class="exam-toggle-btn" data-exam-type="wassce">CORE MATHS</button>-->
+                        <button type="button" class="exam-toggle-btn" data-exam-type="wassceAdd">ADD. MATHS</button>
+                    </div>
+                </div>
+
+                <p class="modal-description" id="modalDescription">Select a year below to access the full past examination paper and worked solutions.</p>
                 <div class="year-grid" id="yearGrid"></div>
             </div>
         </div>
