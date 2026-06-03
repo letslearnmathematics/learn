@@ -1,387 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Favicons -->
-    <link rel="icon" href="./images/android-chrome-192x192.png" type="image/png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- Favicons -->
+        <link rel="icon" href="./images/android-chrome-192x192.png" type="image/png">
+        <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Home | The Let's Learn Project">
-    <meta property="og:description" content="Prepare for the BECE exams with our past questions and answers.">
-    <meta property="og:image" content="https://theletslearnproject.com/images/home-link-og.png">
-    <meta property="og:image:alt" content="The Let's Learn Project - BECE Past Questions">
-    <meta property="og:url" content="https://theletslearnproject.com">
-    <meta property="og:site_name" content="The Let's Learn Project">
-    <meta property="og:type" content="website">
-    
-    <!-- CSS Links -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="./css/bece-tests-general.css">
-    
-    <title>The Let's Learn Project</title>
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="Home | The Let's Learn Project">
+        <meta property="og:description" content="Prepare for the BECE exams with our past questions and answers.">
+        <meta property="og:image" content="https://theletslearnproject.com/images/home-link-og.png">
+        <meta property="og:image:alt" content="Home | The Let's Learn Project">
+        <meta property="og:url" content="https://theletslearnproject.com">
+        <meta property="og:site_name" content="The Let's Learn Project">
+        <meta property="og:type" content="website">
 
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118" crossorigin="anonymous"></script>
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo-container">
-                    <a href="./" class="logo-link">
-                        <img src="./images/android-chrome-192x192.png" alt="Logo" class="logo">
-                        <div class="logo-text">
-                            <span class="logo-name">The Let's Learn Project</span>
-                            <span class="tagline">Learning Made Easy</span>
-                        </div>
-                    </a>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        
+        <!-- CSS Links -->
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/passco-modal-general.css">
+        
+        <title>The Let's Learn Project</title>
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header" id="mainHeader">
+            <div class="container">
+                <nav class="navbar">
+                    <div class="logo-container">
+                        <a href="./" class="logo-link">
+                            <img src="./images/android-chrome-192x192.png" alt="The Let's Learn Project Logo" class="logo">
+                            <div class="logo-text">
+                                <span class="logo-name">The Let's Learn Project</span>
+                                <span class="tagline">Learning Made Simple</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="nav-container">
+                        <ul class="nav-menu" id="navMenu">
+                            <li class="nav-item"><a href="./" class="nav-link active">Home</a></li>
+                            <li class="nav-item"><a href="./about" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="./blog/" class="nav-link">Blog</a></li>
+                            <li class="nav-item"><a href="./contactus" class="nav-link">Contact</a></li>
+                        </ul>
+                        <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                            <span class="bar"></span>
+                        </button>
+                    </div>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-mesh" aria-hidden="true">
+                <div class="mesh-circle mesh-circle--1"></div>
+                <div class="mesh-circle mesh-circle--2"></div>
+                <div class="mesh-circle mesh-circle--3"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content reveal-left">
+                    <span class="hero-eyebrow">The Let's Learn Project</span>
+                    <h1 class="hero-title">Elevate Your <em>Learning</em></h1>
+                    <p class="hero-text">Access standard past question tracking matrices, exam simulation models, and intuitive video workflows designed for academic excellence.</p>
+                    <div class="hero-buttons">
+                        <a href="#subjects" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                        <a href="https://youtube.com/@theletslearnproject" target="_blank" rel="noopener noreferrer" class="btn btn-secondary"><i class="fab fa-youtube"></i> Watch Tutorials</a>
+                    </div>
                 </div>
                 
-                <div class="nav-container">
-                    <ul class="nav-menu">
-                        <li class="nav-item"><a href="./" class="nav-link active">Home</a></li>
-                        <li class="nav-item"><a href="./about" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="./blog/" class="nav-link">Blog</a></li>
-                        <li class="nav-item"><a href="./contactus" class="nav-link">Contact</a></li>
-                    </ul>
-                    
-                    <div class="hamburger">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
+                <div class="hero-image reveal-right">
+                    <div class="hero-img-wrapper">
+                        <img src="./images/android-chrome-192x192.png" alt="The Let's Learn Project Hero Asset" class="hero-img">
+                        <div class="hero-img-ring"></div>
+                        <div class="hero-img-badge">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Excellence Guaranteed</span>
+                        </div>
                     </div>
                 </div>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Excel in Your Exams</h1>
-                <p class="hero-text">Access comprehensive learning resources for Mathematics, Science, English, Computing and more.</p>
-                <a href="#subjects" class="btn btn-primary">Explore Subjects</a>
             </div>
-            <div class="hero-image">
-                <img src="./images/homepic.jpg" alt="Students learning" class="hero-img">
+        </section>
+
+        <!-- Stats Strip Section -->
+        <section class="stats-strip">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="150">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Lessons Published</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="1000">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Practice Questions</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="30">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Years of Past Papers</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Free Access</span>
+                    </div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Main Content -->
-    <main class="main-content">
-        <div class="container">
-            <!-- About Section -->
-            <section class="about-section">
-                <div class="about-content">
-                    <img src="./images/android-chrome-192x192.png" alt="Logo" class="about-logo">
-                    <div class="about-text">
-                        <h2 class="section-title">About The Let's Learn Project</h2>
-                        <p>
-                            Started at the Good Shepherd International School in the New Gbawe 
-                            Community, Accra, we're dedicated to helping students build confidence 
-                            in solving questions to achieve excellence in examinations.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Subjects Section -->
-            <section class="subjects-section" id="subjects">
-                <h2 class="section-title">Our Subjects</h2>
-                
-                <!-- Mathematics -->
-                <div class="subject-card">
-                    <div class="subject-info">
-                        <div class="subject-header">
-                            <i class="fas fa-calculator subject-icon"></i>
-                            <h3 class="subject-title">Mathematics</h3>
-                        </div>
-                        <p class="subject-description">Master mathematical concepts with our comprehensive lessons and practice materials for all levels.</p>
-                        <div class="subject-stats">
-                            <span><i class="fas fa-book-open"></i> 150+ Lessons</span>
-                            <span><i class="fas fa-question-circle"></i> 1000+ Questions</span>
-                        </div>
-                    </div>
-                    <div class="subject-levels">
-                        <a href="./math-jhs/passco" class="level-link" data-passco-modal>
-                            <i class="fas fa-child"></i> PASSCO
-                        </a>
-                        <a href="./math-jhs" class="level-link">
-                            <i class="fas fa-school"></i> JHS Maths
-                        </a>
-                        <a href="./emath" class="level-link">
-                            <i class="fas fa-square-root-alt"></i> Add. - Maths
-                        </a>
-                        <a href="./coremath" class="level-link">
-                            <i class="fas fa-shapes"></i> Core Maths
-                        </a>
-                    </div>
-                </div>
-
-                <!-- 
-                Science 
-                <div class="subject-card">
-                    <div class="subject-info">
-                        <div class="subject-header">
-                            <i class="fas fa-flask subject-icon"></i>
-                            <h3 class="subject-title">Science</h3>
-                        </div>
-                        <p class="subject-description">Explore scientific concepts with our interactive lessons and experiments for Basic 7 to 9.</p>
-                        <div class="subject-stats">
-                            <span><i class="fas fa-book-open"></i> 50+ Lessons</span>
-                            <span><i class="fas fa-question-circle"></i> 500+ Questions</span>
-                        </div>
-                    </div>
-                    <div class="subject-levels">
-                        <a href="./science-jhs" class="level-link">
-                            <i class="fas fa-atom"></i> JHS Science
-                        </a>
-                        <a href="./sciencebasic8" class="level-link">
-                            <i class="fas fa-atom"></i> Basic 8
-                        </a>
-                        <a href="./sciencebasic9" class="level-link">
-                            <i class="fas fa-atom"></i> Basic 9
-                        </a>
-                        <a href="./q-and-a-science" class="level-link">
-                            <i class="fas fa-child"></i> PASSCO
-                        </a>
-                    </div>
-                </div>
-                -->
-
-                <!-- English 
-                <div class="subject-card">
-                    <div class="subject-info">
-                        <div class="subject-header">
-                            <i class="fas fa-book subject-icon"></i>
-                            <h3 class="subject-title">English</h3>
-                        </div>
-                        <p class="subject-description">Improve your language skills with our comprehensive English resources and practice materials.</p>
-                        <div class="subject-stats">
-                            <span><i class="fas fa-book-open"></i> 50+ Lessons</span>
-                            <span><i class="fas fa-question-circle"></i> 500+ Questions</span>
-                        </div>
-                    </div>
-                    <div class="subject-levels">
-                        <a href="./english-jhs" class="level-link">
-                            <i class="fas fa-school"></i> JHS English
-                        </a>
-                    </div>
-                </div>
-                -->
-
-                <!-- Computing 
-                <div class="subject-card">
-                    <div class="subject-info">
-                        <div class="subject-header">
-                            <i class="fas fa-laptop-code subject-icon"></i>
-                            <h3 class="subject-title">Computing</h3>
-                        </div>
-                        <p class="subject-description">Develop digital literacy and programming skills with our computing resources.</p>
-                        <div class="subject-stats">
-                            <span><i class="fas fa-book-open"></i> 50+ Lessons</span>
-                            <span><i class="fas fa-question-circle"></i> 500+ Questions</span>
-                        </div>
-                    </div>
-                    <div class="subject-levels">
-                        <a href="./science-jhs" class="level-link">
-                            <i class="fas fa-laptop"></i> JHS Computing
-                        </a>
-                        <a href="./q-and-a-computing" class="level-link">
-                            <i class="fas fa-child"></i> PASSCO
-                        </a>
-                    </div>
-                </div>
-                -->
-
-                <!-- Social Studies 
-                 
-                <div class="subject-card">
-                    <div class="subject-info">
-                        <div class="subject-header">
-                            <i class="fas fa-globe subject-icon"></i>
-                            <h3 class="subject-title">Social Studies</h3>
-                        </div>
-                        <p class="subject-description">
-                            Understand society, culture, and the environment with our engaging Social Studies 
-                            lessons and resources for JHS students.
-                        </p>
-                        <div class="subject-stats">
-                            <span><i class="fas fa-book-open"></i> 50+ Lessons</span>
-                            <span><i class="fas fa-question-circle"></i> 500+ Questions</span>
-                        </div>
-                    </div>
-                    <div class="subject-levels">
-                        <a href="./social-jhs/" class="level-link">
-                            <i class="fas fa-laptop"></i> JHS Social Studies
-                        </a>
-
-                        <a href="./q-and-a-computing" class="level-link">
-                            <i class="fas fa-child"></i> PASSCO
-                        </a>
-                    </div>
-                </div>
-                -->
-            </section>
-
-            <!-- Video Tutorials -->
-            <section class="video-section">
-                <h2 class="section-title">Latest Video Tutorials</h2>
-                <div class="video-slider">
-                    <!-- Video cards will be dynamically inserted here -->
-                </div>
-                <div class="slider-controls">
-                    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
-                    <div class="slider-dots"></div>
-                    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
-                </div>
-            </section>
+        <!-- Main Content Container -->
+        <main class="main-content">
             
-            <!--
-            <section class="subjects-section" id="subjects">
-                <h2 class="section-title">Universities</h2>
-                
-                B. Ed Mathematics 
-                <div class="subject-card">
-                    <div class="subject-info">
-                        <div class="subject-header">
-                            <i class="fas fa-calculator subject-icon"></i>
-                            <h3 class="subject-title">University of Cape Coast</h3>
+            <!-- About Section Layout Block -->
+            <section class="profile-section reveal-up">
+                <div class="container">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <span class="section-label">Our Mission</span>
+                            <h2>About The Let's Learn Project</h2>
+                            <p>
+                                Started at the Good Shepherd International School in the New Gbawe Community, Accra, we are dedicated to helping students build confidence in solving complex questions to achieve unprecedented excellence in examinations.
+                            </p>
+                            <p>
+                                We specialize in synthesizing complex syllabi tracks into simplified, visual workflows that enable self-paced revision and deep learning concepts.
+                            </p>
                         </div>
-                        <p class="subject-description">Selected courses from the University of Cape Coast</p>
-                        <div class="subject-stats">
-                            <span><i class="fas fa-book-open"></i> 150+ Lessons</span>
-                            <span><i class="fas fa-question-circle"></i> 1000+ Questions</span>
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-check-circle highlight-icon"></i>
+                                <div class="highlight-text">
+                                    <strong>Structured Revision</strong>
+                                    <span>Complete chronological test frameworks matching historical West African syllabus modules.</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chalkboard-teacher highlight-icon"></i>
+                                <div class="highlight-text">
+                                    <strong>Step-By-Step Workflows</strong>
+                                    <span>Video-guided solution tracks targeting core foundational problem structures.</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="subject-levels">
-                        <a href="./ucc" class="level-link">
-                            <i class="fas fa-square-root-alt"></i> Click for Courses
-                        </a>
                     </div>
                 </div>
             </section>
-            -->
 
-            <!-- Quick Links -->
-            <section class="quick-links">
-                <div class="quick-link-card">
-                    <i class="fas fa-question-circle"></i>
-                    <h3>Past Questions</h3>
-                    <p>Access past exam questions with solutions</p>
-                    <a href="./math-jhs/passco" class="btn btn-secondary" data-passco-modal>
-                        View Questions
-                    </a>
-                </div>
-                <div class="quick-link-card">
-                    <i class="fas fa-video"></i>
-                    <h3>Video Tutorials</h3>
-                    <p>Learn through our video explanations</p>
-                    <a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi" class="btn btn-secondary">Watch Videos</a>
-                    <!--<a href="./tutorials" class="btn btn-secondary">Watch Videos</a>-->
-                </div>
-                <div class="quick-link-card">
-                    <i class="fas fa-book-open"></i>
-                    <h3>Personal Classes</h3>
-                    <p>Online or In-person Classes</p>
-                    <a href="./contactus" class="btn btn-secondary">Contact</a>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <img src="./images/android-chrome-192x192.png" alt="Logo" class="footer-logo">
-                    <p>The Let's Learn Project provides quality educational resources to help students excel in their examinations.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/share/18sxntpusV/"><i class="fab fa-facebook"></i></a>
-                        <a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o"><i class="fab fa-whatsapp"></i></a>
-                        <!--<a href="#"><i class="fab fa-instagram"></i></a>-->
-                        <a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4>Quick Links</h4>
-                        <ul>
-                            <li><a href="./">Home</a></li>
-                            <li><a href="./about">About Us</a></li>
-                            <li><a href="./blog/">Blog</a></li>
-                            <li><a href="./contactus">Contact</a></li>
-                        </ul>
-                    </div>
+            <!-- Subjects Section Layout Block -->
+            <section class="profile-section reveal-up" id="subjects">
+                <div class="container">
+                    <span class="section-label">Academic Tracks</span>
+                    <h2>Our Subjects</h2>
                     
-                    <div class="footer-column">
-                        <h4>Subjects</h4>
-                        <ul>
-                            <li><a href="./emath">Elective Mathematics</a></li>
-                            <!----><li><a href="./coremath">Core Mathematics</a></li>
-                            <li><a href="./math-jhs">JHS Mathematics</a></li>
-                            <li><a href="./social-jhs/">JHS Social Studies</a></li>
-                            <!--<li><a href="./science-jhs">Science</a></li>-->
-                            <li><a href="./english-jhs"> JHS English</a></li>
-                            <!--<li><a href="./computing-jhs">Computing</a></li>-->
-                        </ul>
-                    </div>
-                    
-                    <div class="footer-column">
-                        <h4>Resources</h4>
-                        <ul>
-                            <li>
-                                <a href="./math-jhs/passco" data-passco-modal>
-                                    JHS Maths PASSCO 
+                    <div class="grid-3">
+                        <!-- Mathematics Card Matrix -->
+                        <div class="experience-card">
+                            <div class="card-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h3>Mathematics Modules</h3>
+                            <p>Master complex geometric formulas, algebraic equations, and core calculation concepts across standard tracks.</p>
+                            
+                            <div class="subject-levels" style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+                                <a href="./math-jhs/passco" class="card-link" data-passco-modal>
+                                    <i class="fas fa-child"></i> PASSCO
                                 </a>
-                            </li>
-                            <!--<li><a href="./tutorials">Video Tutorials</a></li>-->
-                            <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi">Video Tutorials</a></li>
-                            <!--<li><a href="./ebooks">E-books</a></li>
-                            <li><a href="./mathgames">Math Games</a></li>-->
-                        </ul>
+                                <a href="./math-jhs" class="card-link">
+                                    <i class="fas fa-school"></i> JHS Mathematics Track
+                                </a>
+                                <a href="./coremath" class="card-link">
+                                    <i class="fas fa-shapes"></i> Core Mathematics (SHS)
+                                </a>
+                                <a href="./emath" class="card-link">
+                                    <i class="fas fa-square-root-alt"></i> Additional Mathematics
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Secondary Track Placeholder Card -->
+                        <div class="experience-card">
+                            <div class="card-icon">
+                                <i class="fas fa-chart-network"></i>
+                            </div>
+                            <h3>Exam Tracking Matrix</h3>
+                            <p>Interact with conceptual score builders, solution blueprints, and comprehensive evaluation rubrics optimized for WAEC standards.</p>
+                            <a href="#" data-passco-modal class="card-link">Explore Systems <i class="fas fa-arrow-right"></i></a>
+                        </div>
+
+                        <!-- Learning Frameworks Card -->
+                        <div class="experience-card">
+                            <div class="card-icon">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h3>Interactive Formats</h3>
+                            <p>Access learning material on demand. Study online via fluid web structures or print beautifully rendered standalone system solutions.</p>
+                            <a href="https://youtube.com/@theletslearnproject" target="_blank" rel="noopener noreferrer" class="card-link">View Media Assets <i class="fas fa-arrow-right"></i></a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <div class="footer-policies">
-                    <a href="./privacy-policy">Privacy Policy</a>
-                    <a href="./terms-and-conditions">Terms & Conditions</a>
+            </section>
+
+            <!-- Video Tutorials Block -->
+            <section class="profile-section reveal-up">
+                <div class="container">
+                    <span class="section-label">Media Broadcasts</span>
+                    <h2>Latest Video Tutorials</h2>
+                    
+                    <!-- Crucial ID synchronization point for API mapping -->
+                    <div class="video-slider" id="videoSlider" role="list">
+                        <!-- Skeleton components display instantly until JavaScript hydrates real payload nodes -->
+                        <div class="video-card skeleton-card">
+                            <div class="skeleton skeleton-thumb"></div>
+                            <div class="video-info">
+                                <div class="skeleton skeleton-title"></div>
+                                <div class="skeleton skeleton-meta"></div>
+                            </div>
+                        </div>
+                        <div class="video-card skeleton-card">
+                            <div class="skeleton skeleton-thumb"></div>
+                            <div class="video-info">
+                                <div class="skeleton skeleton-title"></div>
+                                <div class="skeleton skeleton-meta"></div>
+                            </div>
+                        </div>
+                        <div class="video-card skeleton-card">
+                            <div class="skeleton skeleton-thumb"></div>
+                            <div class="video-info">
+                                <div class="skeleton skeleton-title"></div>
+                                <div class="skeleton skeleton-meta"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Slider Nav Action Group -->
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-btn" aria-label="Previous Video"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots"></div>
+                        <button class="slider-btn next-btn" aria-label="Next Video"><i class="fas fa-chevron-right"></i></button>
+                    </div>
                 </div>
-                <p class="copyright">&copy; 2025 The Let's Learn Project. All rights reserved.</p>
+            </section>
+
+            <!-- Quick Links Container Grid -->
+            <section class="profile-section reveal-up">
+                <div class="container">
+                    <span class="section-label">Instant Access</span>
+                    <h2>Quick Resources</h2>
+                    
+                    <div class="grid-3" style="margin-top: 2rem;">
+                        <div class="work-card">
+                            <i class="fas fa-question-circle card-icon"></i>
+                            <h3>Past Questions</h3>
+                            <p>Access formal historic examination blocks with itemized structural solutions.</p>
+                            <button type="button" class="btn btn-outline" data-passco-modal style="width: 100%; justify-content: center;">Launch Papers</button>
+                        </div>
+                        
+                        <div class="work-card">
+                            <i class="fab fa-youtube card-icon"></i>
+                            <h3>Video Classrooms</h3>
+                            <p>Stream fully worked classroom breakdowns directly from our official channels.</p>
+                            <a href="https://youtube.com/@theletslearnproject" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%; justify-content: center;">Stream Tutorials</a>
+                        </div>
+
+                        <div class="work-card">
+                            <i class="fas fa-envelope card-icon"></i>
+                            <h3>Personal Classes</h3>
+                            <p>Enquire about specialized personalized masterclass slots and digital workspace assistance.</p>
+                            <a href="./contactus" class="btn btn-outline" style="width: 100%; justify-content: center;">Request Info</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Creative Action Portal Segment -->
+            <section class="container contact-section reveal-up">
+                <div class="contact-inner">
+                    <h2>Accelerate Your Academic Performance</h2>
+                    <p>Unlock our adaptive analytical libraries, structural matrices, and step-by-step mathematical workflows without boundaries.</p>
+                    <div class="contact-actions">
+                        <button type="button" class="btn btn-primary" data-passco-modal><i class="fas fa-folder-open"></i> Access PASTCO Portal</button>
+                        <a href="./contactus" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Establish Connection</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-about">
+                        <img src="./images/android-chrome-192x192.png" alt="The Let's Learn Project logo" class="footer-logo">
+                        <p>The Let's Learn Project provides simple, structured, and practical educational platforms to help students build absolute comprehension vectors across mathematics tracks.</p>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/share/18sxntpusV/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://whatsapp.com/channel/0029VasRXSfHbFV9W8PCdV1o" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://youtube.com/@theletslearnproject" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                                <i class="fab fa-youtube" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-column">
+                            <h4>Quick Navigation</h4>
+                            <ul>
+                                <li><a href="./">Dashboard</a></li>
+                                <li><a href="./about">About</a></li>
+                                <li><a href="./blog/">Blog</a></li>
+                                <li><a href="./contactus">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Syllabus Tracks</h4>
+                            <ul>
+                                <li><a href="./emath">Elective Mathematics</a></li>
+                                <li><a href="./coremath">Core Mathematics</a></li>
+                                <li><a href="./math-jhs">JHS Mathematics</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4>Media Assets</h4>
+                            <ul>
+                                <li><a href="https://youtube.com/@theletslearnproject" target="_blank" rel="noopener noreferrer">Video Tutorials</a></li>
+                                <li><a href="#" data-passco-modal>PASSCO</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-policies">
+                        <a href="./privacy-policy">Privacy Policy</a>
+                        <a href="./terms-and-conditions">Terms &amp; Conditions</a>
+                    </div>
+                    <!---->
+                    <p>&copy; 2026 The Let's Learn Project. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Scroll To Top Trigger Button -->
+        <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </button>
+
+        <!-- Scripts 
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+        -->
+
+        <!-- Embedded Script Configurations -->
+        <script src="./js/script.js"></script>
+        <script src="./js/passco-modal-general.js"></script>
+
+        <!-- PASSCO MODAL CONTAINER -->
+        <div class="modal-overlay" id="yearModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <div>
+                        <span class="modal-eyebrow" id="modalEyebrow">The Let's Learn Project</span>
+                        <h3 id="modalTitle">Past Examination Papers</h3>
+                    </div>
+                    <button class="close-modal" aria-label="Close modal">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="modal-exam-selector">
+                    <p class="selector-label">Choose Examination Track:</p>
+                    <div class="exam-toggle-group">
+                        <button type="button" class="exam-toggle-btn active" data-exam-type="bece">BECE</button>
+                        <button type="button" class="exam-toggle-btn" data-exam-type="wassceAdd">ADD. MATHS</button>
+                    </div>
+                </div>
+
+                <p class="modal-description" id="modalDescription">Select a year below to access the full past examination paper and worked solutions.</p>
+                <div class="year-grid" id="yearGrid"></div>
             </div>
         </div>
-    </footer>
-
-    <script src="./js/script.js"></script>
-
-    <script>
-        // Current year for footer
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-
-   <!-- Year Selection Modal -->
-    <div id="yearModal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3><i class="fas fa-file-pdf"></i> Select BECE Year</h3>
-            <p>Choose a year to view its past questions:</p>
-            <div class="year-grid">
-                <!-- Years will be populated by JavaScript -->
-            </div>
-        </div>
-    </div>
-</body>
+    </body>
 </html>

@@ -1,0 +1,262 @@
+/* ===================================
+   PASSCO MODAL
+=================================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Box */
+.modal-box {
+    width: 100%;
+    max-width: 700px;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+
+    transform: translateY(30px);
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active .modal-box {
+    transform: translateY(0);
+}
+
+/* Header */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 25px 30px 15px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-eyebrow {
+    display: block;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #0d6efd;
+    margin-bottom: 6px;
+}
+
+#modalTitle {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #212529;
+    font-weight: 700;
+}
+
+/* Close Button */
+.close-modal {
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #6c757d;
+    transition: 0.3s ease;
+    padding: 5px;
+}
+
+.close-modal:hover {
+    color: #dc3545;
+    transform: rotate(90deg);
+}
+
+/* Description */
+.modal-description {
+    padding: 20px 30px 0;
+    color: #6c757d;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Year Grid */
+.year-grid {
+    padding: 25px 30px 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 15px;
+}
+
+/* Year Buttons */
+.year-btn {
+    position: relative;
+    text-decoration: none;
+    background: #f8f9fa;
+    border: 2px solid #e9ecef;
+    color: #212529;
+
+    padding: 16px 10px;
+    border-radius: 12px;
+
+    text-align: center;
+    font-weight: 700;
+    font-size: 1rem;
+
+    transition: all 0.25s ease;
+}
+
+.year-btn:hover {
+    background: #0d6efd;
+    color: white;
+    border-color: #0d6efd;
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(13,110,253,0.25);
+}
+
+/* Recent Year Highlight */
+.year-btn.recent {
+    border-color: #198754;
+    background: #f0fff5;
+}
+
+/* Badge */
+.format-badge {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.web-badge {
+    color: #0d6efd;
+}
+
+.pdf-badge {
+    color: #dc3545;
+}
+
+/* Scroll Support */
+.modal-box {
+    max-height: 85vh;
+    overflow-y: auto;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .modal-box {
+        max-width: 100%;
+        border-radius: 15px;
+    }
+
+    .modal-header {
+        padding: 20px;
+    }
+
+    .modal-description {
+        padding: 15px 20px 0;
+    }
+
+    .year-grid {
+        padding: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #modalTitle {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .year-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .year-btn {
+        padding: 14px 8px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Exam Switch Selection Layout inside Passco Modal */
+.modal-exam-selector {
+    padding: 15px 30px;
+    background: #f8f9fb;
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.selector-label {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.exam-toggle-group {
+    display: flex;
+    background: #e9ecef;
+    padding: 4px;
+    border-radius: 30px;
+}
+
+.exam-toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 8px 20px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.exam-toggle-btn:hover {
+    color: var(--primary);
+}
+
+.exam-toggle-btn.active {
+    background: var(--primary);
+    color: var(--text-light);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Adjust top padding on description item since selector fills spacer gap */
+.modal-description {
+    padding: 15px 30px 0 !important;
+}
+
+@media (max-width: 576px) {
+    .modal-exam-selector {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+    .exam-toggle-group {
+        width: 100%;
+    }
+    .exam-toggle-btn {
+        flex: 1;
+        text-align: center;
+        padding: 10px 5px;
+    }
+}
+
+/* ===================================
+   END OF PASSCO MODAL
