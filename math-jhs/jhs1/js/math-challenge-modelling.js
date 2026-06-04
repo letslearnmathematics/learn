@@ -462,30 +462,6 @@ function initGame() {
 const allQuestions = {
     1: [
       {
-        text: "If 1 rod = 10 cubes, how many cubes are in 3 rods?",
-        answers: ["3", "30", "300", "3,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many rods make 1 flat?",
-        answers: ["1", "10", "100", "1,000"],
-        correctIndex: 1,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "What is the value of 2 flats + 5 rods + 7 cubes?",
-        answers: ["275", "2,057", "257", "2570"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
-        text: "How many cubes are in 1 block?",
-        answers: ["10", "100", "1,000", "10,000"],
-        correctIndex: 2,
-        videoSolution: "https://www.youtube.com/embed/6YzeRmEr3IU"
-      },
-      {
         text: "If you have 6 blocks, how many flats is that?",
         answers: ["6", "60", "600", "6,000"],
         correctIndex: 1,
