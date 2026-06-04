@@ -25,12 +25,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
         
-        <!-- CSS -->
-        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
-        <link rel="stylesheet" href="../../css/the-zero-index.css">
-        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
-        <link rel="stylesheet" href="../../../passco/css/bece2024.css">
-    
         <!-- MathJax Configuration -->
         <script>
             window.MathJax = {
@@ -66,8 +60,15 @@
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
-            crossorigin="anonymous">
-        </script>
+            crossorigin="anonymous"></script>
+
+        <!-- Paywall Global System -->
+        <link rel="stylesheet" href="../../../../css/paywall-system.css">
+
+        <!-- CSS-->
+        <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
+        <link rel="stylesheet" href="../../../passco/css/bece-tests-general.css">
+        <link rel="stylesheet" href="../../../../css/passco-modal-general.css">
     </head>
     <body>
         <!-- Header Navigation -->
@@ -134,7 +135,7 @@
                             <a href="#quick-test" class="quick-link">
                                 <i class="fas fa-pen-fancy"></i> Quick Test
                             </a>
-                            <a href="../../../../passco-jhs" class="quick-link">
+                            <a href="#" data-passco-modal class="quick-link">
                                 <i class="fas fa-file-pdf"></i> PASSCO
                             </a>
                         </div>
@@ -684,9 +685,9 @@
                                 <li><a href="../../../../emath"><i class="fas fa-calculator"></i> Elective Mathematics</a></li>
                                 <li><a href="../../../../coremath"><i class="fas fa-calculator"></i> Core Mathematics</a></li>
                                 <li><a href="../../../../math-jhs"><i class="fas fa-calculator"></i> JHS Mathematics</a></li>
-                                <li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
+                                <!--<li><a href="../../../../social-jhs"><i class="fas fa-calculator"></i> JHS Social Studies</a></li>
                                 <li><a href="../../../../english-jhs"><i class="fas fa-calculator"></i> JHS English</a></li>
-                                <!--<li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
+                                <li><a href="./science"><i class="fas fa-flask"></i> Science</a></li>
                                 <li><a href="./english"><i class="fas fa-book"></i> English</a></li>
                                 <li><a href="./computing"><i class="fas fa-desktop"></i> Computing</a></li>-->
                             </ul>
@@ -695,7 +696,7 @@
                         <div class="site-links-column">
                             <h3>Resources</h3>
                             <ul class="site-links-list">
-                                <!--<li><a href="./q-and-a"><i class="fas fa-question-circle"></i> Past Questions</a></li>-->
+                                <li><a href="#" data-passco-modal><i class="fas fa-question-circle"></i> Past Questions</a></li>
                                 <li><a href="https://youtube.com/@theletslearnproject?si=zhiOp22pLEi8GFJi"><i class="fas fa-video"></i> Video Tutorials</a></li>
                                 <!--<li><a href="./ebooks"><i class="fas fa-book-open"></i> E-books</a></li>
                                 <li><a href="./mathgames"><i class="fas fa-dice"></i> Math Games</a></li>-->
@@ -725,17 +726,35 @@
             </div>
         </footer>
 
-        <!-- JavaScript Files -->
-        <script src="../../../js/lessons-test-configuration.js"></script>
-        <script src="../../../passco/js/bece-tests-general.js"></script>
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
 
+        <!-- Paystack -->
+        <script src="https://js.paystack.co/v1/inline.js"></script>
+
+        <!-- Paywall -->
+        <script src="../../../../js/paywall-system.js" defer></script>
+
+        <!-- Scroll To Top Trigger Button 
+        <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
+            <i class="fas fa-arrow-up" aria-hidden="true"></i>
+        </button>-->
+
+        <!-- Scripts -->
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+        
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
 
             // MathJax rendering observer
             const mathJaxObserver = new MutationObserver(mutations => {
-                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+            if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
                     MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
                 }
             });
@@ -757,5 +776,35 @@
                 }
             });
         </script>
+
+        <script src="../../../js/lessons-test-configuration.js"></script>
+        <script src="../../../js/bece-tests-general.js"></script>
+        <script src="../../../js/passco-modal-general.js"></script>
+
+        <!-- PASSCO MODAL CONTAINER -->
+        <div class="modal-overlay" id="yearModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <div class="modal-box">
+                <div class="modal-header">
+                    <div>
+                        <span class="modal-eyebrow" id="modalEyebrow">The Let's Learn Project</span>
+                        <h3 id="modalTitle">Past Examination Papers</h3>
+                    </div>
+                    <button class="close-modal" aria-label="Close modal">
+                        <i class="fas fa-times" aria-hidden="true"></i>
+                    </button>
+                </div>
+                
+                <div class="modal-exam-selector">
+                    <p class="selector-label">Choose Examination Track:</p>
+                    <div class="exam-toggle-group">
+                        <button type="button" class="exam-toggle-btn active" data-exam-type="bece">BECE</button>
+                        <button type="button" class="exam-toggle-btn" data-exam-type="wassceAdd">ADD. MATHS</button>
+                    </div>
+                </div>
+
+                <p class="modal-description" id="modalDescription">Select a year below to access the full past examination paper and worked solutions.</p>
+                <div class="year-grid" id="yearGrid"></div>
+            </div>
+        </div>
     </body>
 </html>

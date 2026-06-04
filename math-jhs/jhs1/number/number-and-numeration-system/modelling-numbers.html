@@ -6,7 +6,8 @@
         
         <!-- SEO and Social Meta Tags -->
         <title>Modelling Numbers | JHS Mathematics | The Let's Learn Project</title>
-        <meta name="description" content="Comprehensive lesson on Modelling Numbers for JHS1 Mathematics.">
+        <meta name="description" content="Comprehensive lesson on Modelling Numbers for 
+        JHS1 Mathematics.">
         
         <!-- Favicons -->
         <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/apple-touch-icon.png">
@@ -62,6 +63,9 @@
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
             crossorigin="anonymous"></script>
+
+        <!-- Paywall Global System -->
+        <link rel="stylesheet" href="../../../../css/paywall-system.css">
 
         <!-- CSS-->
         <link rel="stylesheet" href="../../../../css/mathjhs-lesson.css">
@@ -872,6 +876,17 @@
             </div>
         </footer>
 
+        <!-- Firebase -->
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-firestore-compat.js"></script>
+
+        <!-- Paystack -->
+        <script src="https://js.paystack.co/v1/inline.js"></script>
+
+        <!-- Paywall -->
+        <script src="../../../../js/paywall-system.js" defer></script>
+
         <!-- Scroll To Top Trigger Button 
         <button class="scroll-top-btn" id="scrollTopBtn" aria-label="Scroll to top">
             <i class="fas fa-arrow-up" aria-hidden="true"></i>
@@ -881,6 +896,35 @@
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+        
+        <script>
+            // Current year for footer
+            document.getElementById('year').textContent = new Date().getFullYear();
+
+            // MathJax rendering observer
+            const mathJaxObserver = new MutationObserver(mutations => {
+            if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                }
+            });
+
+            // Start observing the document with the configured parameters
+            mathJaxObserver.observe(document.body, {
+                subtree: true,
+                childList: true,
+                attributes: true,
+                characterData: true
+            });
+
+            // Ensure MathJax renders on page load
+            document.addEventListener('DOMContentLoaded', function() {
+                if (typeof MathJax !== 'undefined' && typeof MathJax.typesetPromise === 'function') {
+                    MathJax.startup.promise.then(() => {
+                        MathJax.typesetPromise().catch(err => console.log('MathJax typeset error:', err));
+                    });
+                }
+            });
         </script>
 
         <script src="../../../js/lessons-test-configuration.js"></script>
