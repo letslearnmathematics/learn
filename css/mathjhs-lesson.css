@@ -424,8 +424,133 @@ a {
 }
 
 /* Sections */
+.accordion-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: var(--space-md);
+}
+
+.accordion-toggle-all {
+    border: 1px solid var(--primary);
+    border-radius: var(--border-radius-sm);
+    background: transparent;
+    color: var(--primary);
+    cursor: pointer;
+    font: inherit;
+    padding: var(--space-xs) var(--space-md);
+}
+
+.accordion-toggle-all:hover {
+    background-color: rgba(57, 47, 93, 0.1);
+}
+
+.accordion-toggle-all:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 3px;
+}
+
 .lesson-section {
     margin-bottom: var(--space-xl);
+}
+
+.quick-test-section {
+    overflow: hidden;
+    border: 2px solid var(--secondary);
+    border-radius: var(--border-radius);
+    background: #fffaf0;
+    box-shadow: 0 6px 18px rgba(62, 47, 93, 0.14);
+}
+
+.quick-test-section > summary {
+    padding: var(--space-md) var(--space-lg);
+    background: var(--primary);
+}
+
+.quick-test-section > summary .section-title {
+    color: var(--light);
+}
+
+.quick-test-section > summary .section-title i,
+.quick-test-section > summary::after {
+    color: var(--secondary);
+}
+
+.quick-test-section[open] > summary {
+    border-bottom: 3px solid var(--secondary);
+}
+
+.quick-test-section .test-container {
+    border: 1px solid rgba(62, 47, 93, 0.12);
+}
+
+.lesson-section > summary {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    cursor: pointer;
+    list-style: none;
+}
+
+.lesson-section > summary::-webkit-details-marker {
+    display: none;
+}
+
+.lesson-section > summary::after {
+    content: "+";
+    flex-shrink: 0;
+    color: var(--secondary);
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.lesson-section[open] > summary::after {
+    content: "-";
+}
+
+.lesson-section > summary:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 4px;
+    border-radius: var(--border-radius-sm);
+}
+
+.lesson-section > summary .section-title {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.lesson-content-toggle {
+    margin-bottom: var(--space-lg);
+}
+
+.lesson-content-toggle > summary {
+    cursor: pointer;
+    color: var(--primary);
+    font-weight: 600;
+    list-style: none;
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid rgba(57, 47, 93, 0.2);
+    border-radius: var(--border-radius-sm);
+}
+
+.lesson-content-toggle > summary::-webkit-details-marker {
+    display: none;
+}
+
+.lesson-content-toggle > summary::after {
+    content: "+";
+    float: right;
+    color: var(--secondary);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.lesson-content-toggle[open] > summary::after {
+    content: "-";
+}
+
+.lesson-content-toggle > summary:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 3px;
 }
 
 .section-title {
@@ -589,6 +714,44 @@ a {
     align-items: center;
     gap: var(--space-sm);
     margin-bottom: var(--space-lg);
+}
+
+.lesson-practice > summary {
+    cursor: pointer;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.lesson-practice > summary::-webkit-details-marker {
+    display: none;
+}
+
+.lesson-practice > summary::after {
+    content: "+";
+    margin-left: auto;
+    color: var(--secondary);
+    font-size: 2.4rem;
+    line-height: 1;
+}
+
+.lesson-practice[open] > summary {
+    margin-bottom: var(--space-lg);
+}
+
+.lesson-practice[open] > summary::after {
+    content: "-";
+}
+
+.lesson-practice > summary:focus-visible {
+    outline: 3px solid var(--secondary);
+    outline-offset: 4px;
+    border-radius: var(--border-radius-sm);
+}
+
+.practice-title {
+    color: var(--primary);
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .practice-header i {
