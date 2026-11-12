@@ -848,1152 +848,1152 @@
                                 </h2>
                             </summary>
                         
-                        <!-- Section A -->
-                        <section id="section-a" class="lesson-section">
-
-                            <div class="test-container">
-                                <div class="test-instructions">
-                                    <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
-                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
-                                </div>
+                            <!-- Section A -->
+                            <section id="section-a" class="lesson-section">
 
-                                <div class="timer-container">
-                                    <div class="progress-bar">
-                                        <div class="progress-fill"></div>
+                                <div class="test-container">
+                                    <div class="test-instructions">
+                                        <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
+                                        <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                     </div>
-                                    <span id="timer-display">60:00</span>
-                                </div>
-
-                                <div id="test-warning" style="display: none;"></div>
-                                <div id="test-content"></div>
-
-                                <div class="test-navigation">
-                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
-                                    <span id="question-counter">Question 1 of 100</span>
-                                    <button id="next-btn" class="nav-btn">Next</button>
-                                </div>
-
-                                <div class="test-controls">
-                                    <button id="submit-btn" class="control-btn">Submit Test</button>
-                                </div>
-                            </div>
-
-                            <div id="results-section" style="display: none;">
-                                <div class="test-instructions">
-                                    <h3>Your Test Results</h3>
-                                    <p id="score-display">You scored 0 out of 100</p>
-                                </div>
-
-                                <div id="results-content"></div>
-
-                                <div class="test-controls">
-                                    <button id="review-btn" class="control-btn">Review All Questions</button>
-                                </div>
-                            </div>
-
-                            <!-- Hidden question bank in HTML -->
-                            <div id="question-bank" style="display: none;">
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 1</h3>
-                                        <p>What does the symbol $\approx$ mean?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">is exactly equal to</div>
-                                    <div class="option" data-correct="false">is greater than</div>
-                                    <div class="option" data-correct="true">is approximately equal to</div>
-                                    <div class="option" data-correct="false">is less than</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 2</h3>
-                                        <p>When we round a number, the new number is:</p>
-                                    </div>
-                                    <div class="option" data-correct="false">the exact value of the original number</div>
-                                    <div class="option" data-correct="true">an estimate of the original number</div>
-                                    <div class="option" data-correct="false">always larger than the original number</div>
-                                    <div class="option" data-correct="false">always smaller than the original number</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 3</h3>
-                                        <p>Which of these is a whole number?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2.5$</div>
-                                    <div class="option" data-correct="false">$\frac{3}{4}$</div>
-                                    <div class="option" data-correct="true">$0$</div>
-                                    <div class="option" data-correct="false">$-4$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 4</h3>
-                                        <p>Which set contains only whole numbers?</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$\{0, 1, 2, 3\}$</div>
-                                    <div class="option" data-correct="false">$\{0.5, 1, 2\}$</div>
-                                    <div class="option" data-correct="false">$\{-1, 0, 1\}$</div>
-                                    <div class="option" data-correct="false">$\{\frac{1}{2}, 1, 2\}$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 5</h3>
-                                        <p>Which digits are called small digits?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$5, 6, 7, 8, 9$</div>
-                                    <div class="option" data-correct="true">$0, 1, 2, 3, 4$</div>
-                                    <div class="option" data-correct="false">$1, 2, 3, 4, 5$</div>
-                                    <div class="option" data-correct="false">$0, 2, 4, 6, 8$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 6</h3>
-                                        <p>Which digits are called big digits?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$0, 1, 2, 3, 4$</div>
-                                    <div class="option" data-correct="false">$4, 5, 6, 7, 8$</div>
-                                    <div class="option" data-correct="true">$5, 6, 7, 8, 9$</div>
-                                    <div class="option" data-correct="false">$6, 7, 8, 9$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 7</h3>
-                                        <p>When rounding off, which digit do we look at to decide whether the place value stays the same or goes up by 1?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">The last digit of the number</div>
-                                    <div class="option" data-correct="false">The first digit of the number</div>
-                                    <div class="option" data-correct="false">The digit immediately to the left of the place value</div>
-                                    <div class="option" data-correct="true">The digit immediately to the right of the place value</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 8</h3>
-                                        <p>In $1,873,653$, which digit is in the ten thousands place?</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$7$</div>
-                                    <div class="option" data-correct="false">$8$</div>
-                                    <div class="option" data-correct="false">$3$</div>
-                                    <div class="option" data-correct="false">$6$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 9</h3>
-                                        <p>In $1,873,653$, what is the digit immediately to the right of the thousands place?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$3$</div>
-                                    <div class="option" data-correct="false">$5$</div>
-                                    <div class="option" data-correct="true">$6$</div>
-                                    <div class="option" data-correct="false">$8$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 10</h3>
-                                        <p>To round off $1,873,653$ to the nearest hundred, which digit decides whether the 6 stays the same or goes up?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$8$</div>
-                                    <div class="option" data-correct="false">$7$</div>
-                                    <div class="option" data-correct="false">$3$</div>
-                                    <div class="option" data-correct="true">$5$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 11</h3>
-                                        <p>Round off $1,873,653$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,800,000$</div>
-                                    <div class="option" data-correct="false">$1,870,000$</div>
-                                    <div class="option" data-correct="false">$1,880,000$</div>
-                                    <div class="option" data-correct="true">$1,900,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 12</h3>
-                                        <p>Round off $1,873,653$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$1,870,000$</div>
-                                    <div class="option" data-correct="false">$1,880,000$</div>
-                                    <div class="option" data-correct="false">$1,800,000$</div>
-                                    <div class="option" data-correct="false">$1,900,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 13</h3>
-                                        <p>Round off $1,873,653$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,873,000$</div>
-                                    <div class="option" data-correct="true">$1,874,000$</div>
-                                    <div class="option" data-correct="false">$1,873,700$</div>
-                                    <div class="option" data-correct="false">$1,870,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 14</h3>
-                                        <p>Round off $1,873,653$ to the nearest hundred.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,873,600$</div>
-                                    <div class="option" data-correct="false">$1,874,000$</div>
-                                    <div class="option" data-correct="true">$1,873,700$</div>
-                                    <div class="option" data-correct="false">$1,873,650$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 15</h3>
-                                        <p>Round off $1,873,653$ to the nearest ten.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,873,660$</div>
-                                    <div class="option" data-correct="false">$1,873,600$</div>
-                                    <div class="option" data-correct="false">$1,873,700$</div>
-                                    <div class="option" data-correct="true">$1,873,650$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 16</h3>
-                                        <p>Round off $1,879,653$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$1,900,000$</div>
-                                    <div class="option" data-correct="false">$1,800,000$</div>
-                                    <div class="option" data-correct="false">$1,880,000$</div>
-                                    <div class="option" data-correct="false">$1,870,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 17</h3>
-                                        <p>Round off $1,879,653$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,870,000$</div>
-                                    <div class="option" data-correct="false">$1,900,000$</div>
-                                    <div class="option" data-correct="true">$1,880,000$</div>
-                                    <div class="option" data-correct="false">$1,879,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 18</h3>
-                                        <p>Round off $2,846,655,317$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2,846,600,000$</div>
-                                    <div class="option" data-correct="true">$2,846,700,000$</div>
-                                    <div class="option" data-correct="false">$2,847,000,000$</div>
-                                    <div class="option" data-correct="false">$2,846,650,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 19</h3>
-                                        <p>Round off $2,846,655,317$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2,846,656,000$</div>
-                                    <div class="option" data-correct="false">$2,846,655,300$</div>
-                                    <div class="option" data-correct="false">$2,846,660,000$</div>
-                                    <div class="option" data-correct="true">$2,846,655,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 20</h3>
-                                        <p>Round off $2,846,655,317$ to the nearest ten.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$2,846,655,320$</div>
-                                    <div class="option" data-correct="false">$2,846,655,310$</div>
-                                    <div class="option" data-correct="false">$2,846,655,300$</div>
-                                    <div class="option" data-correct="false">$2,846,655,400$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 21</h3>
-                                        <p>Round off $5,842,136,709$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$5,842,130,000$</div>
-                                    <div class="option" data-correct="false">$5,842,136,000$</div>
-                                    <div class="option" data-correct="true">$5,842,140,000$</div>
-                                    <div class="option" data-correct="false">$5,842,100,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 22</h3>
-                                        <p>Round off $5,842,136,709$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$5,842,100,000$</div>
-                                    <div class="option" data-correct="false">$5,842,200,000$</div>
-                                    <div class="option" data-correct="false">$5,842,000,000$</div>
-                                    <div class="option" data-correct="false">$5,843,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 23</h3>
-                                        <p>Round off $5,842,136,709$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$5,842,136,000$</div>
-                                    <div class="option" data-correct="false">$5,842,140,000$</div>
-                                    <div class="option" data-correct="false">$5,842,136,700$</div>
-                                    <div class="option" data-correct="true">$5,842,137,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 24</h3>
-                                        <p>Round off $5,842,136,709$ to the nearest ten.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$5,842,136,700$</div>
-                                    <div class="option" data-correct="true">$5,842,136,710$</div>
-                                    <div class="option" data-correct="false">$5,842,136,709$</div>
-                                    <div class="option" data-correct="false">$5,842,136,800$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 25</h3>
-                                        <p>Round off $98,765$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$98,000$</div>
-                                    <div class="option" data-correct="false">$98,800$</div>
-                                    <div class="option" data-correct="false">$100,000$</div>
-                                    <div class="option" data-correct="true">$99,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 26</h3>
-                                        <p>Round off $4,450,000$ to the nearest million.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$4,500,000$</div>
-                                    <div class="option" data-correct="false">$5,000,000$</div>
-                                    <div class="option" data-correct="true">$4,000,000$</div>
-                                    <div class="option" data-correct="false">$4,400,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 27</h3>
-                                        <p>Round off $4,550,000$ to the nearest million.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$5,000,000$</div>
-                                    <div class="option" data-correct="false">$4,000,000$</div>
-                                    <div class="option" data-correct="false">$4,600,000$</div>
-                                    <div class="option" data-correct="false">$4,500,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 28</h3>
-                                        <p>Round off $999,500$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$999,000$</div>
-                                    <div class="option" data-correct="true">$1,000,000$</div>
-                                    <div class="option" data-correct="false">$1,000,500$</div>
-                                    <div class="option" data-correct="false">$990,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 29</h3>
-                                        <p>Round off $3,096,540,000$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$3,096,600,000$</div>
-                                    <div class="option" data-correct="false">$3,097,000,000$</div>
-                                    <div class="option" data-correct="false">$3,096,540,000$</div>
-                                    <div class="option" data-correct="true">$3,096,500,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 30</h3>
-                                        <p>Round off $6,350$ to the nearest hundred.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$6,300$</div>
-                                    <div class="option" data-correct="true">$6,400$</div>
-                                    <div class="option" data-correct="false">$6,350$</div>
-                                    <div class="option" data-correct="false">$7,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 31</h3>
-                                        <p>Round off $6,349$ to the nearest hundred.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$6,300$</div>
-                                    <div class="option" data-correct="false">$6,400$</div>
-                                    <div class="option" data-correct="false">$6,350$</div>
-                                    <div class="option" data-correct="false">$6,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 32</h3>
-                                        <p>A number rounded off to the nearest ten thousand is $450,000$. Which of these could the number be?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$444,999$</div>
-                                    <div class="option" data-correct="false">$455,001$</div>
-                                    <div class="option" data-correct="true">$449,999$</div>
-                                    <div class="option" data-correct="false">$460,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 33</h3>
-                                        <p>Which of these numbers rounds off to $2,000,000$ when rounded to the nearest hundred thousand?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,949,999$</div>
-                                    <div class="option" data-correct="false">$2,050,000$</div>
-                                    <div class="option" data-correct="false">$1,940,000$</div>
-                                    <div class="option" data-correct="true">$2,049,999$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 34</h3>
-                                        <p>Which statement about $1,873,653$ is true?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">To the nearest ten thousand it is $1,880,000$</div>
-                                    <div class="option" data-correct="true">To the nearest ten thousand it is $1,870,000$</div>
-                                    <div class="option" data-correct="false">To the nearest hundred thousand it is $1,800,000$</div>
-                                    <div class="option" data-correct="false">To the nearest thousand it is $1,873,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 35</h3>
-                                        <p>Round off $7,500,000$ to the nearest million.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$8,000,000$</div>
-                                    <div class="option" data-correct="false">$7,000,000$</div>
-                                    <div class="option" data-correct="false">$7,500,000$</div>
-                                    <div class="option" data-correct="false">$7,600,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 36</h3>
-                                        <p>Round off $2,346,000$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2,400,000$</div>
-                                    <div class="option" data-correct="false">$2,350,000$</div>
-                                    <div class="option" data-correct="false">$2,000,000$</div>
-                                    <div class="option" data-correct="true">$2,300,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 37</h3>
-                                        <p>Round off $4,999,999,999$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$4,999,900,000$</div>
-                                    <div class="option" data-correct="false">$4,900,000,000$</div>
-                                    <div class="option" data-correct="true">$5,000,000,000$</div>
-                                    <div class="option" data-correct="false">$4,999,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 38</h3>
-                                        <p>Round off $99,995$ to the nearest ten.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$100,000$</div>
-                                    <div class="option" data-correct="false">$99,990$</div>
-                                    <div class="option" data-correct="false">$99,999$</div>
-                                    <div class="option" data-correct="false">$100,005$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 39</h3>
-                                        <p>Mary says $1,873,653$ rounded off to the nearest thousand is $1,873,000$. Is she correct?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">Yes, because the next digit is 6, which is a small digit</div>
-                                    <div class="option" data-correct="true">No, because the next digit is 6, a big digit, so the answer is $1,874,000$</div>
-                                    <div class="option" data-correct="false">No, because the answer is $1,870,000$</div>
-                                    <div class="option" data-correct="false">Yes, because rounding off always keeps the place value the same</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 40</h3>
-                                        <p>Which statement about rounding off is true?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">A big digit means we keep the place value the same</div>
-                                    <div class="option" data-correct="false">A small digit means we add 1 to the place value</div>
-                                    <div class="option" data-correct="false">We always look at the last digit of the number</div>
-                                    <div class="option" data-correct="true">After rounding, every digit to the right of the place value becomes zero</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 41</h3>
-                                        <p>Round up $1,873,653$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,800,000$</div>
-                                    <div class="option" data-correct="false">$1,880,000$</div>
-                                    <div class="option" data-correct="true">$1,900,000$</div>
-                                    <div class="option" data-correct="false">$2,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 42</h3>
-                                        <p>Round up $1,873,653$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,870,000$</div>
-                                    <div class="option" data-correct="true">$1,880,000$</div>
-                                    <div class="option" data-correct="false">$1,900,000$</div>
-                                    <div class="option" data-correct="false">$1,873,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 43</h3>
-                                        <p>Round up $1,873,653$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$1,874,000$</div>
-                                    <div class="option" data-correct="false">$1,873,000$</div>
-                                    <div class="option" data-correct="false">$1,880,000$</div>
-                                    <div class="option" data-correct="false">$1,873,700$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 44</h3>
-                                        <p>Round up $1,873,653$ to the nearest hundred.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,873,600$</div>
-                                    <div class="option" data-correct="false">$1,874,000$</div>
-                                    <div class="option" data-correct="false">$1,873,650$</div>
-                                    <div class="option" data-correct="true">$1,873,700$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 45</h3>
-                                        <p>Round up $1,873,653$ to the nearest ten.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$1,873,660$</div>
-                                    <div class="option" data-correct="false">$1,873,650$</div>
-                                    <div class="option" data-correct="false">$1,873,700$</div>
-                                    <div class="option" data-correct="false">$1,873,600$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 46</h3>
-                                        <p>Round up $2,846,655$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2,846,000$</div>
-                                    <div class="option" data-correct="false">$2,846,700$</div>
-                                    <div class="option" data-correct="true">$2,847,000$</div>
-                                    <div class="option" data-correct="false">$2,850,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 47</h3>
-                                        <p>Round up $2,846,655$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2,840,000$</div>
-                                    <div class="option" data-correct="false">$2,847,000$</div>
-                                    <div class="option" data-correct="false">$2,860,000$</div>
-                                    <div class="option" data-correct="true">$2,850,000$</div>
-                                </div>
 
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 48</h3>
-                                        <p>Round up $2,846,655$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2,800,000$</div>
-                                    <div class="option" data-correct="true">$2,900,000$</div>
-                                    <div class="option" data-correct="false">$2,850,000$</div>
-                                    <div class="option" data-correct="false">$3,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 49</h3>
-                                        <p>Round up $12,067$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$12,000$</div>
-                                    <div class="option" data-correct="false">$12,100$</div>
-                                    <div class="option" data-correct="true">$13,000$</div>
-                                    <div class="option" data-correct="false">$12,070$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 50</h3>
-                                        <p>Round up $5,842,136,709$ to the nearest hundred.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$5,842,136,700$</div>
-                                    <div class="option" data-correct="true">$5,842,136,800$</div>
-                                    <div class="option" data-correct="false">$5,842,137,000$</div>
-                                    <div class="option" data-correct="false">$5,842,136,710$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 51</h3>
-                                        <p>Round up $5,842,136,709$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$5,842,100,000$</div>
-                                    <div class="option" data-correct="false">$5,843,000,000$</div>
-                                    <div class="option" data-correct="false">$5,842,136,800$</div>
-                                    <div class="option" data-correct="true">$5,842,200,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 52</h3>
-                                        <p>Round up $4,000,000$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$4,000,000$</div>
-                                    <div class="option" data-correct="false">$4,100,000$</div>
-                                    <div class="option" data-correct="false">$5,000,000$</div>
-                                    <div class="option" data-correct="false">$3,900,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 53</h3>
-                                        <p>Round up $3,873,000$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$3,874,000$</div>
-                                    <div class="option" data-correct="false">$3,880,000$</div>
-                                    <div class="option" data-correct="true">$3,873,000$</div>
-                                    <div class="option" data-correct="false">$3,900,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 54</h3>
-                                        <p>Round up $1,899,000$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,890,000$</div>
-                                    <div class="option" data-correct="true">$1,900,000$</div>
-                                    <div class="option" data-correct="false">$1,899,000$</div>
-                                    <div class="option" data-correct="false">$2,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 55</h3>
-                                        <p>Round up $79,991$ to the nearest ten.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$79,990$</div>
-                                    <div class="option" data-correct="false">$79,999$</div>
-                                    <div class="option" data-correct="false">$79,992$</div>
-                                    <div class="option" data-correct="true">$80,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 56</h3>
-                                        <p>Which statement about rounding up is true?</p>
-                                    </div>
-                                    <div class="option" data-correct="true">If every digit to the right of the place value is zero, the number stays the same</div>
-                                    <div class="option" data-correct="false">We only add 1 if the next digit is big</div>
-                                    <div class="option" data-correct="false">We always keep the place value the same</div>
-                                    <div class="option" data-correct="false">The answer is always smaller than the original number</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 57</h3>
-                                        <p>Round up $8,205,001$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$8,200,000$</div>
-                                    <div class="option" data-correct="true">$8,300,000$</div>
-                                    <div class="option" data-correct="false">$8,210,000$</div>
-                                    <div class="option" data-correct="false">$8,205,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 58</h3>
-                                        <p>Which of these numbers stays the same when rounded up to the nearest ten thousand?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$7,350,100$</div>
-                                    <div class="option" data-correct="false">$7,345,000$</div>
-                                    <div class="option" data-correct="true">$7,350,000$</div>
-                                    <div class="option" data-correct="false">$7,351,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 59</h3>
-                                        <p>Round up $1,000,001$ to the nearest million.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,000,000$</div>
-                                    <div class="option" data-correct="false">$1,100,000$</div>
-                                    <div class="option" data-correct="false">$1,001,000$</div>
-                                    <div class="option" data-correct="true">$2,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 60</h3>
-                                        <p>What is the difference between rounding off and rounding up $1,873,653$ to the nearest ten thousand?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$0$</div>
-                                    <div class="option" data-correct="false">$1,000$</div>
-                                    <div class="option" data-correct="true">$10,000$</div>
-                                    <div class="option" data-correct="false">$100,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 61</h3>
-                                        <p>Round down $1,873,653$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$1,800,000$</div>
-                                    <div class="option" data-correct="false">$1,900,000$</div>
-                                    <div class="option" data-correct="false">$1,870,000$</div>
-                                    <div class="option" data-correct="false">$1,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 62</h3>
-                                        <p>Round down $1,873,653$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,880,000$</div>
-                                    <div class="option" data-correct="false">$1,800,000$</div>
-                                    <div class="option" data-correct="false">$1,873,000$</div>
-                                    <div class="option" data-correct="true">$1,870,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 63</h3>
-                                        <p>Round down $1,873,653$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,874,000$</div>
-                                    <div class="option" data-correct="true">$1,873,000$</div>
-                                    <div class="option" data-correct="false">$1,870,000$</div>
-                                    <div class="option" data-correct="false">$1,873,600$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 64</h3>
-                                        <p>Round down $1,873,653$ to the nearest hundred.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,873,700$</div>
-                                    <div class="option" data-correct="false">$1,873,000$</div>
-                                    <div class="option" data-correct="true">$1,873,600$</div>
-                                    <div class="option" data-correct="false">$1,873,650$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 65</h3>
-                                        <p>Round down $1,873,653$ to the nearest ten.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1,873,600$</div>
-                                    <div class="option" data-correct="false">$1,873,660$</div>
-                                    <div class="option" data-correct="false">$1,873,700$</div>
-                                    <div class="option" data-correct="true">$1,873,650$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 66</h3>
-                                        <p>Round down $2,846,655$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$2,846,000$</div>
-                                    <div class="option" data-correct="false">$2,847,000$</div>
-                                    <div class="option" data-correct="false">$2,846,600$</div>
-                                    <div class="option" data-correct="false">$2,840,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 67</h3>
-                                        <p>Round down $2,846,655$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2,850,000$</div>
-                                    <div class="option" data-correct="false">$2,846,000$</div>
-                                    <div class="option" data-correct="false">$2,800,000$</div>
-                                    <div class="option" data-correct="true">$2,840,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 68</h3>
-                                        <p>Round down $2,846,655$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2,900,000$</div>
-                                    <div class="option" data-correct="true">$2,800,000$</div>
-                                    <div class="option" data-correct="false">$2,840,000$</div>
-                                    <div class="option" data-correct="false">$2,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 69</h3>
-                                        <p>Round down $9,999,999$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$10,000,000$</div>
-                                    <div class="option" data-correct="false">$9,000,000$</div>
-                                    <div class="option" data-correct="true">$9,900,000$</div>
-                                    <div class="option" data-correct="false">$9,999,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 70</h3>
-                                        <p>Round down $5,842,136,709$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$5,842,130,000$</div>
-                                    <div class="option" data-correct="false">$5,842,140,000$</div>
-                                    <div class="option" data-correct="false">$5,842,136,000$</div>
-                                    <div class="option" data-correct="false">$5,842,100,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 71</h3>
-                                        <p>Round down $3,096,540,000$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$3,096,000,000$</div>
-                                    <div class="option" data-correct="false">$3,096,541,000$</div>
-                                    <div class="option" data-correct="true">$3,096,540,000$</div>
-                                    <div class="option" data-correct="false">$3,096,500,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 72</h3>
-                                        <p>When you round down a number, the answer is always:</p>
-                                    </div>
-                                    <div class="option" data-correct="false">greater than the original number</div>
-                                    <div class="option" data-correct="true">less than or equal to the original number</div>
-                                    <div class="option" data-correct="false">greater than or equal to the original number</div>
-                                    <div class="option" data-correct="false">equal to the original number</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 73</h3>
-                                        <p>When you round up a number, the answer is always:</p>
-                                    </div>
-                                    <div class="option" data-correct="false">less than the original number</div>
-                                    <div class="option" data-correct="false">equal to the original number</div>
-                                    <div class="option" data-correct="false">greater than the original number</div>
-                                    <div class="option" data-correct="true">greater than or equal to the original number</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 74</h3>
-                                        <p>Round down $2,999,999$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$2,990,000$</div>
-                                    <div class="option" data-correct="false">$3,000,000$</div>
-                                    <div class="option" data-correct="false">$2,999,000$</div>
-                                    <div class="option" data-correct="false">$2,900,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 75</h3>
-                                        <p>Round down $6,543,210$ to the nearest ten.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$6,543,200$</div>
-                                    <div class="option" data-correct="true">$6,543,210$</div>
-                                    <div class="option" data-correct="false">$6,543,220$</div>
-                                    <div class="option" data-correct="false">$6,543,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 76</h3>
-                                        <p>Round down $4,375,129$ to the nearest hundred thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$4,400,000$</div>
-                                    <div class="option" data-correct="false">$4,380,000$</div>
-                                    <div class="option" data-correct="true">$4,300,000$</div>
-                                    <div class="option" data-correct="false">$4,375,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 77</h3>
-                                        <p>Round down $5,842,136,709$ to the nearest hundred.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$5,842,136,800$</div>
-                                    <div class="option" data-correct="false">$5,842,137,000$</div>
-                                    <div class="option" data-correct="false">$5,842,136,000$</div>
-                                    <div class="option" data-correct="true">$5,842,136,700$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 78</h3>
-                                        <p>Which statement about rounding down is true?</p>
-                                    </div>
-                                    <div class="option" data-correct="true">We keep the place value the same and change the digits to its right to zero</div>
-                                    <div class="option" data-correct="false">We add 1 to the place value</div>
-                                    <div class="option" data-correct="false">We look at whether the next digit is big or small</div>
-                                    <div class="option" data-correct="false">The answer is always larger than the original number</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 79</h3>
-                                        <p>Round down $408,999$ to the nearest thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$409,000$</div>
-                                    <div class="option" data-correct="true">$408,000$</div>
-                                    <div class="option" data-correct="false">$400,000$</div>
-                                    <div class="option" data-correct="false">$408,900$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 80</h3>
-                                        <p>Round down $99,999$ to the nearest ten thousand.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$100,000$</div>
-                                    <div class="option" data-correct="false">$99,000$</div>
-                                    <div class="option" data-correct="true">$90,000$</div>
-                                    <div class="option" data-correct="false">$99,990$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 81</h3>
-                                        <p>For $2,846,655$ to the nearest hundred thousand, which row gives the correct answers?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">Up: $2,900,000$; Down: $2,800,000$; Off: $2,900,000$</div>
-                                    <div class="option" data-correct="true">Up: $2,900,000$; Down: $2,800,000$; Off: $2,800,000$</div>
-                                    <div class="option" data-correct="false">Up: $2,800,000$; Down: $2,900,000$; Off: $2,800,000$</div>
-                                    <div class="option" data-correct="false">Up: $2,800,000$; Down: $2,800,000$; Off: $2,900,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 82</h3>
-                                        <p>For $2,846,655$ to the nearest thousand, which answer is the same for rounding up and rounding off?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2,846,000$</div>
-                                    <div class="option" data-correct="false">$2,846,700$</div>
-                                    <div class="option" data-correct="false">$2,850,000$</div>
-                                    <div class="option" data-correct="true">$2,847,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 83</h3>
-                                        <p>For $1,873,653$ to the nearest ten thousand, which two methods give the same answer?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">Off and up</div>
-                                    <div class="option" data-correct="false">Up and down</div>
-                                    <div class="option" data-correct="true">Off and down</div>
-                                    <div class="option" data-correct="false">All three methods</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 84</h3>
-                                        <p>For $1,873,653$ to the nearest hundred, which two methods give the same answer?</p>
-                                    </div>
-                                    <div class="option" data-correct="true">Off and up</div>
-                                    <div class="option" data-correct="false">Off and down</div>
-                                    <div class="option" data-correct="false">Up and down</div>
-                                    <div class="option" data-correct="false">None of them</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 85</h3>
-                                        <p>When does rounding off give the same answer as rounding down?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">When the digit to the right of the place value is big</div>
-                                    <div class="option" data-correct="true">When the digit to the right of the place value is small</div>
-                                    <div class="option" data-correct="false">Never</div>
-                                    <div class="option" data-correct="false">Always</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 86</h3>
-                                        <p>Which statement about rounding off is always true?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">It always gives the largest of the three answers</div>
-                                    <div class="option" data-correct="false">It always gives the smallest of the three answers</div>
-                                    <div class="option" data-correct="false">It always gives an answer different from both rounding up and rounding down</div>
-                                    <div class="option" data-correct="true">It gives the same answer as either rounding up or rounding down</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 87</h3>
-                                        <p>How many significant figures does $123$ have?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$1$</div>
-                                    <div class="option" data-correct="false">$2$</div>
-                                    <div class="option" data-correct="true">$3$</div>
-                                    <div class="option" data-correct="false">$4$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 88</h3>
-                                        <p>How many significant figures does $1003$ have?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$2$</div>
-                                    <div class="option" data-correct="false">$3$</div>
-                                    <div class="option" data-correct="false">$1$</div>
-                                    <div class="option" data-correct="true">$4$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 89</h3>
-                                        <p>How many significant figures does $100$ have?</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$1$</div>
-                                    <div class="option" data-correct="false">$2$</div>
-                                    <div class="option" data-correct="false">$3$</div>
-                                    <div class="option" data-correct="false">$0$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 90</h3>
-                                        <p>How many significant figures does $00234$ have?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$5$</div>
-                                    <div class="option" data-correct="true">$3$</div>
-                                    <div class="option" data-correct="false">$4$</div>
-                                    <div class="option" data-correct="false">$2$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 91</h3>
-                                        <p>Express $857,386,321$ to five significant figures.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$857,380,000$</div>
-                                    <div class="option" data-correct="false">$857,386,000$</div>
-                                    <div class="option" data-correct="true">$857,390,000$</div>
-                                    <div class="option" data-correct="false">$857,300,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 92</h3>
-                                        <p>Express $857,386,321$ to four significant figures.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$857,400,000$</div>
-                                    <div class="option" data-correct="false">$857,300,000$</div>
-                                    <div class="option" data-correct="false">$857,390,000$</div>
-                                    <div class="option" data-correct="false">$857,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 93</h3>
-                                        <p>Express $857,386,321$ to three significant figures.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$860,000,000$</div>
-                                    <div class="option" data-correct="false">$858,000,000$</div>
-                                    <div class="option" data-correct="false">$857,400,000$</div>
-                                    <div class="option" data-correct="true">$857,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 94</h3>
-                                        <p>Express $857,386,321$ to two significant figures.</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$850,000,000$</div>
-                                    <div class="option" data-correct="true">$860,000,000$</div>
-                                    <div class="option" data-correct="false">$900,000,000$</div>
-                                    <div class="option" data-correct="false">$857,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 95</h3>
-                                        <p>Express $4,862,500$ to three significant figures.</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$4,860,000$</div>
-                                    <div class="option" data-correct="false">$4,870,000$</div>
-                                    <div class="option" data-correct="false">$4,862,000$</div>
-                                    <div class="option" data-correct="false">$4,900,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 96</h3>
-                                        <p>A bank reports a profit of GH₵ $1,873,653$. Rounded off to the nearest hundred thousand, the profit is about:</p>
-                                    </div>
-                                    <div class="option" data-correct="false">GH₵ $1,800,000$</div>
-                                    <div class="option" data-correct="false">GH₵ $1,870,000$</div>
-                                    <div class="option" data-correct="true">GH₵ $1,900,000$</div>
-                                    <div class="option" data-correct="false">GH₵ $2,000,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 97</h3>
-                                        <p>A stadium has $45,678$ seats. Rounded off to the nearest thousand, the number of seats is:</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$45,000$</div>
-                                    <div class="option" data-correct="false">$45,700$</div>
-                                    <div class="option" data-correct="false">$50,000$</div>
-                                    <div class="option" data-correct="true">$46,000$</div>
-                                </div>
-
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 98</h3>
-                                        <p>A shop owner has GH₵ $8,350$ and says he has "about GH₵ $8,400$." To which place was the amount rounded off?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">Ten</div>
-                                    <div class="option" data-correct="true">Hundred</div>
-                                    <div class="option" data-correct="false">Thousand</div>
-                                    <div class="option" data-correct="false">Ten thousand</div>
-                                </div>
+                                    <div class="timer-container">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill"></div>
+                                        </div>
+                                        <span id="timer-display">60:00</span>
+                                    </div>
 
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 99</h3>
-                                        <p>A baker has $3,205$ loaves to pack. To be safe, he rounds the number up to the nearest hundred. How many loaves does he prepare?</p>
-                                    </div>
-                                    <div class="option" data-correct="false">$3,200$</div>
-                                    <div class="option" data-correct="false">$3,210$</div>
-                                    <div class="option" data-correct="true">$3,300$</div>
-                                    <div class="option" data-correct="false">$3,000$</div>
-                                </div>
+                                    <div id="test-warning" style="display: none;"></div>
+                                    <div id="test-content"></div>
+
+                                    <div class="test-navigation">
+                                        <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                        <span id="question-counter">Question 1 of 100</span>
+                                        <button id="next-btn" class="nav-btn">Next</button>
+                                    </div>
 
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 100</h3>
-                                        <p>A school has $2,987$ students. For a report, it rounds the number down to the nearest hundred. What number does the school report?</p>
-                                    </div>
-                                    <div class="option" data-correct="true">$2,900$</div>
-                                    <div class="option" data-correct="false">$3,000$</div>
-                                    <div class="option" data-correct="false">$2,990$</div>
-                                    <div class="option" data-correct="false">$2,980$</div>
-                                </div>
-                            </div>
-                        </section>
+                                    <div class="test-controls">
+                                        <button id="submit-btn" class="control-btn">Submit Test</button>
+                                    </div>
+                                </div>
+
+                                <div id="results-section" style="display: none;">
+                                    <div class="test-instructions">
+                                        <h3>Your Test Results</h3>
+                                        <p id="score-display">You scored 0 out of 100</p>
+                                    </div>
+
+                                    <div id="results-content"></div>
+
+                                    <div class="test-controls">
+                                        <button id="review-btn" class="control-btn">Review All Questions</button>
+                                    </div>
+                                </div>
+
+                                <!-- Hidden question bank in HTML -->
+                                <div id="question-bank" style="display: none;">
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 1</h3>
+                                            <p>What does the symbol $\approx$ mean?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">is exactly equal to</div>
+                                        <div class="option" data-correct="false">is greater than</div>
+                                        <div class="option" data-correct="true">is approximately equal to</div>
+                                        <div class="option" data-correct="false">is less than</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 2</h3>
+                                            <p>When we round a number, the new number is:</p>
+                                        </div>
+                                        <div class="option" data-correct="false">the exact value of the original number</div>
+                                        <div class="option" data-correct="true">an estimate of the original number</div>
+                                        <div class="option" data-correct="false">always larger than the original number</div>
+                                        <div class="option" data-correct="false">always smaller than the original number</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 3</h3>
+                                            <p>Which of these is a whole number?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2.5$</div>
+                                        <div class="option" data-correct="false">$\frac{3}{4}$</div>
+                                        <div class="option" data-correct="true">$0$</div>
+                                        <div class="option" data-correct="false">$-4$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 4</h3>
+                                            <p>Which set contains only whole numbers?</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$\{0, 1, 2, 3\}$</div>
+                                        <div class="option" data-correct="false">$\{0.5, 1, 2\}$</div>
+                                        <div class="option" data-correct="false">$\{-1, 0, 1\}$</div>
+                                        <div class="option" data-correct="false">$\{\frac{1}{2}, 1, 2\}$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 5</h3>
+                                            <p>Which digits are called small digits?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$5, 6, 7, 8, 9$</div>
+                                        <div class="option" data-correct="true">$0, 1, 2, 3, 4$</div>
+                                        <div class="option" data-correct="false">$1, 2, 3, 4, 5$</div>
+                                        <div class="option" data-correct="false">$0, 2, 4, 6, 8$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 6</h3>
+                                            <p>Which digits are called big digits?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$0, 1, 2, 3, 4$</div>
+                                        <div class="option" data-correct="false">$4, 5, 6, 7, 8$</div>
+                                        <div class="option" data-correct="true">$5, 6, 7, 8, 9$</div>
+                                        <div class="option" data-correct="false">$6, 7, 8, 9$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 7</h3>
+                                            <p>When rounding off, which digit do we look at to decide whether the place value stays the same or goes up by 1?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">The last digit of the number</div>
+                                        <div class="option" data-correct="false">The first digit of the number</div>
+                                        <div class="option" data-correct="false">The digit immediately to the left of the place value</div>
+                                        <div class="option" data-correct="true">The digit immediately to the right of the place value</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 8</h3>
+                                            <p>In $1,873,653$, which digit is in the ten thousands place?</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$7$</div>
+                                        <div class="option" data-correct="false">$8$</div>
+                                        <div class="option" data-correct="false">$3$</div>
+                                        <div class="option" data-correct="false">$6$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 9</h3>
+                                            <p>In $1,873,653$, what is the digit immediately to the right of the thousands place?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$3$</div>
+                                        <div class="option" data-correct="false">$5$</div>
+                                        <div class="option" data-correct="true">$6$</div>
+                                        <div class="option" data-correct="false">$8$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 10</h3>
+                                            <p>To round off $1,873,653$ to the nearest hundred, which digit decides whether the 6 stays the same or goes up?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$8$</div>
+                                        <div class="option" data-correct="false">$7$</div>
+                                        <div class="option" data-correct="false">$3$</div>
+                                        <div class="option" data-correct="true">$5$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 11</h3>
+                                            <p>Round off $1,873,653$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,800,000$</div>
+                                        <div class="option" data-correct="false">$1,870,000$</div>
+                                        <div class="option" data-correct="false">$1,880,000$</div>
+                                        <div class="option" data-correct="true">$1,900,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 12</h3>
+                                            <p>Round off $1,873,653$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$1,870,000$</div>
+                                        <div class="option" data-correct="false">$1,880,000$</div>
+                                        <div class="option" data-correct="false">$1,800,000$</div>
+                                        <div class="option" data-correct="false">$1,900,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 13</h3>
+                                            <p>Round off $1,873,653$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,873,000$</div>
+                                        <div class="option" data-correct="true">$1,874,000$</div>
+                                        <div class="option" data-correct="false">$1,873,700$</div>
+                                        <div class="option" data-correct="false">$1,870,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 14</h3>
+                                            <p>Round off $1,873,653$ to the nearest hundred.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,873,600$</div>
+                                        <div class="option" data-correct="false">$1,874,000$</div>
+                                        <div class="option" data-correct="true">$1,873,700$</div>
+                                        <div class="option" data-correct="false">$1,873,650$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 15</h3>
+                                            <p>Round off $1,873,653$ to the nearest ten.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,873,660$</div>
+                                        <div class="option" data-correct="false">$1,873,600$</div>
+                                        <div class="option" data-correct="false">$1,873,700$</div>
+                                        <div class="option" data-correct="true">$1,873,650$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 16</h3>
+                                            <p>Round off $1,879,653$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$1,900,000$</div>
+                                        <div class="option" data-correct="false">$1,800,000$</div>
+                                        <div class="option" data-correct="false">$1,880,000$</div>
+                                        <div class="option" data-correct="false">$1,870,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 17</h3>
+                                            <p>Round off $1,879,653$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,870,000$</div>
+                                        <div class="option" data-correct="false">$1,900,000$</div>
+                                        <div class="option" data-correct="true">$1,880,000$</div>
+                                        <div class="option" data-correct="false">$1,879,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 18</h3>
+                                            <p>Round off $2,846,655,317$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2,846,600,000$</div>
+                                        <div class="option" data-correct="true">$2,846,700,000$</div>
+                                        <div class="option" data-correct="false">$2,847,000,000$</div>
+                                        <div class="option" data-correct="false">$2,846,650,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 19</h3>
+                                            <p>Round off $2,846,655,317$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2,846,656,000$</div>
+                                        <div class="option" data-correct="false">$2,846,655,300$</div>
+                                        <div class="option" data-correct="false">$2,846,660,000$</div>
+                                        <div class="option" data-correct="true">$2,846,655,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 20</h3>
+                                            <p>Round off $2,846,655,317$ to the nearest ten.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$2,846,655,320$</div>
+                                        <div class="option" data-correct="false">$2,846,655,310$</div>
+                                        <div class="option" data-correct="false">$2,846,655,300$</div>
+                                        <div class="option" data-correct="false">$2,846,655,400$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 21</h3>
+                                            <p>Round off $5,842,136,709$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$5,842,130,000$</div>
+                                        <div class="option" data-correct="false">$5,842,136,000$</div>
+                                        <div class="option" data-correct="true">$5,842,140,000$</div>
+                                        <div class="option" data-correct="false">$5,842,100,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 22</h3>
+                                            <p>Round off $5,842,136,709$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$5,842,100,000$</div>
+                                        <div class="option" data-correct="false">$5,842,200,000$</div>
+                                        <div class="option" data-correct="false">$5,842,000,000$</div>
+                                        <div class="option" data-correct="false">$5,843,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 23</h3>
+                                            <p>Round off $5,842,136,709$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$5,842,136,000$</div>
+                                        <div class="option" data-correct="false">$5,842,140,000$</div>
+                                        <div class="option" data-correct="false">$5,842,136,700$</div>
+                                        <div class="option" data-correct="true">$5,842,137,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 24</h3>
+                                            <p>Round off $5,842,136,709$ to the nearest ten.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$5,842,136,700$</div>
+                                        <div class="option" data-correct="true">$5,842,136,710$</div>
+                                        <div class="option" data-correct="false">$5,842,136,709$</div>
+                                        <div class="option" data-correct="false">$5,842,136,800$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 25</h3>
+                                            <p>Round off $98,765$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$98,000$</div>
+                                        <div class="option" data-correct="false">$98,800$</div>
+                                        <div class="option" data-correct="false">$100,000$</div>
+                                        <div class="option" data-correct="true">$99,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 26</h3>
+                                            <p>Round off $4,450,000$ to the nearest million.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$4,500,000$</div>
+                                        <div class="option" data-correct="false">$5,000,000$</div>
+                                        <div class="option" data-correct="true">$4,000,000$</div>
+                                        <div class="option" data-correct="false">$4,400,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 27</h3>
+                                            <p>Round off $4,550,000$ to the nearest million.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$5,000,000$</div>
+                                        <div class="option" data-correct="false">$4,000,000$</div>
+                                        <div class="option" data-correct="false">$4,600,000$</div>
+                                        <div class="option" data-correct="false">$4,500,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 28</h3>
+                                            <p>Round off $999,500$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$999,000$</div>
+                                        <div class="option" data-correct="true">$1,000,000$</div>
+                                        <div class="option" data-correct="false">$1,000,500$</div>
+                                        <div class="option" data-correct="false">$990,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 29</h3>
+                                            <p>Round off $3,096,540,000$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$3,096,600,000$</div>
+                                        <div class="option" data-correct="false">$3,097,000,000$</div>
+                                        <div class="option" data-correct="false">$3,096,540,000$</div>
+                                        <div class="option" data-correct="true">$3,096,500,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 30</h3>
+                                            <p>Round off $6,350$ to the nearest hundred.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$6,300$</div>
+                                        <div class="option" data-correct="true">$6,400$</div>
+                                        <div class="option" data-correct="false">$6,350$</div>
+                                        <div class="option" data-correct="false">$7,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 31</h3>
+                                            <p>Round off $6,349$ to the nearest hundred.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$6,300$</div>
+                                        <div class="option" data-correct="false">$6,400$</div>
+                                        <div class="option" data-correct="false">$6,350$</div>
+                                        <div class="option" data-correct="false">$6,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 32</h3>
+                                            <p>A number rounded off to the nearest ten thousand is $450,000$. Which of these could the number be?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$444,999$</div>
+                                        <div class="option" data-correct="false">$455,001$</div>
+                                        <div class="option" data-correct="true">$449,999$</div>
+                                        <div class="option" data-correct="false">$460,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 33</h3>
+                                            <p>Which of these numbers rounds off to $2,000,000$ when rounded to the nearest hundred thousand?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,949,999$</div>
+                                        <div class="option" data-correct="false">$2,050,000$</div>
+                                        <div class="option" data-correct="false">$1,940,000$</div>
+                                        <div class="option" data-correct="true">$2,049,999$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 34</h3>
+                                            <p>Which statement about $1,873,653$ is true?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">To the nearest ten thousand it is $1,880,000$</div>
+                                        <div class="option" data-correct="true">To the nearest ten thousand it is $1,870,000$</div>
+                                        <div class="option" data-correct="false">To the nearest hundred thousand it is $1,800,000$</div>
+                                        <div class="option" data-correct="false">To the nearest thousand it is $1,873,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 35</h3>
+                                            <p>Round off $7,500,000$ to the nearest million.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$8,000,000$</div>
+                                        <div class="option" data-correct="false">$7,000,000$</div>
+                                        <div class="option" data-correct="false">$7,500,000$</div>
+                                        <div class="option" data-correct="false">$7,600,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 36</h3>
+                                            <p>Round off $2,346,000$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2,400,000$</div>
+                                        <div class="option" data-correct="false">$2,350,000$</div>
+                                        <div class="option" data-correct="false">$2,000,000$</div>
+                                        <div class="option" data-correct="true">$2,300,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 37</h3>
+                                            <p>Round off $4,999,999,999$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$4,999,900,000$</div>
+                                        <div class="option" data-correct="false">$4,900,000,000$</div>
+                                        <div class="option" data-correct="true">$5,000,000,000$</div>
+                                        <div class="option" data-correct="false">$4,999,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 38</h3>
+                                            <p>Round off $99,995$ to the nearest ten.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$100,000$</div>
+                                        <div class="option" data-correct="false">$99,990$</div>
+                                        <div class="option" data-correct="false">$99,999$</div>
+                                        <div class="option" data-correct="false">$100,005$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 39</h3>
+                                            <p>Mary says $1,873,653$ rounded off to the nearest thousand is $1,873,000$. Is she correct?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">Yes, because the next digit is 6, which is a small digit</div>
+                                        <div class="option" data-correct="true">No, because the next digit is 6, a big digit, so the answer is $1,874,000$</div>
+                                        <div class="option" data-correct="false">No, because the answer is $1,870,000$</div>
+                                        <div class="option" data-correct="false">Yes, because rounding off always keeps the place value the same</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 40</h3>
+                                            <p>Which statement about rounding off is true?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">A big digit means we keep the place value the same</div>
+                                        <div class="option" data-correct="false">A small digit means we add 1 to the place value</div>
+                                        <div class="option" data-correct="false">We always look at the last digit of the number</div>
+                                        <div class="option" data-correct="true">After rounding, every digit to the right of the place value becomes zero</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 41</h3>
+                                            <p>Round up $1,873,653$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,800,000$</div>
+                                        <div class="option" data-correct="false">$1,880,000$</div>
+                                        <div class="option" data-correct="true">$1,900,000$</div>
+                                        <div class="option" data-correct="false">$2,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 42</h3>
+                                            <p>Round up $1,873,653$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,870,000$</div>
+                                        <div class="option" data-correct="true">$1,880,000$</div>
+                                        <div class="option" data-correct="false">$1,900,000$</div>
+                                        <div class="option" data-correct="false">$1,873,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 43</h3>
+                                            <p>Round up $1,873,653$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$1,874,000$</div>
+                                        <div class="option" data-correct="false">$1,873,000$</div>
+                                        <div class="option" data-correct="false">$1,880,000$</div>
+                                        <div class="option" data-correct="false">$1,873,700$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 44</h3>
+                                            <p>Round up $1,873,653$ to the nearest hundred.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,873,600$</div>
+                                        <div class="option" data-correct="false">$1,874,000$</div>
+                                        <div class="option" data-correct="false">$1,873,650$</div>
+                                        <div class="option" data-correct="true">$1,873,700$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 45</h3>
+                                            <p>Round up $1,873,653$ to the nearest ten.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$1,873,660$</div>
+                                        <div class="option" data-correct="false">$1,873,650$</div>
+                                        <div class="option" data-correct="false">$1,873,700$</div>
+                                        <div class="option" data-correct="false">$1,873,600$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 46</h3>
+                                            <p>Round up $2,846,655$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2,846,000$</div>
+                                        <div class="option" data-correct="false">$2,846,700$</div>
+                                        <div class="option" data-correct="true">$2,847,000$</div>
+                                        <div class="option" data-correct="false">$2,850,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 47</h3>
+                                            <p>Round up $2,846,655$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2,840,000$</div>
+                                        <div class="option" data-correct="false">$2,847,000$</div>
+                                        <div class="option" data-correct="false">$2,860,000$</div>
+                                        <div class="option" data-correct="true">$2,850,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 48</h3>
+                                            <p>Round up $2,846,655$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2,800,000$</div>
+                                        <div class="option" data-correct="true">$2,900,000$</div>
+                                        <div class="option" data-correct="false">$2,850,000$</div>
+                                        <div class="option" data-correct="false">$3,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 49</h3>
+                                            <p>Round up $12,067$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$12,000$</div>
+                                        <div class="option" data-correct="false">$12,100$</div>
+                                        <div class="option" data-correct="true">$13,000$</div>
+                                        <div class="option" data-correct="false">$12,070$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 50</h3>
+                                            <p>Round up $5,842,136,709$ to the nearest hundred.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$5,842,136,700$</div>
+                                        <div class="option" data-correct="true">$5,842,136,800$</div>
+                                        <div class="option" data-correct="false">$5,842,137,000$</div>
+                                        <div class="option" data-correct="false">$5,842,136,710$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 51</h3>
+                                            <p>Round up $5,842,136,709$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$5,842,100,000$</div>
+                                        <div class="option" data-correct="false">$5,843,000,000$</div>
+                                        <div class="option" data-correct="false">$5,842,136,800$</div>
+                                        <div class="option" data-correct="true">$5,842,200,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 52</h3>
+                                            <p>Round up $4,000,000$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$4,000,000$</div>
+                                        <div class="option" data-correct="false">$4,100,000$</div>
+                                        <div class="option" data-correct="false">$5,000,000$</div>
+                                        <div class="option" data-correct="false">$3,900,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 53</h3>
+                                            <p>Round up $3,873,000$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$3,874,000$</div>
+                                        <div class="option" data-correct="false">$3,880,000$</div>
+                                        <div class="option" data-correct="true">$3,873,000$</div>
+                                        <div class="option" data-correct="false">$3,900,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 54</h3>
+                                            <p>Round up $1,899,000$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,890,000$</div>
+                                        <div class="option" data-correct="true">$1,900,000$</div>
+                                        <div class="option" data-correct="false">$1,899,000$</div>
+                                        <div class="option" data-correct="false">$2,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 55</h3>
+                                            <p>Round up $79,991$ to the nearest ten.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$79,990$</div>
+                                        <div class="option" data-correct="false">$79,999$</div>
+                                        <div class="option" data-correct="false">$79,992$</div>
+                                        <div class="option" data-correct="true">$80,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 56</h3>
+                                            <p>Which statement about rounding up is true?</p>
+                                        </div>
+                                        <div class="option" data-correct="true">If every digit to the right of the place value is zero, the number stays the same</div>
+                                        <div class="option" data-correct="false">We only add 1 if the next digit is big</div>
+                                        <div class="option" data-correct="false">We always keep the place value the same</div>
+                                        <div class="option" data-correct="false">The answer is always smaller than the original number</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 57</h3>
+                                            <p>Round up $8,205,001$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$8,200,000$</div>
+                                        <div class="option" data-correct="true">$8,300,000$</div>
+                                        <div class="option" data-correct="false">$8,210,000$</div>
+                                        <div class="option" data-correct="false">$8,205,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 58</h3>
+                                            <p>Which of these numbers stays the same when rounded up to the nearest ten thousand?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$7,350,100$</div>
+                                        <div class="option" data-correct="false">$7,345,000$</div>
+                                        <div class="option" data-correct="true">$7,350,000$</div>
+                                        <div class="option" data-correct="false">$7,351,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 59</h3>
+                                            <p>Round up $1,000,001$ to the nearest million.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,000,000$</div>
+                                        <div class="option" data-correct="false">$1,100,000$</div>
+                                        <div class="option" data-correct="false">$1,001,000$</div>
+                                        <div class="option" data-correct="true">$2,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 60</h3>
+                                            <p>What is the difference between rounding off and rounding up $1,873,653$ to the nearest ten thousand?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$0$</div>
+                                        <div class="option" data-correct="false">$1,000$</div>
+                                        <div class="option" data-correct="true">$10,000$</div>
+                                        <div class="option" data-correct="false">$100,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 61</h3>
+                                            <p>Round down $1,873,653$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$1,800,000$</div>
+                                        <div class="option" data-correct="false">$1,900,000$</div>
+                                        <div class="option" data-correct="false">$1,870,000$</div>
+                                        <div class="option" data-correct="false">$1,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 62</h3>
+                                            <p>Round down $1,873,653$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,880,000$</div>
+                                        <div class="option" data-correct="false">$1,800,000$</div>
+                                        <div class="option" data-correct="false">$1,873,000$</div>
+                                        <div class="option" data-correct="true">$1,870,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 63</h3>
+                                            <p>Round down $1,873,653$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,874,000$</div>
+                                        <div class="option" data-correct="true">$1,873,000$</div>
+                                        <div class="option" data-correct="false">$1,870,000$</div>
+                                        <div class="option" data-correct="false">$1,873,600$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 64</h3>
+                                            <p>Round down $1,873,653$ to the nearest hundred.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,873,700$</div>
+                                        <div class="option" data-correct="false">$1,873,000$</div>
+                                        <div class="option" data-correct="true">$1,873,600$</div>
+                                        <div class="option" data-correct="false">$1,873,650$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 65</h3>
+                                            <p>Round down $1,873,653$ to the nearest ten.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1,873,600$</div>
+                                        <div class="option" data-correct="false">$1,873,660$</div>
+                                        <div class="option" data-correct="false">$1,873,700$</div>
+                                        <div class="option" data-correct="true">$1,873,650$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 66</h3>
+                                            <p>Round down $2,846,655$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$2,846,000$</div>
+                                        <div class="option" data-correct="false">$2,847,000$</div>
+                                        <div class="option" data-correct="false">$2,846,600$</div>
+                                        <div class="option" data-correct="false">$2,840,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 67</h3>
+                                            <p>Round down $2,846,655$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2,850,000$</div>
+                                        <div class="option" data-correct="false">$2,846,000$</div>
+                                        <div class="option" data-correct="false">$2,800,000$</div>
+                                        <div class="option" data-correct="true">$2,840,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 68</h3>
+                                            <p>Round down $2,846,655$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2,900,000$</div>
+                                        <div class="option" data-correct="true">$2,800,000$</div>
+                                        <div class="option" data-correct="false">$2,840,000$</div>
+                                        <div class="option" data-correct="false">$2,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 69</h3>
+                                            <p>Round down $9,999,999$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$10,000,000$</div>
+                                        <div class="option" data-correct="false">$9,000,000$</div>
+                                        <div class="option" data-correct="true">$9,900,000$</div>
+                                        <div class="option" data-correct="false">$9,999,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 70</h3>
+                                            <p>Round down $5,842,136,709$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$5,842,130,000$</div>
+                                        <div class="option" data-correct="false">$5,842,140,000$</div>
+                                        <div class="option" data-correct="false">$5,842,136,000$</div>
+                                        <div class="option" data-correct="false">$5,842,100,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 71</h3>
+                                            <p>Round down $3,096,540,000$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$3,096,000,000$</div>
+                                        <div class="option" data-correct="false">$3,096,541,000$</div>
+                                        <div class="option" data-correct="true">$3,096,540,000$</div>
+                                        <div class="option" data-correct="false">$3,096,500,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 72</h3>
+                                            <p>When you round down a number, the answer is always:</p>
+                                        </div>
+                                        <div class="option" data-correct="false">greater than the original number</div>
+                                        <div class="option" data-correct="true">less than or equal to the original number</div>
+                                        <div class="option" data-correct="false">greater than or equal to the original number</div>
+                                        <div class="option" data-correct="false">equal to the original number</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 73</h3>
+                                            <p>When you round up a number, the answer is always:</p>
+                                        </div>
+                                        <div class="option" data-correct="false">less than the original number</div>
+                                        <div class="option" data-correct="false">equal to the original number</div>
+                                        <div class="option" data-correct="false">greater than the original number</div>
+                                        <div class="option" data-correct="true">greater than or equal to the original number</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 74</h3>
+                                            <p>Round down $2,999,999$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$2,990,000$</div>
+                                        <div class="option" data-correct="false">$3,000,000$</div>
+                                        <div class="option" data-correct="false">$2,999,000$</div>
+                                        <div class="option" data-correct="false">$2,900,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 75</h3>
+                                            <p>Round down $6,543,210$ to the nearest ten.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$6,543,200$</div>
+                                        <div class="option" data-correct="true">$6,543,210$</div>
+                                        <div class="option" data-correct="false">$6,543,220$</div>
+                                        <div class="option" data-correct="false">$6,543,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 76</h3>
+                                            <p>Round down $4,375,129$ to the nearest hundred thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$4,400,000$</div>
+                                        <div class="option" data-correct="false">$4,380,000$</div>
+                                        <div class="option" data-correct="true">$4,300,000$</div>
+                                        <div class="option" data-correct="false">$4,375,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 77</h3>
+                                            <p>Round down $5,842,136,709$ to the nearest hundred.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$5,842,136,800$</div>
+                                        <div class="option" data-correct="false">$5,842,137,000$</div>
+                                        <div class="option" data-correct="false">$5,842,136,000$</div>
+                                        <div class="option" data-correct="true">$5,842,136,700$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 78</h3>
+                                            <p>Which statement about rounding down is true?</p>
+                                        </div>
+                                        <div class="option" data-correct="true">We keep the place value the same and change the digits to its right to zero</div>
+                                        <div class="option" data-correct="false">We add 1 to the place value</div>
+                                        <div class="option" data-correct="false">We look at whether the next digit is big or small</div>
+                                        <div class="option" data-correct="false">The answer is always larger than the original number</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 79</h3>
+                                            <p>Round down $408,999$ to the nearest thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$409,000$</div>
+                                        <div class="option" data-correct="true">$408,000$</div>
+                                        <div class="option" data-correct="false">$400,000$</div>
+                                        <div class="option" data-correct="false">$408,900$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 80</h3>
+                                            <p>Round down $99,999$ to the nearest ten thousand.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$100,000$</div>
+                                        <div class="option" data-correct="false">$99,000$</div>
+                                        <div class="option" data-correct="true">$90,000$</div>
+                                        <div class="option" data-correct="false">$99,990$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 81</h3>
+                                            <p>For $2,846,655$ to the nearest hundred thousand, which row gives the correct answers?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">Up: $2,900,000$; Down: $2,800,000$; Off: $2,900,000$</div>
+                                        <div class="option" data-correct="true">Up: $2,900,000$; Down: $2,800,000$; Off: $2,800,000$</div>
+                                        <div class="option" data-correct="false">Up: $2,800,000$; Down: $2,900,000$; Off: $2,800,000$</div>
+                                        <div class="option" data-correct="false">Up: $2,800,000$; Down: $2,800,000$; Off: $2,900,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 82</h3>
+                                            <p>For $2,846,655$ to the nearest thousand, which answer is the same for rounding up and rounding off?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2,846,000$</div>
+                                        <div class="option" data-correct="false">$2,846,700$</div>
+                                        <div class="option" data-correct="false">$2,850,000$</div>
+                                        <div class="option" data-correct="true">$2,847,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 83</h3>
+                                            <p>For $1,873,653$ to the nearest ten thousand, which two methods give the same answer?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">Off and up</div>
+                                        <div class="option" data-correct="false">Up and down</div>
+                                        <div class="option" data-correct="true">Off and down</div>
+                                        <div class="option" data-correct="false">All three methods</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 84</h3>
+                                            <p>For $1,873,653$ to the nearest hundred, which two methods give the same answer?</p>
+                                        </div>
+                                        <div class="option" data-correct="true">Off and up</div>
+                                        <div class="option" data-correct="false">Off and down</div>
+                                        <div class="option" data-correct="false">Up and down</div>
+                                        <div class="option" data-correct="false">None of them</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 85</h3>
+                                            <p>When does rounding off give the same answer as rounding down?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">When the digit to the right of the place value is big</div>
+                                        <div class="option" data-correct="true">When the digit to the right of the place value is small</div>
+                                        <div class="option" data-correct="false">Never</div>
+                                        <div class="option" data-correct="false">Always</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 86</h3>
+                                            <p>Which statement about rounding off is always true?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">It always gives the largest of the three answers</div>
+                                        <div class="option" data-correct="false">It always gives the smallest of the three answers</div>
+                                        <div class="option" data-correct="false">It always gives an answer different from both rounding up and rounding down</div>
+                                        <div class="option" data-correct="true">It gives the same answer as either rounding up or rounding down</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 87</h3>
+                                            <p>How many significant figures does $123$ have?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$1$</div>
+                                        <div class="option" data-correct="false">$2$</div>
+                                        <div class="option" data-correct="true">$3$</div>
+                                        <div class="option" data-correct="false">$4$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 88</h3>
+                                            <p>How many significant figures does $1003$ have?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$2$</div>
+                                        <div class="option" data-correct="false">$3$</div>
+                                        <div class="option" data-correct="false">$1$</div>
+                                        <div class="option" data-correct="true">$4$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 89</h3>
+                                            <p>How many significant figures does $100$ have?</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$1$</div>
+                                        <div class="option" data-correct="false">$2$</div>
+                                        <div class="option" data-correct="false">$3$</div>
+                                        <div class="option" data-correct="false">$0$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 90</h3>
+                                            <p>How many significant figures does $00234$ have?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$5$</div>
+                                        <div class="option" data-correct="true">$3$</div>
+                                        <div class="option" data-correct="false">$4$</div>
+                                        <div class="option" data-correct="false">$2$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 91</h3>
+                                            <p>Express $857,386,321$ to five significant figures.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$857,380,000$</div>
+                                        <div class="option" data-correct="false">$857,386,000$</div>
+                                        <div class="option" data-correct="true">$857,390,000$</div>
+                                        <div class="option" data-correct="false">$857,300,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 92</h3>
+                                            <p>Express $857,386,321$ to four significant figures.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$857,400,000$</div>
+                                        <div class="option" data-correct="false">$857,300,000$</div>
+                                        <div class="option" data-correct="false">$857,390,000$</div>
+                                        <div class="option" data-correct="false">$857,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 93</h3>
+                                            <p>Express $857,386,321$ to three significant figures.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$860,000,000$</div>
+                                        <div class="option" data-correct="false">$858,000,000$</div>
+                                        <div class="option" data-correct="false">$857,400,000$</div>
+                                        <div class="option" data-correct="true">$857,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 94</h3>
+                                            <p>Express $857,386,321$ to two significant figures.</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$850,000,000$</div>
+                                        <div class="option" data-correct="true">$860,000,000$</div>
+                                        <div class="option" data-correct="false">$900,000,000$</div>
+                                        <div class="option" data-correct="false">$857,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 95</h3>
+                                            <p>Express $4,862,500$ to three significant figures.</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$4,860,000$</div>
+                                        <div class="option" data-correct="false">$4,870,000$</div>
+                                        <div class="option" data-correct="false">$4,862,000$</div>
+                                        <div class="option" data-correct="false">$4,900,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 96</h3>
+                                            <p>A bank reports a profit of GH₵ $1,873,653$. Rounded off to the nearest hundred thousand, the profit is about:</p>
+                                        </div>
+                                        <div class="option" data-correct="false">GH₵ $1,800,000$</div>
+                                        <div class="option" data-correct="false">GH₵ $1,870,000$</div>
+                                        <div class="option" data-correct="true">GH₵ $1,900,000$</div>
+                                        <div class="option" data-correct="false">GH₵ $2,000,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 97</h3>
+                                            <p>A stadium has $45,678$ seats. Rounded off to the nearest thousand, the number of seats is:</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$45,000$</div>
+                                        <div class="option" data-correct="false">$45,700$</div>
+                                        <div class="option" data-correct="false">$50,000$</div>
+                                        <div class="option" data-correct="true">$46,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 98</h3>
+                                            <p>A shop owner has GH₵ $8,350$ and says he has "about GH₵ $8,400$." To which place was the amount rounded off?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">Ten</div>
+                                        <div class="option" data-correct="true">Hundred</div>
+                                        <div class="option" data-correct="false">Thousand</div>
+                                        <div class="option" data-correct="false">Ten thousand</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 99</h3>
+                                            <p>A baker has $3,205$ loaves to pack. To be safe, he rounds the number up to the nearest hundred. How many loaves does he prepare?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">$3,200$</div>
+                                        <div class="option" data-correct="false">$3,210$</div>
+                                        <div class="option" data-correct="true">$3,300$</div>
+                                        <div class="option" data-correct="false">$3,000$</div>
+                                    </div>
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 100</h3>
+                                            <p>A school has $2,987$ students. For a report, it rounds the number down to the nearest hundred. What number does the school report?</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$2,900$</div>
+                                        <div class="option" data-correct="false">$3,000$</div>
+                                        <div class="option" data-correct="false">$2,990$</div>
+                                        <div class="option" data-correct="false">$2,980$</div>
+                                    </div>
+                                </div>
+                            </section>
                         </details>
 
                         

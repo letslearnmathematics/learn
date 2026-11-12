@@ -57,7 +57,6 @@
         </script>
         
         <!-- MathJax with combined TeX and MathML input, HTML output -->
-        <!--<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>-->
         <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
     
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7096546149694118"
@@ -120,9 +119,7 @@
                             </div>
                             <ul class="topic-menu">
                                 <li><a href="#introduction" class="active"><i class="fas fa-chevron-right"></i> Introduction </a></li>
-                                <li><a href="#rounding-off"><i class="fas fa-chevron-right"></i> Rounding Off </a></li>
-                                <li><a href="#rounding-up"><i class="fas fa-chevron-right"></i> Rounding Up </a></li>
-                                <li><a href="#rounding-down"><i class="fas fa-chevron-right"></i> Rounding Down </a></li>
+                                <li><a href="#rounding-decimals"><i class="fas fa-chevron-right"></i> Rounding Off, Up or Down </a></li>
                                 <li><a href="#significant-figures"><i class="fas fa-chevron-right"></i> Significant Figures </a></li>
                                 <li><a href="#decimal-places"><i class="fas fa-chevron-right"></i> Decimal Places </a></li>
                                 <!--<li><a href="#problems"><i class="fas fa-chevron-right"></i> Three-Set Problems</a></li>-->
@@ -160,11 +157,19 @@
                             <span>Rounding-Decimals</span>
                         </nav>
 
+                        <div class="accordion-controls">
+                            <button type="button" id="toggle-all-accordions" class="accordion-toggle-all" aria-expanded="false">
+                                Expand all
+                            </button>
+                        </div>
+
                         <!-- Definition Section -->
-                        <section id="introduction" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-book-open"></i> Introduction
-                            </h2>
+                        <details id="introduction" class="lesson-section" open>
+                            <summary>
+                                <h2 class="section-title">
+                                    <i class="fas fa-book-open"></i> Introduction
+                                </h2>
+                            </summary>
                             
                             <div class="concept-box">
                                 <p>
@@ -217,24 +222,34 @@
                                     </div>
                                 </div>
                             </div>
-                        </section>
+                        </details>
                         
-                        <!-- Multi-base Blocks Section -->
-                        <section id="rounding-off" class="lesson-section">
+                        <!-- Rounding Off, Up or Down Section -->
+                        <section id="rounding-decimals" class="lesson-section">
                             <h2 class="section-title">
-                                <i class="fas fa-edit"></i> Rounding off Decimals
+                                <i class="fas fa-edit"></i> Rounding Off, Up or Down
                             </h2>
 
-                        </section>
-
-                        <!-- Practice Section -->
-                        <section class="practice-section">
-                            <div class="practice-header">
-                                <i class="fas fa-pen-fancy"></i>
-                                <h2>Practice Exercise</h2>
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Main Idea
+                                </h3>
+                                <ul>
+                                    <li><strong>Off:</strong> look at the digit to the right of the place value. If it is $0$ to $4$, keep the place value; if it is $5$ to $9$, add $1$. Change the digits to its right to zero.</li>
+                                    <li><strong>Up:</strong> if any digit to the right is not zero, add $1$ to the place value and change the digits to its right to zero. If they are all zeros, the number stays the same.</li>
+                                    <li><strong>Down:</strong> keep the place value and change the digits to its right to zero.</li>
+                                </ul>
                             </div>
+
+                            <div id="rounding-off" class="rounding-method">
+                                <h3 class="subsection-title">Rounding Off Decimals</h3>
                             
-                            <div class="practice-problems">
+                                <details class="lesson-content-toggle practice-section lesson-practice">
+                                    <summary class="practice-header">
+                                        <i class="fas fa-pen-fancy"></i>
+                                        <span class="practice-title">Practice Exercise: Rounding Off</span>
+                                    </summary>
+                                    <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
                                     <p>Round 78.4604783 to the nearest tenths.</p>
@@ -281,44 +296,32 @@
                                         
                                     </div>
                                 </div>
+                                    </div>
+                                    <div class="cta-box">
+                                        <p>Ready for more challenges?</p>
+                                        <a href="#quick-test" class="cta-button">
+                                            <i class="fas fa-arrow-right"></i> Full Practice Set
+                                        </a>
+                                    </div>
+                                </details>
                             </div>
+
+                            <div id="rounding-up" class="rounding-method">
+                                <h3 class="subsection-title">Rounding Up Decimals</h3>
+                                <div class="concept-box highlight-box">
+                                    <h4 class="subsection-title">Main Idea</h4>
+                                    <p>
+                                        <strong>Rounding up</strong> means adding 1 to the place value (our reference point) and changing
+                                        all the digits to the right to zero (0). If all digits to the right are zero, the number stays the same.
+                                    </p>
+                                </div>
                             
-                            <div class="cta-box">
-                                <p>Ready for more challenges?</p>
-                                <a href="#quick-test" class="cta-button">
-                                    <i class="fas fa-arrow-right"></i> Full Practice Set
-                                </a>
-                            </div>
-                        </section>
-
-                        <br><br>
-
-                        <!-- Graph Sheet Section -->
-                        <section id="rounding-up" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-edit"></i> Rounding up Decimals
-                            </h2>
-
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-globe"></i> Main Idea
-                                </h3>
-                                <p>
-                                    <strong>Rounding up</strong> means adding 1 to the place value (our reference point) and changing 
-                                    all the digits to the right to zero (0), including the number to the immediate right of the 
-                                    referenced place value point.
-                                </p>
-                            </div>
-                        </section>
-
-                        <!-- Practice Section -->
-                        <section class="practice-section">
-                            <div class="practice-header">
-                                <i class="fas fa-pen-fancy"></i>
-                                <h2>Practice Exercise</h2>
-                            </div>
-                            
-                            <div class="practice-problems">
+                                <details class="lesson-content-toggle practice-section lesson-practice">
+                                    <summary class="practice-header">
+                                        <i class="fas fa-pen-fancy"></i>
+                                        <span class="practice-title">Practice Exercise: Rounding Up</span>
+                                    </summary>
+                                    <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
                                     <p>
@@ -364,43 +367,32 @@
                                         
                                     </div>
                                 </div>
+                                    </div>
+                                    <div class="cta-box">
+                                        <p>Ready for more challenges?</p>
+                                        <a href="#quick-test" class="cta-button">
+                                            <i class="fas fa-arrow-right"></i> Full Practice Set
+                                        </a>
+                                    </div>
+                                </details>
                             </div>
+
+                            <div id="rounding-down" class="rounding-method">
+                                <h3 class="subsection-title">Rounding Down Decimals</h3>
+                                <div class="concept-box highlight-box">
+                                    <h4 class="subsection-title">Main Idea</h4>
+                                    <p>
+                                        <strong>Rounding down</strong> means keeping the place value the same and changing all the
+                                        digits to the right to zero (0).
+                                    </p>
+                                </div>
                             
-                            <div class="cta-box">
-                                <p>Ready for more challenges?</p>
-                                <a href="#quick-test" class="cta-button">
-                                    <i class="fas fa-arrow-right"></i> Full Practice Set
-                                </a>
-                            </div>
-                        </section>
-
-                        <br><br>
-
-                        <!-- Multiples Section -->
-                        <section id="rounding-down" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-edit"></i> Rounding down Decimals
-                            </h2>
-
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-globe"></i> Main Idea
-                                </h3>
-                                <p>
-                                    <strong>Rounding down</strong> means keeping the place value the same and changing all the 
-                                    digits to the right to zero (0), including the number to the immediate right.
-                                </p>
-                            </div>
-                        </section>
-
-                        <!-- Practice Section -->
-                        <section class="practice-section">
-                            <div class="practice-header">
-                                <i class="fas fa-pen-fancy"></i>
-                                <h2>Practice Exercise</h2>
-                            </div>
-                            
-                            <div class="practice-problems">
+                                <details class="lesson-content-toggle practice-section lesson-practice">
+                                    <summary class="practice-header">
+                                        <i class="fas fa-pen-fancy"></i>
+                                        <span class="practice-title">Practice Exercise: Rounding Down</span>
+                                    </summary>
+                                    <div class="practice-problems">
                                 <div class="problem-card">
                                     <h3>Question 1</h3>
                                     <p>Round down 78.4604783 to the nearest tenths.</p>
@@ -446,23 +438,36 @@
                                         
                                     </div>
                                 </div>
-                            </div>
-                            
-                            <div class="cta-box">
-                                <p>Ready for more challenges?</p>
-                                <a href="#quick-test" class="cta-button">
-                                    <i class="fas fa-arrow-right"></i> Full Practice Set
-                                </a>
+                                    </div>
+                                    <div class="cta-box">
+                                        <p>Ready for more challenges?</p>
+                                        <a href="#quick-test" class="cta-button">
+                                            <i class="fas fa-arrow-right"></i> Full Practice Set
+                                        </a>
+                                    </div>
+                                </details>
                             </div>
                         </section>
 
-                        <br><br> 
+                        <br><br>
 
                         <!-- Significant Figures Section -->
                         <section id="significant-figures" class="lesson-section">
                             <h2 class="section-title">
                                 <i class="fas fa-edit"></i> Rounding to Significant Figures
                             </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Main Idea
+                                </h3>
+                                <p>
+                                    <strong>Significant figures</strong> (or significant digits) refer to the digits in a 
+                                    number that carry meaning or contribute to the number's precision. These include 
+                                    all non-zero digits, any zeros between significant digits, and trailing zeros in 
+                                    the decimal part.
+                                </p>
+                            </div>
 
                             <!-- Lesson Video embed -->
                             <div class="video-embed lesson-block">
@@ -492,76 +497,16 @@
                                     <button class="payBtn">Pay & Watch</button>
                                 </div>
                                 -->
-                                
-
-                                <!-- VIDEO -->
-                                <div class="video-container" style="display:none;">
-                                    <iframe width="100%" height="315" allowfullscreen></iframe>
-                                </div>
-                                
-                                <div class="video-description">
-                                    <p>This helps us to bring you more lessons.</p>
-                                </div>
-                            </div>
-
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-globe"></i> Main Idea
-                                </h3>
-                                <p>
-                                    <strong>Significant figures</strong> (or significant digits) refer to the digits in a 
-                                    number that carry meaning or contribute to the number's precision. These include 
-                                    all non-zero digits, any zeros between significant digits, and trailing zeros in 
-                                    the decimal part.
-                                </p>
-                            </div>
-
-                            <!-- Methods-->
-                            <div class="method-cards">
-                                <!-- The Operators --> 
-                                <div class="method-card">
-                                    <div class="method-header">
-                                        <i class="fas fa-code"></i>
-                                        <h3> Rules  </h3>
-                                    </div>
-                                    <div class="method-body">
-                                        <p>
-                                            Rules for identifying significant figures:
-                                        </p>
-                                        <div class="math-example">
-                                            <p> 
-                                                1. <strong>Non-zero</strong> digits are always significant. <br>
-                                                Example: 123 has three significant figures.
-                                            </p>
-                                            <p> 
-                                                2. <strong>Any zeros between non-zero digits</strong> are significant. <br>
-                                                Example: 1003 has four significant figures.
-                                            </p>
-                                            <p> 
-                                                3. Trailing zeros in a number with a decimal point are significant. <br>
-                                                Example: 100.0 has four significant figures.
-                                            </p>
-                                            <p>
-                                                4. Trailing zeros in a number without a decimal point are not significant. <br>
-                                                Example: 100 has one significant figure.
-                                            </p>
-                                            <p>
-                                                5. Leading zeros (zeros before any non-zero digit) are not significant. <br>
-                                                Example: 00234 has three significant figures.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </section>
                         
                         <!-- Continue with other sections... -->
                         
-                        <section class="practice-section">
-                            <div class="practice-header">
+                        <details class="lesson-content-toggle practice-section lesson-practice">
+                            <summary class="practice-header">
                                 <i class="fas fa-pen-fancy"></i>
-                                <h2>Practice Exercise</h2>
-                            </div>
+                                <span class="practice-title">Practice Exercise: Significant Figures</span>
+                            </summary>
                             
                             <div class="practice-problems">
                                 <div class="problem-card">
@@ -626,7 +571,7 @@
                                     <i class="fas fa-arrow-right"></i> Full Practice Set
                                 </a>
                             </div>
-                        </section>
+                        </details>
 
                         <br><br>
 
@@ -635,6 +580,22 @@
                             <h2 class="section-title">
                                 <i class="fas fa-edit"></i> Rounding to Decimal Places
                             </h2>
+
+                            <div class="concept-box highlight-box">
+                                <h3 class="subsection-title">
+                                    <i class="fas fa-globe"></i> Main Idea
+                                </h3>
+                                <p>
+                                    The number of decimal places in any given number refer to the number of 
+                                    digits to the right of the decimal point. Example:
+                                </p>
+                                <p>
+                                    (a) 12.34567 has 5 decimal places.
+                                </p>
+                                <p>
+                                    (b) 100.004 has 3 decimal places.
+                                </p>
+                            </div>
 
                             <!-- Lesson Video embed -->
                             <div class="video-embed lesson-block">
@@ -664,71 +625,14 @@
                                     <button class="payBtn">Pay & Watch</button>
                                 </div>
                                 -->
-                                
-
-                                <!-- VIDEO -->
-                                <div class="video-container" style="display:none;">
-                                    <iframe width="100%" height="315" allowfullscreen></iframe>
-                                </div>
-                                
-                                <div class="video-description">
-                                    <p>This helps us to bring you more lessons.</p>
-                                </div>
-                            </div>
-
-                            <div class="concept-box highlight-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-globe"></i> Main Idea
-                                </h3>
-                                <p>
-                                    The number of decimal places in any given number refer to the number of 
-                                    digits to the right of the decimal point. Example:
-                                </p>
-                                <p>
-                                    (a) 12.34567 has 5 decimal places.
-                                </p>
-                                <p>
-                                    (b) 100.004 has 3 decimal places.
-                                </p>
-                            </div>
-
-                            <!-- Cardinality -->
-                            <div class="concept-box">
-                                <h3 class="subsection-title">
-                                    <i class="fas fa-hashtag"></i> Decimal Places 
-                                </h3>
-                                <p>The place value of decimals are expressed as follows:
-                                </p>
-                                
-                                <div class="key-points">
-                                    <div class="point">
-                                        <h4>Tenth place</h4>
-                                        \[ \dfrac{1}{10} = 0.1 \]
-                                    </div>
-                                    <div class="point">
-                                        <h4>Hundredth place</h4>
-                                        \[ \dfrac{1}{100} = 0.01 \]
-                                    </div>
-                                    <div class="point">
-                                        <h4>Thousandth</h4>
-                                        \[ \dfrac{1}{1000} = 0.001 \]
-                                    </div>
-                                    <div class="point">
-                                        <h4>Ten-thousandth place</h4>
-                                        \[ \dfrac{1}{10000} = 0.0001 \]
-                                    </div>
-                                </div>
-                                <p>
-                                    \(\ldots\) and so on.
-                                </p>
                             </div>
                         </section>
 
-                        <section class="practice-section">
-                            <div class="practice-header">
+                        <details class="lesson-content-toggle practice-section lesson-practice">
+                            <summary class="practice-header">
                                 <i class="fas fa-pen-fancy"></i>
-                                <h2>Practice Exercise</h2>
-                            </div>
+                                <span class="practice-title">Practice Exercise: Decimal Places</span>
+                            </summary>
                             
                             <div class="practice-problems">
                                 <div class="problem-card">
@@ -842,89 +746,96 @@
                                     <i class="fas fa-arrow-right"></i> Full Practice Set
                                 </a>
                             </div>
-                        </section>
+                        </details>
                         
                         <br><br>
 
                         <br><br>
 
                         <!-- Test Instructions -->
-                        <section id="quick-test" class="lesson-section">
-                            <h2 class="section-title">
-                                <i class="fas fa-book-open"></i> Quick Test
-                            </h2>
-                            
-                            <div class="concept-box">
-                                <p>
-                                    You have 60 minutes to complete the test. Try to work on your speed as you prepare
-                                    towards the final exam.
-                                </p>
-                                <p>
-                                    Good luck and remember to check your answers with the solutions provided.
-                                    If you have any questions, feel free to ask your teacher or refer to the video lessons for more help.
-                                </p>
-                            </div>
-                        </section>
+                        <details id="quick-test" class="lesson-section quick-test-section">
+                            <summary>
+                                <h2 class="section-title">
+                                    <i class="fas fa-book-open"></i> Quick Test
+                                </h2>
+                            </summary>
                         
-                        <!-- Section A -->
-                        <section id="section-a" class="lesson-section">
-                            <h2 class="section-title"><i class="fas fa-paw"></i> 100 Questions/hour Challenge </h2>
+                            <!-- Section A -->
+                            <section id="section-a" class="lesson-section">
 
-                            <div class="test-container">
-                                <div class="test-instructions">
-                                    <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
-                                    <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
-                                </div>
-
-                                <div class="timer-container">
-                                    <div class="progress-bar">
-                                        <div class="progress-fill"></div>
+                                <div class="test-container">
+                                    <div class="test-instructions">
+                                        <p>This section contains 100 multiple choice questions. You have 60 minutes to complete it.</p>
+                                        <p>Each question has four options labeled A to D. Select the correct answer for each question.</p>
                                     </div>
-                                    <span id="timer-display">60:00</span>
-                                </div>
 
-                                <div id="test-warning" style="display: none;"></div>
-                                <div id="test-content"></div>
-
-                                <div class="test-navigation">
-                                    <button id="prev-btn" class="nav-btn" disabled>Previous</button>
-                                    <span id="question-counter">Question 1 of 100</span>
-                                    <button id="next-btn" class="nav-btn">Next</button>
-                                </div>
-
-                                <div class="test-controls">
-                                    <button id="submit-btn" class="control-btn">Submit Test</button>
-                                </div>
-                            </div>
-
-                            <div id="results-section" style="display: none;">
-                                <div class="test-instructions">
-                                    <h3>Your Test Results</h3>
-                                    <p id="score-display">You scored 0 out of 40</p>
-                                </div>
-
-                                <div id="results-content"></div>
-
-                                <div class="test-controls">
-                                    <button id="review-btn" class="control-btn">Review All Questions</button>
-                                </div>
-                            </div>
-
-                            <!-- Hidden question bank in HTML -->
-                            <div id="question-bank" style="display: none;">
-                                <!-- Question 1 -->
-                                <div class="question" data-solution="">
-                                    <div class="question-text">
-                                        <h3>Question 1</h3>
-                                        <p></p>
+                                    <div class="timer-container">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill"></div>
+                                        </div>
+                                        <span id="timer-display">60:00</span>
                                     </div>
-                                    <div class="option" data-correct="true"></div>
-                                    <div class="option" data-correct="false"></div>
-                                    <div class="option" data-correct="false"></div>
-                                    <div class="option" data-correct="false"></div>
+
+                                    <div id="test-warning" style="display: none;"></div>
+                                    <div id="test-content"></div>
+
+                                    <div class="test-navigation">
+                                        <button id="prev-btn" class="nav-btn" disabled>Previous</button>
+                                        <span id="question-counter">Question 1 of 100</span>
+                                        <button id="next-btn" class="nav-btn">Next</button>
+                                    </div>
+
+                                    <div class="test-controls">
+                                        <button id="submit-btn" class="control-btn">Submit Test</button>
+                                    </div>
                                 </div>
-                            </div>
-                        </section>
+
+                                <div id="results-section" style="display: none;">
+                                    <div class="test-instructions">
+                                        <h3>Your Test Results</h3>
+                                        <p id="score-display">You scored 0 out of 100</p>
+                                    </div>
+
+                                    <div id="results-content"></div>
+
+                                    <div class="test-controls">
+                                        <button id="review-btn" class="control-btn">Review All Questions</button>
+                                    </div>
+                                </div>
+
+                                <!-- Hidden question bank in HTML -->
+                                <div id="question-bank" style="display: none;">
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 1</h3>
+                                            <p>What does the symbol $\approx$ mean?</p>
+                                        </div>
+                                        <div class="option" data-correct="false">is exactly equal to</div>
+                                        <div class="option" data-correct="false">is greater than</div>
+                                        <div class="option" data-correct="true">is approximately equal to</div>
+                                        <div class="option" data-correct="false">is less than</div>
+                                    </div>
+
+                                    
+
+                                    
+
+                                    
+
+                                    <div class="question" data-solution="">
+                                        <div class="question-text">
+                                            <h3>Question 100</h3>
+                                            <p>A school has $2,987$ students. For a report, it rounds the number down to the nearest hundred. What number does the school report?</p>
+                                        </div>
+                                        <div class="option" data-correct="true">$2,900$</div>
+                                        <div class="option" data-correct="false">$3,000$</div>
+                                        <div class="option" data-correct="false">$2,990$</div>
+                                        <div class="option" data-correct="false">$2,980$</div>
+                                    </div>
+
+                                </div>
+                            </section>
+                        </details>
                     </article>
                 </div>
             </div>
@@ -1009,6 +920,48 @@
         </button>-->
 
         <!-- Scripts -->
+        <script>
+            const accordionToggleButton = document.getElementById('toggle-all-accordions');
+            const accordions = document.querySelectorAll('details.lesson-section, details.lesson-practice');
+
+            function updateAccordionToggleButton() {
+                const allExpanded = Array.from(accordions).every(accordion => accordion.open);
+                accordionToggleButton.textContent = allExpanded ? 'Collapse all' : 'Expand all';
+                accordionToggleButton.setAttribute('aria-expanded', String(allExpanded));
+            }
+
+            accordionToggleButton.addEventListener('click', function () {
+                const shouldExpand = Array.from(accordions).some(accordion => !accordion.open);
+                accordions.forEach(accordion => {
+                    accordion.open = shouldExpand;
+                });
+                updateAccordionToggleButton();
+            });
+
+            accordions.forEach(accordion => {
+                accordion.addEventListener('toggle', updateAccordionToggleButton);
+            });
+            updateAccordionToggleButton();
+
+            function openAccordionForHash() {
+                const target = document.getElementById(window.location.hash.slice(1));
+                const accordion = target && target.closest('details');
+                if (accordion) accordion.open = true;
+            }
+
+            document.addEventListener('click', function (event) {
+                const link = event.target.closest('a[href^="#"]');
+                if (!link) return;
+
+                const target = document.getElementById(link.hash.slice(1));
+                const accordion = target && target.closest('details');
+                if (accordion) accordion.open = true;
+            });
+
+            window.addEventListener('hashchange', openAccordionForHash);
+            openAccordionForHash();
+        </script>
+
         <script>
             // Current year for footer
             document.getElementById('year').textContent = new Date().getFullYear();
